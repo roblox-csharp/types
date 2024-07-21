@@ -57,7 +57,7 @@ jobs:
           mkdir -p deploy/Include
           rm -rf deploy/Include/*
           cp -r types/RobloxTypes/* deploy/Include
-          cp types/RobloxTypes/PluginSecurity.cs deploy/PluginSecurity.cs
+          cp types/RobloxTypes/Generated/PluginSecurity.cs deploy/PluginSecurity.cs
           cp types/RobloxTypes/README.md deploy/README.md
 
           cd deploy
