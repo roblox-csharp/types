@@ -24,8 +24,6 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - uses: bahmutov/npm-install@v1
-
       - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions"
@@ -76,13 +74,13 @@ jobs:
             # Extract current version from .csproj
             CURRENT_VERSION=$(xmllint --xpath "string(//Project/PropertyGroup/Version)" ../RobloxCS/RobloxCS.csproj)
             echo "Current version: $CURRENT_VERSION"
-        
+
             # Increment patch version
             IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
             PATCH_VERSION=$((version_parts[2] + 1))
             NEW_VERSION="${version_parts[0]}.${version_parts[1]}.$PATCH_VERSION"
             echo "New version: $NEW_VERSION"
-        
+
             # Update version in .csproj
             xmllint --shell ../RobloxCS/RobloxCS.csproj << EOF
               cd //Project/PropertyGroup/Version
@@ -90,18 +88,18 @@ jobs:
               save
               quit
             EOF
-        
+
             # Commit version change
             git add ../RobloxCS/RobloxCS.csproj
             git commit -m "Bump version to $NEW_VERSION"
             git push https://R-unic:${GITHUB_TOKEN}@github.com/roblox-csharp/types.git HEAD:master
-        
+
             # Add GitHub source to NuGet
             dotnet nuget add source --username roblox-csharp --password ${{ secrets.github_token }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/roblox-csharp/index.json"
-        
+
             # Package the project
             dotnet pack --configuration Release
-        
+
             # Publish the package
             PACKAGE_PATH=$(find ../RobloxCS/bin/Release -name "*.nupkg" -type f -print0 | xargs -0 ls -1t | head -n 1)
             dotnet nuget push "$PACKAGE_PATH" --api-key ${{ secrets.github_token }} --source "github"
