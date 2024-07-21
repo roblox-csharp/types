@@ -72,8 +72,7 @@ jobs:
               git commit -m "Automatic Update"
             fi
 
-            set -x # Debug mode
-            xmlstarlet fo ./RobloxTypes.csproj
+            # set -x # Debug mode
 
             # Extract current version from .csproj
             CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./RobloxTypes.csproj)
