@@ -97,9 +97,6 @@ jobs:
             # Package the project
             dotnet pack --configuration Release
 
-            VERSION_EXISTS=$(dotnet nuget search roblox-csharp --source "github" | grep -c "$NEW_VERSION" || true)
-            echo "VERSION_EXISTS=$VERSION_EXISTS"
-
             # Find and publish the latest package
             PACKAGE_PATH=./Include/bin/Release/Roblox.$NEW_VERSION.nupkg
             echo "Publishing package: $PACKAGE_PATH"
