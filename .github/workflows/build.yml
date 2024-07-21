@@ -95,7 +95,7 @@ jobs:
             dotnet nuget add source --username roblox-csharp --password ${{ secrets.github_token }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/roblox-csharp/index.json"
 
             # Package the project
-            dotnet pack --configuration Release
+            dotnet pack ./Include/RobloxTypes.csproj --configuration Release
 
             # Find and publish the latest package
             PACKAGE_PATH=./Include/bin/Release/Roblox.$NEW_VERSION.nupkg
