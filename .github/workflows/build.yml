@@ -56,9 +56,9 @@ jobs:
           git clone --depth=50 --branch=deploy https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git deploy
           mkdir -p deploy/Include
           rm -rf deploy/Include/*
-          cp -r RobloxTypes/* deploy/Include
-          cp RobloxTypes/Generated/PluginSecurity.cs deploy/Include/Generated/PluginSecurity.cs
-          cp RobloxTypes/README.md deploy/README.md
+          cp -r types/RobloxTypes/* deploy
+          cp types/RobloxTypes/Generated/PluginSecurity.cs deploy/Include/Generated/PluginSecurity.cs
+          cp types/RobloxTypes/README.md deploy/README.md
 
           cd deploy
 
@@ -72,7 +72,7 @@ jobs:
             fi
 
             # Extract current version from .csproj
-            CURRENT_VERSION=$(xmllint --xpath "string(//Project/PropertyGroup/Version)" ../RobloxCS/RobloxCS.csproj)
+            CURRENT_VERSION=$(xmllint --xpath "string(//Project/PropertyGroup/Version)" ./RobloxTypes/RobloxTypes.csproj)
             echo "Current version: $CURRENT_VERSION"
 
             # Increment patch version
@@ -82,7 +82,7 @@ jobs:
             echo "New version: $NEW_VERSION"
 
             # Update version in .csproj
-            xmllint --shell ../RobloxCS/RobloxCS.csproj << EOF
+            xmllint --shell ./RobloxTypes/RobloxTypes.csproj << EOF
               cd //Project/PropertyGroup/Version
               set ${NEW_VERSION}
               save
@@ -90,7 +90,7 @@ jobs:
             EOF
 
             # Commit version change
-            git add ../RobloxCS/RobloxCS.csproj
+            git add ./RobloxTypes/RobloxTypes.csproj
             git commit -m "Bump version to $NEW_VERSION"
             git push https://R-unic:${GITHUB_TOKEN}@github.com/roblox-csharp/types.git HEAD:master
 
@@ -101,7 +101,7 @@ jobs:
             dotnet pack --configuration Release
 
             # Publish the package
-            PACKAGE_PATH=$(find ../RobloxCS/bin/Release -name "*.nupkg" -type f -print0 | xargs -0 ls -1t | head -n 1)
+            PACKAGE_PATH=$(find ./RobloxTypes/bin/Release -name "*.nupkg" -type f -print0 | xargs -0 ls -1t | head -n 1)
             dotnet nuget push "$PACKAGE_PATH" --api-key ${{ secrets.github_token }} --source "github"
           fi
 
