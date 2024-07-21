@@ -98,7 +98,7 @@ jobs:
             dotnet pack ./Include/RobloxTypes.csproj --configuration Release
 
             # Find and publish the latest package
-            PACKAGE_PATH=./Include/bin/Release/Roblox.$NEW_VERSION.nupkg
+            PACKAGE_PATH=./Include/bin/Release/RobloxCS.Types.$NEW_VERSION.nupkg
             echo "Publishing package: $PACKAGE_PATH"
             dotnet nuget push "$PACKAGE_PATH" --api-key ${{ secrets.github_token }} --source "github" --skip-duplicate
           fi
