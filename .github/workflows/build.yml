@@ -98,7 +98,7 @@ jobs:
             # Package the project
             dotnet pack --configuration Release
 
-            VERSION_EXISTS=$(dotnet nuget search roblox-cs --source "github" | grep -c "$NEW_VERSION" || true)
+            VERSION_EXISTS=$(dotnet nuget search roblox-csharp --source "github" | grep -c "$NEW_VERSION" || true)
             echo "VERSION_EXISTS=$VERSION_EXISTS"
 
             if [ "$VERSION_EXISTS" -eq 0 ]; then
