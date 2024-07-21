@@ -6,7 +6,6 @@ namespace Roblox
 	{
 		public static AccountService AccountService { get; } = null!;
 		public static AchievementService AchievementService { get; } = null!;
-		public static ActivityHistoryService ActivityHistoryService { get; } = null!;
 		public static AnalyticsService AnalyticsService { get; } = null!;
 		public static AnimationClipProvider AnimationClipProvider { get; } = null!;
 		public static AnimationFromVideoCreatorService AnimationFromVideoCreatorService { get; } = null!;
@@ -259,11 +258,6 @@ namespace Roblox
 	{
 	}
 	
-	public interface ActivityHistoryService : IServiceInstance
-	{
-		public ScriptSignal EventNotificationReceived { get; }
-	}
-	
 	public interface AdPortal : ICreatableInstance
 	{
 		public Enum.AdUnitStatus Status { get; }
@@ -373,6 +367,14 @@ namespace Roblox
 		public AnimationTrack LoadAnimation(Animation animation);
 		public void RegisterEvaluationParallelCallback(Action callback);
 		public ScriptSignal<AnimationTrack> AnimationPlayed { get; }
+	}
+	
+	public interface Annotation : ICreatableInstance
+	{
+	}
+	
+	public interface WorkspaceAnnotation : Annotation, ICreatableInstance
+	{
 	}
 	
 	public interface AnnotationsService : IServiceInstance
@@ -879,6 +881,13 @@ namespace Roblox
 		public CFrame CageOriginWorld { get; }
 		public CFrame ImportOrigin { get; set; }
 		public CFrame ImportOriginWorld { get; }
+	}
+	
+	public interface WrapDeformer : BaseWrap, ICreatableInstance
+	{
+		public float Amount { get; set; }
+		public bool Enabled { get; set; }
+		public string RenderMeshID { get; set; }
 	}
 	
 	public interface WrapLayer : BaseWrap, ICreatableInstance
@@ -2602,6 +2611,7 @@ namespace Roblox
 	
 	public interface Path2D : GuiBase, ICreatableInstance
 	{
+		public bool Closed { get; set; }
 		public Color3 Color3 { get; set; }
 		public float Thickness { get; set; }
 		public bool Visible { get; set; }
@@ -2609,6 +2619,8 @@ namespace Roblox
 		public Rect GetBoundingRect();
 		public Path2DControlPoint GetControlPoint(int index);
 		public object[] GetControlPoints();
+		public float GetLength();
+		public int GetMaxControlPoints();
 		public UDim2 GetPositionOnCurve(float t);
 		public UDim2 GetPositionOnCurveArcLength(float t);
 		public Vector2 GetTangentOnCurve(float t);
@@ -2617,6 +2629,7 @@ namespace Roblox
 		public void RemoveControlPoint(int index);
 		public void SetControlPoints(object[] controlPoints);
 		public void UpdateControlPoint(int index, Path2DControlPoint point);
+		public ScriptSignal ControlPointChanged { get; }
 	}
 	
 	public interface GuiService : IServiceInstance
@@ -2626,6 +2639,7 @@ namespace Roblox
 		public bool IsModalDialog { get; }
 		public bool IsWindows { get; }
 		public bool MenuIsOpen { get; }
+		public Enum.PreferredTextSize PreferredTextSize { get; }
 		public GuiObject? SelectedObject { get; set; }
 		public Rect TopbarInset { get; }
 		public bool TouchControlsEnabled { get; set; }
@@ -4078,6 +4092,11 @@ namespace Roblox
 		public float Contrast { get; set; }
 		public float Saturation { get; set; }
 		public Color3 TintColor { get; set; }
+	}
+	
+	public interface ColorGradingEffect : PostEffect, ICreatableInstance
+	{
+		public Enum.TonemapperPreset TonemapperPreset { get; set; }
 	}
 	
 	public interface DepthOfFieldEffect : PostEffect, ICreatableInstance

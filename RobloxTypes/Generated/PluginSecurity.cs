@@ -48,10 +48,6 @@ namespace Roblox.PluginClasses
 	{
 	}
 	
-	public interface ActivityHistoryService : IServiceInstance
-	{
-	}
-	
 	public interface AdPortal : ICreatableInstance
 	{
 	}
@@ -105,6 +101,18 @@ namespace Roblox.PluginClasses
 	public partial interface Animator : ICreatableInstance
 	{
 		public void StepAnimations(float deltaTime);
+	}
+	
+	public interface Annotation : ICreatableInstance
+	{
+	}
+	
+	public interface WorkspaceAnnotation : Annotation, ICreatableInstance
+	{
+	}
+	
+	public interface AnnotationsService : IServiceInstance
+	{
 	}
 	
 	public interface AppLifecycleObserverService : IServiceInstance
@@ -303,6 +311,10 @@ namespace Roblox.PluginClasses
 	}
 	
 	public interface BaseWrap : Instance
+	{
+	}
+	
+	public interface WrapDeformer : BaseWrap, ICreatableInstance
 	{
 	}
 	
@@ -1795,6 +1807,10 @@ namespace Roblox.PluginClasses
 	}
 	
 	public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
+	{
+	}
+	
+	public interface ColorGradingEffect : PostEffect, ICreatableInstance
 	{
 	}
 	

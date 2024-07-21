@@ -11075,6 +11075,55 @@ namespace Roblox.Enum
 			uint EnumItem.Value => 1017;
 			string EnumItem.EnumType => "KeyCode";
 		}
+		
+		public struct MouseLeftButton : EnumItem
+		{
+			string EnumItem.Name => "MouseLeftButton";
+			uint EnumItem.Value => 1018;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseRightButton : EnumItem
+		{
+			string EnumItem.Name => "MouseRightButton";
+			uint EnumItem.Value => 1019;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseMiddleButton : EnumItem
+		{
+			string EnumItem.Name => "MouseMiddleButton";
+			uint EnumItem.Value => 1020;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseBackButton : EnumItem
+		{
+			string EnumItem.Name => "MouseBackButton";
+			uint EnumItem.Value => 1021;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseNoButton : EnumItem
+		{
+			string EnumItem.Name => "MouseNoButton";
+			uint EnumItem.Value => 1022;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseX : EnumItem
+		{
+			string EnumItem.Name => "MouseX";
+			uint EnumItem.Value => 1023;
+			string EnumItem.EnumType => "KeyCode";
+		}
+		
+		public struct MouseY : EnumItem
+		{
+			string EnumItem.Name => "MouseY";
+			uint EnumItem.Value => 1024;
+			string EnumItem.EnumType => "KeyCode";
+		}
 	}
 	
 	public struct KeyInterpolationMode
@@ -18454,10 +18503,17 @@ namespace Roblox.Enum
 			string EnumItem.EnumType => "TeleportMethod";
 		}
 		
+		public struct TeleportToInstanceBack : EnumItem
+		{
+			string EnumItem.Name => "TeleportToInstanceBack";
+			uint EnumItem.Value => 5;
+			string EnumItem.EnumType => "TeleportMethod";
+		}
+		
 		public struct TeleportUnknown : EnumItem
 		{
 			string EnumItem.Name => "TeleportUnknown";
-			uint EnumItem.Value => 5;
+			uint EnumItem.Value => 6;
 			string EnumItem.EnumType => "TeleportMethod";
 		}
 	}
@@ -18604,6 +18660,13 @@ namespace Roblox.Enum
 		{
 			string EnumItem.Name => "ToVIPServer";
 			uint EnumItem.Value => 3;
+			string EnumItem.EnumType => "TeleportType";
+		}
+		
+		public struct ToInstanceBack : EnumItem
+		{
+			string EnumItem.Name => "ToInstanceBack";
+			uint EnumItem.Value => 4;
 			string EnumItem.EnumType => "TeleportType";
 		}
 	}
@@ -19309,6 +19372,29 @@ namespace Roblox.Enum
 			string EnumItem.Name => "Precise";
 			uint EnumItem.Value => 2;
 			string EnumItem.EnumType => "TickCountSampleMethod";
+		}
+	}
+	
+	public struct TonemapperPreset
+	{
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+		
+		public struct Default : EnumItem
+		{
+			string EnumItem.Name => "Default";
+			uint EnumItem.Value => 0;
+			string EnumItem.EnumType => "TonemapperPreset";
+		}
+		
+		public struct Retro : EnumItem
+		{
+			string EnumItem.Name => "Retro";
+			uint EnumItem.Value => 1;
+			string EnumItem.EnumType => "TonemapperPreset";
 		}
 	}
 	
