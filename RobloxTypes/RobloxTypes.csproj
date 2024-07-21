@@ -6,12 +6,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>Roblox</RootNamespace>
     <AssemblyName>Roblox</AssemblyName>
+    <Version>1.0.0</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Include\**" />
-    <EmbeddedResource Remove="Include\**" />
-    <None Remove="Include\**" />
-  </ItemGroup>
 
 </Project>

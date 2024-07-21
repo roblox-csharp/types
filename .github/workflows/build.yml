@@ -73,7 +73,6 @@ jobs:
             fi
 
             set -x # Debug mode
-            cat ./RobloxTypes.csproj
             xmlstarlet fo ./RobloxTypes.csproj
 
             # Extract current version from .csproj
