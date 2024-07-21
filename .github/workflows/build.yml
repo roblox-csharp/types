@@ -91,7 +91,7 @@ jobs:
             # Commit version change
             git add ./RobloxTypes.csproj
             git commit -m "Bump version to $NEW_VERSION"
-            git push https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git HEAD:master
+            git push https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git HEAD:deploy
 
             # Add GitHub source to NuGet
             dotnet nuget add source --username roblox-csharp --password ${{ secrets.github_token }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/roblox-csharp/index.json"
