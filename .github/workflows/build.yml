@@ -45,7 +45,7 @@ jobs:
           git add -A
           if ! git diff-index --quiet HEAD --; then
             echo "Generated files changed!"
-            git commit -m "Update generated files [skip ci]"
+            git commit -m "feat: update generated files [skip ci]"
             git push https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git HEAD:master
           fi
 
@@ -67,9 +67,9 @@ jobs:
           if ! git diff-index --quiet HEAD --; then
             echo "Deploy changed!"
             if [ "$GITHUB_EVENT_NAME" == "push" ]; then
-              git commit -m "Manual Update"
+              git commit -m "build: manual update"
             else
-              git commit -m "Automatic Update"
+              git commit -m "build: automatic update"
             fi
 
             # set -x # Debug mode
@@ -89,7 +89,7 @@ jobs:
 
             # Commit version change
             git add ./RobloxTypes.csproj
-            git commit -m "Bump version to $NEW_VERSION"
+            git commit -m "build: bump version to $NEW_VERSION"
             git push https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git HEAD:deploy
 
             # Add GitHub source to NuGet
@@ -98,9 +98,17 @@ jobs:
             # Package the project
             dotnet pack --configuration Release
 
-            # Publish the package
-            PACKAGE_PATH=$(find ./RobloxTypes/bin/Release -name "*.nupkg" -type f -print0 | xargs -0 ls -1t | head -n 1)
-            dotnet nuget push "$PACKAGE_PATH" --api-key ${{ secrets.github_token }} --source "github"
+            VERSION_EXISTS=$(dotnet nuget search roblox-cs --source "github" | grep -c "$NEW_VERSION" || true)
+            echo "VERSION_EXISTS=$VERSION_EXISTS"
+
+            if [ "$VERSION_EXISTS" -eq 0 ]; then
+              # Find and publish the latest package
+              PACKAGE_PATH=$(find ./RobloxCS/bin/Release -name "*.nupkg" -type f -print0 | xargs -0 ls -1t | head -n 1)
+              echo "Publishing package: $PACKAGE_PATH"
+              dotnet nuget push "$PACKAGE_PATH" --api-key ${{ secrets.github_token }} --source "github"
+            else
+              echo "The version is already published. Skipping publish step."
+            fi
           fi
 
       - name: Send Build Failure Notification
