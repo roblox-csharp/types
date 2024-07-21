@@ -71,6 +71,8 @@ jobs:
               git commit -m "Automatic Update"
             fi
 
+            set -x # Debug mode
+
             # Extract current version from .csproj
             CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./RobloxTypes/RobloxTypes.csproj)
             echo "Current version: $CURRENT_VERSION"
@@ -87,7 +89,7 @@ jobs:
             # Commit version change
             git add ./RobloxTypes/RobloxTypes.csproj
             git commit -m "Bump version to $NEW_VERSION"
-            git push https://R-unic:${GITHUB_TOKEN}@github.com/roblox-csharp/types.git HEAD:master
+            git push https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git HEAD:master
 
             # Add GitHub source to NuGet
             dotnet nuget add source --username roblox-csharp --password ${{ secrets.github_token }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/roblox-csharp/index.json"
