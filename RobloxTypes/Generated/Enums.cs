@@ -15974,6 +15974,99 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public struct SecurityCapability
+	{
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+		
+		public struct RunClientScript : EnumItem
+		{
+			string EnumItem.Name => "RunClientScript";
+			uint EnumItem.Value => 0;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct RunServerScript : EnumItem
+		{
+			string EnumItem.Name => "RunServerScript";
+			uint EnumItem.Value => 1;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct AccessOutsideWrite : EnumItem
+		{
+			string EnumItem.Name => "AccessOutsideWrite";
+			uint EnumItem.Value => 2;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct AssetRequire : EnumItem
+		{
+			string EnumItem.Name => "AssetRequire";
+			uint EnumItem.Value => 3;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct LoadString : EnumItem
+		{
+			string EnumItem.Name => "LoadString";
+			uint EnumItem.Value => 4;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct ScriptGlobals : EnumItem
+		{
+			string EnumItem.Name => "ScriptGlobals";
+			uint EnumItem.Value => 5;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct CreateInstances : EnumItem
+		{
+			string EnumItem.Name => "CreateInstances";
+			uint EnumItem.Value => 6;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct Basic : EnumItem
+		{
+			string EnumItem.Name => "Basic";
+			uint EnumItem.Value => 7;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct Audio : EnumItem
+		{
+			string EnumItem.Name => "Audio";
+			uint EnumItem.Value => 8;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct DataStore : EnumItem
+		{
+			string EnumItem.Name => "DataStore";
+			uint EnumItem.Value => 9;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct Network : EnumItem
+		{
+			string EnumItem.Name => "Network";
+			uint EnumItem.Value => 10;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+		
+		public struct Physics : EnumItem
+		{
+			string EnumItem.Name => "Physics";
+			uint EnumItem.Value => 11;
+			string EnumItem.EnumType => "SecurityCapability";
+		}
+	}
+	
 	public struct SelectionBehavior
 	{
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
@@ -19890,6 +19983,36 @@ namespace Roblox.Enum
 			string EnumItem.Name => "Completed";
 			uint EnumItem.Value => 1;
 			string EnumItem.EnumType => "TweenStatus";
+		}
+	}
+	
+	public struct UIDragDetectorBoundingBehavior
+	{
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+		
+		public struct Automatic : EnumItem
+		{
+			string EnumItem.Name => "Automatic";
+			uint EnumItem.Value => 0;
+			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
+		}
+		
+		public struct EntireObject : EnumItem
+		{
+			string EnumItem.Name => "EntireObject";
+			uint EnumItem.Value => 1;
+			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
+		}
+		
+		public struct HitPoint : EnumItem
+		{
+			string EnumItem.Name => "HitPoint";
+			uint EnumItem.Value => 2;
+			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
 		}
 	}
 	
