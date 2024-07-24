@@ -208,6 +208,10 @@ namespace Roblox.PluginClasses
 	{
 	}
 	
+	public interface AudioFocusService : IServiceInstance
+	{
+	}
+	
 	public interface AudioListener : ICreatableInstance
 	{
 	}
@@ -2384,6 +2388,10 @@ namespace Roblox.PluginClasses
 	}
 	
 	public interface BubbleChatConfiguration : TextChatConfigurations
+	{
+	}
+	
+	public interface ChannelTabsConfiguration : TextChatConfigurations
 	{
 	}
 	

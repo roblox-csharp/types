@@ -18,6 +18,7 @@ namespace Roblox
 		public static AssetImportService AssetImportService { get; } = null!;
 		public static AssetManagerService AssetManagerService { get; } = null!;
 		public static AssetService AssetService { get; } = null!;
+		public static AudioFocusService AudioFocusService { get; } = null!;
 		public static AvatarChatService AvatarChatService { get; } = null!;
 		public static AvatarCreationService AvatarCreationService { get; } = null!;
 		public static AvatarEditorService AvatarEditorService { get; } = null!;
@@ -577,6 +578,10 @@ namespace Roblox
 		public float Mix { get; set; }
 		public float Rate { get; set; }
 		public object[] GetConnectedWires(string pin);
+	}
+	
+	public interface AudioFocusService : IServiceInstance
+	{
 	}
 	
 	public interface AudioListener : ICreatableInstance
@@ -4892,6 +4897,22 @@ namespace Roblox
 		public float VerticalStudsOffset { get; set; }
 	}
 	
+	public interface ChannelTabsConfiguration : TextChatConfigurations
+	{
+		public Vector2 AbsolutePosition { get; }
+		public Vector2 AbsoluteSize { get; }
+		public Color3 BackgroundColor3 { get; set; }
+		public double BackgroundTransparency { get; set; }
+		public bool Enabled { get; set; }
+		public Font FontFace { get; set; }
+		public Color3 HoverBackgroundColor3 { get; set; }
+		public Color3 SelectedTabTextColor3 { get; set; }
+		public Color3 TextColor3 { get; set; }
+		public long TextSize { get; set; }
+		public Color3 TextStrokeColor3 { get; set; }
+		public double TextStrokeTransparency { get; set; }
+	}
+	
 	public interface ChatInputBarConfiguration : TextChatConfigurations
 	{
 		public Vector2 AbsolutePosition { get; }
@@ -5131,6 +5152,7 @@ namespace Roblox
 	public interface UIDragDetector : UIComponent, ICreatableInstance
 	{
 		public string ActivatedCursorIcon { get; set; }
+		public Enum.UIDragDetectorBoundingBehavior BoundingBehavior { get; set; }
 		public GuiBase2d? BoundingUI { get; set; }
 		public string CursorIcon { get; set; }
 		public Vector2 DragAxis { get; set; }
