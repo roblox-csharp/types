@@ -80,6 +80,7 @@ jobs:
             # Increment patch version
             IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
             PATCH_VERSION=$((version_parts[2] + 1))
+            echo "Patch version: $PATCH_VERSION"
             NEW_VERSION="${version_parts[0]}.${version_parts[1]}.$PATCH_VERSION"
             echo "New version: $NEW_VERSION"
 
