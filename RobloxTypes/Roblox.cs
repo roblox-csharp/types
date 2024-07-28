@@ -2,6 +2,11 @@
 {
     using HttpHeaders = IDictionary<string, string>;
 
+    [AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false)]
+    public sealed class Native : Attribute
+    {
+    }
+
     public static partial class Globals
     {
         public static DataModel game { get; } = null!;
