@@ -861,24 +861,6 @@ namespace Roblox
 	{
 	}
 	
-	public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
-	{
-		public void FireAllClients(object[] arguments);
-		public void FireClient(Player player, object[] arguments);
-		public void FireServer(object[] arguments);
-		public ScriptSignal<object[]> OnClientEvent { get; }
-		public ScriptSignal<Player, object[]> OnServerEvent { get; }
-	}
-	
-	public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
-	{
-		public void FireAllClients(object[] arguments);
-		public void FireClient(Player player, object[] arguments);
-		public void FireServer(object[] arguments);
-		public ScriptSignal<object[]> OnClientEvent { get; }
-		public ScriptSignal<Player, object[]> OnServerEvent { get; }
-	}
-	
 	public interface BaseWrap : Instance
 	{
 		public string CageMeshId { get; set; }
@@ -4184,12 +4166,6 @@ namespace Roblox
 	
 	public interface RemoteDebuggerServer : IServiceInstance
 	{
-	}
-	
-	public interface RemoteFunction : ICreatableInstance
-	{
-		public object[] InvokeClient(Player player, object[] arguments);
-		public object[] InvokeServer(object[] arguments);
 	}
 	
 	public interface ReplicatedFirst : IServiceInstance

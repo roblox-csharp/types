@@ -306,14 +306,6 @@ namespace Roblox.PluginClasses
 		public bool ShowDevelopmentGui { get; set; }
 	}
 	
-	public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
-	{
-	}
-	
-	public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
-	{
-	}
-	
 	public interface BaseWrap : Instance
 	{
 	}
@@ -1851,10 +1843,6 @@ namespace Roblox.PluginClasses
 	}
 	
 	public interface RemoteCursorService : IServiceInstance
-	{
-	}
-	
-	public interface RemoteFunction : ICreatableInstance
 	{
 	}
 	
