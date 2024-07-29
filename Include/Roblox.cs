@@ -192,8 +192,10 @@
 
     public interface RemoteFunction : ICreatableInstance
     {
-        public object[] InvokeClient(Player player, params object[] arguments);
-        public object[] InvokeServer(params object[] arguments);
+        public object[] InvokeClient(Player player, params object[] arguments); // TODO: tuple
+        public object[] InvokeServer(params object[] arguments); // TODO: tuple
+        public Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientInvoke { get; set; }
+        public Func<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerInvoke { get; set; }
     }
 
     public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -201,8 +203,8 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal<object[]> OnClientEvent { get; }
-        public ScriptSignal<Player, object[]> OnServerEvent { get; }
+        public ScriptSignal<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientEvent { get; }
+        public ScriptSignal<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerEvent { get; }
     }
 
     public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -210,8 +212,8 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal<object[]> OnClientEvent { get; }
-        public ScriptSignal<Player, object[]> OnServerEvent { get; }
+        public ScriptSignal<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientEvent { get; }
+        public ScriptSignal<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerEvent { get; }
     }
 
     public partial interface NetworkPeer : Instance
@@ -358,6 +360,36 @@
     public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>>
     {
         public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15) Wait();
+    }
+
+    public interface ScriptSignal<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> : IScriptSignal<Action<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>>
+    {
+        public new (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16) Wait();
     }
 
     public interface ScriptConnection
