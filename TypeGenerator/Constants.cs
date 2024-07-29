@@ -203,7 +203,12 @@
 
             // unused
             "UGCValidationService",
-            "RbxAnalyticsService"
+            "RbxAnalyticsService",
+
+            // custom defined
+            "RemoteEvent",
+            "UnreliableRemoteEvent",
+            "RemoteFunction"
         };
 
         public static readonly Dictionary<string, HashSet<string>> MEMBER_BLACKLIST = new Dictionary<string, HashSet<string>>

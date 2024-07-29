@@ -190,6 +190,30 @@
     {
     }
 
+    public interface RemoteFunction : ICreatableInstance
+    {
+        public object[] InvokeClient(Player player, params object[] arguments);
+        public object[] InvokeServer(params object[] arguments);
+    }
+
+    public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
+    {
+        public void FireAllClients(params object[] arguments);
+        public void FireClient(Player player, params object[] arguments);
+        public void FireServer(params object[] arguments);
+        public ScriptSignal<object[]> OnClientEvent { get; }
+        public ScriptSignal<Player, object[]> OnServerEvent { get; }
+    }
+
+    public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
+    {
+        public void FireAllClients(params object[] arguments);
+        public void FireClient(Player player, params object[] arguments);
+        public void FireServer(params object[] arguments);
+        public ScriptSignal<object[]> OnClientEvent { get; }
+        public ScriptSignal<Player, object[]> OnServerEvent { get; }
+    }
+
     public partial interface NetworkPeer : Instance
     {
         public void SetOutgoingKBPSLimit(int limit);
