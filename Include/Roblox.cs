@@ -433,12 +433,12 @@
     /// <summary>Returns a <see cref="Vector2int16"/> from the given x and y components.</summary>
     /// <param name="x">The x-coordinate of the <see cref="Vector2int16"/>.</param>
     /// <param name="y">The y-coordinate of the <see cref="Vector2int16"/>.</param>
-    public sealed class Vector2int16(short x = 0, short y = 0)
+    public sealed class Vector2int16(short? x = 0, short? y = 0)
     {
         /// <summary>The x-coordinate of the <see cref="Vector2int16"/>.</summary>
-        public readonly short X = x;
+        public readonly short X = (short)x!;
         /// <summary>The y-coordinate of the <see cref="Vector2int16"/>.</summary>
-        public readonly short Y = y;
+        public readonly short Y = (short)y!;
 
         public static Vector2int16 operator -(Vector2int16 a, Vector2int16 b)
         {
@@ -466,7 +466,7 @@
         }
     }
 
-    public sealed class Vector2(float x = 0, float y = 0)
+    public sealed class Vector2(float? x = 0, float? y = 0)
     {
         /// <summary>A <see cref="Vector2"/> with a magnitude of zero.</summary>
         public static readonly Vector2 zero = null!;
@@ -478,9 +478,9 @@
         public static readonly Vector2 yAxis = null!;
 
         /// <summary>The x-coordinate of the <see cref="Vector2"/></summary>
-        public readonly float X = x;
+        public readonly float X = (float)x!;
         /// <summary>The y-coordinate of the <see cref="Vector2"/></summary>
-        public readonly float Y = y;
+        public readonly float Y = (float)y!;
         /// <summary>The length of the <see cref="Vector2"/></summary>
         public readonly float Magnitude;
         /// <summary>A normalized copy of the <see cref="Vector2"/> - one that has the same direction as the original but a magnitude of 1.</summary>
@@ -529,7 +529,7 @@
         }
 
         /// <summary>Returns true if the X, Y, and Z components of the other <see cref="Vector2"/> are within epsilon units of each corresponding component of this <see cref="Vector2"/>.</summary>
-        public bool FuzzyEq(Vector2 other, float? epsilon)
+        public bool FuzzyEq(Vector2 other, float? epsilon = null!)
         {
             return default;
         }
@@ -596,14 +596,14 @@
     /// <param name="x">The x-coordinate of the <see cref="Vector3int16"/>.</param>
     /// <param name="y">The y-coordinate of the <see cref="Vector3int16"/>.</param>
     /// <param name="z">The z-coordinate of the <see cref="Vector3int16"/>.</param>
-    public sealed class Vector3int16(short x = 0, short y = 0, short z = 0)
+    public sealed class Vector3int16(short? x = 0, short? y = 0, short? z = 0)
     {
         /// <summary>The x-coordinate of the <see cref="Vector3int16"/>.</summary>
-        public readonly short X = x;
+        public readonly short X = (short)x!;
         /// <summary>The y-coordinate of the <see cref="Vector3int16"/>.</summary>
-        public readonly short Y = y;
+        public readonly short Y = (short)y!;
         /// <summary>The z-coordinate of the <see cref="Vector3int16"/>.</summary>
-        public readonly short Z = z;
+        public readonly short Z = (short)z!;
 
         public static Vector3int16 operator +(Vector3int16 a, Vector3int16 b)
         {
@@ -646,7 +646,7 @@
     /// <param name="x">The x-coordinate of the <see cref="Vector3"/>.</param>
     /// <param name="y">The y-coordinate of the <see cref="Vector3"/>.</param>
     /// <param name="z">The z-coordinate of the <see cref="Vector3"/>.</param>
-    public sealed class Vector3(float x = 0, float y = 0, float z = 0)
+    public sealed class Vector3(float? x = 0, float? y = 0, float? z = 0)
     {
         /// <summary>A <see cref="Vector3"/> with a magnitude of zero.</summary>
         public static readonly Vector3 zero = null!;
@@ -660,11 +660,11 @@
         public static readonly Vector3 zAxis = null!;
 
         /// <summary>The x-coordinate of the <see cref="Vector3"/>.</summary>
-        public readonly float X = x;
+        public readonly float X = (float)x!;
         /// <summary>The y-coordinate of the <see cref="Vector3"/>.</summary>
-        public readonly float Y = y;
+        public readonly float Y = (float)y!;
         /// <summary>The z-coordinate of the <see cref="Vector3"/>.</summary>
-        public readonly float Z = z;
+        public readonly float Z = (float)z!;
         /// <summary>The length of the Vector3.</summary>
         public readonly float Magnitude;
         /// <summary>A normalized copy of the <see cref="Vector3"/> - one that has the same direction as the original but a magnitude of 1.</summary>
@@ -725,7 +725,7 @@
         }
 
         /// <summary>Returns true if the X, Y, and Z components of the other <see cref="Vector3"/> are within epsilon units of each corresponding component of this <see cref="Vector3"/>.</summary>
-        public bool FuzzyEq(Vector3 other, float? epsilon)
+        public bool FuzzyEq(Vector3 other, float? epsilon = null!)
         {
             return default;
         }
@@ -812,6 +812,11 @@
         public readonly Vector3 YVector = null!;
         /// <summary>The Z component of the <see cref="CFrame"/> object's orientation. Equivalent to the negated <see cref="LookVector"/> or the third column of the rotation matrix.</summary>
         public readonly Vector3 ZVector = null!;
+
+        /// <summary>Returns an empty <see cref="CFrame"/>.</summary>
+        public CFrame()
+        {
+        }
 
         /// <summary>Returns a <see cref="CFrame"/> with no rotation with the position of the provided <see cref="Vector3"/>.</summary>
         public CFrame(Vector3 pos)
@@ -1106,13 +1111,13 @@
         public readonly float B;
 
         /// <summary>Returns a <see cref="Color3"/> with the given red, green, and blue values.</summary>
-        public static Color3 fromRGB(float r = 0, float g = 0, float b = 0)
+        public static Color3 fromRGB(float? r = 0, float? g = 0, float? b = 0)
         {
             return null!;
         }
 
         /// <summary>Returns a <see cref="Color3"/> from given components within the range of 0 to 255.</summary>
-        public static Color3 fromRGB(byte r = 0, byte g = 0, byte b = 0)
+        public static Color3 fromRGB(byte? r = 0, byte? g = 0, byte? b = 0)
         {
             return null!;
         }
@@ -1420,7 +1425,7 @@
         public readonly UDim Height = null!;
 
         /// <summary>Returns a new <see cref="UDim2"/> given the coordinates of the two <see cref="UDim"/> components representing each axis.</summary>
-        public UDim2(float xScale = 0, uint xOffset = 0, float yScale = 0, uint yOffset = 0)
+        public UDim2(float? xScale = 0, uint? xOffset = 0, float? yScale = 0, uint? yOffset = 0)
         {
         }
 
@@ -1430,13 +1435,13 @@
         }
 
         /// <summary>Returns a new <see cref="UDim2"/> with the given scalar coordinates and no offsets.</summary>
-        public static UDim2 fromScale(float xScale = 0, float yScale = 0)
+        public static UDim2 fromScale(float? xScale = 0, float? yScale = 0)
         {
             return null!;
         }
 
         /// <summary>Returns a new <see cref="UDim2"/> with the given offset coordinates and no scales.</summary>
-        public static UDim2 fromOffset(uint xOffset = 0, uint yOffset = 0)
+        public static UDim2 fromOffset(uint? xOffset = 0, uint? yOffset = 0)
         {
             return null!;
         }
@@ -1974,7 +1979,7 @@
         /// <param name="family">The asset ID for the font family, starting with rbxasset:// or rbxassetid://.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public Font(string family, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
+        public Font(string family, Enum.FontWeight.Type? weight = null!, Enum.FontStyle.Type? style = null!)
         {
         }
 
@@ -1995,7 +2000,7 @@
         /// <param name="name">The name of the font.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public static Font fromName(string name, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
+        public static Font fromName(string name, Enum.FontWeight.Type? weight = null!, Enum.FontStyle.Type? style = null!)
         {
             return null!;
         }
@@ -2004,7 +2009,7 @@
         /// <param name="id">The asset ID of the font as a number.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public static Font fromId(ulong id, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
+        public static Font fromId(ulong id, Enum.FontWeight.Type? weight = null!, Enum.FontStyle.Type? style = null!)
         {
             return null!;
         }
@@ -2059,13 +2064,13 @@
 
         /// <summary>Returns a new <see cref="DockWidgetPluginGuiInfo"/> object.</summary>
         public DockWidgetPluginGuiInfo(
-            Enum.InitialDockState.Type? initDockState,
-            bool? initEnabled,
-            bool? overrideEnabledRestore,
-            float? floatXSize,
-            float? floatYSize,
-            float? minWidth,
-            float? minHeight
+            Enum.InitialDockState.Type? initDockState = null!,
+            bool? initEnabled = null!,
+            bool? overrideEnabledRestore = null!,
+            float? floatXSize = null!,
+            float? floatYSize = null!,
+            float? minWidth = null!,
+            float? minHeight = null!
         )
         { 
         }
@@ -2123,7 +2128,7 @@
         public readonly bool Reverses;
 
         /// <summary>Creates a new <see cref="TweenInfo"/> from the provided parameters.</summary>
-        public TweenInfo(float? time, Enum.EasingStyle.Type? easingStyle, Enum.EasingDirection.Type? easingDirection, ushort? repeatCount, float? delayTime, bool? reverses)
+        public TweenInfo(float? time = null!, Enum.EasingStyle.Type? easingStyle = null!, Enum.EasingDirection.Type? easingDirection = null!, ushort? repeatCount = null!, float? delayTime = null!, bool? reverses = null!)
         {
         }
     }
@@ -2139,12 +2144,12 @@
         { 
         }
 
-        public static SharedTable clone(SharedTable st, bool? deep)
+        public static SharedTable clone(SharedTable st, bool? deep = null!)
         {
             return null!;
         }
 
-        public static SharedTable cloneAndFreeze(SharedTable st, bool? deep)
+        public static SharedTable cloneAndFreeze(SharedTable st, bool? deep = null!)
         {
             return null!;
         }
