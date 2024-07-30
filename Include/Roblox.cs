@@ -2128,7 +2128,7 @@
         public readonly bool Reverses;
 
         /// <summary>Creates a new <see cref="TweenInfo"/> from the provided parameters.</summary>
-        public TweenInfo(float? time = null!, Enum.EasingStyle.Type? easingStyle = null!, Enum.EasingDirection.Type? easingDirection = null!, ushort? repeatCount = null!, float? delayTime = null!, bool? reverses = null!)
+        public TweenInfo(float? time = null!, Enum.EasingStyle.Type? easingStyle = null!, Enum.EasingDirection.Type? easingDirection = null!, ushort? repeatCount = null!, bool? reverses = null!, float? delayTime = null!)
         {
         }
     }
