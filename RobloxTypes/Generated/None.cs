@@ -4807,8 +4807,6 @@ namespace Roblox
 	{
 		public new ServiceProvider Clone();
 		public ScriptSignal Close { get; }
-		public ScriptSignal<Instance> ServiceAdded { get; }
-		public ScriptSignal<Instance> ServiceRemoving { get; }
 	}
 	
 	public partial interface DataModel : ServiceProvider

@@ -235,7 +235,7 @@
             { "LayerCollector", ["FilteringEnabled"] },
             { "GuiBase3d", ["FilteringEnabled"] },
             { "Model", ["FilteringEnabled"] },
-            { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service"] },
+            { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] },
             { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] }
         };
 
