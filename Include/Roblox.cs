@@ -296,8 +296,17 @@
         public string Name { get; }
         /// <summary>The integral value assigned to the <see cref="EnumItem"/>.</summary>
         public uint Value { get; }
-        /// <summary>A reference to the parent <see cref="IEnum">Enum</see> of the <see cref="EnumItem"/>.</summary>
+        /// <summary>A reference to the parent Enum of the <see cref="EnumItem"/>.</summary>
         public string EnumType { get; }
+        bool IsA<T>(string name) where T : Enum.Enum;
+    }
+
+    namespace Enum
+    {
+        public abstract class Enum
+        {
+            public abstract EnumItem[] GetEnumItems();
+        }
     }
 
     public interface IScriptSignal<TAction>
@@ -651,13 +660,13 @@
         public readonly Vector3 Unit = null!;
 
         /// <summary>Returns a new <see cref="Vector3"/> in the given direction.</summary>
-        public static Vector3 FromNormalId(Enum.NormalId normal)
+        public static Vector3 FromNormalId(Enum.NormalId.Type normal)
         {
             return null!;
         }
 
         /// <summary>Returns a new <see cref="Vector3"/> for the given axis.</summary>
-        public static Vector3 FromAxis(Enum.Axis axis)
+        public static Vector3 FromAxis(Enum.Axis.Type axis)
         {
             return null!;
         }
@@ -841,7 +850,7 @@
         }
 
         /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians. Rotations are applied in the optional <see cref="Enum.RotationOrder"/> with a default of XYZ.</summary>
-        public static CFrame fromEulerAngles(float x, float y, float z, Enum.RotationOrder? order)
+        public static CFrame fromEulerAngles(float x, float y, float z, Enum.RotationOrder.Type? order)
         {
             return null!;
         }
@@ -961,7 +970,7 @@
         }
 
         /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using the optional <see cref="Enum.RotationOrder"/>. If you don't provide order, the method uses <see cref="Enum.RotationOrder.XYZ"/>.</summary>
-        public (float, float, float) ToEulerAngles(Enum.RotationOrder order)
+        public (float, float, float) ToEulerAngles(Enum.RotationOrder.Type order)
         {
             return default;
         }
@@ -1273,7 +1282,7 @@
         /// <summary>The <see cref="BasePart"/> or <see cref="Terrain"/> cell that the ray intersected.</summary>
         public readonly Instance? Instance;
         /// <summary>The <see cref="Enum.Material"/> at the intersection point.</summary>
-        public readonly Enum.Material Material;
+        public readonly Enum.Material.Type Material = null!;
         /// <summary>The position of the intersection between the ray and the part.</summary>
         public readonly Vector3 Position = null!;
         /// <summary>The normal vector of the intersected face.</summary>
@@ -1292,7 +1301,7 @@
         /// <summary>An array of objects whose descendants are used in filtering raycasting candidates.</summary>
         public Instance[]? FilterDescendantsInstances;
         /// <summary>Determines how the <see cref="FilterDescendantsInstances"/> array is used.</summary>
-        public Enum.RaycastFilterType? FilterType;
+        public Enum.RaycastFilterType.Type? FilterType;
         /// <summary>Determines whether the water material is considered when raycasting against <see cref="Terrain"/>.</summary>
         public bool? IgnoreWater;
         /// <summary>The collision group used for the operation.</summary>
@@ -1336,7 +1345,7 @@
         /// <summary>An array of objects whose descendants is used in filtering candidates.</summary>
         public Instance[]? FilterDescendantsInstances;
         /// <summary>Determines how the <see cref="FilterDescendantsInstances"/> list is used.</summary>
-        public Enum.RaycastFilterType? FilterType;
+        public Enum.RaycastFilterType.Type? FilterType;
         /// <summary>The maximum amount of parts to be returned by the query.</summary>
         public uint MaxParts;
         /// <summary>The collision group used for the operation.</summary>
@@ -1757,12 +1766,12 @@
         }
 
         /// <summary>Creates a new <see cref="Axes"/> using list of axes.</summary>
-        public Axes((Enum.Axis, Enum.Axis?, Enum.Axis?) axes)
+        public Axes((Enum.Axis.Type, Enum.Axis.Type?, Enum.Axis.Type?) axes)
         {
         }
 
         /// <summary>Creates a new <see cref="Axes"/> using list of faces. NormalIds (faces) are converted to the corresponding axes.</summary>
-        public Axes((Enum.NormalId, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?) axes)
+        public Axes((Enum.NormalId.Type, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?) axes)
         {
         }
     }
@@ -1797,7 +1806,7 @@
         /// <para>Each NormalId provided indicates the property of the same name in the new <see cref="Faces"/> will be true.</para>
         /// <para>Passing values that are not a <see cref="Enum.NormalId"/> will do nothing; they are ignored silently.</para>
         /// </summary>
-        public Faces((Enum.NormalId, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?, Enum.NormalId?) axes)
+        public Faces((Enum.NormalId.Type, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?, Enum.NormalId.Type?) axes)
         {
         }
     }
@@ -1820,7 +1829,7 @@
         public float ElasticityWeight;
 
         /// <summary>Returns a <see cref="PhysicalProperties"/> container, with the density, friction, and elasticity specified for this Material.</summary>
-        public PhysicalProperties(Enum.Material material)
+        public PhysicalProperties(Enum.Material.Type material)
         {
         }
 
@@ -1873,7 +1882,7 @@
     public sealed class RotationCurveKey
     {
         /// <summary>The key interpolation mode for the segment started by this <see cref="RotationCurveKey"/>.</summary
-        public readonly Enum.KeyInterpolationMode Interpolation;
+        public readonly Enum.KeyInterpolationMode.Type Interpolation = null!;
         /// <summary>The time position of this <see cref="RotationCurveKey"/>.</summary>
         public readonly float Time;
         /// <summary>The value of this <see cref="RotationCurveKey"/>.</summary>
@@ -1890,7 +1899,7 @@
         /// <param name="time">Time at which to create the new <see cref="RotationCurveKey"/>.</param>
         /// <param name="value">CFrame of the new <see cref="RotationCurveKey"/>.</param>
         /// <param name="interpolation"></param>
-        public RotationCurveKey(float time, CFrame cframe, Enum.KeyInterpolationMode interpolation)
+        public RotationCurveKey(float time, CFrame cframe, Enum.KeyInterpolationMode.Type interpolation)
         {
         }
     }
@@ -1904,7 +1913,7 @@
     public sealed class FloatCurveKey
     {
         /// <summary>The key interpolation mode for the segment started by this <see cref="FloatCurveKey"/>.</summary
-        public readonly Enum.KeyInterpolationMode Interpolation;
+        public readonly Enum.KeyInterpolationMode.Type Interpolation = null!;
         /// <summary>The time position of this <see cref="FloatCurveKey"/>.</summary>
         public readonly float Time;
         /// <summary>The value of this <see cref="FloatCurveKey"/>.</summary>
@@ -1921,7 +1930,7 @@
         /// <param name="time">Time at which to create the new <see cref="FloatCurveKey"/>.</param>
         /// <param name="value">Value of the new <see cref="FloatCurveKey"/>.</param>
         /// <param name="interpolation"></param>
-        public FloatCurveKey(float time, float value, Enum.KeyInterpolationMode interpolation)
+        public FloatCurveKey(float time, float value, Enum.KeyInterpolationMode.Type interpolation)
         { 
         }
     }
@@ -1939,12 +1948,12 @@
         /// <para>How thick the text is. The default value is <see cref="Enum.FontWeight.Regular"/>.</para>
         /// <para>When set, <see cref="Font.Bold"/> is updated. Bold is true if the weight is <see cref="Enum.FontWeight.SemiBold"/> or thicker.</para>
         /// </summary>
-        public readonly Enum.FontWeight Weight;
+        public readonly Enum.FontWeight.Type Weight = null!;
         /// <summary>
         /// <para>Whether the font is italic. The default value is <see cref="Enum.FontStyle.Normal"/>.</para>
         /// <para>The font can be made italic (like this) using <see cref="Enum.FontStyle.Italic"/>.</para>
         /// </summary>
-        public readonly Enum.FontStyle Style;
+        public readonly Enum.FontStyle.Type Style = null!;
         /// <summary>
         /// Whether the font is bold. Sets <see cref="Font.Weight"/> to <see cref="Enum.FontWeight.Bold"/> when true, and <see cref="Enum.FontWeight.Regular"/> otherwise.
         /// </summary>
@@ -1954,7 +1963,7 @@
         /// <param name="family">The asset ID for the font family, starting with rbxasset:// or rbxassetid://.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public Font(string family, Enum.FontWeight? weight, Enum.FontStyle? style)
+        public Font(string family, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
         {
         }
 
@@ -1963,7 +1972,7 @@
         /// <para>The following table indicates the family, weight, and style associated with each <see cref="Enum.Font"/>.</para>
         /// </summary>
         /// <param name="font">The enum value of the font to use.</param>
-        public static Font fromEnum(Enum.Font font)
+        public static Font fromEnum(Enum.Font.Type font)
         {
             return null!;
         }
@@ -1975,7 +1984,7 @@
         /// <param name="name">The name of the font.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public static Font fromName(string name, Enum.FontWeight? weight, Enum.FontStyle? style)
+        public static Font fromName(string name, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
         {
             return null!;
         }
@@ -1984,7 +1993,7 @@
         /// <param name="id">The asset ID of the font as a number.</param>
         /// <param name="weight">How thick the text is.</param>
         /// <param name="style">Whether the text is normal or italic.</param>
-        public static Font fromId(ulong id, Enum.FontWeight? weight, Enum.FontStyle? style)
+        public static Font fromId(ulong id, Enum.FontWeight.Type? weight, Enum.FontStyle.Type? style)
         {
             return null!;
         }
@@ -2039,7 +2048,7 @@
 
         /// <summary>Returns a new <see cref="DockWidgetPluginGuiInfo"/> object.</summary>
         public DockWidgetPluginGuiInfo(
-            Enum.InitialDockState? initDockState,
+            Enum.InitialDockState.Type? initDockState,
             bool? initEnabled,
             bool? overrideEnabledRestore,
             float? floatXSize,
@@ -2064,17 +2073,17 @@
         /// <summary>The maximum item price to search for.</summary>
         public ulong? MaxPrice;
         /// <summary>The order in which to sort the results.</summary>
-        public Enum.CatalogSortType? SortType;
+        public Enum.CatalogSortType.Type? SortType;
         /// <summary>The time period to use to aggregate the sort results.</summary>
-        public Enum.CatalogSortAggregation? SortAggregation;
+        public Enum.CatalogSortAggregation.Type? SortAggregation;
         /// <summary>The category to filter the search by.</summary>
-        public Enum.CatalogCategoryFilter? CategoryFilter;
+        public Enum.CatalogCategoryFilter.Type? CategoryFilter;
         /// <summary>The sales type filter the search by.</summary>
-        public Enum.SalesTypeFilter? SalesTypeFilter;
+        public Enum.SalesTypeFilter.Type? SalesTypeFilter;
         /// <summary>An array containing <see cref="Enum.BundleType"/> values to filter the search by.</summary>
-        public Enum.BundleType[]? BundleTypes;
+        public Enum.BundleType.Type[]? BundleTypes;
         /// <summary>An array containing <see cref="Enum.AvatarAssetType"/> values to filter the search by.</summary>
-        public Enum.AvatarAssetType[]? AssetTypes;
+        public Enum.AvatarAssetType.Type[]? AssetTypes;
         /// <summary>Whether off sale items should be included in the results.</summary>
         public bool? IncludeOffSale;
         /// <summary>Search for items with the given creator.</summary>
@@ -2090,9 +2099,9 @@
     public sealed class TweenInfo
     {
         /// <summary>The style in which the tween executes.</summary>
-        public readonly Enum.EasingStyle EasingStyle;
+        public readonly Enum.EasingStyle.Type EasingStyle = null!;
         /// <summary>The direction in which the EasingStyle executes.</summary>
-        public readonly Enum.EasingDirection EasingDirection;
+        public readonly Enum.EasingDirection.Type EasingDirection = null!;
         /// <summary>The amount of time the tween takes in seconds.</summary>
         public readonly float Time;
         /// <summary>The amount of time that elapses before tween starts in seconds.</summary>
@@ -2103,7 +2112,7 @@
         public readonly bool Reverses;
 
         /// <summary>Creates a new <see cref="TweenInfo"/> from the provided parameters.</summary>
-        public TweenInfo(float? time, Enum.EasingStyle? easingStyle, Enum.EasingDirection? easingDirection, ushort? repeatCount, float? delayTime, bool? reverses)
+        public TweenInfo(float? time, Enum.EasingStyle.Type? easingStyle, Enum.EasingDirection.Type? easingDirection, ushort? repeatCount, float? delayTime, bool? reverses)
         {
         }
     }
@@ -2218,6 +2227,6 @@
         public string? Method { get; set; }
         public string? Body { get; set; }
         public HttpHeaders? Headers { get; set; }
-        // public Enum.HttpCompression? Compress { get; set; }
+        public Enum.HttpCompression.Type? Compress { get; set; }
     }
 }

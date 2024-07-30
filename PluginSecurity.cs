@@ -392,7 +392,7 @@ namespace Roblox.PluginClasses
 	
 	public interface ChangeHistoryService : IServiceInstance
 	{
-		public void FinishRecording(string identifier, Enum.FinishRecordingOperation operation, object? finalOptions = null);
+		public void FinishRecording(string identifier, Enum.FinishRecordingOperation.Type operation, object? finalOptions = null);
 		public object[] GetCanRedo();
 		public object[] GetCanUndo();
 		public bool IsRecordingInProgress(string? identifier = null);
@@ -402,7 +402,7 @@ namespace Roblox.PluginClasses
 		public void SetWaypoint(string name);
 		public string? TryBeginRecording(string name, string? displayName = null);
 		public void Undo();
-		public ScriptSignal<string, string?, string?, Enum.FinishRecordingOperation, object?> OnRecordingFinished { get; }
+		public ScriptSignal<string, string?, string?, Enum.FinishRecordingOperation.Type, object?> OnRecordingFinished { get; }
 		public ScriptSignal<string, string?> OnRecordingStarted { get; }
 		public ScriptSignal<string> OnRedo { get; }
 		public ScriptSignal<string> OnUndo { get; }
@@ -681,7 +681,7 @@ namespace Roblox.PluginClasses
 		public int PlayerCount { get; }
 		public bool ReportSoundWarnings { get; set; }
 		public string RobloxVersion { get; }
-		public Enum.TickCountSampleMethod TickCountPreciseOverride { get; set; }
+		public Enum.TickCountSampleMethod.Type TickCountPreciseOverride { get; set; }
 	}
 	
 	public interface DebuggerBreakpoint : Instance
@@ -1510,7 +1510,7 @@ namespace Roblox.PluginClasses
 	
 	public interface Model : PVInstance, ICreatableInstance
 	{
-		public Enum.ModelLevelOfDetail LevelOfDetail { get; set; }
+		public Enum.ModelLevelOfDetail.Type LevelOfDetail { get; set; }
 	}
 	
 	public interface Actor : Model, ICreatableInstance
@@ -1527,7 +1527,7 @@ namespace Roblox.PluginClasses
 	
 	public partial interface WorldRoot : Model
 	{
-		public void IKMoveTo(BasePart part, CFrame target, float? translateStiffness = null, float? rotateStiffness = null, Enum.IKCollisionsMode? collisionsMode = null);
+		public void IKMoveTo(BasePart part, CFrame target, float? translateStiffness = null, float? rotateStiffness = null, Enum.IKCollisionsMode.Type? collisionsMode = null);
 		public void StepPhysics(float dt, Instance[]? parts = null);
 	}
 	
@@ -1626,7 +1626,7 @@ namespace Roblox.PluginClasses
 		public bool IsInterpolationThrottleShown { get; set; }
 		public bool IsReceiveAgeShown { get; set; }
 		public bool IsTreeShown { get; set; }
-		public Enum.EnviromentalPhysicsThrottle PhysicsEnvironmentalThrottle { get; set; }
+		public Enum.EnviromentalPhysicsThrottle.Type PhysicsEnvironmentalThrottle { get; set; }
 		public bool ShowDecompositionGeometry { get; set; }
 		public double ThrottleAdjustTime { get; set; }
 		public bool UseCSGv2 { get; set; }
@@ -1665,7 +1665,7 @@ namespace Roblox.PluginClasses
 	public partial interface Players : IServiceInstance
 	{
 		public void Chat(string message);
-		public void SetChatStyle(Enum.ChatStyle? style = null);
+		public void SetChatStyle(Enum.ChatStyle.Type? style = null);
 		public void TeamChat(string message);
 	}
 	
@@ -1678,9 +1678,9 @@ namespace Roblox.PluginClasses
 		public PluginMenu CreatePluginMenu(string id, string title, string icon);
 		public PluginToolbar CreateToolbar(string name);
 		public void Deactivate();
-		public Enum.JointCreationMode GetJoinMode();
+		public Enum.JointCreationMode.Type GetJoinMode();
 		public PluginMouse GetMouse();
-		public Enum.RibbonTool GetSelectedRibbonTool();
+		public Enum.RibbonTool.Type GetSelectedRibbonTool();
 		public object GetSetting(string key);
 		public long GetStudioUserId();
 		public Instance Intersect(Instance[] objects);
@@ -1690,7 +1690,7 @@ namespace Roblox.PluginClasses
 		public void OpenScript(LuaSourceContainer script, int? lineNumber = null);
 		public void OpenWikiPage(string url);
 		public void SaveSelectedToRoblox();
-		public void SelectRibbonTool(Enum.RibbonTool tool, UDim2 position);
+		public void SelectRibbonTool(Enum.RibbonTool.Type tool, UDim2 position);
 		public Instance[] Separate(Instance[] objects);
 		public void SetSetting(string key, object value);
 		public void StartDrag(object dragData);
@@ -1850,18 +1850,18 @@ namespace Roblox.PluginClasses
 	{
 		public int AutoFRMLevel { get; set; }
 		public bool EagerBulkExecution { get; set; }
-		public Enum.QualityLevel EditQualityLevel { get; set; }
+		public Enum.QualityLevel.Type EditQualityLevel { get; set; }
 		public bool EnableVRMode { get; set; }
 		public bool ExportMergeByMaterial { get; set; }
-		public Enum.FramerateManagerMode FrameRateManager { get; set; }
-		public Enum.GraphicsMode GraphicsMode { get; set; }
+		public Enum.FramerateManagerMode.Type FrameRateManager { get; set; }
+		public Enum.GraphicsMode.Type GraphicsMode { get; set; }
 		public int MeshCacheSize { get; set; }
-		public Enum.MeshPartDetailLevel MeshPartDetailLevel { get; set; }
-		public Enum.QualityLevel QualityLevel { get; set; }
+		public Enum.MeshPartDetailLevel.Type MeshPartDetailLevel { get; set; }
+		public Enum.QualityLevel.Type QualityLevel { get; set; }
 		public bool ReloadAssets { get; set; }
 		public bool RenderCSGTrianglesDebug { get; set; }
 		public bool ShowBoundingBoxes { get; set; }
-		public Enum.ViewMode ViewMode { get; set; }
+		public Enum.ViewMode.Type ViewMode { get; set; }
 		public int GetMaxQualityLevel();
 	}
 	
@@ -1869,7 +1869,7 @@ namespace Roblox.PluginClasses
 	{
 		public CFrame CFrame { get; set; }
 		public int ComparisonDiffThreshold { get; set; }
-		public Enum.RenderingTestComparisonMethod ComparisonMethod { get; set; }
+		public Enum.RenderingTestComparisonMethod.Type ComparisonMethod { get; set; }
 		public float ComparisonPsnrThreshold { get; set; }
 		public string Description { get; set; }
 		public float FieldOfView { get; set; }
@@ -1905,7 +1905,7 @@ namespace Roblox.PluginClasses
 	
 	public partial interface RunService : IServiceInstance
 	{
-		public Enum.RunState RunState { get; set; }
+		public Enum.RunState.Type RunState { get; set; }
 		public bool IsEdit();
 		public void Pause();
 		public void Reset();
@@ -1954,7 +1954,7 @@ namespace Roblox.PluginClasses
 		public void SetUpvalue(string name, object value, int? stackFrame = null);
 		public ScriptSignal<Instance> BreakpointAdded { get; }
 		public ScriptSignal<Instance> BreakpointRemoved { get; }
-		public ScriptSignal<int, Enum.BreakReason> EncounteredBreak { get; }
+		public ScriptSignal<int, Enum.BreakReason.Type> EncounteredBreak { get; }
 		public ScriptSignal Resuming { get; }
 		public ScriptSignal<Instance> WatchAdded { get; }
 		public ScriptSignal<Instance> WatchRemoved { get; }
@@ -2251,7 +2251,7 @@ namespace Roblox.PluginClasses
 	
 	public interface StudioTheme : Instance
 	{
-		public Color3 GetColor(Enum.StudioStyleGuideColor styleguideitem, Enum.StudioStyleGuideModifier? modifier = null);
+		public Color3 GetColor(Enum.StudioStyleGuideColor.Type styleguideitem, Enum.StudioStyleGuideModifier.Type? modifier = null);
 	}
 	
 	public interface StudioWidgetsService : IServiceInstance
@@ -2284,7 +2284,7 @@ namespace Roblox.PluginClasses
 	
 	public interface SurfaceAppearance : ICreatableInstance
 	{
-		public Enum.AlphaMode AlphaMode { get; set; }
+		public Enum.AlphaMode.Type AlphaMode { get; set; }
 		public string ColorMap { get; set; }
 		public string MetalnessMap { get; set; }
 		public string NormalMap { get; set; }
@@ -2295,7 +2295,7 @@ namespace Roblox.PluginClasses
 	{
 		public double SchedulerDutyCycle { get; }
 		public double SchedulerRate { get; }
-		public Enum.ThreadPoolConfig ThreadPoolConfig { get; set; }
+		public Enum.ThreadPoolConfig.Type ThreadPoolConfig { get; set; }
 		public int ThreadPoolSize { get; }
 	}
 	
@@ -2630,7 +2630,7 @@ namespace Roblox.PluginClasses
 	public interface VoiceChatService : IServiceInstance
 	{
 		public bool EnableDefaultVoice { get; set; }
-		public Enum.AudioApiRollout UseAudioApi { get; set; }
+		public Enum.AudioApiRollout.Type UseAudioApi { get; set; }
 	}
 	
 	public interface WeldConstraint : ICreatableInstance

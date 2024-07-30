@@ -225,7 +225,7 @@ namespace Roblox
 	
 	public interface AccessoryDescription : ICreatableInstance
 	{
-		public Enum.AccessoryType AccessoryType { get; set; }
+		public Enum.AccessoryType.Type AccessoryType { get; set; }
 		public long AssetId { get; set; }
 		public Instance? Instance { get; set; }
 		public bool IsLayered { get; set; }
@@ -248,7 +248,7 @@ namespace Roblox
 	
 	public interface Accessory : Accoutrement, ICreatableInstance
 	{
-		public Enum.AccessoryType AccessoryType { get; set; }
+		public Enum.AccessoryType.Type AccessoryType { get; set; }
 	}
 	
 	public interface Hat : Accoutrement, ICreatableInstance
@@ -261,21 +261,21 @@ namespace Roblox
 	
 	public interface AdPortal : ICreatableInstance
 	{
-		public Enum.AdUnitStatus Status { get; }
+		public Enum.AdUnitStatus.Type Status { get; }
 	}
 	
 	public interface AnalyticsService : IServiceInstance
 	{
 		public void FireCustomEvent(Player player, string eventCategory, object customData);
 		public void FireEvent(string category, object value);
-		public void FireInGameEconomyEvent(Player player, string itemName, Enum.AnalyticsEconomyAction economyAction, string itemCategory, int amount, string currency, object location, object customData);
-		public void FireLogEvent(Player player, Enum.AnalyticsLogLevel logLevel, string message, object debugInfo, object customData);
-		public void FirePlayerProgressionEvent(Player player, string category, Enum.AnalyticsProgressionStatus progressionStatus, object location, object statistics, object customData);
-		public void LogEconomyEvent(Player player, Enum.AnalyticsEconomyFlowType flowType, string currencyType, float amount, float endingBalance, string transactionType, string itemSku, object? customFields = null);
+		public void FireInGameEconomyEvent(Player player, string itemName, Enum.AnalyticsEconomyAction.Type economyAction, string itemCategory, int amount, string currency, object location, object customData);
+		public void FireLogEvent(Player player, Enum.AnalyticsLogLevel.Type logLevel, string message, object debugInfo, object customData);
+		public void FirePlayerProgressionEvent(Player player, string category, Enum.AnalyticsProgressionStatus.Type progressionStatus, object location, object statistics, object customData);
+		public void LogEconomyEvent(Player player, Enum.AnalyticsEconomyFlowType.Type flowType, string currencyType, float amount, float endingBalance, string transactionType, string itemSku, object? customFields = null);
 		public void LogFunnelStepEvent(Player player, string funnelName, string funnelSessionId, int? step = null, string? stepName = null, object? customFields = null);
 		public void LogOnboardingFunnelStepEvent(Player player, int step, string stepName, object? customFields = null);
 		public void LogProgressionCompleteEvent(Player player, string progressionPathName, int level, string levelName, object? customFields = null);
-		public void LogProgressionEvent(Player player, string progressionPathName, Enum.AnalyticsProgressionType status, int level, string levelName, object? customFields = null);
+		public void LogProgressionEvent(Player player, string progressionPathName, Enum.AnalyticsProgressionType.Type status, int level, string levelName, object? customFields = null);
 		public void LogProgressionFailEvent(Player player, string progressionPathName, int level, string levelName, object? customFields = null);
 		public void LogProgressionStartEvent(Player player, string progressionPathName, int level, string levelName, object? customFields = null);
 	}
@@ -288,7 +288,7 @@ namespace Roblox
 	public interface AnimationClip : Instance
 	{
 		public bool Loop { get; set; }
-		public Enum.AnimationPriority Priority { get; set; }
+		public Enum.AnimationPriority.Type Priority { get; set; }
 	}
 	
 	public interface CurveAnimation : AnimationClip, ICreatableInstance
@@ -340,7 +340,7 @@ namespace Roblox
 		public bool IsPlaying { get; }
 		public float Length { get; }
 		public bool Looped { get; set; }
-		public Enum.AnimationPriority Priority { get; set; }
+		public Enum.AnimationPriority.Type Priority { get; set; }
 		public float Speed { get; }
 		public float TimePosition { get; set; }
 		public float WeightCurrent { get; }
@@ -434,7 +434,7 @@ namespace Roblox
 		public object GetBundleDetailsAsync(long bundleId);
 		public long GetCreatorAssetID(long creationID);
 		public Instance GetGamePlacesAsync();
-		public object[] PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType assetType);
+		public object[] PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType.Type assetType);
 		public object[] PromptImportAnimationClipFromVideoAsync(Player player, Action progressCallback);
 		public void SavePlaceAsync();
 		public AudioPages SearchAudio(AudioSearchParams searchParameters);
@@ -502,7 +502,7 @@ namespace Roblox
 	
 	public interface AudioDeviceInput : ICreatableInstance
 	{
-		public Enum.AccessModifierType AccessType { get; set; }
+		public Enum.AccessModifierType.Type AccessType { get; set; }
 		public bool Active { get; }
 		public bool Muted { get; set; }
 		public Player? Player { get; set; }
@@ -563,7 +563,7 @@ namespace Roblox
 	public interface AudioFilter : ICreatableInstance
 	{
 		public bool Bypass { get; set; }
-		public Enum.AudioFilterType FilterType { get; set; }
+		public Enum.AudioFilterType.Type FilterType { get; set; }
 		public float Frequency { get; set; }
 		public float Gain { get; set; }
 		public float Q { get; set; }
@@ -639,8 +639,8 @@ namespace Roblox
 	{
 		public string Album { get; set; }
 		public string Artist { get; set; }
-		public Enum.AudioSubType AudioSubType { get; set; }
-		public Enum.AudioSubType AudioSubtype { get; set; }
+		public Enum.AudioSubType.Type AudioSubType { get; set; }
+		public Enum.AudioSubType.Type AudioSubtype { get; set; }
 		public int MaxDuration { get; set; }
 		public int MinDuration { get; set; }
 		public string SearchKeyword { get; set; }
@@ -660,48 +660,48 @@ namespace Roblox
 		public Instance LoadAvatarModelAsync(string id);
 		public EditableImage LoadAvatarPreviewImageAsync(string avatarPreview);
 		public object[] PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription);
-		public object[] ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType accessoryType);
-		public object[] ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart bodyPart);
+		public object[] ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType.Type accessoryType);
+		public object[] ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart.Type bodyPart);
 		public object[] ValidateUGCFullBodyAsync(Player player, HumanoidDescription humanoidDescription);
 	}
 	
 	public interface AvatarEditorService : IServiceInstance
 	{
-		public Enum.AccessoryType GetAccessoryType(Enum.AvatarAssetType avatarAssetType);
+		public Enum.AccessoryType.Type GetAccessoryType(Enum.AvatarAssetType.Type avatarAssetType);
 		public void PromptAllowInventoryReadAccess();
-		public void PromptCreateOutfit(HumanoidDescription outfit, Enum.HumanoidRigType rigType);
+		public void PromptCreateOutfit(HumanoidDescription outfit, Enum.HumanoidRigType.Type rigType);
 		public void PromptDeleteOutfit(long outfitId);
 		public void PromptRenameOutfit(long outfitId);
-		public void PromptSaveAvatar(HumanoidDescription humanoidDescription, Enum.HumanoidRigType rigType);
-		public void PromptSetFavorite(long itemId, Enum.AvatarItemType itemType, bool shouldFavorite);
-		public void PromptUpdateOutfit(long outfitId, HumanoidDescription updatedOutfit, Enum.HumanoidRigType rigType);
+		public void PromptSaveAvatar(HumanoidDescription humanoidDescription, Enum.HumanoidRigType.Type rigType);
+		public void PromptSetFavorite(long itemId, Enum.AvatarItemType.Type itemType, bool shouldFavorite);
+		public void PromptUpdateOutfit(long outfitId, HumanoidDescription updatedOutfit, Enum.HumanoidRigType.Type rigType);
 		public HumanoidDescription CheckApplyDefaultClothing(HumanoidDescription humanoidDescription);
 		public HumanoidDescription ConformToAvatarRules(HumanoidDescription humanoidDescription);
 		public object GetAvatarRules();
-		public object[] GetBatchItemDetails(object[] itemIds, Enum.AvatarItemType itemType);
-		public bool GetFavorite(long itemId, Enum.AvatarItemType itemType);
+		public object[] GetBatchItemDetails(object[] itemIds, Enum.AvatarItemType.Type itemType);
+		public bool GetFavorite(long itemId, Enum.AvatarItemType.Type itemType);
 		public InventoryPages GetInventory(object[] assetTypes);
-		public object GetItemDetails(long itemId, Enum.AvatarItemType itemType);
+		public object GetItemDetails(long itemId, Enum.AvatarItemType.Type itemType);
 		public object GetOutfitDetails(long outfitId);
-		public OutfitPages GetOutfits(Enum.OutfitSource? outfitSource = null, Enum.OutfitType? outfitType = null);
-		public object[] GetRecommendedAssets(Enum.AvatarAssetType assetType, long? contextAssetId = null);
+		public OutfitPages GetOutfits(Enum.OutfitSource.Type? outfitSource = null, Enum.OutfitType.Type? outfitType = null);
+		public object[] GetRecommendedAssets(Enum.AvatarAssetType.Type assetType, long? contextAssetId = null);
 		public object[] GetRecommendedBundles(long bundleId);
 		public CatalogPages SearchCatalog(CatalogSearchParams searchParameters);
-		public ScriptSignal<Enum.AvatarPromptResult> PromptAllowInventoryReadAccessCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult, object> PromptCreateOutfitCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult> PromptDeleteOutfitCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult> PromptRenameOutfitCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult, HumanoidDescription> PromptSaveAvatarCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult> PromptSetFavoriteCompleted { get; }
-		public ScriptSignal<Enum.AvatarPromptResult> PromptUpdateOutfitCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptAllowInventoryReadAccessCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type, object> PromptCreateOutfitCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptDeleteOutfitCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptRenameOutfitCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type, HumanoidDescription> PromptSaveAvatarCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptSetFavoriteCompleted { get; }
+		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptUpdateOutfitCompleted { get; }
 	}
 	
 	public interface AvatarGenerationJob : Instance
 	{
-		public Enum.AvatarGenerationError Error { get; set; }
+		public Enum.AvatarGenerationError.Type Error { get; set; }
 		public string ErrorMessage { get; set; }
 		public float Progress { get; set; }
-		public Enum.AvatarGenerationJobStatus Status { get; set; }
+		public Enum.AvatarGenerationJobStatus.Type Status { get; set; }
 		public object GetOutput();
 		public void Cancel();
 		public void Wait();
@@ -819,17 +819,17 @@ namespace Roblox
 		public bool MergeMeshes { get; set; }
 		public float PolygonCount { get; }
 		public long PreferredUploadId { get; set; }
-		public Enum.RestPose RestPose { get; set; }
-		public Enum.RigScale RigScale { get; set; }
-		public Enum.RigType RigType { get; set; }
+		public Enum.RestPose.Type RestPose { get; set; }
+		public Enum.RigScale.Type RigScale { get; set; }
+		public Enum.RigType.Type RigType { get; set; }
 		public bool RigVisualization { get; set; }
-		public Enum.MeshScaleUnit ScaleUnit { get; set; }
+		public Enum.MeshScaleUnit.Type ScaleUnit { get; set; }
 		public bool UseSceneOriginAsCFrame { get; set; }
 		public bool UseSceneOriginAsPivot { get; set; }
 		public bool UsesCages { get; set; }
 		public bool ValidateUgcBody { get; set; }
-		public Enum.NormalId WorldForward { get; set; }
-		public Enum.NormalId WorldUp { get; set; }
+		public Enum.NormalId.Type WorldForward { get; set; }
+		public Enum.NormalId.Type WorldUp { get; set; }
 	}
 	
 	public interface BasePlayerGui : Instance
@@ -839,8 +839,8 @@ namespace Roblox
 	
 	public interface PlayerGui : BasePlayerGui
 	{
-		public Enum.ScreenOrientation CurrentScreenOrientation { get; }
-		public Enum.ScreenOrientation ScreenOrientation { get; set; }
+		public Enum.ScreenOrientation.Type CurrentScreenOrientation { get; }
+		public Enum.ScreenOrientation.Type ScreenOrientation { get; set; }
 		public GuiObject? SelectionImageObject { get; set; }
 		public float GetTopbarTransparency();
 		public void SetTopbarTransparency(float transparency);
@@ -850,10 +850,10 @@ namespace Roblox
 	public partial interface StarterGui : BasePlayerGui, IServiceInstance
 	{
 		public bool ResetPlayerGuiOnSpawn { get; set; }
-		public Enum.ScreenOrientation ScreenOrientation { get; set; }
-		public bool GetCoreGuiEnabled(Enum.CoreGuiType coreGuiType);
+		public Enum.ScreenOrientation.Type ScreenOrientation { get; set; }
+		public bool GetCoreGuiEnabled(Enum.CoreGuiType.Type coreGuiType);
 		public void SetCore(string parameterName, object value);
-		public void SetCoreGuiEnabled(Enum.CoreGuiType coreGuiType, bool enabled);
+		public void SetCoreGuiEnabled(Enum.CoreGuiType.Type coreGuiType, bool enabled);
 		public object GetCore(string parameterName);
 	}
 	
@@ -879,7 +879,7 @@ namespace Roblox
 	
 	public interface WrapLayer : BaseWrap, ICreatableInstance
 	{
-		public Enum.WrapLayerAutoSkin AutoSkin { get; set; }
+		public Enum.WrapLayerAutoSkin.Type AutoSkin { get; set; }
 		public CFrame BindOffset { get; set; }
 		public bool Enabled { get; set; }
 		public int Order { get; set; }
@@ -910,7 +910,7 @@ namespace Roblox
 		public int Segments { get; set; }
 		public string Texture { get; set; }
 		public float TextureLength { get; set; }
-		public Enum.TextureMode TextureMode { get; set; }
+		public Enum.TextureMode.Type TextureMode { get; set; }
 		public float TextureSpeed { get; set; }
 		public NumberSequence Transparency { get; set; }
 		public float Width0 { get; set; }
@@ -1002,7 +1002,7 @@ namespace Roblox
 	public interface BodyPartDescription : ICreatableInstance
 	{
 		public long AssetId { get; set; }
-		public Enum.BodyPart BodyPart { get; set; }
+		public Enum.BodyPart.Type BodyPart { get; set; }
 		public Color3 Color { get; set; }
 		public Instance? Instance { get; set; }
 	}
@@ -1033,10 +1033,10 @@ namespace Roblox
 	{
 		public CFrame CFrame { get; set; }
 		public Instance? CameraSubject { get; set; }
-		public Enum.CameraType CameraType { get; set; }
+		public Enum.CameraType.Type CameraType { get; set; }
 		public float DiagonalFieldOfView { get; set; }
 		public float FieldOfView { get; set; }
-		public Enum.FieldOfViewMode FieldOfViewMode { get; set; }
+		public Enum.FieldOfViewMode.Type FieldOfViewMode { get; set; }
 		public CFrame Focus { get; set; }
 		public bool HeadLocked { get; set; }
 		public float HeadScale { get; set; }
@@ -1053,7 +1053,7 @@ namespace Roblox
 		public void Interpolate(CFrame endPos, CFrame endFocus, float duration);
 		public void PanUnits(int units);
 		public Ray ScreenPointToRay(float x, float y, float? depth = null);
-		public void SetCameraPanMode(Enum.CameraPanMode? mode = null);
+		public void SetCameraPanMode(Enum.CameraPanMode.Type? mode = null);
 		public void SetRoll(float rollAngle);
 		public bool TiltUnits(int units);
 		public Ray ViewportPointToRay(float x, float y, float? depth = null);
@@ -1097,7 +1097,7 @@ namespace Roblox
 	public interface CharacterMesh : CharacterAppearance, ICreatableInstance
 	{
 		public long BaseTextureId { get; set; }
-		public Enum.BodyPart BodyPart { get; set; }
+		public Enum.BodyPart.Type BodyPart { get; set; }
 		public long MeshId { get; set; }
 		public long OverlayTextureId { get; set; }
 	}
@@ -1127,16 +1127,16 @@ namespace Roblox
 	{
 		public bool BubbleChatEnabled { get; set; }
 		public bool LoadDefaultChat { get; }
-		public void Chat(Instance partOrCharacter, string message, Enum.ChatColor? color = null);
-		public object[] InvokeChatCallback(Enum.ChatCallbackType callbackType, object[] callbackArguments);
-		public void RegisterChatCallback(Enum.ChatCallbackType callbackType, Action callbackFunction);
+		public void Chat(Instance partOrCharacter, string message, Enum.ChatColor.Type? color = null);
+		public object[] InvokeChatCallback(Enum.ChatCallbackType.Type callbackType, object[] callbackArguments);
+		public void RegisterChatCallback(Enum.ChatCallbackType.Type callbackType, Action callbackFunction);
 		public void SetBubbleChatSettings(object settings);
 		public bool CanUserChatAsync(long userId);
 		public bool CanUsersChatAsync(long userIdFrom, long userIdTo);
 		public string FilterStringAsync(string stringToFilter, Player playerFrom, Player playerTo);
 		public string FilterStringForBroadcast(string stringToFilter, Player playerFrom);
 		public string FilterStringForPlayerAsync(string stringToFilter, Player playerToFilterFor);
-		public ScriptSignal<Instance, string, Enum.ChatColor> Chatted { get; }
+		public ScriptSignal<Instance, string, Enum.ChatColor.Type> Chatted { get; }
 	}
 	
 	public interface ChatbotUIService : IServiceInstance
@@ -1159,10 +1159,10 @@ namespace Roblox
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Vector3 Axis { get; set; }
 		public CFrame DragFrame { get; set; }
-		public Enum.DragDetectorDragStyle DragStyle { get; set; }
+		public Enum.DragDetectorDragStyle.Type DragStyle { get; set; }
 		public bool Enabled { get; set; }
-		public Enum.KeyCode GamepadModeSwitchKeyCode { get; set; }
-		public Enum.KeyCode KeyboardModeSwitchKeyCode { get; set; }
+		public Enum.KeyCode.Type GamepadModeSwitchKeyCode { get; set; }
+		public Enum.KeyCode.Type KeyboardModeSwitchKeyCode { get; set; }
 		public float MaxDragAngle { get; set; }
 		public Vector3 MaxDragTranslation { get; set; }
 		public float MaxForce { get; set; }
@@ -1170,15 +1170,15 @@ namespace Roblox
 		public float MinDragAngle { get; set; }
 		public Vector3 MinDragTranslation { get; set; }
 		public Vector3 Orientation { get; set; }
-		public Enum.DragDetectorPermissionPolicy PermissionPolicy { get; set; }
+		public Enum.DragDetectorPermissionPolicy.Type PermissionPolicy { get; set; }
 		public Instance? ReferenceInstance { get; set; }
-		public Enum.DragDetectorResponseStyle ResponseStyle { get; set; }
+		public Enum.DragDetectorResponseStyle.Type ResponseStyle { get; set; }
 		public float Responsiveness { get; set; }
 		public bool RunLocally { get; set; }
 		public Vector3 SecondaryAxis { get; set; }
 		public float TrackballRadialPullFactor { get; set; }
 		public float TrackballRollFactor { get; set; }
-		public Enum.KeyCode VRSwitchKeyCode { get; set; }
+		public Enum.KeyCode.Type VRSwitchKeyCode { get; set; }
 		public Vector3 WorldAxis { get; set; }
 		public Vector3 WorldSecondaryAxis { get; set; }
 		public ScriptConnection AddConstraintFunction(int priority, Action function);
@@ -1266,12 +1266,12 @@ namespace Roblox
 	
 	public interface AlignOrientation : Constraint, ICreatableInstance
 	{
-		public Enum.AlignType AlignType { get; set; }
+		public Enum.AlignType.Type AlignType { get; set; }
 		public CFrame CFrame { get; set; }
 		public Vector3 LookAtPosition { get; set; }
 		public float MaxAngularVelocity { get; set; }
 		public float MaxTorque { get; set; }
-		public Enum.OrientationAlignmentMode Mode { get; set; }
+		public Enum.OrientationAlignmentMode.Type Mode { get; set; }
 		public Vector3 PrimaryAxis { get; set; }
 		public bool PrimaryAxisOnly { get; set; }
 		public bool ReactionTorqueEnabled { get; set; }
@@ -1283,12 +1283,12 @@ namespace Roblox
 	public interface AlignPosition : Constraint, ICreatableInstance
 	{
 		public bool ApplyAtCenterOfMass { get; set; }
-		public Enum.ForceLimitMode ForceLimitMode { get; set; }
-		public Enum.ActuatorRelativeTo ForceRelativeTo { get; set; }
+		public Enum.ForceLimitMode.Type ForceLimitMode { get; set; }
+		public Enum.ActuatorRelativeTo.Type ForceRelativeTo { get; set; }
 		public Vector3 MaxAxesForce { get; set; }
 		public float MaxForce { get; set; }
 		public float MaxVelocity { get; set; }
-		public Enum.PositionAlignmentMode Mode { get; set; }
+		public Enum.PositionAlignmentMode.Type Mode { get; set; }
 		public Vector3 Position { get; set; }
 		public bool ReactionForceEnabled { get; set; }
 		public float Responsiveness { get; set; }
@@ -1300,7 +1300,7 @@ namespace Roblox
 		public Vector3 AngularVelocity { get; set; }
 		public float MaxTorque { get; set; }
 		public bool ReactionTorqueEnabled { get; set; }
-		public Enum.ActuatorRelativeTo RelativeTo { get; set; }
+		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
 	}
 	
 	public interface AnimationConstraint : Constraint, ICreatableInstance
@@ -1325,7 +1325,7 @@ namespace Roblox
 	
 	public interface HingeConstraint : Constraint, ICreatableInstance
 	{
-		public Enum.ActuatorType ActuatorType { get; set; }
+		public Enum.ActuatorType.Type ActuatorType { get; set; }
 		public float AngularResponsiveness { get; set; }
 		public float AngularSpeed { get; set; }
 		public float AngularVelocity { get; set; }
@@ -1353,7 +1353,7 @@ namespace Roblox
 	
 	public interface LinearVelocity : Constraint, ICreatableInstance
 	{
-		public Enum.ForceLimitMode ForceLimitMode { get; set; }
+		public Enum.ForceLimitMode.Type ForceLimitMode { get; set; }
 		public bool ForceLimitsEnabled { get; set; }
 		public Vector3 LineDirection { get; set; }
 		public float LineVelocity { get; set; }
@@ -1362,10 +1362,10 @@ namespace Roblox
 		public Vector2 MaxPlanarAxesForce { get; set; }
 		public Vector2 PlaneVelocity { get; set; }
 		public Vector3 PrimaryTangentAxis { get; set; }
-		public Enum.ActuatorRelativeTo RelativeTo { get; set; }
+		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
 		public Vector3 SecondaryTangentAxis { get; set; }
 		public Vector3 VectorVelocity { get; set; }
-		public Enum.VelocityConstraintMode VelocityConstraintMode { get; set; }
+		public Enum.VelocityConstraintMode.Type VelocityConstraintMode { get; set; }
 	}
 	
 	public interface PlaneConstraint : Constraint, ICreatableInstance
@@ -1405,7 +1405,7 @@ namespace Roblox
 	
 	public interface SlidingBallConstraint : Constraint
 	{
-		public Enum.ActuatorType ActuatorType { get; set; }
+		public Enum.ActuatorType.Type ActuatorType { get; set; }
 		public float CurrentPosition { get; }
 		public bool LimitsEnabled { get; set; }
 		public float LinearResponsiveness { get; set; }
@@ -1424,7 +1424,7 @@ namespace Roblox
 	
 	public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance
 	{
-		public Enum.ActuatorType AngularActuatorType { get; set; }
+		public Enum.ActuatorType.Type AngularActuatorType { get; set; }
 		public bool AngularLimitsEnabled { get; set; }
 		public float AngularResponsiveness { get; set; }
 		public float AngularRestitution { get; set; }
@@ -1464,7 +1464,7 @@ namespace Roblox
 	
 	public interface Torque : Constraint, ICreatableInstance
 	{
-		public Enum.ActuatorRelativeTo RelativeTo { get; set; }
+		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
 		public Vector3 Torque { get; set; }
 	}
 	
@@ -1493,14 +1493,14 @@ namespace Roblox
 	{
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Vector3 Force { get; set; }
-		public Enum.ActuatorRelativeTo RelativeTo { get; set; }
+		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
 	}
 	
 	public interface ContentProvider : IServiceInstance
 	{
 		public string BaseUrl { get; }
 		public int RequestQueueSize { get; }
-		public Enum.AssetFetchStatus GetAssetFetchStatus(string contentId);
+		public Enum.AssetFetchStatus.Type GetAssetFetchStatus(string contentId);
 		public ScriptSignal GetAssetFetchStatusChangedSignal(string contentId);
 		public object[] ListEncryptedAssets();
 		public void Preload(string contentId);
@@ -1519,7 +1519,7 @@ namespace Roblox
 		public void BindAction(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
 		public void BindActionAtPriority(string actionName, Action functionToBind, bool createTouchButton, int priorityLevel, object[] inputTypes);
 		public void BindActionToInputTypes(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
-		public void BindActivate(Enum.UserInputType userInputTypeForActivation, object[] keyCodesForActivation);
+		public void BindActivate(Enum.UserInputType.Type userInputTypeForActivation, object[] keyCodesForActivation);
 		public object GetAllBoundActionInfo();
 		public object GetBoundActionInfo(string actionName);
 		public string GetCurrentLocalToolIcon();
@@ -1528,7 +1528,7 @@ namespace Roblox
 		public void SetPosition(string actionName, UDim2 position);
 		public void SetTitle(string actionName, string title);
 		public void UnbindAction(string actionName);
-		public void UnbindActivate(Enum.UserInputType userInputTypeForActivation, Enum.KeyCode? keyCodeForActivation = null);
+		public void UnbindActivate(Enum.UserInputType.Type userInputTypeForActivation, Enum.KeyCode.Type? keyCodeForActivation = null);
 		public void UnbindAllActions();
 		public Instance GetButton(string actionName);
 		public ScriptSignal<Instance> LocalToolEquipped { get; }
@@ -1537,10 +1537,10 @@ namespace Roblox
 	
 	public interface Controller : Instance
 	{
-		public void BindButton(Enum.Button button, string caption);
-		public bool GetButton(Enum.Button button);
-		public void UnbindButton(Enum.Button button);
-		public ScriptSignal<Enum.Button> ButtonChanged { get; }
+		public void BindButton(Enum.Button.Type button, string caption);
+		public bool GetButton(Enum.Button.Type button);
+		public void UnbindButton(Enum.Button.Type button);
+		public ScriptSignal<Enum.Button.Type> ButtonChanged { get; }
 	}
 	
 	public interface HumanoidController : Controller, ICreatableInstance
@@ -1701,7 +1701,7 @@ namespace Roblox
 	
 	public interface SpecialMesh : FileMesh, ICreatableInstance
 	{
-		public Enum.MeshType MeshType { get; set; }
+		public Enum.MeshType.Type MeshType { get; set; }
 	}
 	
 	public interface DataModelPatchService : IServiceInstance
@@ -1758,7 +1758,7 @@ namespace Roblox
 		public GlobalDataStore GetDataStore(string name, string? scope = null, Instance? options = null);
 		public GlobalDataStore GetGlobalDataStore();
 		public OrderedDataStore GetOrderedDataStore(string name, string? scope = null);
-		public int GetRequestBudgetForRequestType(Enum.DataStoreRequestType requestType);
+		public int GetRequestBudgetForRequestType(Enum.DataStoreRequestType.Type requestType);
 		public DataStoreListingPages ListDataStoresAsync(string prefix, int? pageSize = null, string? cursor = null);
 	}
 	
@@ -1808,14 +1808,14 @@ namespace Roblox
 	
 	public interface Dialog : ICreatableInstance
 	{
-		public Enum.DialogBehaviorType BehaviorType { get; set; }
+		public Enum.DialogBehaviorType.Type BehaviorType { get; set; }
 		public float ConversationDistance { get; set; }
 		public bool GoodbyeChoiceActive { get; set; }
 		public string GoodbyeDialog { get; set; }
 		public bool InUse { get; set; }
 		public string InitialPrompt { get; set; }
-		public Enum.DialogPurpose Purpose { get; set; }
-		public Enum.DialogTone Tone { get; set; }
+		public Enum.DialogPurpose.Type Purpose { get; set; }
+		public Enum.DialogTone.Type Tone { get; set; }
 		public float TriggerDistance { get; set; }
 		public Vector3 TriggerOffset { get; set; }
 		public Instance[] GetCurrentPlayers();
@@ -1832,7 +1832,7 @@ namespace Roblox
 	
 	public interface Dragger : ICreatableInstance
 	{
-		public void AxisRotate(Enum.Axis? axis = null);
+		public void AxisRotate(Enum.Axis.Type? axis = null);
 		public void MouseDown(Instance mousePart, Vector3 pointOnMousePart, Instance[] parts);
 		public void MouseMove(Ray mouseRay);
 		public void MouseUp();
@@ -1845,8 +1845,8 @@ namespace Roblox
 		public float AngleSnapIncrement { get; }
 		public bool AnimateHover { get; }
 		public bool CollisionsEnabled { get; }
-		public Enum.DraggerCoordinateSpace DraggerCoordinateSpace { get; }
-		public Enum.DraggerMovementMode DraggerMovementMode { get; }
+		public Enum.DraggerCoordinateSpace.Type DraggerCoordinateSpace { get; }
+		public Enum.DraggerMovementMode.Type DraggerMovementMode { get; }
 		public Color3 GeometrySnapColor { get; }
 		public float HoverAnimateFrequency { get; }
 		public float HoverThickness { get; }
@@ -1862,11 +1862,11 @@ namespace Roblox
 		public Vector2 Size { get; set; }
 		public EditableImage Copy(Vector2 min, Vector2 max);
 		public void Crop(Vector2 min, Vector2 max);
-		public void DrawCircle(Vector2 center, int radius, Color3 color, float transparency, Enum.ImageCombineType combineType);
-		public void DrawImage(Vector2 position, EditableImage image, Enum.ImageCombineType combineType);
-		public void DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency, Enum.ImageCombineType combineType);
+		public void DrawCircle(Vector2 center, int radius, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
+		public void DrawImage(Vector2 position, EditableImage image, Enum.ImageCombineType.Type combineType);
+		public void DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
 		public void DrawProjectionImage(EditableMesh mesh, object projection, object brushConfig);
-		public void DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency, Enum.ImageCombineType combineType);
+		public void DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
 		public object[] ReadPixels(Vector2 position, Vector2 size);
 		public void Resize(Vector2 size);
 		public void Rotate(float degrees, bool changeSize);
@@ -1883,7 +1883,7 @@ namespace Roblox
 	
 	public interface EulerRotationCurve : ICreatableInstance
 	{
-		public Enum.RotationOrder RotationOrder { get; set; }
+		public Enum.RotationOrder.Type RotationOrder { get; set; }
 		public object[] GetAnglesAtTime(float time);
 		public CFrame GetRotationAtTime(float time);
 		public FloatCurve X();
@@ -1931,7 +1931,7 @@ namespace Roblox
 		public float BlastPressure { get; set; }
 		public float BlastRadius { get; set; }
 		public float DestroyJointRadiusPercent { get; set; }
-		public Enum.ExplosionType ExplosionType { get; set; }
+		public Enum.ExplosionType.Type ExplosionType { get; set; }
 		public Vector3 Position { get; set; }
 		public float TimeScale { get; set; }
 		public bool Visible { get; set; }
@@ -1948,7 +1948,7 @@ namespace Roblox
 	
 	public interface FaceInstance : Instance
 	{
-		public Enum.NormalId Face { get; set; }
+		public Enum.NormalId.Type Face { get; set; }
 	}
 	
 	public interface Decal : FaceInstance, ICreatableInstance
@@ -1987,10 +1987,10 @@ namespace Roblox
 	
 	public interface Feature : Instance
 	{
-		public Enum.NormalId FaceId { get; set; }
-		public Enum.InOut InOut { get; set; }
-		public Enum.LeftRight LeftRight { get; set; }
-		public Enum.TopBottom TopBottom { get; set; }
+		public Enum.NormalId.Type FaceId { get; set; }
+		public Enum.InOut.Type InOut { get; set; }
+		public Enum.LeftRight.Type LeftRight { get; set; }
+		public Enum.TopBottom.Type TopBottom { get; set; }
 	}
 	
 	public interface Hole : Feature, ICreatableInstance
@@ -2079,7 +2079,7 @@ namespace Roblox
 	{
 		public object[] GetVersionAsync(string key, string version);
 		public DataStoreKeyPages ListKeysAsync(string prefix, int? pageSize = null, string? cursor = null, bool? excludeDeleted = null);
-		public DataStoreVersionPages ListVersionsAsync(string key, Enum.SortDirection? sortDirection = null, long? minDate = null, long? maxDate = null, int? pageSize = null);
+		public DataStoreVersionPages ListVersionsAsync(string key, Enum.SortDirection.Type? sortDirection = null, long? minDate = null, long? maxDate = null, int? pageSize = null);
 		public void RemoveVersionAsync(string key, string version);
 	}
 	
@@ -2107,10 +2107,10 @@ namespace Roblox
 		public Vector2 AbsoluteSize { get; }
 		public bool AutoLocalize { get; set; }
 		public LocalizationTable? RootLocalizationTable { get; set; }
-		public Enum.SelectionBehavior SelectionBehaviorDown { get; set; }
-		public Enum.SelectionBehavior SelectionBehaviorLeft { get; set; }
-		public Enum.SelectionBehavior SelectionBehaviorRight { get; set; }
-		public Enum.SelectionBehavior SelectionBehaviorUp { get; set; }
+		public Enum.SelectionBehavior.Type SelectionBehaviorDown { get; set; }
+		public Enum.SelectionBehavior.Type SelectionBehaviorLeft { get; set; }
+		public Enum.SelectionBehavior.Type SelectionBehaviorRight { get; set; }
+		public Enum.SelectionBehavior.Type SelectionBehaviorUp { get; set; }
 		public bool SelectionGroup { get; set; }
 		public ScriptSignal<bool, GuiObject, GuiObject> SelectionChanged { get; }
 	}
@@ -2119,15 +2119,15 @@ namespace Roblox
 	{
 		public bool Active { get; set; }
 		public Vector2 AnchorPoint { get; set; }
-		public Enum.AutomaticSize AutomaticSize { get; set; }
+		public Enum.AutomaticSize.Type AutomaticSize { get; set; }
 		public Color3 BackgroundColor3 { get; set; }
 		public float BackgroundTransparency { get; set; }
 		public Color3 BorderColor3 { get; set; }
-		public Enum.BorderMode BorderMode { get; set; }
+		public Enum.BorderMode.Type BorderMode { get; set; }
 		public int BorderSizePixel { get; set; }
 		public bool ClipsDescendants { get; set; }
 		public bool Draggable { get; set; }
-		public Enum.GuiState GuiState { get; }
+		public Enum.GuiState.Type GuiState { get; }
 		public bool Interactable { get; set; }
 		public int LayoutOrder { get; set; }
 		public GuiObject? NextSelectionDown { get; set; }
@@ -2140,12 +2140,12 @@ namespace Roblox
 		public GuiObject? SelectionImageObject { get; set; }
 		public int SelectionOrder { get; set; }
 		public UDim2 Size { get; set; }
-		public Enum.SizeConstraint SizeConstraint { get; set; }
+		public Enum.SizeConstraint.Type SizeConstraint { get; set; }
 		public bool Visible { get; set; }
 		public int ZIndex { get; set; }
-		public bool TweenPosition(UDim2 endPosition, Enum.EasingDirection? easingDirection = null, Enum.EasingStyle? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
-		public bool TweenSize(UDim2 endSize, Enum.EasingDirection? easingDirection = null, Enum.EasingStyle? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
-		public bool TweenSizeAndPosition(UDim2 endSize, UDim2 endPosition, Enum.EasingDirection? easingDirection = null, Enum.EasingStyle? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
+		public bool TweenPosition(UDim2 endPosition, Enum.EasingDirection.Type? easingDirection = null, Enum.EasingStyle.Type? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
+		public bool TweenSize(UDim2 endSize, Enum.EasingDirection.Type? easingDirection = null, Enum.EasingStyle.Type? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
+		public bool TweenSizeAndPosition(UDim2 endSize, UDim2 endPosition, Enum.EasingDirection.Type? easingDirection = null, Enum.EasingStyle.Type? easingStyle = null, float? time = null, bool? _override = null, Action? callback = null);
 		public ScriptSignal<UDim2> DragBegin { get; }
 		public ScriptSignal<int, int> DragStopped { get; }
 		public ScriptSignal<InputObject> InputBegan { get; }
@@ -2158,11 +2158,11 @@ namespace Roblox
 		public ScriptSignal<int, int> MouseWheelForward { get; }
 		public ScriptSignal SelectionGained { get; }
 		public ScriptSignal SelectionLost { get; }
-		public ScriptSignal<object[], Enum.UserInputState> TouchLongPress { get; }
-		public ScriptSignal<object[], Vector2, Vector2, Enum.UserInputState> TouchPan { get; }
-		public ScriptSignal<object[], float, float, Enum.UserInputState> TouchPinch { get; }
-		public ScriptSignal<object[], float, float, Enum.UserInputState> TouchRotate { get; }
-		public ScriptSignal<Enum.SwipeDirection, int> TouchSwipe { get; }
+		public ScriptSignal<object[], Enum.UserInputState.Type> TouchLongPress { get; }
+		public ScriptSignal<object[], Vector2, Vector2, Enum.UserInputState.Type> TouchPan { get; }
+		public ScriptSignal<object[], float, float, Enum.UserInputState.Type> TouchPinch { get; }
+		public ScriptSignal<object[], float, float, Enum.UserInputState.Type> TouchRotate { get; }
+		public ScriptSignal<Enum.SwipeDirection.Type, int> TouchSwipe { get; }
 		public ScriptSignal<object[]> TouchTap { get; }
 	}
 	
@@ -2174,7 +2174,7 @@ namespace Roblox
 	
 	public interface Frame : GuiObject, ICreatableInstance
 	{
-		public Enum.FrameStyle Style { get; set; }
+		public Enum.FrameStyle.Type Style { get; set; }
 	}
 	
 	public interface GuiButton : GuiObject
@@ -2182,7 +2182,7 @@ namespace Roblox
 		public bool AutoButtonColor { get; set; }
 		public bool Modal { get; set; }
 		public bool Selected { get; set; }
-		public Enum.ButtonStyle Style { get; set; }
+		public Enum.ButtonStyle.Type Style { get; set; }
 		public ScriptSignal<InputObject, int> Activated { get; }
 		public ScriptSignal MouseButton1Click { get; }
 		public ScriptSignal<int, int> MouseButton1Down { get; }
@@ -2202,8 +2202,8 @@ namespace Roblox
 		public float ImageTransparency { get; set; }
 		public bool IsLoaded { get; }
 		public string PressedImage { get; set; }
-		public Enum.ResamplerMode ResampleMode { get; set; }
-		public Enum.ScaleType ScaleType { get; set; }
+		public Enum.ResamplerMode.Type ResampleMode { get; set; }
+		public Enum.ScaleType.Type ScaleType { get; set; }
 		public Rect SliceCenter { get; set; }
 		public float SliceScale { get; set; }
 		public UDim2 TileSize { get; set; }
@@ -2213,7 +2213,7 @@ namespace Roblox
 	{
 		public string ContentText { get; }
 		public Font FontFace { get; set; }
-		public Enum.FontSize FontSize { get; set; }
+		public Enum.FontSize.Type FontSize { get; set; }
 		public float LineHeight { get; set; }
 		public int MaxVisibleGraphemes { get; set; }
 		public string OpenTypeFeatures { get; set; }
@@ -2222,18 +2222,18 @@ namespace Roblox
 		public string Text { get; set; }
 		public Vector2 TextBounds { get; }
 		public Color3 TextColor3 { get; set; }
-		public Enum.TextDirection TextDirection { get; set; }
+		public Enum.TextDirection.Type TextDirection { get; set; }
 		public bool TextFits { get; }
 		public bool TextScaled { get; set; }
 		public float TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
 		public float TextStrokeTransparency { get; set; }
 		public float TextTransparency { get; set; }
-		public Enum.TextTruncate TextTruncate { get; set; }
+		public Enum.TextTruncate.Type TextTruncate { get; set; }
 		public bool TextWrap { get; set; }
 		public bool TextWrapped { get; set; }
-		public Enum.TextXAlignment TextXAlignment { get; set; }
-		public Enum.TextYAlignment TextYAlignment { get; set; }
+		public Enum.TextXAlignment.Type TextXAlignment { get; set; }
+		public Enum.TextYAlignment.Type TextYAlignment { get; set; }
 	}
 	
 	public interface GuiLabel : GuiObject
@@ -2248,8 +2248,8 @@ namespace Roblox
 		public Vector2 ImageRectSize { get; set; }
 		public float ImageTransparency { get; set; }
 		public bool IsLoaded { get; }
-		public Enum.ResamplerMode ResampleMode { get; set; }
-		public Enum.ScaleType ScaleType { get; set; }
+		public Enum.ResamplerMode.Type ResampleMode { get; set; }
+		public Enum.ScaleType.Type ScaleType { get; set; }
 		public Rect SliceCenter { get; set; }
 		public float SliceScale { get; set; }
 		public UDim2 TileSize { get; set; }
@@ -2259,7 +2259,7 @@ namespace Roblox
 	{
 		public string ContentText { get; }
 		public Font FontFace { get; set; }
-		public Enum.FontSize FontSize { get; set; }
+		public Enum.FontSize.Type FontSize { get; set; }
 		public float LineHeight { get; set; }
 		public int MaxVisibleGraphemes { get; set; }
 		public string OpenTypeFeatures { get; set; }
@@ -2268,39 +2268,39 @@ namespace Roblox
 		public string Text { get; set; }
 		public Vector2 TextBounds { get; }
 		public Color3 TextColor3 { get; set; }
-		public Enum.TextDirection TextDirection { get; set; }
+		public Enum.TextDirection.Type TextDirection { get; set; }
 		public bool TextFits { get; }
 		public bool TextScaled { get; set; }
 		public float TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
 		public float TextStrokeTransparency { get; set; }
 		public float TextTransparency { get; set; }
-		public Enum.TextTruncate TextTruncate { get; set; }
+		public Enum.TextTruncate.Type TextTruncate { get; set; }
 		public bool TextWrap { get; set; }
 		public bool TextWrapped { get; set; }
-		public Enum.TextXAlignment TextXAlignment { get; set; }
-		public Enum.TextYAlignment TextYAlignment { get; set; }
+		public Enum.TextXAlignment.Type TextXAlignment { get; set; }
+		public Enum.TextYAlignment.Type TextYAlignment { get; set; }
 	}
 	
 	public interface ScrollingFrame : GuiObject, ICreatableInstance
 	{
 		public Vector2 AbsoluteCanvasSize { get; }
 		public Vector2 AbsoluteWindowSize { get; }
-		public Enum.AutomaticSize AutomaticCanvasSize { get; set; }
+		public Enum.AutomaticSize.Type AutomaticCanvasSize { get; set; }
 		public string BottomImage { get; set; }
 		public Vector2 CanvasPosition { get; set; }
 		public UDim2 CanvasSize { get; set; }
-		public Enum.ElasticBehavior ElasticBehavior { get; set; }
-		public Enum.ScrollBarInset HorizontalScrollBarInset { get; set; }
+		public Enum.ElasticBehavior.Type ElasticBehavior { get; set; }
+		public Enum.ScrollBarInset.Type HorizontalScrollBarInset { get; set; }
 		public string MidImage { get; set; }
 		public Color3 ScrollBarImageColor3 { get; set; }
 		public float ScrollBarImageTransparency { get; set; }
 		public int ScrollBarThickness { get; set; }
-		public Enum.ScrollingDirection ScrollingDirection { get; set; }
+		public Enum.ScrollingDirection.Type ScrollingDirection { get; set; }
 		public bool ScrollingEnabled { get; set; }
 		public string TopImage { get; set; }
-		public Enum.ScrollBarInset VerticalScrollBarInset { get; set; }
-		public Enum.VerticalScrollBarPosition VerticalScrollBarPosition { get; set; }
+		public Enum.ScrollBarInset.Type VerticalScrollBarInset { get; set; }
+		public Enum.VerticalScrollBarPosition.Type VerticalScrollBarPosition { get; set; }
 	}
 	
 	public interface TextBox : GuiObject, ICreatableInstance
@@ -2309,7 +2309,7 @@ namespace Roblox
 		public string ContentText { get; }
 		public int CursorPosition { get; set; }
 		public Font FontFace { get; set; }
-		public Enum.FontSize FontSize { get; set; }
+		public Enum.FontSize.Type FontSize { get; set; }
 		public float LineHeight { get; set; }
 		public int MaxVisibleGraphemes { get; set; }
 		public bool MultiLine { get; set; }
@@ -2323,7 +2323,7 @@ namespace Roblox
 		public string Text { get; set; }
 		public Vector2 TextBounds { get; }
 		public Color3 TextColor3 { get; set; }
-		public Enum.TextDirection TextDirection { get; set; }
+		public Enum.TextDirection.Type TextDirection { get; set; }
 		public bool TextEditable { get; set; }
 		public bool TextFits { get; }
 		public bool TextScaled { get; set; }
@@ -2331,11 +2331,11 @@ namespace Roblox
 		public Color3 TextStrokeColor3 { get; set; }
 		public float TextStrokeTransparency { get; set; }
 		public float TextTransparency { get; set; }
-		public Enum.TextTruncate TextTruncate { get; set; }
+		public Enum.TextTruncate.Type TextTruncate { get; set; }
 		public bool TextWrap { get; set; }
 		public bool TextWrapped { get; set; }
-		public Enum.TextXAlignment TextXAlignment { get; set; }
-		public Enum.TextYAlignment TextYAlignment { get; set; }
+		public Enum.TextXAlignment.Type TextXAlignment { get; set; }
+		public Enum.TextYAlignment.Type TextYAlignment { get; set; }
 		public void CaptureFocus();
 		public bool IsFocused();
 		public void ReleaseFocus(bool? submitted = null);
@@ -2377,7 +2377,7 @@ namespace Roblox
 	{
 		public bool Enabled { get; set; }
 		public bool ResetOnSpawn { get; set; }
-		public Enum.ZIndexBehavior ZIndexBehavior { get; set; }
+		public Enum.ZIndexBehavior.Type ZIndexBehavior { get; set; }
 		public object GetLayoutNodeTree();
 	}
 	
@@ -2408,23 +2408,23 @@ namespace Roblox
 		public bool ClipToDeviceSafeArea { get; set; }
 		public int DisplayOrder { get; set; }
 		public bool IgnoreGuiInset { get; set; }
-		public Enum.SafeAreaCompatibility SafeAreaCompatibility { get; set; }
-		public Enum.ScreenInsets ScreenInsets { get; set; }
+		public Enum.SafeAreaCompatibility.Type SafeAreaCompatibility { get; set; }
+		public Enum.ScreenInsets.Type ScreenInsets { get; set; }
 	}
 	
 	public interface SurfaceGuiBase : LayerCollector
 	{
 		public bool Active { get; set; }
 		public Instance? Adornee { get; set; }
-		public Enum.NormalId Face { get; set; }
+		public Enum.NormalId.Type Face { get; set; }
 	}
 	
 	public interface AdGui : SurfaceGuiBase, ICreatableInstance
 	{
-		public Enum.AdShape AdShape { get; set; }
+		public Enum.AdShape.Type AdShape { get; set; }
 		public bool EnableVideoAds { get; set; }
 		public string FallbackImage { get; set; }
-		public Enum.AdUnitStatus Status { get; }
+		public Enum.AdUnitStatus.Type Status { get; }
 	}
 	
 	public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
@@ -2436,7 +2436,7 @@ namespace Roblox
 		public float LightInfluence { get; set; }
 		public float MaxDistance { get; set; }
 		public float PixelsPerStud { get; set; }
-		public Enum.SurfaceGuiSizingMode SizingMode { get; set; }
+		public Enum.SurfaceGuiSizingMode.Type SizingMode { get; set; }
 		public float ToolPunchThroughDistance { get; set; }
 		public float ZOffset { get; set; }
 	}
@@ -2479,7 +2479,7 @@ namespace Roblox
 	
 	public interface HandleAdornment : PVAdornment
 	{
-		public Enum.AdornCullingMode AdornCullingMode { get; set; }
+		public Enum.AdornCullingMode.Type AdornCullingMode { get; set; }
 		public bool AlwaysOnTop { get; set; }
 		public CFrame CFrame { get; set; }
 		public Vector3 SizeRelativeOffset { get; set; }
@@ -2558,27 +2558,27 @@ namespace Roblox
 	public interface ArcHandles : HandlesBase, ICreatableInstance
 	{
 		public Axes Axes { get; set; }
-		public ScriptSignal<Enum.Axis> MouseButton1Down { get; }
-		public ScriptSignal<Enum.Axis> MouseButton1Up { get; }
-		public ScriptSignal<Enum.Axis, float, float> MouseDrag { get; }
-		public ScriptSignal<Enum.Axis> MouseEnter { get; }
-		public ScriptSignal<Enum.Axis> MouseLeave { get; }
+		public ScriptSignal<Enum.Axis.Type> MouseButton1Down { get; }
+		public ScriptSignal<Enum.Axis.Type> MouseButton1Up { get; }
+		public ScriptSignal<Enum.Axis.Type, float, float> MouseDrag { get; }
+		public ScriptSignal<Enum.Axis.Type> MouseEnter { get; }
+		public ScriptSignal<Enum.Axis.Type> MouseLeave { get; }
 	}
 	
 	public interface Handles : HandlesBase, ICreatableInstance
 	{
 		public Faces Faces { get; set; }
-		public Enum.HandlesStyle Style { get; set; }
-		public ScriptSignal<Enum.NormalId> MouseButton1Down { get; }
-		public ScriptSignal<Enum.NormalId> MouseButton1Up { get; }
-		public ScriptSignal<Enum.NormalId, float> MouseDrag { get; }
-		public ScriptSignal<Enum.NormalId> MouseEnter { get; }
-		public ScriptSignal<Enum.NormalId> MouseLeave { get; }
+		public Enum.HandlesStyle.Type Style { get; set; }
+		public ScriptSignal<Enum.NormalId.Type> MouseButton1Down { get; }
+		public ScriptSignal<Enum.NormalId.Type> MouseButton1Up { get; }
+		public ScriptSignal<Enum.NormalId.Type, float> MouseDrag { get; }
+		public ScriptSignal<Enum.NormalId.Type> MouseEnter { get; }
+		public ScriptSignal<Enum.NormalId.Type> MouseLeave { get; }
 	}
 	
 	public interface SurfaceSelection : PartAdornment, ICreatableInstance
 	{
-		public Enum.NormalId TargetSurface { get; set; }
+		public Enum.NormalId.Type TargetSurface { get; set; }
 	}
 	
 	public interface SelectionLasso : GuiBase3d
@@ -2626,7 +2626,7 @@ namespace Roblox
 		public bool IsModalDialog { get; }
 		public bool IsWindows { get; }
 		public bool MenuIsOpen { get; }
-		public Enum.PreferredTextSize PreferredTextSize { get; }
+		public Enum.PreferredTextSize.Type PreferredTextSize { get; }
 		public GuiObject? SelectedObject { get; set; }
 		public Rect TopbarInset { get; }
 		public bool TouchControlsEnabled { get; set; }
@@ -2651,10 +2651,10 @@ namespace Roblox
 	
 	public interface HapticService : IServiceInstance
 	{
-		public object[] GetMotor(Enum.UserInputType inputType, Enum.VibrationMotor vibrationMotor);
-		public bool IsMotorSupported(Enum.UserInputType inputType, Enum.VibrationMotor vibrationMotor);
-		public bool IsVibrationSupported(Enum.UserInputType inputType);
-		public void SetMotor(Enum.UserInputType inputType, Enum.VibrationMotor vibrationMotor, object[] vibrationValues);
+		public object[] GetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
+		public bool IsMotorSupported(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
+		public bool IsVibrationSupported(Enum.UserInputType.Type inputType);
+		public void SetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor, object[] vibrationValues);
 	}
 	
 	public interface HeightmapImporterService : IServiceInstance
@@ -2668,7 +2668,7 @@ namespace Roblox
 	public interface Highlight : ICreatableInstance
 	{
 		public Instance? Adornee { get; set; }
-		public Enum.HighlightDepthMode DepthMode { get; set; }
+		public Enum.HighlightDepthMode.Type DepthMode { get; set; }
 		public bool Enabled { get; set; }
 		public Color3 FillColor { get; set; }
 		public float FillTransparency { get; set; }
@@ -2685,7 +2685,7 @@ namespace Roblox
 		public string JSONEncode(object input);
 		public string UrlEncode(string input);
 		public string GetAsync(object url, bool? nocache = null, object? headers = null);
-		public string PostAsync(object url, string data, Enum.HttpContentType? content_type = null, bool? compress = null, object? headers = null);
+		public string PostAsync(object url, string data, Enum.HttpContentType.Type? content_type = null, bool? compress = null, object? headers = null);
 		public object RequestAsync(object requestOptions);
 	}
 	
@@ -2696,14 +2696,14 @@ namespace Roblox
 		public bool AutomaticScalingEnabled { get; set; }
 		public bool BreakJointsOnDeath { get; set; }
 		public Vector3 CameraOffset { get; set; }
-		public Enum.HumanoidCollisionType CollisionType { get; set; }
-		public Enum.HumanoidDisplayDistanceType DisplayDistanceType { get; set; }
+		public Enum.HumanoidCollisionType.Type CollisionType { get; set; }
+		public Enum.HumanoidDisplayDistanceType.Type DisplayDistanceType { get; set; }
 		public string DisplayName { get; set; }
 		public bool EvaluateStateMachine { get; set; }
-		public Enum.Material FloorMaterial { get; }
+		public Enum.Material.Type FloorMaterial { get; }
 		public float Health { get; set; }
 		public float HealthDisplayDistance { get; set; }
-		public Enum.HumanoidHealthDisplayType HealthDisplayType { get; set; }
+		public Enum.HumanoidHealthDisplayType.Type HealthDisplayType { get; set; }
 		public float HipHeight { get; set; }
 		public bool Jump { get; set; }
 		public float JumpHeight { get; set; }
@@ -2712,10 +2712,10 @@ namespace Roblox
 		public float MaxSlopeAngle { get; set; }
 		public Vector3 MoveDirection { get; }
 		public float NameDisplayDistance { get; set; }
-		public Enum.NameOcclusion NameOcclusion { get; set; }
+		public Enum.NameOcclusion.Type NameOcclusion { get; set; }
 		public bool PlatformStand { get; set; }
 		public bool RequiresNeck { get; set; }
-		public Enum.HumanoidRigType RigType { get; set; }
+		public Enum.HumanoidRigType.Type RigType { get; set; }
 		public BasePart? RootPart { get; }
 		public BasePart? SeatPart { get; }
 		public bool Sit { get; set; }
@@ -2726,33 +2726,33 @@ namespace Roblox
 		public Vector3 WalkToPoint { get; set; }
 		public void AddAccessory(Accessory accessory);
 		public bool AddCustomStatus(string status);
-		public bool AddStatus(Enum.Status? status = null);
+		public bool AddStatus(Enum.Status.Type? status = null);
 		public void BuildRigFromAttachments();
-		public void ChangeState(Enum.HumanoidStateType? state = null);
+		public void ChangeState(Enum.HumanoidStateType.Type? state = null);
 		public void EquipTool(Tool tool);
 		public object[] GetAccessories();
 		public HumanoidDescription GetAppliedDescription();
-		public Enum.BodyPartR15 GetBodyPartR15(BasePart part);
-		public Enum.Limb GetLimb(BasePart part);
+		public Enum.BodyPartR15.Type GetBodyPartR15(BasePart part);
+		public Enum.Limb.Type GetLimb(BasePart part);
 		public Vector3 GetMoveVelocity();
 		public object[] GetPlayingAnimationTracks();
-		public Enum.HumanoidStateType GetState();
-		public bool GetStateEnabled(Enum.HumanoidStateType state);
+		public Enum.HumanoidStateType.Type GetState();
+		public bool GetStateEnabled(Enum.HumanoidStateType.Type state);
 		public object[] GetStatuses();
 		public bool HasCustomStatus(string status);
-		public bool HasStatus(Enum.Status? status = null);
+		public bool HasStatus(Enum.Status.Type? status = null);
 		public AnimationTrack LoadAnimation(Animation animation);
 		public void Move(Vector3 moveDirection, bool? relativeToCamera = null);
 		public void MoveTo(Vector3 location, BasePart? part = null);
 		public void RemoveAccessories();
 		public bool RemoveCustomStatus(string status);
-		public bool RemoveStatus(Enum.Status? status = null);
-		public bool ReplaceBodyPartR15(Enum.BodyPartR15 bodyPart, BasePart part);
-		public void SetStateEnabled(Enum.HumanoidStateType state, bool enabled);
+		public bool RemoveStatus(Enum.Status.Type? status = null);
+		public bool ReplaceBodyPartR15(Enum.BodyPartR15.Type bodyPart, BasePart part);
+		public void SetStateEnabled(Enum.HumanoidStateType.Type state, bool enabled);
 		public void TakeDamage(float amount);
 		public void UnequipTools();
-		public void ApplyDescription(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification? assetTypeVerification = null);
-		public void ApplyDescriptionReset(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification? assetTypeVerification = null);
+		public void ApplyDescription(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification.Type? assetTypeVerification = null);
+		public void ApplyDescriptionReset(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification.Type? assetTypeVerification = null);
 		public bool PlayEmote(string emoteName);
 		public ScriptSignal<AnimationTrack> AnimationPlayed { get; }
 		public ScriptSignal<HumanoidDescription> ApplyDescriptionFinished { get; }
@@ -2770,10 +2770,10 @@ namespace Roblox
 		public ScriptSignal<bool> Ragdoll { get; }
 		public ScriptSignal<float> Running { get; }
 		public ScriptSignal<bool, BasePart> Seated { get; }
-		public ScriptSignal<Enum.HumanoidStateType, Enum.HumanoidStateType> StateChanged { get; }
-		public ScriptSignal<Enum.HumanoidStateType, bool> StateEnabledChanged { get; }
-		public ScriptSignal<Enum.Status> StatusAdded { get; }
-		public ScriptSignal<Enum.Status> StatusRemoved { get; }
+		public ScriptSignal<Enum.HumanoidStateType.Type, Enum.HumanoidStateType.Type> StateChanged { get; }
+		public ScriptSignal<Enum.HumanoidStateType.Type, bool> StateEnabledChanged { get; }
+		public ScriptSignal<Enum.Status.Type> StatusAdded { get; }
+		public ScriptSignal<Enum.Status.Type> StatusRemoved { get; }
 		public ScriptSignal<bool> Strafing { get; }
 		public ScriptSignal<float> Swimming { get; }
 		public ScriptSignal<BasePart, BasePart> Touched { get; }
@@ -2842,7 +2842,7 @@ namespace Roblox
 		public int Priority { get; set; }
 		public float SmoothTime { get; set; }
 		public Instance? Target { get; set; }
-		public Enum.IKControlType Type { get; set; }
+		public Enum.IKControlType.Type Type { get; set; }
 		public float Weight { get; set; }
 		public int GetChainCount();
 		public float GetChainLength();
@@ -2876,11 +2876,11 @@ namespace Roblox
 	public interface InputObject : Instance
 	{
 		public Vector3 Delta { get; set; }
-		public Enum.KeyCode KeyCode { get; set; }
+		public Enum.KeyCode.Type KeyCode { get; set; }
 		public Vector3 Position { get; set; }
-		public Enum.UserInputState UserInputState { get; set; }
-		public Enum.UserInputType UserInputType { get; set; }
-		public bool IsModifierKeyDown(Enum.ModifierKey modifierKey);
+		public Enum.UserInputState.Type UserInputState { get; set; }
+		public Enum.UserInputType.Type UserInputType { get; set; }
+		public bool IsModifierKeyDown(Enum.ModifierKey.Type modifierKey);
 	}
 	
 	public interface InsertService : IServiceInstance
@@ -2889,7 +2889,7 @@ namespace Roblox
 		public void ApproveAssetId(long assetId);
 		public void ApproveAssetVersionId(long assetVersionId);
 		public void Insert(Instance instance);
-		public MeshPart CreateMeshPartAsync(string meshId, Enum.CollisionFidelity collisionFidelity, Enum.RenderFidelity renderFidelity);
+		public MeshPart CreateMeshPartAsync(string meshId, Enum.CollisionFidelity.Type collisionFidelity, Enum.RenderFidelity.Type renderFidelity);
 		public object[] GetBaseCategories();
 		public object[] GetBaseSets();
 		public object[] GetCollection(long categoryId);
@@ -3042,14 +3042,14 @@ namespace Roblox
 	public interface SpotLight : Light, ICreatableInstance
 	{
 		public float Angle { get; set; }
-		public Enum.NormalId Face { get; set; }
+		public Enum.NormalId.Type Face { get; set; }
 		public float Range { get; set; }
 	}
 	
 	public interface SurfaceLight : Light, ICreatableInstance
 	{
 		public float Angle { get; set; }
-		public Enum.NormalId Face { get; set; }
+		public Enum.NormalId.Type Face { get; set; }
 		public float Range { get; set; }
 	}
 	
@@ -3142,7 +3142,7 @@ namespace Roblox
 	{
 		public void ClearOutput();
 		public object[] GetLogHistory();
-		public ScriptSignal<string, Enum.MessageType> MessageOut { get; }
+		public ScriptSignal<string, Enum.MessageType.Type> MessageOut { get; }
 	}
 	
 	public interface LuaSourceContainer : Instance
@@ -3154,7 +3154,7 @@ namespace Roblox
 		public bool Disabled { get; set; }
 		public bool Enabled { get; set; }
 		public string LinkedSource { get; set; }
-		public Enum.RunContext RunContext { get; set; }
+		public Enum.RunContext.Type RunContext { get; set; }
 	}
 	
 	public interface Script : BaseScript, ICreatableInstance
@@ -3189,11 +3189,11 @@ namespace Roblox
 		public void PromptBundlePurchase(Player player, long bundleId);
 		public void PromptGamePassPurchase(Player player, long gamePassId);
 		public void PromptPremiumPurchase(Player player);
-		public void PromptProductPurchase(Player player, long productId, bool? equipIfPurchased = null, Enum.CurrencyType? currencyType = null);
-		public void PromptPurchase(Player player, long assetId, bool? equipIfPurchased = null, Enum.CurrencyType? currencyType = null);
+		public void PromptProductPurchase(Player player, long productId, bool? equipIfPurchased = null, Enum.CurrencyType.Type? currencyType = null);
+		public void PromptPurchase(Player player, long assetId, bool? equipIfPurchased = null, Enum.CurrencyType.Type? currencyType = null);
 		public void PromptSubscriptionPurchase(Player user, string subscriptionId);
 		public Instance GetDeveloperProductsAsync();
-		public object GetProductInfo(long assetId, Enum.InfoType? infoType = null);
+		public object GetProductInfo(long assetId, Enum.InfoType.Type? infoType = null);
 		public object GetSubscriptionProductInfoAsync(string subscriptionId);
 		public object GetUserSubscriptionDetailsAsync(Player user, string subscriptionId);
 		public object[] GetUserSubscriptionPaymentHistoryAsync(Player user, string subscriptionId);
@@ -3201,7 +3201,7 @@ namespace Roblox
 		public bool PlayerOwnsAsset(Player player, long assetId);
 		public bool PlayerOwnsBundle(Player player, long bundleId);
 		public bool UserOwnsGamePassAsync(long userId, long gamePassId);
-		public ScriptSignal<Instance, Enum.MarketplaceBulkPurchasePromptStatus, object> PromptBulkPurchaseFinished { get; }
+		public ScriptSignal<Instance, Enum.MarketplaceBulkPurchasePromptStatus.Type, object> PromptBulkPurchaseFinished { get; }
 		public ScriptSignal<Instance, long, bool> PromptBundlePurchaseFinished { get; }
 		public ScriptSignal<Instance, long, bool> PromptGamePassPurchaseFinished { get; }
 		public ScriptSignal PromptPremiumPurchaseFinished { get; }
@@ -3220,16 +3220,16 @@ namespace Roblox
 	
 	public interface MaterialService : IServiceInstance
 	{
-		public string GetBaseMaterialOverride(Enum.Material material);
-		public MaterialVariant GetMaterialVariant(Enum.Material material, string name);
-		public void SetBaseMaterialOverride(Enum.Material material, string name);
+		public string GetBaseMaterialOverride(Enum.Material.Type material);
+		public MaterialVariant GetMaterialVariant(Enum.Material.Type material, string name);
+		public void SetBaseMaterialOverride(Enum.Material.Type material, string name);
 	}
 	
 	public interface MaterialVariant : ICreatableInstance
 	{
-		public Enum.Material BaseMaterial { get; set; }
+		public Enum.Material.Type BaseMaterial { get; set; }
 		public PhysicalProperties CustomPhysicalProperties { get; set; }
-		public Enum.MaterialPattern MaterialPattern { get; set; }
+		public Enum.MaterialPattern.Type MaterialPattern { get; set; }
 		public float StudsPerTile { get; set; }
 	}
 	
@@ -3259,7 +3259,7 @@ namespace Roblox
 	public interface MemoryStoreSortedMap : Instance
 	{
 		public object[] GetAsync(string key);
-		public object[] GetRangeAsync(Enum.SortDirection direction, int count, object exclusiveLowerBound, object exclusiveUpperBound);
+		public object[] GetRangeAsync(Enum.SortDirection.Type direction, int count, object exclusiveLowerBound, object exclusiveUpperBound);
 		public void RemoveAsync(string key);
 		public bool SetAsync(string key, object value, long expiration, object sortKey);
 		public object[] UpdateAsync(string key, Action transformFunction, long expiration);
@@ -3298,7 +3298,7 @@ namespace Roblox
 		public CFrame Origin { get; }
 		public BasePart? Target { get; }
 		public Instance? TargetFilter { get; set; }
-		public Enum.NormalId TargetSurface { get; }
+		public Enum.NormalId.Type TargetSurface { get; }
 		public Ray UnitRay { get; }
 		public int ViewSizeX { get; }
 		public int ViewSizeY { get; }
@@ -3370,8 +3370,8 @@ namespace Roblox
 		public Vector3 AssemblyLinearVelocity { get; set; }
 		public float AssemblyMass { get; }
 		public BasePart? AssemblyRootPart { get; }
-		public Enum.SurfaceType BackSurface { get; set; }
-		public Enum.SurfaceType BottomSurface { get; set; }
+		public Enum.SurfaceType.Type BackSurface { get; set; }
+		public Enum.SurfaceType.Type BottomSurface { get; set; }
 		public BrickColor BrickColor { get; set; }
 		public CFrame CFrame { get; set; }
 		public bool CanCollide { get; set; }
@@ -3387,23 +3387,23 @@ namespace Roblox
 		public bool EnableFluidForces { get; set; }
 		public CFrame ExtentsCFrame { get; }
 		public Vector3 ExtentsSize { get; }
-		public Enum.SurfaceType FrontSurface { get; set; }
-		public Enum.SurfaceType LeftSurface { get; set; }
+		public Enum.SurfaceType.Type FrontSurface { get; set; }
+		public Enum.SurfaceType.Type LeftSurface { get; set; }
 		public bool Locked { get; set; }
 		public float Mass { get; }
 		public bool Massless { get; set; }
-		public Enum.Material Material { get; set; }
+		public Enum.Material.Type Material { get; set; }
 		public string MaterialVariant { get; set; }
 		public CFrame PivotOffset { get; set; }
 		public float Reflectance { get; set; }
 		public int ResizeIncrement { get; }
 		public Faces ResizeableFaces { get; }
-		public Enum.SurfaceType RightSurface { get; set; }
+		public Enum.SurfaceType.Type RightSurface { get; set; }
 		public int RootPriority { get; set; }
 		public Vector3 Rotation { get; set; }
 		public Vector3 Size { get; set; }
 		public float SpecificGravity { get; }
-		public Enum.SurfaceType TopSurface { get; set; }
+		public Enum.SurfaceType.Type TopSurface { get; set; }
 		public float Transparency { get; set; }
 		public Vector3 AngularAccelerationToTorque(Vector3 angAcceleration, Vector3? angVelocity = null);
 		public void ApplyAngularImpulse(Vector3 impulse);
@@ -3425,13 +3425,13 @@ namespace Roblox
 		public Vector3 GetVelocityAtPosition(Vector3 position);
 		public bool IsGrounded();
 		public void MakeJoints();
-		public bool Resize(Enum.NormalId normalId, int deltaAmount);
+		public bool Resize(Enum.NormalId.Type normalId, int deltaAmount);
 		public void SetNetworkOwner(Player? playerInstance = null);
 		public void SetNetworkOwnershipAuto();
 		public Vector3 TorqueToAngularAcceleration(Vector3 torque, Vector3? angVelocity = null);
-		public Instance IntersectAsync(Instance[] parts, Enum.CollisionFidelity? collisionfidelity = null, Enum.RenderFidelity? renderFidelity = null);
-		public Instance SubtractAsync(Instance[] parts, Enum.CollisionFidelity? collisionfidelity = null, Enum.RenderFidelity? renderFidelity = null);
-		public Instance UnionAsync(Instance[] parts, Enum.CollisionFidelity? collisionfidelity = null, Enum.RenderFidelity? renderFidelity = null);
+		public Instance IntersectAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
+		public Instance SubtractAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
+		public Instance UnionAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
 		public ScriptSignal<BasePart> LocalSimulationTouched { get; }
 		public ScriptSignal OutfitChanged { get; }
 		public ScriptSignal<BasePart> StoppedTouching { get; }
@@ -3445,12 +3445,12 @@ namespace Roblox
 	
 	public interface FormFactorPart : BasePart
 	{
-		public Enum.FormFactor FormFactor { get; set; }
+		public Enum.FormFactor.Type FormFactor { get; set; }
 	}
 	
 	public interface Part : FormFactorPart, ICreatableInstance
 	{
-		public Enum.PartType Shape { get; set; }
+		public Enum.PartType.Type Shape { get; set; }
 	}
 	
 	public interface Platform : Part
@@ -3473,7 +3473,7 @@ namespace Roblox
 		public int Throttle { get; set; }
 		public void ApplySpecificImpulse(Vector3 impulseWorld);
 		public ScriptSignal<Instance, Instance> Equipped { get; }
-		public ScriptSignal<Enum.MoveState, Enum.MoveState> MoveStateChanged { get; }
+		public ScriptSignal<Enum.MoveState.Type, Enum.MoveState.Type> MoveStateChanged { get; }
 		public ScriptSignal<Instance> Unequipped { get; }
 	}
 	
@@ -3506,22 +3506,22 @@ namespace Roblox
 		public void Clear();
 		public TerrainRegion CopyRegion(Region3int16 region);
 		public int CountCells();
-		public void FillBall(Vector3 center, float radius, Enum.Material material);
-		public void FillBlock(CFrame cframe, Vector3 size, Enum.Material material);
-		public void FillCylinder(CFrame cframe, float height, float radius, Enum.Material material);
-		public void FillRegion(Region3 region, float resolution, Enum.Material material);
-		public void FillWedge(CFrame cframe, Vector3 size, Enum.Material material);
+		public void FillBall(Vector3 center, float radius, Enum.Material.Type material);
+		public void FillBlock(CFrame cframe, Vector3 size, Enum.Material.Type material);
+		public void FillCylinder(CFrame cframe, float height, float radius, Enum.Material.Type material);
+		public void FillRegion(Region3 region, float resolution, Enum.Material.Type material);
+		public void FillWedge(CFrame cframe, Vector3 size, Enum.Material.Type material);
 		public object[] GetCell(int x, int y, int z);
-		public Color3 GetMaterialColor(Enum.Material material);
+		public Color3 GetMaterialColor(Enum.Material.Type material);
 		public object[] GetWaterCell(int x, int y, int z);
 		public void PasteRegion(TerrainRegion region, Vector3int16 corner, bool pasteEmptyCells);
 		public object ReadVoxelChannels(Region3 region, float resolution, object[] channelIds);
 		public object[] ReadVoxels(Region3 region, float resolution);
-		public void ReplaceMaterial(Region3 region, float resolution, Enum.Material sourceMaterial, Enum.Material targetMaterial);
-		public void SetCell(int x, int y, int z, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation);
-		public void SetCells(Region3int16 region, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation);
-		public void SetMaterialColor(Enum.Material material, Color3 value);
-		public void SetWaterCell(int x, int y, int z, Enum.WaterForce force, Enum.WaterDirection direction);
+		public void ReplaceMaterial(Region3 region, float resolution, Enum.Material.Type sourceMaterial, Enum.Material.Type targetMaterial);
+		public void SetCell(int x, int y, int z, Enum.CellMaterial.Type material, Enum.CellBlock.Type block, Enum.CellOrientation.Type orientation);
+		public void SetCells(Region3int16 region, Enum.CellMaterial.Type material, Enum.CellBlock.Type block, Enum.CellOrientation.Type orientation);
+		public void SetMaterialColor(Enum.Material.Type material, Color3 value);
+		public void SetWaterCell(int x, int y, int z, Enum.WaterForce.Type force, Enum.WaterDirection.Type direction);
 		public Vector3 WorldToCell(Vector3 position);
 		public Vector3 WorldToCellPreferEmpty(Vector3 position);
 		public Vector3 WorldToCellPreferSolid(Vector3 position);
@@ -3531,8 +3531,8 @@ namespace Roblox
 	
 	public interface TriangleMeshPart : BasePart
 	{
-		public Enum.CollisionFidelity CollisionFidelity { get; set; }
-		public Enum.FluidFidelity FluidFidelity { get; set; }
+		public Enum.CollisionFidelity.Type CollisionFidelity { get; set; }
+		public Enum.FluidFidelity.Type FluidFidelity { get; set; }
 		public Vector3 MeshSize { get; }
 	}
 	
@@ -3540,14 +3540,14 @@ namespace Roblox
 	{
 		public bool DoubleSided { get; set; }
 		public string MeshId { get; }
-		public Enum.RenderFidelity RenderFidelity { get; set; }
+		public Enum.RenderFidelity.Type RenderFidelity { get; set; }
 		public string TextureID { get; set; }
 		public void ApplyMesh(MeshPart meshPart);
 	}
 	
 	public interface PartOperation : TriangleMeshPart, ICreatableInstance
 	{
-		public Enum.RenderFidelity RenderFidelity { get; set; }
+		public Enum.RenderFidelity.Type RenderFidelity { get; set; }
 		public float SmoothingAngle { get; set; }
 		public int TriangleCount { get; }
 		public bool UsePartColor { get; set; }
@@ -3568,7 +3568,7 @@ namespace Roblox
 	
 	public interface TrussPart : BasePart, ICreatableInstance
 	{
-		public Enum.Style Style { get; set; }
+		public Enum.Style.Type Style { get; set; }
 	}
 	
 	public interface VehicleSeat : BasePart, ICreatableInstance
@@ -3589,7 +3589,7 @@ namespace Roblox
 	
 	public interface Model : PVInstance, ICreatableInstance
 	{
-		public Enum.ModelStreamingMode ModelStreamingMode { get; set; }
+		public Enum.ModelStreamingMode.Type ModelStreamingMode { get; set; }
 		public BasePart? PrimaryPart { get; set; }
 		public CFrame WorldPivot { get; set; }
 		public void AddPersistentPlayer(Player? playerInstance = null);
@@ -3644,7 +3644,7 @@ namespace Roblox
 	{
 		public bool ArePartsTouchingOthers(Instance[] partList, float? overlapIgnored = null);
 		public RaycastResult Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
-		public void BulkMoveTo(Instance[] partList, object[] cframeList, Enum.BulkMoveMode? eventMode = null);
+		public void BulkMoveTo(Instance[] partList, object[] cframeList, Enum.BulkMoveMode.Type? eventMode = null);
 		public object[] FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object[] FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object[] FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);
@@ -3665,21 +3665,21 @@ namespace Roblox
 	{
 		public float AirDensity { get; set; }
 		public bool AllowThirdPartySales { get; set; }
-		public Enum.ClientAnimatorThrottlingMode ClientAnimatorThrottling { get; set; }
+		public Enum.ClientAnimatorThrottlingMode.Type ClientAnimatorThrottling { get; set; }
 		public Camera? CurrentCamera { get; set; }
 		public double DistributedGameTime { get; set; }
 		public float FallenPartsDestroyHeight { get; set; }
 		public Vector3 GlobalWind { get; set; }
 		public float Gravity { get; set; }
 		public Vector3 InsertPoint { get; set; }
-		public Enum.AnimatorRetargetingMode Retargeting { get; set; }
+		public Enum.AnimatorRetargetingMode.Type Retargeting { get; set; }
 		public bool StreamingEnabled { get; set; }
 		public Terrain? Terrain { get; }
 		public int GetNumAwakeParts();
 		public int GetPhysicsThrottling();
 		public double GetRealPhysicsFPS();
 		public double GetServerTimeNow();
-		public void JoinToOutsiders(Instance[] objects, Enum.JointCreationMode jointType);
+		public void JoinToOutsiders(Instance[] objects, Enum.JointCreationMode.Type jointType);
 		public bool PGSIsEnabled();
 		public void UnjoinFromOutsiders(Instance[] objects);
 		public ScriptSignal<Player> PersistentLoaded { get; }
@@ -3768,25 +3768,25 @@ namespace Roblox
 		public float Brightness { get; set; }
 		public ColorSequence Color { get; set; }
 		public float Drag { get; set; }
-		public Enum.NormalId EmissionDirection { get; set; }
+		public Enum.NormalId.Type EmissionDirection { get; set; }
 		public bool Enabled { get; set; }
 		public NumberRange FlipbookFramerate { get; set; }
 		public string FlipbookIncompatible { get; set; }
-		public Enum.ParticleFlipbookLayout FlipbookLayout { get; set; }
-		public Enum.ParticleFlipbookMode FlipbookMode { get; set; }
+		public Enum.ParticleFlipbookLayout.Type FlipbookLayout { get; set; }
+		public Enum.ParticleFlipbookMode.Type FlipbookMode { get; set; }
 		public bool FlipbookStartRandom { get; set; }
 		public NumberRange Lifetime { get; set; }
 		public float LightEmission { get; set; }
 		public float LightInfluence { get; set; }
 		public bool LockedToPart { get; set; }
-		public Enum.ParticleOrientation Orientation { get; set; }
+		public Enum.ParticleOrientation.Type Orientation { get; set; }
 		public float Rate { get; set; }
 		public NumberRange RotSpeed { get; set; }
 		public NumberRange Rotation { get; set; }
-		public Enum.ParticleEmitterShape Shape { get; set; }
-		public Enum.ParticleEmitterShapeInOut ShapeInOut { get; set; }
+		public Enum.ParticleEmitterShape.Type Shape { get; set; }
+		public Enum.ParticleEmitterShapeInOut.Type ShapeInOut { get; set; }
 		public float ShapePartial { get; set; }
-		public Enum.ParticleEmitterShapeStyle ShapeStyle { get; set; }
+		public Enum.ParticleEmitterShapeStyle.Type ShapeStyle { get; set; }
 		public NumberSequence Size { get; set; }
 		public NumberRange Speed { get; set; }
 		public Vector2 SpreadAngle { get; set; }
@@ -3815,7 +3815,7 @@ namespace Roblox
 	
 	public interface Path : Instance
 	{
-		public Enum.PathStatus Status { get; }
+		public Enum.PathStatus.Type Status { get; }
 		public object[] GetPointCoordinates();
 		public object[] GetWaypoints();
 		public int CheckOcclusionAsync(int start);
@@ -3900,23 +3900,23 @@ namespace Roblox
 		public bool AutoJumpEnabled { get; set; }
 		public float CameraMaxZoomDistance { get; set; }
 		public float CameraMinZoomDistance { get; set; }
-		public Enum.CameraMode CameraMode { get; set; }
+		public Enum.CameraMode.Type CameraMode { get; set; }
 		public bool CanLoadCharacterAppearance { get; set; }
 		public Model? Character { get; set; }
 		public string CharacterAppearance { get; set; }
 		public long CharacterAppearanceId { get; set; }
-		public Enum.DevCameraOcclusionMode DevCameraOcclusionMode { get; set; }
-		public Enum.DevComputerCameraMovementMode DevComputerCameraMode { get; set; }
-		public Enum.DevComputerMovementMode DevComputerMovementMode { get; set; }
+		public Enum.DevCameraOcclusionMode.Type DevCameraOcclusionMode { get; set; }
+		public Enum.DevComputerCameraMovementMode.Type DevComputerCameraMode { get; set; }
+		public Enum.DevComputerMovementMode.Type DevComputerMovementMode { get; set; }
 		public bool DevEnableMouseLock { get; set; }
-		public Enum.DevTouchCameraMovementMode DevTouchCameraMode { get; set; }
-		public Enum.DevTouchMovementMode DevTouchMovementMode { get; set; }
+		public Enum.DevTouchCameraMovementMode.Type DevTouchCameraMode { get; set; }
+		public Enum.DevTouchMovementMode.Type DevTouchMovementMode { get; set; }
 		public string DisplayName { get; set; }
 		public long FollowUserId { get; }
 		public bool GameplayPaused { get; }
 		public bool HasVerifiedBadge { get; set; }
 		public float HealthDisplayDistance { get; set; }
-		public Enum.MembershipType MembershipType { get; }
+		public Enum.MembershipType.Type MembershipType { get; }
 		public float NameDisplayDistance { get; set; }
 		public bool Neutral { get; set; }
 		public Instance? ReplicationFocus { get; set; }
@@ -3957,7 +3957,7 @@ namespace Roblox
 		public ScriptSignal<Model> CharacterRemoving { get; }
 		public ScriptSignal<string, Player> Chatted { get; }
 		public ScriptSignal<double> Idled { get; }
-		public ScriptSignal<Enum.TeleportState, long, string> OnTeleport { get; }
+		public ScriptSignal<Enum.TeleportState.Type, long, string> OnTeleport { get; }
 	}
 	
 	public interface PlayerHydrationService : IServiceInstance
@@ -3970,10 +3970,10 @@ namespace Roblox
 		public void ClearComputerMovementModes();
 		public void ClearTouchCameraMovementModes();
 		public void ClearTouchMovementModes();
-		public void RegisterComputerCameraMovementMode(Enum.ComputerCameraMovementMode cameraMovementMode);
-		public void RegisterComputerMovementMode(Enum.ComputerMovementMode movementMode);
-		public void RegisterTouchCameraMovementMode(Enum.TouchCameraMovementMode cameraMovementMode);
-		public void RegisterTouchMovementMode(Enum.TouchMovementMode movementMode);
+		public void RegisterComputerCameraMovementMode(Enum.ComputerCameraMovementMode.Type cameraMovementMode);
+		public void RegisterComputerMovementMode(Enum.ComputerMovementMode.Type movementMode);
+		public void RegisterTouchCameraMovementMode(Enum.TouchCameraMovementMode.Type cameraMovementMode);
+		public void RegisterTouchMovementMode(Enum.TouchMovementMode.Type movementMode);
 	}
 	
 	public interface PlayerViewService : IServiceInstance
@@ -3996,7 +3996,7 @@ namespace Roblox
 		public Player playerFromCharacter(Model character);
 		public Instance[] players();
 		public void BanAsync(object config);
-		public Model CreateHumanoidModelFromDescription(HumanoidDescription description, Enum.HumanoidRigType rigType, Enum.AssetTypeVerification? assetTypeVerification = null);
+		public Model CreateHumanoidModelFromDescription(HumanoidDescription description, Enum.HumanoidRigType.Type rigType, Enum.AssetTypeVerification.Type? assetTypeVerification = null);
 		public Model CreateHumanoidModelFromUserId(long userId);
 		public BanHistoryPages GetBanHistoryAsync(long userId);
 		public Model GetCharacterAppearanceAsync(long userId);
@@ -4006,7 +4006,7 @@ namespace Roblox
 		public HumanoidDescription GetHumanoidDescriptionFromUserId(long userId);
 		public string GetNameFromUserIdAsync(long userId);
 		public long GetUserIdFromNameAsync(string userName);
-		public object[] GetUserThumbnailAsync(long userId, Enum.ThumbnailType thumbnailType, Enum.ThumbnailSize thumbnailSize);
+		public object[] GetUserThumbnailAsync(long userId, Enum.ThumbnailType.Type thumbnailType, Enum.ThumbnailSize.Type thumbnailSize);
 		public void UnbanAsync(object config);
 		public ScriptSignal<Player> PlayerAdded { get; }
 		public ScriptSignal<Player> PlayerMembershipChanged { get; }
@@ -4037,8 +4037,8 @@ namespace Roblox
 	
 	public interface PoseBase : Instance
 	{
-		public Enum.PoseEasingDirection EasingDirection { get; set; }
-		public Enum.PoseEasingStyle EasingStyle { get; set; }
+		public Enum.PoseEasingDirection.Type EasingDirection { get; set; }
+		public Enum.PoseEasingStyle.Type EasingStyle { get; set; }
 		public float Weight { get; set; }
 	}
 	
@@ -4083,7 +4083,7 @@ namespace Roblox
 	
 	public interface ColorGradingEffect : PostEffect, ICreatableInstance
 	{
-		public Enum.TonemapperPreset TonemapperPreset { get; set; }
+		public Enum.TonemapperPreset.Type TonemapperPreset { get; set; }
 	}
 	
 	public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
@@ -4114,22 +4114,22 @@ namespace Roblox
 		public bool AutoLocalize { get; set; }
 		public bool ClickablePrompt { get; set; }
 		public bool Enabled { get; set; }
-		public Enum.ProximityPromptExclusivity Exclusivity { get; set; }
-		public Enum.KeyCode GamepadKeyCode { get; set; }
+		public Enum.ProximityPromptExclusivity.Type Exclusivity { get; set; }
+		public Enum.KeyCode.Type GamepadKeyCode { get; set; }
 		public float HoldDuration { get; set; }
-		public Enum.KeyCode KeyboardKeyCode { get; set; }
+		public Enum.KeyCode.Type KeyboardKeyCode { get; set; }
 		public float MaxActivationDistance { get; set; }
 		public string ObjectText { get; set; }
 		public bool RequiresLineOfSight { get; set; }
 		public LocalizationTable? RootLocalizationTable { get; set; }
-		public Enum.ProximityPromptStyle Style { get; set; }
+		public Enum.ProximityPromptStyle.Type Style { get; set; }
 		public Vector2 UIOffset { get; set; }
 		public void InputHoldBegin();
 		public void InputHoldEnd();
 		public ScriptSignal<Player> PromptButtonHoldBegan { get; }
 		public ScriptSignal<Player> PromptButtonHoldEnded { get; }
 		public ScriptSignal PromptHidden { get; }
-		public ScriptSignal<Enum.ProximityPromptInputType> PromptShown { get; }
+		public ScriptSignal<Enum.ProximityPromptInputType.Type> PromptShown { get; }
 		public ScriptSignal<Player> TriggerEnded { get; }
 		public ScriptSignal<Player> Triggered { get; }
 	}
@@ -4141,7 +4141,7 @@ namespace Roblox
 		public ScriptSignal<ProximityPrompt, Player> PromptButtonHoldBegan { get; }
 		public ScriptSignal<ProximityPrompt, Player> PromptButtonHoldEnded { get; }
 		public ScriptSignal<ProximityPrompt> PromptHidden { get; }
-		public ScriptSignal<ProximityPrompt, Enum.ProximityPromptInputType> PromptShown { get; }
+		public ScriptSignal<ProximityPrompt, Enum.ProximityPromptInputType.Type> PromptShown { get; }
 		public ScriptSignal<ProximityPrompt, Player> PromptTriggerEnded { get; }
 		public ScriptSignal<ProximityPrompt, Player> PromptTriggered { get; }
 	}
@@ -4152,8 +4152,8 @@ namespace Roblox
 	
 	public interface RTAnimationTracker : ICreatableInstance
 	{
-		public ScriptSignal<Enum.TrackerError, string> TrackerError { get; }
-		public ScriptSignal<Enum.TrackerPromptEvent> TrackerPrompt { get; }
+		public ScriptSignal<Enum.TrackerError.Type, string> TrackerError { get; }
+		public ScriptSignal<Enum.TrackerPromptEvent.Type> TrackerPrompt { get; }
 	}
 	
 	public interface ReflectionService : IServiceInstance
@@ -4245,7 +4245,7 @@ namespace Roblox
 	
 	public interface SyncScriptBuilder : ScriptBuilder
 	{
-		public Enum.CompileTarget CompileTarget { get; set; }
+		public Enum.CompileTarget.Type CompileTarget { get; set; }
 		public bool CoverageInfo { get; set; }
 		public bool DebugInfo { get; set; }
 		public bool PackAsSource { get; set; }
@@ -4299,7 +4299,7 @@ namespace Roblox
 	
 	public interface SensorBase : Instance
 	{
-		public Enum.SensorUpdateType UpdateType { get; set; }
+		public Enum.SensorUpdateType.Type UpdateType { get; set; }
 		public void Sense();
 		public ScriptSignal OnSensorOutputChanged { get; }
 	}
@@ -4326,7 +4326,7 @@ namespace Roblox
 		public Vector3 HitNormal { get; set; }
 		public float SearchDistance { get; set; }
 		public BasePart? SensedPart { get; set; }
-		public Enum.SensorMode SensorMode { get; set; }
+		public Enum.SensorMode.Type SensorMode { get; set; }
 	}
 	
 	public interface ServerScriptService : IServiceInstance
@@ -4347,10 +4347,10 @@ namespace Roblox
 	public partial interface DataModel : ServiceProvider
 	{
 		public long CreatorId { get; }
-		public Enum.CreatorType CreatorType { get; }
+		public Enum.CreatorType.Type CreatorType { get; }
 		public long GameId { get; }
-		public Enum.GearGenreSetting GearGenreSetting { get; }
-		public Enum.Genre Genre { get; }
+		public Enum.GearGenreSetting.Type GearGenreSetting { get; }
+		public Enum.Genre.Type Genre { get; }
 		public string JobId { get; }
 		public long PlaceId { get; }
 		public int PlaceVersion { get; }
@@ -4359,9 +4359,9 @@ namespace Roblox
 		public void BindToClose(Action function);
 		public string GetMessage();
 		public bool GetRemoteBuildMode();
-		public bool IsGearTypeAllowed(Enum.GearType gearType);
+		public bool IsGearTypeAllowed(Enum.GearType.Type gearType);
 		public bool IsLoaded();
-		public bool SavePlace(Enum.SaveFilter? saveFilter = null);
+		public bool SavePlace(Enum.SaveFilter.Type? saveFilter = null);
 		public ScriptSignal AllowedGearTypeChanged { get; }
 		public ScriptSignal<bool> GraphicsQualityChangeRequest { get; }
 		public ScriptSignal<Instance, string> ItemChanged { get; }
@@ -4435,10 +4435,10 @@ namespace Roblox
 		public void HideSelfView();
 		public void PromptGameInvite(Player player, ExperienceInviteOptions? experienceInviteOptions = null);
 		public void PromptPhoneBook(Player player, string tag);
-		public void ShowSelfView(Enum.SelfViewPosition? selfViewPosition = null);
+		public void ShowSelfView(Enum.SelfViewPosition.Type? selfViewPosition = null);
 		public bool CanSendCallInviteAsync(Player player);
 		public bool CanSendGameInviteAsync(Player player, long? recipientId = null);
-		public ScriptSignal<Instance, Enum.InviteState> CallInviteStateChanged { get; }
+		public ScriptSignal<Instance, Enum.InviteState.Type> CallInviteStateChanged { get; }
 		public ScriptSignal<Instance, object[]> GameInvitePromptClosed { get; }
 		public ScriptSignal<Instance> PhoneBookPromptClosed { get; }
 	}
@@ -4460,7 +4460,7 @@ namespace Roblox
 		public bool Playing { get; set; }
 		public float RollOffMaxDistance { get; set; }
 		public float RollOffMinDistance { get; set; }
-		public Enum.RollOffMode RollOffMode { get; set; }
+		public Enum.RollOffMode.Type RollOffMode { get; set; }
 		public SoundGroup? SoundGroup { get; set; }
 		public string SoundId { get; set; }
 		public double TimeLength { get; }
@@ -4570,14 +4570,14 @@ namespace Roblox
 	
 	public partial interface SoundService : IServiceInstance
 	{
-		public Enum.ReverbType AmbientReverb { get; set; }
+		public Enum.ReverbType.Type AmbientReverb { get; set; }
 		public float DistanceFactor { get; set; }
 		public float DopplerScale { get; set; }
 		public bool RespectFilteringEnabled { get; set; }
 		public float RolloffScale { get; set; }
 		public object[] GetListener();
 		public void PlayLocalSound(Sound sound);
-		public void SetListener(Enum.ListenerType listenerType, object[] listener);
+		public void SetListener(Enum.ListenerType.Type listenerType, object[] listener);
 	}
 	
 	public interface Sparkles : ICreatableInstance
@@ -4602,24 +4602,24 @@ namespace Roblox
 	public interface StarterPlayer : IServiceInstance
 	{
 		public bool AutoJumpEnabled { get; set; }
-		public Enum.AvatarJointUpgrade AvatarJointUpgrade { get; set; }
+		public Enum.AvatarJointUpgrade.Type AvatarJointUpgrade { get; set; }
 		public float CameraMaxZoomDistance { get; set; }
 		public float CameraMinZoomDistance { get; set; }
-		public Enum.CameraMode CameraMode { get; set; }
+		public Enum.CameraMode.Type CameraMode { get; set; }
 		public float CharacterJumpHeight { get; set; }
 		public float CharacterJumpPower { get; set; }
 		public float CharacterMaxSlopeAngle { get; set; }
 		public bool CharacterUseJumpPower { get; set; }
 		public float CharacterWalkSpeed { get; set; }
-		public Enum.DevCameraOcclusionMode DevCameraOcclusionMode { get; set; }
-		public Enum.DevComputerCameraMovementMode DevComputerCameraMovementMode { get; set; }
-		public Enum.DevComputerMovementMode DevComputerMovementMode { get; set; }
-		public Enum.DevTouchCameraMovementMode DevTouchCameraMovementMode { get; set; }
-		public Enum.DevTouchMovementMode DevTouchMovementMode { get; set; }
+		public Enum.DevCameraOcclusionMode.Type DevCameraOcclusionMode { get; set; }
+		public Enum.DevComputerCameraMovementMode.Type DevComputerCameraMovementMode { get; set; }
+		public Enum.DevComputerMovementMode.Type DevComputerMovementMode { get; set; }
+		public Enum.DevTouchCameraMovementMode.Type DevTouchCameraMovementMode { get; set; }
+		public Enum.DevTouchMovementMode.Type DevTouchMovementMode { get; set; }
 		public bool EnableMouseLockOption { get; set; }
 		public float HealthDisplayDistance { get; set; }
 		public bool LoadCharacterAppearance { get; set; }
-		public Enum.CharacterControlMode LuaCharacterController { get; set; }
+		public Enum.CharacterControlMode.Type LuaCharacterController { get; set; }
 		public float NameDisplayDistance { get; set; }
 		public bool UserEmotesEnabled { get; set; }
 	}
@@ -4648,7 +4648,7 @@ namespace Roblox
 		public float PhysicsSendKbps { get; }
 		public float PhysicsStepTimeMs { get; }
 		public int PrimitivesCount { get; }
-		public float GetMemoryUsageMbForTag(Enum.DeveloperMemoryTag tag);
+		public float GetMemoryUsageMbForTag(Enum.DeveloperMemoryTag.Type tag);
 		public float GetTotalMemoryUsageMb();
 	}
 	
@@ -4805,7 +4805,7 @@ namespace Roblox
 		public Instance TeleportAsync(long placeId, Instance[] players, TeleportOptions? teleportOptions = null);
 		public string TeleportPartyAsync(long placeId, Instance[] players, object teleportData, Instance? customLoadingScreen = null);
 		public ScriptSignal<Instance, object> LocalPlayerArrivedFromTeleport { get; }
-		public ScriptSignal<Instance, Enum.TeleportResult, string, long, Instance> TeleportInitFailed { get; }
+		public ScriptSignal<Instance, Enum.TeleportResult.Type, string, long, Instance> TeleportInitFailed { get; }
 	}
 	
 	public interface TemporaryCageMeshProvider : IServiceInstance
@@ -4818,8 +4818,8 @@ namespace Roblox
 	
 	public interface TerrainDetail : ICreatableInstance
 	{
-		public Enum.TerrainFace Face { get; set; }
-		public Enum.MaterialPattern MaterialPattern { get; set; }
+		public Enum.TerrainFace.Type Face { get; set; }
+		public Enum.MaterialPattern.Type MaterialPattern { get; set; }
 		public float StudsPerTile { get; set; }
 	}
 	
@@ -4899,7 +4899,7 @@ namespace Roblox
 		public bool Enabled { get; set; }
 		public Font FontFace { get; set; }
 		public bool IsFocused { get; }
-		public Enum.KeyCode KeyboardKeyCode { get; set; }
+		public Enum.KeyCode.Type KeyboardKeyCode { get; set; }
 		public Color3 PlaceholderColor3 { get; set; }
 		public TextChannel? TargetTextChannel { get; set; }
 		public TextBox? TextBox { get; set; }
@@ -4918,12 +4918,12 @@ namespace Roblox
 		public bool Enabled { get; set; }
 		public Font FontFace { get; set; }
 		public float HeightScale { get; set; }
-		public Enum.HorizontalAlignment HorizontalAlignment { get; set; }
+		public Enum.HorizontalAlignment.Type HorizontalAlignment { get; set; }
 		public Color3 TextColor3 { get; set; }
 		public long TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
 		public double TextStrokeTransparency { get; set; }
-		public Enum.VerticalAlignment VerticalAlignment { get; set; }
+		public Enum.VerticalAlignment.Type VerticalAlignment { get; set; }
 		public float WidthScale { get; set; }
 	}
 	
@@ -4933,7 +4933,7 @@ namespace Roblox
 		public string MessageId { get; set; }
 		public string Metadata { get; set; }
 		public string PrefixText { get; set; }
-		public Enum.TextChatMessageStatus Status { get; set; }
+		public Enum.TextChatMessageStatus.Type Status { get; set; }
 		public string Text { get; set; }
 		public TextChannel? TextChannel { get; set; }
 		public TextSource? TextSource { get; set; }
@@ -4951,7 +4951,7 @@ namespace Roblox
 	public interface TextChatService : IServiceInstance
 	{
 		public bool ChatTranslationEnabled { get; }
-		public Enum.ChatVersion ChatVersion { get; }
+		public Enum.ChatVersion.Type ChatVersion { get; }
 		public bool CreateDefaultCommands { get; set; }
 		public bool CreateDefaultTextChannels { get; set; }
 		public void DisplayBubble(Instance partOrCharacter, string message);
@@ -4979,9 +4979,9 @@ namespace Roblox
 	
 	public interface TextService : IServiceInstance
 	{
-		public Vector2 GetTextSize(string str, int fontSize, Enum.Font font, Vector2 frameSize);
-		public TextFilterTranslatedResult FilterAndTranslateStringAsync(string stringToFilter, long fromUserId, object[] targetLocales, Enum.TextFilterContext? textContext = null);
-		public TextFilterResult FilterStringAsync(string stringToFilter, long fromUserId, Enum.TextFilterContext? textContext = null);
+		public Vector2 GetTextSize(string str, int fontSize, Enum.Font.Type font, Vector2 frameSize);
+		public TextFilterTranslatedResult FilterAndTranslateStringAsync(string stringToFilter, long fromUserId, object[] targetLocales, Enum.TextFilterContext.Type? textContext = null);
+		public TextFilterResult FilterStringAsync(string stringToFilter, long fromUserId, Enum.TextFilterContext.Type? textContext = null);
 		public object GetFamilyInfoAsync(string assetId);
 		public Vector2 GetTextBoundsAsync(GetTextBoundsParams parameters);
 	}
@@ -5022,10 +5022,10 @@ namespace Roblox
 	
 	public interface TrackerLodController : Instance
 	{
-		public Enum.TrackerLodFlagMode AudioMode { get; set; }
-		public Enum.TrackerExtrapolationFlagMode VideoExtrapolationMode { get; set; }
-		public Enum.TrackerLodValueMode VideoLodMode { get; set; }
-		public Enum.TrackerLodFlagMode VideoMode { get; set; }
+		public Enum.TrackerLodFlagMode.Type AudioMode { get; set; }
+		public Enum.TrackerExtrapolationFlagMode.Type VideoExtrapolationMode { get; set; }
+		public Enum.TrackerLodValueMode.Type VideoLodMode { get; set; }
+		public Enum.TrackerLodFlagMode.Type VideoMode { get; set; }
 	}
 	
 	public interface TrackerStreamAnimation : ICreatableInstance
@@ -5047,7 +5047,7 @@ namespace Roblox
 		public float MinLength { get; set; }
 		public string Texture { get; set; }
 		public float TextureLength { get; set; }
-		public Enum.TextureMode TextureMode { get; set; }
+		public Enum.TextureMode.Type TextureMode { get; set; }
 		public NumberSequence Transparency { get; set; }
 		public NumberSequence WidthScale { get; set; }
 		public void Clear();
@@ -5066,11 +5066,11 @@ namespace Roblox
 	
 	public interface TweenBase : Instance
 	{
-		public Enum.PlaybackState PlaybackState { get; }
+		public Enum.PlaybackState.Type PlaybackState { get; }
 		public void Cancel();
 		public void Pause();
 		public void Play();
-		public ScriptSignal<Enum.PlaybackState> Completed { get; }
+		public ScriptSignal<Enum.PlaybackState.Type> Completed { get; }
 	}
 	
 	public interface Tween : TweenBase
@@ -5082,7 +5082,7 @@ namespace Roblox
 	public interface TweenService : IServiceInstance
 	{
 		public Tween Create(Instance instance, TweenInfo tweenInfo, object propertyTable);
-		public float GetValue(float alpha, Enum.EasingStyle easingStyle, Enum.EasingDirection easingDirection);
+		public float GetValue(float alpha, Enum.EasingStyle.Type easingStyle, Enum.EasingDirection.Type easingDirection);
 	}
 	
 	public interface UGCAvatarService : IServiceInstance
@@ -5104,8 +5104,8 @@ namespace Roblox
 	public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
 	{
 		public float AspectRatio { get; set; }
-		public Enum.AspectType AspectType { get; set; }
-		public Enum.DominantAxis DominantAxis { get; set; }
+		public Enum.AspectType.Type AspectType { get; set; }
+		public Enum.DominantAxis.Type DominantAxis { get; set; }
 	}
 	
 	public interface UISizeConstraint : UIConstraint, ICreatableInstance
@@ -5128,14 +5128,14 @@ namespace Roblox
 	public interface UIDragDetector : UIComponent, ICreatableInstance
 	{
 		public string ActivatedCursorIcon { get; set; }
-		public Enum.UIDragDetectorBoundingBehavior BoundingBehavior { get; set; }
+		public Enum.UIDragDetectorBoundingBehavior.Type BoundingBehavior { get; set; }
 		public GuiBase2d? BoundingUI { get; set; }
 		public string CursorIcon { get; set; }
 		public Vector2 DragAxis { get; set; }
-		public Enum.UIDragDetectorDragRelativity DragRelativity { get; set; }
+		public Enum.UIDragDetectorDragRelativity.Type DragRelativity { get; set; }
 		public float DragRotation { get; set; }
-		public Enum.UIDragDetectorDragSpace DragSpace { get; set; }
-		public Enum.UIDragDetectorDragStyle DragStyle { get; set; }
+		public Enum.UIDragDetectorDragSpace.Type DragSpace { get; set; }
+		public Enum.UIDragDetectorDragStyle.Type DragStyle { get; set; }
 		public UDim2 DragUDim2 { get; set; }
 		public bool Enabled { get; set; }
 		public float MaxDragAngle { get; set; }
@@ -5143,7 +5143,7 @@ namespace Roblox
 		public float MinDragAngle { get; set; }
 		public UDim2 MinDragTranslation { get; set; }
 		public GuiObject? ReferenceUIInstance { get; set; }
-		public Enum.UIDragDetectorResponseStyle ResponseStyle { get; set; }
+		public Enum.UIDragDetectorResponseStyle.Type ResponseStyle { get; set; }
 		public ScriptConnection AddConstraintFunction(int priority, Action function);
 		public UDim2 GetReferencePosition();
 		public float GetReferenceRotation();
@@ -5155,9 +5155,9 @@ namespace Roblox
 	
 	public interface UIFlexItem : UIComponent, ICreatableInstance
 	{
-		public Enum.UIFlexMode FlexMode { get; set; }
+		public Enum.UIFlexMode.Type FlexMode { get; set; }
 		public float GrowRatio { get; set; }
-		public Enum.ItemLineAlignment ItemLineAlignment { get; set; }
+		public Enum.ItemLineAlignment.Type ItemLineAlignment { get; set; }
 		public float ShrinkRatio { get; set; }
 	}
 	
@@ -5177,10 +5177,10 @@ namespace Roblox
 	public interface UIGridStyleLayout : UILayout
 	{
 		public Vector2 AbsoluteContentSize { get; }
-		public Enum.FillDirection FillDirection { get; set; }
-		public Enum.HorizontalAlignment HorizontalAlignment { get; set; }
-		public Enum.SortOrder SortOrder { get; set; }
-		public Enum.VerticalAlignment VerticalAlignment { get; set; }
+		public Enum.FillDirection.Type FillDirection { get; set; }
+		public Enum.HorizontalAlignment.Type HorizontalAlignment { get; set; }
+		public Enum.SortOrder.Type SortOrder { get; set; }
+		public Enum.VerticalAlignment.Type VerticalAlignment { get; set; }
 		public void ApplyLayout();
 		public void SetCustomSortFunction(Action? function = null);
 	}
@@ -5192,15 +5192,15 @@ namespace Roblox
 		public UDim2 CellPadding { get; set; }
 		public UDim2 CellSize { get; set; }
 		public int FillDirectionMaxCells { get; set; }
-		public Enum.StartCorner StartCorner { get; set; }
+		public Enum.StartCorner.Type StartCorner { get; set; }
 	}
 	
 	public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
 	{
-		public Enum.UIFlexAlignment HorizontalFlex { get; set; }
-		public Enum.ItemLineAlignment ItemLineAlignment { get; set; }
+		public Enum.UIFlexAlignment.Type HorizontalFlex { get; set; }
+		public Enum.ItemLineAlignment.Type ItemLineAlignment { get; set; }
 		public UDim Padding { get; set; }
-		public Enum.UIFlexAlignment VerticalFlex { get; set; }
+		public Enum.UIFlexAlignment.Type VerticalFlex { get; set; }
 		public bool Wraps { get; set; }
 	}
 	
@@ -5209,8 +5209,8 @@ namespace Roblox
 		public bool Animated { get; set; }
 		public bool Circular { get; set; }
 		public GuiObject? CurrentPage { get; }
-		public Enum.EasingDirection EasingDirection { get; set; }
-		public Enum.EasingStyle EasingStyle { get; set; }
+		public Enum.EasingDirection.Type EasingDirection { get; set; }
+		public Enum.EasingStyle.Type EasingStyle { get; set; }
 		public bool GamepadInputEnabled { get; set; }
 		public UDim Padding { get; set; }
 		public bool ScrollWheelInputEnabled { get; set; }
@@ -5229,7 +5229,7 @@ namespace Roblox
 	{
 		public bool FillEmptySpaceColumns { get; set; }
 		public bool FillEmptySpaceRows { get; set; }
-		public Enum.TableMajorAxis MajorAxis { get; set; }
+		public Enum.TableMajorAxis.Type MajorAxis { get; set; }
 		public UDim2 Padding { get; set; }
 	}
 	
@@ -5248,10 +5248,10 @@ namespace Roblox
 	
 	public interface UIStroke : UIComponent, ICreatableInstance
 	{
-		public Enum.ApplyStrokeMode ApplyStrokeMode { get; set; }
+		public Enum.ApplyStrokeMode.Type ApplyStrokeMode { get; set; }
 		public Color3 Color { get; set; }
 		public bool Enabled { get; set; }
-		public Enum.LineJoinMode LineJoinMode { get; set; }
+		public Enum.LineJoinMode.Type LineJoinMode { get; set; }
 		public float Thickness { get; set; }
 		public float Transparency { get; set; }
 	}
@@ -5266,17 +5266,17 @@ namespace Roblox
 	
 	public interface UserGameSettings : Instance
 	{
-		public Enum.ComputerCameraMovementMode ComputerCameraMovementMode { get; set; }
-		public Enum.ComputerMovementMode ComputerMovementMode { get; set; }
-		public Enum.ControlMode ControlMode { get; set; }
+		public Enum.ComputerCameraMovementMode.Type ComputerCameraMovementMode { get; set; }
+		public Enum.ComputerMovementMode.Type ComputerMovementMode { get; set; }
+		public Enum.ControlMode.Type ControlMode { get; set; }
 		public float GamepadCameraSensitivity { get; set; }
 		public float MouseSensitivity { get; set; }
 		public int RCCProfilerRecordFrameRate { get; set; }
 		public int RCCProfilerRecordTimeFrame { get; set; }
-		public Enum.RotationType RotationType { get; set; }
-		public Enum.SavedQualitySetting SavedQualityLevel { get; set; }
-		public Enum.TouchCameraMovementMode TouchCameraMovementMode { get; set; }
-		public Enum.TouchMovementMode TouchMovementMode { get; set; }
+		public Enum.RotationType.Type RotationType { get; set; }
+		public Enum.SavedQualitySetting.Type SavedQualityLevel { get; set; }
+		public Enum.TouchCameraMovementMode.Type TouchCameraMovementMode { get; set; }
+		public Enum.TouchMovementMode.Type TouchMovementMode { get; set; }
 		public bool VRSmoothRotationEnabled { get; }
 		public bool VignetteEnabled { get; }
 		public int GetCameraYInvertValue();
@@ -5297,7 +5297,7 @@ namespace Roblox
 		public bool GyroscopeEnabled { get; }
 		public bool KeyboardEnabled { get; }
 		public bool ModalEnabled { get; set; }
-		public Enum.MouseBehavior MouseBehavior { get; set; }
+		public Enum.MouseBehavior.Type MouseBehavior { get; set; }
 		public float MouseDeltaSensitivity { get; set; }
 		public bool MouseEnabled { get; }
 		public string MouseIcon { get; set; }
@@ -5308,54 +5308,54 @@ namespace Roblox
 		public bool TouchEnabled { get; }
 		public CFrame UserHeadCFrame { get; }
 		public bool VREnabled { get; }
-		public bool GamepadSupports(Enum.UserInputType gamepadNum, Enum.KeyCode gamepadKeyCode);
+		public bool GamepadSupports(Enum.UserInputType.Type gamepadNum, Enum.KeyCode.Type gamepadKeyCode);
 		public object[] GetConnectedGamepads();
 		public InputObject GetDeviceAcceleration();
 		public InputObject GetDeviceGravity();
 		public object[] GetDeviceRotation();
 		public TextBox GetFocusedTextBox();
-		public bool GetGamepadConnected(Enum.UserInputType gamepadNum);
-		public object[] GetGamepadState(Enum.UserInputType gamepadNum);
-		public string GetImageForKeyCode(Enum.KeyCode keyCode);
+		public bool GetGamepadConnected(Enum.UserInputType.Type gamepadNum);
+		public object[] GetGamepadState(Enum.UserInputType.Type gamepadNum);
+		public string GetImageForKeyCode(Enum.KeyCode.Type keyCode);
 		public object[] GetKeysPressed();
-		public Enum.UserInputType GetLastInputType();
+		public Enum.UserInputType.Type GetLastInputType();
 		public object[] GetMouseButtonsPressed();
 		public Vector2 GetMouseDelta();
 		public Vector2 GetMouseLocation();
 		public object[] GetNavigationGamepads();
-		public string GetStringForKeyCode(Enum.KeyCode keyCode);
-		public object[] GetSupportedGamepadKeyCodes(Enum.UserInputType gamepadNum);
-		public CFrame GetUserCFrame(Enum.UserCFrame type);
-		public bool IsGamepadButtonDown(Enum.UserInputType gamepadNum, Enum.KeyCode gamepadKeyCode);
-		public bool IsKeyDown(Enum.KeyCode keyCode);
-		public bool IsMouseButtonPressed(Enum.UserInputType mouseButton);
-		public bool IsNavigationGamepad(Enum.UserInputType gamepadEnum);
+		public string GetStringForKeyCode(Enum.KeyCode.Type keyCode);
+		public object[] GetSupportedGamepadKeyCodes(Enum.UserInputType.Type gamepadNum);
+		public CFrame GetUserCFrame(Enum.UserCFrame.Type type);
+		public bool IsGamepadButtonDown(Enum.UserInputType.Type gamepadNum, Enum.KeyCode.Type gamepadKeyCode);
+		public bool IsKeyDown(Enum.KeyCode.Type keyCode);
+		public bool IsMouseButtonPressed(Enum.UserInputType.Type mouseButton);
+		public bool IsNavigationGamepad(Enum.UserInputType.Type gamepadEnum);
 		public void RecenterUserHeadCFrame();
-		public void SetNavigationGamepad(Enum.UserInputType gamepadEnum, bool enabled);
+		public void SetNavigationGamepad(Enum.UserInputType.Type gamepadEnum, bool enabled);
 		public ScriptSignal<InputObject> DeviceAccelerationChanged { get; }
 		public ScriptSignal<InputObject> DeviceGravityChanged { get; }
 		public ScriptSignal<InputObject, CFrame> DeviceRotationChanged { get; }
-		public ScriptSignal<Enum.UserInputType> GamepadConnected { get; }
-		public ScriptSignal<Enum.UserInputType> GamepadDisconnected { get; }
+		public ScriptSignal<Enum.UserInputType.Type> GamepadConnected { get; }
+		public ScriptSignal<Enum.UserInputType.Type> GamepadDisconnected { get; }
 		public ScriptSignal<InputObject, bool> InputBegan { get; }
 		public ScriptSignal<InputObject, bool> InputChanged { get; }
 		public ScriptSignal<InputObject, bool> InputEnded { get; }
 		public ScriptSignal JumpRequest { get; }
-		public ScriptSignal<Enum.UserInputType> LastInputTypeChanged { get; }
+		public ScriptSignal<Enum.UserInputType.Type> LastInputTypeChanged { get; }
 		public ScriptSignal<float, Vector2, float, bool> PointerAction { get; }
 		public ScriptSignal<TextBox> TextBoxFocusReleased { get; }
 		public ScriptSignal<TextBox> TextBoxFocused { get; }
 		public ScriptSignal<InputObject, bool> TouchEnded { get; }
-		public ScriptSignal<object[], Enum.UserInputState, bool> TouchLongPress { get; }
+		public ScriptSignal<object[], Enum.UserInputState.Type, bool> TouchLongPress { get; }
 		public ScriptSignal<InputObject, bool> TouchMoved { get; }
-		public ScriptSignal<object[], Vector2, Vector2, Enum.UserInputState, bool> TouchPan { get; }
-		public ScriptSignal<object[], float, float, Enum.UserInputState, bool> TouchPinch { get; }
-		public ScriptSignal<object[], float, float, Enum.UserInputState, bool> TouchRotate { get; }
+		public ScriptSignal<object[], Vector2, Vector2, Enum.UserInputState.Type, bool> TouchPan { get; }
+		public ScriptSignal<object[], float, float, Enum.UserInputState.Type, bool> TouchPinch { get; }
+		public ScriptSignal<object[], float, float, Enum.UserInputState.Type, bool> TouchRotate { get; }
 		public ScriptSignal<InputObject, bool> TouchStarted { get; }
-		public ScriptSignal<Enum.SwipeDirection, int, bool> TouchSwipe { get; }
+		public ScriptSignal<Enum.SwipeDirection.Type, int, bool> TouchSwipe { get; }
 		public ScriptSignal<object[], bool> TouchTap { get; }
 		public ScriptSignal<Vector2, bool> TouchTapInWorld { get; }
-		public ScriptSignal<Enum.UserCFrame, CFrame> UserCFrameChanged { get; }
+		public ScriptSignal<Enum.UserCFrame.Type, CFrame> UserCFrameChanged { get; }
 		public ScriptSignal WindowFocusReleased { get; }
 		public ScriptSignal WindowFocused { get; }
 	}
@@ -5367,22 +5367,22 @@ namespace Roblox
 	
 	public interface VRService : IServiceInstance
 	{
-		public Enum.VRScaling AutomaticScaling { get; set; }
+		public Enum.VRScaling.Type AutomaticScaling { get; set; }
 		public bool AvatarGestures { get; set; }
 		public bool FadeOutViewOnCollision { get; set; }
-		public Enum.UserCFrame GuiInputUserCFrame { get; set; }
+		public Enum.UserCFrame.Type GuiInputUserCFrame { get; set; }
 		public bool ThirdPersonFollowCamEnabled { get; }
 		public bool VREnabled { get; }
-		public Enum.VRTouchpadMode GetTouchpadMode(Enum.VRTouchpad pad);
-		public CFrame GetUserCFrame(Enum.UserCFrame type);
-		public bool GetUserCFrameEnabled(Enum.UserCFrame type);
+		public Enum.VRTouchpadMode.Type GetTouchpadMode(Enum.VRTouchpad.Type pad);
+		public CFrame GetUserCFrame(Enum.UserCFrame.Type type);
+		public bool GetUserCFrameEnabled(Enum.UserCFrame.Type type);
 		public void RecenterUserHeadCFrame();
-		public void RequestNavigation(CFrame cframe, Enum.UserCFrame inputUserCFrame);
-		public void SetTouchpadMode(Enum.VRTouchpad pad, Enum.VRTouchpadMode mode);
-		public ScriptSignal<CFrame, Enum.UserCFrame> NavigationRequested { get; }
-		public ScriptSignal<Enum.VRTouchpad, Enum.VRTouchpadMode> TouchpadModeChanged { get; }
-		public ScriptSignal<Enum.UserCFrame, CFrame> UserCFrameChanged { get; }
-		public ScriptSignal<Enum.UserCFrame, bool> UserCFrameEnabled { get; }
+		public void RequestNavigation(CFrame cframe, Enum.UserCFrame.Type inputUserCFrame);
+		public void SetTouchpadMode(Enum.VRTouchpad.Type pad, Enum.VRTouchpadMode.Type mode);
+		public ScriptSignal<CFrame, Enum.UserCFrame.Type> NavigationRequested { get; }
+		public ScriptSignal<Enum.VRTouchpad.Type, Enum.VRTouchpadMode.Type> TouchpadModeChanged { get; }
+		public ScriptSignal<Enum.UserCFrame.Type, CFrame> UserCFrameChanged { get; }
+		public ScriptSignal<Enum.UserCFrame.Type, bool> UserCFrameEnabled { get; }
 	}
 	
 	public interface VRStatusService : IServiceInstance
@@ -5485,7 +5485,7 @@ namespace Roblox
 	{
 		public bool Active { get; set; }
 		public string CameraId { get; set; }
-		public Enum.VideoDeviceCaptureQuality CaptureQuality { get; set; }
+		public Enum.VideoDeviceCaptureQuality.Type CaptureQuality { get; set; }
 		public bool IsReady { get; }
 	}
 	
@@ -5528,7 +5528,7 @@ namespace Roblox
 		public bool SubscribePause(long userId, bool paused);
 		public bool SubscribePauseAll(bool paused);
 		public bool IsVoiceEnabledForUserIdAsync(long userId);
-		public ScriptSignal<Enum.VoiceChatState, Enum.VoiceChatState> StateChanged { get; }
+		public ScriptSignal<Enum.VoiceChatState.Type, Enum.VoiceChatState.Type> StateChanged { get; }
 	}
 	
 	public interface VoiceChatService : IServiceInstance
