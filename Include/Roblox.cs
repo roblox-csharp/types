@@ -240,11 +240,17 @@
         public Vector3 Orientation { get; set; }
     }
 
-    public partial interface DataModel : Instance
+    public partial interface DataModel : ServiceProvider
     {
         public Workspace Workspace { get; }
         public Lighting Lighting { get; }
         public T GetService<T>() where T : IServiceInstance;
+    }
+
+    public partial interface ServiceProvider
+    {
+        public ScriptSignal<IServiceInstance> ServiceAdded { get; }
+        public ScriptSignal<IServiceInstance> ServiceRemoving { get; }
     }
 
     public interface IServiceInstance : Instance
@@ -262,7 +268,12 @@
             return default!;
         }
 
-        public Instance Clone();
+        public Instance? FindFirstAncestor(string name);
+        public Instance? FindFirstChild(string name, bool? recursive = null);
+        public Instance? FindFirstDescendant(string name);
+        public T? FindFirstAncestor<T>(string name) where T : Instance;
+        public T? FindFirstChild<T>(string name, bool? recursive = null) where T : Instance;
+        public T? FindFirstDescendant<T>(string name) where T : Instance;
         public bool IsA<T>() where T : Instance;
         public bool IsAncestorOf(Instance descendant);
         public bool IsDescendantOf(Instance ancestor);
@@ -276,7 +287,8 @@
         public string[] GetTags();
         public Instance WaitForChild(string name);
         public Instance? WaitForChild(string name, float timeout);
-        public Instance clone();
+        public T WaitForChild<T>(string name) where T : Instance;
+        public T? WaitForChild<T>(string name, float timeout) where T : Instance;
         public bool isDescendantOf(Instance ancestor);
         public ScriptSignal<Instance, Instance> AncestryChanged { get; }
         public ScriptSignal<string> AttributeChanged { get; }
@@ -286,7 +298,6 @@
         public ScriptSignal<Instance> DescendantAdded { get; }
         public ScriptSignal<Instance> DescendantRemoving { get; }
         public ScriptSignal Destroying { get; }
-        public ScriptSignal<Instance> childAdded { get; }
     }
 
     /// <summary>The <see cref="EnumItem"/> data type represents an individual item in a Roblox enum.</summary>
