@@ -3,21609 +3,8366 @@
 
 namespace Roblox.Enum
 {
-	public struct AccessModifierType
+	public static class AccessModifierType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Allow : EnumItem
-		{
-			string EnumItem.Name => "Allow";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AccessModifierType";
-		}
+		public static Type Allow { get; } = null!;
+		public static Type Deny { get; } = null!;
 		
-		public struct Deny : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Deny";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AccessModifierType";
+			return null!;
 		}
 	}
 	
-	public struct AccessoryType
+	public static class AccessoryType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Hat { get; } = null!;
+		public static Type Hair { get; } = null!;
+		public static Type Face { get; } = null!;
+		public static Type Neck { get; } = null!;
+		public static Type Shoulder { get; } = null!;
+		public static Type Front { get; } = null!;
+		public static Type Back { get; } = null!;
+		public static Type Waist { get; } = null!;
+		public static Type TShirt { get; } = null!;
+		public static Type Shirt { get; } = null!;
+		public static Type Pants { get; } = null!;
+		public static Type Jacket { get; } = null!;
+		public static Type Sweater { get; } = null!;
+		public static Type Shorts { get; } = null!;
+		public static Type LeftShoe { get; } = null!;
+		public static Type RightShoe { get; } = null!;
+		public static Type DressSkirt { get; } = null!;
+		public static Type Eyebrow { get; } = null!;
+		public static Type Eyelash { get; } = null!;
 		
-		public struct Hat : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hat";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct Hair : EnumItem
+	}
+	
+	public static class ActionType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Hair";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct Face : EnumItem
-		{
-			string EnumItem.Name => "Face";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type Nothing { get; } = null!;
+		public static Type Pause { get; } = null!;
+		public static Type Lose { get; } = null!;
+		public static Type Draw { get; } = null!;
+		public static Type Win { get; } = null!;
 		
-		public struct Neck : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Neck";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct Shoulder : EnumItem
+	}
+	
+	public static class ActuatorRelativeTo
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shoulder";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct Front : EnumItem
-		{
-			string EnumItem.Name => "Front";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type Attachment0 { get; } = null!;
+		public static Type Attachment1 { get; } = null!;
+		public static Type World { get; } = null!;
 		
-		public struct Back : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Back";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct Waist : EnumItem
+	}
+	
+	public static class ActuatorType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Waist";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct TShirt : EnumItem
-		{
-			string EnumItem.Name => "TShirt";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type None { get; } = null!;
+		public static Type Motor { get; } = null!;
+		public static Type Servo { get; } = null!;
 		
-		public struct Shirt : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Shirt";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct Pants : EnumItem
+	}
+	
+	public static class AdEventType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Pants";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct Jacket : EnumItem
-		{
-			string EnumItem.Name => "Jacket";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type RewardedAdLoaded { get; } = null!;
+		public static Type RewardedAdGrant { get; } = null!;
+		public static Type RewardedAdUnloaded { get; } = null!;
+		public static Type VideoLoaded { get; } = null!;
+		public static Type VideoRemoved { get; } = null!;
+		public static Type UserCompletedVideo { get; } = null!;
 		
-		public struct Sweater : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Sweater";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct Shorts : EnumItem
+	}
+	
+	public static class AdShape
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shorts";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct LeftShoe : EnumItem
-		{
-			string EnumItem.Name => "LeftShoe";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type HorizontalRectangle { get; } = null!;
 		
-		public struct RightShoe : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightShoe";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
-		
-		public struct DressSkirt : EnumItem
+	}
+	
+	public static class AdTeleportMethod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "DressSkirt";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "AccessoryType";
 		}
 		
-		public struct Eyebrow : EnumItem
-		{
-			string EnumItem.Name => "Eyebrow";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "AccessoryType";
-		}
+		public static Type Undefined { get; } = null!;
+		public static Type PortalForward { get; } = null!;
+		public static Type InGameMenuBackButton { get; } = null!;
+		public static Type UIBackButton { get; } = null!;
 		
-		public struct Eyelash : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Eyelash";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "AccessoryType";
+			return null!;
 		}
 	}
 	
-	public struct ActionType
+	public static class AdUIEventType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Nothing : EnumItem
-		{
-			string EnumItem.Name => "Nothing";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ActionType";
-		}
+		public static Type AdLabelClicked { get; } = null!;
+		public static Type VolumeButtonClicked { get; } = null!;
+		public static Type FullscreenButtonClicked { get; } = null!;
+		public static Type PlayButtonClicked { get; } = null!;
+		public static Type PauseButtonClicked { get; } = null!;
+		public static Type CloseButtonClicked { get; } = null!;
 		
-		public struct Pause : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Pause";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ActionType";
+			return null!;
 		}
-		
-		public struct Lose : EnumItem
+	}
+	
+	public static class AdUIType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Lose";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ActionType";
 		}
 		
-		public struct Draw : EnumItem
-		{
-			string EnumItem.Name => "Draw";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ActionType";
-		}
+		public static Type None { get; } = null!;
+		public static Type Image { get; } = null!;
+		public static Type Video { get; } = null!;
 		
-		public struct Win : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Win";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ActionType";
+			return null!;
 		}
 	}
 	
-	public struct ActuatorRelativeTo
+	public static class AdUnitStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Attachment0 : EnumItem
+		public static Type Inactive { get; } = null!;
+		public static Type Active { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Attachment0";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ActuatorRelativeTo";
+			return null!;
 		}
-		
-		public struct Attachment1 : EnumItem
+	}
+	
+	public static class AdornCullingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Attachment1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ActuatorRelativeTo";
 		}
+		
+		public static Type Automatic { get; } = null!;
+		public static Type Never { get; } = null!;
 		
-		public struct World : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "World";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ActuatorRelativeTo";
+			return null!;
 		}
 	}
 	
-	public struct ActuatorType
+	public static class AlignType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
+		public static Type PrimaryAxisParallel { get; } = null!;
+		public static Type PrimaryAxisPerpendicular { get; } = null!;
+		public static Type PrimaryAxisLookAt { get; } = null!;
+		public static Type AllAxes { get; } = null!;
+		public static Type Parallel { get; } = null!;
+		public static Type Perpendicular { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ActuatorType";
+			return null!;
 		}
-		
-		public struct Motor : EnumItem
+	}
+	
+	public static class AlphaMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Motor";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ActuatorType";
 		}
+		
+		public static Type Overlay { get; } = null!;
+		public static Type Transparency { get; } = null!;
 		
-		public struct Servo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Servo";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ActuatorType";
+			return null!;
 		}
 	}
 	
-	public struct AdEventType
+	public static class AnalyticsCustomFieldKeys
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct RewardedAdLoaded : EnumItem
-		{
-			string EnumItem.Name => "RewardedAdLoaded";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AdEventType";
-		}
+		public static Type CustomField01 { get; } = null!;
+		public static Type CustomField02 { get; } = null!;
+		public static Type CustomField03 { get; } = null!;
 		
-		public struct RewardedAdGrant : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RewardedAdGrant";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AdEventType";
+			return null!;
 		}
-		
-		public struct RewardedAdUnloaded : EnumItem
+	}
+	
+	public static class AnalyticsEconomyAction
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RewardedAdUnloaded";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AdEventType";
 		}
 		
-		public struct VideoLoaded : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Acquire { get; } = null!;
+		public static Type Spend { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "VideoLoaded";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdEventType";
+			return null!;
 		}
-		
-		public struct VideoRemoved : EnumItem
+	}
+	
+	public static class AnalyticsEconomyFlowType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "VideoRemoved";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdEventType";
 		}
+		
+		public static Type Sink { get; } = null!;
+		public static Type Source { get; } = null!;
 		
-		public struct UserCompletedVideo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UserCompletedVideo";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AdEventType";
+			return null!;
 		}
 	}
 	
-	public struct AdShape
+	public static class AnalyticsEconomyTransactionType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct HorizontalRectangle : EnumItem
+		public static Type IAP { get; } = null!;
+		public static Type Shop { get; } = null!;
+		public static Type Gameplay { get; } = null!;
+		public static Type ContextualPurchase { get; } = null!;
+		public static Type TimedReward { get; } = null!;
+		public static Type Onboarding { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HorizontalRectangle";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdShape";
+			return null!;
 		}
 	}
 	
-	public struct AdTeleportMethod
+	public static class AnalyticsLogLevel
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Undefined : EnumItem
-		{
-			string EnumItem.Name => "Undefined";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdTeleportMethod";
-		}
+		public static Type Trace { get; } = null!;
+		public static Type Debug { get; } = null!;
+		public static Type Information { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Error { get; } = null!;
+		public static Type Fatal { get; } = null!;
 		
-		public struct PortalForward : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PortalForward";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdTeleportMethod";
+			return null!;
 		}
-		
-		public struct InGameMenuBackButton : EnumItem
+	}
+	
+	public static class AnalyticsProgressionStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "InGameMenuBackButton";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AdTeleportMethod";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Begin { get; } = null!;
+		public static Type Complete { get; } = null!;
+		public static Type Abandon { get; } = null!;
+		public static Type Fail { get; } = null!;
 		
-		public struct UIBackButton : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UIBackButton";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AdTeleportMethod";
+			return null!;
 		}
 	}
 	
-	public struct AdUIEventType
+	public static class AnalyticsProgressionType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct AdLabelClicked : EnumItem
-		{
-			string EnumItem.Name => "AdLabelClicked";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdUIEventType";
-		}
+		public static Type Custom { get; } = null!;
+		public static Type Start { get; } = null!;
+		public static Type Fail { get; } = null!;
+		public static Type Complete { get; } = null!;
 		
-		public struct VolumeButtonClicked : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "VolumeButtonClicked";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdUIEventType";
+			return null!;
 		}
-		
-		public struct FullscreenButtonClicked : EnumItem
+	}
+	
+	public static class AnimationClipFromVideoStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FullscreenButtonClicked";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AdUIEventType";
 		}
 		
-		public struct PlayButtonClicked : EnumItem
+		public static Type Initializing { get; } = null!;
+		public static Type Pending { get; } = null!;
+		public static Type Processing { get; } = null!;
+		public static Type ErrorGeneric { get; } = null!;
+		public static Type Success { get; } = null!;
+		public static Type ErrorVideoTooLong { get; } = null!;
+		public static Type ErrorNoPersonDetected { get; } = null!;
+		public static Type ErrorVideoUnstable { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type Cancelled { get; } = null!;
+		public static Type ErrorMultiplePeople { get; } = null!;
+		public static Type ErrorUploadingVideo { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PlayButtonClicked";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AdUIEventType";
+			return null!;
 		}
-		
-		public struct PauseButtonClicked : EnumItem
+	}
+	
+	public static class AnimationPriority
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PauseButtonClicked";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AdUIEventType";
 		}
+		
+		public static Type Core { get; } = null!;
+		public static Type Idle { get; } = null!;
+		public static Type Movement { get; } = null!;
+		public static Type Action { get; } = null!;
+		public static Type Action2 { get; } = null!;
+		public static Type Action3 { get; } = null!;
+		public static Type Action4 { get; } = null!;
 		
-		public struct CloseButtonClicked : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CloseButtonClicked";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AdUIEventType";
+			return null!;
 		}
 	}
 	
-	public struct AdUIType
+	public static class AnimatorRetargetingMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdUIType";
+			return null!;
 		}
-		
-		public struct Image : EnumItem
+	}
+	
+	public static class AppShellActionType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Image";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdUIType";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type OpenApp { get; } = null!;
+		public static Type TapChatTab { get; } = null!;
+		public static Type TapConversationEntry { get; } = null!;
+		public static Type TapAvatarTab { get; } = null!;
+		public static Type ReadConversation { get; } = null!;
+		public static Type TapGamePageTab { get; } = null!;
+		public static Type TapHomePageTab { get; } = null!;
+		public static Type GamePageLoaded { get; } = null!;
+		public static Type HomePageLoaded { get; } = null!;
+		public static Type AvatarEditorPageLoaded { get; } = null!;
 		
-		public struct Video : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Video";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AdUIType";
+			return null!;
 		}
 	}
 	
-	public struct AdUnitStatus
+	public static class AppShellFeature
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Inactive : EnumItem
-		{
-			string EnumItem.Name => "Inactive";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdUnitStatus";
-		}
+		public static Type None { get; } = null!;
+		public static Type Chat { get; } = null!;
+		public static Type AvatarEditor { get; } = null!;
+		public static Type GamePage { get; } = null!;
+		public static Type HomePage { get; } = null!;
+		public static Type More { get; } = null!;
+		public static Type Landing { get; } = null!;
 		
-		public struct Active : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Active";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdUnitStatus";
+			return null!;
 		}
 	}
 	
-	public struct AdornCullingMode
+	public static class AppUpdateStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AdornCullingMode";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type NotSupported { get; } = null!;
+		public static Type Failed { get; } = null!;
+		public static Type NotAvailable { get; } = null!;
+		public static Type Available { get; } = null!;
 		
-		public struct Never : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Never";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AdornCullingMode";
+			return null!;
 		}
 	}
 	
-	public struct AlignType
+	public static class ApplyStrokeMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct PrimaryAxisParallel : EnumItem
-		{
-			string EnumItem.Name => "PrimaryAxisParallel";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AlignType";
-		}
+		public static Type Contextual { get; } = null!;
+		public static Type Border { get; } = null!;
 		
-		public struct PrimaryAxisPerpendicular : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PrimaryAxisPerpendicular";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AlignType";
+			return null!;
 		}
-		
-		public struct PrimaryAxisLookAt : EnumItem
+	}
+	
+	public static class AspectType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PrimaryAxisLookAt";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AlignType";
 		}
 		
-		public struct AllAxes : EnumItem
+		public static Type FitWithinMaxSize { get; } = null!;
+		public static Type ScaleWithParentSize { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AllAxes";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AlignType";
+			return null!;
 		}
-		
-		public struct Parallel : EnumItem
+	}
+	
+	public static class AssetCreatorType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Parallel";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AlignType";
 		}
+		
+		public static Type User { get; } = null!;
+		public static Type Group { get; } = null!;
 		
-		public struct Perpendicular : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Perpendicular";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AlignType";
+			return null!;
 		}
 	}
 	
-	public struct AlphaMode
+	public static class AssetFetchStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Overlay : EnumItem
-		{
-			string EnumItem.Name => "Overlay";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AlphaMode";
-		}
+		public static Type Success { get; } = null!;
+		public static Type Failure { get; } = null!;
+		public static Type None { get; } = null!;
+		public static Type Loading { get; } = null!;
+		public static Type TimedOut { get; } = null!;
 		
-		public struct Transparency : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Transparency";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AlphaMode";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsCustomFieldKeys
+	public static class AssetType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct CustomField01 : EnumItem
+		public static Type Image { get; } = null!;
+		public static Type TShirt { get; } = null!;
+		public static Type Audio { get; } = null!;
+		public static Type Mesh { get; } = null!;
+		public static Type Lua { get; } = null!;
+		public static Type Hat { get; } = null!;
+		public static Type Place { get; } = null!;
+		public static Type Model { get; } = null!;
+		public static Type Shirt { get; } = null!;
+		public static Type Pants { get; } = null!;
+		public static Type Decal { get; } = null!;
+		public static Type Head { get; } = null!;
+		public static Type Face { get; } = null!;
+		public static Type Gear { get; } = null!;
+		public static Type Badge { get; } = null!;
+		public static Type Animation { get; } = null!;
+		public static Type Torso { get; } = null!;
+		public static Type RightArm { get; } = null!;
+		public static Type LeftArm { get; } = null!;
+		public static Type LeftLeg { get; } = null!;
+		public static Type RightLeg { get; } = null!;
+		public static Type Package { get; } = null!;
+		public static Type GamePass { get; } = null!;
+		public static Type Plugin { get; } = null!;
+		public static Type MeshPart { get; } = null!;
+		public static Type HairAccessory { get; } = null!;
+		public static Type FaceAccessory { get; } = null!;
+		public static Type NeckAccessory { get; } = null!;
+		public static Type ShoulderAccessory { get; } = null!;
+		public static Type FrontAccessory { get; } = null!;
+		public static Type BackAccessory { get; } = null!;
+		public static Type WaistAccessory { get; } = null!;
+		public static Type ClimbAnimation { get; } = null!;
+		public static Type DeathAnimation { get; } = null!;
+		public static Type FallAnimation { get; } = null!;
+		public static Type IdleAnimation { get; } = null!;
+		public static Type JumpAnimation { get; } = null!;
+		public static Type RunAnimation { get; } = null!;
+		public static Type SwimAnimation { get; } = null!;
+		public static Type WalkAnimation { get; } = null!;
+		public static Type PoseAnimation { get; } = null!;
+		public static Type EarAccessory { get; } = null!;
+		public static Type EyeAccessory { get; } = null!;
+		public static Type EmoteAnimation { get; } = null!;
+		public static Type Video { get; } = null!;
+		public static Type TShirtAccessory { get; } = null!;
+		public static Type ShirtAccessory { get; } = null!;
+		public static Type PantsAccessory { get; } = null!;
+		public static Type JacketAccessory { get; } = null!;
+		public static Type SweaterAccessory { get; } = null!;
+		public static Type ShortsAccessory { get; } = null!;
+		public static Type LeftShoeAccessory { get; } = null!;
+		public static Type RightShoeAccessory { get; } = null!;
+		public static Type DressSkirtAccessory { get; } = null!;
+		public static Type FontFamily { get; } = null!;
+		public static Type EyebrowAccessory { get; } = null!;
+		public static Type EyelashAccessory { get; } = null!;
+		public static Type MoodAnimation { get; } = null!;
+		public static Type DynamicHead { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CustomField01";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsCustomFieldKeys";
+			return null!;
 		}
-		
-		public struct CustomField02 : EnumItem
+	}
+	
+	public static class AssetTypeVerification
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "CustomField02";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsCustomFieldKeys";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type ClientOnly { get; } = null!;
+		public static Type Always { get; } = null!;
 		
-		public struct CustomField03 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CustomField03";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsCustomFieldKeys";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsEconomyAction
+	public static class AudioApiRollout
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
+		public static Type Disabled { get; } = null!;
+		public static Type Automatic { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsEconomyAction";
+			return null!;
 		}
-		
-		public struct Acquire : EnumItem
+	}
+	
+	public static class AudioFilterType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Acquire";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsEconomyAction";
 		}
+		
+		public static Type Peak { get; } = null!;
+		public static Type LowShelf { get; } = null!;
+		public static Type HighShelf { get; } = null!;
+		public static Type Lowpass12dB { get; } = null!;
+		public static Type Lowpass24dB { get; } = null!;
+		public static Type Lowpass48dB { get; } = null!;
+		public static Type Highpass12dB { get; } = null!;
+		public static Type Highpass24dB { get; } = null!;
+		public static Type Highpass48dB { get; } = null!;
+		public static Type Bandpass { get; } = null!;
+		public static Type Notch { get; } = null!;
 		
-		public struct Spend : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Spend";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsEconomyAction";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsEconomyFlowType
+	public static class AudioSubType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Sink : EnumItem
-		{
-			string EnumItem.Name => "Sink";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsEconomyFlowType";
-		}
+		public static Type Music { get; } = null!;
+		public static Type SoundEffect { get; } = null!;
 		
-		public struct Source : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Source";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsEconomyFlowType";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsEconomyTransactionType
+	public static class AudioWindowSize
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct IAP : EnumItem
-		{
-			string EnumItem.Name => "IAP";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
-		}
+		public static Type Small { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type Large { get; } = null!;
 		
-		public struct Shop : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Shop";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
+			return null!;
 		}
-		
-		public struct Gameplay : EnumItem
+	}
+	
+	public static class AutoIndentRule
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Gameplay";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
 		}
 		
-		public struct ContextualPurchase : EnumItem
+		public static Type Off { get; } = null!;
+		public static Type Absolute { get; } = null!;
+		public static Type Relative { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ContextualPurchase";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
+			return null!;
 		}
-		
-		public struct TimedReward : EnumItem
+	}
+	
+	public static class AutomaticSize
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TimedReward";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type X { get; } = null!;
+		public static Type Y { get; } = null!;
+		public static Type XY { get; } = null!;
 		
-		public struct Onboarding : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Onboarding";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AnalyticsEconomyTransactionType";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsLogLevel
+	public static class AvatarAssetType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Trace : EnumItem
-		{
-			string EnumItem.Name => "Trace";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
-		}
+		public static Type TShirt { get; } = null!;
+		public static Type Hat { get; } = null!;
+		public static Type Shirt { get; } = null!;
+		public static Type Pants { get; } = null!;
+		public static Type Head { get; } = null!;
+		public static Type Face { get; } = null!;
+		public static Type Gear { get; } = null!;
+		public static Type Torso { get; } = null!;
+		public static Type RightArm { get; } = null!;
+		public static Type LeftArm { get; } = null!;
+		public static Type LeftLeg { get; } = null!;
+		public static Type RightLeg { get; } = null!;
+		public static Type HairAccessory { get; } = null!;
+		public static Type FaceAccessory { get; } = null!;
+		public static Type NeckAccessory { get; } = null!;
+		public static Type ShoulderAccessory { get; } = null!;
+		public static Type FrontAccessory { get; } = null!;
+		public static Type BackAccessory { get; } = null!;
+		public static Type WaistAccessory { get; } = null!;
+		public static Type ClimbAnimation { get; } = null!;
+		public static Type FallAnimation { get; } = null!;
+		public static Type IdleAnimation { get; } = null!;
+		public static Type JumpAnimation { get; } = null!;
+		public static Type RunAnimation { get; } = null!;
+		public static Type SwimAnimation { get; } = null!;
+		public static Type WalkAnimation { get; } = null!;
+		public static Type MoodAnimation { get; } = null!;
+		public static Type EmoteAnimation { get; } = null!;
+		public static Type TShirtAccessory { get; } = null!;
+		public static Type ShirtAccessory { get; } = null!;
+		public static Type PantsAccessory { get; } = null!;
+		public static Type JacketAccessory { get; } = null!;
+		public static Type SweaterAccessory { get; } = null!;
+		public static Type ShortsAccessory { get; } = null!;
+		public static Type LeftShoeAccessory { get; } = null!;
+		public static Type RightShoeAccessory { get; } = null!;
+		public static Type DressSkirtAccessory { get; } = null!;
+		public static Type EyebrowAccessory { get; } = null!;
+		public static Type EyelashAccessory { get; } = null!;
+		public static Type DynamicHead { get; } = null!;
 		
-		public struct Debug : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Debug";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
+			return null!;
 		}
-		
-		public struct Information : EnumItem
+	}
+	
+	public static class AvatarChatServiceFeature
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Information";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type UniverseAudio { get; } = null!;
+		public static Type UniverseVideo { get; } = null!;
+		public static Type PlaceAudio { get; } = null!;
+		public static Type PlaceVideo { get; } = null!;
+		public static Type UserAudioEligible { get; } = null!;
+		public static Type UserAudio { get; } = null!;
+		public static Type UserVideoEligible { get; } = null!;
+		public static Type UserVideo { get; } = null!;
+		public static Type UserBanned { get; } = null!;
+		public static Type UserVerifiedForVoice { get; } = null!;
 		
-		public struct Warning : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
+			return null!;
 		}
-		
-		public struct Error : EnumItem
+	}
+	
+	public static class AvatarContextMenuOption
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
 		}
 		
-		public struct Fatal : EnumItem
+		public static Type Friend { get; } = null!;
+		public static Type Chat { get; } = null!;
+		public static Type Emote { get; } = null!;
+		public static Type InspectMenu { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Fatal";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AnalyticsLogLevel";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsProgressionStatus
+	public static class AvatarGenerationError
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsProgressionStatus";
-		}
+		public static Type None { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type DownloadFailed { get; } = null!;
+		public static Type Canceled { get; } = null!;
+		public static Type Offensive { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct Begin : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Begin";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsProgressionStatus";
+			return null!;
 		}
-		
-		public struct Complete : EnumItem
+	}
+	
+	public static class AvatarGenerationJobStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Complete";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsProgressionStatus";
 		}
 		
-		public struct Abandon : EnumItem
-		{
-			string EnumItem.Name => "Abandon";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AnalyticsProgressionStatus";
-		}
+		public static Type NotStarted { get; } = null!;
+		public static Type InProgress { get; } = null!;
+		public static Type Completed { get; } = null!;
+		public static Type Failed { get; } = null!;
 		
-		public struct Fail : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Fail";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AnalyticsProgressionStatus";
+			return null!;
 		}
 	}
 	
-	public struct AnalyticsProgressionType
+	public static class AvatarItemType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnalyticsProgressionType";
-		}
+		public static Type Asset { get; } = null!;
+		public static Type Bundle { get; } = null!;
 		
-		public struct Start : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Start";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnalyticsProgressionType";
+			return null!;
 		}
-		
-		public struct Fail : EnumItem
+	}
+	
+	public static class AvatarJointUpgrade
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Fail";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnalyticsProgressionType";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		public static Type Disabled { get; } = null!;
 		
-		public struct Complete : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Complete";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AnalyticsProgressionType";
+			return null!;
 		}
 	}
 	
-	public struct AnimationClipFromVideoStatus
+	public static class AvatarPromptResult
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Initializing : EnumItem
-		{
-			string EnumItem.Name => "Initializing";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
-		}
+		public static Type Success { get; } = null!;
+		public static Type PermissionDenied { get; } = null!;
+		public static Type Failed { get; } = null!;
 		
-		public struct Pending : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Pending";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
+			return null!;
 		}
-		
-		public struct Processing : EnumItem
+	}
+	
+	public static class AvatarThumbnailCustomizationType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Processing";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
 		}
 		
-		public struct ErrorGeneric : EnumItem
-		{
-			string EnumItem.Name => "ErrorGeneric";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
-		}
+		public static Type Closeup { get; } = null!;
+		public static Type FullBody { get; } = null!;
 		
-		public struct Success : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
+			return null!;
 		}
-		
-		public struct ErrorVideoTooLong : EnumItem
+	}
+	
+	public static class AvatarUnificationMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ErrorVideoTooLong";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
 		}
 		
-		public struct ErrorNoPersonDetected : EnumItem
-		{
-			string EnumItem.Name => "ErrorNoPersonDetected";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct ErrorVideoUnstable : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ErrorVideoUnstable";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
+			return null!;
 		}
-		
-		public struct Timeout : EnumItem
+	}
+	
+	public static class Axis
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
 		}
 		
-		public struct Cancelled : EnumItem
+		public static Type X { get; } = null!;
+		public static Type Y { get; } = null!;
+		public static Type Z { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Cancelled";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
+			return null!;
 		}
-		
-		public struct ErrorMultiplePeople : EnumItem
+	}
+	
+	public static class BinType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ErrorMultiplePeople";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
 		}
+		
+		public static Type Script { get; } = null!;
+		public static Type GameTool { get; } = null!;
+		public static Type Grab { get; } = null!;
+		public static Type Clone { get; } = null!;
+		public static Type Hammer { get; } = null!;
 		
-		public struct ErrorUploadingVideo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ErrorUploadingVideo";
-			uint EnumItem.Value => 2001;
-			string EnumItem.EnumType => "AnimationClipFromVideoStatus";
+			return null!;
 		}
 	}
 	
-	public struct AnimationPriority
+	public static class BodyPart
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Core : EnumItem
-		{
-			string EnumItem.Name => "Core";
-			uint EnumItem.Value => 1000;
-			string EnumItem.EnumType => "AnimationPriority";
-		}
+		public static Type Head { get; } = null!;
+		public static Type Torso { get; } = null!;
+		public static Type LeftArm { get; } = null!;
+		public static Type RightArm { get; } = null!;
+		public static Type LeftLeg { get; } = null!;
+		public static Type RightLeg { get; } = null!;
 		
-		public struct Idle : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Idle";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnimationPriority";
+			return null!;
 		}
-		
-		public struct Movement : EnumItem
+	}
+	
+	public static class BodyPartR15
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Movement";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnimationPriority";
 		}
 		
-		public struct Action : EnumItem
-		{
-			string EnumItem.Name => "Action";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnimationPriority";
-		}
+		public static Type Head { get; } = null!;
+		public static Type UpperTorso { get; } = null!;
+		public static Type LowerTorso { get; } = null!;
+		public static Type LeftFoot { get; } = null!;
+		public static Type LeftLowerLeg { get; } = null!;
+		public static Type LeftUpperLeg { get; } = null!;
+		public static Type RightFoot { get; } = null!;
+		public static Type RightLowerLeg { get; } = null!;
+		public static Type RightUpperLeg { get; } = null!;
+		public static Type LeftHand { get; } = null!;
+		public static Type LeftLowerArm { get; } = null!;
+		public static Type LeftUpperArm { get; } = null!;
+		public static Type RightHand { get; } = null!;
+		public static Type RightLowerArm { get; } = null!;
+		public static Type RightUpperArm { get; } = null!;
+		public static Type RootPart { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct Action2 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Action2";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AnimationPriority";
+			return null!;
 		}
-		
-		public struct Action3 : EnumItem
+	}
+	
+	public static class BorderMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Action3";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AnimationPriority";
 		}
 		
-		public struct Action4 : EnumItem
+		public static Type Outline { get; } = null!;
+		public static Type Middle { get; } = null!;
+		public static Type Inset { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Action4";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AnimationPriority";
+			return null!;
 		}
 	}
 	
-	public struct AnimatorRetargetingMode
+	public static class BreakReason
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Other { get; } = null!;
+		public static Type Error { get; } = null!;
+		public static Type SpecialBreakpoint { get; } = null!;
+		public static Type UserBreakpoint { get; } = null!;
 		
-		public struct Default : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AnimatorRetargetingMode";
+			return null!;
 		}
-		
-		public struct Disabled : EnumItem
+	}
+	
+	public static class BreakpointRemoveReason
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AnimatorRetargetingMode";
 		}
 		
-		public struct Enabled : EnumItem
+		public static Type Requested { get; } = null!;
+		public static Type ScriptChanged { get; } = null!;
+		public static Type ScriptRemoved { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AnimatorRetargetingMode";
+			return null!;
 		}
 	}
 	
-	public struct AppShellActionType
+	public static class BulkMoveMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AppShellActionType";
-		}
+		public static Type FireAllEvents { get; } = null!;
+		public static Type FireCFrameChanged { get; } = null!;
 		
-		public struct OpenApp : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OpenApp";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AppShellActionType";
+			return null!;
 		}
-		
-		public struct TapChatTab : EnumItem
+	}
+	
+	public static class BundleType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TapChatTab";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AppShellActionType";
 		}
 		
-		public struct TapConversationEntry : EnumItem
-		{
-			string EnumItem.Name => "TapConversationEntry";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AppShellActionType";
-		}
+		public static Type BodyParts { get; } = null!;
+		public static Type Animations { get; } = null!;
+		public static Type Shoes { get; } = null!;
+		public static Type DynamicHead { get; } = null!;
+		public static Type DynamicHeadAvatar { get; } = null!;
 		
-		public struct TapAvatarTab : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TapAvatarTab";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AppShellActionType";
+			return null!;
 		}
-		
-		public struct ReadConversation : EnumItem
+	}
+	
+	public static class Button
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ReadConversation";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AppShellActionType";
 		}
 		
-		public struct TapGamePageTab : EnumItem
-		{
-			string EnumItem.Name => "TapGamePageTab";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "AppShellActionType";
-		}
+		public static Type Jump { get; } = null!;
+		public static Type Dismount { get; } = null!;
 		
-		public struct TapHomePageTab : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TapHomePageTab";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "AppShellActionType";
+			return null!;
 		}
-		
-		public struct GamePageLoaded : EnumItem
+	}
+	
+	public static class ButtonStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "GamePageLoaded";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AppShellActionType";
 		}
 		
-		public struct HomePageLoaded : EnumItem
-		{
-			string EnumItem.Name => "HomePageLoaded";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "AppShellActionType";
-		}
+		public static Type Custom { get; } = null!;
+		public static Type RobloxButtonDefault { get; } = null!;
+		public static Type RobloxButton { get; } = null!;
+		public static Type RobloxRoundButton { get; } = null!;
+		public static Type RobloxRoundDefaultButton { get; } = null!;
+		public static Type RobloxRoundDropdownButton { get; } = null!;
 		
-		public struct AvatarEditorPageLoaded : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AvatarEditorPageLoaded";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "AppShellActionType";
+			return null!;
 		}
 	}
 	
-	public struct AppShellFeature
+	public static class CSGAsyncDynamicCollision
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AppShellFeature";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Experimental { get; } = null!;
 		
-		public struct Chat : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Chat";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AppShellFeature";
+			return null!;
 		}
-		
-		public struct AvatarEditor : EnumItem
+	}
+	
+	public static class CageType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AvatarEditor";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AppShellFeature";
 		}
 		
-		public struct GamePage : EnumItem
-		{
-			string EnumItem.Name => "GamePage";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AppShellFeature";
-		}
+		public static Type Inner { get; } = null!;
+		public static Type Outer { get; } = null!;
 		
-		public struct HomePage : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HomePage";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AppShellFeature";
+			return null!;
 		}
-		
-		public struct More : EnumItem
+	}
+	
+	public static class CameraMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "More";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AppShellFeature";
 		}
+		
+		public static Type Classic { get; } = null!;
+		public static Type LockFirstPerson { get; } = null!;
 		
-		public struct Landing : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Landing";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "AppShellFeature";
+			return null!;
 		}
 	}
 	
-	public struct AppUpdateStatus
+	public static class CameraPanMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AppUpdateStatus";
-		}
+		public static Type Classic { get; } = null!;
+		public static Type EdgeBump { get; } = null!;
 		
-		public struct NotSupported : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NotSupported";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AppUpdateStatus";
+			return null!;
 		}
-		
-		public struct Failed : EnumItem
+	}
+	
+	public static class CameraSpeedAdjustBinding
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Failed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AppUpdateStatus";
 		}
 		
-		public struct NotAvailable : EnumItem
-		{
-			string EnumItem.Name => "NotAvailable";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AppUpdateStatus";
-		}
+		public static Type None { get; } = null!;
+		public static Type RmbScroll { get; } = null!;
+		public static Type AltScroll { get; } = null!;
 		
-		public struct Available : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Available";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AppUpdateStatus";
+			return null!;
 		}
 	}
 	
-	public struct ApplyStrokeMode
+	public static class CameraType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Contextual : EnumItem
-		{
-			string EnumItem.Name => "Contextual";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ApplyStrokeMode";
-		}
+		public static Type Fixed { get; } = null!;
+		public static Type Attach { get; } = null!;
+		public static Type Watch { get; } = null!;
+		public static Type Track { get; } = null!;
+		public static Type Follow { get; } = null!;
+		public static Type Custom { get; } = null!;
+		public static Type Scriptable { get; } = null!;
+		public static Type Orbital { get; } = null!;
 		
-		public struct Border : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Border";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ApplyStrokeMode";
+			return null!;
 		}
 	}
 	
-	public struct AspectType
+	public static class CatalogCategoryFilter
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct FitWithinMaxSize : EnumItem
-		{
-			string EnumItem.Name => "FitWithinMaxSize";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AspectType";
-		}
+		public static Type None { get; } = null!;
+		public static Type Featured { get; } = null!;
+		public static Type Collectibles { get; } = null!;
+		public static Type CommunityCreations { get; } = null!;
+		public static Type Premium { get; } = null!;
+		public static Type Recommended { get; } = null!;
 		
-		public struct ScaleWithParentSize : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ScaleWithParentSize";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AspectType";
+			return null!;
 		}
 	}
 	
-	public struct AssetCreatorType
+	public static class CatalogSortAggregation
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct User : EnumItem
-		{
-			string EnumItem.Name => "User";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AssetCreatorType";
-		}
+		public static Type Past12Hours { get; } = null!;
+		public static Type PastDay { get; } = null!;
+		public static Type Past3Days { get; } = null!;
+		public static Type PastWeek { get; } = null!;
+		public static Type PastMonth { get; } = null!;
+		public static Type AllTime { get; } = null!;
 		
-		public struct Group : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Group";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AssetCreatorType";
+			return null!;
 		}
 	}
 	
-	public struct AssetFetchStatus
+	public static class CatalogSortType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AssetFetchStatus";
-		}
+		public static Type Relevance { get; } = null!;
+		public static Type PriceHighToLow { get; } = null!;
+		public static Type PriceLowToHigh { get; } = null!;
+		public static Type MostFavorited { get; } = null!;
+		public static Type RecentlyCreated { get; } = null!;
+		public static Type Bestselling { get; } = null!;
 		
-		public struct Failure : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Failure";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AssetFetchStatus";
+			return null!;
 		}
-		
-		public struct None : EnumItem
+	}
+	
+	public static class CellBlock
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AssetFetchStatus";
 		}
 		
-		public struct Loading : EnumItem
-		{
-			string EnumItem.Name => "Loading";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AssetFetchStatus";
-		}
+		public static Type Solid { get; } = null!;
+		public static Type VerticalWedge { get; } = null!;
+		public static Type CornerWedge { get; } = null!;
+		public static Type InverseCornerWedge { get; } = null!;
+		public static Type HorizontalWedge { get; } = null!;
 		
-		public struct TimedOut : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TimedOut";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AssetFetchStatus";
+			return null!;
 		}
 	}
 	
-	public struct AssetType
+	public static class CellMaterial
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Image : EnumItem
-		{
-			string EnumItem.Name => "Image";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Empty { get; } = null!;
+		public static Type Grass { get; } = null!;
+		public static Type Sand { get; } = null!;
+		public static Type Brick { get; } = null!;
+		public static Type Granite { get; } = null!;
+		public static Type Asphalt { get; } = null!;
+		public static Type Iron { get; } = null!;
+		public static Type Aluminum { get; } = null!;
+		public static Type Gold { get; } = null!;
+		public static Type WoodPlank { get; } = null!;
+		public static Type WoodLog { get; } = null!;
+		public static Type Gravel { get; } = null!;
+		public static Type CinderBlock { get; } = null!;
+		public static Type MossyStone { get; } = null!;
+		public static Type Cement { get; } = null!;
+		public static Type RedPlastic { get; } = null!;
+		public static Type BluePlastic { get; } = null!;
+		public static Type Water { get; } = null!;
 		
-		public struct TShirt : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TShirt";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Audio : EnumItem
+	}
+	
+	public static class CellOrientation
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Audio";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Mesh : EnumItem
-		{
-			string EnumItem.Name => "Mesh";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type NegZ { get; } = null!;
+		public static Type X { get; } = null!;
+		public static Type Z { get; } = null!;
+		public static Type NegX { get; } = null!;
 		
-		public struct Lua : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Lua";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Hat : EnumItem
+	}
+	
+	public static class CenterDialogType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Hat";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Place : EnumItem
-		{
-			string EnumItem.Name => "Place";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type UnsolicitedDialog { get; } = null!;
+		public static Type PlayerInitiatedDialog { get; } = null!;
+		public static Type ModalDialog { get; } = null!;
+		public static Type QuitDialog { get; } = null!;
 		
-		public struct Model : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Model";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Shirt : EnumItem
+	}
+	
+	public static class CharacterControlMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shirt";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Pants : EnumItem
-		{
-			string EnumItem.Name => "Pants";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Legacy { get; } = null!;
+		public static Type NoCharacterController { get; } = null!;
+		public static Type LuaCharacterController { get; } = null!;
 		
-		public struct Decal : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Decal";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Head : EnumItem
+	}
+	
+	public static class ChatCallbackType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Face : EnumItem
-		{
-			string EnumItem.Name => "Face";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type OnCreatingChatWindow { get; } = null!;
+		public static Type OnClientSendingMessage { get; } = null!;
+		public static Type OnClientFormattingMessage { get; } = null!;
+		public static Type OnServerReceivingMessage { get; } = null!;
 		
-		public struct Gear : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gear";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Badge : EnumItem
+	}
+	
+	public static class ChatColor
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Badge";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Animation : EnumItem
-		{
-			string EnumItem.Name => "Animation";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Blue { get; } = null!;
+		public static Type Green { get; } = null!;
+		public static Type Red { get; } = null!;
+		public static Type White { get; } = null!;
 		
-		public struct Torso : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Torso";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct RightArm : EnumItem
+	}
+	
+	public static class ChatMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightArm";
-			uint EnumItem.Value => 28;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct LeftArm : EnumItem
-		{
-			string EnumItem.Name => "LeftArm";
-			uint EnumItem.Value => 29;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Menu { get; } = null!;
+		public static Type TextAndMenu { get; } = null!;
 		
-		public struct LeftLeg : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftLeg";
-			uint EnumItem.Value => 30;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct RightLeg : EnumItem
+	}
+	
+	public static class ChatPrivacyMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightLeg";
-			uint EnumItem.Value => 31;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct Package : EnumItem
-		{
-			string EnumItem.Name => "Package";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type AllUsers { get; } = null!;
+		public static Type NoOne { get; } = null!;
+		public static Type Friends { get; } = null!;
 		
-		public struct GamePass : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "GamePass";
-			uint EnumItem.Value => 34;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Plugin : EnumItem
+	}
+	
+	public static class ChatStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Plugin";
-			uint EnumItem.Value => 38;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct MeshPart : EnumItem
-		{
-			string EnumItem.Name => "MeshPart";
-			uint EnumItem.Value => 40;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Classic { get; } = null!;
+		public static Type Bubble { get; } = null!;
+		public static Type ClassicAndBubble { get; } = null!;
 		
-		public struct HairAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HairAccessory";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct FaceAccessory : EnumItem
+	}
+	
+	public static class ChatVersion
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FaceAccessory";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct NeckAccessory : EnumItem
-		{
-			string EnumItem.Name => "NeckAccessory";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type LegacyChatService { get; } = null!;
+		public static Type TextChatService { get; } = null!;
 		
-		public struct ShoulderAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ShoulderAccessory";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct FrontAccessory : EnumItem
+	}
+	
+	public static class ClientAnimatorThrottlingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FrontAccessory";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct BackAccessory : EnumItem
-		{
-			string EnumItem.Name => "BackAccessory";
-			uint EnumItem.Value => 46;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct WaistAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "WaistAccessory";
-			uint EnumItem.Value => 47;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct ClimbAnimation : EnumItem
+	}
+	
+	public static class CollaboratorStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ClimbAnimation";
-			uint EnumItem.Value => 48;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct DeathAnimation : EnumItem
-		{
-			string EnumItem.Name => "DeathAnimation";
-			uint EnumItem.Value => 49;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type None { get; } = null!;
+		public static Type Editing3D { get; } = null!;
+		public static Type Scripting { get; } = null!;
+		public static Type PrivateScripting { get; } = null!;
 		
-		public struct FallAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FallAnimation";
-			uint EnumItem.Value => 50;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct IdleAnimation : EnumItem
+	}
+	
+	public static class CollisionFidelity
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "IdleAnimation";
-			uint EnumItem.Value => 51;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct JumpAnimation : EnumItem
-		{
-			string EnumItem.Name => "JumpAnimation";
-			uint EnumItem.Value => 52;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Hull { get; } = null!;
+		public static Type Box { get; } = null!;
+		public static Type PreciseConvexDecomposition { get; } = null!;
 		
-		public struct RunAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RunAnimation";
-			uint EnumItem.Value => 53;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct SwimAnimation : EnumItem
+	}
+	
+	public static class CommandPermission
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SwimAnimation";
-			uint EnumItem.Value => 54;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct WalkAnimation : EnumItem
-		{
-			string EnumItem.Name => "WalkAnimation";
-			uint EnumItem.Value => 55;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Plugin { get; } = null!;
+		public static Type LocalUser { get; } = null!;
 		
-		public struct PoseAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PoseAnimation";
-			uint EnumItem.Value => 56;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct EarAccessory : EnumItem
+	}
+	
+	public static class CompileTarget
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EarAccessory";
-			uint EnumItem.Value => 57;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct EyeAccessory : EnumItem
-		{
-			string EnumItem.Name => "EyeAccessory";
-			uint EnumItem.Value => 58;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Client { get; } = null!;
+		public static Type CoreScript { get; } = null!;
+		public static Type Studio { get; } = null!;
+		public static Type CoreScriptRaw { get; } = null!;
 		
-		public struct EmoteAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EmoteAnimation";
-			uint EnumItem.Value => 61;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct Video : EnumItem
+	}
+	
+	public static class CompletionItemKind
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Video";
-			uint EnumItem.Value => 62;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct TShirtAccessory : EnumItem
-		{
-			string EnumItem.Name => "TShirtAccessory";
-			uint EnumItem.Value => 64;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Text { get; } = null!;
+		public static Type Method { get; } = null!;
+		public static Type Function { get; } = null!;
+		public static Type Constructor { get; } = null!;
+		public static Type Field { get; } = null!;
+		public static Type Variable { get; } = null!;
+		public static Type Class { get; } = null!;
+		public static Type Interface { get; } = null!;
+		public static Type Module { get; } = null!;
+		public static Type Property { get; } = null!;
+		public static Type Unit { get; } = null!;
+		public static Type Value { get; } = null!;
+		public static Type Enum { get; } = null!;
+		public static Type Keyword { get; } = null!;
+		public static Type Snippet { get; } = null!;
+		public static Type Color { get; } = null!;
+		public static Type File { get; } = null!;
+		public static Type Reference { get; } = null!;
+		public static Type Folder { get; } = null!;
+		public static Type EnumMember { get; } = null!;
+		public static Type Constant { get; } = null!;
+		public static Type Struct { get; } = null!;
+		public static Type Event { get; } = null!;
+		public static Type Operator { get; } = null!;
+		public static Type TypeParameter { get; } = null!;
 		
-		public struct ShirtAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ShirtAccessory";
-			uint EnumItem.Value => 65;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct PantsAccessory : EnumItem
+	}
+	
+	public static class CompletionItemTag
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PantsAccessory";
-			uint EnumItem.Value => 66;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct JacketAccessory : EnumItem
-		{
-			string EnumItem.Name => "JacketAccessory";
-			uint EnumItem.Value => 67;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Deprecated { get; } = null!;
+		public static Type IncorrectIndexType { get; } = null!;
+		public static Type PluginPermissions { get; } = null!;
+		public static Type CommandLinePermissions { get; } = null!;
+		public static Type RobloxPermissions { get; } = null!;
+		public static Type AddParens { get; } = null!;
+		public static Type PutCursorInParens { get; } = null!;
+		public static Type TypeCorrect { get; } = null!;
+		public static Type ClientServerBoundaryViolation { get; } = null!;
+		public static Type Invalidated { get; } = null!;
+		public static Type PutCursorBeforeEnd { get; } = null!;
 		
-		public struct SweaterAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SweaterAccessory";
-			uint EnumItem.Value => 68;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct ShortsAccessory : EnumItem
+	}
+	
+	public static class CompletionTriggerKind
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ShortsAccessory";
-			uint EnumItem.Value => 69;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct LeftShoeAccessory : EnumItem
-		{
-			string EnumItem.Name => "LeftShoeAccessory";
-			uint EnumItem.Value => 70;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Invoked { get; } = null!;
+		public static Type TriggerCharacter { get; } = null!;
+		public static Type TriggerForIncompleteCompletions { get; } = null!;
 		
-		public struct RightShoeAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightShoeAccessory";
-			uint EnumItem.Value => 71;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct DressSkirtAccessory : EnumItem
+	}
+	
+	public static class ComputerCameraMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "DressSkirtAccessory";
-			uint EnumItem.Value => 72;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct FontFamily : EnumItem
-		{
-			string EnumItem.Name => "FontFamily";
-			uint EnumItem.Value => 73;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Classic { get; } = null!;
+		public static Type Follow { get; } = null!;
+		public static Type Orbital { get; } = null!;
+		public static Type CameraToggle { get; } = null!;
 		
-		public struct EyebrowAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EyebrowAccessory";
-			uint EnumItem.Value => 76;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
-		
-		public struct EyelashAccessory : EnumItem
+	}
+	
+	public static class ComputerMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EyelashAccessory";
-			uint EnumItem.Value => 77;
-			string EnumItem.EnumType => "AssetType";
 		}
 		
-		public struct MoodAnimation : EnumItem
-		{
-			string EnumItem.Name => "MoodAnimation";
-			uint EnumItem.Value => 78;
-			string EnumItem.EnumType => "AssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type KeyboardMouse { get; } = null!;
+		public static Type ClickToMove { get; } = null!;
 		
-		public struct DynamicHead : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "DynamicHead";
-			uint EnumItem.Value => 79;
-			string EnumItem.EnumType => "AssetType";
+			return null!;
 		}
 	}
 	
-	public struct AssetTypeVerification
+	public static class ConnectionError
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type OK { get; } = null!;
+		public static Type Unknown { get; } = null!;
+		public static Type DisconnectErrors { get; } = null!;
+		public static Type DisconnectBadhash { get; } = null!;
+		public static Type DisconnectSecurityKeyMismatch { get; } = null!;
+		public static Type DisconnectProtocolMismatch { get; } = null!;
+		public static Type DisconnectReceivePacketError { get; } = null!;
+		public static Type DisconnectReceivePacketStreamError { get; } = null!;
+		public static Type DisconnectSendPacketError { get; } = null!;
+		public static Type DisconnectIllegalTeleport { get; } = null!;
+		public static Type DisconnectDuplicatePlayer { get; } = null!;
+		public static Type DisconnectDuplicateTicket { get; } = null!;
+		public static Type DisconnectTimeout { get; } = null!;
+		public static Type DisconnectLuaKick { get; } = null!;
+		public static Type DisconnectOnRemoteSysStats { get; } = null!;
+		public static Type DisconnectHashTimeout { get; } = null!;
+		public static Type DisconnectCloudEditKick { get; } = null!;
+		public static Type DisconnectPlayerless { get; } = null!;
+		public static Type DisconnectNewSecurityKeyMismatch { get; } = null!;
+		public static Type DisconnectEvicted { get; } = null!;
+		public static Type DisconnectDevMaintenance { get; } = null!;
+		public static Type DisconnectRobloxMaintenance { get; } = null!;
+		public static Type DisconnectRejoin { get; } = null!;
+		public static Type DisconnectConnectionLost { get; } = null!;
+		public static Type DisconnectIdle { get; } = null!;
+		public static Type DisconnectRaknetErrors { get; } = null!;
+		public static Type DisconnectWrongVersion { get; } = null!;
+		public static Type DisconnectBySecurityPolicy { get; } = null!;
+		public static Type DisconnectBlockedIP { get; } = null!;
+		public static Type DisconnectClientFailure { get; } = null!;
+		public static Type DisconnectClientRequest { get; } = null!;
+		public static Type DisconnectPrivateServerKickout { get; } = null!;
+		public static Type DisconnectModeratedGame { get; } = null!;
+		public static Type ServerShutdown { get; } = null!;
+		public static Type ReplicatorTimeout { get; } = null!;
+		public static Type PlayerRemoved { get; } = null!;
+		public static Type DisconnectOutOfMemoryKeepPlayingLeave { get; } = null!;
+		public static Type DisconnectRomarkEndOfTest { get; } = null!;
+		public static Type DisconnectCollaboratorPermissionRevoked { get; } = null!;
+		public static Type DisconnectCollaboratorUnderage { get; } = null!;
+		public static Type NetworkInternal { get; } = null!;
+		public static Type NetworkSend { get; } = null!;
+		public static Type NetworkTimeout { get; } = null!;
+		public static Type NetworkMisbehavior { get; } = null!;
+		public static Type NetworkSecurity { get; } = null!;
+		public static Type ReplacementReady { get; } = null!;
+		public static Type PlacelaunchErrors { get; } = null!;
+		public static Type PlacelaunchDisabled { get; } = null!;
+		public static Type PlacelaunchError { get; } = null!;
+		public static Type PlacelaunchGameEnded { get; } = null!;
+		public static Type PlacelaunchGameFull { get; } = null!;
+		public static Type PlacelaunchUserLeft { get; } = null!;
+		public static Type PlacelaunchRestricted { get; } = null!;
+		public static Type PlacelaunchUnauthorized { get; } = null!;
+		public static Type PlacelaunchFlooded { get; } = null!;
+		public static Type PlacelaunchHashExpired { get; } = null!;
+		public static Type PlacelaunchHashException { get; } = null!;
+		public static Type PlacelaunchPartyCannotFit { get; } = null!;
+		public static Type PlacelaunchHttpError { get; } = null!;
+		public static Type PlacelaunchUserPrivacyUnauthorized { get; } = null!;
+		public static Type PlacelaunchCreatorBan { get; } = null!;
+		public static Type PlacelaunchCustomMessage { get; } = null!;
+		public static Type PlacelaunchOtherError { get; } = null!;
+		public static Type TeleportErrors { get; } = null!;
+		public static Type TeleportFailure { get; } = null!;
+		public static Type TeleportGameNotFound { get; } = null!;
+		public static Type TeleportGameEnded { get; } = null!;
+		public static Type TeleportGameFull { get; } = null!;
+		public static Type TeleportUnauthorized { get; } = null!;
+		public static Type TeleportFlooded { get; } = null!;
+		public static Type TeleportIsTeleporting { get; } = null!;
 		
-		public struct Default : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AssetTypeVerification";
+			return null!;
 		}
-		
-		public struct ClientOnly : EnumItem
+	}
+	
+	public static class ConnectionState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ClientOnly";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AssetTypeVerification";
 		}
 		
-		public struct Always : EnumItem
+		public static Type Connected { get; } = null!;
+		public static Type Disconnected { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AssetTypeVerification";
+			return null!;
 		}
 	}
 	
-	public struct AudioApiRollout
+	public static class ContextActionPriority
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Low { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type High { get; } = null!;
 		
-		public struct Disabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AudioApiRollout";
+			return null!;
 		}
-		
-		public struct Automatic : EnumItem
+	}
+	
+	public static class ContextActionResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AudioApiRollout";
 		}
 		
-		public struct Enabled : EnumItem
+		public static Type Sink { get; } = null!;
+		public static Type Pass { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AudioApiRollout";
+			return null!;
 		}
 	}
 	
-	public struct AudioFilterType
+	public static class ControlMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Peak : EnumItem
-		{
-			string EnumItem.Name => "Peak";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AudioFilterType";
-		}
+		public static Type Classic { get; } = null!;
+		public static Type MouseLockSwitch { get; } = null!;
 		
-		public struct LowShelf : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LowShelf";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AudioFilterType";
+			return null!;
 		}
-		
-		public struct HighShelf : EnumItem
+	}
+	
+	public static class CoreGuiType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "HighShelf";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AudioFilterType";
 		}
 		
-		public struct Lowpass12dB : EnumItem
-		{
-			string EnumItem.Name => "Lowpass12dB";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AudioFilterType";
-		}
+		public static Type PlayerList { get; } = null!;
+		public static Type Health { get; } = null!;
+		public static Type Backpack { get; } = null!;
+		public static Type Chat { get; } = null!;
+		public static Type All { get; } = null!;
+		public static Type EmotesMenu { get; } = null!;
+		public static Type SelfView { get; } = null!;
+		public static Type Captures { get; } = null!;
 		
-		public struct Lowpass24dB : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Lowpass24dB";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AudioFilterType";
+			return null!;
 		}
-		
-		public struct Lowpass48dB : EnumItem
+	}
+	
+	public static class CreateOutfitFailure
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Lowpass48dB";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AudioFilterType";
 		}
 		
-		public struct Highpass12dB : EnumItem
-		{
-			string EnumItem.Name => "Highpass12dB";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "AudioFilterType";
-		}
+		public static Type InvalidName { get; } = null!;
+		public static Type OutfitLimitReached { get; } = null!;
+		public static Type Other { get; } = null!;
 		
-		public struct Highpass24dB : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Highpass24dB";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "AudioFilterType";
+			return null!;
 		}
-		
-		public struct Highpass48dB : EnumItem
+	}
+	
+	public static class CreatorType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Highpass48dB";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AudioFilterType";
 		}
 		
-		public struct Bandpass : EnumItem
-		{
-			string EnumItem.Name => "Bandpass";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "AudioFilterType";
-		}
+		public static Type User { get; } = null!;
+		public static Type Group { get; } = null!;
 		
-		public struct Notch : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Notch";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "AudioFilterType";
+			return null!;
 		}
 	}
 	
-	public struct AudioSubType
+	public static class CreatorTypeFilter
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Music : EnumItem
-		{
-			string EnumItem.Name => "Music";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AudioSubType";
-		}
+		public static Type User { get; } = null!;
+		public static Type Group { get; } = null!;
+		public static Type All { get; } = null!;
 		
-		public struct SoundEffect : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SoundEffect";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AudioSubType";
+			return null!;
 		}
 	}
 	
-	public struct AudioWindowSize
+	public static class CurrencyType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Robux { get; } = null!;
+		public static Type Tix { get; } = null!;
 		
-		public struct Small : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Small";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AudioWindowSize";
+			return null!;
 		}
-		
-		public struct Medium : EnumItem
+	}
+	
+	public static class CustomCameraMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AudioWindowSize";
 		}
 		
-		public struct Large : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Classic { get; } = null!;
+		public static Type Follow { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Large";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AudioWindowSize";
+			return null!;
 		}
 	}
 	
-	public struct AutoIndentRule
+	public static class DataStoreRequestType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type GetAsync { get; } = null!;
+		public static Type SetIncrementAsync { get; } = null!;
+		public static Type UpdateAsync { get; } = null!;
+		public static Type GetSortedAsync { get; } = null!;
+		public static Type SetIncrementSortedAsync { get; } = null!;
+		public static Type OnUpdate { get; } = null!;
+		public static Type ListAsync { get; } = null!;
+		public static Type GetVersionAsync { get; } = null!;
+		public static Type RemoveVersionAsync { get; } = null!;
 		
-		public struct Off : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Off";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AutoIndentRule";
+			return null!;
 		}
-		
-		public struct Absolute : EnumItem
+	}
+	
+	public static class DebuggerEndReason
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Absolute";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AutoIndentRule";
 		}
 		
-		public struct Relative : EnumItem
+		public static Type ClientRequest { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type InvalidHost { get; } = null!;
+		public static Type Disconnected { get; } = null!;
+		public static Type ServerShutdown { get; } = null!;
+		public static Type ServerProtocolMismatch { get; } = null!;
+		public static Type ConfigurationFailed { get; } = null!;
+		public static Type RpcError { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Relative";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AutoIndentRule";
+			return null!;
 		}
 	}
 	
-	public struct AutomaticSize
+	public static class DebuggerExceptionBreakMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AutomaticSize";
-		}
+		public static Type Never { get; } = null!;
+		public static Type Always { get; } = null!;
+		public static Type Unhandled { get; } = null!;
 		
-		public struct X : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AutomaticSize";
+			return null!;
 		}
-		
-		public struct Y : EnumItem
+	}
+	
+	public static class DebuggerFrameType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Y";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AutomaticSize";
 		}
+		
+		public static Type C { get; } = null!;
+		public static Type Lua { get; } = null!;
 		
-		public struct XY : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "XY";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AutomaticSize";
+			return null!;
 		}
 	}
 	
-	public struct AvatarAssetType
+	public static class DebuggerPauseReason
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct TShirt : EnumItem
-		{
-			string EnumItem.Name => "TShirt";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Requested { get; } = null!;
+		public static Type Breakpoint { get; } = null!;
+		public static Type Exception { get; } = null!;
+		public static Type SingleStep { get; } = null!;
+		public static Type Entrypoint { get; } = null!;
 		
-		public struct Hat : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hat";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct Shirt : EnumItem
+	}
+	
+	public static class DebuggerStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shirt";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct Pants : EnumItem
-		{
-			string EnumItem.Name => "Pants";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Success { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type ConnectionLost { get; } = null!;
+		public static Type InvalidResponse { get; } = null!;
+		public static Type InternalError { get; } = null!;
+		public static Type InvalidState { get; } = null!;
+		public static Type RpcError { get; } = null!;
+		public static Type InvalidArgument { get; } = null!;
+		public static Type ConnectionClosed { get; } = null!;
 		
-		public struct Head : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct Face : EnumItem
+	}
+	
+	public static class DecreaseMinimumPartDensityMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Face";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct Gear : EnumItem
-		{
-			string EnumItem.Name => "Gear";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct Torso : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Torso";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct RightArm : EnumItem
+	}
+	
+	public static class DevCameraOcclusionMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightArm";
-			uint EnumItem.Value => 28;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct LeftArm : EnumItem
-		{
-			string EnumItem.Name => "LeftArm";
-			uint EnumItem.Value => 29;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Zoom { get; } = null!;
+		public static Type Invisicam { get; } = null!;
 		
-		public struct LeftLeg : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftLeg";
-			uint EnumItem.Value => 30;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct RightLeg : EnumItem
+	}
+	
+	public static class DevComputerCameraMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightLeg";
-			uint EnumItem.Value => 31;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct HairAccessory : EnumItem
-		{
-			string EnumItem.Name => "HairAccessory";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type UserChoice { get; } = null!;
+		public static Type Classic { get; } = null!;
+		public static Type Follow { get; } = null!;
+		public static Type Orbital { get; } = null!;
+		public static Type CameraToggle { get; } = null!;
 		
-		public struct FaceAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FaceAccessory";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct NeckAccessory : EnumItem
+	}
+	
+	public static class DevComputerMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "NeckAccessory";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct ShoulderAccessory : EnumItem
-		{
-			string EnumItem.Name => "ShoulderAccessory";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type UserChoice { get; } = null!;
+		public static Type KeyboardMouse { get; } = null!;
+		public static Type ClickToMove { get; } = null!;
+		public static Type Scriptable { get; } = null!;
 		
-		public struct FrontAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FrontAccessory";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct BackAccessory : EnumItem
+	}
+	
+	public static class DevTouchCameraMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "BackAccessory";
-			uint EnumItem.Value => 46;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct WaistAccessory : EnumItem
-		{
-			string EnumItem.Name => "WaistAccessory";
-			uint EnumItem.Value => 47;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type UserChoice { get; } = null!;
+		public static Type Classic { get; } = null!;
+		public static Type Follow { get; } = null!;
+		public static Type Orbital { get; } = null!;
 		
-		public struct ClimbAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ClimbAnimation";
-			uint EnumItem.Value => 48;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct FallAnimation : EnumItem
+	}
+	
+	public static class DevTouchMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FallAnimation";
-			uint EnumItem.Value => 50;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct IdleAnimation : EnumItem
-		{
-			string EnumItem.Name => "IdleAnimation";
-			uint EnumItem.Value => 51;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type UserChoice { get; } = null!;
+		public static Type Thumbstick { get; } = null!;
+		public static Type DPad { get; } = null!;
+		public static Type Thumbpad { get; } = null!;
+		public static Type ClickToMove { get; } = null!;
+		public static Type Scriptable { get; } = null!;
+		public static Type DynamicThumbstick { get; } = null!;
 		
-		public struct JumpAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "JumpAnimation";
-			uint EnumItem.Value => 52;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct RunAnimation : EnumItem
+	}
+	
+	public static class DeveloperMemoryTag
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RunAnimation";
-			uint EnumItem.Value => 53;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct SwimAnimation : EnumItem
-		{
-			string EnumItem.Name => "SwimAnimation";
-			uint EnumItem.Value => 54;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Internal { get; } = null!;
+		public static Type HttpCache { get; } = null!;
+		public static Type Instances { get; } = null!;
+		public static Type Signals { get; } = null!;
+		public static Type LuaHeap { get; } = null!;
+		public static Type Script { get; } = null!;
+		public static Type PhysicsCollision { get; } = null!;
+		public static Type PhysicsParts { get; } = null!;
+		public static Type GraphicsSolidModels { get; } = null!;
+		public static Type GraphicsMeshParts { get; } = null!;
+		public static Type GraphicsParticles { get; } = null!;
+		public static Type GraphicsParts { get; } = null!;
+		public static Type GraphicsSpatialHash { get; } = null!;
+		public static Type GraphicsTerrain { get; } = null!;
+		public static Type GraphicsTexture { get; } = null!;
+		public static Type GraphicsTextureCharacter { get; } = null!;
+		public static Type Sounds { get; } = null!;
+		public static Type StreamingSounds { get; } = null!;
+		public static Type TerrainVoxels { get; } = null!;
+		public static Type Gui { get; } = null!;
+		public static Type Animation { get; } = null!;
+		public static Type Navigation { get; } = null!;
+		public static Type GeometryCSG { get; } = null!;
 		
-		public struct WalkAnimation : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "WalkAnimation";
-			uint EnumItem.Value => 55;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct MoodAnimation : EnumItem
+	}
+	
+	public static class DeviceFeatureType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "MoodAnimation";
-			uint EnumItem.Value => 78;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct EmoteAnimation : EnumItem
-		{
-			string EnumItem.Name => "EmoteAnimation";
-			uint EnumItem.Value => 61;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type DeviceCapture { get; } = null!;
 		
-		public struct TShirtAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TShirtAccessory";
-			uint EnumItem.Value => 64;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct ShirtAccessory : EnumItem
+	}
+	
+	public static class DeviceType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ShirtAccessory";
-			uint EnumItem.Value => 65;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct PantsAccessory : EnumItem
-		{
-			string EnumItem.Name => "PantsAccessory";
-			uint EnumItem.Value => 66;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Desktop { get; } = null!;
+		public static Type Tablet { get; } = null!;
+		public static Type Phone { get; } = null!;
 		
-		public struct JacketAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "JacketAccessory";
-			uint EnumItem.Value => 67;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct SweaterAccessory : EnumItem
+	}
+	
+	public static class DialogBehaviorType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SweaterAccessory";
-			uint EnumItem.Value => 68;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct ShortsAccessory : EnumItem
-		{
-			string EnumItem.Name => "ShortsAccessory";
-			uint EnumItem.Value => 69;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type SinglePlayer { get; } = null!;
+		public static Type MultiplePlayers { get; } = null!;
 		
-		public struct LeftShoeAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftShoeAccessory";
-			uint EnumItem.Value => 70;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct RightShoeAccessory : EnumItem
+	}
+	
+	public static class DialogPurpose
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightShoeAccessory";
-			uint EnumItem.Value => 71;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
 		
-		public struct DressSkirtAccessory : EnumItem
-		{
-			string EnumItem.Name => "DressSkirtAccessory";
-			uint EnumItem.Value => 72;
-			string EnumItem.EnumType => "AvatarAssetType";
-		}
+		public static Type Quest { get; } = null!;
+		public static Type Help { get; } = null!;
+		public static Type Shop { get; } = null!;
 		
-		public struct EyebrowAccessory : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EyebrowAccessory";
-			uint EnumItem.Value => 76;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
-		
-		public struct EyelashAccessory : EnumItem
+	}
+	
+	public static class DialogTone
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EyelashAccessory";
-			uint EnumItem.Value => 77;
-			string EnumItem.EnumType => "AvatarAssetType";
 		}
+		
+		public static Type Neutral { get; } = null!;
+		public static Type Friendly { get; } = null!;
+		public static Type Enemy { get; } = null!;
 		
-		public struct DynamicHead : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "DynamicHead";
-			uint EnumItem.Value => 79;
-			string EnumItem.EnumType => "AvatarAssetType";
+			return null!;
 		}
 	}
 	
-	public struct AvatarChatServiceFeature
+	public static class DominantAxis
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
-		}
+		public static Type Width { get; } = null!;
+		public static Type Height { get; } = null!;
 		
-		public struct UniverseAudio : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UniverseAudio";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
+			return null!;
 		}
-		
-		public struct UniverseVideo : EnumItem
+	}
+	
+	public static class DraftStatusCode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "UniverseVideo";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
 		}
 		
-		public struct PlaceAudio : EnumItem
-		{
-			string EnumItem.Name => "PlaceAudio";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
-		}
+		public static Type OK { get; } = null!;
+		public static Type DraftOutdated { get; } = null!;
+		public static Type ScriptRemoved { get; } = null!;
+		public static Type DraftCommitted { get; } = null!;
 		
-		public struct PlaceVideo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PlaceVideo";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
+			return null!;
 		}
-		
-		public struct UserAudioEligible : EnumItem
+	}
+	
+	public static class DragDetectorDragStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "UserAudioEligible";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
 		}
 		
-		public struct UserAudio : EnumItem
-		{
-			string EnumItem.Name => "UserAudio";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
-		}
+		public static Type TranslateLine { get; } = null!;
+		public static Type TranslatePlane { get; } = null!;
+		public static Type TranslatePlaneOrLine { get; } = null!;
+		public static Type TranslateLineOrPlane { get; } = null!;
+		public static Type TranslateViewPlane { get; } = null!;
+		public static Type RotateAxis { get; } = null!;
+		public static Type RotateTrackball { get; } = null!;
+		public static Type Scriptable { get; } = null!;
+		public static Type BestForDevice { get; } = null!;
 		
-		public struct UserVideoEligible : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UserVideoEligible";
-			uint EnumItem.Value => 64;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
+			return null!;
 		}
-		
-		public struct UserVideo : EnumItem
+	}
+	
+	public static class DragDetectorPermissionPolicy
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "UserVideo";
-			uint EnumItem.Value => 128;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
 		}
 		
-		public struct UserBanned : EnumItem
-		{
-			string EnumItem.Name => "UserBanned";
-			uint EnumItem.Value => 256;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
-		}
+		public static Type Nobody { get; } = null!;
+		public static Type Everybody { get; } = null!;
+		public static Type Scriptable { get; } = null!;
 		
-		public struct UserVerifiedForVoice : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UserVerifiedForVoice";
-			uint EnumItem.Value => 512;
-			string EnumItem.EnumType => "AvatarChatServiceFeature";
+			return null!;
 		}
 	}
 	
-	public struct AvatarContextMenuOption
+	public static class DragDetectorResponseStyle
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Friend : EnumItem
-		{
-			string EnumItem.Name => "Friend";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarContextMenuOption";
-		}
+		public static Type Geometric { get; } = null!;
+		public static Type Physical { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct Chat : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Chat";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarContextMenuOption";
+			return null!;
 		}
-		
-		public struct Emote : EnumItem
+	}
+	
+	public static class DraggerCoordinateSpace
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Emote";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarContextMenuOption";
 		}
 		
-		public struct InspectMenu : EnumItem
+		public static Type Object { get; } = null!;
+		public static Type World { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "InspectMenu";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AvatarContextMenuOption";
+			return null!;
 		}
 	}
 	
-	public struct AvatarGenerationError
+	public static class DraggerMovementMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarGenerationError";
-		}
+		public static Type Geometric { get; } = null!;
+		public static Type Physical { get; } = null!;
 		
-		public struct Timeout : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarGenerationError";
+			return null!;
 		}
-		
-		public struct DownloadFailed : EnumItem
+	}
+	
+	public static class EasingDirection
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "DownloadFailed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarGenerationError";
 		}
+		
+		public static Type In { get; } = null!;
+		public static Type Out { get; } = null!;
+		public static Type InOut { get; } = null!;
 		
-		public struct Canceled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Canceled";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AvatarGenerationError";
+			return null!;
 		}
-		
-		public struct Offensive : EnumItem
+	}
+	
+	public static class EasingStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Offensive";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "AvatarGenerationError";
 		}
 		
-		public struct Unknown : EnumItem
+		public static Type Linear { get; } = null!;
+		public static Type Sine { get; } = null!;
+		public static Type Back { get; } = null!;
+		public static Type Quad { get; } = null!;
+		public static Type Quart { get; } = null!;
+		public static Type Quint { get; } = null!;
+		public static Type Bounce { get; } = null!;
+		public static Type Elastic { get; } = null!;
+		public static Type Exponential { get; } = null!;
+		public static Type Circular { get; } = null!;
+		public static Type Cubic { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "AvatarGenerationError";
+			return null!;
 		}
 	}
 	
-	public struct AvatarGenerationJobStatus
+	public static class ElasticBehavior
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct NotStarted : EnumItem
-		{
-			string EnumItem.Name => "NotStarted";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarGenerationJobStatus";
-		}
+		public static Type WhenScrollable { get; } = null!;
+		public static Type Always { get; } = null!;
+		public static Type Never { get; } = null!;
 		
-		public struct InProgress : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "InProgress";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarGenerationJobStatus";
+			return null!;
 		}
-		
-		public struct Completed : EnumItem
+	}
+	
+	public static class EnviromentalPhysicsThrottle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Completed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarGenerationJobStatus";
 		}
+		
+		public static Type DefaultAuto { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Always { get; } = null!;
+		public static Type Skip2 { get; } = null!;
+		public static Type Skip4 { get; } = null!;
+		public static Type Skip8 { get; } = null!;
+		public static Type Skip16 { get; } = null!;
 		
-		public struct Failed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Failed";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AvatarGenerationJobStatus";
+			return null!;
 		}
 	}
 	
-	public struct AvatarItemType
+	public static class ExperienceAuthScope
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Asset : EnumItem
-		{
-			string EnumItem.Name => "Asset";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarItemType";
-		}
+		public static Type DefaultScope { get; } = null!;
+		public static Type CreatorAssetsCreate { get; } = null!;
 		
-		public struct Bundle : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bundle";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarItemType";
+			return null!;
 		}
 	}
 	
-	public struct AvatarJointUpgrade
+	public static class ExplosionType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
+		public static Type NoCraters { get; } = null!;
+		public static Type Craters { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarJointUpgrade";
+			return null!;
 		}
-		
-		public struct Enabled : EnumItem
+	}
+	
+	public static class FACSDataLod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarJointUpgrade";
 		}
+		
+		public static Type LOD0 { get; } = null!;
+		public static Type LOD1 { get; } = null!;
+		public static Type LODCount { get; } = null!;
 		
-		public struct Disabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarJointUpgrade";
+			return null!;
 		}
 	}
 	
-	public struct AvatarPromptResult
+	public static class FacialAnimationStreamingState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Success : EnumItem
+		public static Type None { get; } = null!;
+		public static Type Audio { get; } = null!;
+		public static Type Video { get; } = null!;
+		public static Type Place { get; } = null!;
+		public static Type Server { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarPromptResult";
+			return null!;
 		}
-		
-		public struct PermissionDenied : EnumItem
+	}
+	
+	public static class FieldOfViewMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PermissionDenied";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarPromptResult";
 		}
+		
+		public static Type Vertical { get; } = null!;
+		public static Type Diagonal { get; } = null!;
+		public static Type MaxAxis { get; } = null!;
 		
-		public struct Failed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Failed";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "AvatarPromptResult";
+			return null!;
 		}
 	}
 	
-	public struct AvatarThumbnailCustomizationType
+	public static class FillDirection
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Closeup : EnumItem
-		{
-			string EnumItem.Name => "Closeup";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarThumbnailCustomizationType";
-		}
+		public static Type Horizontal { get; } = null!;
+		public static Type Vertical { get; } = null!;
 		
-		public struct FullBody : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FullBody";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarThumbnailCustomizationType";
+			return null!;
 		}
 	}
 	
-	public struct AvatarUnificationMode
+	public static class FilterResult
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
+		public static Type Accepted { get; } = null!;
+		public static Type Rejected { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "AvatarUnificationMode";
+			return null!;
 		}
-		
-		public struct Disabled : EnumItem
+	}
+	
+	public static class FinishRecordingOperation
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "AvatarUnificationMode";
 		}
+		
+		public static Type Cancel { get; } = null!;
+		public static Type Commit { get; } = null!;
+		public static Type Append { get; } = null!;
 		
-		public struct Enabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "AvatarUnificationMode";
+			return null!;
 		}
 	}
 	
-	public struct Axis
+	public static class FluidFidelity
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct X : EnumItem
+		public static Type Automatic { get; } = null!;
+		public static Type UseCollisionGeometry { get; } = null!;
+		public static Type UsePreciseGeometry { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Axis";
+			return null!;
 		}
-		
-		public struct Y : EnumItem
+	}
+	
+	public static class FluidForces
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Y";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Axis";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Experimental { get; } = null!;
 		
-		public struct Z : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Z";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Axis";
+			return null!;
 		}
 	}
 	
-	public struct BinType
+	public static class Font
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Script : EnumItem
-		{
-			string EnumItem.Name => "Script";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BinType";
-		}
+		public static Type Legacy { get; } = null!;
+		public static Type Arial { get; } = null!;
+		public static Type ArialBold { get; } = null!;
+		public static Type SourceSans { get; } = null!;
+		public static Type SourceSansBold { get; } = null!;
+		public static Type SourceSansLight { get; } = null!;
+		public static Type SourceSansItalic { get; } = null!;
+		public static Type Bodoni { get; } = null!;
+		public static Type Garamond { get; } = null!;
+		public static Type Cartoon { get; } = null!;
+		public static Type Code { get; } = null!;
+		public static Type Highway { get; } = null!;
+		public static Type SciFi { get; } = null!;
+		public static Type Arcade { get; } = null!;
+		public static Type Fantasy { get; } = null!;
+		public static Type Antique { get; } = null!;
+		public static Type SourceSansSemibold { get; } = null!;
+		public static Type Gotham { get; } = null!;
+		public static Type GothamMedium { get; } = null!;
+		public static Type GothamBold { get; } = null!;
+		public static Type GothamBlack { get; } = null!;
+		public static Type AmaticSC { get; } = null!;
+		public static Type Bangers { get; } = null!;
+		public static Type Creepster { get; } = null!;
+		public static Type DenkOne { get; } = null!;
+		public static Type Fondamento { get; } = null!;
+		public static Type FredokaOne { get; } = null!;
+		public static Type GrenzeGotisch { get; } = null!;
+		public static Type IndieFlower { get; } = null!;
+		public static Type JosefinSans { get; } = null!;
+		public static Type Jura { get; } = null!;
+		public static Type Kalam { get; } = null!;
+		public static Type LuckiestGuy { get; } = null!;
+		public static Type Merriweather { get; } = null!;
+		public static Type Michroma { get; } = null!;
+		public static Type Nunito { get; } = null!;
+		public static Type Oswald { get; } = null!;
+		public static Type PatrickHand { get; } = null!;
+		public static Type PermanentMarker { get; } = null!;
+		public static Type Roboto { get; } = null!;
+		public static Type RobotoCondensed { get; } = null!;
+		public static Type RobotoMono { get; } = null!;
+		public static Type Sarpanch { get; } = null!;
+		public static Type SpecialElite { get; } = null!;
+		public static Type TitilliumWeb { get; } = null!;
+		public static Type Ubuntu { get; } = null!;
+		public static Type BuilderSans { get; } = null!;
+		public static Type BuilderSansMedium { get; } = null!;
+		public static Type BuilderSansBold { get; } = null!;
+		public static Type BuilderSansExtraBold { get; } = null!;
+		public static Type Arimo { get; } = null!;
+		public static Type ArimoBold { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct GameTool : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "GameTool";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BinType";
+			return null!;
 		}
-		
-		public struct Grab : EnumItem
+	}
+	
+	public static class FontSize
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Grab";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BinType";
 		}
 		
-		public struct Clone : EnumItem
-		{
-			string EnumItem.Name => "Clone";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "BinType";
-		}
+		public static Type Size8 { get; } = null!;
+		public static Type Size9 { get; } = null!;
+		public static Type Size10 { get; } = null!;
+		public static Type Size11 { get; } = null!;
+		public static Type Size12 { get; } = null!;
+		public static Type Size14 { get; } = null!;
+		public static Type Size18 { get; } = null!;
+		public static Type Size24 { get; } = null!;
+		public static Type Size36 { get; } = null!;
+		public static Type Size48 { get; } = null!;
+		public static Type Size28 { get; } = null!;
+		public static Type Size32 { get; } = null!;
+		public static Type Size42 { get; } = null!;
+		public static Type Size60 { get; } = null!;
+		public static Type Size96 { get; } = null!;
 		
-		public struct Hammer : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hammer";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "BinType";
+			return null!;
 		}
 	}
 	
-	public struct BodyPart
+	public static class FontStyle
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Head : EnumItem
-		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BodyPart";
-		}
+		public static Type Normal { get; } = null!;
+		public static Type Italic { get; } = null!;
 		
-		public struct Torso : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Torso";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BodyPart";
+			return null!;
 		}
-		
-		public struct LeftArm : EnumItem
+	}
+	
+	public static class FontWeight
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftArm";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BodyPart";
 		}
 		
-		public struct RightArm : EnumItem
+		public static Type Thin { get; } = null!;
+		public static Type ExtraLight { get; } = null!;
+		public static Type Light { get; } = null!;
+		public static Type Regular { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type SemiBold { get; } = null!;
+		public static Type Bold { get; } = null!;
+		public static Type ExtraBold { get; } = null!;
+		public static Type Heavy { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightArm";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "BodyPart";
+			return null!;
 		}
-		
-		public struct LeftLeg : EnumItem
+	}
+	
+	public static class ForceLimitMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftLeg";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "BodyPart";
 		}
+		
+		public static Type Magnitude { get; } = null!;
+		public static Type PerAxis { get; } = null!;
 		
-		public struct RightLeg : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightLeg";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "BodyPart";
+			return null!;
 		}
 	}
 	
-	public struct BodyPartR15
+	public static class FormFactor
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Head : EnumItem
-		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BodyPartR15";
-		}
+		public static Type Symmetric { get; } = null!;
+		public static Type Brick { get; } = null!;
+		public static Type Plate { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct UpperTorso : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UpperTorso";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct LowerTorso : EnumItem
+	}
+	
+	public static class FrameStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LowerTorso";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
 		
-		public struct LeftFoot : EnumItem
-		{
-			string EnumItem.Name => "LeftFoot";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "BodyPartR15";
-		}
+		public static Type Custom { get; } = null!;
+		public static Type ChatBlue { get; } = null!;
+		public static Type RobloxSquare { get; } = null!;
+		public static Type RobloxRound { get; } = null!;
+		public static Type ChatGreen { get; } = null!;
+		public static Type ChatRed { get; } = null!;
+		public static Type DropShadow { get; } = null!;
 		
-		public struct LeftLowerLeg : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftLowerLeg";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct LeftUpperLeg : EnumItem
+	}
+	
+	public static class FramerateManagerMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftUpperLeg";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
 		
-		public struct RightFoot : EnumItem
+		public static Type Automatic { get; } = null!;
+		public static Type On { get; } = null!;
+		public static Type Off { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightFoot";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct RightLowerLeg : EnumItem
+	}
+	
+	public static class FriendRequestEvent
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightLowerLeg";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
 		
-		public struct RightUpperLeg : EnumItem
-		{
-			string EnumItem.Name => "RightUpperLeg";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "BodyPartR15";
-		}
+		public static Type Issue { get; } = null!;
+		public static Type Revoke { get; } = null!;
+		public static Type Accept { get; } = null!;
+		public static Type Deny { get; } = null!;
 		
-		public struct LeftHand : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftHand";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct LeftLowerArm : EnumItem
+	}
+	
+	public static class FriendStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftLowerArm";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
 		
-		public struct LeftUpperArm : EnumItem
-		{
-			string EnumItem.Name => "LeftUpperArm";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "BodyPartR15";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type NotFriend { get; } = null!;
+		public static Type Friend { get; } = null!;
+		public static Type FriendRequestSent { get; } = null!;
+		public static Type FriendRequestReceived { get; } = null!;
 		
-		public struct RightHand : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightHand";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct RightLowerArm : EnumItem
+	}
+	
+	public static class FunctionalTestResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightLowerArm";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
 		
-		public struct RightUpperArm : EnumItem
+		public static Type Passed { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Error { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightUpperArm";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
-		
-		public struct RootPart : EnumItem
+	}
+	
+	public static class GameAvatarType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RootPart";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "BodyPartR15";
 		}
+		
+		public static Type R6 { get; } = null!;
+		public static Type R15 { get; } = null!;
+		public static Type PlayerChoice { get; } = null!;
 		
-		public struct Unknown : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "BodyPartR15";
+			return null!;
 		}
 	}
 	
-	public struct BorderMode
+	public static class GamepadType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Outline : EnumItem
+		public static Type Unknown { get; } = null!;
+		public static Type PS4 { get; } = null!;
+		public static Type PS5 { get; } = null!;
+		public static Type XboxOne { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Outline";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BorderMode";
+			return null!;
 		}
-		
-		public struct Middle : EnumItem
+	}
+	
+	public static class GearGenreSetting
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Middle";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BorderMode";
 		}
+		
+		public static Type AllGenres { get; } = null!;
+		public static Type MatchingGenreOnly { get; } = null!;
 		
-		public struct Inset : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Inset";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BorderMode";
+			return null!;
 		}
 	}
 	
-	public struct BreakReason
+	public static class GearType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Other : EnumItem
-		{
-			string EnumItem.Name => "Other";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BreakReason";
-		}
+		public static Type MeleeWeapons { get; } = null!;
+		public static Type RangedWeapons { get; } = null!;
+		public static Type Explosives { get; } = null!;
+		public static Type PowerUps { get; } = null!;
+		public static Type NavigationEnhancers { get; } = null!;
+		public static Type MusicalInstruments { get; } = null!;
+		public static Type SocialItems { get; } = null!;
+		public static Type BuildingTools { get; } = null!;
+		public static Type Transport { get; } = null!;
 		
-		public struct Error : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BreakReason";
+			return null!;
 		}
-		
-		public struct SpecialBreakpoint : EnumItem
+	}
+	
+	public static class Genre
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SpecialBreakpoint";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BreakReason";
 		}
 		
-		public struct UserBreakpoint : EnumItem
+		public static Type All { get; } = null!;
+		public static Type TownAndCity { get; } = null!;
+		public static Type Fantasy { get; } = null!;
+		public static Type SciFi { get; } = null!;
+		public static Type Ninja { get; } = null!;
+		public static Type Scary { get; } = null!;
+		public static Type Pirate { get; } = null!;
+		public static Type Adventure { get; } = null!;
+		public static Type Sports { get; } = null!;
+		public static Type Funny { get; } = null!;
+		public static Type WildWest { get; } = null!;
+		public static Type War { get; } = null!;
+		public static Type SkatePark { get; } = null!;
+		public static Type Tutorial { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UserBreakpoint";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "BreakReason";
+			return null!;
 		}
 	}
 	
-	public struct BreakpointRemoveReason
+	public static class GraphicsMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Automatic { get; } = null!;
+		public static Type Direct3D11 { get; } = null!;
+		public static Type OpenGL { get; } = null!;
+		public static Type Metal { get; } = null!;
+		public static Type Vulkan { get; } = null!;
+		public static Type NoGraphics { get; } = null!;
 		
-		public struct Requested : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Requested";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BreakpointRemoveReason";
+			return null!;
 		}
-		
-		public struct ScriptChanged : EnumItem
+	}
+	
+	public static class GuiState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ScriptChanged";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BreakpointRemoveReason";
 		}
 		
-		public struct ScriptRemoved : EnumItem
+		public static Type Idle { get; } = null!;
+		public static Type Hover { get; } = null!;
+		public static Type Press { get; } = null!;
+		public static Type NonInteractable { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ScriptRemoved";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BreakpointRemoveReason";
+			return null!;
 		}
 	}
 	
-	public struct BulkMoveMode
+	public static class GuiType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct FireAllEvents : EnumItem
-		{
-			string EnumItem.Name => "FireAllEvents";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "BulkMoveMode";
-		}
+		public static Type Core { get; } = null!;
+		public static Type Custom { get; } = null!;
+		public static Type PlayerNameplates { get; } = null!;
+		public static Type CustomBillboards { get; } = null!;
+		public static Type CoreBillboards { get; } = null!;
 		
-		public struct FireCFrameChanged : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FireCFrameChanged";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BulkMoveMode";
+			return null!;
 		}
 	}
 	
-	public struct BundleType
+	public static class HandlesStyle
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct BodyParts : EnumItem
-		{
-			string EnumItem.Name => "BodyParts";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "BundleType";
-		}
+		public static Type Resize { get; } = null!;
+		public static Type Movement { get; } = null!;
 		
-		public struct Animations : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Animations";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "BundleType";
+			return null!;
 		}
-		
-		public struct Shoes : EnumItem
+	}
+	
+	public static class HighlightDepthMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shoes";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "BundleType";
 		}
 		
-		public struct DynamicHead : EnumItem
-		{
-			string EnumItem.Name => "DynamicHead";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "BundleType";
-		}
+		public static Type AlwaysOnTop { get; } = null!;
+		public static Type Occluded { get; } = null!;
 		
-		public struct DynamicHeadAvatar : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "DynamicHeadAvatar";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "BundleType";
+			return null!;
 		}
 	}
 	
-	public struct Button
+	public static class HorizontalAlignment
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Jump : EnumItem
-		{
-			string EnumItem.Name => "Jump";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "Button";
-		}
+		public static Type Center { get; } = null!;
+		public static Type Left { get; } = null!;
+		public static Type Right { get; } = null!;
 		
-		public struct Dismount : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Dismount";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "Button";
+			return null!;
 		}
 	}
 	
-	public struct ButtonStyle
+	public static class HoverAnimateSpeed
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ButtonStyle";
-		}
+		public static Type VerySlow { get; } = null!;
+		public static Type Slow { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type Fast { get; } = null!;
+		public static Type VeryFast { get; } = null!;
 		
-		public struct RobloxButtonDefault : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RobloxButtonDefault";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ButtonStyle";
+			return null!;
 		}
-		
-		public struct RobloxButton : EnumItem
+	}
+	
+	public static class HttpCachePolicy
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RobloxButton";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ButtonStyle";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type Full { get; } = null!;
+		public static Type DataOnly { get; } = null!;
+		public static Type Default { get; } = null!;
+		public static Type InternalRedirectRefresh { get; } = null!;
 		
-		public struct RobloxRoundButton : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RobloxRoundButton";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ButtonStyle";
+			return null!;
 		}
-		
-		public struct RobloxRoundDefaultButton : EnumItem
+	}
+	
+	public static class HttpCompression
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RobloxRoundDefaultButton";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ButtonStyle";
 		}
 		
-		public struct RobloxRoundDropdownButton : EnumItem
+		public static Type None { get; } = null!;
+		public static Type Gzip { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RobloxRoundDropdownButton";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ButtonStyle";
+			return null!;
 		}
 	}
 	
-	public struct CSGAsyncDynamicCollision
+	public static class HttpContentType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type ApplicationJson { get; } = null!;
+		public static Type ApplicationXml { get; } = null!;
+		public static Type ApplicationUrlEncoded { get; } = null!;
+		public static Type TextPlain { get; } = null!;
+		public static Type TextXml { get; } = null!;
 		
-		public struct Default : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CSGAsyncDynamicCollision";
+			return null!;
 		}
-		
-		public struct Disabled : EnumItem
+	}
+	
+	public static class HttpError
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CSGAsyncDynamicCollision";
 		}
 		
-		public struct Experimental : EnumItem
+		public static Type OK { get; } = null!;
+		public static Type InvalidUrl { get; } = null!;
+		public static Type DnsResolve { get; } = null!;
+		public static Type ConnectFail { get; } = null!;
+		public static Type OutOfMemory { get; } = null!;
+		public static Type TimedOut { get; } = null!;
+		public static Type TooManyRedirects { get; } = null!;
+		public static Type InvalidRedirect { get; } = null!;
+		public static Type NetFail { get; } = null!;
+		public static Type Aborted { get; } = null!;
+		public static Type SslConnectFail { get; } = null!;
+		public static Type SslVerificationFail { get; } = null!;
+		public static Type Unknown { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Experimental";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CSGAsyncDynamicCollision";
+			return null!;
 		}
 	}
 	
-	public struct CageType
+	public static class HttpRequestType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Inner : EnumItem
-		{
-			string EnumItem.Name => "Inner";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CageType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type MarketplaceService { get; } = null!;
+		public static Type Players { get; } = null!;
+		public static Type Chat { get; } = null!;
+		public static Type Avatar { get; } = null!;
+		public static Type Analytics { get; } = null!;
+		public static Type Localization { get; } = null!;
 		
-		public struct Outer : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Outer";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CageType";
+			return null!;
 		}
 	}
 	
-	public struct CameraMode
+	public static class HumanoidCollisionType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CameraMode";
-		}
+		public static Type OuterBox { get; } = null!;
+		public static Type InnerBox { get; } = null!;
 		
-		public struct LockFirstPerson : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LockFirstPerson";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CameraMode";
+			return null!;
 		}
 	}
 	
-	public struct CameraPanMode
+	public static class HumanoidDisplayDistanceType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CameraPanMode";
-		}
+		public static Type Viewer { get; } = null!;
+		public static Type Subject { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct EdgeBump : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EdgeBump";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CameraPanMode";
+			return null!;
 		}
 	}
 	
-	public struct CameraSpeedAdjustBinding
+	public static class HumanoidHealthDisplayType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type DisplayWhenDamaged { get; } = null!;
+		public static Type AlwaysOn { get; } = null!;
+		public static Type AlwaysOff { get; } = null!;
 		
-		public struct None : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CameraSpeedAdjustBinding";
+			return null!;
 		}
-		
-		public struct RmbScroll : EnumItem
+	}
+	
+	public static class HumanoidRigType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RmbScroll";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CameraSpeedAdjustBinding";
 		}
 		
-		public struct AltScroll : EnumItem
+		public static Type R6 { get; } = null!;
+		public static Type R15 { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AltScroll";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CameraSpeedAdjustBinding";
+			return null!;
 		}
 	}
 	
-	public struct CameraType
+	public static class HumanoidStateType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Fixed : EnumItem
-		{
-			string EnumItem.Name => "Fixed";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CameraType";
-		}
+		public static Type FallingDown { get; } = null!;
+		public static Type Ragdoll { get; } = null!;
+		public static Type GettingUp { get; } = null!;
+		public static Type Jumping { get; } = null!;
+		public static Type Swimming { get; } = null!;
+		public static Type Freefall { get; } = null!;
+		public static Type Flying { get; } = null!;
+		public static Type Landed { get; } = null!;
+		public static Type Running { get; } = null!;
+		public static Type RunningNoPhysics { get; } = null!;
+		public static Type StrafingNoPhysics { get; } = null!;
+		public static Type Climbing { get; } = null!;
+		public static Type Seated { get; } = null!;
+		public static Type PlatformStanding { get; } = null!;
+		public static Type Dead { get; } = null!;
+		public static Type Physics { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct Attach : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Attach";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CameraType";
+			return null!;
 		}
-		
-		public struct Watch : EnumItem
+	}
+	
+	public static class IKCollisionsMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Watch";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CameraType";
 		}
 		
-		public struct Track : EnumItem
-		{
-			string EnumItem.Name => "Track";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CameraType";
-		}
+		public static Type NoCollisions { get; } = null!;
+		public static Type OtherMechanismsAnchored { get; } = null!;
+		public static Type IncludeContactedMechanisms { get; } = null!;
 		
-		public struct Follow : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CameraType";
+			return null!;
 		}
-		
-		public struct Custom : EnumItem
+	}
+	
+	public static class IKControlConstraintSupport
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CameraType";
 		}
 		
-		public struct Scriptable : EnumItem
-		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CameraType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct Orbital : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Orbital";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CameraType";
+			return null!;
 		}
 	}
 	
-	public struct CatalogCategoryFilter
+	public static class IKControlType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
-		}
+		public static Type Transform { get; } = null!;
+		public static Type Position { get; } = null!;
+		public static Type Rotation { get; } = null!;
+		public static Type LookAt { get; } = null!;
 		
-		public struct Featured : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Featured";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
+			return null!;
 		}
-		
-		public struct Collectibles : EnumItem
+	}
+	
+	public static class IXPLoadingStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Collectibles";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type Pending { get; } = null!;
+		public static Type Initialized { get; } = null!;
+		public static Type ErrorInvalidUser { get; } = null!;
+		public static Type ErrorConnection { get; } = null!;
+		public static Type ErrorJsonParse { get; } = null!;
+		public static Type ErrorTimedOut { get; } = null!;
 		
-		public struct CommunityCreations : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CommunityCreations";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
+			return null!;
 		}
-		
-		public struct Premium : EnumItem
+	}
+	
+	public static class ImageAlphaType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Premium";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
 		}
 		
-		public struct Recommended : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type LockCanvasAlpha { get; } = null!;
+		public static Type LockCanvasColor { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Recommended";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CatalogCategoryFilter";
+			return null!;
 		}
 	}
 	
-	public struct CatalogSortAggregation
+	public static class ImageCombineType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Past12Hours : EnumItem
-		{
-			string EnumItem.Name => "Past12Hours";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CatalogSortAggregation";
-		}
+		public static Type BlendSourceOver { get; } = null!;
+		public static Type Overwrite { get; } = null!;
+		public static Type Add { get; } = null!;
+		public static Type Multiply { get; } = null!;
+		public static Type AlphaBlend { get; } = null!;
 		
-		public struct PastDay : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PastDay";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CatalogSortAggregation";
+			return null!;
 		}
-		
-		public struct Past3Days : EnumItem
+	}
+	
+	public static class InOut
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Past3Days";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CatalogSortAggregation";
 		}
+		
+		public static Type Edge { get; } = null!;
+		public static Type Inset { get; } = null!;
+		public static Type Center { get; } = null!;
 		
-		public struct PastWeek : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PastWeek";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CatalogSortAggregation";
+			return null!;
 		}
-		
-		public struct PastMonth : EnumItem
+	}
+	
+	public static class InfoType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PastMonth";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CatalogSortAggregation";
 		}
 		
-		public struct AllTime : EnumItem
+		public static Type Asset { get; } = null!;
+		public static Type Product { get; } = null!;
+		public static Type GamePass { get; } = null!;
+		public static Type Subscription { get; } = null!;
+		public static Type Bundle { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AllTime";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CatalogSortAggregation";
+			return null!;
 		}
 	}
 	
-	public struct CatalogSortType
+	public static class InitialDockState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Relevance : EnumItem
-		{
-			string EnumItem.Name => "Relevance";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CatalogSortType";
-		}
+		public static Type Top { get; } = null!;
+		public static Type Bottom { get; } = null!;
+		public static Type Left { get; } = null!;
+		public static Type Right { get; } = null!;
+		public static Type Float { get; } = null!;
 		
-		public struct PriceHighToLow : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PriceHighToLow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CatalogSortType";
+			return null!;
 		}
-		
-		public struct PriceLowToHigh : EnumItem
+	}
+	
+	public static class InputType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PriceLowToHigh";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CatalogSortType";
 		}
+		
+		public static Type NoInput { get; } = null!;
+		public static Type Constant { get; } = null!;
+		public static Type Sin { get; } = null!;
 		
-		public struct MostFavorited : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "MostFavorited";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CatalogSortType";
+			return null!;
 		}
-		
-		public struct RecentlyCreated : EnumItem
+	}
+	
+	public static class InterpolationThrottlingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RecentlyCreated";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CatalogSortType";
 		}
 		
-		public struct Bestselling : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bestselling";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CatalogSortType";
+			return null!;
 		}
 	}
 	
-	public struct CellBlock
+	public static class InviteState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Solid : EnumItem
-		{
-			string EnumItem.Name => "Solid";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CellBlock";
-		}
+		public static Type Placed { get; } = null!;
+		public static Type Accepted { get; } = null!;
+		public static Type Declined { get; } = null!;
+		public static Type Missed { get; } = null!;
 		
-		public struct VerticalWedge : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "VerticalWedge";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CellBlock";
+			return null!;
 		}
-		
-		public struct CornerWedge : EnumItem
+	}
+	
+	public static class ItemLineAlignment
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "CornerWedge";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CellBlock";
 		}
 		
-		public struct InverseCornerWedge : EnumItem
-		{
-			string EnumItem.Name => "InverseCornerWedge";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CellBlock";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type Start { get; } = null!;
+		public static Type Center { get; } = null!;
+		public static Type End { get; } = null!;
+		public static Type Stretch { get; } = null!;
 		
-		public struct HorizontalWedge : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HorizontalWedge";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CellBlock";
+			return null!;
 		}
 	}
 	
-	public struct CellMaterial
+	public static class JoinSource
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Empty : EnumItem
-		{
-			string EnumItem.Name => "Empty";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type CreatedItemAttribution { get; } = null!;
 		
-		public struct Grass : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Grass";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
-		
-		public struct Sand : EnumItem
+	}
+	
+	public static class JointCreationMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Sand";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CellMaterial";
 		}
 		
-		public struct Brick : EnumItem
-		{
-			string EnumItem.Name => "Brick";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CellMaterial";
-		}
-		
-		public struct Granite : EnumItem
-		{
-			string EnumItem.Name => "Granite";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type All { get; } = null!;
+		public static Type Surface { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct Asphalt : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Asphalt";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
-		
-		public struct Iron : EnumItem
+	}
+	
+	public static class KeyCode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Iron";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CellMaterial";
 		}
 		
-		public struct Aluminum : EnumItem
-		{
-			string EnumItem.Name => "Aluminum";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Backspace { get; } = null!;
+		public static Type Tab { get; } = null!;
+		public static Type Clear { get; } = null!;
+		public static Type Return { get; } = null!;
+		public static Type Pause { get; } = null!;
+		public static Type Escape { get; } = null!;
+		public static Type Space { get; } = null!;
+		public static Type QuotedDouble { get; } = null!;
+		public static Type Hash { get; } = null!;
+		public static Type Dollar { get; } = null!;
+		public static Type Percent { get; } = null!;
+		public static Type Ampersand { get; } = null!;
+		public static Type Quote { get; } = null!;
+		public static Type LeftParenthesis { get; } = null!;
+		public static Type RightParenthesis { get; } = null!;
+		public static Type Asterisk { get; } = null!;
+		public static Type Plus { get; } = null!;
+		public static Type Comma { get; } = null!;
+		public static Type Minus { get; } = null!;
+		public static Type Period { get; } = null!;
+		public static Type Slash { get; } = null!;
+		public static Type Zero { get; } = null!;
+		public static Type One { get; } = null!;
+		public static Type Two { get; } = null!;
+		public static Type Three { get; } = null!;
+		public static Type Four { get; } = null!;
+		public static Type Five { get; } = null!;
+		public static Type Six { get; } = null!;
+		public static Type Seven { get; } = null!;
+		public static Type Eight { get; } = null!;
+		public static Type Nine { get; } = null!;
+		public static Type Colon { get; } = null!;
+		public static Type Semicolon { get; } = null!;
+		public static Type LessThan { get; } = null!;
+		public static Type Equals { get; } = null!;
+		public static Type GreaterThan { get; } = null!;
+		public static Type Question { get; } = null!;
+		public static Type At { get; } = null!;
+		public static Type LeftBracket { get; } = null!;
+		public static Type BackSlash { get; } = null!;
+		public static Type RightBracket { get; } = null!;
+		public static Type Caret { get; } = null!;
+		public static Type Underscore { get; } = null!;
+		public static Type Backquote { get; } = null!;
+		public static Type A { get; } = null!;
+		public static Type B { get; } = null!;
+		public static Type C { get; } = null!;
+		public static Type D { get; } = null!;
+		public static Type E { get; } = null!;
+		public static Type F { get; } = null!;
+		public static Type G { get; } = null!;
+		public static Type H { get; } = null!;
+		public static Type I { get; } = null!;
+		public static Type J { get; } = null!;
+		public static Type K { get; } = null!;
+		public static Type L { get; } = null!;
+		public static Type M { get; } = null!;
+		public static Type N { get; } = null!;
+		public static Type O { get; } = null!;
+		public static Type P { get; } = null!;
+		public static Type Q { get; } = null!;
+		public static Type R { get; } = null!;
+		public static Type S { get; } = null!;
+		public static Type T { get; } = null!;
+		public static Type U { get; } = null!;
+		public static Type V { get; } = null!;
+		public static Type W { get; } = null!;
+		public static Type X { get; } = null!;
+		public static Type Y { get; } = null!;
+		public static Type Z { get; } = null!;
+		public static Type LeftCurly { get; } = null!;
+		public static Type Pipe { get; } = null!;
+		public static Type RightCurly { get; } = null!;
+		public static Type Tilde { get; } = null!;
+		public static Type Delete { get; } = null!;
+		public static Type World0 { get; } = null!;
+		public static Type World1 { get; } = null!;
+		public static Type World2 { get; } = null!;
+		public static Type World3 { get; } = null!;
+		public static Type World4 { get; } = null!;
+		public static Type World5 { get; } = null!;
+		public static Type World6 { get; } = null!;
+		public static Type World7 { get; } = null!;
+		public static Type World8 { get; } = null!;
+		public static Type World9 { get; } = null!;
+		public static Type World10 { get; } = null!;
+		public static Type World11 { get; } = null!;
+		public static Type World12 { get; } = null!;
+		public static Type World13 { get; } = null!;
+		public static Type World14 { get; } = null!;
+		public static Type World15 { get; } = null!;
+		public static Type World16 { get; } = null!;
+		public static Type World17 { get; } = null!;
+		public static Type World18 { get; } = null!;
+		public static Type World19 { get; } = null!;
+		public static Type World20 { get; } = null!;
+		public static Type World21 { get; } = null!;
+		public static Type World22 { get; } = null!;
+		public static Type World23 { get; } = null!;
+		public static Type World24 { get; } = null!;
+		public static Type World25 { get; } = null!;
+		public static Type World26 { get; } = null!;
+		public static Type World27 { get; } = null!;
+		public static Type World28 { get; } = null!;
+		public static Type World29 { get; } = null!;
+		public static Type World30 { get; } = null!;
+		public static Type World31 { get; } = null!;
+		public static Type World32 { get; } = null!;
+		public static Type World33 { get; } = null!;
+		public static Type World34 { get; } = null!;
+		public static Type World35 { get; } = null!;
+		public static Type World36 { get; } = null!;
+		public static Type World37 { get; } = null!;
+		public static Type World38 { get; } = null!;
+		public static Type World39 { get; } = null!;
+		public static Type World40 { get; } = null!;
+		public static Type World41 { get; } = null!;
+		public static Type World42 { get; } = null!;
+		public static Type World43 { get; } = null!;
+		public static Type World44 { get; } = null!;
+		public static Type World45 { get; } = null!;
+		public static Type World46 { get; } = null!;
+		public static Type World47 { get; } = null!;
+		public static Type World48 { get; } = null!;
+		public static Type World49 { get; } = null!;
+		public static Type World50 { get; } = null!;
+		public static Type World51 { get; } = null!;
+		public static Type World52 { get; } = null!;
+		public static Type World53 { get; } = null!;
+		public static Type World54 { get; } = null!;
+		public static Type World55 { get; } = null!;
+		public static Type World56 { get; } = null!;
+		public static Type World57 { get; } = null!;
+		public static Type World58 { get; } = null!;
+		public static Type World59 { get; } = null!;
+		public static Type World60 { get; } = null!;
+		public static Type World61 { get; } = null!;
+		public static Type World62 { get; } = null!;
+		public static Type World63 { get; } = null!;
+		public static Type World64 { get; } = null!;
+		public static Type World65 { get; } = null!;
+		public static Type World66 { get; } = null!;
+		public static Type World67 { get; } = null!;
+		public static Type World68 { get; } = null!;
+		public static Type World69 { get; } = null!;
+		public static Type World70 { get; } = null!;
+		public static Type World71 { get; } = null!;
+		public static Type World72 { get; } = null!;
+		public static Type World73 { get; } = null!;
+		public static Type World74 { get; } = null!;
+		public static Type World75 { get; } = null!;
+		public static Type World76 { get; } = null!;
+		public static Type World77 { get; } = null!;
+		public static Type World78 { get; } = null!;
+		public static Type World79 { get; } = null!;
+		public static Type World80 { get; } = null!;
+		public static Type World81 { get; } = null!;
+		public static Type World82 { get; } = null!;
+		public static Type World83 { get; } = null!;
+		public static Type World84 { get; } = null!;
+		public static Type World85 { get; } = null!;
+		public static Type World86 { get; } = null!;
+		public static Type World87 { get; } = null!;
+		public static Type World88 { get; } = null!;
+		public static Type World89 { get; } = null!;
+		public static Type World90 { get; } = null!;
+		public static Type World91 { get; } = null!;
+		public static Type World92 { get; } = null!;
+		public static Type World93 { get; } = null!;
+		public static Type World94 { get; } = null!;
+		public static Type World95 { get; } = null!;
+		public static Type KeypadZero { get; } = null!;
+		public static Type KeypadOne { get; } = null!;
+		public static Type KeypadTwo { get; } = null!;
+		public static Type KeypadThree { get; } = null!;
+		public static Type KeypadFour { get; } = null!;
+		public static Type KeypadFive { get; } = null!;
+		public static Type KeypadSix { get; } = null!;
+		public static Type KeypadSeven { get; } = null!;
+		public static Type KeypadEight { get; } = null!;
+		public static Type KeypadNine { get; } = null!;
+		public static Type KeypadPeriod { get; } = null!;
+		public static Type KeypadDivide { get; } = null!;
+		public static Type KeypadMultiply { get; } = null!;
+		public static Type KeypadMinus { get; } = null!;
+		public static Type KeypadPlus { get; } = null!;
+		public static Type KeypadEnter { get; } = null!;
+		public static Type KeypadEquals { get; } = null!;
+		public static Type Up { get; } = null!;
+		public static Type Down { get; } = null!;
+		public static Type Right { get; } = null!;
+		public static Type Left { get; } = null!;
+		public static Type Insert { get; } = null!;
+		public static Type Home { get; } = null!;
+		public static Type End { get; } = null!;
+		public static Type PageUp { get; } = null!;
+		public static Type PageDown { get; } = null!;
+		public static Type F1 { get; } = null!;
+		public static Type F2 { get; } = null!;
+		public static Type F3 { get; } = null!;
+		public static Type F4 { get; } = null!;
+		public static Type F5 { get; } = null!;
+		public static Type F6 { get; } = null!;
+		public static Type F7 { get; } = null!;
+		public static Type F8 { get; } = null!;
+		public static Type F9 { get; } = null!;
+		public static Type F10 { get; } = null!;
+		public static Type F11 { get; } = null!;
+		public static Type F12 { get; } = null!;
+		public static Type F13 { get; } = null!;
+		public static Type F14 { get; } = null!;
+		public static Type F15 { get; } = null!;
+		public static Type NumLock { get; } = null!;
+		public static Type CapsLock { get; } = null!;
+		public static Type ScrollLock { get; } = null!;
+		public static Type RightShift { get; } = null!;
+		public static Type LeftShift { get; } = null!;
+		public static Type RightControl { get; } = null!;
+		public static Type LeftControl { get; } = null!;
+		public static Type RightAlt { get; } = null!;
+		public static Type LeftAlt { get; } = null!;
+		public static Type RightMeta { get; } = null!;
+		public static Type LeftMeta { get; } = null!;
+		public static Type LeftSuper { get; } = null!;
+		public static Type RightSuper { get; } = null!;
+		public static Type Mode { get; } = null!;
+		public static Type Compose { get; } = null!;
+		public static Type Help { get; } = null!;
+		public static Type Print { get; } = null!;
+		public static Type SysReq { get; } = null!;
+		public static Type Break { get; } = null!;
+		public static Type Menu { get; } = null!;
+		public static Type Power { get; } = null!;
+		public static Type Euro { get; } = null!;
+		public static Type Undo { get; } = null!;
+		public static Type ButtonX { get; } = null!;
+		public static Type ButtonY { get; } = null!;
+		public static Type ButtonA { get; } = null!;
+		public static Type ButtonB { get; } = null!;
+		public static Type ButtonR1 { get; } = null!;
+		public static Type ButtonL1 { get; } = null!;
+		public static Type ButtonR2 { get; } = null!;
+		public static Type ButtonL2 { get; } = null!;
+		public static Type ButtonR3 { get; } = null!;
+		public static Type ButtonL3 { get; } = null!;
+		public static Type ButtonStart { get; } = null!;
+		public static Type ButtonSelect { get; } = null!;
+		public static Type DPadLeft { get; } = null!;
+		public static Type DPadRight { get; } = null!;
+		public static Type DPadUp { get; } = null!;
+		public static Type DPadDown { get; } = null!;
+		public static Type Thumbstick1 { get; } = null!;
+		public static Type Thumbstick2 { get; } = null!;
+		public static Type MouseLeftButton { get; } = null!;
+		public static Type MouseRightButton { get; } = null!;
+		public static Type MouseMiddleButton { get; } = null!;
+		public static Type MouseBackButton { get; } = null!;
+		public static Type MouseNoButton { get; } = null!;
+		public static Type MouseX { get; } = null!;
+		public static Type MouseY { get; } = null!;
 		
-		public struct Gold : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gold";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
-		
-		public struct WoodPlank : EnumItem
+	}
+	
+	public static class KeyInterpolationMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "WoodPlank";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "CellMaterial";
 		}
 		
-		public struct WoodLog : EnumItem
-		{
-			string EnumItem.Name => "WoodLog";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type Constant { get; } = null!;
+		public static Type Linear { get; } = null!;
+		public static Type Cubic { get; } = null!;
 		
-		public struct Gravel : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gravel";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
-		
-		public struct CinderBlock : EnumItem
+	}
+	
+	public static class KeywordFilterType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "CinderBlock";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "CellMaterial";
 		}
 		
-		public struct MossyStone : EnumItem
-		{
-			string EnumItem.Name => "MossyStone";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type Include { get; } = null!;
+		public static Type Exclude { get; } = null!;
 		
-		public struct Cement : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Cement";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
-		
-		public struct RedPlastic : EnumItem
+	}
+	
+	public static class Language
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RedPlastic";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "CellMaterial";
 		}
 		
-		public struct BluePlastic : EnumItem
-		{
-			string EnumItem.Name => "BluePlastic";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "CellMaterial";
-		}
+		public static Type Default { get; } = null!;
 		
-		public struct Water : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Water";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "CellMaterial";
+			return null!;
 		}
 	}
 	
-	public struct CellOrientation
+	public static class LeftRight
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
-		}
-		
-		public struct NegZ : EnumItem
-		{
-			string EnumItem.Name => "NegZ";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CellOrientation";
 		}
 		
-		public struct X : EnumItem
-		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CellOrientation";
-		}
-		
-		public struct Z : EnumItem
-		{
-			string EnumItem.Name => "Z";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CellOrientation";
-		}
+		public static Type Left { get; } = null!;
+		public static Type Center { get; } = null!;
+		public static Type Right { get; } = null!;
 		
-		public struct NegX : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NegX";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CellOrientation";
+			return null!;
 		}
 	}
 	
-	public struct CenterDialogType
+	public static class Limb
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct UnsolicitedDialog : EnumItem
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "UnsolicitedDialog";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CenterDialogType";
 		}
 		
-		public struct PlayerInitiatedDialog : EnumItem
-		{
-			string EnumItem.Name => "PlayerInitiatedDialog";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CenterDialogType";
-		}
-		
-		public struct ModalDialog : EnumItem
-		{
-			string EnumItem.Name => "ModalDialog";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CenterDialogType";
-		}
+		public static Type Head { get; } = null!;
+		public static Type Torso { get; } = null!;
+		public static Type LeftArm { get; } = null!;
+		public static Type RightArm { get; } = null!;
+		public static Type LeftLeg { get; } = null!;
+		public static Type RightLeg { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct QuitDialog : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "QuitDialog";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CenterDialogType";
+			return null!;
 		}
 	}
 	
-	public struct CharacterControlMode
+	public static class LineJoinMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CharacterControlMode";
-		}
+		public static Type Round { get; } = null!;
+		public static Type Bevel { get; } = null!;
+		public static Type Miter { get; } = null!;
 		
-		public struct Legacy : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CharacterControlMode";
+			return null!;
 		}
-		
-		public struct NoCharacterController : EnumItem
+	}
+	
+	public static class ListDisplayMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "NoCharacterController";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CharacterControlMode";
 		}
+		
+		public static Type Horizontal { get; } = null!;
+		public static Type Vertical { get; } = null!;
 		
-		public struct LuaCharacterController : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LuaCharacterController";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CharacterControlMode";
+			return null!;
 		}
 	}
 	
-	public struct ChatCallbackType
+	public static class ListenerType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct OnCreatingChatWindow : EnumItem
-		{
-			string EnumItem.Name => "OnCreatingChatWindow";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatCallbackType";
-		}
+		public static Type Camera { get; } = null!;
+		public static Type CFrame { get; } = null!;
+		public static Type ObjectPosition { get; } = null!;
+		public static Type ObjectCFrame { get; } = null!;
 		
-		public struct OnClientSendingMessage : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OnClientSendingMessage";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ChatCallbackType";
+			return null!;
 		}
-		
-		public struct OnClientFormattingMessage : EnumItem
+	}
+	
+	public static class LiveEditingAtomicUpdateResponse
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "OnClientFormattingMessage";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ChatCallbackType";
 		}
 		
-		public struct OnServerReceivingMessage : EnumItem
+		public static Type Success { get; } = null!;
+		public static Type FailureGuidNotFound { get; } = null!;
+		public static Type FailureHashMismatch { get; } = null!;
+		public static Type FailureOperationIllegal { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OnServerReceivingMessage";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "ChatCallbackType";
+			return null!;
 		}
 	}
 	
-	public struct ChatColor
+	public static class LiveEditingBroadcastMessageType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Blue : EnumItem
-		{
-			string EnumItem.Name => "Blue";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ChatColor";
-		}
+		public static Type Normal { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Error { get; } = null!;
 		
-		public struct Green : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Green";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatColor";
+			return null!;
 		}
-		
-		public struct Red : EnumItem
+	}
+	
+	public static class LoadCharacterLayeredClothing
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Red";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ChatColor";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct White : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "White";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ChatColor";
+			return null!;
 		}
 	}
 	
-	public struct ChatMode
+	public static class LoadDynamicHeads
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Menu : EnumItem
-		{
-			string EnumItem.Name => "Menu";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ChatMode";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct TextAndMenu : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TextAndMenu";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatMode";
+			return null!;
 		}
 	}
 	
-	public struct ChatPrivacyMode
+	public static class MarketplaceBulkPurchasePromptStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct AllUsers : EnumItem
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AllUsers";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ChatPrivacyMode";
 		}
 		
-		public struct NoOne : EnumItem
-		{
-			string EnumItem.Name => "NoOne";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatPrivacyMode";
-		}
+		public static Type Completed { get; } = null!;
+		public static Type Aborted { get; } = null!;
+		public static Type Error { get; } = null!;
 		
-		public struct Friends : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Friends";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ChatPrivacyMode";
+			return null!;
 		}
 	}
 	
-	public struct ChatStyle
+	public static class MarketplaceItemPurchaseStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Classic : EnumItem
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ChatStyle";
 		}
 		
-		public struct Bubble : EnumItem
-		{
-			string EnumItem.Name => "Bubble";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatStyle";
-		}
+		public static Type Success { get; } = null!;
+		public static Type SystemError { get; } = null!;
+		public static Type AlreadyOwned { get; } = null!;
+		public static Type InsufficientRobux { get; } = null!;
+		public static Type QuantityLimitExceeded { get; } = null!;
+		public static Type QuotaExceeded { get; } = null!;
+		public static Type NotForSale { get; } = null!;
+		public static Type NotAvailableForPurchaser { get; } = null!;
+		public static Type PriceMismatch { get; } = null!;
+		public static Type SoldOut { get; } = null!;
+		public static Type PurchaserIsSeller { get; } = null!;
+		public static Type InsufficientMembership { get; } = null!;
+		public static Type PlaceInvalid { get; } = null!;
 		
-		public struct ClassicAndBubble : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ClassicAndBubble";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ChatStyle";
+			return null!;
 		}
 	}
 	
-	public struct ChatVersion
+	public static class MarketplaceProductType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct LegacyChatService : EnumItem
-		{
-			string EnumItem.Name => "LegacyChatService";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ChatVersion";
-		}
+		public static Type AvatarAsset { get; } = null!;
+		public static Type AvatarBundle { get; } = null!;
 		
-		public struct TextChatService : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TextChatService";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ChatVersion";
+			return null!;
 		}
 	}
 	
-	public struct ClientAnimatorThrottlingMode
+	public static class MarkupKind
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ClientAnimatorThrottlingMode";
 		}
 		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ClientAnimatorThrottlingMode";
-		}
+		public static Type PlainText { get; } = null!;
+		public static Type Markdown { get; } = null!;
 		
-		public struct Enabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ClientAnimatorThrottlingMode";
+			return null!;
 		}
 	}
 	
-	public struct CollaboratorStatus
+	public static class Material
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CollaboratorStatus";
-		}
+		public static Type Plastic { get; } = null!;
+		public static Type SmoothPlastic { get; } = null!;
+		public static Type Neon { get; } = null!;
+		public static Type Wood { get; } = null!;
+		public static Type WoodPlanks { get; } = null!;
+		public static Type Marble { get; } = null!;
+		public static Type Slate { get; } = null!;
+		public static Type Concrete { get; } = null!;
+		public static Type Granite { get; } = null!;
+		public static Type Brick { get; } = null!;
+		public static Type Pebble { get; } = null!;
+		public static Type Cobblestone { get; } = null!;
+		public static Type Rock { get; } = null!;
+		public static Type Sandstone { get; } = null!;
+		public static Type Basalt { get; } = null!;
+		public static Type CrackedLava { get; } = null!;
+		public static Type Limestone { get; } = null!;
+		public static Type Pavement { get; } = null!;
+		public static Type CorrodedMetal { get; } = null!;
+		public static Type DiamondPlate { get; } = null!;
+		public static Type Foil { get; } = null!;
+		public static Type Metal { get; } = null!;
+		public static Type Grass { get; } = null!;
+		public static Type LeafyGrass { get; } = null!;
+		public static Type Sand { get; } = null!;
+		public static Type Fabric { get; } = null!;
+		public static Type Snow { get; } = null!;
+		public static Type Mud { get; } = null!;
+		public static Type Ground { get; } = null!;
+		public static Type Asphalt { get; } = null!;
+		public static Type Salt { get; } = null!;
+		public static Type Ice { get; } = null!;
+		public static Type Glacier { get; } = null!;
+		public static Type Glass { get; } = null!;
+		public static Type ForceField { get; } = null!;
+		public static Type Air { get; } = null!;
+		public static Type Water { get; } = null!;
+		public static Type Cardboard { get; } = null!;
+		public static Type Carpet { get; } = null!;
+		public static Type CeramicTiles { get; } = null!;
+		public static Type ClayRoofTiles { get; } = null!;
+		public static Type RoofShingles { get; } = null!;
+		public static Type Leather { get; } = null!;
+		public static Type Plaster { get; } = null!;
+		public static Type Rubber { get; } = null!;
 		
-		public struct Editing3D : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Editing3D";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CollaboratorStatus";
+			return null!;
 		}
-		
-		public struct Scripting : EnumItem
+	}
+	
+	public static class MaterialPattern
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Scripting";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CollaboratorStatus";
 		}
+		
+		public static Type Regular { get; } = null!;
+		public static Type Organic { get; } = null!;
 		
-		public struct PrivateScripting : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PrivateScripting";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CollaboratorStatus";
+			return null!;
 		}
 	}
 	
-	public struct CollisionFidelity
+	public static class MembershipType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CollisionFidelity";
-		}
+		public static Type None { get; } = null!;
+		public static Type BuildersClub { get; } = null!;
+		public static Type TurboBuildersClub { get; } = null!;
+		public static Type OutrageousBuildersClub { get; } = null!;
+		public static Type Premium { get; } = null!;
 		
-		public struct Hull : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hull";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CollisionFidelity";
+			return null!;
 		}
-		
-		public struct Box : EnumItem
+	}
+	
+	public static class MeshPartDetailLevel
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Box";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CollisionFidelity";
 		}
 		
-		public struct PreciseConvexDecomposition : EnumItem
+		public static Type DistanceBased { get; } = null!;
+		public static Type Level00 { get; } = null!;
+		public static Type Level01 { get; } = null!;
+		public static Type Level02 { get; } = null!;
+		public static Type Level03 { get; } = null!;
+		public static Type Level04 { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PreciseConvexDecomposition";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CollisionFidelity";
+			return null!;
 		}
 	}
 	
-	public struct CommandPermission
+	public static class MeshPartHeadsAndAccessories
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Plugin : EnumItem
-		{
-			string EnumItem.Name => "Plugin";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CommandPermission";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct LocalUser : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LocalUser";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CommandPermission";
+			return null!;
 		}
 	}
 	
-	public struct CompileTarget
+	public static class MeshScaleUnit
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Client : EnumItem
-		{
-			string EnumItem.Name => "Client";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CompileTarget";
-		}
+		public static Type Stud { get; } = null!;
+		public static Type Meter { get; } = null!;
+		public static Type CM { get; } = null!;
+		public static Type MM { get; } = null!;
+		public static Type Foot { get; } = null!;
+		public static Type Inch { get; } = null!;
 		
-		public struct CoreScript : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CoreScript";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CompileTarget";
+			return null!;
 		}
-		
-		public struct Studio : EnumItem
+	}
+	
+	public static class MeshType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Studio";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CompileTarget";
 		}
+		
+		public static Type Head { get; } = null!;
+		public static Type Torso { get; } = null!;
+		public static Type Wedge { get; } = null!;
+		public static Type Sphere { get; } = null!;
+		public static Type Cylinder { get; } = null!;
+		public static Type FileMesh { get; } = null!;
+		public static Type Brick { get; } = null!;
+		public static Type Prism { get; } = null!;
+		public static Type Pyramid { get; } = null!;
+		public static Type ParallelRamp { get; } = null!;
+		public static Type RightAngleRamp { get; } = null!;
+		public static Type CornerWedge { get; } = null!;
 		
-		public struct CoreScriptRaw : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CoreScriptRaw";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CompileTarget";
+			return null!;
 		}
 	}
 	
-	public struct CompletionItemKind
+	public static class MessageType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Text : EnumItem
-		{
-			string EnumItem.Name => "Text";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type MessageOutput { get; } = null!;
+		public static Type MessageInfo { get; } = null!;
+		public static Type MessageWarning { get; } = null!;
+		public static Type MessageError { get; } = null!;
 		
-		public struct Method : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Method";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Function : EnumItem
+	}
+	
+	public static class ModelLevelOfDetail
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Function";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Constructor : EnumItem
-		{
-			string EnumItem.Name => "Constructor";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type StreamingMesh { get; } = null!;
+		public static Type Disabled { get; } = null!;
 		
-		public struct Field : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Field";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Variable : EnumItem
+	}
+	
+	public static class ModelStreamingBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Variable";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Class : EnumItem
-		{
-			string EnumItem.Name => "Class";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Legacy { get; } = null!;
+		public static Type Improved { get; } = null!;
 		
-		public struct Interface : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Interface";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Module : EnumItem
+	}
+	
+	public static class ModelStreamingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Module";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Property : EnumItem
-		{
-			string EnumItem.Name => "Property";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Atomic { get; } = null!;
+		public static Type Persistent { get; } = null!;
+		public static Type PersistentPerPlayer { get; } = null!;
+		public static Type Nonatomic { get; } = null!;
 		
-		public struct Unit : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unit";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Value : EnumItem
+	}
+	
+	public static class ModerationStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Value";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Enum : EnumItem
-		{
-			string EnumItem.Name => "Enum";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type ReviewedApproved { get; } = null!;
+		public static Type ReviewedRejected { get; } = null!;
+		public static Type NotReviewed { get; } = null!;
+		public static Type NotApplicable { get; } = null!;
+		public static Type Invalid { get; } = null!;
 		
-		public struct Keyword : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Keyword";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Snippet : EnumItem
+	}
+	
+	public static class ModifierKey
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Snippet";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Color : EnumItem
-		{
-			string EnumItem.Name => "Color";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Shift { get; } = null!;
+		public static Type Ctrl { get; } = null!;
+		public static Type Alt { get; } = null!;
+		public static Type Meta { get; } = null!;
 		
-		public struct File : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "File";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Reference : EnumItem
+	}
+	
+	public static class MouseBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Reference";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Folder : EnumItem
-		{
-			string EnumItem.Name => "Folder";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Default { get; } = null!;
+		public static Type LockCenter { get; } = null!;
+		public static Type LockCurrentPosition { get; } = null!;
 		
-		public struct EnumMember : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EnumMember";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Constant : EnumItem
+	}
+	
+	public static class MoveState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Constant";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct Struct : EnumItem
-		{
-			string EnumItem.Name => "Struct";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "CompletionItemKind";
-		}
+		public static Type Stopped { get; } = null!;
+		public static Type Coasting { get; } = null!;
+		public static Type Pushing { get; } = null!;
+		public static Type Stopping { get; } = null!;
+		public static Type AirFree { get; } = null!;
 		
-		public struct Event : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Event";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
-		
-		public struct Operator : EnumItem
+	}
+	
+	public static class MoverConstraintRootBehaviorMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Operator";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "CompletionItemKind";
 		}
 		
-		public struct TypeParameter : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TypeParameter";
-			uint EnumItem.Value => 25;
-			string EnumItem.EnumType => "CompletionItemKind";
+			return null!;
 		}
 	}
 	
-	public struct CompletionItemTag
+	public static class MuteState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Deprecated : EnumItem
-		{
-			string EnumItem.Name => "Deprecated";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct IncorrectIndexType : EnumItem
-		{
-			string EnumItem.Name => "IncorrectIndexType";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct PluginPermissions : EnumItem
-		{
-			string EnumItem.Name => "PluginPermissions";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct CommandLinePermissions : EnumItem
-		{
-			string EnumItem.Name => "CommandLinePermissions";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct RobloxPermissions : EnumItem
-		{
-			string EnumItem.Name => "RobloxPermissions";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct AddParens : EnumItem
-		{
-			string EnumItem.Name => "AddParens";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct PutCursorInParens : EnumItem
-		{
-			string EnumItem.Name => "PutCursorInParens";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct TypeCorrect : EnumItem
-		{
-			string EnumItem.Name => "TypeCorrect";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct ClientServerBoundaryViolation : EnumItem
-		{
-			string EnumItem.Name => "ClientServerBoundaryViolation";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct Invalidated : EnumItem
-		{
-			string EnumItem.Name => "Invalidated";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-		
-		public struct PutCursorBeforeEnd : EnumItem
-		{
-			string EnumItem.Name => "PutCursorBeforeEnd";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "CompletionItemTag";
-		}
-	}
-	
-	public struct CompletionTriggerKind
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Invoked : EnumItem
-		{
-			string EnumItem.Name => "Invoked";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CompletionTriggerKind";
-		}
-		
-		public struct TriggerCharacter : EnumItem
-		{
-			string EnumItem.Name => "TriggerCharacter";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CompletionTriggerKind";
-		}
-		
-		public struct TriggerForIncompleteCompletions : EnumItem
-		{
-			string EnumItem.Name => "TriggerForIncompleteCompletions";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CompletionTriggerKind";
-		}
-	}
-	
-	public struct ComputerCameraMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ComputerCameraMovementMode";
-		}
-		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ComputerCameraMovementMode";
-		}
-		
-		public struct Follow : EnumItem
-		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ComputerCameraMovementMode";
-		}
-		
-		public struct Orbital : EnumItem
-		{
-			string EnumItem.Name => "Orbital";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ComputerCameraMovementMode";
-		}
-		
-		public struct CameraToggle : EnumItem
-		{
-			string EnumItem.Name => "CameraToggle";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ComputerCameraMovementMode";
-		}
-	}
-	
-	public struct ComputerMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ComputerMovementMode";
-		}
-		
-		public struct KeyboardMouse : EnumItem
-		{
-			string EnumItem.Name => "KeyboardMouse";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ComputerMovementMode";
-		}
-		
-		public struct ClickToMove : EnumItem
-		{
-			string EnumItem.Name => "ClickToMove";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ComputerMovementMode";
-		}
-	}
-	
-	public struct ConnectionError
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OK : EnumItem
-		{
-			string EnumItem.Name => "OK";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectErrors : EnumItem
-		{
-			string EnumItem.Name => "DisconnectErrors";
-			uint EnumItem.Value => 256;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectBadhash : EnumItem
-		{
-			string EnumItem.Name => "DisconnectBadhash";
-			uint EnumItem.Value => 257;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectSecurityKeyMismatch : EnumItem
-		{
-			string EnumItem.Name => "DisconnectSecurityKeyMismatch";
-			uint EnumItem.Value => 258;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectProtocolMismatch : EnumItem
-		{
-			string EnumItem.Name => "DisconnectProtocolMismatch";
-			uint EnumItem.Value => 259;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectReceivePacketError : EnumItem
-		{
-			string EnumItem.Name => "DisconnectReceivePacketError";
-			uint EnumItem.Value => 260;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectReceivePacketStreamError : EnumItem
-		{
-			string EnumItem.Name => "DisconnectReceivePacketStreamError";
-			uint EnumItem.Value => 261;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectSendPacketError : EnumItem
-		{
-			string EnumItem.Name => "DisconnectSendPacketError";
-			uint EnumItem.Value => 262;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectIllegalTeleport : EnumItem
-		{
-			string EnumItem.Name => "DisconnectIllegalTeleport";
-			uint EnumItem.Value => 263;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectDuplicatePlayer : EnumItem
-		{
-			string EnumItem.Name => "DisconnectDuplicatePlayer";
-			uint EnumItem.Value => 264;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectDuplicateTicket : EnumItem
-		{
-			string EnumItem.Name => "DisconnectDuplicateTicket";
-			uint EnumItem.Value => 265;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectTimeout : EnumItem
-		{
-			string EnumItem.Name => "DisconnectTimeout";
-			uint EnumItem.Value => 266;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectLuaKick : EnumItem
-		{
-			string EnumItem.Name => "DisconnectLuaKick";
-			uint EnumItem.Value => 267;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectOnRemoteSysStats : EnumItem
-		{
-			string EnumItem.Name => "DisconnectOnRemoteSysStats";
-			uint EnumItem.Value => 268;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectHashTimeout : EnumItem
-		{
-			string EnumItem.Name => "DisconnectHashTimeout";
-			uint EnumItem.Value => 269;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectCloudEditKick : EnumItem
-		{
-			string EnumItem.Name => "DisconnectCloudEditKick";
-			uint EnumItem.Value => 270;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectPlayerless : EnumItem
-		{
-			string EnumItem.Name => "DisconnectPlayerless";
-			uint EnumItem.Value => 271;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectNewSecurityKeyMismatch : EnumItem
-		{
-			string EnumItem.Name => "DisconnectNewSecurityKeyMismatch";
-			uint EnumItem.Value => 272;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectEvicted : EnumItem
-		{
-			string EnumItem.Name => "DisconnectEvicted";
-			uint EnumItem.Value => 273;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectDevMaintenance : EnumItem
-		{
-			string EnumItem.Name => "DisconnectDevMaintenance";
-			uint EnumItem.Value => 274;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectRobloxMaintenance : EnumItem
-		{
-			string EnumItem.Name => "DisconnectRobloxMaintenance";
-			uint EnumItem.Value => 275;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectRejoin : EnumItem
-		{
-			string EnumItem.Name => "DisconnectRejoin";
-			uint EnumItem.Value => 276;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectConnectionLost : EnumItem
-		{
-			string EnumItem.Name => "DisconnectConnectionLost";
-			uint EnumItem.Value => 277;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectIdle : EnumItem
-		{
-			string EnumItem.Name => "DisconnectIdle";
-			uint EnumItem.Value => 278;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectRaknetErrors : EnumItem
-		{
-			string EnumItem.Name => "DisconnectRaknetErrors";
-			uint EnumItem.Value => 279;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectWrongVersion : EnumItem
-		{
-			string EnumItem.Name => "DisconnectWrongVersion";
-			uint EnumItem.Value => 280;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectBySecurityPolicy : EnumItem
-		{
-			string EnumItem.Name => "DisconnectBySecurityPolicy";
-			uint EnumItem.Value => 281;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectBlockedIP : EnumItem
-		{
-			string EnumItem.Name => "DisconnectBlockedIP";
-			uint EnumItem.Value => 282;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectClientFailure : EnumItem
-		{
-			string EnumItem.Name => "DisconnectClientFailure";
-			uint EnumItem.Value => 284;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectClientRequest : EnumItem
-		{
-			string EnumItem.Name => "DisconnectClientRequest";
-			uint EnumItem.Value => 285;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectPrivateServerKickout : EnumItem
-		{
-			string EnumItem.Name => "DisconnectPrivateServerKickout";
-			uint EnumItem.Value => 286;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectModeratedGame : EnumItem
-		{
-			string EnumItem.Name => "DisconnectModeratedGame";
-			uint EnumItem.Value => 287;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct ServerShutdown : EnumItem
-		{
-			string EnumItem.Name => "ServerShutdown";
-			uint EnumItem.Value => 288;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct ReplicatorTimeout : EnumItem
-		{
-			string EnumItem.Name => "ReplicatorTimeout";
-			uint EnumItem.Value => 290;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlayerRemoved : EnumItem
-		{
-			string EnumItem.Name => "PlayerRemoved";
-			uint EnumItem.Value => 291;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectOutOfMemoryKeepPlayingLeave : EnumItem
-		{
-			string EnumItem.Name => "DisconnectOutOfMemoryKeepPlayingLeave";
-			uint EnumItem.Value => 292;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectRomarkEndOfTest : EnumItem
-		{
-			string EnumItem.Name => "DisconnectRomarkEndOfTest";
-			uint EnumItem.Value => 293;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectCollaboratorPermissionRevoked : EnumItem
-		{
-			string EnumItem.Name => "DisconnectCollaboratorPermissionRevoked";
-			uint EnumItem.Value => 294;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct DisconnectCollaboratorUnderage : EnumItem
-		{
-			string EnumItem.Name => "DisconnectCollaboratorUnderage";
-			uint EnumItem.Value => 295;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct NetworkInternal : EnumItem
-		{
-			string EnumItem.Name => "NetworkInternal";
-			uint EnumItem.Value => 296;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct NetworkSend : EnumItem
-		{
-			string EnumItem.Name => "NetworkSend";
-			uint EnumItem.Value => 297;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct NetworkTimeout : EnumItem
-		{
-			string EnumItem.Name => "NetworkTimeout";
-			uint EnumItem.Value => 298;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct NetworkMisbehavior : EnumItem
-		{
-			string EnumItem.Name => "NetworkMisbehavior";
-			uint EnumItem.Value => 299;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct NetworkSecurity : EnumItem
-		{
-			string EnumItem.Name => "NetworkSecurity";
-			uint EnumItem.Value => 300;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct ReplacementReady : EnumItem
-		{
-			string EnumItem.Name => "ReplacementReady";
-			uint EnumItem.Value => 301;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchErrors : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchErrors";
-			uint EnumItem.Value => 512;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchDisabled : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchDisabled";
-			uint EnumItem.Value => 515;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchError : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchError";
-			uint EnumItem.Value => 516;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchGameEnded : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchGameEnded";
-			uint EnumItem.Value => 517;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchGameFull : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchGameFull";
-			uint EnumItem.Value => 518;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchUserLeft : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchUserLeft";
-			uint EnumItem.Value => 522;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchRestricted : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchRestricted";
-			uint EnumItem.Value => 523;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchUnauthorized : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchUnauthorized";
-			uint EnumItem.Value => 524;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchFlooded : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchFlooded";
-			uint EnumItem.Value => 525;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchHashExpired : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchHashExpired";
-			uint EnumItem.Value => 526;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchHashException : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchHashException";
-			uint EnumItem.Value => 527;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchPartyCannotFit : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchPartyCannotFit";
-			uint EnumItem.Value => 528;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchHttpError : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchHttpError";
-			uint EnumItem.Value => 529;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchUserPrivacyUnauthorized : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchUserPrivacyUnauthorized";
-			uint EnumItem.Value => 533;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchCreatorBan : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchCreatorBan";
-			uint EnumItem.Value => 600;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchCustomMessage : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchCustomMessage";
-			uint EnumItem.Value => 610;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct PlacelaunchOtherError : EnumItem
-		{
-			string EnumItem.Name => "PlacelaunchOtherError";
-			uint EnumItem.Value => 611;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportErrors : EnumItem
-		{
-			string EnumItem.Name => "TeleportErrors";
-			uint EnumItem.Value => 768;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportFailure : EnumItem
-		{
-			string EnumItem.Name => "TeleportFailure";
-			uint EnumItem.Value => 769;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportGameNotFound : EnumItem
-		{
-			string EnumItem.Name => "TeleportGameNotFound";
-			uint EnumItem.Value => 770;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportGameEnded : EnumItem
-		{
-			string EnumItem.Name => "TeleportGameEnded";
-			uint EnumItem.Value => 771;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportGameFull : EnumItem
-		{
-			string EnumItem.Name => "TeleportGameFull";
-			uint EnumItem.Value => 772;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportUnauthorized : EnumItem
-		{
-			string EnumItem.Name => "TeleportUnauthorized";
-			uint EnumItem.Value => 773;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportFlooded : EnumItem
-		{
-			string EnumItem.Name => "TeleportFlooded";
-			uint EnumItem.Value => 774;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-		
-		public struct TeleportIsTeleporting : EnumItem
-		{
-			string EnumItem.Name => "TeleportIsTeleporting";
-			uint EnumItem.Value => 775;
-			string EnumItem.EnumType => "ConnectionError";
-		}
-	}
-	
-	public struct ConnectionState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Connected : EnumItem
-		{
-			string EnumItem.Name => "Connected";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ConnectionState";
-		}
-		
-		public struct Disconnected : EnumItem
-		{
-			string EnumItem.Name => "Disconnected";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ConnectionState";
-		}
-	}
-	
-	public struct ContextActionPriority
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Low : EnumItem
-		{
-			string EnumItem.Name => "Low";
-			uint EnumItem.Value => 1000;
-			string EnumItem.EnumType => "ContextActionPriority";
-		}
-		
-		public struct Medium : EnumItem
-		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 2000;
-			string EnumItem.EnumType => "ContextActionPriority";
-		}
-		
-		public struct High : EnumItem
-		{
-			string EnumItem.Name => "High";
-			uint EnumItem.Value => 3000;
-			string EnumItem.EnumType => "ContextActionPriority";
-		}
-	}
-	
-	public struct ContextActionResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Sink : EnumItem
-		{
-			string EnumItem.Name => "Sink";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ContextActionResult";
-		}
-		
-		public struct Pass : EnumItem
-		{
-			string EnumItem.Name => "Pass";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ContextActionResult";
-		}
-	}
-	
-	public struct ControlMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ControlMode";
-		}
-		
-		public struct MouseLockSwitch : EnumItem
-		{
-			string EnumItem.Name => "MouseLockSwitch";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ControlMode";
-		}
-	}
-	
-	public struct CoreGuiType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct PlayerList : EnumItem
-		{
-			string EnumItem.Name => "PlayerList";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct Health : EnumItem
-		{
-			string EnumItem.Name => "Health";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct Backpack : EnumItem
-		{
-			string EnumItem.Name => "Backpack";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct Chat : EnumItem
-		{
-			string EnumItem.Name => "Chat";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct EmotesMenu : EnumItem
-		{
-			string EnumItem.Name => "EmotesMenu";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct SelfView : EnumItem
-		{
-			string EnumItem.Name => "SelfView";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-		
-		public struct Captures : EnumItem
-		{
-			string EnumItem.Name => "Captures";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "CoreGuiType";
-		}
-	}
-	
-	public struct CreateOutfitFailure
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct InvalidName : EnumItem
-		{
-			string EnumItem.Name => "InvalidName";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CreateOutfitFailure";
-		}
-		
-		public struct OutfitLimitReached : EnumItem
-		{
-			string EnumItem.Name => "OutfitLimitReached";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CreateOutfitFailure";
-		}
-		
-		public struct Other : EnumItem
-		{
-			string EnumItem.Name => "Other";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "CreateOutfitFailure";
-		}
-	}
-	
-	public struct CreatorType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct User : EnumItem
-		{
-			string EnumItem.Name => "User";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CreatorType";
-		}
-		
-		public struct Group : EnumItem
-		{
-			string EnumItem.Name => "Group";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CreatorType";
-		}
-	}
-	
-	public struct CreatorTypeFilter
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct User : EnumItem
-		{
-			string EnumItem.Name => "User";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CreatorTypeFilter";
-		}
-		
-		public struct Group : EnumItem
-		{
-			string EnumItem.Name => "Group";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CreatorTypeFilter";
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CreatorTypeFilter";
-		}
-	}
-	
-	public struct CurrencyType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CurrencyType";
-		}
-		
-		public struct Robux : EnumItem
-		{
-			string EnumItem.Name => "Robux";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CurrencyType";
-		}
-		
-		public struct Tix : EnumItem
-		{
-			string EnumItem.Name => "Tix";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CurrencyType";
-		}
-	}
-	
-	public struct CustomCameraMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "CustomCameraMode";
-		}
-		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "CustomCameraMode";
-		}
-		
-		public struct Follow : EnumItem
-		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "CustomCameraMode";
-		}
-	}
-	
-	public struct DataStoreRequestType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct GetAsync : EnumItem
-		{
-			string EnumItem.Name => "GetAsync";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct SetIncrementAsync : EnumItem
-		{
-			string EnumItem.Name => "SetIncrementAsync";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct UpdateAsync : EnumItem
-		{
-			string EnumItem.Name => "UpdateAsync";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct GetSortedAsync : EnumItem
-		{
-			string EnumItem.Name => "GetSortedAsync";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct SetIncrementSortedAsync : EnumItem
-		{
-			string EnumItem.Name => "SetIncrementSortedAsync";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct OnUpdate : EnumItem
-		{
-			string EnumItem.Name => "OnUpdate";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct ListAsync : EnumItem
-		{
-			string EnumItem.Name => "ListAsync";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct GetVersionAsync : EnumItem
-		{
-			string EnumItem.Name => "GetVersionAsync";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-		
-		public struct RemoveVersionAsync : EnumItem
-		{
-			string EnumItem.Name => "RemoveVersionAsync";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "DataStoreRequestType";
-		}
-	}
-	
-	public struct DebuggerEndReason
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct ClientRequest : EnumItem
-		{
-			string EnumItem.Name => "ClientRequest";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct InvalidHost : EnumItem
-		{
-			string EnumItem.Name => "InvalidHost";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct Disconnected : EnumItem
-		{
-			string EnumItem.Name => "Disconnected";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct ServerShutdown : EnumItem
-		{
-			string EnumItem.Name => "ServerShutdown";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct ServerProtocolMismatch : EnumItem
-		{
-			string EnumItem.Name => "ServerProtocolMismatch";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct ConfigurationFailed : EnumItem
-		{
-			string EnumItem.Name => "ConfigurationFailed";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-		
-		public struct RpcError : EnumItem
-		{
-			string EnumItem.Name => "RpcError";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "DebuggerEndReason";
-		}
-	}
-	
-	public struct DebuggerExceptionBreakMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Never : EnumItem
-		{
-			string EnumItem.Name => "Never";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DebuggerExceptionBreakMode";
-		}
-		
-		public struct Always : EnumItem
-		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DebuggerExceptionBreakMode";
-		}
-		
-		public struct Unhandled : EnumItem
-		{
-			string EnumItem.Name => "Unhandled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DebuggerExceptionBreakMode";
-		}
-	}
-	
-	public struct DebuggerFrameType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct C : EnumItem
-		{
-			string EnumItem.Name => "C";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DebuggerFrameType";
-		}
-		
-		public struct Lua : EnumItem
-		{
-			string EnumItem.Name => "Lua";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DebuggerFrameType";
-		}
-	}
-	
-	public struct DebuggerPauseReason
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-		
-		public struct Requested : EnumItem
-		{
-			string EnumItem.Name => "Requested";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-		
-		public struct Breakpoint : EnumItem
-		{
-			string EnumItem.Name => "Breakpoint";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-		
-		public struct Exception : EnumItem
-		{
-			string EnumItem.Name => "Exception";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-		
-		public struct SingleStep : EnumItem
-		{
-			string EnumItem.Name => "SingleStep";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-		
-		public struct Entrypoint : EnumItem
-		{
-			string EnumItem.Name => "Entrypoint";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DebuggerPauseReason";
-		}
-	}
-	
-	public struct DebuggerStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct ConnectionLost : EnumItem
-		{
-			string EnumItem.Name => "ConnectionLost";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct InvalidResponse : EnumItem
-		{
-			string EnumItem.Name => "InvalidResponse";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct InternalError : EnumItem
-		{
-			string EnumItem.Name => "InternalError";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct InvalidState : EnumItem
-		{
-			string EnumItem.Name => "InvalidState";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct RpcError : EnumItem
-		{
-			string EnumItem.Name => "RpcError";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct InvalidArgument : EnumItem
-		{
-			string EnumItem.Name => "InvalidArgument";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-		
-		public struct ConnectionClosed : EnumItem
-		{
-			string EnumItem.Name => "ConnectionClosed";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "DebuggerStatus";
-		}
-	}
-	
-	public struct DecreaseMinimumPartDensityMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DecreaseMinimumPartDensityMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DecreaseMinimumPartDensityMode";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DecreaseMinimumPartDensityMode";
-		}
-	}
-	
-	public struct DevCameraOcclusionMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Zoom : EnumItem
-		{
-			string EnumItem.Name => "Zoom";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DevCameraOcclusionMode";
-		}
-		
-		public struct Invisicam : EnumItem
-		{
-			string EnumItem.Name => "Invisicam";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DevCameraOcclusionMode";
-		}
-	}
-	
-	public struct DevComputerCameraMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct UserChoice : EnumItem
-		{
-			string EnumItem.Name => "UserChoice";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DevComputerCameraMovementMode";
-		}
-		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DevComputerCameraMovementMode";
-		}
-		
-		public struct Follow : EnumItem
-		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DevComputerCameraMovementMode";
-		}
-		
-		public struct Orbital : EnumItem
-		{
-			string EnumItem.Name => "Orbital";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DevComputerCameraMovementMode";
-		}
-		
-		public struct CameraToggle : EnumItem
-		{
-			string EnumItem.Name => "CameraToggle";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DevComputerCameraMovementMode";
-		}
-	}
-	
-	public struct DevComputerMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct UserChoice : EnumItem
-		{
-			string EnumItem.Name => "UserChoice";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DevComputerMovementMode";
-		}
-		
-		public struct KeyboardMouse : EnumItem
-		{
-			string EnumItem.Name => "KeyboardMouse";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DevComputerMovementMode";
-		}
-		
-		public struct ClickToMove : EnumItem
-		{
-			string EnumItem.Name => "ClickToMove";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DevComputerMovementMode";
-		}
-		
-		public struct Scriptable : EnumItem
-		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DevComputerMovementMode";
-		}
-	}
-	
-	public struct DevTouchCameraMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct UserChoice : EnumItem
-		{
-			string EnumItem.Name => "UserChoice";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DevTouchCameraMovementMode";
-		}
-		
-		public struct Classic : EnumItem
-		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DevTouchCameraMovementMode";
-		}
-		
-		public struct Follow : EnumItem
-		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DevTouchCameraMovementMode";
-		}
-		
-		public struct Orbital : EnumItem
-		{
-			string EnumItem.Name => "Orbital";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DevTouchCameraMovementMode";
-		}
-	}
-	
-	public struct DevTouchMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct UserChoice : EnumItem
-		{
-			string EnumItem.Name => "UserChoice";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct Thumbstick : EnumItem
-		{
-			string EnumItem.Name => "Thumbstick";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct DPad : EnumItem
-		{
-			string EnumItem.Name => "DPad";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct Thumbpad : EnumItem
-		{
-			string EnumItem.Name => "Thumbpad";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct ClickToMove : EnumItem
-		{
-			string EnumItem.Name => "ClickToMove";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct Scriptable : EnumItem
-		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-		
-		public struct DynamicThumbstick : EnumItem
-		{
-			string EnumItem.Name => "DynamicThumbstick";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DevTouchMovementMode";
-		}
-	}
-	
-	public struct DeveloperMemoryTag
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Internal : EnumItem
-		{
-			string EnumItem.Name => "Internal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct HttpCache : EnumItem
-		{
-			string EnumItem.Name => "HttpCache";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Instances : EnumItem
-		{
-			string EnumItem.Name => "Instances";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Signals : EnumItem
-		{
-			string EnumItem.Name => "Signals";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct LuaHeap : EnumItem
-		{
-			string EnumItem.Name => "LuaHeap";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Script : EnumItem
-		{
-			string EnumItem.Name => "Script";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct PhysicsCollision : EnumItem
-		{
-			string EnumItem.Name => "PhysicsCollision";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct PhysicsParts : EnumItem
-		{
-			string EnumItem.Name => "PhysicsParts";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsSolidModels : EnumItem
-		{
-			string EnumItem.Name => "GraphicsSolidModels";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsMeshParts : EnumItem
-		{
-			string EnumItem.Name => "GraphicsMeshParts";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsParticles : EnumItem
-		{
-			string EnumItem.Name => "GraphicsParticles";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsParts : EnumItem
-		{
-			string EnumItem.Name => "GraphicsParts";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsSpatialHash : EnumItem
-		{
-			string EnumItem.Name => "GraphicsSpatialHash";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsTerrain : EnumItem
-		{
-			string EnumItem.Name => "GraphicsTerrain";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsTexture : EnumItem
-		{
-			string EnumItem.Name => "GraphicsTexture";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GraphicsTextureCharacter : EnumItem
-		{
-			string EnumItem.Name => "GraphicsTextureCharacter";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Sounds : EnumItem
-		{
-			string EnumItem.Name => "Sounds";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct StreamingSounds : EnumItem
-		{
-			string EnumItem.Name => "StreamingSounds";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct TerrainVoxels : EnumItem
-		{
-			string EnumItem.Name => "TerrainVoxels";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Gui : EnumItem
-		{
-			string EnumItem.Name => "Gui";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Animation : EnumItem
-		{
-			string EnumItem.Name => "Animation";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct Navigation : EnumItem
-		{
-			string EnumItem.Name => "Navigation";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-		
-		public struct GeometryCSG : EnumItem
-		{
-			string EnumItem.Name => "GeometryCSG";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "DeveloperMemoryTag";
-		}
-	}
-	
-	public struct DeviceFeatureType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct DeviceCapture : EnumItem
-		{
-			string EnumItem.Name => "DeviceCapture";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DeviceFeatureType";
-		}
-	}
-	
-	public struct DeviceType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DeviceType";
-		}
-		
-		public struct Desktop : EnumItem
-		{
-			string EnumItem.Name => "Desktop";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DeviceType";
-		}
-		
-		public struct Tablet : EnumItem
-		{
-			string EnumItem.Name => "Tablet";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DeviceType";
-		}
-		
-		public struct Phone : EnumItem
-		{
-			string EnumItem.Name => "Phone";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DeviceType";
-		}
-	}
-	
-	public struct DialogBehaviorType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct SinglePlayer : EnumItem
-		{
-			string EnumItem.Name => "SinglePlayer";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DialogBehaviorType";
-		}
-		
-		public struct MultiplePlayers : EnumItem
-		{
-			string EnumItem.Name => "MultiplePlayers";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DialogBehaviorType";
-		}
-	}
-	
-	public struct DialogPurpose
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Quest : EnumItem
-		{
-			string EnumItem.Name => "Quest";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DialogPurpose";
-		}
-		
-		public struct Help : EnumItem
-		{
-			string EnumItem.Name => "Help";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DialogPurpose";
-		}
-		
-		public struct Shop : EnumItem
-		{
-			string EnumItem.Name => "Shop";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DialogPurpose";
-		}
-	}
-	
-	public struct DialogTone
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Neutral : EnumItem
-		{
-			string EnumItem.Name => "Neutral";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DialogTone";
-		}
-		
-		public struct Friendly : EnumItem
-		{
-			string EnumItem.Name => "Friendly";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DialogTone";
-		}
-		
-		public struct Enemy : EnumItem
-		{
-			string EnumItem.Name => "Enemy";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DialogTone";
-		}
-	}
-	
-	public struct DominantAxis
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Width : EnumItem
-		{
-			string EnumItem.Name => "Width";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DominantAxis";
-		}
-		
-		public struct Height : EnumItem
-		{
-			string EnumItem.Name => "Height";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DominantAxis";
-		}
-	}
-	
-	public struct DraftStatusCode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OK : EnumItem
-		{
-			string EnumItem.Name => "OK";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DraftStatusCode";
-		}
-		
-		public struct DraftOutdated : EnumItem
-		{
-			string EnumItem.Name => "DraftOutdated";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DraftStatusCode";
-		}
-		
-		public struct ScriptRemoved : EnumItem
-		{
-			string EnumItem.Name => "ScriptRemoved";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DraftStatusCode";
-		}
-		
-		public struct DraftCommitted : EnumItem
-		{
-			string EnumItem.Name => "DraftCommitted";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DraftStatusCode";
-		}
-	}
-	
-	public struct DragDetectorDragStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct TranslateLine : EnumItem
-		{
-			string EnumItem.Name => "TranslateLine";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct TranslatePlane : EnumItem
-		{
-			string EnumItem.Name => "TranslatePlane";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct TranslatePlaneOrLine : EnumItem
-		{
-			string EnumItem.Name => "TranslatePlaneOrLine";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct TranslateLineOrPlane : EnumItem
-		{
-			string EnumItem.Name => "TranslateLineOrPlane";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct TranslateViewPlane : EnumItem
-		{
-			string EnumItem.Name => "TranslateViewPlane";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct RotateAxis : EnumItem
-		{
-			string EnumItem.Name => "RotateAxis";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct RotateTrackball : EnumItem
-		{
-			string EnumItem.Name => "RotateTrackball";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct Scriptable : EnumItem
-		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-		
-		public struct BestForDevice : EnumItem
-		{
-			string EnumItem.Name => "BestForDevice";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "DragDetectorDragStyle";
-		}
-	}
-	
-	public struct DragDetectorPermissionPolicy
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Nobody : EnumItem
-		{
-			string EnumItem.Name => "Nobody";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DragDetectorPermissionPolicy";
-		}
-		
-		public struct Everybody : EnumItem
-		{
-			string EnumItem.Name => "Everybody";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DragDetectorPermissionPolicy";
-		}
-		
-		public struct Scriptable : EnumItem
-		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DragDetectorPermissionPolicy";
-		}
-	}
-	
-	public struct DragDetectorResponseStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Geometric : EnumItem
-		{
-			string EnumItem.Name => "Geometric";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DragDetectorResponseStyle";
-		}
-		
-		public struct Physical : EnumItem
-		{
-			string EnumItem.Name => "Physical";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DragDetectorResponseStyle";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "DragDetectorResponseStyle";
-		}
-	}
-	
-	public struct DraggerCoordinateSpace
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Object : EnumItem
-		{
-			string EnumItem.Name => "Object";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DraggerCoordinateSpace";
-		}
-		
-		public struct World : EnumItem
-		{
-			string EnumItem.Name => "World";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DraggerCoordinateSpace";
-		}
-	}
-	
-	public struct DraggerMovementMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Geometric : EnumItem
-		{
-			string EnumItem.Name => "Geometric";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "DraggerMovementMode";
-		}
-		
-		public struct Physical : EnumItem
-		{
-			string EnumItem.Name => "Physical";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "DraggerMovementMode";
-		}
-	}
-	
-	public struct EasingDirection
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct In : EnumItem
-		{
-			string EnumItem.Name => "In";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "EasingDirection";
-		}
-		
-		public struct Out : EnumItem
-		{
-			string EnumItem.Name => "Out";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "EasingDirection";
-		}
-		
-		public struct InOut : EnumItem
-		{
-			string EnumItem.Name => "InOut";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "EasingDirection";
-		}
-	}
-	
-	public struct EasingStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Linear : EnumItem
-		{
-			string EnumItem.Name => "Linear";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Sine : EnumItem
-		{
-			string EnumItem.Name => "Sine";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Back : EnumItem
-		{
-			string EnumItem.Name => "Back";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Quad : EnumItem
-		{
-			string EnumItem.Name => "Quad";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Quart : EnumItem
-		{
-			string EnumItem.Name => "Quart";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Quint : EnumItem
-		{
-			string EnumItem.Name => "Quint";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Bounce : EnumItem
-		{
-			string EnumItem.Name => "Bounce";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Elastic : EnumItem
-		{
-			string EnumItem.Name => "Elastic";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Exponential : EnumItem
-		{
-			string EnumItem.Name => "Exponential";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Circular : EnumItem
-		{
-			string EnumItem.Name => "Circular";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-		
-		public struct Cubic : EnumItem
-		{
-			string EnumItem.Name => "Cubic";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "EasingStyle";
-		}
-	}
-	
-	public struct ElasticBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct WhenScrollable : EnumItem
-		{
-			string EnumItem.Name => "WhenScrollable";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ElasticBehavior";
-		}
-		
-		public struct Always : EnumItem
-		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ElasticBehavior";
-		}
-		
-		public struct Never : EnumItem
-		{
-			string EnumItem.Name => "Never";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ElasticBehavior";
-		}
-	}
-	
-	public struct EnviromentalPhysicsThrottle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct DefaultAuto : EnumItem
-		{
-			string EnumItem.Name => "DefaultAuto";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Always : EnumItem
-		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Skip2 : EnumItem
-		{
-			string EnumItem.Name => "Skip2";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Skip4 : EnumItem
-		{
-			string EnumItem.Name => "Skip4";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Skip8 : EnumItem
-		{
-			string EnumItem.Name => "Skip8";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-		
-		public struct Skip16 : EnumItem
-		{
-			string EnumItem.Name => "Skip16";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "EnviromentalPhysicsThrottle";
-		}
-	}
-	
-	public struct ExperienceAuthScope
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct DefaultScope : EnumItem
-		{
-			string EnumItem.Name => "DefaultScope";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ExperienceAuthScope";
-		}
-		
-		public struct CreatorAssetsCreate : EnumItem
-		{
-			string EnumItem.Name => "CreatorAssetsCreate";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ExperienceAuthScope";
-		}
-	}
-	
-	public struct ExplosionType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NoCraters : EnumItem
-		{
-			string EnumItem.Name => "NoCraters";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ExplosionType";
-		}
-		
-		public struct Craters : EnumItem
-		{
-			string EnumItem.Name => "Craters";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ExplosionType";
-		}
-	}
-	
-	public struct FACSDataLod
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct LOD0 : EnumItem
-		{
-			string EnumItem.Name => "LOD0";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FACSDataLod";
-		}
-		
-		public struct LOD1 : EnumItem
-		{
-			string EnumItem.Name => "LOD1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FACSDataLod";
-		}
-		
-		public struct LODCount : EnumItem
-		{
-			string EnumItem.Name => "LODCount";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FACSDataLod";
-		}
-	}
-	
-	public struct FacialAnimationStreamingState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FacialAnimationStreamingState";
-		}
-		
-		public struct Audio : EnumItem
-		{
-			string EnumItem.Name => "Audio";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FacialAnimationStreamingState";
-		}
-		
-		public struct Video : EnumItem
-		{
-			string EnumItem.Name => "Video";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FacialAnimationStreamingState";
-		}
-		
-		public struct Place : EnumItem
-		{
-			string EnumItem.Name => "Place";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "FacialAnimationStreamingState";
-		}
-		
-		public struct Server : EnumItem
-		{
-			string EnumItem.Name => "Server";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "FacialAnimationStreamingState";
-		}
-	}
-	
-	public struct FieldOfViewMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Vertical : EnumItem
-		{
-			string EnumItem.Name => "Vertical";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FieldOfViewMode";
-		}
-		
-		public struct Diagonal : EnumItem
-		{
-			string EnumItem.Name => "Diagonal";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FieldOfViewMode";
-		}
-		
-		public struct MaxAxis : EnumItem
-		{
-			string EnumItem.Name => "MaxAxis";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FieldOfViewMode";
-		}
-	}
-	
-	public struct FillDirection
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Horizontal : EnumItem
-		{
-			string EnumItem.Name => "Horizontal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FillDirection";
-		}
-		
-		public struct Vertical : EnumItem
-		{
-			string EnumItem.Name => "Vertical";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FillDirection";
-		}
-	}
-	
-	public struct FilterResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Accepted : EnumItem
-		{
-			string EnumItem.Name => "Accepted";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FilterResult";
-		}
-		
-		public struct Rejected : EnumItem
-		{
-			string EnumItem.Name => "Rejected";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FilterResult";
-		}
-	}
-	
-	public struct FinishRecordingOperation
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Cancel : EnumItem
-		{
-			string EnumItem.Name => "Cancel";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FinishRecordingOperation";
-		}
-		
-		public struct Commit : EnumItem
-		{
-			string EnumItem.Name => "Commit";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FinishRecordingOperation";
-		}
-		
-		public struct Append : EnumItem
-		{
-			string EnumItem.Name => "Append";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FinishRecordingOperation";
-		}
-	}
-	
-	public struct FluidFidelity
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FluidFidelity";
-		}
-		
-		public struct UseCollisionGeometry : EnumItem
-		{
-			string EnumItem.Name => "UseCollisionGeometry";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FluidFidelity";
-		}
-		
-		public struct UsePreciseGeometry : EnumItem
-		{
-			string EnumItem.Name => "UsePreciseGeometry";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FluidFidelity";
-		}
-	}
-	
-	public struct FluidForces
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FluidForces";
-		}
-		
-		public struct Experimental : EnumItem
-		{
-			string EnumItem.Name => "Experimental";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FluidForces";
-		}
-	}
-	
-	public struct Font
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Legacy : EnumItem
-		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Arial : EnumItem
-		{
-			string EnumItem.Name => "Arial";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct ArialBold : EnumItem
-		{
-			string EnumItem.Name => "ArialBold";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SourceSans : EnumItem
-		{
-			string EnumItem.Name => "SourceSans";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SourceSansBold : EnumItem
-		{
-			string EnumItem.Name => "SourceSansBold";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SourceSansLight : EnumItem
-		{
-			string EnumItem.Name => "SourceSansLight";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SourceSansItalic : EnumItem
-		{
-			string EnumItem.Name => "SourceSansItalic";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Bodoni : EnumItem
-		{
-			string EnumItem.Name => "Bodoni";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Garamond : EnumItem
-		{
-			string EnumItem.Name => "Garamond";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Cartoon : EnumItem
-		{
-			string EnumItem.Name => "Cartoon";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Code : EnumItem
-		{
-			string EnumItem.Name => "Code";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Highway : EnumItem
-		{
-			string EnumItem.Name => "Highway";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SciFi : EnumItem
-		{
-			string EnumItem.Name => "SciFi";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Arcade : EnumItem
-		{
-			string EnumItem.Name => "Arcade";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Fantasy : EnumItem
-		{
-			string EnumItem.Name => "Fantasy";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Antique : EnumItem
-		{
-			string EnumItem.Name => "Antique";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SourceSansSemibold : EnumItem
-		{
-			string EnumItem.Name => "SourceSansSemibold";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Gotham : EnumItem
-		{
-			string EnumItem.Name => "Gotham";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct GothamMedium : EnumItem
-		{
-			string EnumItem.Name => "GothamMedium";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct GothamBold : EnumItem
-		{
-			string EnumItem.Name => "GothamBold";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct GothamBlack : EnumItem
-		{
-			string EnumItem.Name => "GothamBlack";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct AmaticSC : EnumItem
-		{
-			string EnumItem.Name => "AmaticSC";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Bangers : EnumItem
-		{
-			string EnumItem.Name => "Bangers";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Creepster : EnumItem
-		{
-			string EnumItem.Name => "Creepster";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct DenkOne : EnumItem
-		{
-			string EnumItem.Name => "DenkOne";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Fondamento : EnumItem
-		{
-			string EnumItem.Name => "Fondamento";
-			uint EnumItem.Value => 25;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct FredokaOne : EnumItem
-		{
-			string EnumItem.Name => "FredokaOne";
-			uint EnumItem.Value => 26;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct GrenzeGotisch : EnumItem
-		{
-			string EnumItem.Name => "GrenzeGotisch";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct IndieFlower : EnumItem
-		{
-			string EnumItem.Name => "IndieFlower";
-			uint EnumItem.Value => 28;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct JosefinSans : EnumItem
-		{
-			string EnumItem.Name => "JosefinSans";
-			uint EnumItem.Value => 29;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Jura : EnumItem
-		{
-			string EnumItem.Name => "Jura";
-			uint EnumItem.Value => 30;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Kalam : EnumItem
-		{
-			string EnumItem.Name => "Kalam";
-			uint EnumItem.Value => 31;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct LuckiestGuy : EnumItem
-		{
-			string EnumItem.Name => "LuckiestGuy";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Merriweather : EnumItem
-		{
-			string EnumItem.Name => "Merriweather";
-			uint EnumItem.Value => 33;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Michroma : EnumItem
-		{
-			string EnumItem.Name => "Michroma";
-			uint EnumItem.Value => 34;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Nunito : EnumItem
-		{
-			string EnumItem.Name => "Nunito";
-			uint EnumItem.Value => 35;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Oswald : EnumItem
-		{
-			string EnumItem.Name => "Oswald";
-			uint EnumItem.Value => 36;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct PatrickHand : EnumItem
-		{
-			string EnumItem.Name => "PatrickHand";
-			uint EnumItem.Value => 37;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct PermanentMarker : EnumItem
-		{
-			string EnumItem.Name => "PermanentMarker";
-			uint EnumItem.Value => 38;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Roboto : EnumItem
-		{
-			string EnumItem.Name => "Roboto";
-			uint EnumItem.Value => 39;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct RobotoCondensed : EnumItem
-		{
-			string EnumItem.Name => "RobotoCondensed";
-			uint EnumItem.Value => 40;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct RobotoMono : EnumItem
-		{
-			string EnumItem.Name => "RobotoMono";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Sarpanch : EnumItem
-		{
-			string EnumItem.Name => "Sarpanch";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct SpecialElite : EnumItem
-		{
-			string EnumItem.Name => "SpecialElite";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct TitilliumWeb : EnumItem
-		{
-			string EnumItem.Name => "TitilliumWeb";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Ubuntu : EnumItem
-		{
-			string EnumItem.Name => "Ubuntu";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct BuilderSans : EnumItem
-		{
-			string EnumItem.Name => "BuilderSans";
-			uint EnumItem.Value => 46;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct BuilderSansMedium : EnumItem
-		{
-			string EnumItem.Name => "BuilderSansMedium";
-			uint EnumItem.Value => 47;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct BuilderSansBold : EnumItem
-		{
-			string EnumItem.Name => "BuilderSansBold";
-			uint EnumItem.Value => 48;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct BuilderSansExtraBold : EnumItem
-		{
-			string EnumItem.Name => "BuilderSansExtraBold";
-			uint EnumItem.Value => 49;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Arimo : EnumItem
-		{
-			string EnumItem.Name => "Arimo";
-			uint EnumItem.Value => 50;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct ArimoBold : EnumItem
-		{
-			string EnumItem.Name => "ArimoBold";
-			uint EnumItem.Value => 51;
-			string EnumItem.EnumType => "Font";
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 100;
-			string EnumItem.EnumType => "Font";
-		}
-	}
-	
-	public struct FontSize
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Size8 : EnumItem
-		{
-			string EnumItem.Name => "Size8";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size9 : EnumItem
-		{
-			string EnumItem.Name => "Size9";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size10 : EnumItem
-		{
-			string EnumItem.Name => "Size10";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size11 : EnumItem
-		{
-			string EnumItem.Name => "Size11";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size12 : EnumItem
-		{
-			string EnumItem.Name => "Size12";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size14 : EnumItem
-		{
-			string EnumItem.Name => "Size14";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size18 : EnumItem
-		{
-			string EnumItem.Name => "Size18";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size24 : EnumItem
-		{
-			string EnumItem.Name => "Size24";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size36 : EnumItem
-		{
-			string EnumItem.Name => "Size36";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size48 : EnumItem
-		{
-			string EnumItem.Name => "Size48";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size28 : EnumItem
-		{
-			string EnumItem.Name => "Size28";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size32 : EnumItem
-		{
-			string EnumItem.Name => "Size32";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size42 : EnumItem
-		{
-			string EnumItem.Name => "Size42";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size60 : EnumItem
-		{
-			string EnumItem.Name => "Size60";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "FontSize";
-		}
-		
-		public struct Size96 : EnumItem
-		{
-			string EnumItem.Name => "Size96";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "FontSize";
-		}
-	}
-	
-	public struct FontStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Normal : EnumItem
-		{
-			string EnumItem.Name => "Normal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FontStyle";
-		}
-		
-		public struct Italic : EnumItem
-		{
-			string EnumItem.Name => "Italic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FontStyle";
-		}
-	}
-	
-	public struct FontWeight
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Thin : EnumItem
-		{
-			string EnumItem.Name => "Thin";
-			uint EnumItem.Value => 100;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct ExtraLight : EnumItem
-		{
-			string EnumItem.Name => "ExtraLight";
-			uint EnumItem.Value => 200;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct Light : EnumItem
-		{
-			string EnumItem.Name => "Light";
-			uint EnumItem.Value => 300;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct Regular : EnumItem
-		{
-			string EnumItem.Name => "Regular";
-			uint EnumItem.Value => 400;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct Medium : EnumItem
-		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 500;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct SemiBold : EnumItem
-		{
-			string EnumItem.Name => "SemiBold";
-			uint EnumItem.Value => 600;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct Bold : EnumItem
-		{
-			string EnumItem.Name => "Bold";
-			uint EnumItem.Value => 700;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct ExtraBold : EnumItem
-		{
-			string EnumItem.Name => "ExtraBold";
-			uint EnumItem.Value => 800;
-			string EnumItem.EnumType => "FontWeight";
-		}
-		
-		public struct Heavy : EnumItem
-		{
-			string EnumItem.Name => "Heavy";
-			uint EnumItem.Value => 900;
-			string EnumItem.EnumType => "FontWeight";
-		}
-	}
-	
-	public struct ForceLimitMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Magnitude : EnumItem
-		{
-			string EnumItem.Name => "Magnitude";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ForceLimitMode";
-		}
-		
-		public struct PerAxis : EnumItem
-		{
-			string EnumItem.Name => "PerAxis";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ForceLimitMode";
-		}
-	}
-	
-	public struct FormFactor
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Symmetric : EnumItem
-		{
-			string EnumItem.Name => "Symmetric";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FormFactor";
-		}
-		
-		public struct Brick : EnumItem
-		{
-			string EnumItem.Name => "Brick";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FormFactor";
-		}
-		
-		public struct Plate : EnumItem
-		{
-			string EnumItem.Name => "Plate";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FormFactor";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "FormFactor";
-		}
-	}
-	
-	public struct FrameStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct ChatBlue : EnumItem
-		{
-			string EnumItem.Name => "ChatBlue";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct RobloxSquare : EnumItem
-		{
-			string EnumItem.Name => "RobloxSquare";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct RobloxRound : EnumItem
-		{
-			string EnumItem.Name => "RobloxRound";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct ChatGreen : EnumItem
-		{
-			string EnumItem.Name => "ChatGreen";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct ChatRed : EnumItem
-		{
-			string EnumItem.Name => "ChatRed";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-		
-		public struct DropShadow : EnumItem
-		{
-			string EnumItem.Name => "DropShadow";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "FrameStyle";
-		}
-	}
-	
-	public struct FramerateManagerMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FramerateManagerMode";
-		}
-		
-		public struct On : EnumItem
-		{
-			string EnumItem.Name => "On";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FramerateManagerMode";
-		}
-		
-		public struct Off : EnumItem
-		{
-			string EnumItem.Name => "Off";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FramerateManagerMode";
-		}
-	}
-	
-	public struct FriendRequestEvent
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Issue : EnumItem
-		{
-			string EnumItem.Name => "Issue";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FriendRequestEvent";
-		}
-		
-		public struct Revoke : EnumItem
-		{
-			string EnumItem.Name => "Revoke";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FriendRequestEvent";
-		}
-		
-		public struct Accept : EnumItem
-		{
-			string EnumItem.Name => "Accept";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FriendRequestEvent";
-		}
-		
-		public struct Deny : EnumItem
-		{
-			string EnumItem.Name => "Deny";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "FriendRequestEvent";
-		}
-	}
-	
-	public struct FriendStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FriendStatus";
-		}
-		
-		public struct NotFriend : EnumItem
-		{
-			string EnumItem.Name => "NotFriend";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FriendStatus";
-		}
-		
-		public struct Friend : EnumItem
-		{
-			string EnumItem.Name => "Friend";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FriendStatus";
-		}
-		
-		public struct FriendRequestSent : EnumItem
-		{
-			string EnumItem.Name => "FriendRequestSent";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "FriendStatus";
-		}
-		
-		public struct FriendRequestReceived : EnumItem
-		{
-			string EnumItem.Name => "FriendRequestReceived";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "FriendStatus";
-		}
-	}
-	
-	public struct FunctionalTestResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Passed : EnumItem
-		{
-			string EnumItem.Name => "Passed";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "FunctionalTestResult";
-		}
-		
-		public struct Warning : EnumItem
-		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "FunctionalTestResult";
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "FunctionalTestResult";
-		}
-	}
-	
-	public struct GameAvatarType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct R6 : EnumItem
-		{
-			string EnumItem.Name => "R6";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GameAvatarType";
-		}
-		
-		public struct R15 : EnumItem
-		{
-			string EnumItem.Name => "R15";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GameAvatarType";
-		}
-		
-		public struct PlayerChoice : EnumItem
-		{
-			string EnumItem.Name => "PlayerChoice";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GameAvatarType";
-		}
-	}
-	
-	public struct GamepadType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GamepadType";
-		}
-		
-		public struct PS4 : EnumItem
-		{
-			string EnumItem.Name => "PS4";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GamepadType";
-		}
-		
-		public struct PS5 : EnumItem
-		{
-			string EnumItem.Name => "PS5";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GamepadType";
-		}
-		
-		public struct XboxOne : EnumItem
-		{
-			string EnumItem.Name => "XboxOne";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "GamepadType";
-		}
-	}
-	
-	public struct GearGenreSetting
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct AllGenres : EnumItem
-		{
-			string EnumItem.Name => "AllGenres";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GearGenreSetting";
-		}
-		
-		public struct MatchingGenreOnly : EnumItem
-		{
-			string EnumItem.Name => "MatchingGenreOnly";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GearGenreSetting";
-		}
-	}
-	
-	public struct GearType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct MeleeWeapons : EnumItem
-		{
-			string EnumItem.Name => "MeleeWeapons";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct RangedWeapons : EnumItem
-		{
-			string EnumItem.Name => "RangedWeapons";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct Explosives : EnumItem
-		{
-			string EnumItem.Name => "Explosives";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct PowerUps : EnumItem
-		{
-			string EnumItem.Name => "PowerUps";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct NavigationEnhancers : EnumItem
-		{
-			string EnumItem.Name => "NavigationEnhancers";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct MusicalInstruments : EnumItem
-		{
-			string EnumItem.Name => "MusicalInstruments";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct SocialItems : EnumItem
-		{
-			string EnumItem.Name => "SocialItems";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct BuildingTools : EnumItem
-		{
-			string EnumItem.Name => "BuildingTools";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "GearType";
-		}
-		
-		public struct Transport : EnumItem
-		{
-			string EnumItem.Name => "Transport";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "GearType";
-		}
-	}
-	
-	public struct Genre
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct TownAndCity : EnumItem
-		{
-			string EnumItem.Name => "TownAndCity";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Fantasy : EnumItem
-		{
-			string EnumItem.Name => "Fantasy";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct SciFi : EnumItem
-		{
-			string EnumItem.Name => "SciFi";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Ninja : EnumItem
-		{
-			string EnumItem.Name => "Ninja";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Scary : EnumItem
-		{
-			string EnumItem.Name => "Scary";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Pirate : EnumItem
-		{
-			string EnumItem.Name => "Pirate";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Adventure : EnumItem
-		{
-			string EnumItem.Name => "Adventure";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Sports : EnumItem
-		{
-			string EnumItem.Name => "Sports";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Funny : EnumItem
-		{
-			string EnumItem.Name => "Funny";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct WildWest : EnumItem
-		{
-			string EnumItem.Name => "WildWest";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct War : EnumItem
-		{
-			string EnumItem.Name => "War";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct SkatePark : EnumItem
-		{
-			string EnumItem.Name => "SkatePark";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "Genre";
-		}
-		
-		public struct Tutorial : EnumItem
-		{
-			string EnumItem.Name => "Tutorial";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "Genre";
-		}
-	}
-	
-	public struct GraphicsMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-		
-		public struct Direct3D11 : EnumItem
-		{
-			string EnumItem.Name => "Direct3D11";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-		
-		public struct OpenGL : EnumItem
-		{
-			string EnumItem.Name => "OpenGL";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-		
-		public struct Metal : EnumItem
-		{
-			string EnumItem.Name => "Metal";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-		
-		public struct Vulkan : EnumItem
-		{
-			string EnumItem.Name => "Vulkan";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-		
-		public struct NoGraphics : EnumItem
-		{
-			string EnumItem.Name => "NoGraphics";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "GraphicsMode";
-		}
-	}
-	
-	public struct GuiState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Idle : EnumItem
-		{
-			string EnumItem.Name => "Idle";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GuiState";
-		}
-		
-		public struct Hover : EnumItem
-		{
-			string EnumItem.Name => "Hover";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GuiState";
-		}
-		
-		public struct Press : EnumItem
-		{
-			string EnumItem.Name => "Press";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GuiState";
-		}
-		
-		public struct NonInteractable : EnumItem
-		{
-			string EnumItem.Name => "NonInteractable";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "GuiState";
-		}
-	}
-	
-	public struct GuiType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Core : EnumItem
-		{
-			string EnumItem.Name => "Core";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "GuiType";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "GuiType";
-		}
-		
-		public struct PlayerNameplates : EnumItem
-		{
-			string EnumItem.Name => "PlayerNameplates";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "GuiType";
-		}
-		
-		public struct CustomBillboards : EnumItem
-		{
-			string EnumItem.Name => "CustomBillboards";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "GuiType";
-		}
-		
-		public struct CoreBillboards : EnumItem
-		{
-			string EnumItem.Name => "CoreBillboards";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "GuiType";
-		}
-	}
-	
-	public struct HandlesStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Resize : EnumItem
-		{
-			string EnumItem.Name => "Resize";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HandlesStyle";
-		}
-		
-		public struct Movement : EnumItem
-		{
-			string EnumItem.Name => "Movement";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HandlesStyle";
-		}
-	}
-	
-	public struct HighlightDepthMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct AlwaysOnTop : EnumItem
-		{
-			string EnumItem.Name => "AlwaysOnTop";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HighlightDepthMode";
-		}
-		
-		public struct Occluded : EnumItem
-		{
-			string EnumItem.Name => "Occluded";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HighlightDepthMode";
-		}
-	}
-	
-	public struct HorizontalAlignment
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Center : EnumItem
-		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HorizontalAlignment";
-		}
-		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HorizontalAlignment";
-		}
-		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HorizontalAlignment";
-		}
-	}
-	
-	public struct HoverAnimateSpeed
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct VerySlow : EnumItem
-		{
-			string EnumItem.Name => "VerySlow";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HoverAnimateSpeed";
-		}
-		
-		public struct Slow : EnumItem
-		{
-			string EnumItem.Name => "Slow";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HoverAnimateSpeed";
-		}
-		
-		public struct Medium : EnumItem
-		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HoverAnimateSpeed";
-		}
-		
-		public struct Fast : EnumItem
-		{
-			string EnumItem.Name => "Fast";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "HoverAnimateSpeed";
-		}
-		
-		public struct VeryFast : EnumItem
-		{
-			string EnumItem.Name => "VeryFast";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "HoverAnimateSpeed";
-		}
-	}
-	
-	public struct HttpCachePolicy
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HttpCachePolicy";
-		}
-		
-		public struct Full : EnumItem
-		{
-			string EnumItem.Name => "Full";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HttpCachePolicy";
-		}
-		
-		public struct DataOnly : EnumItem
-		{
-			string EnumItem.Name => "DataOnly";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HttpCachePolicy";
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "HttpCachePolicy";
-		}
-		
-		public struct InternalRedirectRefresh : EnumItem
-		{
-			string EnumItem.Name => "InternalRedirectRefresh";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "HttpCachePolicy";
-		}
-	}
-	
-	public struct HttpCompression
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HttpCompression";
-		}
-		
-		public struct Gzip : EnumItem
-		{
-			string EnumItem.Name => "Gzip";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HttpCompression";
-		}
-	}
-	
-	public struct HttpContentType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct ApplicationJson : EnumItem
-		{
-			string EnumItem.Name => "ApplicationJson";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HttpContentType";
-		}
-		
-		public struct ApplicationXml : EnumItem
-		{
-			string EnumItem.Name => "ApplicationXml";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HttpContentType";
-		}
-		
-		public struct ApplicationUrlEncoded : EnumItem
-		{
-			string EnumItem.Name => "ApplicationUrlEncoded";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HttpContentType";
-		}
-		
-		public struct TextPlain : EnumItem
-		{
-			string EnumItem.Name => "TextPlain";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "HttpContentType";
-		}
-		
-		public struct TextXml : EnumItem
-		{
-			string EnumItem.Name => "TextXml";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "HttpContentType";
-		}
-	}
-	
-	public struct HttpError
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OK : EnumItem
-		{
-			string EnumItem.Name => "OK";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct InvalidUrl : EnumItem
-		{
-			string EnumItem.Name => "InvalidUrl";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct DnsResolve : EnumItem
-		{
-			string EnumItem.Name => "DnsResolve";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct ConnectFail : EnumItem
-		{
-			string EnumItem.Name => "ConnectFail";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct OutOfMemory : EnumItem
-		{
-			string EnumItem.Name => "OutOfMemory";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct TimedOut : EnumItem
-		{
-			string EnumItem.Name => "TimedOut";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct TooManyRedirects : EnumItem
-		{
-			string EnumItem.Name => "TooManyRedirects";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct InvalidRedirect : EnumItem
-		{
-			string EnumItem.Name => "InvalidRedirect";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct NetFail : EnumItem
-		{
-			string EnumItem.Name => "NetFail";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct Aborted : EnumItem
-		{
-			string EnumItem.Name => "Aborted";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct SslConnectFail : EnumItem
-		{
-			string EnumItem.Name => "SslConnectFail";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct SslVerificationFail : EnumItem
-		{
-			string EnumItem.Name => "SslVerificationFail";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "HttpError";
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "HttpError";
-		}
-	}
-	
-	public struct HttpRequestType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct MarketplaceService : EnumItem
-		{
-			string EnumItem.Name => "MarketplaceService";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct Players : EnumItem
-		{
-			string EnumItem.Name => "Players";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct Chat : EnumItem
-		{
-			string EnumItem.Name => "Chat";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct Avatar : EnumItem
-		{
-			string EnumItem.Name => "Avatar";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct Analytics : EnumItem
-		{
-			string EnumItem.Name => "Analytics";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-		
-		public struct Localization : EnumItem
-		{
-			string EnumItem.Name => "Localization";
-			uint EnumItem.Value => 25;
-			string EnumItem.EnumType => "HttpRequestType";
-		}
-	}
-	
-	public struct HumanoidCollisionType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OuterBox : EnumItem
-		{
-			string EnumItem.Name => "OuterBox";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HumanoidCollisionType";
-		}
-		
-		public struct InnerBox : EnumItem
-		{
-			string EnumItem.Name => "InnerBox";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HumanoidCollisionType";
-		}
-	}
-	
-	public struct HumanoidDisplayDistanceType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Viewer : EnumItem
-		{
-			string EnumItem.Name => "Viewer";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HumanoidDisplayDistanceType";
-		}
-		
-		public struct Subject : EnumItem
-		{
-			string EnumItem.Name => "Subject";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HumanoidDisplayDistanceType";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HumanoidDisplayDistanceType";
-		}
-	}
-	
-	public struct HumanoidHealthDisplayType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct DisplayWhenDamaged : EnumItem
-		{
-			string EnumItem.Name => "DisplayWhenDamaged";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HumanoidHealthDisplayType";
-		}
-		
-		public struct AlwaysOn : EnumItem
-		{
-			string EnumItem.Name => "AlwaysOn";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HumanoidHealthDisplayType";
-		}
-		
-		public struct AlwaysOff : EnumItem
-		{
-			string EnumItem.Name => "AlwaysOff";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HumanoidHealthDisplayType";
-		}
-	}
-	
-	public struct HumanoidRigType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct R6 : EnumItem
-		{
-			string EnumItem.Name => "R6";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HumanoidRigType";
-		}
-		
-		public struct R15 : EnumItem
-		{
-			string EnumItem.Name => "R15";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HumanoidRigType";
-		}
-	}
-	
-	public struct HumanoidStateType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct FallingDown : EnumItem
-		{
-			string EnumItem.Name => "FallingDown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Ragdoll : EnumItem
-		{
-			string EnumItem.Name => "Ragdoll";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct GettingUp : EnumItem
-		{
-			string EnumItem.Name => "GettingUp";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Jumping : EnumItem
-		{
-			string EnumItem.Name => "Jumping";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Swimming : EnumItem
-		{
-			string EnumItem.Name => "Swimming";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Freefall : EnumItem
-		{
-			string EnumItem.Name => "Freefall";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Flying : EnumItem
-		{
-			string EnumItem.Name => "Flying";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Landed : EnumItem
-		{
-			string EnumItem.Name => "Landed";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Running : EnumItem
-		{
-			string EnumItem.Name => "Running";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct RunningNoPhysics : EnumItem
-		{
-			string EnumItem.Name => "RunningNoPhysics";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct StrafingNoPhysics : EnumItem
-		{
-			string EnumItem.Name => "StrafingNoPhysics";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Climbing : EnumItem
-		{
-			string EnumItem.Name => "Climbing";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Seated : EnumItem
-		{
-			string EnumItem.Name => "Seated";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct PlatformStanding : EnumItem
-		{
-			string EnumItem.Name => "PlatformStanding";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Dead : EnumItem
-		{
-			string EnumItem.Name => "Dead";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct Physics : EnumItem
-		{
-			string EnumItem.Name => "Physics";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "HumanoidStateType";
-		}
-	}
-	
-	public struct IKCollisionsMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NoCollisions : EnumItem
-		{
-			string EnumItem.Name => "NoCollisions";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "IKCollisionsMode";
-		}
-		
-		public struct OtherMechanismsAnchored : EnumItem
-		{
-			string EnumItem.Name => "OtherMechanismsAnchored";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "IKCollisionsMode";
-		}
-		
-		public struct IncludeContactedMechanisms : EnumItem
-		{
-			string EnumItem.Name => "IncludeContactedMechanisms";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "IKCollisionsMode";
-		}
-	}
-	
-	public struct IKControlConstraintSupport
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "IKControlConstraintSupport";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "IKControlConstraintSupport";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "IKControlConstraintSupport";
-		}
-	}
-	
-	public struct IKControlType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Transform : EnumItem
-		{
-			string EnumItem.Name => "Transform";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "IKControlType";
-		}
-		
-		public struct Position : EnumItem
-		{
-			string EnumItem.Name => "Position";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "IKControlType";
-		}
-		
-		public struct Rotation : EnumItem
-		{
-			string EnumItem.Name => "Rotation";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "IKControlType";
-		}
-		
-		public struct LookAt : EnumItem
-		{
-			string EnumItem.Name => "LookAt";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "IKControlType";
-		}
-	}
-	
-	public struct IXPLoadingStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct Pending : EnumItem
-		{
-			string EnumItem.Name => "Pending";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct Initialized : EnumItem
-		{
-			string EnumItem.Name => "Initialized";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct ErrorInvalidUser : EnumItem
-		{
-			string EnumItem.Name => "ErrorInvalidUser";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct ErrorConnection : EnumItem
-		{
-			string EnumItem.Name => "ErrorConnection";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct ErrorJsonParse : EnumItem
-		{
-			string EnumItem.Name => "ErrorJsonParse";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-		
-		public struct ErrorTimedOut : EnumItem
-		{
-			string EnumItem.Name => "ErrorTimedOut";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "IXPLoadingStatus";
-		}
-	}
-	
-	public struct ImageAlphaType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ImageAlphaType";
-		}
-		
-		public struct LockCanvasAlpha : EnumItem
-		{
-			string EnumItem.Name => "LockCanvasAlpha";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ImageAlphaType";
-		}
-		
-		public struct LockCanvasColor : EnumItem
-		{
-			string EnumItem.Name => "LockCanvasColor";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ImageAlphaType";
-		}
-	}
-	
-	public struct ImageCombineType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct BlendSourceOver : EnumItem
-		{
-			string EnumItem.Name => "BlendSourceOver";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ImageCombineType";
-		}
-		
-		public struct Overwrite : EnumItem
-		{
-			string EnumItem.Name => "Overwrite";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ImageCombineType";
-		}
-		
-		public struct Add : EnumItem
-		{
-			string EnumItem.Name => "Add";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ImageCombineType";
-		}
-		
-		public struct Multiply : EnumItem
-		{
-			string EnumItem.Name => "Multiply";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ImageCombineType";
-		}
-		
-		public struct AlphaBlend : EnumItem
-		{
-			string EnumItem.Name => "AlphaBlend";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ImageCombineType";
-		}
-	}
-	
-	public struct InOut
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Edge : EnumItem
-		{
-			string EnumItem.Name => "Edge";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InOut";
-		}
-		
-		public struct Inset : EnumItem
-		{
-			string EnumItem.Name => "Inset";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "InOut";
-		}
-		
-		public struct Center : EnumItem
-		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "InOut";
-		}
-	}
-	
-	public struct InfoType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Asset : EnumItem
-		{
-			string EnumItem.Name => "Asset";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InfoType";
-		}
-		
-		public struct Product : EnumItem
-		{
-			string EnumItem.Name => "Product";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "InfoType";
-		}
-		
-		public struct GamePass : EnumItem
-		{
-			string EnumItem.Name => "GamePass";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "InfoType";
-		}
-		
-		public struct Subscription : EnumItem
-		{
-			string EnumItem.Name => "Subscription";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "InfoType";
-		}
-		
-		public struct Bundle : EnumItem
-		{
-			string EnumItem.Name => "Bundle";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "InfoType";
-		}
-	}
-	
-	public struct InitialDockState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Top : EnumItem
-		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InitialDockState";
-		}
-		
-		public struct Bottom : EnumItem
-		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "InitialDockState";
-		}
-		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "InitialDockState";
-		}
-		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "InitialDockState";
-		}
-		
-		public struct Float : EnumItem
-		{
-			string EnumItem.Name => "Float";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "InitialDockState";
-		}
-	}
-	
-	public struct InputType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NoInput : EnumItem
-		{
-			string EnumItem.Name => "NoInput";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InputType";
-		}
-		
-		public struct Constant : EnumItem
-		{
-			string EnumItem.Name => "Constant";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "InputType";
-		}
-		
-		public struct Sin : EnumItem
-		{
-			string EnumItem.Name => "Sin";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "InputType";
-		}
-	}
-	
-	public struct InterpolationThrottlingMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InterpolationThrottlingMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "InterpolationThrottlingMode";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "InterpolationThrottlingMode";
-		}
-	}
-	
-	public struct InviteState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Placed : EnumItem
-		{
-			string EnumItem.Name => "Placed";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "InviteState";
-		}
-		
-		public struct Accepted : EnumItem
-		{
-			string EnumItem.Name => "Accepted";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "InviteState";
-		}
-		
-		public struct Declined : EnumItem
-		{
-			string EnumItem.Name => "Declined";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "InviteState";
-		}
-		
-		public struct Missed : EnumItem
-		{
-			string EnumItem.Name => "Missed";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "InviteState";
-		}
-	}
-	
-	public struct ItemLineAlignment
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ItemLineAlignment";
-		}
-		
-		public struct Start : EnumItem
-		{
-			string EnumItem.Name => "Start";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ItemLineAlignment";
-		}
-		
-		public struct Center : EnumItem
-		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ItemLineAlignment";
-		}
-		
-		public struct End : EnumItem
-		{
-			string EnumItem.Name => "End";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ItemLineAlignment";
-		}
-		
-		public struct Stretch : EnumItem
-		{
-			string EnumItem.Name => "Stretch";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ItemLineAlignment";
-		}
-	}
-	
-	public struct JoinSource
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct CreatedItemAttribution : EnumItem
-		{
-			string EnumItem.Name => "CreatedItemAttribution";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "JoinSource";
-		}
-	}
-	
-	public struct JointCreationMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "JointCreationMode";
-		}
-		
-		public struct Surface : EnumItem
-		{
-			string EnumItem.Name => "Surface";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "JointCreationMode";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "JointCreationMode";
-		}
-	}
-	
-	public struct KeyCode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Backspace : EnumItem
-		{
-			string EnumItem.Name => "Backspace";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Tab : EnumItem
-		{
-			string EnumItem.Name => "Tab";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Clear : EnumItem
-		{
-			string EnumItem.Name => "Clear";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Return : EnumItem
-		{
-			string EnumItem.Name => "Return";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Pause : EnumItem
-		{
-			string EnumItem.Name => "Pause";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Escape : EnumItem
-		{
-			string EnumItem.Name => "Escape";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Space : EnumItem
-		{
-			string EnumItem.Name => "Space";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct QuotedDouble : EnumItem
-		{
-			string EnumItem.Name => "QuotedDouble";
-			uint EnumItem.Value => 34;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Hash : EnumItem
-		{
-			string EnumItem.Name => "Hash";
-			uint EnumItem.Value => 35;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Dollar : EnumItem
-		{
-			string EnumItem.Name => "Dollar";
-			uint EnumItem.Value => 36;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Percent : EnumItem
-		{
-			string EnumItem.Name => "Percent";
-			uint EnumItem.Value => 37;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Ampersand : EnumItem
-		{
-			string EnumItem.Name => "Ampersand";
-			uint EnumItem.Value => 38;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Quote : EnumItem
-		{
-			string EnumItem.Name => "Quote";
-			uint EnumItem.Value => 39;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftParenthesis : EnumItem
-		{
-			string EnumItem.Name => "LeftParenthesis";
-			uint EnumItem.Value => 40;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightParenthesis : EnumItem
-		{
-			string EnumItem.Name => "RightParenthesis";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Asterisk : EnumItem
-		{
-			string EnumItem.Name => "Asterisk";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Plus : EnumItem
-		{
-			string EnumItem.Name => "Plus";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Comma : EnumItem
-		{
-			string EnumItem.Name => "Comma";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Minus : EnumItem
-		{
-			string EnumItem.Name => "Minus";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Period : EnumItem
-		{
-			string EnumItem.Name => "Period";
-			uint EnumItem.Value => 46;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Slash : EnumItem
-		{
-			string EnumItem.Name => "Slash";
-			uint EnumItem.Value => 47;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Zero : EnumItem
-		{
-			string EnumItem.Name => "Zero";
-			uint EnumItem.Value => 48;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct One : EnumItem
-		{
-			string EnumItem.Name => "One";
-			uint EnumItem.Value => 49;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Two : EnumItem
-		{
-			string EnumItem.Name => "Two";
-			uint EnumItem.Value => 50;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Three : EnumItem
-		{
-			string EnumItem.Name => "Three";
-			uint EnumItem.Value => 51;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Four : EnumItem
-		{
-			string EnumItem.Name => "Four";
-			uint EnumItem.Value => 52;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Five : EnumItem
-		{
-			string EnumItem.Name => "Five";
-			uint EnumItem.Value => 53;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Six : EnumItem
-		{
-			string EnumItem.Name => "Six";
-			uint EnumItem.Value => 54;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Seven : EnumItem
-		{
-			string EnumItem.Name => "Seven";
-			uint EnumItem.Value => 55;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Eight : EnumItem
-		{
-			string EnumItem.Name => "Eight";
-			uint EnumItem.Value => 56;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Nine : EnumItem
-		{
-			string EnumItem.Name => "Nine";
-			uint EnumItem.Value => 57;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Colon : EnumItem
-		{
-			string EnumItem.Name => "Colon";
-			uint EnumItem.Value => 58;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Semicolon : EnumItem
-		{
-			string EnumItem.Name => "Semicolon";
-			uint EnumItem.Value => 59;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LessThan : EnumItem
-		{
-			string EnumItem.Name => "LessThan";
-			uint EnumItem.Value => 60;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Equals : EnumItem
-		{
-			string EnumItem.Name => "Equals";
-			uint EnumItem.Value => 61;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct GreaterThan : EnumItem
-		{
-			string EnumItem.Name => "GreaterThan";
-			uint EnumItem.Value => 62;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Question : EnumItem
-		{
-			string EnumItem.Name => "Question";
-			uint EnumItem.Value => 63;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct At : EnumItem
-		{
-			string EnumItem.Name => "At";
-			uint EnumItem.Value => 64;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftBracket : EnumItem
-		{
-			string EnumItem.Name => "LeftBracket";
-			uint EnumItem.Value => 91;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct BackSlash : EnumItem
-		{
-			string EnumItem.Name => "BackSlash";
-			uint EnumItem.Value => 92;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightBracket : EnumItem
-		{
-			string EnumItem.Name => "RightBracket";
-			uint EnumItem.Value => 93;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Caret : EnumItem
-		{
-			string EnumItem.Name => "Caret";
-			uint EnumItem.Value => 94;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Underscore : EnumItem
-		{
-			string EnumItem.Name => "Underscore";
-			uint EnumItem.Value => 95;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Backquote : EnumItem
-		{
-			string EnumItem.Name => "Backquote";
-			uint EnumItem.Value => 96;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct A : EnumItem
-		{
-			string EnumItem.Name => "A";
-			uint EnumItem.Value => 97;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct B : EnumItem
-		{
-			string EnumItem.Name => "B";
-			uint EnumItem.Value => 98;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct C : EnumItem
-		{
-			string EnumItem.Name => "C";
-			uint EnumItem.Value => 99;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct D : EnumItem
-		{
-			string EnumItem.Name => "D";
-			uint EnumItem.Value => 100;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct E : EnumItem
-		{
-			string EnumItem.Name => "E";
-			uint EnumItem.Value => 101;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F : EnumItem
-		{
-			string EnumItem.Name => "F";
-			uint EnumItem.Value => 102;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct G : EnumItem
-		{
-			string EnumItem.Name => "G";
-			uint EnumItem.Value => 103;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct H : EnumItem
-		{
-			string EnumItem.Name => "H";
-			uint EnumItem.Value => 104;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct I : EnumItem
-		{
-			string EnumItem.Name => "I";
-			uint EnumItem.Value => 105;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct J : EnumItem
-		{
-			string EnumItem.Name => "J";
-			uint EnumItem.Value => 106;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct K : EnumItem
-		{
-			string EnumItem.Name => "K";
-			uint EnumItem.Value => 107;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct L : EnumItem
-		{
-			string EnumItem.Name => "L";
-			uint EnumItem.Value => 108;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct M : EnumItem
-		{
-			string EnumItem.Name => "M";
-			uint EnumItem.Value => 109;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct N : EnumItem
-		{
-			string EnumItem.Name => "N";
-			uint EnumItem.Value => 110;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct O : EnumItem
-		{
-			string EnumItem.Name => "O";
-			uint EnumItem.Value => 111;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct P : EnumItem
-		{
-			string EnumItem.Name => "P";
-			uint EnumItem.Value => 112;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Q : EnumItem
-		{
-			string EnumItem.Name => "Q";
-			uint EnumItem.Value => 113;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct R : EnumItem
-		{
-			string EnumItem.Name => "R";
-			uint EnumItem.Value => 114;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct S : EnumItem
-		{
-			string EnumItem.Name => "S";
-			uint EnumItem.Value => 115;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct T : EnumItem
-		{
-			string EnumItem.Name => "T";
-			uint EnumItem.Value => 116;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct U : EnumItem
-		{
-			string EnumItem.Name => "U";
-			uint EnumItem.Value => 117;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct V : EnumItem
-		{
-			string EnumItem.Name => "V";
-			uint EnumItem.Value => 118;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct W : EnumItem
-		{
-			string EnumItem.Name => "W";
-			uint EnumItem.Value => 119;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct X : EnumItem
-		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 120;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Y : EnumItem
-		{
-			string EnumItem.Name => "Y";
-			uint EnumItem.Value => 121;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Z : EnumItem
-		{
-			string EnumItem.Name => "Z";
-			uint EnumItem.Value => 122;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftCurly : EnumItem
-		{
-			string EnumItem.Name => "LeftCurly";
-			uint EnumItem.Value => 123;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Pipe : EnumItem
-		{
-			string EnumItem.Name => "Pipe";
-			uint EnumItem.Value => 124;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightCurly : EnumItem
-		{
-			string EnumItem.Name => "RightCurly";
-			uint EnumItem.Value => 125;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Tilde : EnumItem
-		{
-			string EnumItem.Name => "Tilde";
-			uint EnumItem.Value => 126;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Delete : EnumItem
-		{
-			string EnumItem.Name => "Delete";
-			uint EnumItem.Value => 127;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World0 : EnumItem
-		{
-			string EnumItem.Name => "World0";
-			uint EnumItem.Value => 160;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World1 : EnumItem
-		{
-			string EnumItem.Name => "World1";
-			uint EnumItem.Value => 161;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World2 : EnumItem
-		{
-			string EnumItem.Name => "World2";
-			uint EnumItem.Value => 162;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World3 : EnumItem
-		{
-			string EnumItem.Name => "World3";
-			uint EnumItem.Value => 163;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World4 : EnumItem
-		{
-			string EnumItem.Name => "World4";
-			uint EnumItem.Value => 164;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World5 : EnumItem
-		{
-			string EnumItem.Name => "World5";
-			uint EnumItem.Value => 165;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World6 : EnumItem
-		{
-			string EnumItem.Name => "World6";
-			uint EnumItem.Value => 166;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World7 : EnumItem
-		{
-			string EnumItem.Name => "World7";
-			uint EnumItem.Value => 167;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World8 : EnumItem
-		{
-			string EnumItem.Name => "World8";
-			uint EnumItem.Value => 168;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World9 : EnumItem
-		{
-			string EnumItem.Name => "World9";
-			uint EnumItem.Value => 169;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World10 : EnumItem
-		{
-			string EnumItem.Name => "World10";
-			uint EnumItem.Value => 170;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World11 : EnumItem
-		{
-			string EnumItem.Name => "World11";
-			uint EnumItem.Value => 171;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World12 : EnumItem
-		{
-			string EnumItem.Name => "World12";
-			uint EnumItem.Value => 172;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World13 : EnumItem
-		{
-			string EnumItem.Name => "World13";
-			uint EnumItem.Value => 173;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World14 : EnumItem
-		{
-			string EnumItem.Name => "World14";
-			uint EnumItem.Value => 174;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World15 : EnumItem
-		{
-			string EnumItem.Name => "World15";
-			uint EnumItem.Value => 175;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World16 : EnumItem
-		{
-			string EnumItem.Name => "World16";
-			uint EnumItem.Value => 176;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World17 : EnumItem
-		{
-			string EnumItem.Name => "World17";
-			uint EnumItem.Value => 177;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World18 : EnumItem
-		{
-			string EnumItem.Name => "World18";
-			uint EnumItem.Value => 178;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World19 : EnumItem
-		{
-			string EnumItem.Name => "World19";
-			uint EnumItem.Value => 179;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World20 : EnumItem
-		{
-			string EnumItem.Name => "World20";
-			uint EnumItem.Value => 180;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World21 : EnumItem
-		{
-			string EnumItem.Name => "World21";
-			uint EnumItem.Value => 181;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World22 : EnumItem
-		{
-			string EnumItem.Name => "World22";
-			uint EnumItem.Value => 182;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World23 : EnumItem
-		{
-			string EnumItem.Name => "World23";
-			uint EnumItem.Value => 183;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World24 : EnumItem
-		{
-			string EnumItem.Name => "World24";
-			uint EnumItem.Value => 184;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World25 : EnumItem
-		{
-			string EnumItem.Name => "World25";
-			uint EnumItem.Value => 185;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World26 : EnumItem
-		{
-			string EnumItem.Name => "World26";
-			uint EnumItem.Value => 186;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World27 : EnumItem
-		{
-			string EnumItem.Name => "World27";
-			uint EnumItem.Value => 187;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World28 : EnumItem
-		{
-			string EnumItem.Name => "World28";
-			uint EnumItem.Value => 188;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World29 : EnumItem
-		{
-			string EnumItem.Name => "World29";
-			uint EnumItem.Value => 189;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World30 : EnumItem
-		{
-			string EnumItem.Name => "World30";
-			uint EnumItem.Value => 190;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World31 : EnumItem
-		{
-			string EnumItem.Name => "World31";
-			uint EnumItem.Value => 191;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World32 : EnumItem
-		{
-			string EnumItem.Name => "World32";
-			uint EnumItem.Value => 192;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World33 : EnumItem
-		{
-			string EnumItem.Name => "World33";
-			uint EnumItem.Value => 193;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World34 : EnumItem
-		{
-			string EnumItem.Name => "World34";
-			uint EnumItem.Value => 194;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World35 : EnumItem
-		{
-			string EnumItem.Name => "World35";
-			uint EnumItem.Value => 195;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World36 : EnumItem
-		{
-			string EnumItem.Name => "World36";
-			uint EnumItem.Value => 196;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World37 : EnumItem
-		{
-			string EnumItem.Name => "World37";
-			uint EnumItem.Value => 197;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World38 : EnumItem
-		{
-			string EnumItem.Name => "World38";
-			uint EnumItem.Value => 198;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World39 : EnumItem
-		{
-			string EnumItem.Name => "World39";
-			uint EnumItem.Value => 199;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World40 : EnumItem
-		{
-			string EnumItem.Name => "World40";
-			uint EnumItem.Value => 200;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World41 : EnumItem
-		{
-			string EnumItem.Name => "World41";
-			uint EnumItem.Value => 201;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World42 : EnumItem
-		{
-			string EnumItem.Name => "World42";
-			uint EnumItem.Value => 202;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World43 : EnumItem
-		{
-			string EnumItem.Name => "World43";
-			uint EnumItem.Value => 203;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World44 : EnumItem
-		{
-			string EnumItem.Name => "World44";
-			uint EnumItem.Value => 204;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World45 : EnumItem
-		{
-			string EnumItem.Name => "World45";
-			uint EnumItem.Value => 205;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World46 : EnumItem
-		{
-			string EnumItem.Name => "World46";
-			uint EnumItem.Value => 206;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World47 : EnumItem
-		{
-			string EnumItem.Name => "World47";
-			uint EnumItem.Value => 207;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World48 : EnumItem
-		{
-			string EnumItem.Name => "World48";
-			uint EnumItem.Value => 208;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World49 : EnumItem
-		{
-			string EnumItem.Name => "World49";
-			uint EnumItem.Value => 209;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World50 : EnumItem
-		{
-			string EnumItem.Name => "World50";
-			uint EnumItem.Value => 210;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World51 : EnumItem
-		{
-			string EnumItem.Name => "World51";
-			uint EnumItem.Value => 211;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World52 : EnumItem
-		{
-			string EnumItem.Name => "World52";
-			uint EnumItem.Value => 212;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World53 : EnumItem
-		{
-			string EnumItem.Name => "World53";
-			uint EnumItem.Value => 213;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World54 : EnumItem
-		{
-			string EnumItem.Name => "World54";
-			uint EnumItem.Value => 214;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World55 : EnumItem
-		{
-			string EnumItem.Name => "World55";
-			uint EnumItem.Value => 215;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World56 : EnumItem
-		{
-			string EnumItem.Name => "World56";
-			uint EnumItem.Value => 216;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World57 : EnumItem
-		{
-			string EnumItem.Name => "World57";
-			uint EnumItem.Value => 217;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World58 : EnumItem
-		{
-			string EnumItem.Name => "World58";
-			uint EnumItem.Value => 218;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World59 : EnumItem
-		{
-			string EnumItem.Name => "World59";
-			uint EnumItem.Value => 219;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World60 : EnumItem
-		{
-			string EnumItem.Name => "World60";
-			uint EnumItem.Value => 220;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World61 : EnumItem
-		{
-			string EnumItem.Name => "World61";
-			uint EnumItem.Value => 221;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World62 : EnumItem
-		{
-			string EnumItem.Name => "World62";
-			uint EnumItem.Value => 222;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World63 : EnumItem
-		{
-			string EnumItem.Name => "World63";
-			uint EnumItem.Value => 223;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World64 : EnumItem
-		{
-			string EnumItem.Name => "World64";
-			uint EnumItem.Value => 224;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World65 : EnumItem
-		{
-			string EnumItem.Name => "World65";
-			uint EnumItem.Value => 225;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World66 : EnumItem
-		{
-			string EnumItem.Name => "World66";
-			uint EnumItem.Value => 226;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World67 : EnumItem
-		{
-			string EnumItem.Name => "World67";
-			uint EnumItem.Value => 227;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World68 : EnumItem
-		{
-			string EnumItem.Name => "World68";
-			uint EnumItem.Value => 228;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World69 : EnumItem
-		{
-			string EnumItem.Name => "World69";
-			uint EnumItem.Value => 229;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World70 : EnumItem
-		{
-			string EnumItem.Name => "World70";
-			uint EnumItem.Value => 230;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World71 : EnumItem
-		{
-			string EnumItem.Name => "World71";
-			uint EnumItem.Value => 231;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World72 : EnumItem
-		{
-			string EnumItem.Name => "World72";
-			uint EnumItem.Value => 232;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World73 : EnumItem
-		{
-			string EnumItem.Name => "World73";
-			uint EnumItem.Value => 233;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World74 : EnumItem
-		{
-			string EnumItem.Name => "World74";
-			uint EnumItem.Value => 234;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World75 : EnumItem
-		{
-			string EnumItem.Name => "World75";
-			uint EnumItem.Value => 235;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World76 : EnumItem
-		{
-			string EnumItem.Name => "World76";
-			uint EnumItem.Value => 236;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World77 : EnumItem
-		{
-			string EnumItem.Name => "World77";
-			uint EnumItem.Value => 237;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World78 : EnumItem
-		{
-			string EnumItem.Name => "World78";
-			uint EnumItem.Value => 238;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World79 : EnumItem
-		{
-			string EnumItem.Name => "World79";
-			uint EnumItem.Value => 239;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World80 : EnumItem
-		{
-			string EnumItem.Name => "World80";
-			uint EnumItem.Value => 240;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World81 : EnumItem
-		{
-			string EnumItem.Name => "World81";
-			uint EnumItem.Value => 241;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World82 : EnumItem
-		{
-			string EnumItem.Name => "World82";
-			uint EnumItem.Value => 242;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World83 : EnumItem
-		{
-			string EnumItem.Name => "World83";
-			uint EnumItem.Value => 243;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World84 : EnumItem
-		{
-			string EnumItem.Name => "World84";
-			uint EnumItem.Value => 244;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World85 : EnumItem
-		{
-			string EnumItem.Name => "World85";
-			uint EnumItem.Value => 245;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World86 : EnumItem
-		{
-			string EnumItem.Name => "World86";
-			uint EnumItem.Value => 246;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World87 : EnumItem
-		{
-			string EnumItem.Name => "World87";
-			uint EnumItem.Value => 247;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World88 : EnumItem
-		{
-			string EnumItem.Name => "World88";
-			uint EnumItem.Value => 248;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World89 : EnumItem
-		{
-			string EnumItem.Name => "World89";
-			uint EnumItem.Value => 249;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World90 : EnumItem
-		{
-			string EnumItem.Name => "World90";
-			uint EnumItem.Value => 250;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World91 : EnumItem
-		{
-			string EnumItem.Name => "World91";
-			uint EnumItem.Value => 251;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World92 : EnumItem
-		{
-			string EnumItem.Name => "World92";
-			uint EnumItem.Value => 252;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World93 : EnumItem
-		{
-			string EnumItem.Name => "World93";
-			uint EnumItem.Value => 253;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World94 : EnumItem
-		{
-			string EnumItem.Name => "World94";
-			uint EnumItem.Value => 254;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct World95 : EnumItem
-		{
-			string EnumItem.Name => "World95";
-			uint EnumItem.Value => 255;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadZero : EnumItem
-		{
-			string EnumItem.Name => "KeypadZero";
-			uint EnumItem.Value => 256;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadOne : EnumItem
-		{
-			string EnumItem.Name => "KeypadOne";
-			uint EnumItem.Value => 257;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadTwo : EnumItem
-		{
-			string EnumItem.Name => "KeypadTwo";
-			uint EnumItem.Value => 258;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadThree : EnumItem
-		{
-			string EnumItem.Name => "KeypadThree";
-			uint EnumItem.Value => 259;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadFour : EnumItem
-		{
-			string EnumItem.Name => "KeypadFour";
-			uint EnumItem.Value => 260;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadFive : EnumItem
-		{
-			string EnumItem.Name => "KeypadFive";
-			uint EnumItem.Value => 261;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadSix : EnumItem
-		{
-			string EnumItem.Name => "KeypadSix";
-			uint EnumItem.Value => 262;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadSeven : EnumItem
-		{
-			string EnumItem.Name => "KeypadSeven";
-			uint EnumItem.Value => 263;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadEight : EnumItem
-		{
-			string EnumItem.Name => "KeypadEight";
-			uint EnumItem.Value => 264;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadNine : EnumItem
-		{
-			string EnumItem.Name => "KeypadNine";
-			uint EnumItem.Value => 265;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadPeriod : EnumItem
-		{
-			string EnumItem.Name => "KeypadPeriod";
-			uint EnumItem.Value => 266;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadDivide : EnumItem
-		{
-			string EnumItem.Name => "KeypadDivide";
-			uint EnumItem.Value => 267;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadMultiply : EnumItem
-		{
-			string EnumItem.Name => "KeypadMultiply";
-			uint EnumItem.Value => 268;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadMinus : EnumItem
-		{
-			string EnumItem.Name => "KeypadMinus";
-			uint EnumItem.Value => 269;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadPlus : EnumItem
-		{
-			string EnumItem.Name => "KeypadPlus";
-			uint EnumItem.Value => 270;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadEnter : EnumItem
-		{
-			string EnumItem.Name => "KeypadEnter";
-			uint EnumItem.Value => 271;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct KeypadEquals : EnumItem
-		{
-			string EnumItem.Name => "KeypadEquals";
-			uint EnumItem.Value => 272;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Up : EnumItem
-		{
-			string EnumItem.Name => "Up";
-			uint EnumItem.Value => 273;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Down : EnumItem
-		{
-			string EnumItem.Name => "Down";
-			uint EnumItem.Value => 274;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 275;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 276;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Insert : EnumItem
-		{
-			string EnumItem.Name => "Insert";
-			uint EnumItem.Value => 277;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Home : EnumItem
-		{
-			string EnumItem.Name => "Home";
-			uint EnumItem.Value => 278;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct End : EnumItem
-		{
-			string EnumItem.Name => "End";
-			uint EnumItem.Value => 279;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct PageUp : EnumItem
-		{
-			string EnumItem.Name => "PageUp";
-			uint EnumItem.Value => 280;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct PageDown : EnumItem
-		{
-			string EnumItem.Name => "PageDown";
-			uint EnumItem.Value => 281;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F1 : EnumItem
-		{
-			string EnumItem.Name => "F1";
-			uint EnumItem.Value => 282;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F2 : EnumItem
-		{
-			string EnumItem.Name => "F2";
-			uint EnumItem.Value => 283;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F3 : EnumItem
-		{
-			string EnumItem.Name => "F3";
-			uint EnumItem.Value => 284;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F4 : EnumItem
-		{
-			string EnumItem.Name => "F4";
-			uint EnumItem.Value => 285;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F5 : EnumItem
-		{
-			string EnumItem.Name => "F5";
-			uint EnumItem.Value => 286;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F6 : EnumItem
-		{
-			string EnumItem.Name => "F6";
-			uint EnumItem.Value => 287;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F7 : EnumItem
-		{
-			string EnumItem.Name => "F7";
-			uint EnumItem.Value => 288;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F8 : EnumItem
-		{
-			string EnumItem.Name => "F8";
-			uint EnumItem.Value => 289;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F9 : EnumItem
-		{
-			string EnumItem.Name => "F9";
-			uint EnumItem.Value => 290;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F10 : EnumItem
-		{
-			string EnumItem.Name => "F10";
-			uint EnumItem.Value => 291;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F11 : EnumItem
-		{
-			string EnumItem.Name => "F11";
-			uint EnumItem.Value => 292;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F12 : EnumItem
-		{
-			string EnumItem.Name => "F12";
-			uint EnumItem.Value => 293;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F13 : EnumItem
-		{
-			string EnumItem.Name => "F13";
-			uint EnumItem.Value => 294;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F14 : EnumItem
-		{
-			string EnumItem.Name => "F14";
-			uint EnumItem.Value => 295;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct F15 : EnumItem
-		{
-			string EnumItem.Name => "F15";
-			uint EnumItem.Value => 296;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct NumLock : EnumItem
-		{
-			string EnumItem.Name => "NumLock";
-			uint EnumItem.Value => 300;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct CapsLock : EnumItem
-		{
-			string EnumItem.Name => "CapsLock";
-			uint EnumItem.Value => 301;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ScrollLock : EnumItem
-		{
-			string EnumItem.Name => "ScrollLock";
-			uint EnumItem.Value => 302;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightShift : EnumItem
-		{
-			string EnumItem.Name => "RightShift";
-			uint EnumItem.Value => 303;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftShift : EnumItem
-		{
-			string EnumItem.Name => "LeftShift";
-			uint EnumItem.Value => 304;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightControl : EnumItem
-		{
-			string EnumItem.Name => "RightControl";
-			uint EnumItem.Value => 305;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftControl : EnumItem
-		{
-			string EnumItem.Name => "LeftControl";
-			uint EnumItem.Value => 306;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightAlt : EnumItem
-		{
-			string EnumItem.Name => "RightAlt";
-			uint EnumItem.Value => 307;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftAlt : EnumItem
-		{
-			string EnumItem.Name => "LeftAlt";
-			uint EnumItem.Value => 308;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightMeta : EnumItem
-		{
-			string EnumItem.Name => "RightMeta";
-			uint EnumItem.Value => 309;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftMeta : EnumItem
-		{
-			string EnumItem.Name => "LeftMeta";
-			uint EnumItem.Value => 310;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct LeftSuper : EnumItem
-		{
-			string EnumItem.Name => "LeftSuper";
-			uint EnumItem.Value => 311;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct RightSuper : EnumItem
-		{
-			string EnumItem.Name => "RightSuper";
-			uint EnumItem.Value => 312;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Mode : EnumItem
-		{
-			string EnumItem.Name => "Mode";
-			uint EnumItem.Value => 313;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Compose : EnumItem
-		{
-			string EnumItem.Name => "Compose";
-			uint EnumItem.Value => 314;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Help : EnumItem
-		{
-			string EnumItem.Name => "Help";
-			uint EnumItem.Value => 315;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Print : EnumItem
-		{
-			string EnumItem.Name => "Print";
-			uint EnumItem.Value => 316;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct SysReq : EnumItem
-		{
-			string EnumItem.Name => "SysReq";
-			uint EnumItem.Value => 317;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Break : EnumItem
-		{
-			string EnumItem.Name => "Break";
-			uint EnumItem.Value => 318;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Menu : EnumItem
-		{
-			string EnumItem.Name => "Menu";
-			uint EnumItem.Value => 319;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Power : EnumItem
-		{
-			string EnumItem.Name => "Power";
-			uint EnumItem.Value => 320;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Euro : EnumItem
-		{
-			string EnumItem.Name => "Euro";
-			uint EnumItem.Value => 321;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Undo : EnumItem
-		{
-			string EnumItem.Name => "Undo";
-			uint EnumItem.Value => 322;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonX : EnumItem
-		{
-			string EnumItem.Name => "ButtonX";
-			uint EnumItem.Value => 1000;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonY : EnumItem
-		{
-			string EnumItem.Name => "ButtonY";
-			uint EnumItem.Value => 1001;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonA : EnumItem
-		{
-			string EnumItem.Name => "ButtonA";
-			uint EnumItem.Value => 1002;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonB : EnumItem
-		{
-			string EnumItem.Name => "ButtonB";
-			uint EnumItem.Value => 1003;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonR1 : EnumItem
-		{
-			string EnumItem.Name => "ButtonR1";
-			uint EnumItem.Value => 1004;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonL1 : EnumItem
-		{
-			string EnumItem.Name => "ButtonL1";
-			uint EnumItem.Value => 1005;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonR2 : EnumItem
-		{
-			string EnumItem.Name => "ButtonR2";
-			uint EnumItem.Value => 1006;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonL2 : EnumItem
-		{
-			string EnumItem.Name => "ButtonL2";
-			uint EnumItem.Value => 1007;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonR3 : EnumItem
-		{
-			string EnumItem.Name => "ButtonR3";
-			uint EnumItem.Value => 1008;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonL3 : EnumItem
-		{
-			string EnumItem.Name => "ButtonL3";
-			uint EnumItem.Value => 1009;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonStart : EnumItem
-		{
-			string EnumItem.Name => "ButtonStart";
-			uint EnumItem.Value => 1010;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct ButtonSelect : EnumItem
-		{
-			string EnumItem.Name => "ButtonSelect";
-			uint EnumItem.Value => 1011;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct DPadLeft : EnumItem
-		{
-			string EnumItem.Name => "DPadLeft";
-			uint EnumItem.Value => 1012;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct DPadRight : EnumItem
-		{
-			string EnumItem.Name => "DPadRight";
-			uint EnumItem.Value => 1013;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct DPadUp : EnumItem
-		{
-			string EnumItem.Name => "DPadUp";
-			uint EnumItem.Value => 1014;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct DPadDown : EnumItem
-		{
-			string EnumItem.Name => "DPadDown";
-			uint EnumItem.Value => 1015;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Thumbstick1 : EnumItem
-		{
-			string EnumItem.Name => "Thumbstick1";
-			uint EnumItem.Value => 1016;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct Thumbstick2 : EnumItem
-		{
-			string EnumItem.Name => "Thumbstick2";
-			uint EnumItem.Value => 1017;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseLeftButton : EnumItem
-		{
-			string EnumItem.Name => "MouseLeftButton";
-			uint EnumItem.Value => 1018;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseRightButton : EnumItem
-		{
-			string EnumItem.Name => "MouseRightButton";
-			uint EnumItem.Value => 1019;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseMiddleButton : EnumItem
-		{
-			string EnumItem.Name => "MouseMiddleButton";
-			uint EnumItem.Value => 1020;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseBackButton : EnumItem
-		{
-			string EnumItem.Name => "MouseBackButton";
-			uint EnumItem.Value => 1021;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseNoButton : EnumItem
-		{
-			string EnumItem.Name => "MouseNoButton";
-			uint EnumItem.Value => 1022;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseX : EnumItem
-		{
-			string EnumItem.Name => "MouseX";
-			uint EnumItem.Value => 1023;
-			string EnumItem.EnumType => "KeyCode";
-		}
-		
-		public struct MouseY : EnumItem
-		{
-			string EnumItem.Name => "MouseY";
-			uint EnumItem.Value => 1024;
-			string EnumItem.EnumType => "KeyCode";
-		}
-	}
-	
-	public struct KeyInterpolationMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Constant : EnumItem
-		{
-			string EnumItem.Name => "Constant";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "KeyInterpolationMode";
-		}
-		
-		public struct Linear : EnumItem
-		{
-			string EnumItem.Name => "Linear";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "KeyInterpolationMode";
-		}
-		
-		public struct Cubic : EnumItem
-		{
-			string EnumItem.Name => "Cubic";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "KeyInterpolationMode";
-		}
-	}
-	
-	public struct KeywordFilterType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Include : EnumItem
-		{
-			string EnumItem.Name => "Include";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "KeywordFilterType";
-		}
-		
-		public struct Exclude : EnumItem
-		{
-			string EnumItem.Name => "Exclude";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "KeywordFilterType";
-		}
-	}
-	
-	public struct Language
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Language";
-		}
-	}
-	
-	public struct LeftRight
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LeftRight";
-		}
-		
-		public struct Center : EnumItem
-		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LeftRight";
-		}
-		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LeftRight";
-		}
-	}
-	
-	public struct Limb
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Head : EnumItem
-		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct Torso : EnumItem
-		{
-			string EnumItem.Name => "Torso";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct LeftArm : EnumItem
-		{
-			string EnumItem.Name => "LeftArm";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct RightArm : EnumItem
-		{
-			string EnumItem.Name => "RightArm";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct LeftLeg : EnumItem
-		{
-			string EnumItem.Name => "LeftLeg";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct RightLeg : EnumItem
-		{
-			string EnumItem.Name => "RightLeg";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "Limb";
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "Limb";
-		}
-	}
-	
-	public struct LineJoinMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Round : EnumItem
-		{
-			string EnumItem.Name => "Round";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LineJoinMode";
-		}
-		
-		public struct Bevel : EnumItem
-		{
-			string EnumItem.Name => "Bevel";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LineJoinMode";
-		}
-		
-		public struct Miter : EnumItem
-		{
-			string EnumItem.Name => "Miter";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LineJoinMode";
-		}
-	}
-	
-	public struct ListDisplayMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Horizontal : EnumItem
-		{
-			string EnumItem.Name => "Horizontal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ListDisplayMode";
-		}
-		
-		public struct Vertical : EnumItem
-		{
-			string EnumItem.Name => "Vertical";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ListDisplayMode";
-		}
-	}
-	
-	public struct ListenerType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Camera : EnumItem
-		{
-			string EnumItem.Name => "Camera";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ListenerType";
-		}
-		
-		public struct CFrame : EnumItem
-		{
-			string EnumItem.Name => "CFrame";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ListenerType";
-		}
-		
-		public struct ObjectPosition : EnumItem
-		{
-			string EnumItem.Name => "ObjectPosition";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ListenerType";
-		}
-		
-		public struct ObjectCFrame : EnumItem
-		{
-			string EnumItem.Name => "ObjectCFrame";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ListenerType";
-		}
-	}
-	
-	public struct LiveEditingAtomicUpdateResponse
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LiveEditingAtomicUpdateResponse";
-		}
-		
-		public struct FailureGuidNotFound : EnumItem
-		{
-			string EnumItem.Name => "FailureGuidNotFound";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LiveEditingAtomicUpdateResponse";
-		}
-		
-		public struct FailureHashMismatch : EnumItem
-		{
-			string EnumItem.Name => "FailureHashMismatch";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LiveEditingAtomicUpdateResponse";
-		}
-		
-		public struct FailureOperationIllegal : EnumItem
-		{
-			string EnumItem.Name => "FailureOperationIllegal";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "LiveEditingAtomicUpdateResponse";
-		}
-	}
-	
-	public struct LiveEditingBroadcastMessageType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Normal : EnumItem
-		{
-			string EnumItem.Name => "Normal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LiveEditingBroadcastMessageType";
-		}
-		
-		public struct Warning : EnumItem
-		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LiveEditingBroadcastMessageType";
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LiveEditingBroadcastMessageType";
-		}
-	}
-	
-	public struct LoadCharacterLayeredClothing
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LoadCharacterLayeredClothing";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LoadCharacterLayeredClothing";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LoadCharacterLayeredClothing";
-		}
-	}
-	
-	public struct LoadDynamicHeads
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "LoadDynamicHeads";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "LoadDynamicHeads";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "LoadDynamicHeads";
-		}
-	}
-	
-	public struct MarketplaceBulkPurchasePromptStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Completed : EnumItem
-		{
-			string EnumItem.Name => "Completed";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MarketplaceBulkPurchasePromptStatus";
-		}
-		
-		public struct Aborted : EnumItem
-		{
-			string EnumItem.Name => "Aborted";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MarketplaceBulkPurchasePromptStatus";
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MarketplaceBulkPurchasePromptStatus";
-		}
-	}
-	
-	public struct MarketplaceItemPurchaseStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct SystemError : EnumItem
-		{
-			string EnumItem.Name => "SystemError";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct AlreadyOwned : EnumItem
-		{
-			string EnumItem.Name => "AlreadyOwned";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct InsufficientRobux : EnumItem
-		{
-			string EnumItem.Name => "InsufficientRobux";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct QuantityLimitExceeded : EnumItem
-		{
-			string EnumItem.Name => "QuantityLimitExceeded";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct QuotaExceeded : EnumItem
-		{
-			string EnumItem.Name => "QuotaExceeded";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct NotForSale : EnumItem
-		{
-			string EnumItem.Name => "NotForSale";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct NotAvailableForPurchaser : EnumItem
-		{
-			string EnumItem.Name => "NotAvailableForPurchaser";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct PriceMismatch : EnumItem
-		{
-			string EnumItem.Name => "PriceMismatch";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct SoldOut : EnumItem
-		{
-			string EnumItem.Name => "SoldOut";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct PurchaserIsSeller : EnumItem
-		{
-			string EnumItem.Name => "PurchaserIsSeller";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct InsufficientMembership : EnumItem
-		{
-			string EnumItem.Name => "InsufficientMembership";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-		
-		public struct PlaceInvalid : EnumItem
-		{
-			string EnumItem.Name => "PlaceInvalid";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "MarketplaceItemPurchaseStatus";
-		}
-	}
-	
-	public struct MarketplaceProductType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct AvatarAsset : EnumItem
-		{
-			string EnumItem.Name => "AvatarAsset";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MarketplaceProductType";
-		}
-		
-		public struct AvatarBundle : EnumItem
-		{
-			string EnumItem.Name => "AvatarBundle";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MarketplaceProductType";
-		}
-	}
-	
-	public struct MarkupKind
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct PlainText : EnumItem
-		{
-			string EnumItem.Name => "PlainText";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MarkupKind";
-		}
-		
-		public struct Markdown : EnumItem
-		{
-			string EnumItem.Name => "Markdown";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MarkupKind";
-		}
-	}
-	
-	public struct Material
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Plastic : EnumItem
-		{
-			string EnumItem.Name => "Plastic";
-			uint EnumItem.Value => 256;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct SmoothPlastic : EnumItem
-		{
-			string EnumItem.Name => "SmoothPlastic";
-			uint EnumItem.Value => 272;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Neon : EnumItem
-		{
-			string EnumItem.Name => "Neon";
-			uint EnumItem.Value => 288;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Wood : EnumItem
-		{
-			string EnumItem.Name => "Wood";
-			uint EnumItem.Value => 512;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct WoodPlanks : EnumItem
-		{
-			string EnumItem.Name => "WoodPlanks";
-			uint EnumItem.Value => 528;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Marble : EnumItem
-		{
-			string EnumItem.Name => "Marble";
-			uint EnumItem.Value => 784;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Slate : EnumItem
-		{
-			string EnumItem.Name => "Slate";
-			uint EnumItem.Value => 800;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Concrete : EnumItem
-		{
-			string EnumItem.Name => "Concrete";
-			uint EnumItem.Value => 816;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Granite : EnumItem
-		{
-			string EnumItem.Name => "Granite";
-			uint EnumItem.Value => 832;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Brick : EnumItem
-		{
-			string EnumItem.Name => "Brick";
-			uint EnumItem.Value => 848;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Pebble : EnumItem
-		{
-			string EnumItem.Name => "Pebble";
-			uint EnumItem.Value => 864;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Cobblestone : EnumItem
-		{
-			string EnumItem.Name => "Cobblestone";
-			uint EnumItem.Value => 880;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Rock : EnumItem
-		{
-			string EnumItem.Name => "Rock";
-			uint EnumItem.Value => 896;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Sandstone : EnumItem
-		{
-			string EnumItem.Name => "Sandstone";
-			uint EnumItem.Value => 912;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Basalt : EnumItem
-		{
-			string EnumItem.Name => "Basalt";
-			uint EnumItem.Value => 788;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct CrackedLava : EnumItem
-		{
-			string EnumItem.Name => "CrackedLava";
-			uint EnumItem.Value => 804;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Limestone : EnumItem
-		{
-			string EnumItem.Name => "Limestone";
-			uint EnumItem.Value => 820;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Pavement : EnumItem
-		{
-			string EnumItem.Name => "Pavement";
-			uint EnumItem.Value => 836;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct CorrodedMetal : EnumItem
-		{
-			string EnumItem.Name => "CorrodedMetal";
-			uint EnumItem.Value => 1040;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct DiamondPlate : EnumItem
-		{
-			string EnumItem.Name => "DiamondPlate";
-			uint EnumItem.Value => 1056;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Foil : EnumItem
-		{
-			string EnumItem.Name => "Foil";
-			uint EnumItem.Value => 1072;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Metal : EnumItem
-		{
-			string EnumItem.Name => "Metal";
-			uint EnumItem.Value => 1088;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Grass : EnumItem
-		{
-			string EnumItem.Name => "Grass";
-			uint EnumItem.Value => 1280;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct LeafyGrass : EnumItem
-		{
-			string EnumItem.Name => "LeafyGrass";
-			uint EnumItem.Value => 1284;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Sand : EnumItem
-		{
-			string EnumItem.Name => "Sand";
-			uint EnumItem.Value => 1296;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Fabric : EnumItem
-		{
-			string EnumItem.Name => "Fabric";
-			uint EnumItem.Value => 1312;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Snow : EnumItem
-		{
-			string EnumItem.Name => "Snow";
-			uint EnumItem.Value => 1328;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Mud : EnumItem
-		{
-			string EnumItem.Name => "Mud";
-			uint EnumItem.Value => 1344;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Ground : EnumItem
-		{
-			string EnumItem.Name => "Ground";
-			uint EnumItem.Value => 1360;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Asphalt : EnumItem
-		{
-			string EnumItem.Name => "Asphalt";
-			uint EnumItem.Value => 1376;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Salt : EnumItem
-		{
-			string EnumItem.Name => "Salt";
-			uint EnumItem.Value => 1392;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Ice : EnumItem
-		{
-			string EnumItem.Name => "Ice";
-			uint EnumItem.Value => 1536;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Glacier : EnumItem
-		{
-			string EnumItem.Name => "Glacier";
-			uint EnumItem.Value => 1552;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Glass : EnumItem
-		{
-			string EnumItem.Name => "Glass";
-			uint EnumItem.Value => 1568;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct ForceField : EnumItem
-		{
-			string EnumItem.Name => "ForceField";
-			uint EnumItem.Value => 1584;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Air : EnumItem
-		{
-			string EnumItem.Name => "Air";
-			uint EnumItem.Value => 1792;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Water : EnumItem
-		{
-			string EnumItem.Name => "Water";
-			uint EnumItem.Value => 2048;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Cardboard : EnumItem
-		{
-			string EnumItem.Name => "Cardboard";
-			uint EnumItem.Value => 2304;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Carpet : EnumItem
-		{
-			string EnumItem.Name => "Carpet";
-			uint EnumItem.Value => 2305;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct CeramicTiles : EnumItem
-		{
-			string EnumItem.Name => "CeramicTiles";
-			uint EnumItem.Value => 2306;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct ClayRoofTiles : EnumItem
-		{
-			string EnumItem.Name => "ClayRoofTiles";
-			uint EnumItem.Value => 2307;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct RoofShingles : EnumItem
-		{
-			string EnumItem.Name => "RoofShingles";
-			uint EnumItem.Value => 2308;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Leather : EnumItem
-		{
-			string EnumItem.Name => "Leather";
-			uint EnumItem.Value => 2309;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Plaster : EnumItem
-		{
-			string EnumItem.Name => "Plaster";
-			uint EnumItem.Value => 2310;
-			string EnumItem.EnumType => "Material";
-		}
-		
-		public struct Rubber : EnumItem
-		{
-			string EnumItem.Name => "Rubber";
-			uint EnumItem.Value => 2311;
-			string EnumItem.EnumType => "Material";
-		}
-	}
-	
-	public struct MaterialPattern
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Regular : EnumItem
-		{
-			string EnumItem.Name => "Regular";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MaterialPattern";
-		}
-		
-		public struct Organic : EnumItem
-		{
-			string EnumItem.Name => "Organic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MaterialPattern";
-		}
-	}
-	
-	public struct MembershipType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MembershipType";
-		}
-		
-		public struct BuildersClub : EnumItem
-		{
-			string EnumItem.Name => "BuildersClub";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MembershipType";
-		}
-		
-		public struct TurboBuildersClub : EnumItem
-		{
-			string EnumItem.Name => "TurboBuildersClub";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MembershipType";
-		}
-		
-		public struct OutrageousBuildersClub : EnumItem
-		{
-			string EnumItem.Name => "OutrageousBuildersClub";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MembershipType";
-		}
-		
-		public struct Premium : EnumItem
-		{
-			string EnumItem.Name => "Premium";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MembershipType";
-		}
-	}
-	
-	public struct MeshPartDetailLevel
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct DistanceBased : EnumItem
-		{
-			string EnumItem.Name => "DistanceBased";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-		
-		public struct Level00 : EnumItem
-		{
-			string EnumItem.Name => "Level00";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-		
-		public struct Level01 : EnumItem
-		{
-			string EnumItem.Name => "Level01";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-		
-		public struct Level02 : EnumItem
-		{
-			string EnumItem.Name => "Level02";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-		
-		public struct Level03 : EnumItem
-		{
-			string EnumItem.Name => "Level03";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-		
-		public struct Level04 : EnumItem
-		{
-			string EnumItem.Name => "Level04";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "MeshPartDetailLevel";
-		}
-	}
-	
-	public struct MeshPartHeadsAndAccessories
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MeshPartHeadsAndAccessories";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MeshPartHeadsAndAccessories";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MeshPartHeadsAndAccessories";
-		}
-	}
-	
-	public struct MeshScaleUnit
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Stud : EnumItem
-		{
-			string EnumItem.Name => "Stud";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-		
-		public struct Meter : EnumItem
-		{
-			string EnumItem.Name => "Meter";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-		
-		public struct CM : EnumItem
-		{
-			string EnumItem.Name => "CM";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-		
-		public struct MM : EnumItem
-		{
-			string EnumItem.Name => "MM";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-		
-		public struct Foot : EnumItem
-		{
-			string EnumItem.Name => "Foot";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-		
-		public struct Inch : EnumItem
-		{
-			string EnumItem.Name => "Inch";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "MeshScaleUnit";
-		}
-	}
-	
-	public struct MeshType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Head : EnumItem
-		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Torso : EnumItem
-		{
-			string EnumItem.Name => "Torso";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Wedge : EnumItem
-		{
-			string EnumItem.Name => "Wedge";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Sphere : EnumItem
-		{
-			string EnumItem.Name => "Sphere";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Cylinder : EnumItem
-		{
-			string EnumItem.Name => "Cylinder";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct FileMesh : EnumItem
-		{
-			string EnumItem.Name => "FileMesh";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Brick : EnumItem
-		{
-			string EnumItem.Name => "Brick";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Prism : EnumItem
-		{
-			string EnumItem.Name => "Prism";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct Pyramid : EnumItem
-		{
-			string EnumItem.Name => "Pyramid";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct ParallelRamp : EnumItem
-		{
-			string EnumItem.Name => "ParallelRamp";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct RightAngleRamp : EnumItem
-		{
-			string EnumItem.Name => "RightAngleRamp";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "MeshType";
-		}
-		
-		public struct CornerWedge : EnumItem
-		{
-			string EnumItem.Name => "CornerWedge";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "MeshType";
-		}
-	}
-	
-	public struct MessageType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct MessageOutput : EnumItem
-		{
-			string EnumItem.Name => "MessageOutput";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MessageType";
-		}
-		
-		public struct MessageInfo : EnumItem
-		{
-			string EnumItem.Name => "MessageInfo";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MessageType";
-		}
-		
-		public struct MessageWarning : EnumItem
-		{
-			string EnumItem.Name => "MessageWarning";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MessageType";
-		}
-		
-		public struct MessageError : EnumItem
-		{
-			string EnumItem.Name => "MessageError";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MessageType";
-		}
-	}
-	
-	public struct ModelLevelOfDetail
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ModelLevelOfDetail";
-		}
-		
-		public struct StreamingMesh : EnumItem
-		{
-			string EnumItem.Name => "StreamingMesh";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ModelLevelOfDetail";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ModelLevelOfDetail";
-		}
-	}
-	
-	public struct ModelStreamingBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ModelStreamingBehavior";
-		}
-		
-		public struct Legacy : EnumItem
-		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ModelStreamingBehavior";
-		}
-		
-		public struct Improved : EnumItem
-		{
-			string EnumItem.Name => "Improved";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ModelStreamingBehavior";
-		}
-	}
-	
-	public struct ModelStreamingMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ModelStreamingMode";
-		}
-		
-		public struct Atomic : EnumItem
-		{
-			string EnumItem.Name => "Atomic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ModelStreamingMode";
-		}
-		
-		public struct Persistent : EnumItem
-		{
-			string EnumItem.Name => "Persistent";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ModelStreamingMode";
-		}
-		
-		public struct PersistentPerPlayer : EnumItem
-		{
-			string EnumItem.Name => "PersistentPerPlayer";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ModelStreamingMode";
-		}
-		
-		public struct Nonatomic : EnumItem
-		{
-			string EnumItem.Name => "Nonatomic";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ModelStreamingMode";
-		}
-	}
-	
-	public struct ModerationStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct ReviewedApproved : EnumItem
-		{
-			string EnumItem.Name => "ReviewedApproved";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ModerationStatus";
-		}
-		
-		public struct ReviewedRejected : EnumItem
-		{
-			string EnumItem.Name => "ReviewedRejected";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ModerationStatus";
-		}
-		
-		public struct NotReviewed : EnumItem
-		{
-			string EnumItem.Name => "NotReviewed";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ModerationStatus";
-		}
-		
-		public struct NotApplicable : EnumItem
-		{
-			string EnumItem.Name => "NotApplicable";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ModerationStatus";
-		}
-		
-		public struct Invalid : EnumItem
-		{
-			string EnumItem.Name => "Invalid";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ModerationStatus";
-		}
-	}
-	
-	public struct ModifierKey
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Shift : EnumItem
-		{
-			string EnumItem.Name => "Shift";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ModifierKey";
-		}
-		
-		public struct Ctrl : EnumItem
-		{
-			string EnumItem.Name => "Ctrl";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ModifierKey";
-		}
-		
-		public struct Alt : EnumItem
-		{
-			string EnumItem.Name => "Alt";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ModifierKey";
-		}
-		
-		public struct Meta : EnumItem
-		{
-			string EnumItem.Name => "Meta";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ModifierKey";
-		}
-	}
-	
-	public struct MouseBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MouseBehavior";
-		}
-		
-		public struct LockCenter : EnumItem
-		{
-			string EnumItem.Name => "LockCenter";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MouseBehavior";
-		}
-		
-		public struct LockCurrentPosition : EnumItem
-		{
-			string EnumItem.Name => "LockCurrentPosition";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MouseBehavior";
-		}
-	}
-	
-	public struct MoveState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Stopped : EnumItem
-		{
-			string EnumItem.Name => "Stopped";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MoveState";
-		}
-		
-		public struct Coasting : EnumItem
-		{
-			string EnumItem.Name => "Coasting";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MoveState";
-		}
-		
-		public struct Pushing : EnumItem
-		{
-			string EnumItem.Name => "Pushing";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MoveState";
-		}
-		
-		public struct Stopping : EnumItem
-		{
-			string EnumItem.Name => "Stopping";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "MoveState";
-		}
-		
-		public struct AirFree : EnumItem
-		{
-			string EnumItem.Name => "AirFree";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "MoveState";
-		}
-	}
-	
-	public struct MoverConstraintRootBehaviorMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MoverConstraintRootBehaviorMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MoverConstraintRootBehaviorMode";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "MoverConstraintRootBehaviorMode";
-		}
-	}
-	
-	public struct MuteState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unmuted : EnumItem
-		{
-			string EnumItem.Name => "Unmuted";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "MuteState";
-		}
-		
-		public struct Muted : EnumItem
-		{
-			string EnumItem.Name => "Muted";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "MuteState";
-		}
-	}
-	
-	public struct NameOcclusion
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NoOcclusion : EnumItem
-		{
-			string EnumItem.Name => "NoOcclusion";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "NameOcclusion";
-		}
-		
-		public struct EnemyOcclusion : EnumItem
-		{
-			string EnumItem.Name => "EnemyOcclusion";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "NameOcclusion";
-		}
-		
-		public struct OccludeAll : EnumItem
-		{
-			string EnumItem.Name => "OccludeAll";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "NameOcclusion";
-		}
-	}
-	
-	public struct NetworkOwnership
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "NetworkOwnership";
-		}
-		
-		public struct Manual : EnumItem
-		{
-			string EnumItem.Name => "Manual";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "NetworkOwnership";
-		}
-		
-		public struct OnContact : EnumItem
-		{
-			string EnumItem.Name => "OnContact";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "NetworkOwnership";
-		}
-	}
-	
-	public struct NetworkStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "NetworkStatus";
-		}
-		
-		public struct Connected : EnumItem
-		{
-			string EnumItem.Name => "Connected";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "NetworkStatus";
-		}
-		
-		public struct Disconnected : EnumItem
-		{
-			string EnumItem.Name => "Disconnected";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "NetworkStatus";
-		}
-	}
-	
-	public struct NoiseType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct SimplexGabor : EnumItem
-		{
-			string EnumItem.Name => "SimplexGabor";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "NoiseType";
-		}
-	}
-	
-	public struct NormalId
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "NormalId";
-		}
-		
-		public struct Top : EnumItem
-		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "NormalId";
-		}
-		
-		public struct Back : EnumItem
-		{
-			string EnumItem.Name => "Back";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "NormalId";
-		}
-		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "NormalId";
-		}
-		
-		public struct Bottom : EnumItem
-		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "NormalId";
-		}
-		
-		public struct Front : EnumItem
-		{
-			string EnumItem.Name => "Front";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "NormalId";
-		}
-	}
-	
-	public struct OperationType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Null : EnumItem
-		{
-			string EnumItem.Name => "Null";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "OperationType";
-		}
-		
-		public struct Union : EnumItem
-		{
-			string EnumItem.Name => "Union";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OperationType";
-		}
-		
-		public struct Subtraction : EnumItem
-		{
-			string EnumItem.Name => "Subtraction";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "OperationType";
-		}
-		
-		public struct Intersection : EnumItem
-		{
-			string EnumItem.Name => "Intersection";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "OperationType";
-		}
-		
-		public struct Primitive : EnumItem
-		{
-			string EnumItem.Name => "Primitive";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "OperationType";
-		}
-	}
-	
-	public struct OrientationAlignmentMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OneAttachment : EnumItem
-		{
-			string EnumItem.Name => "OneAttachment";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "OrientationAlignmentMode";
-		}
-		
-		public struct TwoAttachment : EnumItem
-		{
-			string EnumItem.Name => "TwoAttachment";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OrientationAlignmentMode";
-		}
-	}
-	
-	public struct OutfitSource
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OutfitSource";
-		}
-		
-		public struct Created : EnumItem
-		{
-			string EnumItem.Name => "Created";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "OutfitSource";
-		}
-		
-		public struct Purchased : EnumItem
-		{
-			string EnumItem.Name => "Purchased";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "OutfitSource";
-		}
-	}
-	
-	public struct OutfitType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OutfitType";
-		}
-		
-		public struct Avatar : EnumItem
-		{
-			string EnumItem.Name => "Avatar";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "OutfitType";
-		}
-		
-		public struct DynamicHead : EnumItem
-		{
-			string EnumItem.Name => "DynamicHead";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "OutfitType";
-		}
-	}
-	
-	public struct OutputLayoutMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Horizontal : EnumItem
-		{
-			string EnumItem.Name => "Horizontal";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "OutputLayoutMode";
-		}
-		
-		public struct Vertical : EnumItem
-		{
-			string EnumItem.Name => "Vertical";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OutputLayoutMode";
-		}
-	}
-	
-	public struct OverrideMouseIconBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "OverrideMouseIconBehavior";
-		}
-		
-		public struct ForceShow : EnumItem
-		{
-			string EnumItem.Name => "ForceShow";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "OverrideMouseIconBehavior";
-		}
-		
-		public struct ForceHide : EnumItem
-		{
-			string EnumItem.Name => "ForceHide";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "OverrideMouseIconBehavior";
-		}
-	}
-	
-	public struct PackagePermission
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-		
-		public struct NoAccess : EnumItem
-		{
-			string EnumItem.Name => "NoAccess";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-		
-		public struct Revoked : EnumItem
-		{
-			string EnumItem.Name => "Revoked";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-		
-		public struct UseView : EnumItem
-		{
-			string EnumItem.Name => "UseView";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-		
-		public struct Edit : EnumItem
-		{
-			string EnumItem.Name => "Edit";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-		
-		public struct Own : EnumItem
-		{
-			string EnumItem.Name => "Own";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PackagePermission";
-		}
-	}
-	
-	public struct PartType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Ball : EnumItem
-		{
-			string EnumItem.Name => "Ball";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PartType";
-		}
-		
-		public struct Block : EnumItem
-		{
-			string EnumItem.Name => "Block";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PartType";
-		}
-		
-		public struct Cylinder : EnumItem
-		{
-			string EnumItem.Name => "Cylinder";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PartType";
-		}
-		
-		public struct Wedge : EnumItem
-		{
-			string EnumItem.Name => "Wedge";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PartType";
-		}
-		
-		public struct CornerWedge : EnumItem
-		{
-			string EnumItem.Name => "CornerWedge";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PartType";
-		}
-	}
-	
-	public struct ParticleEmitterShape
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Box : EnumItem
-		{
-			string EnumItem.Name => "Box";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleEmitterShape";
-		}
-		
-		public struct Sphere : EnumItem
-		{
-			string EnumItem.Name => "Sphere";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleEmitterShape";
-		}
-		
-		public struct Cylinder : EnumItem
-		{
-			string EnumItem.Name => "Cylinder";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleEmitterShape";
-		}
-		
-		public struct Disc : EnumItem
-		{
-			string EnumItem.Name => "Disc";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ParticleEmitterShape";
-		}
-	}
-	
-	public struct ParticleEmitterShapeInOut
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Outward : EnumItem
-		{
-			string EnumItem.Name => "Outward";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleEmitterShapeInOut";
-		}
-		
-		public struct Inward : EnumItem
-		{
-			string EnumItem.Name => "Inward";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleEmitterShapeInOut";
-		}
-		
-		public struct InAndOut : EnumItem
-		{
-			string EnumItem.Name => "InAndOut";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleEmitterShapeInOut";
-		}
-	}
-	
-	public struct ParticleEmitterShapeStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Volume : EnumItem
-		{
-			string EnumItem.Name => "Volume";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleEmitterShapeStyle";
-		}
-		
-		public struct Surface : EnumItem
-		{
-			string EnumItem.Name => "Surface";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleEmitterShapeStyle";
-		}
-	}
-	
-	public struct ParticleFlipbookLayout
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleFlipbookLayout";
-		}
-		
-		public struct Grid2x2 : EnumItem
-		{
-			string EnumItem.Name => "Grid2x2";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleFlipbookLayout";
-		}
-		
-		public struct Grid4x4 : EnumItem
-		{
-			string EnumItem.Name => "Grid4x4";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleFlipbookLayout";
-		}
-		
-		public struct Grid8x8 : EnumItem
-		{
-			string EnumItem.Name => "Grid8x8";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ParticleFlipbookLayout";
-		}
-	}
-	
-	public struct ParticleFlipbookMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Loop : EnumItem
-		{
-			string EnumItem.Name => "Loop";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleFlipbookMode";
-		}
-		
-		public struct OneShot : EnumItem
-		{
-			string EnumItem.Name => "OneShot";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleFlipbookMode";
-		}
-		
-		public struct PingPong : EnumItem
-		{
-			string EnumItem.Name => "PingPong";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleFlipbookMode";
-		}
-		
-		public struct Random : EnumItem
-		{
-			string EnumItem.Name => "Random";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ParticleFlipbookMode";
-		}
-	}
-	
-	public struct ParticleFlipbookTextureCompatible
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NotCompatible : EnumItem
-		{
-			string EnumItem.Name => "NotCompatible";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleFlipbookTextureCompatible";
-		}
-		
-		public struct Compatible : EnumItem
-		{
-			string EnumItem.Name => "Compatible";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleFlipbookTextureCompatible";
-		}
-		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleFlipbookTextureCompatible";
-		}
-	}
-	
-	public struct ParticleOrientation
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct FacingCamera : EnumItem
-		{
-			string EnumItem.Name => "FacingCamera";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ParticleOrientation";
-		}
-		
-		public struct FacingCameraWorldUp : EnumItem
-		{
-			string EnumItem.Name => "FacingCameraWorldUp";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ParticleOrientation";
-		}
-		
-		public struct VelocityParallel : EnumItem
-		{
-			string EnumItem.Name => "VelocityParallel";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ParticleOrientation";
-		}
-		
-		public struct VelocityPerpendicular : EnumItem
-		{
-			string EnumItem.Name => "VelocityPerpendicular";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ParticleOrientation";
-		}
-	}
-	
-	public struct PathStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PathStatus";
-		}
-		
-		public struct NoPath : EnumItem
-		{
-			string EnumItem.Name => "NoPath";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PathStatus";
-		}
-		
-		public struct ClosestNoPath : EnumItem
-		{
-			string EnumItem.Name => "ClosestNoPath";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PathStatus";
-		}
-		
-		public struct ClosestOutOfRange : EnumItem
-		{
-			string EnumItem.Name => "ClosestOutOfRange";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PathStatus";
-		}
-		
-		public struct FailStartNotEmpty : EnumItem
-		{
-			string EnumItem.Name => "FailStartNotEmpty";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PathStatus";
-		}
-		
-		public struct FailFinishNotEmpty : EnumItem
-		{
-			string EnumItem.Name => "FailFinishNotEmpty";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PathStatus";
-		}
-	}
-	
-	public struct PathWaypointAction
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Walk : EnumItem
-		{
-			string EnumItem.Name => "Walk";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PathWaypointAction";
-		}
-		
-		public struct Jump : EnumItem
-		{
-			string EnumItem.Name => "Jump";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PathWaypointAction";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PathWaypointAction";
-		}
-	}
-	
-	public struct PermissionLevelShown
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Game : EnumItem
-		{
-			string EnumItem.Name => "Game";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PermissionLevelShown";
-		}
-		
-		public struct RobloxGame : EnumItem
-		{
-			string EnumItem.Name => "RobloxGame";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PermissionLevelShown";
-		}
-		
-		public struct RobloxScript : EnumItem
-		{
-			string EnumItem.Name => "RobloxScript";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PermissionLevelShown";
-		}
-		
-		public struct Studio : EnumItem
-		{
-			string EnumItem.Name => "Studio";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PermissionLevelShown";
-		}
-		
-		public struct Roblox : EnumItem
-		{
-			string EnumItem.Name => "Roblox";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PermissionLevelShown";
-		}
-	}
-	
-	public struct PhysicsSimulationRate
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Fixed240Hz : EnumItem
-		{
-			string EnumItem.Name => "Fixed240Hz";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PhysicsSimulationRate";
-		}
-		
-		public struct Fixed120Hz : EnumItem
-		{
-			string EnumItem.Name => "Fixed120Hz";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PhysicsSimulationRate";
-		}
-		
-		public struct Fixed60Hz : EnumItem
-		{
-			string EnumItem.Name => "Fixed60Hz";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PhysicsSimulationRate";
-		}
-	}
-	
-	public struct PhysicsSteppingMethod
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PhysicsSteppingMethod";
-		}
-		
-		public struct Fixed : EnumItem
-		{
-			string EnumItem.Name => "Fixed";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PhysicsSteppingMethod";
-		}
-		
-		public struct Adaptive : EnumItem
-		{
-			string EnumItem.Name => "Adaptive";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PhysicsSteppingMethod";
-		}
-	}
-	
-	public struct Platform
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Windows : EnumItem
-		{
-			string EnumItem.Name => "Windows";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct OSX : EnumItem
-		{
-			string EnumItem.Name => "OSX";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct IOS : EnumItem
-		{
-			string EnumItem.Name => "IOS";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct Android : EnumItem
-		{
-			string EnumItem.Name => "Android";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct XBoxOne : EnumItem
-		{
-			string EnumItem.Name => "XBoxOne";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct PS4 : EnumItem
-		{
-			string EnumItem.Name => "PS4";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct PS3 : EnumItem
-		{
-			string EnumItem.Name => "PS3";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct XBox360 : EnumItem
-		{
-			string EnumItem.Name => "XBox360";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct WiiU : EnumItem
-		{
-			string EnumItem.Name => "WiiU";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct NX : EnumItem
-		{
-			string EnumItem.Name => "NX";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct Ouya : EnumItem
-		{
-			string EnumItem.Name => "Ouya";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct AndroidTV : EnumItem
-		{
-			string EnumItem.Name => "AndroidTV";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct Chromecast : EnumItem
-		{
-			string EnumItem.Name => "Chromecast";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct Linux : EnumItem
-		{
-			string EnumItem.Name => "Linux";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct SteamOS : EnumItem
-		{
-			string EnumItem.Name => "SteamOS";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct WebOS : EnumItem
-		{
-			string EnumItem.Name => "WebOS";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct DOS : EnumItem
-		{
-			string EnumItem.Name => "DOS";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct BeOS : EnumItem
-		{
-			string EnumItem.Name => "BeOS";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct UWP : EnumItem
-		{
-			string EnumItem.Name => "UWP";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct PS5 : EnumItem
-		{
-			string EnumItem.Name => "PS5";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "Platform";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "Platform";
-		}
-	}
-	
-	public struct PlaybackState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Begin : EnumItem
-		{
-			string EnumItem.Name => "Begin";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-		
-		public struct Delayed : EnumItem
-		{
-			string EnumItem.Name => "Delayed";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-		
-		public struct Playing : EnumItem
-		{
-			string EnumItem.Name => "Playing";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-		
-		public struct Paused : EnumItem
-		{
-			string EnumItem.Name => "Paused";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-		
-		public struct Completed : EnumItem
-		{
-			string EnumItem.Name => "Completed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-		
-		public struct Cancelled : EnumItem
-		{
-			string EnumItem.Name => "Cancelled";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PlaybackState";
-		}
-	}
-	
-	public struct PlayerActions
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct CharacterForward : EnumItem
-		{
-			string EnumItem.Name => "CharacterForward";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PlayerActions";
-		}
-		
-		public struct CharacterBackward : EnumItem
-		{
-			string EnumItem.Name => "CharacterBackward";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PlayerActions";
-		}
-		
-		public struct CharacterLeft : EnumItem
-		{
-			string EnumItem.Name => "CharacterLeft";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PlayerActions";
-		}
-		
-		public struct CharacterRight : EnumItem
-		{
-			string EnumItem.Name => "CharacterRight";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PlayerActions";
-		}
-		
-		public struct CharacterJump : EnumItem
-		{
-			string EnumItem.Name => "CharacterJump";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PlayerActions";
-		}
-	}
-	
-	public struct PlayerCharacterDestroyBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PlayerCharacterDestroyBehavior";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PlayerCharacterDestroyBehavior";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PlayerCharacterDestroyBehavior";
-		}
-	}
-	
-	public struct PlayerChatType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PlayerChatType";
-		}
-		
-		public struct Team : EnumItem
-		{
-			string EnumItem.Name => "Team";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PlayerChatType";
-		}
-		
-		public struct Whisper : EnumItem
-		{
-			string EnumItem.Name => "Whisper";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PlayerChatType";
-		}
-	}
-	
-	public struct PoseEasingDirection
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct In : EnumItem
-		{
-			string EnumItem.Name => "In";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PoseEasingDirection";
-		}
-		
-		public struct Out : EnumItem
-		{
-			string EnumItem.Name => "Out";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PoseEasingDirection";
-		}
-		
-		public struct InOut : EnumItem
-		{
-			string EnumItem.Name => "InOut";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PoseEasingDirection";
-		}
-	}
-	
-	public struct PoseEasingStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Linear : EnumItem
-		{
-			string EnumItem.Name => "Linear";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PoseEasingStyle";
-		}
-		
-		public struct Constant : EnumItem
-		{
-			string EnumItem.Name => "Constant";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PoseEasingStyle";
-		}
-		
-		public struct Elastic : EnumItem
-		{
-			string EnumItem.Name => "Elastic";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PoseEasingStyle";
-		}
-		
-		public struct Cubic : EnumItem
-		{
-			string EnumItem.Name => "Cubic";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PoseEasingStyle";
-		}
-		
-		public struct Bounce : EnumItem
-		{
-			string EnumItem.Name => "Bounce";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PoseEasingStyle";
-		}
-	}
-	
-	public struct PositionAlignmentMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OneAttachment : EnumItem
-		{
-			string EnumItem.Name => "OneAttachment";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PositionAlignmentMode";
-		}
-		
-		public struct TwoAttachment : EnumItem
-		{
-			string EnumItem.Name => "TwoAttachment";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PositionAlignmentMode";
-		}
-	}
-	
-	public struct PreferredTextSize
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Medium : EnumItem
-		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PreferredTextSize";
-		}
-		
-		public struct Large : EnumItem
-		{
-			string EnumItem.Name => "Large";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PreferredTextSize";
-		}
-		
-		public struct Larger : EnumItem
-		{
-			string EnumItem.Name => "Larger";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PreferredTextSize";
-		}
-		
-		public struct Largest : EnumItem
-		{
-			string EnumItem.Name => "Largest";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PreferredTextSize";
-		}
-	}
-	
-	public struct PrimalPhysicsSolver
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PrimalPhysicsSolver";
-		}
-		
-		public struct Experimental : EnumItem
-		{
-			string EnumItem.Name => "Experimental";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PrimalPhysicsSolver";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PrimalPhysicsSolver";
-		}
-	}
-	
-	public struct PrimitiveType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Null : EnumItem
-		{
-			string EnumItem.Name => "Null";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-		
-		public struct Ball : EnumItem
-		{
-			string EnumItem.Name => "Ball";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-		
-		public struct Cylinder : EnumItem
-		{
-			string EnumItem.Name => "Cylinder";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-		
-		public struct Block : EnumItem
-		{
-			string EnumItem.Name => "Block";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-		
-		public struct Wedge : EnumItem
-		{
-			string EnumItem.Name => "Wedge";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-		
-		public struct CornerWedge : EnumItem
-		{
-			string EnumItem.Name => "CornerWedge";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PrimitiveType";
-		}
-	}
-	
-	public struct PrivilegeType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Owner : EnumItem
-		{
-			string EnumItem.Name => "Owner";
-			uint EnumItem.Value => 255;
-			string EnumItem.EnumType => "PrivilegeType";
-		}
-		
-		public struct Admin : EnumItem
-		{
-			string EnumItem.Name => "Admin";
-			uint EnumItem.Value => 240;
-			string EnumItem.EnumType => "PrivilegeType";
-		}
-		
-		public struct Member : EnumItem
-		{
-			string EnumItem.Name => "Member";
-			uint EnumItem.Value => 128;
-			string EnumItem.EnumType => "PrivilegeType";
-		}
-		
-		public struct Visitor : EnumItem
-		{
-			string EnumItem.Name => "Visitor";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "PrivilegeType";
-		}
-		
-		public struct Banned : EnumItem
-		{
-			string EnumItem.Name => "Banned";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PrivilegeType";
-		}
-	}
-	
-	public struct ProductLocationRestriction
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct AvatarShop : EnumItem
-		{
-			string EnumItem.Name => "AvatarShop";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ProductLocationRestriction";
-		}
-		
-		public struct AllowedGames : EnumItem
-		{
-			string EnumItem.Name => "AllowedGames";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ProductLocationRestriction";
-		}
-		
-		public struct AllGames : EnumItem
-		{
-			string EnumItem.Name => "AllGames";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ProductLocationRestriction";
-		}
-	}
-	
-	public struct ProductPurchaseDecision
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NotProcessedYet : EnumItem
-		{
-			string EnumItem.Name => "NotProcessedYet";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ProductPurchaseDecision";
-		}
-		
-		public struct PurchaseGranted : EnumItem
-		{
-			string EnumItem.Name => "PurchaseGranted";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ProductPurchaseDecision";
-		}
-	}
-	
-	public struct PromptCreateAssetResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-		
-		public struct PermissionDenied : EnumItem
-		{
-			string EnumItem.Name => "PermissionDenied";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-		
-		public struct UploadFailed : EnumItem
-		{
-			string EnumItem.Name => "UploadFailed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-		
-		public struct NoUserInput : EnumItem
-		{
-			string EnumItem.Name => "NoUserInput";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-		
-		public struct UnknownFailure : EnumItem
-		{
-			string EnumItem.Name => "UnknownFailure";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "PromptCreateAssetResult";
-		}
-	}
-	
-	public struct PromptCreateAvatarResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct PermissionDenied : EnumItem
-		{
-			string EnumItem.Name => "PermissionDenied";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct UploadFailed : EnumItem
-		{
-			string EnumItem.Name => "UploadFailed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct NoUserInput : EnumItem
-		{
-			string EnumItem.Name => "NoUserInput";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct InvalidHumanoidDescription : EnumItem
-		{
-			string EnumItem.Name => "InvalidHumanoidDescription";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct UGCValidationFailed : EnumItem
-		{
-			string EnumItem.Name => "UGCValidationFailed";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct ModeratedName : EnumItem
-		{
-			string EnumItem.Name => "ModeratedName";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct MaxOutfits : EnumItem
-		{
-			string EnumItem.Name => "MaxOutfits";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-		
-		public struct UnknownFailure : EnumItem
-		{
-			string EnumItem.Name => "UnknownFailure";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "PromptCreateAvatarResult";
-		}
-	}
-	
-	public struct PromptPublishAssetResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-		
-		public struct PermissionDenied : EnumItem
-		{
-			string EnumItem.Name => "PermissionDenied";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-		
-		public struct UploadFailed : EnumItem
-		{
-			string EnumItem.Name => "UploadFailed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-		
-		public struct NoUserInput : EnumItem
-		{
-			string EnumItem.Name => "NoUserInput";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-		
-		public struct UnknownFailure : EnumItem
-		{
-			string EnumItem.Name => "UnknownFailure";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "PromptPublishAssetResult";
-		}
-	}
-	
-	public struct PropertyStatus
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Ok : EnumItem
-		{
-			string EnumItem.Name => "Ok";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "PropertyStatus";
-		}
-		
-		public struct Warning : EnumItem
-		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "PropertyStatus";
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "PropertyStatus";
-		}
-	}
-	
-	public struct ProximityPromptExclusivity
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OnePerButton : EnumItem
-		{
-			string EnumItem.Name => "OnePerButton";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ProximityPromptExclusivity";
-		}
-		
-		public struct OneGlobally : EnumItem
-		{
-			string EnumItem.Name => "OneGlobally";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ProximityPromptExclusivity";
-		}
-		
-		public struct AlwaysShow : EnumItem
-		{
-			string EnumItem.Name => "AlwaysShow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ProximityPromptExclusivity";
-		}
-	}
-	
-	public struct ProximityPromptInputType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Keyboard : EnumItem
-		{
-			string EnumItem.Name => "Keyboard";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ProximityPromptInputType";
-		}
-		
-		public struct Gamepad : EnumItem
-		{
-			string EnumItem.Name => "Gamepad";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ProximityPromptInputType";
-		}
-		
-		public struct Touch : EnumItem
-		{
-			string EnumItem.Name => "Touch";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ProximityPromptInputType";
-		}
-	}
-	
-	public struct ProximityPromptStyle
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ProximityPromptStyle";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ProximityPromptStyle";
-		}
-	}
-	
-	public struct QualityLevel
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level01 : EnumItem
-		{
-			string EnumItem.Name => "Level01";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level02 : EnumItem
-		{
-			string EnumItem.Name => "Level02";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level03 : EnumItem
-		{
-			string EnumItem.Name => "Level03";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level04 : EnumItem
-		{
-			string EnumItem.Name => "Level04";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level05 : EnumItem
-		{
-			string EnumItem.Name => "Level05";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level06 : EnumItem
-		{
-			string EnumItem.Name => "Level06";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level07 : EnumItem
-		{
-			string EnumItem.Name => "Level07";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level08 : EnumItem
-		{
-			string EnumItem.Name => "Level08";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level09 : EnumItem
-		{
-			string EnumItem.Name => "Level09";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level10 : EnumItem
-		{
-			string EnumItem.Name => "Level10";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level11 : EnumItem
-		{
-			string EnumItem.Name => "Level11";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level12 : EnumItem
-		{
-			string EnumItem.Name => "Level12";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level13 : EnumItem
-		{
-			string EnumItem.Name => "Level13";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level14 : EnumItem
-		{
-			string EnumItem.Name => "Level14";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level15 : EnumItem
-		{
-			string EnumItem.Name => "Level15";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level16 : EnumItem
-		{
-			string EnumItem.Name => "Level16";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level17 : EnumItem
-		{
-			string EnumItem.Name => "Level17";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level18 : EnumItem
-		{
-			string EnumItem.Name => "Level18";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level19 : EnumItem
-		{
-			string EnumItem.Name => "Level19";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level20 : EnumItem
-		{
-			string EnumItem.Name => "Level20";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-		
-		public struct Level21 : EnumItem
-		{
-			string EnumItem.Name => "Level21";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "QualityLevel";
-		}
-	}
-	
-	public struct R15CollisionType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OuterBox : EnumItem
-		{
-			string EnumItem.Name => "OuterBox";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "R15CollisionType";
-		}
-		
-		public struct InnerBox : EnumItem
-		{
-			string EnumItem.Name => "InnerBox";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "R15CollisionType";
-		}
-	}
-	
-	public struct RaycastFilterType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Exclude : EnumItem
-		{
-			string EnumItem.Name => "Exclude";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RaycastFilterType";
-		}
-		
-		public struct Include : EnumItem
-		{
-			string EnumItem.Name => "Include";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RaycastFilterType";
-		}
-	}
-	
-	public struct RejectCharacterDeletions
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RejectCharacterDeletions";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RejectCharacterDeletions";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RejectCharacterDeletions";
-		}
-	}
-	
-	public struct RenderFidelity
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RenderFidelity";
-		}
-		
-		public struct Precise : EnumItem
-		{
-			string EnumItem.Name => "Precise";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RenderFidelity";
-		}
-		
-		public struct Performance : EnumItem
-		{
-			string EnumItem.Name => "Performance";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RenderFidelity";
-		}
-	}
-	
-	public struct RenderPriority
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct First : EnumItem
-		{
-			string EnumItem.Name => "First";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RenderPriority";
-		}
-		
-		public struct Input : EnumItem
-		{
-			string EnumItem.Name => "Input";
-			uint EnumItem.Value => 100;
-			string EnumItem.EnumType => "RenderPriority";
-		}
-		
-		public struct Camera : EnumItem
-		{
-			string EnumItem.Name => "Camera";
-			uint EnumItem.Value => 200;
-			string EnumItem.EnumType => "RenderPriority";
-		}
-		
-		public struct Character : EnumItem
-		{
-			string EnumItem.Name => "Character";
-			uint EnumItem.Value => 300;
-			string EnumItem.EnumType => "RenderPriority";
-		}
-		
-		public struct Last : EnumItem
-		{
-			string EnumItem.Name => "Last";
-			uint EnumItem.Value => 2000;
-			string EnumItem.EnumType => "RenderPriority";
-		}
-	}
-	
-	public struct RenderingCacheOptimizationMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RenderingCacheOptimizationMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RenderingCacheOptimizationMode";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RenderingCacheOptimizationMode";
-		}
-	}
-	
-	public struct RenderingTestComparisonMethod
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct psnr : EnumItem
-		{
-			string EnumItem.Name => "psnr";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RenderingTestComparisonMethod";
-		}
-		
-		public struct diff : EnumItem
-		{
-			string EnumItem.Name => "diff";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RenderingTestComparisonMethod";
-		}
-	}
-	
-	public struct ReplicateInstanceDestroySetting
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ReplicateInstanceDestroySetting";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ReplicateInstanceDestroySetting";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ReplicateInstanceDestroySetting";
-		}
-	}
-	
-	public struct ResamplerMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ResamplerMode";
-		}
-		
-		public struct Pixelated : EnumItem
-		{
-			string EnumItem.Name => "Pixelated";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ResamplerMode";
-		}
-	}
-	
-	public struct ReservedHighlightId
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Standard : EnumItem
-		{
-			string EnumItem.Name => "Standard";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ReservedHighlightId";
-		}
-		
-		public struct Selection : EnumItem
-		{
-			string EnumItem.Name => "Selection";
-			uint EnumItem.Value => 524288;
-			string EnumItem.EnumType => "ReservedHighlightId";
-		}
-		
-		public struct Hover : EnumItem
-		{
-			string EnumItem.Name => "Hover";
-			uint EnumItem.Value => 262144;
-			string EnumItem.EnumType => "ReservedHighlightId";
-		}
-		
-		public struct Active : EnumItem
-		{
-			string EnumItem.Name => "Active";
-			uint EnumItem.Value => 131072;
-			string EnumItem.EnumType => "ReservedHighlightId";
-		}
-	}
-	
-	public struct RestPose
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RestPose";
-		}
-		
-		public struct RotationsReset : EnumItem
-		{
-			string EnumItem.Name => "RotationsReset";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RestPose";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RestPose";
-		}
-	}
-	
-	public struct ReturnKeyType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-		
-		public struct Done : EnumItem
-		{
-			string EnumItem.Name => "Done";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-		
-		public struct Go : EnumItem
-		{
-			string EnumItem.Name => "Go";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-		
-		public struct Next : EnumItem
-		{
-			string EnumItem.Name => "Next";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-		
-		public struct Search : EnumItem
-		{
-			string EnumItem.Name => "Search";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-		
-		public struct Send : EnumItem
-		{
-			string EnumItem.Name => "Send";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ReturnKeyType";
-		}
-	}
-	
-	public struct ReverbType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct NoReverb : EnumItem
-		{
-			string EnumItem.Name => "NoReverb";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct GenericReverb : EnumItem
-		{
-			string EnumItem.Name => "GenericReverb";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct PaddedCell : EnumItem
-		{
-			string EnumItem.Name => "PaddedCell";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Room : EnumItem
-		{
-			string EnumItem.Name => "Room";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Bathroom : EnumItem
-		{
-			string EnumItem.Name => "Bathroom";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct LivingRoom : EnumItem
-		{
-			string EnumItem.Name => "LivingRoom";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct StoneRoom : EnumItem
-		{
-			string EnumItem.Name => "StoneRoom";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Auditorium : EnumItem
-		{
-			string EnumItem.Name => "Auditorium";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct ConcertHall : EnumItem
-		{
-			string EnumItem.Name => "ConcertHall";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Cave : EnumItem
-		{
-			string EnumItem.Name => "Cave";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Arena : EnumItem
-		{
-			string EnumItem.Name => "Arena";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Hangar : EnumItem
-		{
-			string EnumItem.Name => "Hangar";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct CarpettedHallway : EnumItem
-		{
-			string EnumItem.Name => "CarpettedHallway";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Hallway : EnumItem
-		{
-			string EnumItem.Name => "Hallway";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct StoneCorridor : EnumItem
-		{
-			string EnumItem.Name => "StoneCorridor";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Alley : EnumItem
-		{
-			string EnumItem.Name => "Alley";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Forest : EnumItem
-		{
-			string EnumItem.Name => "Forest";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct City : EnumItem
-		{
-			string EnumItem.Name => "City";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Mountains : EnumItem
-		{
-			string EnumItem.Name => "Mountains";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Quarry : EnumItem
-		{
-			string EnumItem.Name => "Quarry";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct Plain : EnumItem
-		{
-			string EnumItem.Name => "Plain";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct ParkingLot : EnumItem
-		{
-			string EnumItem.Name => "ParkingLot";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct SewerPipe : EnumItem
-		{
-			string EnumItem.Name => "SewerPipe";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "ReverbType";
-		}
-		
-		public struct UnderWater : EnumItem
-		{
-			string EnumItem.Name => "UnderWater";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "ReverbType";
-		}
-	}
-	
-	public struct RibbonTool
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Select : EnumItem
-		{
-			string EnumItem.Name => "Select";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Scale : EnumItem
-		{
-			string EnumItem.Name => "Scale";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Rotate : EnumItem
-		{
-			string EnumItem.Name => "Rotate";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Move : EnumItem
-		{
-			string EnumItem.Name => "Move";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Transform : EnumItem
-		{
-			string EnumItem.Name => "Transform";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct ColorPicker : EnumItem
-		{
-			string EnumItem.Name => "ColorPicker";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct MaterialPicker : EnumItem
-		{
-			string EnumItem.Name => "MaterialPicker";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Group : EnumItem
-		{
-			string EnumItem.Name => "Group";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct Ungroup : EnumItem
-		{
-			string EnumItem.Name => "Ungroup";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-		
-		public struct PivotEditor : EnumItem
-		{
-			string EnumItem.Name => "PivotEditor";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "RibbonTool";
-		}
-	}
-	
-	public struct RigScale
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RigScale";
-		}
-		
-		public struct Rthro : EnumItem
-		{
-			string EnumItem.Name => "Rthro";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RigScale";
-		}
-		
-		public struct RthroNarrow : EnumItem
-		{
-			string EnumItem.Name => "RthroNarrow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RigScale";
-		}
-	}
-	
-	public struct RigType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct R15 : EnumItem
-		{
-			string EnumItem.Name => "R15";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RigType";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RigType";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RigType";
-		}
-	}
-	
-	public struct RollOffMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Inverse : EnumItem
-		{
-			string EnumItem.Name => "Inverse";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RollOffMode";
-		}
-		
-		public struct Linear : EnumItem
-		{
-			string EnumItem.Name => "Linear";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RollOffMode";
-		}
-		
-		public struct LinearSquare : EnumItem
-		{
-			string EnumItem.Name => "LinearSquare";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RollOffMode";
-		}
-		
-		public struct InverseTapered : EnumItem
-		{
-			string EnumItem.Name => "InverseTapered";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "RollOffMode";
-		}
-	}
-	
-	public struct RotationOrder
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct XYZ : EnumItem
-		{
-			string EnumItem.Name => "XYZ";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-		
-		public struct XZY : EnumItem
-		{
-			string EnumItem.Name => "XZY";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-		
-		public struct YZX : EnumItem
-		{
-			string EnumItem.Name => "YZX";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-		
-		public struct YXZ : EnumItem
-		{
-			string EnumItem.Name => "YXZ";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-		
-		public struct ZXY : EnumItem
-		{
-			string EnumItem.Name => "ZXY";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-		
-		public struct ZYX : EnumItem
-		{
-			string EnumItem.Name => "ZYX";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "RotationOrder";
-		}
-	}
-	
-	public struct RotationType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct MovementRelative : EnumItem
-		{
-			string EnumItem.Name => "MovementRelative";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RotationType";
-		}
-		
-		public struct CameraRelative : EnumItem
-		{
-			string EnumItem.Name => "CameraRelative";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RotationType";
-		}
-	}
-	
-	public struct RtlTextSupport
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RtlTextSupport";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RtlTextSupport";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RtlTextSupport";
-		}
-	}
-	
-	public struct RunContext
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Legacy : EnumItem
-		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RunContext";
-		}
-		
-		public struct Server : EnumItem
-		{
-			string EnumItem.Name => "Server";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RunContext";
-		}
-		
-		public struct Client : EnumItem
-		{
-			string EnumItem.Name => "Client";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RunContext";
-		}
-		
-		public struct Plugin : EnumItem
-		{
-			string EnumItem.Name => "Plugin";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "RunContext";
-		}
-	}
-	
-	public struct RunState
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Stopped : EnumItem
-		{
-			string EnumItem.Name => "Stopped";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RunState";
-		}
-		
-		public struct Running : EnumItem
-		{
-			string EnumItem.Name => "Running";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RunState";
-		}
-		
-		public struct Paused : EnumItem
-		{
-			string EnumItem.Name => "Paused";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RunState";
-		}
-	}
-	
-	public struct RuntimeUndoBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Aggregate : EnumItem
-		{
-			string EnumItem.Name => "Aggregate";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "RuntimeUndoBehavior";
-		}
-		
-		public struct Snapshot : EnumItem
-		{
-			string EnumItem.Name => "Snapshot";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "RuntimeUndoBehavior";
-		}
-		
-		public struct Hybrid : EnumItem
-		{
-			string EnumItem.Name => "Hybrid";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "RuntimeUndoBehavior";
-		}
-	}
-	
-	public struct SafeAreaCompatibility
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SafeAreaCompatibility";
-		}
-		
-		public struct FullscreenExtension : EnumItem
-		{
-			string EnumItem.Name => "FullscreenExtension";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SafeAreaCompatibility";
-		}
-	}
-	
-	public struct SalesTypeFilter
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct All : EnumItem
-		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SalesTypeFilter";
-		}
-		
-		public struct Collectibles : EnumItem
-		{
-			string EnumItem.Name => "Collectibles";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SalesTypeFilter";
-		}
-		
-		public struct Premium : EnumItem
-		{
-			string EnumItem.Name => "Premium";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SalesTypeFilter";
-		}
-	}
-	
-	public struct SaveAvatarThumbnailCustomizationFailure
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct BadThumbnailType : EnumItem
-		{
-			string EnumItem.Name => "BadThumbnailType";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-		
-		public struct BadYRotDeg : EnumItem
-		{
-			string EnumItem.Name => "BadYRotDeg";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-		
-		public struct BadFieldOfViewDeg : EnumItem
-		{
-			string EnumItem.Name => "BadFieldOfViewDeg";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-		
-		public struct BadDistanceScale : EnumItem
-		{
-			string EnumItem.Name => "BadDistanceScale";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-		
-		public struct Other : EnumItem
-		{
-			string EnumItem.Name => "Other";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-		
-		public struct Throttled : EnumItem
-		{
-			string EnumItem.Name => "Throttled";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "SaveAvatarThumbnailCustomizationFailure";
-		}
-	}
-	
-	public struct SaveFilter
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct SaveWorld : EnumItem
-		{
-			string EnumItem.Name => "SaveWorld";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SaveFilter";
-		}
-		
-		public struct SaveGame : EnumItem
-		{
-			string EnumItem.Name => "SaveGame";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SaveFilter";
-		}
-		
-		public struct SaveAll : EnumItem
-		{
-			string EnumItem.Name => "SaveAll";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SaveFilter";
-		}
-	}
-	
-	public struct SavedQualitySetting
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Automatic : EnumItem
-		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel1 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel2 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel2";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel3 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel3";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel4 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel4";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel5 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel5";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel6 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel6";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel7 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel7";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel8 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel8";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel9 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel9";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-		
-		public struct QualityLevel10 : EnumItem
-		{
-			string EnumItem.Name => "QualityLevel10";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "SavedQualitySetting";
-		}
-	}
-	
-	public struct ScaleType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Stretch : EnumItem
-		{
-			string EnumItem.Name => "Stretch";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ScaleType";
-		}
-		
-		public struct Slice : EnumItem
-		{
-			string EnumItem.Name => "Slice";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScaleType";
-		}
-		
-		public struct Tile : EnumItem
-		{
-			string EnumItem.Name => "Tile";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScaleType";
-		}
-		
-		public struct Fit : EnumItem
-		{
-			string EnumItem.Name => "Fit";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ScaleType";
-		}
-		
-		public struct Crop : EnumItem
-		{
-			string EnumItem.Name => "Crop";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ScaleType";
-		}
-	}
-	
-	public struct ScopeCheckResult
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct ConsentAccepted : EnumItem
-		{
-			string EnumItem.Name => "ConsentAccepted";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct InvalidScopes : EnumItem
-		{
-			string EnumItem.Name => "InvalidScopes";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct Timeout : EnumItem
-		{
-			string EnumItem.Name => "Timeout";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct NoUserInput : EnumItem
-		{
-			string EnumItem.Name => "NoUserInput";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct BackendError : EnumItem
-		{
-			string EnumItem.Name => "BackendError";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct UnexpectedError : EnumItem
-		{
-			string EnumItem.Name => "UnexpectedError";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct InvalidArgument : EnumItem
-		{
-			string EnumItem.Name => "InvalidArgument";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-		
-		public struct ConsentDenied : EnumItem
-		{
-			string EnumItem.Name => "ConsentDenied";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "ScopeCheckResult";
-		}
-	}
-	
-	public struct ScreenInsets
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ScreenInsets";
-		}
-		
-		public struct DeviceSafeInsets : EnumItem
-		{
-			string EnumItem.Name => "DeviceSafeInsets";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScreenInsets";
-		}
-		
-		public struct CoreUISafeInsets : EnumItem
-		{
-			string EnumItem.Name => "CoreUISafeInsets";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScreenInsets";
-		}
-		
-		public struct TopbarSafeInsets : EnumItem
-		{
-			string EnumItem.Name => "TopbarSafeInsets";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ScreenInsets";
-		}
-	}
-	
-	public struct ScreenOrientation
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct LandscapeLeft : EnumItem
-		{
-			string EnumItem.Name => "LandscapeLeft";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ScreenOrientation";
-		}
-		
-		public struct LandscapeRight : EnumItem
-		{
-			string EnumItem.Name => "LandscapeRight";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScreenOrientation";
-		}
-		
-		public struct LandscapeSensor : EnumItem
-		{
-			string EnumItem.Name => "LandscapeSensor";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScreenOrientation";
-		}
-		
-		public struct Portrait : EnumItem
-		{
-			string EnumItem.Name => "Portrait";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ScreenOrientation";
-		}
-		
-		public struct Sensor : EnumItem
-		{
-			string EnumItem.Name => "Sensor";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ScreenOrientation";
-		}
-	}
-	
-	public struct ScrollBarInset
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ScrollBarInset";
-		}
-		
-		public struct ScrollBar : EnumItem
-		{
-			string EnumItem.Name => "ScrollBar";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScrollBarInset";
-		}
-		
-		public struct Always : EnumItem
-		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScrollBarInset";
-		}
-	}
-	
-	public struct ScrollingDirection
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct X : EnumItem
-		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ScrollingDirection";
-		}
-		
-		public struct Y : EnumItem
-		{
-			string EnumItem.Name => "Y";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ScrollingDirection";
-		}
-		
-		public struct XY : EnumItem
-		{
-			string EnumItem.Name => "XY";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ScrollingDirection";
-		}
-	}
-	
-	public struct SecurityCapability
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct RunClientScript : EnumItem
-		{
-			string EnumItem.Name => "RunClientScript";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct RunServerScript : EnumItem
-		{
-			string EnumItem.Name => "RunServerScript";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct AccessOutsideWrite : EnumItem
-		{
-			string EnumItem.Name => "AccessOutsideWrite";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct AssetRequire : EnumItem
-		{
-			string EnumItem.Name => "AssetRequire";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct LoadString : EnumItem
-		{
-			string EnumItem.Name => "LoadString";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct ScriptGlobals : EnumItem
-		{
-			string EnumItem.Name => "ScriptGlobals";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct CreateInstances : EnumItem
-		{
-			string EnumItem.Name => "CreateInstances";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct Basic : EnumItem
-		{
-			string EnumItem.Name => "Basic";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct Audio : EnumItem
-		{
-			string EnumItem.Name => "Audio";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct DataStore : EnumItem
-		{
-			string EnumItem.Name => "DataStore";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct Network : EnumItem
-		{
-			string EnumItem.Name => "Network";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-		
-		public struct Physics : EnumItem
-		{
-			string EnumItem.Name => "Physics";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "SecurityCapability";
-		}
-	}
-	
-	public struct SelectionBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Escape : EnumItem
-		{
-			string EnumItem.Name => "Escape";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SelectionBehavior";
-		}
-		
-		public struct Stop : EnumItem
-		{
-			string EnumItem.Name => "Stop";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SelectionBehavior";
-		}
-	}
-	
-	public struct SelectionRenderMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Outlines : EnumItem
-		{
-			string EnumItem.Name => "Outlines";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SelectionRenderMode";
-		}
-		
-		public struct BoundingBoxes : EnumItem
-		{
-			string EnumItem.Name => "BoundingBoxes";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SelectionRenderMode";
-		}
-		
-		public struct Both : EnumItem
-		{
-			string EnumItem.Name => "Both";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SelectionRenderMode";
-		}
-	}
-	
-	public struct SelfViewPosition
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct LastPosition : EnumItem
-		{
-			string EnumItem.Name => "LastPosition";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SelfViewPosition";
-		}
-		
-		public struct TopLeft : EnumItem
-		{
-			string EnumItem.Name => "TopLeft";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SelfViewPosition";
-		}
-		
-		public struct TopRight : EnumItem
-		{
-			string EnumItem.Name => "TopRight";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SelfViewPosition";
-		}
-		
-		public struct BottomLeft : EnumItem
-		{
-			string EnumItem.Name => "BottomLeft";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SelfViewPosition";
-		}
-		
-		public struct BottomRight : EnumItem
-		{
-			string EnumItem.Name => "BottomRight";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SelfViewPosition";
-		}
-	}
-	
-	public struct SensorMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Floor : EnumItem
-		{
-			string EnumItem.Name => "Floor";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SensorMode";
-		}
-		
-		public struct Ladder : EnumItem
-		{
-			string EnumItem.Name => "Ladder";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SensorMode";
-		}
-	}
-	
-	public struct SensorUpdateType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct OnRead : EnumItem
-		{
-			string EnumItem.Name => "OnRead";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SensorUpdateType";
-		}
-		
-		public struct Manual : EnumItem
-		{
-			string EnumItem.Name => "Manual";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SensorUpdateType";
-		}
-	}
-	
-	public struct ServerLiveEditingMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Uninitialized : EnumItem
-		{
-			string EnumItem.Name => "Uninitialized";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ServerLiveEditingMode";
-		}
-		
-		public struct Enabled : EnumItem
-		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ServerLiveEditingMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ServerLiveEditingMode";
-		}
-	}
-	
-	public struct ServiceVisibility
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Always : EnumItem
-		{
-			string EnumItem.Name => "Always";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ServiceVisibility";
-		}
-		
-		public struct Off : EnumItem
-		{
-			string EnumItem.Name => "Off";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ServiceVisibility";
-		}
-		
-		public struct WithChildren : EnumItem
-		{
-			string EnumItem.Name => "WithChildren";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ServiceVisibility";
-		}
-	}
-	
-	public struct Severity
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Severity";
-		}
-		
-		public struct Warning : EnumItem
-		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Severity";
-		}
-		
-		public struct Information : EnumItem
-		{
-			string EnumItem.Name => "Information";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Severity";
-		}
-		
-		public struct Hint : EnumItem
-		{
-			string EnumItem.Name => "Hint";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Severity";
-		}
-	}
-	
-	public struct SignalBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SignalBehavior";
-		}
-		
-		public struct Immediate : EnumItem
-		{
-			string EnumItem.Name => "Immediate";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SignalBehavior";
-		}
-		
-		public struct Deferred : EnumItem
-		{
-			string EnumItem.Name => "Deferred";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SignalBehavior";
-		}
-		
-		public struct AncestryDeferred : EnumItem
-		{
-			string EnumItem.Name => "AncestryDeferred";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SignalBehavior";
-		}
-	}
-	
-	public struct SizeConstraint
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct RelativeXY : EnumItem
-		{
-			string EnumItem.Name => "RelativeXY";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SizeConstraint";
-		}
-		
-		public struct RelativeXX : EnumItem
-		{
-			string EnumItem.Name => "RelativeXX";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SizeConstraint";
-		}
-		
-		public struct RelativeYY : EnumItem
-		{
-			string EnumItem.Name => "RelativeYY";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SizeConstraint";
-		}
-	}
-	
-	public struct SolverConvergenceMetricType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct IterationBased : EnumItem
-		{
-			string EnumItem.Name => "IterationBased";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SolverConvergenceMetricType";
-		}
-		
-		public struct AlgorithmAgnostic : EnumItem
-		{
-			string EnumItem.Name => "AlgorithmAgnostic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SolverConvergenceMetricType";
-		}
-	}
-	
-	public struct SolverConvergenceVisualizationMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SolverConvergenceVisualizationMode";
-		}
-		
-		public struct PerIsland : EnumItem
-		{
-			string EnumItem.Name => "PerIsland";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SolverConvergenceVisualizationMode";
-		}
-		
-		public struct PerEdge : EnumItem
-		{
-			string EnumItem.Name => "PerEdge";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SolverConvergenceVisualizationMode";
-		}
-	}
-	
-	public struct SortDirection
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Ascending : EnumItem
-		{
-			string EnumItem.Name => "Ascending";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SortDirection";
-		}
-		
-		public struct Descending : EnumItem
-		{
-			string EnumItem.Name => "Descending";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SortDirection";
-		}
-	}
-	
-	public struct SortOrder
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Name : EnumItem
-		{
-			string EnumItem.Name => "Name";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SortOrder";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SortOrder";
-		}
-		
-		public struct LayoutOrder : EnumItem
-		{
-			string EnumItem.Name => "LayoutOrder";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SortOrder";
-		}
-	}
-	
-	public struct SpecialKey
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Insert : EnumItem
-		{
-			string EnumItem.Name => "Insert";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-		
-		public struct Home : EnumItem
-		{
-			string EnumItem.Name => "Home";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-		
-		public struct End : EnumItem
-		{
-			string EnumItem.Name => "End";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-		
-		public struct PageUp : EnumItem
-		{
-			string EnumItem.Name => "PageUp";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-		
-		public struct PageDown : EnumItem
-		{
-			string EnumItem.Name => "PageDown";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-		
-		public struct ChatHotkey : EnumItem
-		{
-			string EnumItem.Name => "ChatHotkey";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "SpecialKey";
-		}
-	}
-	
-	public struct StartCorner
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct TopLeft : EnumItem
-		{
-			string EnumItem.Name => "TopLeft";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StartCorner";
-		}
-		
-		public struct TopRight : EnumItem
-		{
-			string EnumItem.Name => "TopRight";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StartCorner";
-		}
-		
-		public struct BottomLeft : EnumItem
-		{
-			string EnumItem.Name => "BottomLeft";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StartCorner";
-		}
-		
-		public struct BottomRight : EnumItem
-		{
-			string EnumItem.Name => "BottomRight";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StartCorner";
-		}
-	}
-	
-	public struct Status
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Poison : EnumItem
-		{
-			string EnumItem.Name => "Poison";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Status";
-		}
-		
-		public struct Confusion : EnumItem
-		{
-			string EnumItem.Name => "Confusion";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Status";
-		}
-	}
-	
-	public struct StreamOutBehavior
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StreamOutBehavior";
-		}
-		
-		public struct LowMemory : EnumItem
-		{
-			string EnumItem.Name => "LowMemory";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StreamOutBehavior";
-		}
-		
-		public struct Opportunistic : EnumItem
-		{
-			string EnumItem.Name => "Opportunistic";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StreamOutBehavior";
-		}
-	}
-	
-	public struct StreamingIntegrityMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StreamingIntegrityMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StreamingIntegrityMode";
-		}
-		
-		public struct MinimumRadiusPause : EnumItem
-		{
-			string EnumItem.Name => "MinimumRadiusPause";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StreamingIntegrityMode";
-		}
-		
-		public struct PauseOutsideLoadedArea : EnumItem
-		{
-			string EnumItem.Name => "PauseOutsideLoadedArea";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StreamingIntegrityMode";
-		}
-	}
-	
-	public struct StreamingPauseMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StreamingPauseMode";
-		}
-		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StreamingPauseMode";
-		}
-		
-		public struct ClientPhysicsPause : EnumItem
-		{
-			string EnumItem.Name => "ClientPhysicsPause";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StreamingPauseMode";
-		}
-	}
-	
-	public struct StudioCloseMode
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioCloseMode";
-		}
-		
-		public struct CloseStudio : EnumItem
-		{
-			string EnumItem.Name => "CloseStudio";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioCloseMode";
-		}
-		
-		public struct CloseDoc : EnumItem
-		{
-			string EnumItem.Name => "CloseDoc";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioCloseMode";
-		}
-		
-		public struct LogOut : EnumItem
-		{
-			string EnumItem.Name => "LogOut";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioCloseMode";
-		}
-	}
-	
-	public struct StudioDataModelType
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Edit : EnumItem
-		{
-			string EnumItem.Name => "Edit";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioDataModelType";
-		}
-		
-		public struct PlayClient : EnumItem
-		{
-			string EnumItem.Name => "PlayClient";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioDataModelType";
-		}
-		
-		public struct PlayServer : EnumItem
-		{
-			string EnumItem.Name => "PlayServer";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioDataModelType";
-		}
-		
-		public struct Standalone : EnumItem
-		{
-			string EnumItem.Name => "Standalone";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioDataModelType";
-		}
-		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "StudioDataModelType";
-		}
-	}
-	
-	public struct StudioPlaceUpdateFailureReason
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Other : EnumItem
-		{
-			string EnumItem.Name => "Other";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioPlaceUpdateFailureReason";
-		}
-		
-		public struct TeamCreateConflict : EnumItem
-		{
-			string EnumItem.Name => "TeamCreateConflict";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioPlaceUpdateFailureReason";
-		}
-	}
-	
-	public struct StudioScriptEditorColorCategories
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Operator : EnumItem
-		{
-			string EnumItem.Name => "Operator";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Number : EnumItem
-		{
-			string EnumItem.Name => "Number";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct String : EnumItem
-		{
-			string EnumItem.Name => "String";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Comment : EnumItem
-		{
-			string EnumItem.Name => "Comment";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Keyword : EnumItem
-		{
-			string EnumItem.Name => "Keyword";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Builtin : EnumItem
-		{
-			string EnumItem.Name => "Builtin";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Method : EnumItem
-		{
-			string EnumItem.Name => "Method";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Property : EnumItem
-		{
-			string EnumItem.Name => "Property";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Nil : EnumItem
-		{
-			string EnumItem.Name => "Nil";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Bool : EnumItem
-		{
-			string EnumItem.Name => "Bool";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Function : EnumItem
-		{
-			string EnumItem.Name => "Function";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Local : EnumItem
-		{
-			string EnumItem.Name => "Local";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Self : EnumItem
-		{
-			string EnumItem.Name => "Self";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct LuauKeyword : EnumItem
-		{
-			string EnumItem.Name => "LuauKeyword";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct FunctionName : EnumItem
-		{
-			string EnumItem.Name => "FunctionName";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct TODO : EnumItem
-		{
-			string EnumItem.Name => "TODO";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Background : EnumItem
-		{
-			string EnumItem.Name => "Background";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct SelectionText : EnumItem
-		{
-			string EnumItem.Name => "SelectionText";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct SelectionBackground : EnumItem
-		{
-			string EnumItem.Name => "SelectionBackground";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct FindSelectionBackground : EnumItem
-		{
-			string EnumItem.Name => "FindSelectionBackground";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MatchingWordBackground : EnumItem
-		{
-			string EnumItem.Name => "MatchingWordBackground";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Warning : EnumItem
-		{
-			string EnumItem.Name => "Warning";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Error : EnumItem
-		{
-			string EnumItem.Name => "Error";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Info : EnumItem
-		{
-			string EnumItem.Name => "Info";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Hint : EnumItem
-		{
-			string EnumItem.Name => "Hint";
-			uint EnumItem.Value => 25;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Whitespace : EnumItem
-		{
-			string EnumItem.Name => "Whitespace";
-			uint EnumItem.Value => 26;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct ActiveLine : EnumItem
-		{
-			string EnumItem.Name => "ActiveLine";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct DebuggerCurrentLine : EnumItem
-		{
-			string EnumItem.Name => "DebuggerCurrentLine";
-			uint EnumItem.Value => 28;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct DebuggerErrorLine : EnumItem
-		{
-			string EnumItem.Name => "DebuggerErrorLine";
-			uint EnumItem.Value => 29;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Ruler : EnumItem
-		{
-			string EnumItem.Name => "Ruler";
-			uint EnumItem.Value => 30;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct Bracket : EnumItem
-		{
-			string EnumItem.Name => "Bracket";
-			uint EnumItem.Value => 31;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuPrimaryText : EnumItem
-		{
-			string EnumItem.Name => "MenuPrimaryText";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuSecondaryText : EnumItem
-		{
-			string EnumItem.Name => "MenuSecondaryText";
-			uint EnumItem.Value => 33;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuSelectedText : EnumItem
-		{
-			string EnumItem.Name => "MenuSelectedText";
-			uint EnumItem.Value => 34;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuBackground : EnumItem
-		{
-			string EnumItem.Name => "MenuBackground";
-			uint EnumItem.Value => 35;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuSelectedBackground : EnumItem
-		{
-			string EnumItem.Name => "MenuSelectedBackground";
-			uint EnumItem.Value => 36;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuScrollbarBackground : EnumItem
-		{
-			string EnumItem.Name => "MenuScrollbarBackground";
-			uint EnumItem.Value => 37;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuScrollbarHandle : EnumItem
-		{
-			string EnumItem.Name => "MenuScrollbarHandle";
-			uint EnumItem.Value => 38;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct MenuBorder : EnumItem
-		{
-			string EnumItem.Name => "MenuBorder";
-			uint EnumItem.Value => 39;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct DocViewCodeBackground : EnumItem
-		{
-			string EnumItem.Name => "DocViewCodeBackground";
-			uint EnumItem.Value => 40;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct AICOOverlayText : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayText";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct AICOOverlayButtonBackground : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayButtonBackground";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct AICOOverlayButtonBackgroundHover : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayButtonBackgroundHover";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct AICOOverlayButtonBackgroundPressed : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayButtonBackgroundPressed";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-		
-		public struct IndentationRuler : EnumItem
-		{
-			string EnumItem.Name => "IndentationRuler";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "StudioScriptEditorColorCategories";
-		}
-	}
-	
-	public struct StudioScriptEditorColorPresets
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct RobloxDefault : EnumItem
-		{
-			string EnumItem.Name => "RobloxDefault";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioScriptEditorColorPresets";
-		}
-		
-		public struct Extra1 : EnumItem
-		{
-			string EnumItem.Name => "Extra1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioScriptEditorColorPresets";
-		}
-		
-		public struct Extra2 : EnumItem
-		{
-			string EnumItem.Name => "Extra2";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioScriptEditorColorPresets";
-		}
-		
-		public struct Custom : EnumItem
-		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioScriptEditorColorPresets";
-		}
-	}
-	
-	public struct StudioStyleGuideColor
-	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-		
-		public struct MainBackground : EnumItem
-		{
-			string EnumItem.Name => "MainBackground";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Titlebar : EnumItem
-		{
-			string EnumItem.Name => "Titlebar";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Dropdown : EnumItem
-		{
-			string EnumItem.Name => "Dropdown";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Tooltip : EnumItem
-		{
-			string EnumItem.Name => "Tooltip";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Notification : EnumItem
-		{
-			string EnumItem.Name => "Notification";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScrollBar : EnumItem
-		{
-			string EnumItem.Name => "ScrollBar";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScrollBarBackground : EnumItem
-		{
-			string EnumItem.Name => "ScrollBarBackground";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct TabBar : EnumItem
-		{
-			string EnumItem.Name => "TabBar";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Tab : EnumItem
-		{
-			string EnumItem.Name => "Tab";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonDefault : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonDefault";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonHover : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonHover";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonChecked : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonChecked";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonAccent : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonAccent";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonBorder : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonBorder";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct FilterButtonBorderAlt : EnumItem
-		{
-			string EnumItem.Name => "FilterButtonBorderAlt";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct RibbonTab : EnumItem
-		{
-			string EnumItem.Name => "RibbonTab";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct RibbonTabTopBar : EnumItem
-		{
-			string EnumItem.Name => "RibbonTabTopBar";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Button : EnumItem
-		{
-			string EnumItem.Name => "Button";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct MainButton : EnumItem
-		{
-			string EnumItem.Name => "MainButton";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct RibbonButton : EnumItem
-		{
-			string EnumItem.Name => "RibbonButton";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ViewPortBackground : EnumItem
-		{
-			string EnumItem.Name => "ViewPortBackground";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct InputFieldBackground : EnumItem
-		{
-			string EnumItem.Name => "InputFieldBackground";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Item : EnumItem
-		{
-			string EnumItem.Name => "Item";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct TableItem : EnumItem
-		{
-			string EnumItem.Name => "TableItem";
-			uint EnumItem.Value => 23;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct CategoryItem : EnumItem
-		{
-			string EnumItem.Name => "CategoryItem";
-			uint EnumItem.Value => 24;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct GameSettingsTableItem : EnumItem
-		{
-			string EnumItem.Name => "GameSettingsTableItem";
-			uint EnumItem.Value => 25;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct GameSettingsTooltip : EnumItem
-		{
-			string EnumItem.Name => "GameSettingsTooltip";
-			uint EnumItem.Value => 26;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct EmulatorBar : EnumItem
-		{
-			string EnumItem.Name => "EmulatorBar";
-			uint EnumItem.Value => 27;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct EmulatorDropDown : EnumItem
-		{
-			string EnumItem.Name => "EmulatorDropDown";
-			uint EnumItem.Value => 28;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ColorPickerFrame : EnumItem
-		{
-			string EnumItem.Name => "ColorPickerFrame";
-			uint EnumItem.Value => 29;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct CurrentMarker : EnumItem
-		{
-			string EnumItem.Name => "CurrentMarker";
-			uint EnumItem.Value => 30;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Border : EnumItem
-		{
-			string EnumItem.Name => "Border";
-			uint EnumItem.Value => 31;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DropShadow : EnumItem
-		{
-			string EnumItem.Name => "DropShadow";
-			uint EnumItem.Value => 32;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Shadow : EnumItem
-		{
-			string EnumItem.Name => "Shadow";
-			uint EnumItem.Value => 33;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Light : EnumItem
-		{
-			string EnumItem.Name => "Light";
-			uint EnumItem.Value => 34;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Dark : EnumItem
-		{
-			string EnumItem.Name => "Dark";
-			uint EnumItem.Value => 35;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Mid : EnumItem
-		{
-			string EnumItem.Name => "Mid";
-			uint EnumItem.Value => 36;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct MainText : EnumItem
-		{
-			string EnumItem.Name => "MainText";
-			uint EnumItem.Value => 37;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct SubText : EnumItem
-		{
-			string EnumItem.Name => "SubText";
-			uint EnumItem.Value => 38;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct TitlebarText : EnumItem
-		{
-			string EnumItem.Name => "TitlebarText";
-			uint EnumItem.Value => 39;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct BrightText : EnumItem
-		{
-			string EnumItem.Name => "BrightText";
-			uint EnumItem.Value => 40;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DimmedText : EnumItem
-		{
-			string EnumItem.Name => "DimmedText";
-			uint EnumItem.Value => 41;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct LinkText : EnumItem
-		{
-			string EnumItem.Name => "LinkText";
-			uint EnumItem.Value => 42;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct WarningText : EnumItem
-		{
-			string EnumItem.Name => "WarningText";
-			uint EnumItem.Value => 43;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ErrorText : EnumItem
-		{
-			string EnumItem.Name => "ErrorText";
-			uint EnumItem.Value => 44;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct InfoText : EnumItem
-		{
-			string EnumItem.Name => "InfoText";
-			uint EnumItem.Value => 45;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct SensitiveText : EnumItem
-		{
-			string EnumItem.Name => "SensitiveText";
-			uint EnumItem.Value => 46;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptSideWidget : EnumItem
-		{
-			string EnumItem.Name => "ScriptSideWidget";
-			uint EnumItem.Value => 47;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptBackground : EnumItem
-		{
-			string EnumItem.Name => "ScriptBackground";
-			uint EnumItem.Value => 48;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptText : EnumItem
-		{
-			string EnumItem.Name => "ScriptText";
-			uint EnumItem.Value => 49;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptSelectionText : EnumItem
-		{
-			string EnumItem.Name => "ScriptSelectionText";
-			uint EnumItem.Value => 50;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptSelectionBackground : EnumItem
-		{
-			string EnumItem.Name => "ScriptSelectionBackground";
-			uint EnumItem.Value => 51;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptFindSelectionBackground : EnumItem
-		{
-			string EnumItem.Name => "ScriptFindSelectionBackground";
-			uint EnumItem.Value => 52;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptMatchingWordSelectionBackground : EnumItem
-		{
-			string EnumItem.Name => "ScriptMatchingWordSelectionBackground";
-			uint EnumItem.Value => 53;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptOperator : EnumItem
-		{
-			string EnumItem.Name => "ScriptOperator";
-			uint EnumItem.Value => 54;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptNumber : EnumItem
-		{
-			string EnumItem.Name => "ScriptNumber";
-			uint EnumItem.Value => 55;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptString : EnumItem
-		{
-			string EnumItem.Name => "ScriptString";
-			uint EnumItem.Value => 56;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptComment : EnumItem
-		{
-			string EnumItem.Name => "ScriptComment";
-			uint EnumItem.Value => 57;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptKeyword : EnumItem
-		{
-			string EnumItem.Name => "ScriptKeyword";
-			uint EnumItem.Value => 58;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptBuiltInFunction : EnumItem
-		{
-			string EnumItem.Name => "ScriptBuiltInFunction";
-			uint EnumItem.Value => 59;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptWarning : EnumItem
-		{
-			string EnumItem.Name => "ScriptWarning";
-			uint EnumItem.Value => 60;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptError : EnumItem
-		{
-			string EnumItem.Name => "ScriptError";
-			uint EnumItem.Value => 61;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptInformation : EnumItem
-		{
-			string EnumItem.Name => "ScriptInformation";
-			uint EnumItem.Value => 62;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptHint : EnumItem
-		{
-			string EnumItem.Name => "ScriptHint";
-			uint EnumItem.Value => 63;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptWhitespace : EnumItem
-		{
-			string EnumItem.Name => "ScriptWhitespace";
-			uint EnumItem.Value => 64;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptRuler : EnumItem
-		{
-			string EnumItem.Name => "ScriptRuler";
-			uint EnumItem.Value => 65;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DocViewCodeBackground : EnumItem
-		{
-			string EnumItem.Name => "DocViewCodeBackground";
-			uint EnumItem.Value => 66;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DebuggerCurrentLine : EnumItem
-		{
-			string EnumItem.Name => "DebuggerCurrentLine";
-			uint EnumItem.Value => 67;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DebuggerErrorLine : EnumItem
-		{
-			string EnumItem.Name => "DebuggerErrorLine";
-			uint EnumItem.Value => 68;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffFilePathText : EnumItem
-		{
-			string EnumItem.Name => "DiffFilePathText";
-			uint EnumItem.Value => 69;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextHunkInfo : EnumItem
-		{
-			string EnumItem.Name => "DiffTextHunkInfo";
-			uint EnumItem.Value => 70;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextNoChange : EnumItem
-		{
-			string EnumItem.Name => "DiffTextNoChange";
-			uint EnumItem.Value => 71;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextAddition : EnumItem
-		{
-			string EnumItem.Name => "DiffTextAddition";
-			uint EnumItem.Value => 72;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextDeletion : EnumItem
-		{
-			string EnumItem.Name => "DiffTextDeletion";
-			uint EnumItem.Value => 73;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextSeparatorBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffTextSeparatorBackground";
-			uint EnumItem.Value => 74;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextNoChangeBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffTextNoChangeBackground";
-			uint EnumItem.Value => 75;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextAdditionBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffTextAdditionBackground";
-			uint EnumItem.Value => 76;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffTextDeletionBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffTextDeletionBackground";
-			uint EnumItem.Value => 77;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffLineNum : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNum";
-			uint EnumItem.Value => 78;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffLineNumSeparatorBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNumSeparatorBackground";
-			uint EnumItem.Value => 79;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffLineNumNoChangeBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNumNoChangeBackground";
-			uint EnumItem.Value => 80;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffLineNumAdditionBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNumAdditionBackground";
-			uint EnumItem.Value => 81;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffLineNumDeletionBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNumDeletionBackground";
-			uint EnumItem.Value => 82;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffFilePathBackground : EnumItem
-		{
-			string EnumItem.Name => "DiffFilePathBackground";
-			uint EnumItem.Value => 83;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DiffFilePathBorder : EnumItem
-		{
-			string EnumItem.Name => "DiffFilePathBorder";
-			uint EnumItem.Value => 84;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ChatIncomingBgColor : EnumItem
-		{
-			string EnumItem.Name => "ChatIncomingBgColor";
-			uint EnumItem.Value => 85;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ChatIncomingTextColor : EnumItem
-		{
-			string EnumItem.Name => "ChatIncomingTextColor";
-			uint EnumItem.Value => 86;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ChatOutgoingBgColor : EnumItem
-		{
-			string EnumItem.Name => "ChatOutgoingBgColor";
-			uint EnumItem.Value => 87;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ChatOutgoingTextColor : EnumItem
-		{
-			string EnumItem.Name => "ChatOutgoingTextColor";
-			uint EnumItem.Value => 88;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ChatModeratedMessageColor : EnumItem
-		{
-			string EnumItem.Name => "ChatModeratedMessageColor";
-			uint EnumItem.Value => 89;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Separator : EnumItem
-		{
-			string EnumItem.Name => "Separator";
-			uint EnumItem.Value => 90;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ButtonBorder : EnumItem
-		{
-			string EnumItem.Name => "ButtonBorder";
-			uint EnumItem.Value => 91;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ButtonText : EnumItem
-		{
-			string EnumItem.Name => "ButtonText";
-			uint EnumItem.Value => 92;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct InputFieldBorder : EnumItem
-		{
-			string EnumItem.Name => "InputFieldBorder";
-			uint EnumItem.Value => 93;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct CheckedFieldBackground : EnumItem
-		{
-			string EnumItem.Name => "CheckedFieldBackground";
-			uint EnumItem.Value => 94;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct CheckedFieldBorder : EnumItem
-		{
-			string EnumItem.Name => "CheckedFieldBorder";
-			uint EnumItem.Value => 95;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct CheckedFieldIndicator : EnumItem
-		{
-			string EnumItem.Name => "CheckedFieldIndicator";
-			uint EnumItem.Value => 96;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct HeaderSection : EnumItem
-		{
-			string EnumItem.Name => "HeaderSection";
-			uint EnumItem.Value => 97;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct Midlight : EnumItem
-		{
-			string EnumItem.Name => "Midlight";
-			uint EnumItem.Value => 98;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct StatusBar : EnumItem
-		{
-			string EnumItem.Name => "StatusBar";
-			uint EnumItem.Value => 99;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DialogButton : EnumItem
-		{
-			string EnumItem.Name => "DialogButton";
-			uint EnumItem.Value => 100;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DialogButtonText : EnumItem
-		{
-			string EnumItem.Name => "DialogButtonText";
-			uint EnumItem.Value => 101;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DialogButtonBorder : EnumItem
-		{
-			string EnumItem.Name => "DialogButtonBorder";
-			uint EnumItem.Value => 102;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DialogMainButton : EnumItem
-		{
-			string EnumItem.Name => "DialogMainButton";
-			uint EnumItem.Value => 103;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct DialogMainButtonText : EnumItem
-		{
-			string EnumItem.Name => "DialogMainButtonText";
-			uint EnumItem.Value => 104;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct InfoBarWarningBackground : EnumItem
-		{
-			string EnumItem.Name => "InfoBarWarningBackground";
-			uint EnumItem.Value => 105;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct InfoBarWarningText : EnumItem
-		{
-			string EnumItem.Name => "InfoBarWarningText";
-			uint EnumItem.Value => 106;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptEditorCurrentLine : EnumItem
-		{
-			string EnumItem.Name => "ScriptEditorCurrentLine";
-			uint EnumItem.Value => 107;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptMethod : EnumItem
-		{
-			string EnumItem.Name => "ScriptMethod";
-			uint EnumItem.Value => 108;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptProperty : EnumItem
-		{
-			string EnumItem.Name => "ScriptProperty";
-			uint EnumItem.Value => 109;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptNil : EnumItem
-		{
-			string EnumItem.Name => "ScriptNil";
-			uint EnumItem.Value => 110;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptBool : EnumItem
-		{
-			string EnumItem.Name => "ScriptBool";
-			uint EnumItem.Value => 111;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptFunction : EnumItem
-		{
-			string EnumItem.Name => "ScriptFunction";
-			uint EnumItem.Value => 112;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptLocal : EnumItem
-		{
-			string EnumItem.Name => "ScriptLocal";
-			uint EnumItem.Value => 113;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptSelf : EnumItem
-		{
-			string EnumItem.Name => "ScriptSelf";
-			uint EnumItem.Value => 114;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptLuauKeyword : EnumItem
-		{
-			string EnumItem.Name => "ScriptLuauKeyword";
-			uint EnumItem.Value => 115;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptFunctionName : EnumItem
-		{
-			string EnumItem.Name => "ScriptFunctionName";
-			uint EnumItem.Value => 116;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptTodo : EnumItem
-		{
-			string EnumItem.Name => "ScriptTodo";
-			uint EnumItem.Value => 117;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct ScriptBracket : EnumItem
-		{
-			string EnumItem.Name => "ScriptBracket";
-			uint EnumItem.Value => 118;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct AttributeCog : EnumItem
-		{
-			string EnumItem.Name => "AttributeCog";
-			uint EnumItem.Value => 119;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct AICOOverlayText : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayText";
-			uint EnumItem.Value => 128;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
-		
-		public struct AICOOverlayButtonBackground : EnumItem
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AICOOverlayButtonBackground";
-			uint EnumItem.Value => 129;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
 		}
 		
-		public struct AICOOverlayButtonBackgroundHover : EnumItem
-		{
-			string EnumItem.Name => "AICOOverlayButtonBackgroundHover";
-			uint EnumItem.Value => 130;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
+		public static Type Unmuted { get; } = null!;
+		public static Type Muted { get; } = null!;
 		
-		public struct AICOOverlayButtonBackgroundPressed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AICOOverlayButtonBackgroundPressed";
-			uint EnumItem.Value => 131;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
+			return null!;
 		}
-		
-		public struct OnboardingCover : EnumItem
+	}
+	
+	public static class NameOcclusion
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "OnboardingCover";
-			uint EnumItem.Value => 132;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
 		}
 		
-		public struct OnboardingHighlight : EnumItem
-		{
-			string EnumItem.Name => "OnboardingHighlight";
-			uint EnumItem.Value => 133;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
+		public static Type NoOcclusion { get; } = null!;
+		public static Type EnemyOcclusion { get; } = null!;
+		public static Type OccludeAll { get; } = null!;
 		
-		public struct OnboardingShadow : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OnboardingShadow";
-			uint EnumItem.Value => 134;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
+			return null!;
 		}
-		
-		public struct BreakpointMarker : EnumItem
+	}
+	
+	public static class NetworkOwnership
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "BreakpointMarker";
-			uint EnumItem.Value => 136;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
 		}
 		
-		public struct DiffLineNumHover : EnumItem
-		{
-			string EnumItem.Name => "DiffLineNumHover";
-			uint EnumItem.Value => 137;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type Manual { get; } = null!;
+		public static Type OnContact { get; } = null!;
 		
-		public struct DiffLineNumSeparatorBackgroundHover : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "DiffLineNumSeparatorBackgroundHover";
-			uint EnumItem.Value => 138;
-			string EnumItem.EnumType => "StudioStyleGuideColor";
+			return null!;
 		}
 	}
 	
-	public struct StudioStyleGuideModifier
+	public static class NetworkStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "StudioStyleGuideModifier";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Connected { get; } = null!;
+		public static Type Disconnected { get; } = null!;
 		
-		public struct Selected : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Selected";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "StudioStyleGuideModifier";
+			return null!;
 		}
-		
-		public struct Pressed : EnumItem
+	}
+	
+	public static class NoiseType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Pressed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "StudioStyleGuideModifier";
 		}
 		
-		public struct Disabled : EnumItem
-		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "StudioStyleGuideModifier";
-		}
+		public static Type SimplexGabor { get; } = null!;
 		
-		public struct Hover : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hover";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "StudioStyleGuideModifier";
+			return null!;
 		}
 	}
 	
-	public struct Style
+	public static class NormalId
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct AlternatingSupports : EnumItem
+		public static Type Right { get; } = null!;
+		public static Type Top { get; } = null!;
+		public static Type Back { get; } = null!;
+		public static Type Left { get; } = null!;
+		public static Type Bottom { get; } = null!;
+		public static Type Front { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AlternatingSupports";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Style";
+			return null!;
 		}
-		
-		public struct BridgeStyleSupports : EnumItem
+	}
+	
+	public static class OperationType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "BridgeStyleSupports";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Style";
 		}
+		
+		public static Type Null { get; } = null!;
+		public static Type Union { get; } = null!;
+		public static Type Subtraction { get; } = null!;
+		public static Type Intersection { get; } = null!;
+		public static Type Primitive { get; } = null!;
 		
-		public struct NoSupports : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoSupports";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Style";
+			return null!;
 		}
 	}
 	
-	public struct SubscriptionExpirationReason
+	public static class OrientationAlignmentMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct ProductInactive : EnumItem
-		{
-			string EnumItem.Name => "ProductInactive";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SubscriptionExpirationReason";
-		}
+		public static Type OneAttachment { get; } = null!;
+		public static Type TwoAttachment { get; } = null!;
 		
-		public struct ProductDeleted : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ProductDeleted";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SubscriptionExpirationReason";
+			return null!;
 		}
-		
-		public struct SubscriberCancelled : EnumItem
+	}
+	
+	public static class OutfitSource
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SubscriberCancelled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SubscriptionExpirationReason";
 		}
 		
-		public struct SubscriberRefunded : EnumItem
-		{
-			string EnumItem.Name => "SubscriberRefunded";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SubscriptionExpirationReason";
-		}
+		public static Type All { get; } = null!;
+		public static Type Created { get; } = null!;
+		public static Type Purchased { get; } = null!;
 		
-		public struct Lapsed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Lapsed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SubscriptionExpirationReason";
+			return null!;
 		}
 	}
 	
-	public struct SubscriptionPaymentStatus
+	public static class OutfitType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Paid : EnumItem
-		{
-			string EnumItem.Name => "Paid";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SubscriptionPaymentStatus";
-		}
+		public static Type All { get; } = null!;
+		public static Type Avatar { get; } = null!;
+		public static Type DynamicHead { get; } = null!;
 		
-		public struct Refunded : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Refunded";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SubscriptionPaymentStatus";
+			return null!;
 		}
 	}
 	
-	public struct SubscriptionPeriod
+	public static class OutputLayoutMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Month : EnumItem
+		public static Type Horizontal { get; } = null!;
+		public static Type Vertical { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Month";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SubscriptionPeriod";
+			return null!;
 		}
 	}
 	
-	public struct SubscriptionState
+	public static class OverrideMouseIconBehavior
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct NeverSubscribed : EnumItem
-		{
-			string EnumItem.Name => "NeverSubscribed";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SubscriptionState";
-		}
+		public static Type None { get; } = null!;
+		public static Type ForceShow { get; } = null!;
+		public static Type ForceHide { get; } = null!;
 		
-		public struct SubscribedWillRenew : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SubscribedWillRenew";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SubscriptionState";
+			return null!;
 		}
-		
-		public struct SubscribedWillNotRenew : EnumItem
+	}
+	
+	public static class PackagePermission
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SubscribedWillNotRenew";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SubscriptionState";
 		}
 		
-		public struct SubscribedRenewalPaymentPending : EnumItem
-		{
-			string EnumItem.Name => "SubscribedRenewalPaymentPending";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SubscriptionState";
-		}
+		public static Type None { get; } = null!;
+		public static Type NoAccess { get; } = null!;
+		public static Type Revoked { get; } = null!;
+		public static Type UseView { get; } = null!;
+		public static Type Edit { get; } = null!;
+		public static Type Own { get; } = null!;
 		
-		public struct Expired : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Expired";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SubscriptionState";
+			return null!;
 		}
 	}
 	
-	public struct SurfaceConstraint
+	public static class PartType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SurfaceConstraint";
-		}
+		public static Type Ball { get; } = null!;
+		public static Type Block { get; } = null!;
+		public static Type Cylinder { get; } = null!;
+		public static Type Wedge { get; } = null!;
+		public static Type CornerWedge { get; } = null!;
 		
-		public struct Hinge : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Hinge";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SurfaceConstraint";
+			return null!;
 		}
-		
-		public struct SteppingMotor : EnumItem
+	}
+	
+	public static class ParticleEmitterShape
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SteppingMotor";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SurfaceConstraint";
 		}
+		
+		public static Type Box { get; } = null!;
+		public static Type Sphere { get; } = null!;
+		public static Type Cylinder { get; } = null!;
+		public static Type Disc { get; } = null!;
 		
-		public struct Motor : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Motor";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SurfaceConstraint";
+			return null!;
 		}
 	}
 	
-	public struct SurfaceGuiShape
+	public static class ParticleEmitterShapeInOut
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Flat : EnumItem
-		{
-			string EnumItem.Name => "Flat";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SurfaceGuiShape";
-		}
+		public static Type Outward { get; } = null!;
+		public static Type Inward { get; } = null!;
+		public static Type InAndOut { get; } = null!;
 		
-		public struct CurvedHorizontally : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CurvedHorizontally";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SurfaceGuiShape";
+			return null!;
 		}
 	}
 	
-	public struct SurfaceGuiSizingMode
+	public static class ParticleEmitterShapeStyle
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct FixedSize : EnumItem
-		{
-			string EnumItem.Name => "FixedSize";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SurfaceGuiSizingMode";
-		}
+		public static Type Volume { get; } = null!;
+		public static Type Surface { get; } = null!;
 		
-		public struct PixelsPerStud : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PixelsPerStud";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SurfaceGuiSizingMode";
+			return null!;
 		}
 	}
 	
-	public struct SurfaceType
+	public static class ParticleFlipbookLayout
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Smooth : EnumItem
-		{
-			string EnumItem.Name => "Smooth";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SurfaceType";
-		}
+		public static Type None { get; } = null!;
+		public static Type Grid2x2 { get; } = null!;
+		public static Type Grid4x4 { get; } = null!;
+		public static Type Grid8x8 { get; } = null!;
 		
-		public struct Glue : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Glue";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SurfaceType";
+			return null!;
 		}
-		
-		public struct Weld : EnumItem
+	}
+	
+	public static class ParticleFlipbookMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Weld";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SurfaceType";
 		}
 		
-		public struct Studs : EnumItem
-		{
-			string EnumItem.Name => "Studs";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SurfaceType";
-		}
+		public static Type Loop { get; } = null!;
+		public static Type OneShot { get; } = null!;
+		public static Type PingPong { get; } = null!;
+		public static Type Random { get; } = null!;
 		
-		public struct Inlet : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Inlet";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SurfaceType";
+			return null!;
 		}
-		
-		public struct Universal : EnumItem
+	}
+	
+	public static class ParticleFlipbookTextureCompatible
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Universal";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "SurfaceType";
 		}
 		
-		public struct Hinge : EnumItem
-		{
-			string EnumItem.Name => "Hinge";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "SurfaceType";
-		}
+		public static Type NotCompatible { get; } = null!;
+		public static Type Compatible { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct Motor : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Motor";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "SurfaceType";
+			return null!;
 		}
-		
-		public struct SteppingMotor : EnumItem
+	}
+	
+	public static class ParticleOrientation
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SteppingMotor";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "SurfaceType";
 		}
 		
-		public struct SmoothNoOutlines : EnumItem
+		public static Type FacingCamera { get; } = null!;
+		public static Type FacingCameraWorldUp { get; } = null!;
+		public static Type VelocityParallel { get; } = null!;
+		public static Type VelocityPerpendicular { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SmoothNoOutlines";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "SurfaceType";
+			return null!;
 		}
 	}
 	
-	public struct SwipeDirection
+	public static class PathStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "SwipeDirection";
-		}
+		public static Type Success { get; } = null!;
+		public static Type NoPath { get; } = null!;
+		public static Type ClosestNoPath { get; } = null!;
+		public static Type ClosestOutOfRange { get; } = null!;
+		public static Type FailStartNotEmpty { get; } = null!;
+		public static Type FailFinishNotEmpty { get; } = null!;
 		
-		public struct Left : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "SwipeDirection";
+			return null!;
 		}
-		
-		public struct Up : EnumItem
+	}
+	
+	public static class PathWaypointAction
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Up";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "SwipeDirection";
 		}
 		
-		public struct Down : EnumItem
-		{
-			string EnumItem.Name => "Down";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "SwipeDirection";
-		}
+		public static Type Walk { get; } = null!;
+		public static Type Jump { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct None : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "SwipeDirection";
+			return null!;
 		}
 	}
 	
-	public struct TableMajorAxis
+	public static class PermissionLevelShown
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct RowMajor : EnumItem
-		{
-			string EnumItem.Name => "RowMajor";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TableMajorAxis";
-		}
+		public static Type Game { get; } = null!;
+		public static Type RobloxGame { get; } = null!;
+		public static Type RobloxScript { get; } = null!;
+		public static Type Studio { get; } = null!;
+		public static Type Roblox { get; } = null!;
 		
-		public struct ColumnMajor : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ColumnMajor";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TableMajorAxis";
+			return null!;
 		}
 	}
 	
-	public struct Technology
+	public static class PhysicsSimulationRate
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Voxel : EnumItem
-		{
-			string EnumItem.Name => "Voxel";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "Technology";
-		}
+		public static Type Fixed240Hz { get; } = null!;
+		public static Type Fixed120Hz { get; } = null!;
+		public static Type Fixed60Hz { get; } = null!;
 		
-		public struct Compatibility : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Compatibility";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "Technology";
+			return null!;
 		}
-		
-		public struct ShadowMap : EnumItem
+	}
+	
+	public static class PhysicsSteppingMethod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ShadowMap";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "Technology";
 		}
 		
-		public struct Future : EnumItem
-		{
-			string EnumItem.Name => "Future";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "Technology";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Fixed { get; } = null!;
+		public static Type Adaptive { get; } = null!;
 		
-		public struct Legacy : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "Technology";
+			return null!;
 		}
 	}
 	
-	public struct TeleportMethod
+	public static class Platform
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct TeleportToSpawnByName : EnumItem
-		{
-			string EnumItem.Name => "TeleportToSpawnByName";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TeleportMethod";
-		}
+		public static Type Windows { get; } = null!;
+		public static Type OSX { get; } = null!;
+		public static Type IOS { get; } = null!;
+		public static Type Android { get; } = null!;
+		public static Type XBoxOne { get; } = null!;
+		public static Type PS4 { get; } = null!;
+		public static Type PS3 { get; } = null!;
+		public static Type XBox360 { get; } = null!;
+		public static Type WiiU { get; } = null!;
+		public static Type NX { get; } = null!;
+		public static Type Ouya { get; } = null!;
+		public static Type AndroidTV { get; } = null!;
+		public static Type Chromecast { get; } = null!;
+		public static Type Linux { get; } = null!;
+		public static Type SteamOS { get; } = null!;
+		public static Type WebOS { get; } = null!;
+		public static Type DOS { get; } = null!;
+		public static Type BeOS { get; } = null!;
+		public static Type UWP { get; } = null!;
+		public static Type PS5 { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct TeleportToPlaceInstance : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TeleportToPlaceInstance";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TeleportMethod";
+			return null!;
 		}
-		
-		public struct TeleportToPrivateServer : EnumItem
+	}
+	
+	public static class PlaybackState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TeleportToPrivateServer";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TeleportMethod";
 		}
 		
-		public struct TeleportPartyAsync : EnumItem
-		{
-			string EnumItem.Name => "TeleportPartyAsync";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TeleportMethod";
-		}
+		public static Type Begin { get; } = null!;
+		public static Type Delayed { get; } = null!;
+		public static Type Playing { get; } = null!;
+		public static Type Paused { get; } = null!;
+		public static Type Completed { get; } = null!;
+		public static Type Cancelled { get; } = null!;
 		
-		public struct TeleportToVIPServer : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TeleportToVIPServer";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TeleportMethod";
+			return null!;
 		}
-		
-		public struct TeleportToInstanceBack : EnumItem
+	}
+	
+	public static class PlayerActions
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TeleportToInstanceBack";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TeleportMethod";
 		}
+		
+		public static Type CharacterForward { get; } = null!;
+		public static Type CharacterBackward { get; } = null!;
+		public static Type CharacterLeft { get; } = null!;
+		public static Type CharacterRight { get; } = null!;
+		public static Type CharacterJump { get; } = null!;
 		
-		public struct TeleportUnknown : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TeleportUnknown";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TeleportMethod";
+			return null!;
 		}
 	}
 	
-	public struct TeleportResult
+	public static class PlayerCharacterDestroyBehavior
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Success : EnumItem
-		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TeleportResult";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct Failure : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Failure";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TeleportResult";
+			return null!;
 		}
-		
-		public struct GameNotFound : EnumItem
+	}
+	
+	public static class PlayerChatType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "GameNotFound";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TeleportResult";
 		}
 		
-		public struct GameEnded : EnumItem
-		{
-			string EnumItem.Name => "GameEnded";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TeleportResult";
-		}
+		public static Type All { get; } = null!;
+		public static Type Team { get; } = null!;
+		public static Type Whisper { get; } = null!;
 		
-		public struct GameFull : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "GameFull";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TeleportResult";
+			return null!;
 		}
-		
-		public struct Unauthorized : EnumItem
+	}
+	
+	public static class PoseEasingDirection
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Unauthorized";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TeleportResult";
 		}
 		
-		public struct Flooded : EnumItem
-		{
-			string EnumItem.Name => "Flooded";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TeleportResult";
-		}
+		public static Type In { get; } = null!;
+		public static Type Out { get; } = null!;
+		public static Type InOut { get; } = null!;
 		
-		public struct IsTeleporting : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "IsTeleporting";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "TeleportResult";
+			return null!;
 		}
 	}
 	
-	public struct TeleportState
+	public static class PoseEasingStyle
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct RequestedFromServer : EnumItem
+		public static Type Linear { get; } = null!;
+		public static Type Constant { get; } = null!;
+		public static Type Elastic { get; } = null!;
+		public static Type Cubic { get; } = null!;
+		public static Type Bounce { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RequestedFromServer";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TeleportState";
+			return null!;
 		}
-		
-		public struct Started : EnumItem
+	}
+	
+	public static class PositionAlignmentMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Started";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TeleportState";
 		}
+		
+		public static Type OneAttachment { get; } = null!;
+		public static Type TwoAttachment { get; } = null!;
 		
-		public struct WaitingForServer : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "WaitingForServer";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TeleportState";
+			return null!;
 		}
-		
-		public struct Failed : EnumItem
+	}
+	
+	public static class PreferredTextSize
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Failed";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TeleportState";
 		}
 		
-		public struct InProgress : EnumItem
+		public static Type Medium { get; } = null!;
+		public static Type Large { get; } = null!;
+		public static Type Larger { get; } = null!;
+		public static Type Largest { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "InProgress";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TeleportState";
+			return null!;
 		}
 	}
 	
-	public struct TeleportType
+	public static class PrimalPhysicsSolver
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Experimental { get; } = null!;
+		public static Type Disabled { get; } = null!;
 		
-		public struct ToPlace : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ToPlace";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TeleportType";
+			return null!;
 		}
-		
-		public struct ToInstance : EnumItem
+	}
+	
+	public static class PrimitiveType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ToInstance";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TeleportType";
 		}
 		
-		public struct ToReservedServer : EnumItem
+		public static Type Null { get; } = null!;
+		public static Type Ball { get; } = null!;
+		public static Type Cylinder { get; } = null!;
+		public static Type Block { get; } = null!;
+		public static Type Wedge { get; } = null!;
+		public static Type CornerWedge { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ToReservedServer";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TeleportType";
+			return null!;
 		}
-		
-		public struct ToVIPServer : EnumItem
+	}
+	
+	public static class PrivilegeType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ToVIPServer";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TeleportType";
 		}
+		
+		public static Type Owner { get; } = null!;
+		public static Type Admin { get; } = null!;
+		public static Type Member { get; } = null!;
+		public static Type Visitor { get; } = null!;
+		public static Type Banned { get; } = null!;
 		
-		public struct ToInstanceBack : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ToInstanceBack";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TeleportType";
+			return null!;
 		}
 	}
 	
-	public struct TerrainAcquisitionMethod
+	public static class ProductLocationRestriction
 	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type AvatarShop { get; } = null!;
+		public static Type AllowedGames { get; } = null!;
+		public static Type AllGames { get; } = null!;
+		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public static EnumItem[] GetEnumItems()
 		{
 			return null!;
 		}
-		
-		public struct None : EnumItem
+	}
+	
+	public static class ProductPurchaseDecision
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
 		}
 		
-		public struct Legacy : EnumItem
-		{
-			string EnumItem.Name => "Legacy";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
-		}
+		public static Type NotProcessedYet { get; } = null!;
+		public static Type PurchaseGranted { get; } = null!;
 		
-		public struct Template : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Template";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
+			return null!;
 		}
-		
-		public struct Generate : EnumItem
+	}
+	
+	public static class PromptCreateAssetResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Generate";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
 		}
 		
-		public struct Import : EnumItem
-		{
-			string EnumItem.Name => "Import";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
-		}
+		public static Type Success { get; } = null!;
+		public static Type PermissionDenied { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type UploadFailed { get; } = null!;
+		public static Type NoUserInput { get; } = null!;
+		public static Type UnknownFailure { get; } = null!;
 		
-		public struct Convert : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Convert";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
+			return null!;
 		}
-		
-		public struct EditAddTool : EnumItem
+	}
+	
+	public static class PromptCreateAvatarResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EditAddTool";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
 		}
 		
-		public struct EditSeaLevelTool : EnumItem
-		{
-			string EnumItem.Name => "EditSeaLevelTool";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
-		}
+		public static Type Success { get; } = null!;
+		public static Type PermissionDenied { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type UploadFailed { get; } = null!;
+		public static Type NoUserInput { get; } = null!;
+		public static Type InvalidHumanoidDescription { get; } = null!;
+		public static Type UGCValidationFailed { get; } = null!;
+		public static Type ModeratedName { get; } = null!;
+		public static Type MaxOutfits { get; } = null!;
+		public static Type UnknownFailure { get; } = null!;
 		
-		public struct EditReplaceTool : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EditReplaceTool";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
+			return null!;
 		}
-		
-		public struct RegionFillTool : EnumItem
+	}
+	
+	public static class PromptPublishAssetResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RegionFillTool";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
 		}
 		
-		public struct RegionPasteTool : EnumItem
-		{
-			string EnumItem.Name => "RegionPasteTool";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
-		}
+		public static Type Success { get; } = null!;
+		public static Type PermissionDenied { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type UploadFailed { get; } = null!;
+		public static Type NoUserInput { get; } = null!;
+		public static Type UnknownFailure { get; } = null!;
 		
-		public struct Other : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Other";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "TerrainAcquisitionMethod";
+			return null!;
 		}
 	}
 	
-	public struct TerrainFace
+	public static class PropertyStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Ok { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Error { get; } = null!;
 		
-		public struct Top : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TerrainFace";
+			return null!;
 		}
-		
-		public struct Side : EnumItem
+	}
+	
+	public static class ProximityPromptExclusivity
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Side";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TerrainFace";
 		}
 		
-		public struct Bottom : EnumItem
+		public static Type OnePerButton { get; } = null!;
+		public static Type OneGlobally { get; } = null!;
+		public static Type AlwaysShow { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TerrainFace";
+			return null!;
 		}
 	}
 	
-	public struct TextChatMessageStatus
+	public static class ProximityPromptInputType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Unknown : EnumItem
-		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextChatMessageStatus";
-		}
+		public static Type Keyboard { get; } = null!;
+		public static Type Gamepad { get; } = null!;
+		public static Type Touch { get; } = null!;
 		
-		public struct Success : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Success";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextChatMessageStatus";
+			return null!;
 		}
-		
-		public struct Sending : EnumItem
+	}
+	
+	public static class ProximityPromptStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Sending";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TextChatMessageStatus";
 		}
 		
-		public struct TextFilterFailed : EnumItem
-		{
-			string EnumItem.Name => "TextFilterFailed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TextChatMessageStatus";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct Floodchecked : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Floodchecked";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TextChatMessageStatus";
+			return null!;
 		}
-		
-		public struct InvalidPrivacySettings : EnumItem
+	}
+	
+	public static class QualityLevel
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "InvalidPrivacySettings";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TextChatMessageStatus";
 		}
 		
-		public struct InvalidTextChannelPermissions : EnumItem
-		{
-			string EnumItem.Name => "InvalidTextChannelPermissions";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "TextChatMessageStatus";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type Level01 { get; } = null!;
+		public static Type Level02 { get; } = null!;
+		public static Type Level03 { get; } = null!;
+		public static Type Level04 { get; } = null!;
+		public static Type Level05 { get; } = null!;
+		public static Type Level06 { get; } = null!;
+		public static Type Level07 { get; } = null!;
+		public static Type Level08 { get; } = null!;
+		public static Type Level09 { get; } = null!;
+		public static Type Level10 { get; } = null!;
+		public static Type Level11 { get; } = null!;
+		public static Type Level12 { get; } = null!;
+		public static Type Level13 { get; } = null!;
+		public static Type Level14 { get; } = null!;
+		public static Type Level15 { get; } = null!;
+		public static Type Level16 { get; } = null!;
+		public static Type Level17 { get; } = null!;
+		public static Type Level18 { get; } = null!;
+		public static Type Level19 { get; } = null!;
+		public static Type Level20 { get; } = null!;
+		public static Type Level21 { get; } = null!;
 		
-		public struct MessageTooLong : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "MessageTooLong";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "TextChatMessageStatus";
+			return null!;
 		}
 	}
 	
-	public struct TextDirection
+	public static class R15CollisionType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type OuterBox { get; } = null!;
+		public static Type InnerBox { get; } = null!;
 		
-		public struct Auto : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Auto";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextDirection";
+			return null!;
 		}
-		
-		public struct LeftToRight : EnumItem
+	}
+	
+	public static class RaycastFilterType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftToRight";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextDirection";
 		}
 		
-		public struct RightToLeft : EnumItem
+		public static Type Exclude { get; } = null!;
+		public static Type Include { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightToLeft";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextDirection";
+			return null!;
 		}
 	}
 	
-	public struct TextFilterContext
+	public static class RejectCharacterDeletions
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct PublicChat : EnumItem
-		{
-			string EnumItem.Name => "PublicChat";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextFilterContext";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct PrivateChat : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PrivateChat";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextFilterContext";
+			return null!;
 		}
 	}
 	
-	public struct TextInputType
+	public static class RenderFidelity
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextInputType";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type Precise { get; } = null!;
+		public static Type Performance { get; } = null!;
 		
-		public struct NoSuggestions : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoSuggestions";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextInputType";
+			return null!;
 		}
-		
-		public struct Number : EnumItem
+	}
+	
+	public static class RenderPriority
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Number";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextInputType";
 		}
 		
-		public struct Email : EnumItem
-		{
-			string EnumItem.Name => "Email";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TextInputType";
-		}
+		public static Type First { get; } = null!;
+		public static Type Input { get; } = null!;
+		public static Type Camera { get; } = null!;
+		public static Type Character { get; } = null!;
+		public static Type Last { get; } = null!;
 		
-		public struct Phone : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Phone";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TextInputType";
+			return null!;
 		}
-		
-		public struct Password : EnumItem
+	}
+	
+	public static class RenderingCacheOptimizationMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Password";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TextInputType";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct PasswordShown : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PasswordShown";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TextInputType";
+			return null!;
 		}
-		
-		public struct Username : EnumItem
+	}
+	
+	public static class RenderingTestComparisonMethod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Username";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "TextInputType";
 		}
 		
-		public struct OneTimePassword : EnumItem
+		public static Type psnr { get; } = null!;
+		public static Type diff { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OneTimePassword";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "TextInputType";
+			return null!;
 		}
 	}
 	
-	public struct TextTruncate
+	public static class ReplicateInstanceDestroySetting
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct None : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextTruncate";
+			return null!;
 		}
-		
-		public struct AtEnd : EnumItem
+	}
+	
+	public static class ResamplerMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AtEnd";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextTruncate";
 		}
 		
-		public struct SplitWord : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Pixelated { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SplitWord";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextTruncate";
+			return null!;
 		}
 	}
 	
-	public struct TextXAlignment
+	public static class ReservedHighlightId
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Standard { get; } = null!;
+		public static Type Selection { get; } = null!;
+		public static Type Hover { get; } = null!;
+		public static Type Active { get; } = null!;
 		
-		public struct Left : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextXAlignment";
+			return null!;
 		}
-		
-		public struct Right : EnumItem
+	}
+	
+	public static class RestPose
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextXAlignment";
 		}
 		
-		public struct Center : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type RotationsReset { get; } = null!;
+		public static Type Custom { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextXAlignment";
+			return null!;
 		}
 	}
 	
-	public struct TextYAlignment
+	public static class ReturnKeyType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Done { get; } = null!;
+		public static Type Go { get; } = null!;
+		public static Type Next { get; } = null!;
+		public static Type Search { get; } = null!;
+		public static Type Send { get; } = null!;
 		
-		public struct Top : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextYAlignment";
+			return null!;
 		}
-		
-		public struct Center : EnumItem
+	}
+	
+	public static class ReverbType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextYAlignment";
 		}
 		
-		public struct Bottom : EnumItem
+		public static Type NoReverb { get; } = null!;
+		public static Type GenericReverb { get; } = null!;
+		public static Type PaddedCell { get; } = null!;
+		public static Type Room { get; } = null!;
+		public static Type Bathroom { get; } = null!;
+		public static Type LivingRoom { get; } = null!;
+		public static Type StoneRoom { get; } = null!;
+		public static Type Auditorium { get; } = null!;
+		public static Type ConcertHall { get; } = null!;
+		public static Type Cave { get; } = null!;
+		public static Type Arena { get; } = null!;
+		public static Type Hangar { get; } = null!;
+		public static Type CarpettedHallway { get; } = null!;
+		public static Type Hallway { get; } = null!;
+		public static Type StoneCorridor { get; } = null!;
+		public static Type Alley { get; } = null!;
+		public static Type Forest { get; } = null!;
+		public static Type City { get; } = null!;
+		public static Type Mountains { get; } = null!;
+		public static Type Quarry { get; } = null!;
+		public static Type Plain { get; } = null!;
+		public static Type ParkingLot { get; } = null!;
+		public static Type SewerPipe { get; } = null!;
+		public static Type UnderWater { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextYAlignment";
+			return null!;
 		}
 	}
 	
-	public struct TextureMode
+	public static class RibbonTool
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Select { get; } = null!;
+		public static Type Scale { get; } = null!;
+		public static Type Rotate { get; } = null!;
+		public static Type Move { get; } = null!;
+		public static Type Transform { get; } = null!;
+		public static Type ColorPicker { get; } = null!;
+		public static Type MaterialPicker { get; } = null!;
+		public static Type Group { get; } = null!;
+		public static Type Ungroup { get; } = null!;
+		public static Type None { get; } = null!;
+		public static Type PivotEditor { get; } = null!;
 		
-		public struct Stretch : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Stretch";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextureMode";
+			return null!;
 		}
-		
-		public struct Wrap : EnumItem
+	}
+	
+	public static class RigScale
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Wrap";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextureMode";
 		}
 		
-		public struct Static : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Rthro { get; } = null!;
+		public static Type RthroNarrow { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Static";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextureMode";
+			return null!;
 		}
 	}
 	
-	public struct TextureQueryType
+	public static class RigType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct NonHumanoid : EnumItem
-		{
-			string EnumItem.Name => "NonHumanoid";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TextureQueryType";
-		}
+		public static Type R15 { get; } = null!;
+		public static Type Custom { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct NonHumanoidOrphaned : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NonHumanoidOrphaned";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TextureQueryType";
+			return null!;
 		}
-		
-		public struct Humanoid : EnumItem
+	}
+	
+	public static class RollOffMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Humanoid";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TextureQueryType";
 		}
+		
+		public static Type Inverse { get; } = null!;
+		public static Type Linear { get; } = null!;
+		public static Type LinearSquare { get; } = null!;
+		public static Type InverseTapered { get; } = null!;
 		
-		public struct HumanoidOrphaned : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HumanoidOrphaned";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TextureQueryType";
+			return null!;
 		}
 	}
 	
-	public struct ThreadPoolConfig
+	public static class RotationOrder
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct PerCore4 : EnumItem
-		{
-			string EnumItem.Name => "PerCore4";
-			uint EnumItem.Value => 104;
-			string EnumItem.EnumType => "ThreadPoolConfig";
-		}
+		public static Type XYZ { get; } = null!;
+		public static Type XZY { get; } = null!;
+		public static Type YZX { get; } = null!;
+		public static Type YXZ { get; } = null!;
+		public static Type ZXY { get; } = null!;
+		public static Type ZYX { get; } = null!;
 		
-		public struct PerCore3 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "PerCore3";
-			uint EnumItem.Value => 103;
-			string EnumItem.EnumType => "ThreadPoolConfig";
+			return null!;
 		}
-		
-		public struct PerCore2 : EnumItem
+	}
+	
+	public static class RotationType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "PerCore2";
-			uint EnumItem.Value => 102;
-			string EnumItem.EnumType => "ThreadPoolConfig";
 		}
 		
-		public struct PerCore1 : EnumItem
-		{
-			string EnumItem.Name => "PerCore1";
-			uint EnumItem.Value => 101;
-			string EnumItem.EnumType => "ThreadPoolConfig";
-		}
+		public static Type MovementRelative { get; } = null!;
+		public static Type CameraRelative { get; } = null!;
 		
-		public struct Auto : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Auto";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ThreadPoolConfig";
+			return null!;
 		}
-		
-		public struct Threads1 : EnumItem
+	}
+	
+	public static class RtlTextSupport
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Threads1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ThreadPoolConfig";
 		}
 		
-		public struct Threads2 : EnumItem
-		{
-			string EnumItem.Name => "Threads2";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ThreadPoolConfig";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct Threads3 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Threads3";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ThreadPoolConfig";
+			return null!;
 		}
-		
-		public struct Threads4 : EnumItem
+	}
+	
+	public static class RunContext
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Threads4";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ThreadPoolConfig";
 		}
 		
-		public struct Threads8 : EnumItem
-		{
-			string EnumItem.Name => "Threads8";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "ThreadPoolConfig";
-		}
+		public static Type Legacy { get; } = null!;
+		public static Type Server { get; } = null!;
+		public static Type Client { get; } = null!;
+		public static Type Plugin { get; } = null!;
 		
-		public struct Threads16 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Threads16";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "ThreadPoolConfig";
+			return null!;
 		}
 	}
 	
-	public struct ThrottlingPriority
+	public static class RunState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Extreme : EnumItem
+		public static Type Stopped { get; } = null!;
+		public static Type Running { get; } = null!;
+		public static Type Paused { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Extreme";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ThrottlingPriority";
+			return null!;
 		}
-		
-		public struct ElevatedOnServer : EnumItem
+	}
+	
+	public static class RuntimeUndoBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ElevatedOnServer";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ThrottlingPriority";
 		}
+		
+		public static Type Aggregate { get; } = null!;
+		public static Type Snapshot { get; } = null!;
+		public static Type Hybrid { get; } = null!;
 		
-		public struct Default : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ThrottlingPriority";
+			return null!;
 		}
 	}
 	
-	public struct ThumbnailSize
+	public static class SafeAreaCompatibility
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Size48x48 : EnumItem
-		{
-			string EnumItem.Name => "Size48x48";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ThumbnailSize";
-		}
+		public static Type None { get; } = null!;
+		public static Type FullscreenExtension { get; } = null!;
 		
-		public struct Size180x180 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Size180x180";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ThumbnailSize";
+			return null!;
 		}
-		
-		public struct Size420x420 : EnumItem
+	}
+	
+	public static class SalesTypeFilter
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Size420x420";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ThumbnailSize";
 		}
 		
-		public struct Size60x60 : EnumItem
-		{
-			string EnumItem.Name => "Size60x60";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ThumbnailSize";
-		}
+		public static Type All { get; } = null!;
+		public static Type Collectibles { get; } = null!;
+		public static Type Premium { get; } = null!;
 		
-		public struct Size100x100 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Size100x100";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "ThumbnailSize";
+			return null!;
 		}
-		
-		public struct Size150x150 : EnumItem
+	}
+	
+	public static class SaveAvatarThumbnailCustomizationFailure
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Size150x150";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "ThumbnailSize";
 		}
 		
-		public struct Size352x352 : EnumItem
+		public static Type BadThumbnailType { get; } = null!;
+		public static Type BadYRotDeg { get; } = null!;
+		public static Type BadFieldOfViewDeg { get; } = null!;
+		public static Type BadDistanceScale { get; } = null!;
+		public static Type Other { get; } = null!;
+		public static Type Throttled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Size352x352";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "ThumbnailSize";
+			return null!;
 		}
 	}
 	
-	public struct ThumbnailType
+	public static class SaveFilter
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type SaveWorld { get; } = null!;
+		public static Type SaveGame { get; } = null!;
+		public static Type SaveAll { get; } = null!;
 		
-		public struct HeadShot : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HeadShot";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ThumbnailType";
+			return null!;
 		}
-		
-		public struct AvatarBust : EnumItem
+	}
+	
+	public static class SavedQualitySetting
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AvatarBust";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ThumbnailType";
 		}
 		
-		public struct AvatarThumbnail : EnumItem
+		public static Type Automatic { get; } = null!;
+		public static Type QualityLevel1 { get; } = null!;
+		public static Type QualityLevel2 { get; } = null!;
+		public static Type QualityLevel3 { get; } = null!;
+		public static Type QualityLevel4 { get; } = null!;
+		public static Type QualityLevel5 { get; } = null!;
+		public static Type QualityLevel6 { get; } = null!;
+		public static Type QualityLevel7 { get; } = null!;
+		public static Type QualityLevel8 { get; } = null!;
+		public static Type QualityLevel9 { get; } = null!;
+		public static Type QualityLevel10 { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AvatarThumbnail";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ThumbnailType";
+			return null!;
 		}
 	}
 	
-	public struct TickCountSampleMethod
+	public static class ScaleType
 	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Stretch { get; } = null!;
+		public static Type Slice { get; } = null!;
+		public static Type Tile { get; } = null!;
+		public static Type Fit { get; } = null!;
+		public static Type Crop { get; } = null!;
+		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public static EnumItem[] GetEnumItems()
 		{
 			return null!;
 		}
-		
-		public struct Fast : EnumItem
+	}
+	
+	public static class ScopeCheckResult
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Fast";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TickCountSampleMethod";
 		}
 		
-		public struct Benchmark : EnumItem
-		{
-			string EnumItem.Name => "Benchmark";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TickCountSampleMethod";
-		}
+		public static Type ConsentAccepted { get; } = null!;
+		public static Type InvalidScopes { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type NoUserInput { get; } = null!;
+		public static Type BackendError { get; } = null!;
+		public static Type UnexpectedError { get; } = null!;
+		public static Type InvalidArgument { get; } = null!;
+		public static Type ConsentDenied { get; } = null!;
 		
-		public struct Precise : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Precise";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TickCountSampleMethod";
+			return null!;
 		}
 	}
 	
-	public struct TonemapperPreset
+	public static class ScreenInsets
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TonemapperPreset";
-		}
+		public static Type None { get; } = null!;
+		public static Type DeviceSafeInsets { get; } = null!;
+		public static Type CoreUISafeInsets { get; } = null!;
+		public static Type TopbarSafeInsets { get; } = null!;
 		
-		public struct Retro : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Retro";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TonemapperPreset";
+			return null!;
 		}
 	}
 	
-	public struct TopBottom
+	public static class ScreenOrientation
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Top : EnumItem
+		public static Type LandscapeLeft { get; } = null!;
+		public static Type LandscapeRight { get; } = null!;
+		public static Type LandscapeSensor { get; } = null!;
+		public static Type Portrait { get; } = null!;
+		public static Type Sensor { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TopBottom";
+			return null!;
 		}
-		
-		public struct Center : EnumItem
+	}
+	
+	public static class ScrollBarInset
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TopBottom";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type ScrollBar { get; } = null!;
+		public static Type Always { get; } = null!;
 		
-		public struct Bottom : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TopBottom";
+			return null!;
 		}
 	}
 	
-	public struct TouchCameraMovementMode
+	public static class ScrollingDirection
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TouchCameraMovementMode";
-		}
+		public static Type X { get; } = null!;
+		public static Type Y { get; } = null!;
+		public static Type XY { get; } = null!;
 		
-		public struct Classic : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Classic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TouchCameraMovementMode";
+			return null!;
 		}
-		
-		public struct Follow : EnumItem
+	}
+	
+	public static class SecurityCapability
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Follow";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TouchCameraMovementMode";
 		}
 		
-		public struct Orbital : EnumItem
+		public static Type RunClientScript { get; } = null!;
+		public static Type RunServerScript { get; } = null!;
+		public static Type AccessOutsideWrite { get; } = null!;
+		public static Type AssetRequire { get; } = null!;
+		public static Type LoadString { get; } = null!;
+		public static Type ScriptGlobals { get; } = null!;
+		public static Type CreateInstances { get; } = null!;
+		public static Type Basic { get; } = null!;
+		public static Type Audio { get; } = null!;
+		public static Type DataStore { get; } = null!;
+		public static Type Network { get; } = null!;
+		public static Type Physics { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Orbital";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TouchCameraMovementMode";
+			return null!;
 		}
 	}
 	
-	public struct TouchMovementMode
+	public static class SelectionBehavior
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TouchMovementMode";
-		}
+		public static Type Escape { get; } = null!;
+		public static Type Stop { get; } = null!;
 		
-		public struct Thumbstick : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Thumbstick";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TouchMovementMode";
+			return null!;
 		}
-		
-		public struct DPad : EnumItem
+	}
+	
+	public static class SelectionRenderMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "DPad";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TouchMovementMode";
 		}
+		
+		public static Type Outlines { get; } = null!;
+		public static Type BoundingBoxes { get; } = null!;
+		public static Type Both { get; } = null!;
 		
-		public struct Thumbpad : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Thumbpad";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TouchMovementMode";
+			return null!;
 		}
-		
-		public struct ClickToMove : EnumItem
+	}
+	
+	public static class SelfViewPosition
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ClickToMove";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TouchMovementMode";
 		}
 		
-		public struct DynamicThumbstick : EnumItem
+		public static Type LastPosition { get; } = null!;
+		public static Type TopLeft { get; } = null!;
+		public static Type TopRight { get; } = null!;
+		public static Type BottomLeft { get; } = null!;
+		public static Type BottomRight { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "DynamicThumbstick";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TouchMovementMode";
+			return null!;
 		}
 	}
 	
-	public struct TrackerError
+	public static class SensorMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Ok : EnumItem
-		{
-			string EnumItem.Name => "Ok";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerError";
-		}
+		public static Type Floor { get; } = null!;
+		public static Type Ladder { get; } = null!;
 		
-		public struct NoService : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoService";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerError";
+			return null!;
 		}
-		
-		public struct InitFailed : EnumItem
+	}
+	
+	public static class SensorUpdateType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "InitFailed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerError";
 		}
 		
-		public struct NoVideo : EnumItem
-		{
-			string EnumItem.Name => "NoVideo";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TrackerError";
-		}
+		public static Type OnRead { get; } = null!;
+		public static Type Manual { get; } = null!;
 		
-		public struct VideoError : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "VideoError";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TrackerError";
+			return null!;
 		}
-		
-		public struct VideoNoPermission : EnumItem
+	}
+	
+	public static class ServerLiveEditingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "VideoNoPermission";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TrackerError";
 		}
 		
-		public struct VideoUnsupported : EnumItem
-		{
-			string EnumItem.Name => "VideoUnsupported";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TrackerError";
-		}
+		public static Type Uninitialized { get; } = null!;
+		public static Type Enabled { get; } = null!;
+		public static Type Disabled { get; } = null!;
 		
-		public struct NoAudio : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoAudio";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "TrackerError";
+			return null!;
 		}
-		
-		public struct AudioError : EnumItem
+	}
+	
+	public static class ServiceVisibility
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AudioError";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "TrackerError";
 		}
 		
-		public struct AudioNoPermission : EnumItem
-		{
-			string EnumItem.Name => "AudioNoPermission";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "TrackerError";
-		}
+		public static Type Always { get; } = null!;
+		public static Type Off { get; } = null!;
+		public static Type WithChildren { get; } = null!;
 		
-		public struct UnsupportedDevice : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UnsupportedDevice";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "TrackerError";
+			return null!;
 		}
 	}
 	
-	public struct TrackerExtrapolationFlagMode
+	public static class Severity
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Auto : EnumItem
-		{
-			string EnumItem.Name => "Auto";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TrackerExtrapolationFlagMode";
-		}
+		public static Type Error { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Information { get; } = null!;
+		public static Type Hint { get; } = null!;
 		
-		public struct ForceDisabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ForceDisabled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerExtrapolationFlagMode";
+			return null!;
 		}
-		
-		public struct ExtrapolateFacsAndPose : EnumItem
+	}
+	
+	public static class SignalBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ExtrapolateFacsAndPose";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerExtrapolationFlagMode";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Immediate { get; } = null!;
+		public static Type Deferred { get; } = null!;
+		public static Type AncestryDeferred { get; } = null!;
 		
-		public struct ExtrapolateFacsOnly : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ExtrapolateFacsOnly";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerExtrapolationFlagMode";
+			return null!;
 		}
 	}
 	
-	public struct TrackerFaceTrackingStatus
+	public static class SizeConstraint
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct FaceTrackingSuccess : EnumItem
-		{
-			string EnumItem.Name => "FaceTrackingSuccess";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
-		}
+		public static Type RelativeXY { get; } = null!;
+		public static Type RelativeXX { get; } = null!;
+		public static Type RelativeYY { get; } = null!;
 		
-		public struct FaceTrackingNoFaceFound : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FaceTrackingNoFaceFound";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
+			return null!;
 		}
-		
-		public struct FaceTrackingUnknown : EnumItem
+	}
+	
+	public static class SolverConvergenceMetricType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FaceTrackingUnknown";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
 		}
 		
-		public struct FaceTrackingLost : EnumItem
-		{
-			string EnumItem.Name => "FaceTrackingLost";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
-		}
+		public static Type IterationBased { get; } = null!;
+		public static Type AlgorithmAgnostic { get; } = null!;
 		
-		public struct FaceTrackingHasTrackingError : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FaceTrackingHasTrackingError";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
+			return null!;
 		}
-		
-		public struct FaceTrackingIsOccluded : EnumItem
+	}
+	
+	public static class SolverConvergenceVisualizationMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "FaceTrackingIsOccluded";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
 		}
 		
-		public struct FaceTrackingUninitialized : EnumItem
+		public static Type Disabled { get; } = null!;
+		public static Type PerIsland { get; } = null!;
+		public static Type PerEdge { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "FaceTrackingUninitialized";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "TrackerFaceTrackingStatus";
+			return null!;
 		}
 	}
 	
-	public struct TrackerLodFlagMode
+	public static class SortDirection
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Ascending { get; } = null!;
+		public static Type Descending { get; } = null!;
 		
-		public struct Auto : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Auto";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerLodFlagMode";
+			return null!;
 		}
-		
-		public struct ForceFalse : EnumItem
+	}
+	
+	public static class SortOrder
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "ForceFalse";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerLodFlagMode";
 		}
 		
-		public struct ForceTrue : EnumItem
+		public static Type Name { get; } = null!;
+		public static Type Custom { get; } = null!;
+		public static Type LayoutOrder { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ForceTrue";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerLodFlagMode";
+			return null!;
 		}
 	}
 	
-	public struct TrackerLodValueMode
+	public static class SpecialKey
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Insert { get; } = null!;
+		public static Type Home { get; } = null!;
+		public static Type End { get; } = null!;
+		public static Type PageUp { get; } = null!;
+		public static Type PageDown { get; } = null!;
+		public static Type ChatHotkey { get; } = null!;
 		
-		public struct Auto : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Auto";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerLodValueMode";
+			return null!;
 		}
-		
-		public struct Force0 : EnumItem
+	}
+	
+	public static class StartCorner
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Force0";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerLodValueMode";
 		}
 		
-		public struct Force1 : EnumItem
+		public static Type TopLeft { get; } = null!;
+		public static Type TopRight { get; } = null!;
+		public static Type BottomLeft { get; } = null!;
+		public static Type BottomRight { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Force1";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerLodValueMode";
+			return null!;
 		}
 	}
 	
-	public struct TrackerMode
+	public static class Status
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerMode";
-		}
+		public static Type Poison { get; } = null!;
+		public static Type Confusion { get; } = null!;
 		
-		public struct Audio : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Audio";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerMode";
+			return null!;
 		}
-		
-		public struct Video : EnumItem
+	}
+	
+	public static class StreamOutBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Video";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerMode";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type LowMemory { get; } = null!;
+		public static Type Opportunistic { get; } = null!;
 		
-		public struct AudioVideo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "AudioVideo";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "TrackerMode";
+			return null!;
 		}
 	}
 	
-	public struct TrackerPromptEvent
+	public static class StreamingIntegrityMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct LODCameraRecommendDisable : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type MinimumRadiusPause { get; } = null!;
+		public static Type PauseOutsideLoadedArea { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LODCameraRecommendDisable";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerPromptEvent";
+			return null!;
 		}
 	}
 	
-	public struct TrackerType
+	public static class StreamingPauseMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type ClientPhysicsPause { get; } = null!;
 		
-		public struct None : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TrackerType";
+			return null!;
 		}
-		
-		public struct Face : EnumItem
+	}
+	
+	public static class StudioCloseMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Face";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TrackerType";
 		}
 		
-		public struct UpperBody : EnumItem
+		public static Type None { get; } = null!;
+		public static Type CloseStudio { get; } = null!;
+		public static Type CloseDoc { get; } = null!;
+		public static Type LogOut { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UpperBody";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TrackerType";
+			return null!;
 		}
 	}
 	
-	public struct TriStateBoolean
+	public static class StudioDataModelType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Edit { get; } = null!;
+		public static Type PlayClient { get; } = null!;
+		public static Type PlayServer { get; } = null!;
+		public static Type Standalone { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct False : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "False";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "TriStateBoolean";
+			return null!;
 		}
-		
-		public struct True : EnumItem
+	}
+	
+	public static class StudioPlaceUpdateFailureReason
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "True";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TriStateBoolean";
 		}
 		
-		public struct Unknown : EnumItem
+		public static Type Other { get; } = null!;
+		public static Type TeamCreateConflict { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TriStateBoolean";
+			return null!;
 		}
 	}
 	
-	public struct TweenStatus
+	public static class StudioScriptEditorColorCategories
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Canceled : EnumItem
-		{
-			string EnumItem.Name => "Canceled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "TweenStatus";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Operator { get; } = null!;
+		public static Type Number { get; } = null!;
+		public static Type String { get; } = null!;
+		public static Type Comment { get; } = null!;
+		public static Type Keyword { get; } = null!;
+		public static Type Builtin { get; } = null!;
+		public static Type Method { get; } = null!;
+		public static Type Property { get; } = null!;
+		public static Type Nil { get; } = null!;
+		public static Type Bool { get; } = null!;
+		public static Type Function { get; } = null!;
+		public static Type Local { get; } = null!;
+		public static Type Self { get; } = null!;
+		public static Type LuauKeyword { get; } = null!;
+		public static Type FunctionName { get; } = null!;
+		public static Type TODO { get; } = null!;
+		public static Type Background { get; } = null!;
+		public static Type SelectionText { get; } = null!;
+		public static Type SelectionBackground { get; } = null!;
+		public static Type FindSelectionBackground { get; } = null!;
+		public static Type MatchingWordBackground { get; } = null!;
+		public static Type Warning { get; } = null!;
+		public static Type Error { get; } = null!;
+		public static Type Info { get; } = null!;
+		public static Type Hint { get; } = null!;
+		public static Type Whitespace { get; } = null!;
+		public static Type ActiveLine { get; } = null!;
+		public static Type DebuggerCurrentLine { get; } = null!;
+		public static Type DebuggerErrorLine { get; } = null!;
+		public static Type Ruler { get; } = null!;
+		public static Type Bracket { get; } = null!;
+		public static Type MenuPrimaryText { get; } = null!;
+		public static Type MenuSecondaryText { get; } = null!;
+		public static Type MenuSelectedText { get; } = null!;
+		public static Type MenuBackground { get; } = null!;
+		public static Type MenuSelectedBackground { get; } = null!;
+		public static Type MenuScrollbarBackground { get; } = null!;
+		public static Type MenuScrollbarHandle { get; } = null!;
+		public static Type MenuBorder { get; } = null!;
+		public static Type DocViewCodeBackground { get; } = null!;
+		public static Type AICOOverlayText { get; } = null!;
+		public static Type AICOOverlayButtonBackground { get; } = null!;
+		public static Type AICOOverlayButtonBackgroundHover { get; } = null!;
+		public static Type AICOOverlayButtonBackgroundPressed { get; } = null!;
+		public static Type IndentationRuler { get; } = null!;
 		
-		public struct Completed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Completed";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "TweenStatus";
+			return null!;
 		}
 	}
 	
-	public struct UIDragDetectorBoundingBehavior
+	public static class StudioScriptEditorColorPresets
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type RobloxDefault { get; } = null!;
+		public static Type Extra1 { get; } = null!;
+		public static Type Extra2 { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct Automatic : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
+			return null!;
 		}
-		
-		public struct EntireObject : EnumItem
+	}
+	
+	public static class StudioStyleGuideColor
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EntireObject";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
 		}
 		
-		public struct HitPoint : EnumItem
+		public static Type MainBackground { get; } = null!;
+		public static Type Titlebar { get; } = null!;
+		public static Type Dropdown { get; } = null!;
+		public static Type Tooltip { get; } = null!;
+		public static Type Notification { get; } = null!;
+		public static Type ScrollBar { get; } = null!;
+		public static Type ScrollBarBackground { get; } = null!;
+		public static Type TabBar { get; } = null!;
+		public static Type Tab { get; } = null!;
+		public static Type FilterButtonDefault { get; } = null!;
+		public static Type FilterButtonHover { get; } = null!;
+		public static Type FilterButtonChecked { get; } = null!;
+		public static Type FilterButtonAccent { get; } = null!;
+		public static Type FilterButtonBorder { get; } = null!;
+		public static Type FilterButtonBorderAlt { get; } = null!;
+		public static Type RibbonTab { get; } = null!;
+		public static Type RibbonTabTopBar { get; } = null!;
+		public static Type Button { get; } = null!;
+		public static Type MainButton { get; } = null!;
+		public static Type RibbonButton { get; } = null!;
+		public static Type ViewPortBackground { get; } = null!;
+		public static Type InputFieldBackground { get; } = null!;
+		public static Type Item { get; } = null!;
+		public static Type TableItem { get; } = null!;
+		public static Type CategoryItem { get; } = null!;
+		public static Type GameSettingsTableItem { get; } = null!;
+		public static Type GameSettingsTooltip { get; } = null!;
+		public static Type EmulatorBar { get; } = null!;
+		public static Type EmulatorDropDown { get; } = null!;
+		public static Type ColorPickerFrame { get; } = null!;
+		public static Type CurrentMarker { get; } = null!;
+		public static Type Border { get; } = null!;
+		public static Type DropShadow { get; } = null!;
+		public static Type Shadow { get; } = null!;
+		public static Type Light { get; } = null!;
+		public static Type Dark { get; } = null!;
+		public static Type Mid { get; } = null!;
+		public static Type MainText { get; } = null!;
+		public static Type SubText { get; } = null!;
+		public static Type TitlebarText { get; } = null!;
+		public static Type BrightText { get; } = null!;
+		public static Type DimmedText { get; } = null!;
+		public static Type LinkText { get; } = null!;
+		public static Type WarningText { get; } = null!;
+		public static Type ErrorText { get; } = null!;
+		public static Type InfoText { get; } = null!;
+		public static Type SensitiveText { get; } = null!;
+		public static Type ScriptSideWidget { get; } = null!;
+		public static Type ScriptBackground { get; } = null!;
+		public static Type ScriptText { get; } = null!;
+		public static Type ScriptSelectionText { get; } = null!;
+		public static Type ScriptSelectionBackground { get; } = null!;
+		public static Type ScriptFindSelectionBackground { get; } = null!;
+		public static Type ScriptMatchingWordSelectionBackground { get; } = null!;
+		public static Type ScriptOperator { get; } = null!;
+		public static Type ScriptNumber { get; } = null!;
+		public static Type ScriptString { get; } = null!;
+		public static Type ScriptComment { get; } = null!;
+		public static Type ScriptKeyword { get; } = null!;
+		public static Type ScriptBuiltInFunction { get; } = null!;
+		public static Type ScriptWarning { get; } = null!;
+		public static Type ScriptError { get; } = null!;
+		public static Type ScriptInformation { get; } = null!;
+		public static Type ScriptHint { get; } = null!;
+		public static Type ScriptWhitespace { get; } = null!;
+		public static Type ScriptRuler { get; } = null!;
+		public static Type DocViewCodeBackground { get; } = null!;
+		public static Type DebuggerCurrentLine { get; } = null!;
+		public static Type DebuggerErrorLine { get; } = null!;
+		public static Type DiffFilePathText { get; } = null!;
+		public static Type DiffTextHunkInfo { get; } = null!;
+		public static Type DiffTextNoChange { get; } = null!;
+		public static Type DiffTextAddition { get; } = null!;
+		public static Type DiffTextDeletion { get; } = null!;
+		public static Type DiffTextSeparatorBackground { get; } = null!;
+		public static Type DiffTextNoChangeBackground { get; } = null!;
+		public static Type DiffTextAdditionBackground { get; } = null!;
+		public static Type DiffTextDeletionBackground { get; } = null!;
+		public static Type DiffLineNum { get; } = null!;
+		public static Type DiffLineNumSeparatorBackground { get; } = null!;
+		public static Type DiffLineNumNoChangeBackground { get; } = null!;
+		public static Type DiffLineNumAdditionBackground { get; } = null!;
+		public static Type DiffLineNumDeletionBackground { get; } = null!;
+		public static Type DiffFilePathBackground { get; } = null!;
+		public static Type DiffFilePathBorder { get; } = null!;
+		public static Type ChatIncomingBgColor { get; } = null!;
+		public static Type ChatIncomingTextColor { get; } = null!;
+		public static Type ChatOutgoingBgColor { get; } = null!;
+		public static Type ChatOutgoingTextColor { get; } = null!;
+		public static Type ChatModeratedMessageColor { get; } = null!;
+		public static Type Separator { get; } = null!;
+		public static Type ButtonBorder { get; } = null!;
+		public static Type ButtonText { get; } = null!;
+		public static Type InputFieldBorder { get; } = null!;
+		public static Type CheckedFieldBackground { get; } = null!;
+		public static Type CheckedFieldBorder { get; } = null!;
+		public static Type CheckedFieldIndicator { get; } = null!;
+		public static Type HeaderSection { get; } = null!;
+		public static Type Midlight { get; } = null!;
+		public static Type StatusBar { get; } = null!;
+		public static Type DialogButton { get; } = null!;
+		public static Type DialogButtonText { get; } = null!;
+		public static Type DialogButtonBorder { get; } = null!;
+		public static Type DialogMainButton { get; } = null!;
+		public static Type DialogMainButtonText { get; } = null!;
+		public static Type InfoBarWarningBackground { get; } = null!;
+		public static Type InfoBarWarningText { get; } = null!;
+		public static Type ScriptEditorCurrentLine { get; } = null!;
+		public static Type ScriptMethod { get; } = null!;
+		public static Type ScriptProperty { get; } = null!;
+		public static Type ScriptNil { get; } = null!;
+		public static Type ScriptBool { get; } = null!;
+		public static Type ScriptFunction { get; } = null!;
+		public static Type ScriptLocal { get; } = null!;
+		public static Type ScriptSelf { get; } = null!;
+		public static Type ScriptLuauKeyword { get; } = null!;
+		public static Type ScriptFunctionName { get; } = null!;
+		public static Type ScriptTodo { get; } = null!;
+		public static Type ScriptBracket { get; } = null!;
+		public static Type AttributeCog { get; } = null!;
+		public static Type AICOOverlayText { get; } = null!;
+		public static Type AICOOverlayButtonBackground { get; } = null!;
+		public static Type AICOOverlayButtonBackgroundHover { get; } = null!;
+		public static Type AICOOverlayButtonBackgroundPressed { get; } = null!;
+		public static Type OnboardingCover { get; } = null!;
+		public static Type OnboardingHighlight { get; } = null!;
+		public static Type OnboardingShadow { get; } = null!;
+		public static Type BreakpointMarker { get; } = null!;
+		public static Type DiffLineNumHover { get; } = null!;
+		public static Type DiffLineNumSeparatorBackgroundHover { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HitPoint";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIDragDetectorBoundingBehavior";
+			return null!;
 		}
 	}
 	
-	public struct UIDragDetectorDragRelativity
+	public static class StudioStyleGuideModifier
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Absolute : EnumItem
-		{
-			string EnumItem.Name => "Absolute";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIDragDetectorDragRelativity";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Selected { get; } = null!;
+		public static Type Pressed { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Hover { get; } = null!;
 		
-		public struct Relative : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Relative";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIDragDetectorDragRelativity";
+			return null!;
 		}
 	}
 	
-	public struct UIDragDetectorDragSpace
+	public static class Style
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type AlternatingSupports { get; } = null!;
+		public static Type BridgeStyleSupports { get; } = null!;
+		public static Type NoSupports { get; } = null!;
 		
-		public struct Parent : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Parent";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIDragDetectorDragSpace";
+			return null!;
 		}
-		
-		public struct LayerCollector : EnumItem
+	}
+	
+	public static class SubscriptionExpirationReason
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LayerCollector";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIDragDetectorDragSpace";
 		}
 		
-		public struct Reference : EnumItem
+		public static Type ProductInactive { get; } = null!;
+		public static Type ProductDeleted { get; } = null!;
+		public static Type SubscriberCancelled { get; } = null!;
+		public static Type SubscriberRefunded { get; } = null!;
+		public static Type Lapsed { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Reference";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIDragDetectorDragSpace";
+			return null!;
 		}
 	}
 	
-	public struct UIDragDetectorDragStyle
+	public static class SubscriptionPaymentStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct TranslatePlane : EnumItem
-		{
-			string EnumItem.Name => "TranslatePlane";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIDragDetectorDragStyle";
-		}
+		public static Type Paid { get; } = null!;
+		public static Type Refunded { get; } = null!;
 		
-		public struct TranslateLine : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TranslateLine";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIDragDetectorDragStyle";
+			return null!;
 		}
-		
-		public struct Rotate : EnumItem
+	}
+	
+	public static class SubscriptionPeriod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Rotate";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIDragDetectorDragStyle";
 		}
+		
+		public static Type Month { get; } = null!;
 		
-		public struct Scriptable : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Scriptable";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UIDragDetectorDragStyle";
+			return null!;
 		}
 	}
 	
-	public struct UIDragDetectorResponseStyle
+	public static class SubscriptionState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Offset : EnumItem
-		{
-			string EnumItem.Name => "Offset";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIDragDetectorResponseStyle";
-		}
+		public static Type NeverSubscribed { get; } = null!;
+		public static Type SubscribedWillRenew { get; } = null!;
+		public static Type SubscribedWillNotRenew { get; } = null!;
+		public static Type SubscribedRenewalPaymentPending { get; } = null!;
+		public static Type Expired { get; } = null!;
 		
-		public struct Scale : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Scale";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIDragDetectorResponseStyle";
+			return null!;
 		}
-		
-		public struct CustomOffset : EnumItem
+	}
+	
+	public static class SurfaceConstraint
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "CustomOffset";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIDragDetectorResponseStyle";
 		}
 		
-		public struct CustomScale : EnumItem
+		public static Type None { get; } = null!;
+		public static Type Hinge { get; } = null!;
+		public static Type SteppingMotor { get; } = null!;
+		public static Type Motor { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CustomScale";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UIDragDetectorResponseStyle";
+			return null!;
 		}
 	}
 	
-	public struct UIFlexAlignment
+	public static class SurfaceGuiShape
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIFlexAlignment";
-		}
+		public static Type Flat { get; } = null!;
+		public static Type CurvedHorizontally { get; } = null!;
 		
-		public struct Fill : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Fill";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIFlexAlignment";
+			return null!;
 		}
-		
-		public struct SpaceAround : EnumItem
+	}
+	
+	public static class SurfaceGuiSizingMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "SpaceAround";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIFlexAlignment";
 		}
 		
-		public struct SpaceBetween : EnumItem
-		{
-			string EnumItem.Name => "SpaceBetween";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UIFlexAlignment";
-		}
+		public static Type FixedSize { get; } = null!;
+		public static Type PixelsPerStud { get; } = null!;
 		
-		public struct SpaceEvenly : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "SpaceEvenly";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "UIFlexAlignment";
+			return null!;
 		}
 	}
 	
-	public struct UIFlexMode
+	public static class SurfaceType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UIFlexMode";
-		}
+		public static Type Smooth { get; } = null!;
+		public static Type Glue { get; } = null!;
+		public static Type Weld { get; } = null!;
+		public static Type Studs { get; } = null!;
+		public static Type Inlet { get; } = null!;
+		public static Type Universal { get; } = null!;
+		public static Type Hinge { get; } = null!;
+		public static Type Motor { get; } = null!;
+		public static Type SteppingMotor { get; } = null!;
+		public static Type SmoothNoOutlines { get; } = null!;
 		
-		public struct Grow : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Grow";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UIFlexMode";
+			return null!;
 		}
-		
-		public struct Shrink : EnumItem
+	}
+	
+	public static class SwipeDirection
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Shrink";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UIFlexMode";
 		}
 		
-		public struct Fill : EnumItem
-		{
-			string EnumItem.Name => "Fill";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UIFlexMode";
-		}
+		public static Type Right { get; } = null!;
+		public static Type Left { get; } = null!;
+		public static Type Up { get; } = null!;
+		public static Type Down { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct Custom : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "UIFlexMode";
+			return null!;
 		}
 	}
 	
-	public struct UITheme
+	public static class TableMajorAxis
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Light : EnumItem
-		{
-			string EnumItem.Name => "Light";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UITheme";
-		}
+		public static Type RowMajor { get; } = null!;
+		public static Type ColumnMajor { get; } = null!;
 		
-		public struct Dark : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Dark";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UITheme";
+			return null!;
 		}
 	}
 	
-	public struct UiMessageType
+	public static class Technology
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct UiMessageError : EnumItem
-		{
-			string EnumItem.Name => "UiMessageError";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UiMessageType";
-		}
+		public static Type Voxel { get; } = null!;
+		public static Type Compatibility { get; } = null!;
+		public static Type ShadowMap { get; } = null!;
+		public static Type Future { get; } = null!;
+		public static Type Legacy { get; } = null!;
 		
-		public struct UiMessageInfo : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "UiMessageInfo";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UiMessageType";
+			return null!;
 		}
 	}
 	
-	public struct UsageContext
+	public static class TeleportMethod
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UsageContext";
-		}
+		public static Type TeleportToSpawnByName { get; } = null!;
+		public static Type TeleportToPlaceInstance { get; } = null!;
+		public static Type TeleportToPrivateServer { get; } = null!;
+		public static Type TeleportPartyAsync { get; } = null!;
+		public static Type TeleportToVIPServer { get; } = null!;
+		public static Type TeleportToInstanceBack { get; } = null!;
+		public static Type TeleportUnknown { get; } = null!;
 		
-		public struct Preview : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Preview";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UsageContext";
+			return null!;
 		}
 	}
 	
-	public struct UserCFrame
+	public static class TeleportResult
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Head : EnumItem
-		{
-			string EnumItem.Name => "Head";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UserCFrame";
-		}
+		public static Type Success { get; } = null!;
+		public static Type Failure { get; } = null!;
+		public static Type GameNotFound { get; } = null!;
+		public static Type GameEnded { get; } = null!;
+		public static Type GameFull { get; } = null!;
+		public static Type Unauthorized { get; } = null!;
+		public static Type Flooded { get; } = null!;
+		public static Type IsTeleporting { get; } = null!;
 		
-		public struct LeftHand : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LeftHand";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UserCFrame";
+			return null!;
 		}
-		
-		public struct RightHand : EnumItem
+	}
+	
+	public static class TeleportState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "RightHand";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UserCFrame";
 		}
 		
-		public struct Floor : EnumItem
+		public static Type RequestedFromServer { get; } = null!;
+		public static Type Started { get; } = null!;
+		public static Type WaitingForServer { get; } = null!;
+		public static Type Failed { get; } = null!;
+		public static Type InProgress { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Floor";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UserCFrame";
+			return null!;
 		}
 	}
 	
-	public struct UserInputState
+	public static class TeleportType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Begin : EnumItem
-		{
-			string EnumItem.Name => "Begin";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UserInputState";
-		}
+		public static Type ToPlace { get; } = null!;
+		public static Type ToInstance { get; } = null!;
+		public static Type ToReservedServer { get; } = null!;
+		public static Type ToVIPServer { get; } = null!;
+		public static Type ToInstanceBack { get; } = null!;
 		
-		public struct Change : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Change";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UserInputState";
+			return null!;
 		}
-		
-		public struct End : EnumItem
+	}
+	
+	public static class TerrainAcquisitionMethod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "End";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UserInputState";
 		}
 		
-		public struct Cancel : EnumItem
-		{
-			string EnumItem.Name => "Cancel";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UserInputState";
-		}
+		public static Type None { get; } = null!;
+		public static Type Legacy { get; } = null!;
+		public static Type Template { get; } = null!;
+		public static Type Generate { get; } = null!;
+		public static Type Import { get; } = null!;
+		public static Type Convert { get; } = null!;
+		public static Type EditAddTool { get; } = null!;
+		public static Type EditSeaLevelTool { get; } = null!;
+		public static Type EditReplaceTool { get; } = null!;
+		public static Type RegionFillTool { get; } = null!;
+		public static Type RegionPasteTool { get; } = null!;
+		public static Type Other { get; } = null!;
 		
-		public struct None : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "UserInputState";
+			return null!;
 		}
 	}
 	
-	public struct UserInputType
+	public static class TerrainFace
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct MouseButton1 : EnumItem
-		{
-			string EnumItem.Name => "MouseButton1";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type Top { get; } = null!;
+		public static Type Side { get; } = null!;
+		public static Type Bottom { get; } = null!;
 		
-		public struct MouseButton2 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "MouseButton2";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct MouseButton3 : EnumItem
+	}
+	
+	public static class TextChatMessageStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "MouseButton3";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct MouseWheel : EnumItem
-		{
-			string EnumItem.Name => "MouseWheel";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type Unknown { get; } = null!;
+		public static Type Success { get; } = null!;
+		public static Type Sending { get; } = null!;
+		public static Type TextFilterFailed { get; } = null!;
+		public static Type Floodchecked { get; } = null!;
+		public static Type InvalidPrivacySettings { get; } = null!;
+		public static Type InvalidTextChannelPermissions { get; } = null!;
+		public static Type MessageTooLong { get; } = null!;
 		
-		public struct MouseMovement : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "MouseMovement";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct Touch : EnumItem
+	}
+	
+	public static class TextDirection
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Touch";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct Keyboard : EnumItem
-		{
-			string EnumItem.Name => "Keyboard";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type Auto { get; } = null!;
+		public static Type LeftToRight { get; } = null!;
+		public static Type RightToLeft { get; } = null!;
 		
-		public struct Focus : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Focus";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct Accelerometer : EnumItem
+	}
+	
+	public static class TextFilterContext
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Accelerometer";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct Gyro : EnumItem
-		{
-			string EnumItem.Name => "Gyro";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type PublicChat { get; } = null!;
+		public static Type PrivateChat { get; } = null!;
 		
-		public struct Gamepad1 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gamepad1";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct Gamepad2 : EnumItem
+	}
+	
+	public static class TextInputType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Gamepad2";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct Gamepad3 : EnumItem
-		{
-			string EnumItem.Name => "Gamepad3";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type Default { get; } = null!;
+		public static Type NoSuggestions { get; } = null!;
+		public static Type Number { get; } = null!;
+		public static Type Email { get; } = null!;
+		public static Type Phone { get; } = null!;
+		public static Type Password { get; } = null!;
+		public static Type PasswordShown { get; } = null!;
+		public static Type Username { get; } = null!;
+		public static Type OneTimePassword { get; } = null!;
 		
-		public struct Gamepad4 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gamepad4";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct Gamepad5 : EnumItem
+	}
+	
+	public static class TextTruncate
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Gamepad5";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct Gamepad6 : EnumItem
-		{
-			string EnumItem.Name => "Gamepad6";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "UserInputType";
-		}
+		public static Type None { get; } = null!;
+		public static Type AtEnd { get; } = null!;
+		public static Type SplitWord { get; } = null!;
 		
-		public struct Gamepad7 : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Gamepad7";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct Gamepad8 : EnumItem
+	}
+	
+	public static class TextXAlignment
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Gamepad8";
-			uint EnumItem.Value => 19;
-			string EnumItem.EnumType => "UserInputType";
 		}
+		
+		public static Type Left { get; } = null!;
+		public static Type Right { get; } = null!;
+		public static Type Center { get; } = null!;
 		
-		public struct TextInput : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TextInput";
-			uint EnumItem.Value => 20;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
-		
-		public struct InputMethod : EnumItem
+	}
+	
+	public static class TextYAlignment
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "InputMethod";
-			uint EnumItem.Value => 21;
-			string EnumItem.EnumType => "UserInputType";
 		}
 		
-		public struct None : EnumItem
+		public static Type Top { get; } = null!;
+		public static Type Center { get; } = null!;
+		public static Type Bottom { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 22;
-			string EnumItem.EnumType => "UserInputType";
+			return null!;
 		}
 	}
 	
-	public struct VRComfortSetting
+	public static class TextureMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Comfort : EnumItem
-		{
-			string EnumItem.Name => "Comfort";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRComfortSetting";
-		}
+		public static Type Stretch { get; } = null!;
+		public static Type Wrap { get; } = null!;
+		public static Type Static { get; } = null!;
 		
-		public struct Normal : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Normal";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRComfortSetting";
+			return null!;
 		}
-		
-		public struct Expert : EnumItem
+	}
+	
+	public static class TextureQueryType
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Expert";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VRComfortSetting";
 		}
+		
+		public static Type NonHumanoid { get; } = null!;
+		public static Type NonHumanoidOrphaned { get; } = null!;
+		public static Type Humanoid { get; } = null!;
+		public static Type HumanoidOrphaned { get; } = null!;
 		
-		public struct Custom : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Custom";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VRComfortSetting";
+			return null!;
 		}
 	}
 	
-	public struct VRSafetyBubbleMode
+	public static class ThreadPoolConfig
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct NoOne : EnumItem
+		public static Type PerCore4 { get; } = null!;
+		public static Type PerCore3 { get; } = null!;
+		public static Type PerCore2 { get; } = null!;
+		public static Type PerCore1 { get; } = null!;
+		public static Type Auto { get; } = null!;
+		public static Type Threads1 { get; } = null!;
+		public static Type Threads2 { get; } = null!;
+		public static Type Threads3 { get; } = null!;
+		public static Type Threads4 { get; } = null!;
+		public static Type Threads8 { get; } = null!;
+		public static Type Threads16 { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoOne";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRSafetyBubbleMode";
+			return null!;
 		}
-		
-		public struct OnlyFriends : EnumItem
+	}
+	
+	public static class ThrottlingPriority
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "OnlyFriends";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRSafetyBubbleMode";
 		}
+		
+		public static Type Extreme { get; } = null!;
+		public static Type ElevatedOnServer { get; } = null!;
+		public static Type Default { get; } = null!;
 		
-		public struct Anyone : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Anyone";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VRSafetyBubbleMode";
+			return null!;
 		}
 	}
 	
-	public struct VRScaling
+	public static class ThumbnailSize
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct World : EnumItem
-		{
-			string EnumItem.Name => "World";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRScaling";
-		}
+		public static Type Size48x48 { get; } = null!;
+		public static Type Size180x180 { get; } = null!;
+		public static Type Size420x420 { get; } = null!;
+		public static Type Size60x60 { get; } = null!;
+		public static Type Size100x100 { get; } = null!;
+		public static Type Size150x150 { get; } = null!;
+		public static Type Size352x352 { get; } = null!;
 		
-		public struct Off : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Off";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRScaling";
+			return null!;
 		}
 	}
 	
-	public struct VRSessionState
+	public static class ThumbnailType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Undefined : EnumItem
-		{
-			string EnumItem.Name => "Undefined";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRSessionState";
-		}
+		public static Type HeadShot { get; } = null!;
+		public static Type AvatarBust { get; } = null!;
+		public static Type AvatarThumbnail { get; } = null!;
 		
-		public struct Idle : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Idle";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRSessionState";
+			return null!;
 		}
-		
-		public struct Visible : EnumItem
+	}
+	
+	public static class TickCountSampleMethod
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Visible";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VRSessionState";
 		}
 		
-		public struct Focused : EnumItem
-		{
-			string EnumItem.Name => "Focused";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VRSessionState";
-		}
+		public static Type Fast { get; } = null!;
+		public static Type Benchmark { get; } = null!;
+		public static Type Precise { get; } = null!;
 		
-		public struct Stopping : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Stopping";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "VRSessionState";
+			return null!;
 		}
 	}
 	
-	public struct VRTouchpad
+	public static class TonemapperPreset
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Left : EnumItem
-		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRTouchpad";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Retro { get; } = null!;
 		
-		public struct Right : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRTouchpad";
+			return null!;
 		}
 	}
 	
-	public struct VRTouchpadMode
+	public static class TopBottom
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Touch : EnumItem
+		public static Type Top { get; } = null!;
+		public static Type Center { get; } = null!;
+		public static Type Bottom { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Touch";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VRTouchpadMode";
+			return null!;
 		}
-		
-		public struct VirtualThumbstick : EnumItem
+	}
+	
+	public static class TouchCameraMovementMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "VirtualThumbstick";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VRTouchpadMode";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Classic { get; } = null!;
+		public static Type Follow { get; } = null!;
+		public static Type Orbital { get; } = null!;
 		
-		public struct ABXY : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ABXY";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VRTouchpadMode";
+			return null!;
 		}
 	}
 	
-	public struct VelocityConstraintMode
+	public static class TouchMovementMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Line : EnumItem
+		public static Type Default { get; } = null!;
+		public static Type Thumbstick { get; } = null!;
+		public static Type DPad { get; } = null!;
+		public static Type Thumbpad { get; } = null!;
+		public static Type ClickToMove { get; } = null!;
+		public static Type DynamicThumbstick { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Line";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VelocityConstraintMode";
+			return null!;
 		}
-		
-		public struct Plane : EnumItem
+	}
+	
+	public static class TrackerError
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Plane";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VelocityConstraintMode";
 		}
+		
+		public static Type Ok { get; } = null!;
+		public static Type NoService { get; } = null!;
+		public static Type InitFailed { get; } = null!;
+		public static Type NoVideo { get; } = null!;
+		public static Type VideoError { get; } = null!;
+		public static Type VideoNoPermission { get; } = null!;
+		public static Type VideoUnsupported { get; } = null!;
+		public static Type NoAudio { get; } = null!;
+		public static Type AudioError { get; } = null!;
+		public static Type AudioNoPermission { get; } = null!;
+		public static Type UnsupportedDevice { get; } = null!;
 		
-		public struct Vector : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Vector";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VelocityConstraintMode";
+			return null!;
 		}
 	}
 	
-	public struct VerticalAlignment
+	public static class TrackerExtrapolationFlagMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Center : EnumItem
+		public static Type Auto { get; } = null!;
+		public static Type ForceDisabled { get; } = null!;
+		public static Type ExtrapolateFacsAndPose { get; } = null!;
+		public static Type ExtrapolateFacsOnly { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Center";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VerticalAlignment";
+			return null!;
 		}
-		
-		public struct Top : EnumItem
+	}
+	
+	public static class TrackerFaceTrackingStatus
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Top";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VerticalAlignment";
 		}
+		
+		public static Type FaceTrackingSuccess { get; } = null!;
+		public static Type FaceTrackingNoFaceFound { get; } = null!;
+		public static Type FaceTrackingUnknown { get; } = null!;
+		public static Type FaceTrackingLost { get; } = null!;
+		public static Type FaceTrackingHasTrackingError { get; } = null!;
+		public static Type FaceTrackingIsOccluded { get; } = null!;
+		public static Type FaceTrackingUninitialized { get; } = null!;
 		
-		public struct Bottom : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Bottom";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VerticalAlignment";
+			return null!;
 		}
 	}
 	
-	public struct VerticalScrollBarPosition
+	public static class TrackerLodFlagMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Right : EnumItem
-		{
-			string EnumItem.Name => "Right";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VerticalScrollBarPosition";
-		}
+		public static Type Auto { get; } = null!;
+		public static Type ForceFalse { get; } = null!;
+		public static Type ForceTrue { get; } = null!;
 		
-		public struct Left : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Left";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VerticalScrollBarPosition";
+			return null!;
 		}
 	}
 	
-	public struct VibrationMotor
+	public static class TrackerLodValueMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Large : EnumItem
-		{
-			string EnumItem.Name => "Large";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VibrationMotor";
-		}
+		public static Type Auto { get; } = null!;
+		public static Type Force0 { get; } = null!;
+		public static Type Force1 { get; } = null!;
 		
-		public struct Small : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Small";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VibrationMotor";
+			return null!;
 		}
-		
-		public struct LeftTrigger : EnumItem
+	}
+	
+	public static class TrackerMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftTrigger";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VibrationMotor";
 		}
 		
-		public struct RightTrigger : EnumItem
+		public static Type None { get; } = null!;
+		public static Type Audio { get; } = null!;
+		public static Type Video { get; } = null!;
+		public static Type AudioVideo { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightTrigger";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VibrationMotor";
+			return null!;
 		}
-		
-		public struct LeftHand : EnumItem
+	}
+	
+	public static class TrackerPromptEvent
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LeftHand";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "VibrationMotor";
 		}
+		
+		public static Type LODCameraRecommendDisable { get; } = null!;
 		
-		public struct RightHand : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "RightHand";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "VibrationMotor";
+			return null!;
 		}
 	}
 	
-	public struct VideoDeviceCaptureQuality
+	public static class TrackerType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
-		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VideoDeviceCaptureQuality";
-		}
+		public static Type None { get; } = null!;
+		public static Type Face { get; } = null!;
+		public static Type UpperBody { get; } = null!;
 		
-		public struct Low : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Low";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VideoDeviceCaptureQuality";
+			return null!;
 		}
-		
-		public struct Medium : EnumItem
+	}
+	
+	public static class TriStateBoolean
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VideoDeviceCaptureQuality";
 		}
 		
-		public struct High : EnumItem
+		public static Type False { get; } = null!;
+		public static Type True { get; } = null!;
+		public static Type Unknown { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "High";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VideoDeviceCaptureQuality";
+			return null!;
 		}
 	}
 	
-	public struct VideoError
+	public static class TweenStatus
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Canceled { get; } = null!;
+		public static Type Completed { get; } = null!;
 		
-		public struct Ok : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Ok";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct Eof : EnumItem
+	}
+	
+	public static class UIDragDetectorBoundingBehavior
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Eof";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct EAgain : EnumItem
-		{
-			string EnumItem.Name => "EAgain";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type Automatic { get; } = null!;
+		public static Type EntireObject { get; } = null!;
+		public static Type HitPoint { get; } = null!;
 		
-		public struct BadParameter : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "BadParameter";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct AllocFailed : EnumItem
+	}
+	
+	public static class UIDragDetectorDragRelativity
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "AllocFailed";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct CodecInitFailed : EnumItem
-		{
-			string EnumItem.Name => "CodecInitFailed";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type Absolute { get; } = null!;
+		public static Type Relative { get; } = null!;
 		
-		public struct CodecCloseFailed : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "CodecCloseFailed";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct DecodeFailed : EnumItem
+	}
+	
+	public static class UIDragDetectorDragSpace
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "DecodeFailed";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct ParsingFailed : EnumItem
-		{
-			string EnumItem.Name => "ParsingFailed";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type Parent { get; } = null!;
+		public static Type LayerCollector { get; } = null!;
+		public static Type Reference { get; } = null!;
 		
-		public struct Unsupported : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unsupported";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct Generic : EnumItem
+	}
+	
+	public static class UIDragDetectorDragStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Generic";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct DownloadFailed : EnumItem
-		{
-			string EnumItem.Name => "DownloadFailed";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type TranslatePlane { get; } = null!;
+		public static Type TranslateLine { get; } = null!;
+		public static Type Rotate { get; } = null!;
+		public static Type Scriptable { get; } = null!;
 		
-		public struct StreamNotFound : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "StreamNotFound";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct EncodeFailed : EnumItem
+	}
+	
+	public static class UIDragDetectorResponseStyle
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EncodeFailed";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct CreateFailed : EnumItem
-		{
-			string EnumItem.Name => "CreateFailed";
-			uint EnumItem.Value => 14;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type Offset { get; } = null!;
+		public static Type Scale { get; } = null!;
+		public static Type CustomOffset { get; } = null!;
+		public static Type CustomScale { get; } = null!;
 		
-		public struct NoPermission : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "NoPermission";
-			uint EnumItem.Value => 15;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
-		
-		public struct NoService : EnumItem
+	}
+	
+	public static class UIFlexAlignment
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "NoService";
-			uint EnumItem.Value => 16;
-			string EnumItem.EnumType => "VideoError";
 		}
 		
-		public struct ReleaseFailed : EnumItem
-		{
-			string EnumItem.Name => "ReleaseFailed";
-			uint EnumItem.Value => 17;
-			string EnumItem.EnumType => "VideoError";
-		}
+		public static Type None { get; } = null!;
+		public static Type Fill { get; } = null!;
+		public static Type SpaceAround { get; } = null!;
+		public static Type SpaceBetween { get; } = null!;
+		public static Type SpaceEvenly { get; } = null!;
 		
-		public struct Unknown : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Unknown";
-			uint EnumItem.Value => 18;
-			string EnumItem.EnumType => "VideoError";
+			return null!;
 		}
 	}
 	
-	public struct ViewMode
+	public static class UIFlexMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ViewMode";
-		}
+		public static Type None { get; } = null!;
+		public static Type Grow { get; } = null!;
+		public static Type Shrink { get; } = null!;
+		public static Type Fill { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct GeometryComplexity : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "GeometryComplexity";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ViewMode";
+			return null!;
 		}
-		
-		public struct Transparent : EnumItem
+	}
+	
+	public static class UITheme
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Transparent";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "ViewMode";
 		}
+		
+		public static Type Light { get; } = null!;
+		public static Type Dark { get; } = null!;
 		
-		public struct Decal : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Decal";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "ViewMode";
+			return null!;
 		}
 	}
 	
-	public struct VirtualCursorMode
+	public static class UiMessageType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Default : EnumItem
+		public static Type UiMessageError { get; } = null!;
+		public static Type UiMessageInfo { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Default";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VirtualCursorMode";
+			return null!;
 		}
-		
-		public struct Disabled : EnumItem
+	}
+	
+	public static class UsageContext
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VirtualCursorMode";
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Preview { get; } = null!;
 		
-		public struct Enabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VirtualCursorMode";
+			return null!;
 		}
 	}
 	
-	public struct VirtualInputMode
+	public static class UserCFrame
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
+		public static Type Head { get; } = null!;
+		public static Type LeftHand { get; } = null!;
+		public static Type RightHand { get; } = null!;
+		public static Type Floor { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VirtualInputMode";
+			return null!;
 		}
-		
-		public struct Recording : EnumItem
+	}
+	
+	public static class UserInputState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Recording";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VirtualInputMode";
 		}
+		
+		public static Type Begin { get; } = null!;
+		public static Type Change { get; } = null!;
+		public static Type End { get; } = null!;
+		public static Type Cancel { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct Playing : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Playing";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VirtualInputMode";
+			return null!;
 		}
 	}
 	
-	public struct VoiceChatState
+	public static class UserInputType
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Idle : EnumItem
-		{
-			string EnumItem.Name => "Idle";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VoiceChatState";
-		}
+		public static Type MouseButton1 { get; } = null!;
+		public static Type MouseButton2 { get; } = null!;
+		public static Type MouseButton3 { get; } = null!;
+		public static Type MouseWheel { get; } = null!;
+		public static Type MouseMovement { get; } = null!;
+		public static Type Touch { get; } = null!;
+		public static Type Keyboard { get; } = null!;
+		public static Type Focus { get; } = null!;
+		public static Type Accelerometer { get; } = null!;
+		public static Type Gyro { get; } = null!;
+		public static Type Gamepad1 { get; } = null!;
+		public static Type Gamepad2 { get; } = null!;
+		public static Type Gamepad3 { get; } = null!;
+		public static Type Gamepad4 { get; } = null!;
+		public static Type Gamepad5 { get; } = null!;
+		public static Type Gamepad6 { get; } = null!;
+		public static Type Gamepad7 { get; } = null!;
+		public static Type Gamepad8 { get; } = null!;
+		public static Type TextInput { get; } = null!;
+		public static Type InputMethod { get; } = null!;
+		public static Type None { get; } = null!;
 		
-		public struct Joining : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Joining";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VoiceChatState";
+			return null!;
 		}
-		
-		public struct JoiningRetry : EnumItem
+	}
+	
+	public static class VRComfortSetting
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "JoiningRetry";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VoiceChatState";
 		}
 		
-		public struct Joined : EnumItem
-		{
-			string EnumItem.Name => "Joined";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "VoiceChatState";
-		}
+		public static Type Comfort { get; } = null!;
+		public static Type Normal { get; } = null!;
+		public static Type Expert { get; } = null!;
+		public static Type Custom { get; } = null!;
 		
-		public struct Leaving : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Leaving";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "VoiceChatState";
+			return null!;
 		}
-		
-		public struct Ended : EnumItem
+	}
+	
+	public static class VRSafetyBubbleMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Ended";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "VoiceChatState";
 		}
 		
-		public struct Failed : EnumItem
+		public static Type NoOne { get; } = null!;
+		public static Type OnlyFriends { get; } = null!;
+		public static Type Anyone { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Failed";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "VoiceChatState";
+			return null!;
 		}
 	}
 	
-	public struct VoiceControlPath
+	public static class VRScaling
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type World { get; } = null!;
+		public static Type Off { get; } = null!;
 		
-		public struct Publish : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Publish";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VoiceControlPath";
+			return null!;
 		}
-		
-		public struct Subscribe : EnumItem
+	}
+	
+	public static class VRSessionState
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Subscribe";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VoiceControlPath";
 		}
 		
-		public struct Join : EnumItem
+		public static Type Undefined { get; } = null!;
+		public static Type Idle { get; } = null!;
+		public static Type Visible { get; } = null!;
+		public static Type Focused { get; } = null!;
+		public static Type Stopping { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Join";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VoiceControlPath";
+			return null!;
 		}
 	}
 	
-	public struct VolumetricAudio
+	public static class VRTouchpad
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Left { get; } = null!;
+		public static Type Right { get; } = null!;
 		
-		public struct Disabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "VolumetricAudio";
+			return null!;
 		}
-		
-		public struct Automatic : EnumItem
+	}
+	
+	public static class VRTouchpadMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Automatic";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "VolumetricAudio";
 		}
 		
-		public struct Enabled : EnumItem
+		public static Type Touch { get; } = null!;
+		public static Type VirtualThumbstick { get; } = null!;
+		public static Type ABXY { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Enabled";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "VolumetricAudio";
+			return null!;
 		}
 	}
 	
-	public struct WaterDirection
+	public static class VelocityConstraintMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct NegX : EnumItem
-		{
-			string EnumItem.Name => "NegX";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WaterDirection";
-		}
+		public static Type Line { get; } = null!;
+		public static Type Plane { get; } = null!;
+		public static Type Vector { get; } = null!;
 		
-		public struct X : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "X";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WaterDirection";
+			return null!;
 		}
-		
-		public struct NegY : EnumItem
+	}
+	
+	public static class VerticalAlignment
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "NegY";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WaterDirection";
 		}
+		
+		public static Type Center { get; } = null!;
+		public static Type Top { get; } = null!;
+		public static Type Bottom { get; } = null!;
 		
-		public struct Y : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Y";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "WaterDirection";
+			return null!;
 		}
-		
-		public struct NegZ : EnumItem
+	}
+	
+	public static class VerticalScrollBarPosition
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "NegZ";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "WaterDirection";
 		}
 		
-		public struct Z : EnumItem
+		public static Type Right { get; } = null!;
+		public static Type Left { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Z";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "WaterDirection";
+			return null!;
 		}
 	}
 	
-	public struct WaterForce
+	public static class VibrationMotor
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WaterForce";
-		}
+		public static Type Large { get; } = null!;
+		public static Type Small { get; } = null!;
+		public static Type LeftTrigger { get; } = null!;
+		public static Type RightTrigger { get; } = null!;
+		public static Type LeftHand { get; } = null!;
+		public static Type RightHand { get; } = null!;
 		
-		public struct Small : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Small";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WaterForce";
+			return null!;
 		}
-		
-		public struct Medium : EnumItem
+	}
+	
+	public static class VideoDeviceCaptureQuality
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Medium";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WaterForce";
 		}
 		
-		public struct Strong : EnumItem
-		{
-			string EnumItem.Name => "Strong";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "WaterForce";
-		}
+		public static Type Default { get; } = null!;
+		public static Type Low { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type High { get; } = null!;
 		
-		public struct Max : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Max";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "WaterForce";
+			return null!;
 		}
 	}
 	
-	public struct WeldConstraintPreserve
+	public static class VideoError
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Ok { get; } = null!;
+		public static Type Eof { get; } = null!;
+		public static Type EAgain { get; } = null!;
+		public static Type BadParameter { get; } = null!;
+		public static Type AllocFailed { get; } = null!;
+		public static Type CodecInitFailed { get; } = null!;
+		public static Type CodecCloseFailed { get; } = null!;
+		public static Type DecodeFailed { get; } = null!;
+		public static Type ParsingFailed { get; } = null!;
+		public static Type Unsupported { get; } = null!;
+		public static Type Generic { get; } = null!;
+		public static Type DownloadFailed { get; } = null!;
+		public static Type StreamNotFound { get; } = null!;
+		public static Type EncodeFailed { get; } = null!;
+		public static Type CreateFailed { get; } = null!;
+		public static Type NoPermission { get; } = null!;
+		public static Type NoService { get; } = null!;
+		public static Type ReleaseFailed { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		
-		public struct All : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "All";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WeldConstraintPreserve";
+			return null!;
 		}
-		
-		public struct None : EnumItem
+	}
+	
+	public static class ViewMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WeldConstraintPreserve";
 		}
 		
-		public struct Touching : EnumItem
+		public static Type None { get; } = null!;
+		public static Type GeometryComplexity { get; } = null!;
+		public static Type Transparent { get; } = null!;
+		public static Type Decal { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Touching";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WeldConstraintPreserve";
+			return null!;
 		}
 	}
 	
-	public struct WrapLayerAutoSkin
+	public static class VirtualCursorMode
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct Disabled : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Disabled";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WrapLayerAutoSkin";
+			return null!;
 		}
-		
-		public struct EnabledPreserve : EnumItem
+	}
+	
+	public static class VirtualInputMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "EnabledPreserve";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WrapLayerAutoSkin";
 		}
 		
-		public struct EnabledOverride : EnumItem
+		public static Type None { get; } = null!;
+		public static Type Recording { get; } = null!;
+		public static Type Playing { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "EnabledOverride";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WrapLayerAutoSkin";
+			return null!;
 		}
 	}
 	
-	public struct WrapLayerDebugMode
+	public static class VoiceChatState
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
-		}
+		public static Type Idle { get; } = null!;
+		public static Type Joining { get; } = null!;
+		public static Type JoiningRetry { get; } = null!;
+		public static Type Joined { get; } = null!;
+		public static Type Leaving { get; } = null!;
+		public static Type Ended { get; } = null!;
+		public static Type Failed { get; } = null!;
 		
-		public struct BoundCage : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "BoundCage";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
+			return null!;
 		}
-		
-		public struct LayerCage : EnumItem
+	}
+	
+	public static class VoiceControlPath
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "LayerCage";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
 		}
 		
-		public struct BoundCageAndLinks : EnumItem
-		{
-			string EnumItem.Name => "BoundCageAndLinks";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
-		}
+		public static Type Publish { get; } = null!;
+		public static Type Subscribe { get; } = null!;
+		public static Type Join { get; } = null!;
 		
-		public struct Reference : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Reference";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
+			return null!;
 		}
-		
-		public struct Rbf : EnumItem
+	}
+	
+	public static class VolumetricAudio
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Rbf";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
 		}
 		
-		public struct OuterCage : EnumItem
-		{
-			string EnumItem.Name => "OuterCage";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
-		}
+		public static Type Disabled { get; } = null!;
+		public static Type Automatic { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
-		public struct ReferenceMeshAfterMorph : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "ReferenceMeshAfterMorph";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
+			return null!;
 		}
-		
-		public struct HSROuterDetail : EnumItem
+	}
+	
+	public static class WaterDirection
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "HSROuterDetail";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
 		}
 		
-		public struct HSROuter : EnumItem
-		{
-			string EnumItem.Name => "HSROuter";
-			uint EnumItem.Value => 9;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
-		}
+		public static Type NegX { get; } = null!;
+		public static Type X { get; } = null!;
+		public static Type NegY { get; } = null!;
+		public static Type Y { get; } = null!;
+		public static Type NegZ { get; } = null!;
+		public static Type Z { get; } = null!;
 		
-		public struct HSRInner : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "HSRInner";
-			uint EnumItem.Value => 10;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
+			return null!;
 		}
-		
-		public struct HSRInnerReverse : EnumItem
+	}
+	
+	public static class WaterForce
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "HSRInnerReverse";
-			uint EnumItem.Value => 11;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
 		}
 		
-		public struct LayerCageFittedToBase : EnumItem
-		{
-			string EnumItem.Name => "LayerCageFittedToBase";
-			uint EnumItem.Value => 12;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
-		}
+		public static Type None { get; } = null!;
+		public static Type Small { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type Strong { get; } = null!;
+		public static Type Max { get; } = null!;
 		
-		public struct LayerCageFittedToPrev : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "LayerCageFittedToPrev";
-			uint EnumItem.Value => 13;
-			string EnumItem.EnumType => "WrapLayerDebugMode";
+			return null!;
 		}
 	}
 	
-	public struct WrapTargetDebugMode
+	public static class WeldConstraintPreserve
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct None : EnumItem
-		{
-			string EnumItem.Name => "None";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
-		}
+		public static Type All { get; } = null!;
+		public static Type None { get; } = null!;
+		public static Type Touching { get; } = null!;
 		
-		public struct TargetCageOriginal : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TargetCageOriginal";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
+			return null!;
 		}
-		
-		public struct TargetCageCompressed : EnumItem
+	}
+	
+	public static class WrapLayerAutoSkin
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TargetCageCompressed";
-			uint EnumItem.Value => 2;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
 		}
 		
-		public struct TargetCageInterface : EnumItem
-		{
-			string EnumItem.Name => "TargetCageInterface";
-			uint EnumItem.Value => 3;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
-		}
+		public static Type Disabled { get; } = null!;
+		public static Type EnabledPreserve { get; } = null!;
+		public static Type EnabledOverride { get; } = null!;
 		
-		public struct TargetLayerCageOriginal : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TargetLayerCageOriginal";
-			uint EnumItem.Value => 4;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
+			return null!;
 		}
-		
-		public struct TargetLayerCageCompressed : EnumItem
+	}
+	
+	public static class WrapLayerDebugMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "TargetLayerCageCompressed";
-			uint EnumItem.Value => 5;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
 		}
+		
+		public static Type None { get; } = null!;
+		public static Type BoundCage { get; } = null!;
+		public static Type LayerCage { get; } = null!;
+		public static Type BoundCageAndLinks { get; } = null!;
+		public static Type Reference { get; } = null!;
+		public static Type Rbf { get; } = null!;
+		public static Type OuterCage { get; } = null!;
+		public static Type ReferenceMeshAfterMorph { get; } = null!;
+		public static Type HSROuterDetail { get; } = null!;
+		public static Type HSROuter { get; } = null!;
+		public static Type HSRInner { get; } = null!;
+		public static Type HSRInnerReverse { get; } = null!;
+		public static Type LayerCageFittedToBase { get; } = null!;
+		public static Type LayerCageFittedToPrev { get; } = null!;
 		
-		public struct TargetLayerInterface : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "TargetLayerInterface";
-			uint EnumItem.Value => 6;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
+			return null!;
 		}
-		
-		public struct Rbf : EnumItem
+	}
+	
+	public static class WrapTargetDebugMode
+	{
+		public interface Type : EnumItem
 		{
-			string EnumItem.Name => "Rbf";
-			uint EnumItem.Value => 7;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
 		}
 		
-		public struct OuterCageDetail : EnumItem
+		public static Type None { get; } = null!;
+		public static Type TargetCageOriginal { get; } = null!;
+		public static Type TargetCageCompressed { get; } = null!;
+		public static Type TargetCageInterface { get; } = null!;
+		public static Type TargetLayerCageOriginal { get; } = null!;
+		public static Type TargetLayerCageCompressed { get; } = null!;
+		public static Type TargetLayerInterface { get; } = null!;
+		public static Type Rbf { get; } = null!;
+		public static Type OuterCageDetail { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "OuterCageDetail";
-			uint EnumItem.Value => 8;
-			string EnumItem.EnumType => "WrapTargetDebugMode";
+			return null!;
 		}
 	}
 	
-	public struct ZIndexBehavior
+	public static class ZIndexBehavior
 	{
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public EnumItem[] GetEnumItems()
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
 		
-		public struct Global : EnumItem
-		{
-			string EnumItem.Name => "Global";
-			uint EnumItem.Value => 0;
-			string EnumItem.EnumType => "ZIndexBehavior";
-		}
+		public static Type Global { get; } = null!;
+		public static Type Sibling { get; } = null!;
 		
-		public struct Sibling : EnumItem
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
 		{
-			string EnumItem.Name => "Sibling";
-			uint EnumItem.Value => 1;
-			string EnumItem.EnumType => "ZIndexBehavior";
+			return null!;
 		}
 	}
 }

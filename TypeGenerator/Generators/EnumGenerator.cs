@@ -18,38 +18,25 @@
             {
                 var enumTypeName = rbxEnum.Name;
                 var enumItems = rbxEnum.Items;
-                Write($"public struct {enumTypeName}");
+                Write($"public static class {enumTypeName}");
                 Write("{");
                 PushIndent();
+                Write("public interface Type : EnumItem");
+                Write("{");
+                Write("}");
+                Write();
+                foreach (var item in enumItems)
+                {
+                    Write($"public static Type {item.Name} {{ get; }} = null!;");
+                }
+                Write();
                 Write("/// <summary>Returns an array of all <see cref=\"EnumItem\"/> options available for this enum.</summary>");
-                Write("public EnumItem[] GetEnumItems()");
+                Write("public static EnumItem[] GetEnumItems()");
                 Write("{");
                 PushIndent();
                 Write("return null!;");
                 PopIndent();
                 Write("}");
-                Write();
-
-                foreach (var item in enumItems)
-                {
-                    var itemLegacyNames = item.LegacyNames ?? [];
-                    Write($"public struct {item.Name} : EnumItem");
-                    Write("{");
-                    PushIndent();
-
-                    // no public modifier & direct access to avoid naming conflicts
-                    Write("string EnumItem.Name => \"" + item.Name + "\";");
-                    Write("uint EnumItem.Value => " + item.Value + ";");
-                    Write("string EnumItem.EnumType => \"" + enumTypeName + "\";");
-
-                    PopIndent();
-                    Write("}");
-                    if (item != enumItems.Last())
-                    {
-                        Write();
-                    }
-                }
-
                 PopIndent();
                 Write("}");
 

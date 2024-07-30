@@ -32,7 +32,7 @@ namespace TypeGenerator.Generators
         public static string? SafeValueType(APITypes.ValueType valueType)
         {
             if (valueType.Category == "Enum")
-                return $"Enum.{valueType.Name}";
+                return $"Enum.{valueType.Name}.Type";
 
             if (!string.IsNullOrEmpty(valueType.Name) && valueType.Name.EndsWith('?'))
             {
