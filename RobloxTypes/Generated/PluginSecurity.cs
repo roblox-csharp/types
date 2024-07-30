@@ -25,373 +25,464 @@ namespace Roblox.PluginClasses
 	
 	public partial interface Instance
 	{
+		public new Instance Clone();
 		public string GetDebugId(int? scopeLength = null);
 	}
 	
 	public interface AccessoryDescription : ICreatableInstance
 	{
+		public new AccessoryDescription Clone();
 	}
 	
 	public interface AccountService : IServiceInstance
 	{
+		public new AccountService Clone();
 	}
 	
 	public interface Accoutrement : ICreatableInstance
 	{
+		public new Accoutrement Clone();
 	}
 	
 	public interface Accessory : Accoutrement, ICreatableInstance
 	{
+		public new Accessory Clone();
 	}
 	
 	public interface AchievementService : IServiceInstance
 	{
+		public new AchievementService Clone();
 	}
 	
 	public interface AdPortal : ICreatableInstance
 	{
+		public new AdPortal Clone();
 	}
 	
 	public interface AnalyticsService : IServiceInstance
 	{
+		public new AnalyticsService Clone();
 	}
 	
 	public interface Animation : ICreatableInstance
 	{
+		public new Animation Clone();
 	}
 	
 	public interface AnimationClip : Instance
 	{
+		public new AnimationClip Clone();
 	}
 	
 	public partial interface KeyframeSequence : AnimationClip, ICreatableInstance
 	{
+		public new KeyframeSequence Clone();
 	}
 	
 	public partial interface AnimationClipProvider : IServiceInstance
 	{
+		public new AnimationClipProvider Clone();
 		public AnimationClip GetAnimationClip(string assetId);
 		public AnimationClip GetAnimationClipById(long assetId, bool useCache);
 	}
 	
 	public interface AnimationController : ICreatableInstance
 	{
+		public new AnimationController Clone();
 	}
 	
 	public interface AnimationFromVideoCreatorService : IServiceInstance
 	{
+		public new AnimationFromVideoCreatorService Clone();
 	}
 	
 	public interface AnimationFromVideoCreatorStudioService : IServiceInstance
 	{
+		public new AnimationFromVideoCreatorStudioService Clone();
 	}
 	
 	public interface AnimationRigData : ICreatableInstance
 	{
+		public new AnimationRigData Clone();
 	}
 	
 	public interface AnimationStreamTrack : Instance
 	{
+		public new AnimationStreamTrack Clone();
 	}
 	
 	public interface AnimationTrack : Instance
 	{
+		public new AnimationTrack Clone();
 	}
 	
 	public partial interface Animator : ICreatableInstance
 	{
+		public new Animator Clone();
 		public void StepAnimations(float deltaTime);
 	}
 	
 	public interface Annotation : ICreatableInstance
 	{
+		public new Annotation Clone();
 	}
 	
 	public interface WorkspaceAnnotation : Annotation, ICreatableInstance
 	{
+		public new WorkspaceAnnotation Clone();
 	}
 	
 	public interface AnnotationsService : IServiceInstance
 	{
+		public new AnnotationsService Clone();
 	}
 	
 	public interface AppLifecycleObserverService : IServiceInstance
 	{
+		public new AppLifecycleObserverService Clone();
 	}
 	
 	public interface AppUpdateService : IServiceInstance
 	{
+		public new AppUpdateService Clone();
 	}
 	
 	public interface AssetDeliveryProxy : IServiceInstance
 	{
+		public new AssetDeliveryProxy Clone();
 	}
 	
 	public interface AssetImportService : IServiceInstance
 	{
+		public new AssetImportService Clone();
 	}
 	
 	public interface AssetImportSession : Instance
 	{
+		public new AssetImportSession Clone();
 	}
 	
 	public interface AssetManagerService : IServiceInstance
 	{
+		public new AssetManagerService Clone();
 	}
 	
 	public interface AssetPatchSettings : Instance
 	{
+		public new AssetPatchSettings Clone();
 	}
 	
 	public partial interface AssetService : IServiceInstance
 	{
+		public new AssetService Clone();
 		public MeshPart CreateMeshPartAsync(string meshId, object? options = null);
 	}
 	
 	public interface Atmosphere : ICreatableInstance
 	{
+		public new Atmosphere Clone();
 	}
 	
 	public interface Attachment : ICreatableInstance
 	{
+		public new Attachment Clone();
 	}
 	
 	public interface Bone : Attachment, ICreatableInstance
 	{
+		public new Bone Clone();
 	}
 	
 	public interface AudioAnalyzer : ICreatableInstance
 	{
+		public new AudioAnalyzer Clone();
 	}
 	
 	public interface AudioChorus : ICreatableInstance
 	{
+		public new AudioChorus Clone();
 	}
 	
 	public interface AudioCompressor : ICreatableInstance
 	{
+		public new AudioCompressor Clone();
 	}
 	
 	public interface AudioDeviceInput : ICreatableInstance
 	{
+		public new AudioDeviceInput Clone();
 	}
 	
 	public interface AudioDeviceOutput : ICreatableInstance
 	{
+		public new AudioDeviceOutput Clone();
 	}
 	
 	public interface AudioDistortion : ICreatableInstance
 	{
+		public new AudioDistortion Clone();
 	}
 	
 	public interface AudioEcho : ICreatableInstance
 	{
+		public new AudioEcho Clone();
 	}
 	
 	public interface AudioEmitter : ICreatableInstance
 	{
+		public new AudioEmitter Clone();
 	}
 	
 	public interface AudioEqualizer : ICreatableInstance
 	{
+		public new AudioEqualizer Clone();
 	}
 	
 	public interface AudioFader : ICreatableInstance
 	{
+		public new AudioFader Clone();
 	}
 	
 	public interface AudioFilter : ICreatableInstance
 	{
+		public new AudioFilter Clone();
 	}
 	
 	public interface AudioFlanger : ICreatableInstance
 	{
+		public new AudioFlanger Clone();
 	}
 	
 	public interface AudioFocusService : IServiceInstance
 	{
+		public new AudioFocusService Clone();
 	}
 	
 	public interface AudioListener : ICreatableInstance
 	{
+		public new AudioListener Clone();
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
 	{
+		public new AudioPitchShifter Clone();
 	}
 	
 	public interface AudioPlayer : ICreatableInstance
 	{
+		public new AudioPlayer Clone();
 	}
 	
 	public interface AudioReverb : ICreatableInstance
 	{
+		public new AudioReverb Clone();
 	}
 	
 	public interface AudioSearchParams : ICreatableInstance
 	{
+		public new AudioSearchParams Clone();
 	}
 	
 	public interface AvatarChatService : IServiceInstance
 	{
+		public new AvatarChatService Clone();
 	}
 	
 	public interface AvatarCreationService : IServiceInstance
 	{
+		public new AvatarCreationService Clone();
 	}
 	
 	public interface AvatarEditorService : IServiceInstance
 	{
+		public new AvatarEditorService Clone();
 	}
 	
 	public interface AvatarGenerationJob : Instance
 	{
+		public new AvatarGenerationJob Clone();
 	}
 	
 	public interface Avatar2DGenerationJob : AvatarGenerationJob
 	{
+		public new Avatar2DGenerationJob Clone();
 	}
 	
 	public interface Avatar3DGenerationJob : AvatarGenerationJob
 	{
+		public new Avatar3DGenerationJob Clone();
 	}
 	
 	public interface AvatarGenerationSession : Instance
 	{
+		public new AvatarGenerationSession Clone();
 	}
 	
 	public interface AvatarImportService : IServiceInstance
 	{
+		public new AvatarImportService Clone();
 	}
 	
 	public interface BadgeService : IServiceInstance
 	{
+		public new BadgeService Clone();
 	}
 	
 	public interface BaseImportData : Instance
 	{
+		public new BaseImportData Clone();
 	}
 	
 	public interface GroupImportData : BaseImportData
 	{
+		public new GroupImportData Clone();
 	}
 	
 	public interface MaterialImportData : BaseImportData
 	{
+		public new MaterialImportData Clone();
 	}
 	
 	public interface MeshImportData : BaseImportData
 	{
+		public new MeshImportData Clone();
 	}
 	
 	public interface RootImportData : BaseImportData
 	{
+		public new RootImportData Clone();
 	}
 	
 	public interface BasePlayerGui : Instance
 	{
+		public new BasePlayerGui Clone();
 	}
 	
 	public interface CoreGui : BasePlayerGui, IServiceInstance
 	{
+		public new CoreGui Clone();
 		public int Version { get; }
 	}
 	
-	public interface PlayerGui : BasePlayerGui
+	public partial interface PlayerGui : BasePlayerGui
 	{
+		public new PlayerGui Clone();
 	}
 	
 	public partial interface StarterGui : BasePlayerGui, IServiceInstance
 	{
+		public new StarterGui Clone();
 		public bool ShowDevelopmentGui { get; set; }
 	}
 	
 	public interface BaseWrap : Instance
 	{
+		public new BaseWrap Clone();
 	}
 	
 	public interface WrapDeformer : BaseWrap, ICreatableInstance
 	{
+		public new WrapDeformer Clone();
 	}
 	
 	public interface WrapLayer : BaseWrap, ICreatableInstance
 	{
+		public new WrapLayer Clone();
 	}
 	
 	public interface WrapTarget : BaseWrap, ICreatableInstance
 	{
+		public new WrapTarget Clone();
 	}
 	
 	public interface Beam : ICreatableInstance
 	{
+		public new Beam Clone();
 	}
 	
 	public interface BindableEvent : ICreatableInstance
 	{
+		public new BindableEvent Clone();
 	}
 	
 	public interface BindableFunction : ICreatableInstance
 	{
+		public new BindableFunction Clone();
 	}
 	
 	public interface BodyAngularVelocity : BodyMover, ICreatableInstance
 	{
+		public new BodyAngularVelocity Clone();
 	}
 	
 	public interface BodyForce : BodyMover, ICreatableInstance
 	{
+		public new BodyForce Clone();
 	}
 	
 	public interface BodyGyro : BodyMover, ICreatableInstance
 	{
+		public new BodyGyro Clone();
 	}
 	
 	public interface BodyPosition : BodyMover, ICreatableInstance
 	{
+		public new BodyPosition Clone();
 	}
 	
 	public interface BodyThrust : BodyMover, ICreatableInstance
 	{
+		public new BodyThrust Clone();
 	}
 	
 	public interface BodyVelocity : BodyMover, ICreatableInstance
 	{
+		public new BodyVelocity Clone();
 	}
 	
 	public interface RocketPropulsion : BodyMover, ICreatableInstance
 	{
+		public new RocketPropulsion Clone();
 	}
 	
 	public interface BodyPartDescription : ICreatableInstance
 	{
+		public new BodyPartDescription Clone();
 	}
 	
 	public interface Breakpoint : ICreatableInstance
 	{
+		public new Breakpoint Clone();
 	}
 	
 	public interface BubbleChatMessageProperties : ICreatableInstance
 	{
+		public new BubbleChatMessageProperties Clone();
 	}
 	
 	public interface BulkImportService : IServiceInstance
 	{
+		public new BulkImportService Clone();
 	}
 	
 	public interface CalloutService : IServiceInstance
 	{
+		public new CalloutService Clone();
 	}
 	
 	public interface Camera : ICreatableInstance
 	{
+		public new Camera Clone();
 	}
 	
 	public interface CaptureService : IServiceInstance
 	{
+		public new CaptureService Clone();
 	}
 	
 	public interface ChangeHistoryService : IServiceInstance
 	{
+		public new ChangeHistoryService Clone();
 		public void FinishRecording(string identifier, Enum.FinishRecordingOperation.Type operation, object? finalOptions = null);
 		public object[] GetCanRedo();
 		public object[] GetCanUndo();
@@ -410,270 +501,337 @@ namespace Roblox.PluginClasses
 	
 	public interface BodyColors : CharacterAppearance, ICreatableInstance
 	{
+		public new BodyColors Clone();
 	}
 	
 	public interface CharacterMesh : CharacterAppearance, ICreatableInstance
 	{
+		public new CharacterMesh Clone();
 	}
 	
 	public interface Clothing : CharacterAppearance
 	{
+		public new Clothing Clone();
 	}
 	
 	public interface Pants : Clothing, ICreatableInstance
 	{
+		public new Pants Clone();
 	}
 	
 	public interface Shirt : Clothing, ICreatableInstance
 	{
+		public new Shirt Clone();
 	}
 	
 	public interface ShirtGraphic : CharacterAppearance, ICreatableInstance
 	{
+		public new ShirtGraphic Clone();
 	}
 	
 	public interface Chat : IServiceInstance
 	{
+		public new Chat Clone();
 	}
 	
 	public interface ChatbotUIService : IServiceInstance
 	{
+		public new ChatbotUIService Clone();
 	}
 	
 	public interface ClickDetector : ICreatableInstance
 	{
+		public new ClickDetector Clone();
 	}
 	
 	public interface DragDetector : ClickDetector, ICreatableInstance
 	{
+		public new DragDetector Clone();
 	}
 	
 	public interface Clouds : ICreatableInstance
 	{
+		public new Clouds Clone();
 	}
 	
 	public interface Collaborator : Instance
 	{
+		public new Collaborator Clone();
 	}
 	
 	public interface CollaboratorsService : IServiceInstance
 	{
+		public new CollaboratorsService Clone();
 	}
 	
 	public interface CollectionService : IServiceInstance
 	{
+		public new CollectionService Clone();
 	}
 	
 	public interface CommandInstance : Instance
 	{
+		public new CommandInstance Clone();
 	}
 	
 	public interface CommandService : IServiceInstance
 	{
+		public new CommandService Clone();
 	}
 	
 	public interface CommerceService : IServiceInstance
 	{
+		public new CommerceService Clone();
 	}
 	
 	public interface ConnectivityService : IServiceInstance
 	{
+		public new ConnectivityService Clone();
 	}
 	
 	public interface Constraint : Instance
 	{
+		public new Constraint Clone();
 	}
 	
 	public interface AlignOrientation : Constraint, ICreatableInstance
 	{
+		public new AlignOrientation Clone();
 	}
 	
 	public interface AlignPosition : Constraint, ICreatableInstance
 	{
+		public new AlignPosition Clone();
 	}
 	
 	public interface AngularVelocity : Constraint, ICreatableInstance
 	{
+		public new AngularVelocity Clone();
 	}
 	
 	public interface AnimationConstraint : Constraint, ICreatableInstance
 	{
+		public new AnimationConstraint Clone();
 	}
 	
 	public interface BallSocketConstraint : Constraint, ICreatableInstance
 	{
+		public new BallSocketConstraint Clone();
 	}
 	
 	public interface HingeConstraint : Constraint, ICreatableInstance
 	{
+		public new HingeConstraint Clone();
 	}
 	
 	public interface LineForce : Constraint, ICreatableInstance
 	{
+		public new LineForce Clone();
 	}
 	
 	public interface LinearVelocity : Constraint, ICreatableInstance
 	{
+		public new LinearVelocity Clone();
 	}
 	
 	public interface RodConstraint : Constraint, ICreatableInstance
 	{
+		public new RodConstraint Clone();
 	}
 	
 	public interface RopeConstraint : Constraint, ICreatableInstance
 	{
+		public new RopeConstraint Clone();
 	}
 	
 	public interface SlidingBallConstraint : Constraint
 	{
+		public new SlidingBallConstraint Clone();
 	}
 	
 	public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance
 	{
+		public new CylindricalConstraint Clone();
 	}
 	
 	public interface SpringConstraint : Constraint, ICreatableInstance
 	{
+		public new SpringConstraint Clone();
 	}
 	
 	public interface Torque : Constraint, ICreatableInstance
 	{
+		public new Torque Clone();
 	}
 	
 	public interface TorsionSpringConstraint : Constraint, ICreatableInstance
 	{
+		public new TorsionSpringConstraint Clone();
 	}
 	
 	public interface UniversalConstraint : Constraint, ICreatableInstance
 	{
+		public new UniversalConstraint Clone();
 	}
 	
 	public interface VectorForce : Constraint, ICreatableInstance
 	{
+		public new VectorForce Clone();
 	}
 	
 	public interface ContentProvider : IServiceInstance
 	{
+		public new ContentProvider Clone();
 	}
 	
 	public interface ContextActionService : IServiceInstance
 	{
+		public new ContextActionService Clone();
 	}
 	
 	public interface Controller : Instance
 	{
+		public new Controller Clone();
 	}
 	
 	public interface SkateboardController : Controller, ICreatableInstance
 	{
+		public new SkateboardController Clone();
 	}
 	
 	public interface ControllerBase : Instance
 	{
+		public new ControllerBase Clone();
 	}
 	
 	public interface AirController : ControllerBase, ICreatableInstance
 	{
+		public new AirController Clone();
 	}
 	
 	public interface ClimbController : ControllerBase, ICreatableInstance
 	{
+		public new ClimbController Clone();
 	}
 	
 	public interface GroundController : ControllerBase, ICreatableInstance
 	{
+		public new GroundController Clone();
 	}
 	
 	public interface SwimController : ControllerBase, ICreatableInstance
 	{
+		public new SwimController Clone();
 	}
 	
 	public interface ControllerManager : ICreatableInstance
 	{
+		public new ControllerManager Clone();
 	}
 	
 	public interface ConversationalAIAcceptanceService : IServiceInstance
 	{
+		public new ConversationalAIAcceptanceService Clone();
 	}
 	
 	public interface CrossDMScriptChangeListener : IServiceInstance
 	{
+		public new CrossDMScriptChangeListener Clone();
 	}
 	
 	public interface DataModelMesh : Instance
 	{
+		public new DataModelMesh Clone();
 	}
 	
 	public interface BevelMesh : DataModelMesh
 	{
+		public new BevelMesh Clone();
 	}
 	
 	public interface EditableMesh : DataModelMesh, ICreatableInstance
 	{
+		public new EditableMesh Clone();
 	}
 	
 	public interface RobloxEditableMesh : EditableMesh, ICreatableInstance
 	{
+		public new RobloxEditableMesh Clone();
 	}
 	
 	public interface FileMesh : DataModelMesh, ICreatableInstance
 	{
+		public new FileMesh Clone();
 	}
 	
 	public interface SpecialMesh : FileMesh, ICreatableInstance
 	{
+		public new SpecialMesh Clone();
 	}
 	
 	public interface DataModelPatchService : IServiceInstance
 	{
+		public new DataModelPatchService Clone();
 	}
 	
 	public interface DataModelSession : Instance
 	{
+		public new DataModelSession Clone();
 	}
 	
 	public interface DataStoreGetOptions : ICreatableInstance
 	{
+		public new DataStoreGetOptions Clone();
 	}
 	
 	public interface DataStoreIncrementOptions : ICreatableInstance
 	{
+		public new DataStoreIncrementOptions Clone();
 	}
 	
 	public interface DataStoreInfo : Instance
 	{
+		public new DataStoreInfo Clone();
 	}
 	
 	public interface DataStoreKey : Instance
 	{
+		public new DataStoreKey Clone();
 	}
 	
 	public interface DataStoreKeyInfo : Instance
 	{
+		public new DataStoreKeyInfo Clone();
 	}
 	
 	public interface DataStoreObjectVersionInfo : Instance
 	{
+		public new DataStoreObjectVersionInfo Clone();
 	}
 	
 	public interface DataStoreOptions : ICreatableInstance
 	{
+		public new DataStoreOptions Clone();
 	}
 	
 	public interface DataStoreService : IServiceInstance
 	{
+		public new DataStoreService Clone();
 	}
 	
 	public interface DataStoreSetOptions : ICreatableInstance
 	{
+		public new DataStoreSetOptions Clone();
 	}
 	
 	public interface Debris : IServiceInstance
 	{
+		public new Debris Clone();
 	}
 	
 	public interface DebugSettings : Instance
 	{
+		public new DebugSettings Clone();
 		public int DataModel { get; }
 		public int InstanceCount { get; }
 		public bool IsScriptStackTracingEnabled { get; set; }
@@ -686,6 +844,7 @@ namespace Roblox.PluginClasses
 	
 	public interface DebuggerBreakpoint : Instance
 	{
+		public new DebuggerBreakpoint Clone();
 		public string Condition { get; set; }
 		public bool ContinueExecution { get; set; }
 		public bool IsEnabled { get; set; }
@@ -696,18 +855,22 @@ namespace Roblox.PluginClasses
 	
 	public interface DebuggerConnection : Instance
 	{
+		public new DebuggerConnection Clone();
 	}
 	
 	public interface DebuggerConnectionManager : IServiceInstance
 	{
+		public new DebuggerConnectionManager Clone();
 	}
 	
 	public interface DebuggerLuaResponse : Instance
 	{
+		public new DebuggerLuaResponse Clone();
 	}
 	
 	public interface DebuggerManager : IServiceInstance
 	{
+		public new DebuggerManager Clone();
 		public bool DebuggingEnabled { get; }
 		public Instance AddDebugger(LuaSourceContainer script);
 		public Instance[] GetDebuggers();
@@ -721,87 +884,108 @@ namespace Roblox.PluginClasses
 	
 	public interface DebuggerUIService : IServiceInstance
 	{
+		public new DebuggerUIService Clone();
 	}
 	
 	public interface DebuggerVariable : Instance
 	{
+		public new DebuggerVariable Clone();
 	}
 	
 	public interface DebuggerWatch : Instance
 	{
+		public new DebuggerWatch Clone();
 		public string Expression { get; set; }
 	}
 	
 	public interface DeviceIdService : IServiceInstance
 	{
+		public new DeviceIdService Clone();
 	}
 	
 	public interface Dialog : ICreatableInstance
 	{
+		public new Dialog Clone();
 	}
 	
 	public interface DialogChoice : ICreatableInstance
 	{
+		public new DialogChoice Clone();
 	}
 	
 	public interface Dragger : ICreatableInstance
 	{
+		public new Dragger Clone();
 	}
 	
 	public interface DraggerService : IServiceInstance
 	{
+		public new DraggerService Clone();
 	}
 	
 	public interface EditableImage : ICreatableInstance
 	{
+		public new EditableImage Clone();
 	}
 	
 	public interface RobloxEditableImage : EditableImage, ICreatableInstance
 	{
+		public new RobloxEditableImage Clone();
 	}
 	
 	public interface EulerRotationCurve : ICreatableInstance
 	{
+		public new EulerRotationCurve Clone();
 	}
 	
 	public interface EventIngestService : IServiceInstance
 	{
+		public new EventIngestService Clone();
 	}
 	
 	public interface ExampleService : IServiceInstance
 	{
+		public new ExampleService Clone();
 	}
 	
 	public interface ExperienceAuthService : IServiceInstance
 	{
+		public new ExperienceAuthService Clone();
 	}
 	
 	public interface ExperienceInviteOptions : ICreatableInstance
 	{
+		public new ExperienceInviteOptions Clone();
 	}
 	
 	public interface ExperienceNotificationService : IServiceInstance
 	{
+		public new ExperienceNotificationService Clone();
 	}
 	
 	public interface ExperienceService : IServiceInstance
 	{
+		public new ExperienceService Clone();
 	}
 	
 	public interface ExperienceStateCaptureService : IServiceInstance
 	{
+		public new ExperienceStateCaptureService Clone();
 	}
 	
 	public interface Explosion : ICreatableInstance
 	{
+		public new Explosion Clone();
 	}
 	
 	public interface FaceAnimatorService : IServiceInstance
 	{
+		public new FaceAnimatorService Clone();
 	}
 	
 	public interface FaceControls : ICreatableInstance
 	{
+		public new FaceControls Clone();
 		public float ChinRaiser { get; set; }
 		public float ChinRaiserUpperLip { get; set; }
 		public float Corrugator { get; set; }
@@ -856,157 +1040,195 @@ namespace Roblox.PluginClasses
 	
 	public interface FaceInstance : Instance
 	{
+		public new FaceInstance Clone();
 	}
 	
 	public interface Decal : FaceInstance, ICreatableInstance
 	{
+		public new Decal Clone();
 	}
 	
 	public interface Texture : Decal, ICreatableInstance
 	{
+		public new Texture Clone();
 	}
 	
 	public interface FacialAnimationRecordingService : IServiceInstance
 	{
+		public new FacialAnimationRecordingService Clone();
 	}
 	
 	public interface FacialAnimationStreamingServiceStats : Instance
 	{
+		public new FacialAnimationStreamingServiceStats Clone();
 	}
 	
 	public interface FacialAnimationStreamingServiceV2 : IServiceInstance
 	{
+		public new FacialAnimationStreamingServiceV2 Clone();
 	}
 	
 	public interface Feature : Instance
 	{
+		public new Feature Clone();
 	}
 	
 	public interface File : Instance
 	{
+		public new File Clone();
 		public string GetBinaryContents();
 		public string GetTemporaryId();
 	}
 	
 	public interface Fire : ICreatableInstance
 	{
+		public new Fire Clone();
 	}
 	
 	public interface FloatCurve : ICreatableInstance
 	{
+		public new FloatCurve Clone();
 	}
 	
 	public interface Folder : ICreatableInstance
 	{
+		public new Folder Clone();
 	}
 	
 	public interface ForceField : ICreatableInstance
 	{
+		public new ForceField Clone();
 	}
 	
 	public interface GamePassService : IServiceInstance
 	{
+		public new GamePassService Clone();
 	}
 	
 	public partial interface GameSettings : Instance
 	{
+		public new GameSettings Clone();
 		public bool VideoCaptureEnabled { get; set; }
 	}
 	
 	public interface GamepadService : IServiceInstance
 	{
+		public new GamepadService Clone();
 	}
 	
 	public interface GenericChallengeService : IServiceInstance
 	{
+		public new GenericChallengeService Clone();
 	}
 	
 	public interface GeometryService : IServiceInstance
 	{
+		public new GeometryService Clone();
 	}
 	
 	public interface GetTextBoundsParams : ICreatableInstance
 	{
+		public new GetTextBoundsParams Clone();
 	}
 	
 	public interface GlobalDataStore : Instance
 	{
+		public new GlobalDataStore Clone();
 	}
 	
 	public interface DataStore : GlobalDataStore
 	{
+		public new DataStore Clone();
 	}
 	
 	public interface OrderedDataStore : GlobalDataStore
 	{
+		public new OrderedDataStore Clone();
 	}
 	
 	public interface GroupService : IServiceInstance
 	{
+		public new GroupService Clone();
 	}
 	
 	public interface GuiBase2d : GuiBase
 	{
+		public new GuiBase2d Clone();
 	}
 	
 	public interface GuiObject : GuiBase2d
 	{
+		public new GuiObject Clone();
 	}
 	
 	public interface CanvasGroup : GuiObject, ICreatableInstance
 	{
+		public new CanvasGroup Clone();
 	}
 	
 	public interface Frame : GuiObject, ICreatableInstance
 	{
+		public new Frame Clone();
 	}
 	
 	public interface GuiButton : GuiObject
 	{
+		public new GuiButton Clone();
 	}
 	
 	public interface ImageButton : GuiButton, ICreatableInstance
 	{
+		public new ImageButton Clone();
 	}
 	
 	public interface TextButton : GuiButton, ICreatableInstance
 	{
+		public new TextButton Clone();
 	}
 	
 	public interface ImageLabel : GuiLabel, ICreatableInstance
 	{
+		public new ImageLabel Clone();
 	}
 	
 	public interface TextLabel : GuiLabel, ICreatableInstance
 	{
+		public new TextLabel Clone();
 	}
 	
 	public interface ScrollingFrame : GuiObject, ICreatableInstance
 	{
+		public new ScrollingFrame Clone();
 	}
 	
 	public interface TextBox : GuiObject, ICreatableInstance
 	{
+		public new TextBox Clone();
 	}
 	
 	public interface VideoFrame : GuiObject, ICreatableInstance
 	{
+		public new VideoFrame Clone();
 	}
 	
 	public interface ViewportFrame : GuiObject, ICreatableInstance
 	{
+		public new ViewportFrame Clone();
 	}
 	
 	public interface LayerCollector : GuiBase2d
 	{
+		public new LayerCollector Clone();
 	}
 	
 	public interface BillboardGui : LayerCollector, ICreatableInstance
 	{
+		public new BillboardGui Clone();
 	}
 	
 	public interface PluginGui : LayerCollector
 	{
+		public new PluginGui Clone();
 		public string Title { get; set; }
 		public void BindToClose(Action? function = null);
 		public Vector2 GetRelativeMousePosition();
@@ -1020,310 +1242,386 @@ namespace Roblox.PluginClasses
 	
 	public interface DockWidgetPluginGui : PluginGui
 	{
+		public new DockWidgetPluginGui Clone();
 	}
 	
 	public interface QWidgetPluginGui : PluginGui
 	{
+		public new QWidgetPluginGui Clone();
 	}
 	
 	public interface ScreenGui : LayerCollector, ICreatableInstance
 	{
+		public new ScreenGui Clone();
 	}
 	
 	public interface SurfaceGuiBase : LayerCollector
 	{
+		public new SurfaceGuiBase Clone();
 	}
 	
 	public interface AdGui : SurfaceGuiBase, ICreatableInstance
 	{
+		public new AdGui Clone();
 	}
 	
 	public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
 	{
+		public new SurfaceGui Clone();
 	}
 	
 	public interface GuiBase3d : GuiBase
 	{
+		public new GuiBase3d Clone();
 	}
 	
 	public interface FloorWire : GuiBase3d, ICreatableInstance
 	{
+		public new FloorWire Clone();
 	}
 	
 	public interface InstanceAdornment : GuiBase3d
 	{
+		public new InstanceAdornment Clone();
 	}
 	
 	public interface SelectionBox : InstanceAdornment, ICreatableInstance
 	{
+		public new SelectionBox Clone();
 	}
 	
 	public interface PVAdornment : GuiBase3d
 	{
+		public new PVAdornment Clone();
 	}
 	
 	public interface HandleAdornment : PVAdornment
 	{
+		public new HandleAdornment Clone();
 	}
 	
 	public interface BoxHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new BoxHandleAdornment Clone();
 	}
 	
 	public interface ConeHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new ConeHandleAdornment Clone();
 	}
 	
 	public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new CylinderHandleAdornment Clone();
 	}
 	
 	public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new ImageHandleAdornment Clone();
 	}
 	
 	public interface LineHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new LineHandleAdornment Clone();
 	}
 	
 	public interface SphereHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new SphereHandleAdornment Clone();
 	}
 	
 	public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new WireframeHandleAdornment Clone();
 	}
 	
 	public interface ParabolaAdornment : PVAdornment
 	{
+		public new ParabolaAdornment Clone();
 	}
 	
 	public interface SelectionSphere : PVAdornment, ICreatableInstance
 	{
+		public new SelectionSphere Clone();
 	}
 	
 	public interface PartAdornment : GuiBase3d
 	{
+		public new PartAdornment Clone();
 	}
 	
 	public interface ArcHandles : HandlesBase, ICreatableInstance
 	{
+		public new ArcHandles Clone();
 	}
 	
 	public interface Handles : HandlesBase, ICreatableInstance
 	{
+		public new Handles Clone();
 	}
 	
 	public interface SurfaceSelection : PartAdornment, ICreatableInstance
 	{
+		public new SurfaceSelection Clone();
 	}
 	
 	public interface SelectionLasso : GuiBase3d
 	{
+		public new SelectionLasso Clone();
 	}
 	
 	public interface SelectionPartLasso : SelectionLasso, ICreatableInstance
 	{
+		public new SelectionPartLasso Clone();
 	}
 	
 	public interface SelectionPointLasso : SelectionLasso, ICreatableInstance
 	{
+		public new SelectionPointLasso Clone();
 	}
 	
 	public interface Path2D : GuiBase, ICreatableInstance
 	{
+		public new Path2D Clone();
 	}
 	
 	public interface GuiService : IServiceInstance
 	{
+		public new GuiService Clone();
 	}
 	
 	public interface HapticService : IServiceInstance
 	{
+		public new HapticService Clone();
 	}
 	
 	public interface HeightmapImporterService : IServiceInstance
 	{
+		public new HeightmapImporterService Clone();
 	}
 	
 	public interface HiddenSurfaceRemovalAsset : ICreatableInstance
 	{
+		public new HiddenSurfaceRemovalAsset Clone();
 	}
 	
 	public interface Highlight : ICreatableInstance
 	{
+		public new Highlight Clone();
 	}
 	
 	public interface HttpService : IServiceInstance
 	{
+		public new HttpService Clone();
 	}
 	
 	public interface Humanoid : ICreatableInstance
 	{
+		public new Humanoid Clone();
 	}
 	
 	public interface HumanoidDescription : ICreatableInstance
 	{
+		public new HumanoidDescription Clone();
 	}
 	
 	public interface IKControl : ICreatableInstance
 	{
+		public new IKControl Clone();
 	}
 	
 	public interface IXPService : IServiceInstance
 	{
+		public new IXPService Clone();
 	}
 	
 	public interface IncrementalPatchBuilder : IServiceInstance
 	{
+		public new IncrementalPatchBuilder Clone();
 	}
 	
 	public interface InputObject : Instance
 	{
+		public new InputObject Clone();
 	}
 	
 	public interface InsertService : IServiceInstance
 	{
+		public new InsertService Clone();
 	}
 	
 	public interface InternalSyncItem : ICreatableInstance
 	{
+		public new InternalSyncItem Clone();
 	}
 	
 	public interface JointInstance : Instance
 	{
+		public new JointInstance Clone();
 	}
 	
 	public interface DynamicRotate : JointInstance
 	{
+		public new DynamicRotate Clone();
 	}
 	
 	public interface Glue : JointInstance, ICreatableInstance
 	{
+		public new Glue Clone();
 	}
 	
 	public interface Motor : JointInstance, ICreatableInstance
 	{
+		public new Motor Clone();
 	}
 	
 	public interface Motor6D : Motor, ICreatableInstance
 	{
+		public new Motor6D Clone();
 	}
 	
 	public interface VelocityMotor : JointInstance, ICreatableInstance
 	{
+		public new VelocityMotor Clone();
 	}
 	
 	public interface JointsService : IServiceInstance
 	{
+		public new JointsService Clone();
 	}
 	
 	public interface Keyframe : ICreatableInstance
 	{
+		public new Keyframe Clone();
 	}
 	
 	public interface KeyframeMarker : ICreatableInstance
 	{
+		public new KeyframeMarker Clone();
 	}
 	
 	public partial interface KeyframeSequenceProvider : IServiceInstance
 	{
+		public new KeyframeSequenceProvider Clone();
 		public Instance GetKeyframeSequence(string assetId);
 		public Instance GetKeyframeSequenceById(long assetId, bool useCache);
 	}
 	
 	public interface Light : Instance
 	{
+		public new Light Clone();
 	}
 	
 	public interface PointLight : Light, ICreatableInstance
 	{
+		public new PointLight Clone();
 	}
 	
 	public interface SpotLight : Light, ICreatableInstance
 	{
+		public new SpotLight Clone();
 	}
 	
 	public interface SurfaceLight : Light, ICreatableInstance
 	{
+		public new SurfaceLight Clone();
 	}
 	
 	public interface Lighting : IServiceInstance
 	{
+		public new Lighting Clone();
 	}
 	
 	public interface LinkingService : IServiceInstance
 	{
+		public new LinkingService Clone();
 	}
 	
 	public interface LiveScriptingService : IServiceInstance
 	{
+		public new LiveScriptingService Clone();
 	}
 	
 	public interface LocalizationService : IServiceInstance
 	{
+		public new LocalizationService Clone();
 	}
 	
 	public interface LocalizationTable : ICreatableInstance
 	{
+		public new LocalizationTable Clone();
 	}
 	
 	public interface LodDataEntity : Instance
 	{
+		public new LodDataEntity Clone();
 	}
 	
 	public interface LogReporterService : IServiceInstance
 	{
+		public new LogReporterService Clone();
 	}
 	
 	public interface LogService : IServiceInstance
 	{
+		public new LogService Clone();
 	}
 	
 	public interface LuaSettings : Instance
 	{
+		public new LuaSettings Clone();
 	}
 	
 	public interface LuaSourceContainer : Instance
 	{
+		public new LuaSourceContainer Clone();
 	}
 	
 	public interface BaseScript : LuaSourceContainer
 	{
+		public new BaseScript Clone();
 	}
 	
 	public interface Script : BaseScript, ICreatableInstance
 	{
+		public new Script Clone();
 		public string Source { get; set; }
 	}
 	
 	public interface ModuleScript : LuaSourceContainer, ICreatableInstance
 	{
+		public new ModuleScript Clone();
 		public string Source { get; set; }
 	}
 	
 	public interface MarkerCurve : ICreatableInstance
 	{
+		public new MarkerCurve Clone();
 	}
 	
 	public interface MarketplaceService : IServiceInstance
 	{
+		public new MarketplaceService Clone();
 	}
 	
 	public interface MaterialGenerationService : IServiceInstance
 	{
+		public new MaterialGenerationService Clone();
 	}
 	
 	public interface MaterialGenerationSession : Instance
 	{
+		public new MaterialGenerationSession Clone();
 	}
 	
 	public interface MaterialService : IServiceInstance
 	{
+		public new MaterialService Clone();
 	}
 	
 	public interface MaterialVariant : ICreatableInstance
 	{
+		public new MaterialVariant Clone();
 		public string ColorMap { get; set; }
 		public string MetalnessMap { get; set; }
 		public string NormalMap { get; set; }
@@ -1332,94 +1630,116 @@ namespace Roblox.PluginClasses
 	
 	public interface MemStorageConnection : Instance
 	{
+		public new MemStorageConnection Clone();
 		public void Disconnect();
 	}
 	
 	public interface MemoryStoreHashMap : Instance
 	{
+		public new MemoryStoreHashMap Clone();
 	}
 	
 	public interface MemoryStoreQueue : Instance
 	{
+		public new MemoryStoreQueue Clone();
 	}
 	
 	public interface MemoryStoreService : IServiceInstance
 	{
+		public new MemoryStoreService Clone();
 	}
 	
 	public interface MemoryStoreSortedMap : Instance
 	{
+		public new MemoryStoreSortedMap Clone();
 	}
 	
 	public interface MessageBusConnection : Instance
 	{
+		public new MessageBusConnection Clone();
 	}
 	
 	public interface MessageBusService : IServiceInstance
 	{
+		public new MessageBusService Clone();
 	}
 	
 	public interface MessagingService : IServiceInstance
 	{
+		public new MessagingService Clone();
 	}
 	
 	public interface MetaBreakpoint : Instance
 	{
+		public new MetaBreakpoint Clone();
 	}
 	
 	public interface MetaBreakpointContext : Instance
 	{
+		public new MetaBreakpointContext Clone();
 	}
 	
 	public interface MetaBreakpointManager : IServiceInstance
 	{
+		public new MetaBreakpointManager Clone();
 	}
 	
 	public interface Mouse : Instance
 	{
+		public new Mouse Clone();
 	}
 	
 	public interface PluginMouse : Mouse
 	{
+		public new PluginMouse Clone();
 		public ScriptSignal<Instance[]> DragEnter { get; }
 	}
 	
 	public interface MultipleDocumentInterfaceInstance : Instance
 	{
+		public new MultipleDocumentInterfaceInstance Clone();
 	}
 	
 	public interface NetworkMarker : Instance
 	{
+		public new NetworkMarker Clone();
 	}
 	
 	public partial interface NetworkPeer : Instance
 	{
+		public new NetworkPeer Clone();
 		public void SetOutgoingKBPSLimit(int limit);
 	}
 	
 	public partial interface NetworkClient : NetworkPeer, IServiceInstance
 	{
+		public new NetworkClient Clone();
 	}
 	
 	public partial interface NetworkServer : NetworkPeer, IServiceInstance
 	{
+		public new NetworkServer Clone();
 	}
 	
 	public interface NetworkReplicator : Instance
 	{
+		public new NetworkReplicator Clone();
 		public Instance GetPlayer();
 	}
 	
 	public interface ClientReplicator : NetworkReplicator
 	{
+		public new ClientReplicator Clone();
 	}
 	
 	public interface ServerReplicator : NetworkReplicator
 	{
+		public new ServerReplicator Clone();
 	}
 	
 	public interface NetworkSettings : IServiceInstance
 	{
+		public new NetworkSettings Clone();
 		public bool HttpProxyEnabled { get; }
 		public string HttpProxyURL { get; }
 		public double IncomingReplicationLag { get; set; }
@@ -1433,106 +1753,131 @@ namespace Roblox.PluginClasses
 	
 	public interface NoCollisionConstraint : ICreatableInstance
 	{
+		public new NoCollisionConstraint Clone();
 	}
 	
 	public interface Noise : ICreatableInstance
 	{
+		public new Noise Clone();
 	}
 	
 	public interface OmniRecommendationsService : IServiceInstance
 	{
+		public new OmniRecommendationsService Clone();
 	}
 	
 	public interface OpenCloudApiV1 : Instance
 	{
+		public new OpenCloudApiV1 Clone();
 	}
 	
 	public interface OpenCloudService : IServiceInstance
 	{
+		public new OpenCloudService Clone();
 	}
 	
 	public interface PVInstance : Instance
 	{
+		public new PVInstance Clone();
 	}
 	
 	public partial interface BasePart : PVInstance
 	{
+		public new BasePart Clone();
 	}
 	
 	public interface FormFactorPart : BasePart
 	{
+		public new FormFactorPart Clone();
 	}
 	
 	public interface Part : FormFactorPart, ICreatableInstance
 	{
+		public new Part Clone();
 	}
 	
 	public interface Platform : Part
 	{
+		public new Platform Clone();
 	}
 	
 	public interface Seat : Part, ICreatableInstance
 	{
+		public new Seat Clone();
 	}
 	
 	public interface SkateboardPlatform : Part, ICreatableInstance
 	{
+		public new SkateboardPlatform Clone();
 	}
 	
 	public interface SpawnLocation : Part, ICreatableInstance
 	{
+		public new SpawnLocation Clone();
 	}
 	
 	public partial interface Terrain : BasePart
 	{
+		public new Terrain Clone();
 		public void ConvertToSmooth();
 	}
 	
 	public interface TriangleMeshPart : BasePart
 	{
+		public new TriangleMeshPart Clone();
 	}
 	
 	public interface MeshPart : TriangleMeshPart, ICreatableInstance
 	{
+		public new MeshPart Clone();
 	}
 	
 	public interface PartOperation : TriangleMeshPart, ICreatableInstance
 	{
+		public new PartOperation Clone();
 	}
 	
 	public interface TrussPart : BasePart, ICreatableInstance
 	{
+		public new TrussPart Clone();
 	}
 	
 	public interface VehicleSeat : BasePart, ICreatableInstance
 	{
+		public new VehicleSeat Clone();
 	}
 	
 	public interface Model : PVInstance, ICreatableInstance
 	{
+		public new Model Clone();
 		public Enum.ModelLevelOfDetail.Type LevelOfDetail { get; set; }
 	}
 	
 	public interface Actor : Model, ICreatableInstance
 	{
+		public new Actor Clone();
 	}
 	
 	public interface BackpackItem : Model
 	{
+		public new BackpackItem Clone();
 	}
 	
 	public interface Tool : BackpackItem, ICreatableInstance
 	{
+		public new Tool Clone();
 	}
 	
 	public partial interface WorldRoot : Model
 	{
+		public new WorldRoot Clone();
 		public void IKMoveTo(BasePart part, CFrame target, float? translateStiffness = null, float? rotateStiffness = null, Enum.IKCollisionsMode.Type? collisionsMode = null);
 		public void StepPhysics(float dt, Instance[]? parts = null);
 	}
 	
 	public partial interface Workspace : WorldRoot, IServiceInstance
 	{
+		public new Workspace Clone();
 		public void BreakJoints(Instance[] objects);
 		public void MakeJoints(Instance[] objects);
 		public void ZoomToExtents();
@@ -1540,70 +1885,87 @@ namespace Roblox.PluginClasses
 	
 	public interface PackageLink : Instance
 	{
+		public new PackageLink Clone();
 	}
 	
 	public interface PackageService : IServiceInstance
 	{
+		public new PackageService Clone();
 	}
 	
 	public interface PackageUIService : IServiceInstance
 	{
+		public new PackageUIService Clone();
 	}
 	
 	public interface Pages : Instance
 	{
+		public new Pages Clone();
 	}
 	
 	public interface DataStoreKeyPages : Pages
 	{
+		public new DataStoreKeyPages Clone();
 	}
 	
 	public interface DataStoreListingPages : Pages
 	{
+		public new DataStoreListingPages Clone();
 	}
 	
 	public interface ParticleEmitter : ICreatableInstance
 	{
+		public new ParticleEmitter Clone();
 	}
 	
 	public interface PatchMapping : Instance
 	{
+		public new PatchMapping Clone();
 	}
 	
 	public interface Path : Instance
 	{
+		public new Path Clone();
 	}
 	
 	public interface PathfindingLink : ICreatableInstance
 	{
+		public new PathfindingLink Clone();
 	}
 	
 	public interface PathfindingModifier : ICreatableInstance
 	{
+		public new PathfindingModifier Clone();
 	}
 	
 	public interface PathfindingService : IServiceInstance
 	{
+		public new PathfindingService Clone();
 	}
 	
 	public interface PausedState : Instance
 	{
+		public new PausedState Clone();
 	}
 	
 	public interface PausedStateBreakpoint : PausedState
 	{
+		public new PausedStateBreakpoint Clone();
 	}
 	
 	public interface PausedStateException : PausedState
 	{
+		public new PausedStateException Clone();
 	}
 	
 	public interface PhysicsService : IServiceInstance
 	{
+		public new PhysicsService Clone();
 	}
 	
 	public interface PhysicsSettings : Instance
 	{
+		public new PhysicsSettings Clone();
 		public bool AllowSleep { get; set; }
 		public bool AreAnchorsShown { get; set; }
 		public bool AreAssembliesShown { get; set; }
@@ -1634,36 +1996,44 @@ namespace Roblox.PluginClasses
 	
 	public interface PlacesService : IServiceInstance
 	{
+		public new PlacesService Clone();
 	}
 	
 	public interface PlatformCloudStorageService : IServiceInstance
 	{
+		public new PlatformCloudStorageService Clone();
 	}
 	
 	public interface PlatformFriendsService : IServiceInstance
 	{
+		public new PlatformFriendsService Clone();
 	}
 	
 	public partial interface Player : Instance
 	{
+		public new Player Clone();
 		public void SetAccountAge(int accountAge);
 		public void SetSuperSafeChat(bool value);
 	}
 	
 	public interface PlayerHydrationService : IServiceInstance
 	{
+		public new PlayerHydrationService Clone();
 	}
 	
-	public interface PlayerScripts : Instance
+	public partial interface PlayerScripts : Instance
 	{
+		public new PlayerScripts Clone();
 	}
 	
 	public interface PlayerViewService : IServiceInstance
 	{
+		public new PlayerViewService Clone();
 	}
 	
 	public partial interface Players : IServiceInstance
 	{
+		public new Players Clone();
 		public void Chat(string message);
 		public void SetChatStyle(Enum.ChatStyle.Type? style = null);
 		public void TeamChat(string message);
@@ -1671,6 +2041,7 @@ namespace Roblox.PluginClasses
 	
 	public interface Plugin : Instance
 	{
+		public new Plugin Clone();
 		public bool CollisionEnabled { get; }
 		public float GridSize { get; }
 		public void Activate(bool exclusiveMouse);
@@ -1706,6 +2077,7 @@ namespace Roblox.PluginClasses
 	
 	public interface PluginAction : ICreatableInstance
 	{
+		public new PluginAction Clone();
 		public string ActionId { get; }
 		public bool AllowBinding { get; }
 		public string StatusTip { get; }
@@ -1715,14 +2087,17 @@ namespace Roblox.PluginClasses
 	
 	public interface PluginCapabilities : ICreatableInstance
 	{
+		public new PluginCapabilities Clone();
 	}
 	
 	public interface PluginDebugService : IServiceInstance
 	{
+		public new PluginDebugService Clone();
 	}
 	
 	public interface PluginDragEvent : Instance
 	{
+		public new PluginDragEvent Clone();
 		public string Data { get; }
 		public string MimeType { get; }
 		public Vector2 Position { get; }
@@ -1731,14 +2106,17 @@ namespace Roblox.PluginClasses
 	
 	public interface PluginGuiService : IServiceInstance
 	{
+		public new PluginGuiService Clone();
 	}
 	
 	public interface PluginManagementService : IServiceInstance
 	{
+		public new PluginManagementService Clone();
 	}
 	
 	public partial interface PluginManagerInterface : Instance
 	{
+		public new PluginManagerInterface Clone();
 		public Instance CreatePlugin();
 		public void ExportPlace(string filePath);
 		public void ExportSelection(string filePath);
@@ -1746,6 +2124,7 @@ namespace Roblox.PluginClasses
 	
 	public interface PluginMenu : Instance
 	{
+		public new PluginMenu Clone();
 		public string Icon { get; set; }
 		public string Title { get; set; }
 		public void AddAction(Instance action);
@@ -1758,15 +2137,18 @@ namespace Roblox.PluginClasses
 	
 	public interface PluginPolicyService : IServiceInstance
 	{
+		public new PluginPolicyService Clone();
 	}
 	
 	public interface PluginToolbar : Instance
 	{
+		public new PluginToolbar Clone();
 		public PluginToolbarButton CreateButton(string buttonId, string tooltip, string iconname, string text);
 	}
 	
 	public interface PluginToolbarButton : Instance
 	{
+		public new PluginToolbarButton Clone();
 		public bool ClickableWhenViewportHidden { get; set; }
 		public bool Enabled { get; set; }
 		public string Icon { get; set; }
@@ -1776,78 +2158,97 @@ namespace Roblox.PluginClasses
 	
 	public interface PolicyService : IServiceInstance
 	{
+		public new PolicyService Clone();
 	}
 	
 	public interface PoseBase : Instance
 	{
+		public new PoseBase Clone();
 	}
 	
 	public interface NumberPose : PoseBase, ICreatableInstance
 	{
+		public new NumberPose Clone();
 	}
 	
 	public interface Pose : PoseBase, ICreatableInstance
 	{
+		public new Pose Clone();
 	}
 	
 	public interface PostEffect : Instance
 	{
+		public new PostEffect Clone();
 	}
 	
 	public interface BloomEffect : PostEffect, ICreatableInstance
 	{
+		public new BloomEffect Clone();
 	}
 	
 	public interface BlurEffect : PostEffect, ICreatableInstance
 	{
+		public new BlurEffect Clone();
 	}
 	
 	public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
 	{
+		public new ColorCorrectionEffect Clone();
 	}
 	
 	public interface ColorGradingEffect : PostEffect, ICreatableInstance
 	{
+		public new ColorGradingEffect Clone();
 	}
 	
 	public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
 	{
+		public new DepthOfFieldEffect Clone();
 	}
 	
 	public interface SunRaysEffect : PostEffect, ICreatableInstance
 	{
+		public new SunRaysEffect Clone();
 	}
 	
 	public interface ProjectFolderService : IServiceInstance
 	{
+		public new ProjectFolderService Clone();
 	}
 	
 	public interface ProximityPrompt : ICreatableInstance
 	{
+		public new ProximityPrompt Clone();
 	}
 	
 	public interface ProximityPromptService : IServiceInstance
 	{
+		public new ProximityPromptService Clone();
 	}
 	
 	public interface PublishService : IServiceInstance
 	{
+		public new PublishService Clone();
 	}
 	
 	public interface RTAnimationTracker : ICreatableInstance
 	{
+		public new RTAnimationTracker Clone();
 	}
 	
 	public interface ReflectionService : IServiceInstance
 	{
+		public new ReflectionService Clone();
 	}
 	
 	public interface RemoteCursorService : IServiceInstance
 	{
+		public new RemoteCursorService Clone();
 	}
 	
 	public interface RenderSettings : IServiceInstance
 	{
+		public new RenderSettings Clone();
 		public int AutoFRMLevel { get; set; }
 		public bool EagerBulkExecution { get; set; }
 		public Enum.QualityLevel.Type EditQualityLevel { get; set; }
@@ -1867,6 +2268,7 @@ namespace Roblox.PluginClasses
 	
 	public interface RenderingTest : ICreatableInstance
 	{
+		public new RenderingTest Clone();
 		public CFrame CFrame { get; set; }
 		public int ComparisonDiffThreshold { get; set; }
 		public Enum.RenderingTestComparisonMethod.Type ComparisonMethod { get; set; }
@@ -1883,28 +2285,34 @@ namespace Roblox.PluginClasses
 		public void RenderdocTriggerCapture();
 	}
 	
-	public interface ReplicatedFirst : IServiceInstance
+	public partial interface ReplicatedFirst : IServiceInstance
 	{
+		public new ReplicatedFirst Clone();
 	}
 	
 	public interface RibbonNotificationService : IServiceInstance
 	{
+		public new RibbonNotificationService Clone();
 	}
 	
 	public interface RobloxPluginGuiService : IServiceInstance
 	{
+		public new RobloxPluginGuiService Clone();
 	}
 	
 	public interface RomarkService : IServiceInstance
 	{
+		public new RomarkService Clone();
 	}
 	
 	public interface RotationCurve : ICreatableInstance
 	{
+		public new RotationCurve Clone();
 	}
 	
 	public partial interface RunService : IServiceInstance
 	{
+		public new RunService Clone();
 		public Enum.RunState.Type RunState { get; set; }
 		public bool IsEdit();
 		public void Pause();
@@ -1915,27 +2323,33 @@ namespace Roblox.PluginClasses
 	
 	public interface SafetyService : IServiceInstance
 	{
+		public new SafetyService Clone();
 	}
 	
 	public interface ScreenshotHud : Instance
 	{
+		public new ScreenshotHud Clone();
 	}
 	
 	public interface SyncScriptBuilder : ScriptBuilder
 	{
+		public new SyncScriptBuilder Clone();
 	}
 	
 	public interface ScriptChangeService : IServiceInstance
 	{
+		public new ScriptChangeService Clone();
 	}
 	
 	public partial interface ScriptContext : IServiceInstance
 	{
+		public new ScriptContext Clone();
 		public void SetTimeout(double seconds);
 	}
 	
 	public interface ScriptDebugger : Instance
 	{
+		public new ScriptDebugger Clone();
 		public int CurrentLine { get; }
 		public bool IsDebugging { get; }
 		public bool IsPaused { get; }
@@ -1962,6 +2376,7 @@ namespace Roblox.PluginClasses
 	
 	public partial interface ScriptDocument : Instance
 	{
+		public new ScriptDocument Clone();
 		public string GetLine(int? lineIndex = null);
 		public int GetLineCount();
 		public LuaSourceContainer GetScript();
@@ -1983,6 +2398,7 @@ namespace Roblox.PluginClasses
 	
 	public partial interface ScriptEditorService : IServiceInstance
 	{
+		public new ScriptEditorService Clone();
 		public void DeregisterAutocompleteCallback(string name);
 		public void DeregisterScriptAnalysisCallback(string name);
 		public ScriptDocument FindScriptDocument(LuaSourceContainer script);
@@ -1999,6 +2415,7 @@ namespace Roblox.PluginClasses
 	
 	public partial interface ScriptProfilerService : IServiceInstance
 	{
+		public new ScriptProfilerService Clone();
 		public void ClientRequestData(Player player);
 		public void ClientStart(Player player, int? frequency = null);
 		public void ClientStop(Player player);
@@ -2011,10 +2428,12 @@ namespace Roblox.PluginClasses
 	
 	public interface ScriptRegistrationService : IServiceInstance
 	{
+		public new ScriptRegistrationService Clone();
 	}
 	
 	public interface Selection : IServiceInstance
 	{
+		public new Selection Clone();
 		public float SelectionThickness { get; }
 		public void Add(Instance[] instancesToAdd);
 		public Instance[] Get();
@@ -2025,30 +2444,37 @@ namespace Roblox.PluginClasses
 	
 	public interface SensorBase : Instance
 	{
+		public new SensorBase Clone();
 	}
 	
 	public interface AtmosphereSensor : SensorBase, ICreatableInstance
 	{
+		public new AtmosphereSensor Clone();
 	}
 	
 	public interface BuoyancySensor : SensorBase, ICreatableInstance
 	{
+		public new BuoyancySensor Clone();
 	}
 	
 	public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
 	{
+		public new ControllerPartSensor Clone();
 	}
 	
-	public interface ServerScriptService : IServiceInstance
+	public partial interface ServerScriptService : IServiceInstance
 	{
+		public new ServerScriptService Clone();
 	}
 	
 	public partial interface ServiceProvider : Instance
 	{
+		public new ServiceProvider Clone();
 	}
 	
 	public partial interface DataModel : ServiceProvider
 	{
+		public new DataModel Clone();
 		public object[] GetJobsInfo();
 		public Instance[] GetObjects(string url);
 		public void SetPlaceId(long placeId);
@@ -2057,183 +2483,227 @@ namespace Roblox.PluginClasses
 	
 	public interface GlobalSettings : GenericSettings
 	{
+		public new GlobalSettings Clone();
 		public bool GetFFlag(string name);
 		public string GetFVariable(string name);
 	}
 	
 	public interface UserSettings : GenericSettings
 	{
+		public new UserSettings Clone();
 	}
 	
 	public interface ServiceVisibilityService : IServiceInstance
 	{
+		public new ServiceVisibilityService Clone();
 	}
 	
 	public interface SessionService : IServiceInstance
 	{
+		public new SessionService Clone();
 	}
 	
 	public interface SharedTableRegistry : IServiceInstance
 	{
+		public new SharedTableRegistry Clone();
 	}
 	
 	public interface ShorelineUpgraderService : IServiceInstance
 	{
+		public new ShorelineUpgraderService Clone();
 	}
 	
 	public interface Sky : ICreatableInstance
 	{
+		public new Sky Clone();
 	}
 	
 	public interface Smoke : ICreatableInstance
 	{
+		public new Smoke Clone();
 	}
 	
 	public interface SmoothVoxelsUpgraderService : IServiceInstance
 	{
+		public new SmoothVoxelsUpgraderService Clone();
 	}
 	
 	public interface SocialService : IServiceInstance
 	{
+		public new SocialService Clone();
 	}
 	
 	public interface Sound : ICreatableInstance
 	{
+		public new Sound Clone();
 	}
 	
 	public interface SoundEffect : Instance
 	{
+		public new SoundEffect Clone();
 	}
 	
 	public interface ChorusSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new ChorusSoundEffect Clone();
 	}
 	
 	public interface CompressorSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new CompressorSoundEffect Clone();
 	}
 	
 	public interface ChannelSelectorSoundEffect : CustomSoundEffect
 	{
+		public new ChannelSelectorSoundEffect Clone();
 	}
 	
 	public interface DistortionSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new DistortionSoundEffect Clone();
 	}
 	
 	public interface EchoSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new EchoSoundEffect Clone();
 	}
 	
 	public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new EqualizerSoundEffect Clone();
 	}
 	
 	public interface FlangeSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new FlangeSoundEffect Clone();
 	}
 	
 	public interface PitchShiftSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new PitchShiftSoundEffect Clone();
 	}
 	
 	public interface ReverbSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new ReverbSoundEffect Clone();
 	}
 	
 	public interface TremoloSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new TremoloSoundEffect Clone();
 	}
 	
 	public interface SoundGroup : ICreatableInstance
 	{
+		public new SoundGroup Clone();
 	}
 	
 	public partial interface SoundService : IServiceInstance
 	{
+		public new SoundService Clone();
 		public void OpenAttenuationCurveEditor(Instance[] selectedCurveObjects);
 	}
 	
 	public interface Sparkles : ICreatableInstance
 	{
+		public new Sparkles Clone();
 	}
 	
 	public interface StackFrame : Instance
 	{
+		public new StackFrame Clone();
 	}
 	
 	public interface StarterPlayer : IServiceInstance
 	{
+		public new StarterPlayer Clone();
 	}
 	
 	public interface StartupMessageService : IServiceInstance
 	{
+		public new StartupMessageService Clone();
 	}
 	
 	public interface Stats : IServiceInstance
 	{
+		public new Stats Clone();
 	}
 	
 	public interface StatsItem : Instance
 	{
+		public new StatsItem Clone();
 		public double GetValue();
 		public string GetValueString();
 	}
 	
 	public interface RunningAverageItemDouble : StatsItem
 	{
+		public new RunningAverageItemDouble Clone();
 	}
 	
 	public interface RunningAverageItemInt : StatsItem
 	{
+		public new RunningAverageItemInt Clone();
 	}
 	
 	public interface RunningAverageTimeIntervalItem : StatsItem
 	{
+		public new RunningAverageTimeIntervalItem Clone();
 	}
 	
 	public interface TotalCountTimeIntervalItem : StatsItem
 	{
+		public new TotalCountTimeIntervalItem Clone();
 	}
 	
 	public interface StreamingService : IServiceInstance
 	{
+		public new StreamingService Clone();
 	}
 	
 	public interface StudioAssetService : IServiceInstance
 	{
+		public new StudioAssetService Clone();
 	}
 	
 	public interface StudioAttachment : ICreatableInstance
 	{
+		public new StudioAttachment Clone();
 	}
 	
 	public interface StudioCallout : ICreatableInstance
 	{
+		public new StudioCallout Clone();
 	}
 	
 	public interface StudioData : IServiceInstance
 	{
+		public new StudioData Clone();
 	}
 	
 	public interface StudioDeviceEmulatorService : IServiceInstance
 	{
+		public new StudioDeviceEmulatorService Clone();
 	}
 	
 	public interface StudioWidget : StudioObjectBase
 	{
+		public new StudioWidget Clone();
 	}
 	
 	public interface StudioPublishService : IServiceInstance
 	{
+		public new StudioPublishService Clone();
 	}
 	
 	public interface StudioSdkService : IServiceInstance
 	{
+		public new StudioSdkService Clone();
 	}
 	
 	public interface StudioService : IServiceInstance
 	{
+		public new StudioService Clone();
 		public Instance? ActiveScript { get; }
 		public bool DraggerSolveConstraints { get; }
 		public bool DrawConstraintsOnTop { get; }
@@ -2251,39 +2721,48 @@ namespace Roblox.PluginClasses
 	
 	public interface StudioTheme : Instance
 	{
+		public new StudioTheme Clone();
 		public Color3 GetColor(Enum.StudioStyleGuideColor.Type styleguideitem, Enum.StudioStyleGuideModifier.Type? modifier = null);
 	}
 	
 	public interface StudioWidgetsService : IServiceInstance
 	{
+		public new StudioWidgetsService Clone();
 	}
 	
 	public interface StyleBase : Instance
 	{
+		public new StyleBase Clone();
 	}
 	
 	public interface StyleRule : StyleBase, ICreatableInstance
 	{
+		public new StyleRule Clone();
 	}
 	
 	public interface StyleSheet : StyleBase, ICreatableInstance
 	{
+		public new StyleSheet Clone();
 	}
 	
 	public interface StyleDerive : ICreatableInstance
 	{
+		public new StyleDerive Clone();
 	}
 	
 	public interface StyleLink : ICreatableInstance
 	{
+		public new StyleLink Clone();
 	}
 	
 	public interface StylingService : IServiceInstance
 	{
+		public new StylingService Clone();
 	}
 	
 	public interface SurfaceAppearance : ICreatableInstance
 	{
+		public new SurfaceAppearance Clone();
 		public Enum.AlphaMode.Type AlphaMode { get; set; }
 		public string ColorMap { get; set; }
 		public string MetalnessMap { get; set; }
@@ -2293,6 +2772,7 @@ namespace Roblox.PluginClasses
 	
 	public interface TaskScheduler : IServiceInstance
 	{
+		public new TaskScheduler Clone();
 		public double SchedulerDutyCycle { get; }
 		public double SchedulerRate { get; }
 		public Enum.ThreadPoolConfig.Type ThreadPoolConfig { get; set; }
@@ -2301,34 +2781,42 @@ namespace Roblox.PluginClasses
 	
 	public interface Team : ICreatableInstance
 	{
+		public new Team Clone();
 	}
 	
 	public interface TeamCreateData : IServiceInstance
 	{
+		public new TeamCreateData Clone();
 	}
 	
 	public interface TeamCreateService : IServiceInstance
 	{
+		public new TeamCreateService Clone();
 	}
 	
 	public interface Teams : IServiceInstance
 	{
+		public new Teams Clone();
 	}
 	
 	public interface TeleportAsyncResult : Instance
 	{
+		public new TeleportAsyncResult Clone();
 	}
 	
 	public interface TeleportOptions : ICreatableInstance
 	{
+		public new TeleportOptions Clone();
 	}
 	
 	public interface TeleportService : IServiceInstance
 	{
+		public new TeleportService Clone();
 	}
 	
 	public interface TerrainDetail : ICreatableInstance
 	{
+		public new TerrainDetail Clone();
 		public string ColorMap { get; set; }
 		public string MetalnessMap { get; set; }
 		public string NormalMap { get; set; }
@@ -2337,11 +2825,13 @@ namespace Roblox.PluginClasses
 	
 	public partial interface TerrainRegion : ICreatableInstance
 	{
+		public new TerrainRegion Clone();
 		public void ConvertToSmooth();
 	}
 	
 	public interface TestService : IServiceInstance
 	{
+		public new TestService Clone();
 		public bool AutoRuns { get; set; }
 		public string Description { get; set; }
 		public int ErrorCount { get; }
@@ -2369,276 +2859,344 @@ namespace Roblox.PluginClasses
 	
 	public interface TextChannel : ICreatableInstance
 	{
+		public new TextChannel Clone();
 	}
 	
 	public interface TextChatCommand : ICreatableInstance
 	{
+		public new TextChatCommand Clone();
 	}
 	
 	public interface BubbleChatConfiguration : TextChatConfigurations
 	{
+		public new BubbleChatConfiguration Clone();
 	}
 	
 	public interface ChannelTabsConfiguration : TextChatConfigurations
 	{
+		public new ChannelTabsConfiguration Clone();
 	}
 	
 	public interface ChatInputBarConfiguration : TextChatConfigurations
 	{
+		public new ChatInputBarConfiguration Clone();
 	}
 	
 	public interface ChatWindowConfiguration : TextChatConfigurations
 	{
+		public new ChatWindowConfiguration Clone();
 	}
 	
 	public interface TextChatMessage : Instance
 	{
+		public new TextChatMessage Clone();
 	}
 	
 	public interface TextChatMessageProperties : ICreatableInstance
 	{
+		public new TextChatMessageProperties Clone();
 	}
 	
 	public interface TextChatService : IServiceInstance
 	{
+		public new TextChatService Clone();
 	}
 	
 	public interface TextFilterResult : Instance
 	{
+		public new TextFilterResult Clone();
 	}
 	
 	public interface TextFilterTranslatedResult : Instance
 	{
+		public new TextFilterTranslatedResult Clone();
 	}
 	
 	public interface TextService : IServiceInstance
 	{
+		public new TextService Clone();
 	}
 	
 	public interface TextSource : Instance
 	{
+		public new TextSource Clone();
 	}
 	
 	public interface TextureGenerationPartGroup : Instance
 	{
+		public new TextureGenerationPartGroup Clone();
 	}
 	
 	public interface TextureGenerationService : IServiceInstance
 	{
+		public new TextureGenerationService Clone();
 	}
 	
 	public interface TextureGenerationUnwrappingRequest : Instance
 	{
+		public new TextureGenerationUnwrappingRequest Clone();
 	}
 	
 	public interface ThreadState : Instance
 	{
+		public new ThreadState Clone();
 	}
 	
 	public interface ToastNotificationService : IServiceInstance
 	{
+		public new ToastNotificationService Clone();
 	}
 	
 	public interface TracerService : IServiceInstance
 	{
+		public new TracerService Clone();
 	}
 	
 	public interface TrackerLodController : Instance
 	{
+		public new TrackerLodController Clone();
 	}
 	
 	public interface Trail : ICreatableInstance
 	{
+		public new Trail Clone();
 	}
 	
 	public interface Translator : Instance
 	{
+		public new Translator Clone();
 	}
 	
 	public interface TutorialService : IServiceInstance
 	{
+		public new TutorialService Clone();
 	}
 	
 	public interface TweenBase : Instance
 	{
+		public new TweenBase Clone();
 	}
 	
 	public interface Tween : TweenBase
 	{
+		public new Tween Clone();
 	}
 	
 	public interface TweenService : IServiceInstance
 	{
+		public new TweenService Clone();
 	}
 	
 	public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UIAspectRatioConstraint Clone();
 	}
 	
 	public interface UISizeConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UISizeConstraint Clone();
 	}
 	
 	public interface UITextSizeConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UITextSizeConstraint Clone();
 	}
 	
 	public interface UICorner : UIComponent, ICreatableInstance
 	{
+		public new UICorner Clone();
 	}
 	
 	public interface UIDragDetector : UIComponent, ICreatableInstance
 	{
+		public new UIDragDetector Clone();
 	}
 	
 	public interface UIFlexItem : UIComponent, ICreatableInstance
 	{
+		public new UIFlexItem Clone();
 	}
 	
 	public interface UIGradient : UIComponent, ICreatableInstance
 	{
+		public new UIGradient Clone();
 	}
 	
 	public interface UIGridStyleLayout : UILayout
 	{
+		public new UIGridStyleLayout Clone();
 	}
 	
 	public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIGridLayout Clone();
 	}
 	
 	public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIListLayout Clone();
 	}
 	
 	public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIPageLayout Clone();
 	}
 	
 	public interface UITableLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UITableLayout Clone();
 	}
 	
 	public interface UIPadding : UIComponent, ICreatableInstance
 	{
+		public new UIPadding Clone();
 	}
 	
 	public interface UIScale : UIComponent, ICreatableInstance
 	{
+		public new UIScale Clone();
 	}
 	
 	public interface UIStroke : UIComponent, ICreatableInstance
 	{
+		public new UIStroke Clone();
 	}
 	
 	public interface UnvalidatedAssetService : IServiceInstance
 	{
+		public new UnvalidatedAssetService Clone();
 	}
 	
 	public interface UserGameSettings : Instance
 	{
+		public new UserGameSettings Clone();
 	}
 	
 	public interface UserInputService : IServiceInstance
 	{
+		public new UserInputService Clone();
 	}
 	
 	public interface UserService : IServiceInstance
 	{
+		public new UserService Clone();
 	}
 	
 	public interface VRService : IServiceInstance
 	{
+		public new VRService Clone();
 	}
 	
 	public interface BoolValue : ValueBase, ICreatableInstance
 	{
+		public new BoolValue Clone();
 	}
 	
 	public interface BrickColorValue : ValueBase, ICreatableInstance
 	{
+		public new BrickColorValue Clone();
 	}
 	
 	public interface CFrameValue : ValueBase, ICreatableInstance
 	{
+		public new CFrameValue Clone();
 	}
 	
 	public interface Color3Value : ValueBase, ICreatableInstance
 	{
+		public new Color3Value Clone();
 	}
 	
 	public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
 	{
+		public new DoubleConstrainedValue Clone();
 	}
 	
 	public interface IntConstrainedValue : ValueBase, ICreatableInstance
 	{
+		public new IntConstrainedValue Clone();
 	}
 	
 	public interface IntValue : ValueBase, ICreatableInstance
 	{
+		public new IntValue Clone();
 	}
 	
 	public interface NumberValue : ValueBase, ICreatableInstance
 	{
+		public new NumberValue Clone();
 	}
 	
 	public interface ObjectValue : ValueBase, ICreatableInstance
 	{
+		public new ObjectValue Clone();
 	}
 	
 	public interface RayValue : ValueBase, ICreatableInstance
 	{
+		public new RayValue Clone();
 	}
 	
 	public interface StringValue : ValueBase, ICreatableInstance
 	{
+		public new StringValue Clone();
 	}
 	
 	public interface Vector3Value : ValueBase, ICreatableInstance
 	{
+		public new Vector3Value Clone();
 	}
 	
 	public interface Vector3Curve : ICreatableInstance
 	{
+		public new Vector3Curve Clone();
 	}
 	
 	public interface VersionControlService : IServiceInstance
 	{
+		public new VersionControlService Clone();
 	}
 	
 	public interface VideoCaptureService : IServiceInstance
 	{
+		public new VideoCaptureService Clone();
 	}
 	
 	public interface VideoDeviceInput : ICreatableInstance
 	{
+		public new VideoDeviceInput Clone();
 	}
 	
 	public interface VisualizationMode : ICreatableInstance
 	{
+		public new VisualizationMode Clone();
 	}
 	
 	public interface VisualizationModeCategory : ICreatableInstance
 	{
+		public new VisualizationModeCategory Clone();
 	}
 	
 	public interface VoiceChatInternal : IServiceInstance
 	{
+		public new VoiceChatInternal Clone();
 	}
 	
 	public interface VoiceChatService : IServiceInstance
 	{
+		public new VoiceChatService Clone();
 		public bool EnableDefaultVoice { get; set; }
 		public Enum.AudioApiRollout.Type UseAudioApi { get; set; }
 	}
 	
 	public interface WeldConstraint : ICreatableInstance
 	{
+		public new WeldConstraint Clone();
 	}
 	
 	public interface Wire : ICreatableInstance
 	{
+		public new Wire Clone();
 	}
 	
 }

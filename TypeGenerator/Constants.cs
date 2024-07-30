@@ -5,6 +5,10 @@
         public const string ROOT_CLASS_NAME = "<<<ROOT>>>";
         public static readonly List<string> BAD_NAME_CHARS = new List<string> { " ", "/", "\"" };
 
+        public static readonly HashSet<string> PER_INSTANCE_MEMBERS = [
+            "public new <INSTANCE_TYPE> Clone();"
+        ];
+
         public static readonly Dictionary<string, Dictionary<string, APITypes.Security>> SECURITY_OVERRIDES = new Dictionary<string, Dictionary<string, APITypes.Security>>
         {
             ["StarterGui"] = new Dictionary<string, APITypes.Security>
@@ -46,7 +50,13 @@
             "NetworkClient",
             "NetworkServer",
             "BasePart",
-            "ServiceProvider"
+            "ServiceProvider",
+            "ReplicatedStorage",
+            "ServerStorage",
+            "ServerScriptService",
+            "ReplicatedFirst",
+            "PlayerGui",
+            "PlayerScripts"
         };
 
         public static readonly HashSet<string> CREATABLE_BLACKLIST = new HashSet<string>
@@ -216,7 +226,7 @@
             { "Workspace", ["FilteringEnabled"] },
             { "Players", ["FilteringEnabled", "LocalPlayer"] }, // defined in Roblox.cs
             { "CollectionService", ["GetCollection"] },
-            { "Instance", ["children", "Remove", "IsA", "FindFirstChildOfClass", "FindFirstChildWhichIsA", "FindFirstAncestorOfClass", "FindFirstAncestorWhichIsA", "Clone", "IsAncestorOf", "IsDescendantOf", "GetAttribute", "GetAttributes", "GetDescendants", "GetTags", "WaitForChild", "clone", "isDescendantOf", "AncestryChanged", "AttributeChanged", "Changed", "ChildAdded", "ChildRemoved", "DescendantAdded", "DescendantRemoving", "Destroying", "childAdded"] }, // defined in Roblox.cs
+            { "Instance", ["children", "Remove", "IsA", "FindFirstChild", "FindFirstAncestor", "FindFirstDescendant", "FindFirstChildOfClass", "FindFirstChildWhichIsA", "FindFirstAncestorOfClass", "FindFirstAncestorWhichIsA", "Clone", "IsAncestorOf", "IsDescendantOf", "GetAttribute", "GetAttributes", "GetDescendants", "GetTags", "WaitForChild", "clone", "isDescendantOf", "AncestryChanged", "AttributeChanged", "Changed", "ChildAdded", "ChildRemoved", "DescendantAdded", "DescendantRemoving", "Destroying", "childAdded"] }, // defined in Roblox.cs
             { "BodyGyro", ["cframe"] },
             { "BodyAngularVelocity", ["FilteringEnabled"] },
             { "BodyPosition", ["FilteringEnabled"] },

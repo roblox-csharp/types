@@ -342,6 +342,10 @@ namespace TypeGenerator.Generators
             Write("{");
             PushIndent();
 
+            foreach (var memberText in Constants.PER_INSTANCE_MEMBERS)
+            {
+                Write(memberText.Replace("<INSTANCE_TYPE>", rbxClass.Name));
+            }
             foreach (var member in members)
             {
                 if (!ShouldGenerateMember(rbxClass, member)) continue;

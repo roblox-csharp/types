@@ -201,6 +201,7 @@ namespace Roblox
 	
 	public partial interface Instance
 	{
+		public new Instance Clone();
 		public bool Archivable { get; set; }
 		public string ClassName { get; }
 		public string Name { get; set; }
@@ -208,9 +209,6 @@ namespace Roblox
 		public void AddTag(string tag);
 		public void ClearAllChildren();
 		public void Destroy();
-		public Instance FindFirstAncestor(string name);
-		public Instance FindFirstChild(string name, bool? recursive = null);
-		public Instance FindFirstDescendant(string name);
 		public Actor GetActor();
 		public ScriptSignal GetAttributeChangedSignal(string attribute);
 		public Instance[] GetChildren();
@@ -225,6 +223,7 @@ namespace Roblox
 	
 	public interface AccessoryDescription : ICreatableInstance
 	{
+		public new AccessoryDescription Clone();
 		public Enum.AccessoryType.Type AccessoryType { get; set; }
 		public long AssetId { get; set; }
 		public Instance? Instance { get; set; }
@@ -239,33 +238,40 @@ namespace Roblox
 	
 	public interface AccountService : IServiceInstance
 	{
+		public new AccountService Clone();
 	}
 	
 	public interface Accoutrement : ICreatableInstance
 	{
+		public new Accoutrement Clone();
 		public CFrame AttachmentPoint { get; set; }
 	}
 	
 	public interface Accessory : Accoutrement, ICreatableInstance
 	{
+		public new Accessory Clone();
 		public Enum.AccessoryType.Type AccessoryType { get; set; }
 	}
 	
 	public interface Hat : Accoutrement, ICreatableInstance
 	{
+		public new Hat Clone();
 	}
 	
 	public interface AchievementService : IServiceInstance
 	{
+		public new AchievementService Clone();
 	}
 	
 	public interface AdPortal : ICreatableInstance
 	{
+		public new AdPortal Clone();
 		public Enum.AdUnitStatus.Type Status { get; }
 	}
 	
 	public interface AnalyticsService : IServiceInstance
 	{
+		public new AnalyticsService Clone();
 		public void FireCustomEvent(Player player, string eventCategory, object customData);
 		public void FireEvent(string category, object value);
 		public void FireInGameEconomyEvent(Player player, string itemName, Enum.AnalyticsEconomyAction.Type economyAction, string itemCategory, int amount, string currency, object location, object customData);
@@ -282,21 +288,25 @@ namespace Roblox
 	
 	public interface Animation : ICreatableInstance
 	{
+		public new Animation Clone();
 		public string AnimationId { get; set; }
 	}
 	
 	public interface AnimationClip : Instance
 	{
+		public new AnimationClip Clone();
 		public bool Loop { get; set; }
 		public Enum.AnimationPriority.Type Priority { get; set; }
 	}
 	
 	public interface CurveAnimation : AnimationClip, ICreatableInstance
 	{
+		public new CurveAnimation Clone();
 	}
 	
 	public partial interface KeyframeSequence : AnimationClip, ICreatableInstance
 	{
+		public new KeyframeSequence Clone();
 		public void AddKeyframe(Keyframe keyframe);
 		public Instance[] GetKeyframes();
 		public void RemoveKeyframe(Keyframe keyframe);
@@ -304,6 +314,7 @@ namespace Roblox
 	
 	public partial interface AnimationClipProvider : IServiceInstance
 	{
+		public new AnimationClipProvider Clone();
 		public string RegisterActiveAnimationClip(AnimationClip animationClip);
 		public string RegisterAnimationClip(AnimationClip animationClip);
 		public AnimationClip GetAnimationClipAsync(string assetId);
@@ -313,6 +324,7 @@ namespace Roblox
 	
 	public interface AnimationController : ICreatableInstance
 	{
+		public new AnimationController Clone();
 		public object[] GetPlayingAnimationTracks();
 		public AnimationTrack LoadAnimation(Animation animation);
 		public ScriptSignal<AnimationTrack> AnimationPlayed { get; }
@@ -320,22 +332,27 @@ namespace Roblox
 	
 	public interface AnimationFromVideoCreatorService : IServiceInstance
 	{
+		public new AnimationFromVideoCreatorService Clone();
 	}
 	
 	public interface AnimationFromVideoCreatorStudioService : IServiceInstance
 	{
+		public new AnimationFromVideoCreatorStudioService Clone();
 	}
 	
 	public interface AnimationRigData : ICreatableInstance
 	{
+		public new AnimationRigData Clone();
 	}
 	
 	public interface AnimationStreamTrack : Instance
 	{
+		public new AnimationStreamTrack Clone();
 	}
 	
 	public interface AnimationTrack : Instance
 	{
+		public new AnimationTrack Clone();
 		public Animation? Animation { get; }
 		public bool IsPlaying { get; }
 		public float Length { get; }
@@ -359,6 +376,7 @@ namespace Roblox
 	
 	public partial interface Animator : ICreatableInstance
 	{
+		public new Animator Clone();
 		public bool EvaluationThrottled { get; }
 		public bool PreferLodEnabled { get; set; }
 		public CFrame RootMotion { get; }
@@ -372,30 +390,37 @@ namespace Roblox
 	
 	public interface Annotation : ICreatableInstance
 	{
+		public new Annotation Clone();
 	}
 	
 	public interface WorkspaceAnnotation : Annotation, ICreatableInstance
 	{
+		public new WorkspaceAnnotation Clone();
 	}
 	
 	public interface AnnotationsService : IServiceInstance
 	{
+		public new AnnotationsService Clone();
 	}
 	
 	public interface AppLifecycleObserverService : IServiceInstance
 	{
+		public new AppLifecycleObserverService Clone();
 	}
 	
 	public interface AppUpdateService : IServiceInstance
 	{
+		public new AppUpdateService Clone();
 	}
 	
 	public interface AssetCounterService : IServiceInstance
 	{
+		public new AssetCounterService Clone();
 	}
 	
 	public interface AssetDeliveryProxy : IServiceInstance
 	{
+		public new AssetDeliveryProxy Clone();
 		public string Interface { get; set; }
 		public int Port { get; set; }
 		public bool StartServer { get; set; }
@@ -403,20 +428,24 @@ namespace Roblox
 	
 	public interface AssetImportService : IServiceInstance
 	{
+		public new AssetImportService Clone();
 	}
 	
 	public interface AssetImportSession : Instance
 	{
+		public new AssetImportSession Clone();
 		public ScriptSignal<object> UploadComplete { get; }
 		public ScriptSignal<float> UploadProgress { get; }
 	}
 	
 	public interface AssetManagerService : IServiceInstance
 	{
+		public new AssetManagerService Clone();
 	}
 	
 	public interface AssetPatchSettings : Instance
 	{
+		public new AssetPatchSettings Clone();
 		public string ContentId { get; set; }
 		public string OutputPath { get; set; }
 		public string PatchId { get; set; }
@@ -424,6 +453,7 @@ namespace Roblox
 	
 	public partial interface AssetService : IServiceInstance
 	{
+		public new AssetService Clone();
 		public EditableImage CreateEditableImageAsync(string textureId);
 		public EditableMesh CreateEditableMeshAsync(string meshId);
 		public EditableMesh CreateEditableMeshFromPartAsync(MeshPart meshPart);
@@ -442,6 +472,7 @@ namespace Roblox
 	
 	public interface Atmosphere : ICreatableInstance
 	{
+		public new Atmosphere Clone();
 		public Color3 Color { get; set; }
 		public Color3 Decay { get; set; }
 		public float Density { get; set; }
@@ -452,6 +483,7 @@ namespace Roblox
 	
 	public interface Attachment : ICreatableInstance
 	{
+		public new Attachment Clone();
 		public Vector3 Axis { get; set; }
 		public CFrame CFrame { get; set; }
 		public Vector3 SecondaryAxis { get; set; }
@@ -468,12 +500,14 @@ namespace Roblox
 	
 	public interface Bone : Attachment, ICreatableInstance
 	{
+		public new Bone Clone();
 		public CFrame Transform { get; set; }
 		public CFrame TransformedWorldCFrame { get; }
 	}
 	
 	public interface AudioAnalyzer : ICreatableInstance
 	{
+		public new AudioAnalyzer Clone();
 		public float PeakLevel { get; }
 		public float RmsLevel { get; }
 		public object[] GetConnectedWires(string pin);
@@ -482,6 +516,7 @@ namespace Roblox
 	
 	public interface AudioChorus : ICreatableInstance
 	{
+		public new AudioChorus Clone();
 		public bool Bypass { get; set; }
 		public float Depth { get; set; }
 		public float Mix { get; set; }
@@ -491,6 +526,7 @@ namespace Roblox
 	
 	public interface AudioCompressor : ICreatableInstance
 	{
+		public new AudioCompressor Clone();
 		public float Attack { get; set; }
 		public bool Bypass { get; set; }
 		public float MakeupGain { get; set; }
@@ -502,6 +538,7 @@ namespace Roblox
 	
 	public interface AudioDeviceInput : ICreatableInstance
 	{
+		public new AudioDeviceInput Clone();
 		public Enum.AccessModifierType.Type AccessType { get; set; }
 		public bool Active { get; }
 		public bool Muted { get; set; }
@@ -514,12 +551,14 @@ namespace Roblox
 	
 	public interface AudioDeviceOutput : ICreatableInstance
 	{
+		public new AudioDeviceOutput Clone();
 		public Player? Player { get; set; }
 		public object[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioDistortion : ICreatableInstance
 	{
+		public new AudioDistortion Clone();
 		public bool Bypass { get; set; }
 		public float Level { get; set; }
 		public object[] GetConnectedWires(string pin);
@@ -527,6 +566,7 @@ namespace Roblox
 	
 	public interface AudioEcho : ICreatableInstance
 	{
+		public new AudioEcho Clone();
 		public bool Bypass { get; set; }
 		public float DelayTime { get; set; }
 		public float DryLevel { get; set; }
@@ -537,6 +577,7 @@ namespace Roblox
 	
 	public interface AudioEmitter : ICreatableInstance
 	{
+		public new AudioEmitter Clone();
 		public string AudioInteractionGroup { get; set; }
 		public object[] GetConnectedWires(string pin);
 		public object GetDistanceAttenuation();
@@ -545,6 +586,7 @@ namespace Roblox
 	
 	public interface AudioEqualizer : ICreatableInstance
 	{
+		public new AudioEqualizer Clone();
 		public bool Bypass { get; set; }
 		public float HighGain { get; set; }
 		public float LowGain { get; set; }
@@ -555,6 +597,7 @@ namespace Roblox
 	
 	public interface AudioFader : ICreatableInstance
 	{
+		public new AudioFader Clone();
 		public bool Bypass { get; set; }
 		public float Volume { get; set; }
 		public object[] GetConnectedWires(string pin);
@@ -562,6 +605,7 @@ namespace Roblox
 	
 	public interface AudioFilter : ICreatableInstance
 	{
+		public new AudioFilter Clone();
 		public bool Bypass { get; set; }
 		public Enum.AudioFilterType.Type FilterType { get; set; }
 		public float Frequency { get; set; }
@@ -573,6 +617,7 @@ namespace Roblox
 	
 	public interface AudioFlanger : ICreatableInstance
 	{
+		public new AudioFlanger Clone();
 		public bool Bypass { get; set; }
 		public float Depth { get; set; }
 		public float Mix { get; set; }
@@ -582,16 +627,19 @@ namespace Roblox
 	
 	public interface AudioFocusService : IServiceInstance
 	{
+		public new AudioFocusService Clone();
 	}
 	
 	public interface AudioListener : ICreatableInstance
 	{
+		public new AudioListener Clone();
 		public string AudioInteractionGroup { get; set; }
 		public object[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
 	{
+		public new AudioPitchShifter Clone();
 		public bool Bypass { get; set; }
 		public float Pitch { get; set; }
 		public object[] GetConnectedWires(string pin);
@@ -599,6 +647,7 @@ namespace Roblox
 	
 	public interface AudioPlayer : ICreatableInstance
 	{
+		public new AudioPlayer Clone();
 		public string AssetId { get; set; }
 		public bool AutoLoad { get; set; }
 		public bool IsPlaying { get; }
@@ -619,6 +668,7 @@ namespace Roblox
 	
 	public interface AudioReverb : ICreatableInstance
 	{
+		public new AudioReverb Clone();
 		public bool Bypass { get; set; }
 		public float DecayRatio { get; set; }
 		public float DecayTime { get; set; }
@@ -637,6 +687,7 @@ namespace Roblox
 	
 	public interface AudioSearchParams : ICreatableInstance
 	{
+		public new AudioSearchParams Clone();
 		public string Album { get; set; }
 		public string Artist { get; set; }
 		public Enum.AudioSubType.Type AudioSubType { get; set; }
@@ -650,10 +701,12 @@ namespace Roblox
 	
 	public interface AvatarChatService : IServiceInstance
 	{
+		public new AvatarChatService Clone();
 	}
 	
 	public interface AvatarCreationService : IServiceInstance
 	{
+		public new AvatarCreationService Clone();
 		public void SendAnalyticsEvent(string eventName, object parameters);
 		public AvatarGenerationSession CreateAvatarGenerationSessionAsync(Player player);
 		public object GetAvatarGenerationConfig();
@@ -667,6 +720,7 @@ namespace Roblox
 	
 	public interface AvatarEditorService : IServiceInstance
 	{
+		public new AvatarEditorService Clone();
 		public Enum.AccessoryType.Type GetAccessoryType(Enum.AvatarAssetType.Type avatarAssetType);
 		public void PromptAllowInventoryReadAccess();
 		public void PromptCreateOutfit(HumanoidDescription outfit, Enum.HumanoidRigType.Type rigType);
@@ -698,6 +752,7 @@ namespace Roblox
 	
 	public interface AvatarGenerationJob : Instance
 	{
+		public new AvatarGenerationJob Clone();
 		public Enum.AvatarGenerationError.Type Error { get; set; }
 		public string ErrorMessage { get; set; }
 		public float Progress { get; set; }
@@ -709,30 +764,36 @@ namespace Roblox
 	
 	public interface Avatar2DGenerationJob : AvatarGenerationJob
 	{
+		public new Avatar2DGenerationJob Clone();
 		public string Result { get; set; }
 	}
 	
 	public interface Avatar3DGenerationJob : AvatarGenerationJob
 	{
+		public new Avatar3DGenerationJob Clone();
 		public string Result { get; set; }
 	}
 	
 	public interface AvatarGenerationSession : Instance
 	{
+		public new AvatarGenerationSession Clone();
 		public Avatar3DGenerationJob GenerateAvatarModel(Avatar2DGenerationJob previewJob, object options);
 		public Avatar2DGenerationJob GenerateAvatarPreview(string textPrompt, object options);
 	}
 	
 	public interface AvatarImportService : IServiceInstance
 	{
+		public new AvatarImportService Clone();
 	}
 	
 	public interface Backpack : ICreatableInstance
 	{
+		public new Backpack Clone();
 	}
 	
 	public interface BadgeService : IServiceInstance
 	{
+		public new BadgeService Clone();
 		public bool AwardBadge(long userId, long badgeId);
 		public object[] CheckUserBadgesAsync(long userId, object[] badgeIds);
 		public object GetBadgeInfoAsync(long badgeId);
@@ -744,6 +805,7 @@ namespace Roblox
 	
 	public interface BaseImportData : Instance
 	{
+		public new BaseImportData Clone();
 		public string Id { get; }
 		public string ImportName { get; set; }
 		public bool ShouldImport { get; set; }
@@ -753,14 +815,17 @@ namespace Roblox
 	
 	public interface AnimationImportData : BaseImportData
 	{
+		public new AnimationImportData Clone();
 	}
 	
 	public interface FacsImportData : BaseImportData
 	{
+		public new FacsImportData Clone();
 	}
 	
 	public interface GroupImportData : BaseImportData
 	{
+		public new GroupImportData Clone();
 		public bool Anchored { get; set; }
 		public bool ImportAsModelAsset { get; set; }
 		public bool InsertInWorkspace { get; set; }
@@ -768,10 +833,12 @@ namespace Roblox
 	
 	public interface JointImportData : BaseImportData
 	{
+		public new JointImportData Clone();
 	}
 	
 	public interface MaterialImportData : BaseImportData
 	{
+		public new MaterialImportData Clone();
 		public string DiffuseFilePath { get; set; }
 		public bool IsPbr { get; }
 		public string MetalnessFilePath { get; set; }
@@ -781,6 +848,7 @@ namespace Roblox
 	
 	public interface MeshImportData : BaseImportData
 	{
+		public new MeshImportData Clone();
 		public bool Anchored { get; set; }
 		public bool CageManifold { get; }
 		public bool CageMeshIntersectedPreview { get; set; }
@@ -805,6 +873,7 @@ namespace Roblox
 	
 	public interface RootImportData : BaseImportData
 	{
+		public new RootImportData Clone();
 		public bool AddModelToInventory { get; set; }
 		public bool Anchored { get; set; }
 		public float AnimationIdForRestPose { get; set; }
@@ -834,11 +903,13 @@ namespace Roblox
 	
 	public interface BasePlayerGui : Instance
 	{
+		public new BasePlayerGui Clone();
 		public Instance[] GetGuiObjectsAtPosition(int x, int y);
 	}
 	
-	public interface PlayerGui : BasePlayerGui
+	public partial interface PlayerGui : BasePlayerGui
 	{
+		public new PlayerGui Clone();
 		public Enum.ScreenOrientation.Type CurrentScreenOrientation { get; }
 		public Enum.ScreenOrientation.Type ScreenOrientation { get; set; }
 		public GuiObject? SelectionImageObject { get; set; }
@@ -849,6 +920,7 @@ namespace Roblox
 	
 	public partial interface StarterGui : BasePlayerGui, IServiceInstance
 	{
+		public new StarterGui Clone();
 		public bool ResetPlayerGuiOnSpawn { get; set; }
 		public Enum.ScreenOrientation.Type ScreenOrientation { get; set; }
 		public bool GetCoreGuiEnabled(Enum.CoreGuiType.Type coreGuiType);
@@ -859,10 +931,12 @@ namespace Roblox
 	
 	public interface BaseRemoteEvent : Instance
 	{
+		public new BaseRemoteEvent Clone();
 	}
 	
 	public interface BaseWrap : Instance
 	{
+		public new BaseWrap Clone();
 		public string CageMeshId { get; set; }
 		public CFrame CageOrigin { get; set; }
 		public CFrame CageOriginWorld { get; }
@@ -872,6 +946,7 @@ namespace Roblox
 	
 	public interface WrapDeformer : BaseWrap, ICreatableInstance
 	{
+		public new WrapDeformer Clone();
 		public float Amount { get; set; }
 		public bool Enabled { get; set; }
 		public string RenderMeshID { get; set; }
@@ -879,6 +954,7 @@ namespace Roblox
 	
 	public interface WrapLayer : BaseWrap, ICreatableInstance
 	{
+		public new WrapLayer Clone();
 		public Enum.WrapLayerAutoSkin.Type AutoSkin { get; set; }
 		public CFrame BindOffset { get; set; }
 		public bool Enabled { get; set; }
@@ -892,11 +968,13 @@ namespace Roblox
 	
 	public interface WrapTarget : BaseWrap, ICreatableInstance
 	{
+		public new WrapTarget Clone();
 		public float Stiffness { get; set; }
 	}
 	
 	public interface Beam : ICreatableInstance
 	{
+		public new Beam Clone();
 		public Attachment? Attachment0 { get; set; }
 		public Attachment? Attachment1 { get; set; }
 		public float Brightness { get; set; }
@@ -921,21 +999,25 @@ namespace Roblox
 	
 	public interface BindableEvent : ICreatableInstance
 	{
+		public new BindableEvent Clone();
 		public void Fire(object[] arguments);
 		public ScriptSignal<object[]> Event { get; }
 	}
 	
 	public interface BindableFunction : ICreatableInstance
 	{
+		public new BindableFunction Clone();
 		public object[] Invoke(object[] arguments);
 	}
 	
 	public interface BodyMover : Instance
 	{
+		public new BodyMover Clone();
 	}
 	
 	public interface BodyAngularVelocity : BodyMover, ICreatableInstance
 	{
+		public new BodyAngularVelocity Clone();
 		public Vector3 AngularVelocity { get; set; }
 		public Vector3 MaxTorque { get; set; }
 		public float P { get; set; }
@@ -944,11 +1026,13 @@ namespace Roblox
 	
 	public interface BodyForce : BodyMover, ICreatableInstance
 	{
+		public new BodyForce Clone();
 		public Vector3 Force { get; set; }
 	}
 	
 	public interface BodyGyro : BodyMover, ICreatableInstance
 	{
+		public new BodyGyro Clone();
 		public CFrame CFrame { get; set; }
 		public float D { get; set; }
 		public Vector3 MaxTorque { get; set; }
@@ -957,6 +1041,7 @@ namespace Roblox
 	
 	public interface BodyPosition : BodyMover, ICreatableInstance
 	{
+		public new BodyPosition Clone();
 		public float D { get; set; }
 		public Vector3 MaxForce { get; set; }
 		public float P { get; set; }
@@ -968,12 +1053,14 @@ namespace Roblox
 	
 	public interface BodyThrust : BodyMover, ICreatableInstance
 	{
+		public new BodyThrust Clone();
 		public Vector3 Force { get; set; }
 		public Vector3 Location { get; set; }
 	}
 	
 	public interface BodyVelocity : BodyMover, ICreatableInstance
 	{
+		public new BodyVelocity Clone();
 		public Vector3 MaxForce { get; set; }
 		public float P { get; set; }
 		public Vector3 Velocity { get; set; }
@@ -983,6 +1070,7 @@ namespace Roblox
 	
 	public interface RocketPropulsion : BodyMover, ICreatableInstance
 	{
+		public new RocketPropulsion Clone();
 		public float CartoonFactor { get; set; }
 		public float MaxSpeed { get; set; }
 		public float MaxThrust { get; set; }
@@ -1001,6 +1089,7 @@ namespace Roblox
 	
 	public interface BodyPartDescription : ICreatableInstance
 	{
+		public new BodyPartDescription Clone();
 		public long AssetId { get; set; }
 		public Enum.BodyPart.Type BodyPart { get; set; }
 		public Color3 Color { get; set; }
@@ -1009,10 +1098,12 @@ namespace Roblox
 	
 	public interface Breakpoint : ICreatableInstance
 	{
+		public new Breakpoint Clone();
 	}
 	
 	public interface BubbleChatMessageProperties : ICreatableInstance
 	{
+		public new BubbleChatMessageProperties Clone();
 		public Color3 BackgroundColor3 { get; set; }
 		public double BackgroundTransparency { get; set; }
 		public Font FontFace { get; set; }
@@ -1023,14 +1114,17 @@ namespace Roblox
 	
 	public interface BulkImportService : IServiceInstance
 	{
+		public new BulkImportService Clone();
 	}
 	
 	public interface CalloutService : IServiceInstance
 	{
+		public new CalloutService Clone();
 	}
 	
 	public interface Camera : ICreatableInstance
 	{
+		public new Camera Clone();
 		public CFrame CFrame { get; set; }
 		public Instance? CameraSubject { get; set; }
 		public Enum.CameraType.Type CameraType { get; set; }
@@ -1065,6 +1159,7 @@ namespace Roblox
 	
 	public interface CaptureService : IServiceInstance
 	{
+		public new CaptureService Clone();
 		public void CaptureScreenshot(Action onCaptureReady);
 		public void PromptSaveCapturesToGallery(object[] contentIds, Action resultCallback);
 		public void PromptShareCapture(string contentId, string launchData, Action onAcceptedCallback, Action onDeniedCallback);
@@ -1076,10 +1171,12 @@ namespace Roblox
 	
 	public interface CharacterAppearance : Instance
 	{
+		public new CharacterAppearance Clone();
 	}
 	
 	public interface BodyColors : CharacterAppearance, ICreatableInstance
 	{
+		public new BodyColors Clone();
 		public BrickColor HeadColor { get; set; }
 		public Color3 HeadColor3 { get; set; }
 		public BrickColor LeftArmColor { get; set; }
@@ -1096,6 +1193,7 @@ namespace Roblox
 	
 	public interface CharacterMesh : CharacterAppearance, ICreatableInstance
 	{
+		public new CharacterMesh Clone();
 		public long BaseTextureId { get; set; }
 		public Enum.BodyPart.Type BodyPart { get; set; }
 		public long MeshId { get; set; }
@@ -1104,27 +1202,32 @@ namespace Roblox
 	
 	public interface Clothing : CharacterAppearance
 	{
+		public new Clothing Clone();
 		public Color3 Color3 { get; set; }
 	}
 	
 	public interface Pants : Clothing, ICreatableInstance
 	{
+		public new Pants Clone();
 		public string PantsTemplate { get; set; }
 	}
 	
 	public interface Shirt : Clothing, ICreatableInstance
 	{
+		public new Shirt Clone();
 		public string ShirtTemplate { get; set; }
 	}
 	
 	public interface ShirtGraphic : CharacterAppearance, ICreatableInstance
 	{
+		public new ShirtGraphic Clone();
 		public Color3 Color3 { get; set; }
 		public string Graphic { get; set; }
 	}
 	
 	public interface Chat : IServiceInstance
 	{
+		public new Chat Clone();
 		public bool BubbleChatEnabled { get; set; }
 		public bool LoadDefaultChat { get; }
 		public void Chat(Instance partOrCharacter, string message, Enum.ChatColor.Type? color = null);
@@ -1141,10 +1244,12 @@ namespace Roblox
 	
 	public interface ChatbotUIService : IServiceInstance
 	{
+		public new ChatbotUIService Clone();
 	}
 	
 	public interface ClickDetector : ICreatableInstance
 	{
+		public new ClickDetector Clone();
 		public string CursorIcon { get; set; }
 		public float MaxActivationDistance { get; set; }
 		public ScriptSignal<Player> MouseClick { get; }
@@ -1155,6 +1260,7 @@ namespace Roblox
 	
 	public interface DragDetector : ClickDetector, ICreatableInstance
 	{
+		public new DragDetector Clone();
 		public string ActivatedCursorIcon { get; set; }
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Vector3 Axis { get; set; }
@@ -1193,6 +1299,7 @@ namespace Roblox
 	
 	public interface Clouds : ICreatableInstance
 	{
+		public new Clouds Clone();
 		public Color3 Color { get; set; }
 		public float Cover { get; set; }
 		public float Density { get; set; }
@@ -1201,14 +1308,17 @@ namespace Roblox
 	
 	public interface Collaborator : Instance
 	{
+		public new Collaborator Clone();
 	}
 	
 	public interface CollaboratorsService : IServiceInstance
 	{
+		public new CollaboratorsService Clone();
 	}
 	
 	public interface CollectionService : IServiceInstance
 	{
+		public new CollectionService Clone();
 		public void AddTag(Instance instance, string tag);
 		public object[] GetAllTags();
 		public ScriptSignal GetInstanceAddedSignal(string tag);
@@ -1225,6 +1335,7 @@ namespace Roblox
 	
 	public interface CommandInstance : Instance
 	{
+		public new CommandInstance Clone();
 		public bool AllowGUIAccessPoints { get; }
 		public string DisplayName { get; set; }
 		public string Name { get; }
@@ -1232,28 +1343,34 @@ namespace Roblox
 	
 	public interface CommandService : IServiceInstance
 	{
+		public new CommandService Clone();
 	}
 	
 	public interface CommerceService : IServiceInstance
 	{
+		public new CommerceService Clone();
 		public void PromptRealWorldCommerceBrowser(Player player, string url);
 		public bool UserEligibleForRealWorldCommerceAsync();
 	}
 	
 	public interface Configuration : ICreatableInstance
 	{
+		public new Configuration Clone();
 	}
 	
 	public interface ConfigureServerService : IServiceInstance
 	{
+		public new ConfigureServerService Clone();
 	}
 	
 	public interface ConnectivityService : IServiceInstance
 	{
+		public new ConnectivityService Clone();
 	}
 	
 	public interface Constraint : Instance
 	{
+		public new Constraint Clone();
 		public bool Active { get; }
 		public Attachment? Attachment0 { get; set; }
 		public Attachment? Attachment1 { get; set; }
@@ -1266,6 +1383,7 @@ namespace Roblox
 	
 	public interface AlignOrientation : Constraint, ICreatableInstance
 	{
+		public new AlignOrientation Clone();
 		public Enum.AlignType.Type AlignType { get; set; }
 		public CFrame CFrame { get; set; }
 		public Vector3 LookAtPosition { get; set; }
@@ -1282,6 +1400,7 @@ namespace Roblox
 	
 	public interface AlignPosition : Constraint, ICreatableInstance
 	{
+		public new AlignPosition Clone();
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Enum.ForceLimitMode.Type ForceLimitMode { get; set; }
 		public Enum.ActuatorRelativeTo.Type ForceRelativeTo { get; set; }
@@ -1297,6 +1416,7 @@ namespace Roblox
 	
 	public interface AngularVelocity : Constraint, ICreatableInstance
 	{
+		public new AngularVelocity Clone();
 		public Vector3 AngularVelocity { get; set; }
 		public float MaxTorque { get; set; }
 		public bool ReactionTorqueEnabled { get; set; }
@@ -1305,6 +1425,7 @@ namespace Roblox
 	
 	public interface AnimationConstraint : Constraint, ICreatableInstance
 	{
+		public new AnimationConstraint Clone();
 		public bool IsKinematic { get; set; }
 		public float MaxForce { get; set; }
 		public float MaxTorque { get; set; }
@@ -1313,6 +1434,7 @@ namespace Roblox
 	
 	public interface BallSocketConstraint : Constraint, ICreatableInstance
 	{
+		public new BallSocketConstraint Clone();
 		public bool LimitsEnabled { get; set; }
 		public float MaxFrictionTorque { get; set; }
 		public float Radius { get; set; }
@@ -1325,6 +1447,7 @@ namespace Roblox
 	
 	public interface HingeConstraint : Constraint, ICreatableInstance
 	{
+		public new HingeConstraint Clone();
 		public Enum.ActuatorType.Type ActuatorType { get; set; }
 		public float AngularResponsiveness { get; set; }
 		public float AngularSpeed { get; set; }
@@ -1344,6 +1467,7 @@ namespace Roblox
 	
 	public interface LineForce : Constraint, ICreatableInstance
 	{
+		public new LineForce Clone();
 		public bool ApplyAtCenterOfMass { get; set; }
 		public bool InverseSquareLaw { get; set; }
 		public float Magnitude { get; set; }
@@ -1353,6 +1477,7 @@ namespace Roblox
 	
 	public interface LinearVelocity : Constraint, ICreatableInstance
 	{
+		public new LinearVelocity Clone();
 		public Enum.ForceLimitMode.Type ForceLimitMode { get; set; }
 		public bool ForceLimitsEnabled { get; set; }
 		public Vector3 LineDirection { get; set; }
@@ -1370,18 +1495,22 @@ namespace Roblox
 	
 	public interface PlaneConstraint : Constraint, ICreatableInstance
 	{
+		public new PlaneConstraint Clone();
 	}
 	
 	public interface Plane : PlaneConstraint, ICreatableInstance
 	{
+		public new Plane Clone();
 	}
 	
 	public interface RigidConstraint : Constraint, ICreatableInstance
 	{
+		public new RigidConstraint Clone();
 	}
 	
 	public interface RodConstraint : Constraint, ICreatableInstance
 	{
+		public new RodConstraint Clone();
 		public float CurrentDistance { get; }
 		public float Length { get; set; }
 		public float LimitAngle0 { get; set; }
@@ -1392,6 +1521,7 @@ namespace Roblox
 	
 	public interface RopeConstraint : Constraint, ICreatableInstance
 	{
+		public new RopeConstraint Clone();
 		public float CurrentDistance { get; }
 		public float Length { get; set; }
 		public float Restitution { get; set; }
@@ -1405,6 +1535,7 @@ namespace Roblox
 	
 	public interface SlidingBallConstraint : Constraint
 	{
+		public new SlidingBallConstraint Clone();
 		public Enum.ActuatorType.Type ActuatorType { get; set; }
 		public float CurrentPosition { get; }
 		public bool LimitsEnabled { get; set; }
@@ -1424,6 +1555,7 @@ namespace Roblox
 	
 	public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance
 	{
+		public new CylindricalConstraint Clone();
 		public Enum.ActuatorType.Type AngularActuatorType { get; set; }
 		public bool AngularLimitsEnabled { get; set; }
 		public float AngularResponsiveness { get; set; }
@@ -1445,10 +1577,12 @@ namespace Roblox
 	
 	public interface PrismaticConstraint : SlidingBallConstraint, ICreatableInstance
 	{
+		public new PrismaticConstraint Clone();
 	}
 	
 	public interface SpringConstraint : Constraint, ICreatableInstance
 	{
+		public new SpringConstraint Clone();
 		public float Coils { get; set; }
 		public float CurrentLength { get; }
 		public float Damping { get; set; }
@@ -1464,12 +1598,14 @@ namespace Roblox
 	
 	public interface Torque : Constraint, ICreatableInstance
 	{
+		public new Torque Clone();
 		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
 		public Vector3 Torque { get; set; }
 	}
 	
 	public interface TorsionSpringConstraint : Constraint, ICreatableInstance
 	{
+		public new TorsionSpringConstraint Clone();
 		public float Coils { get; set; }
 		public float CurrentAngle { get; }
 		public float Damping { get; set; }
@@ -1483,6 +1619,7 @@ namespace Roblox
 	
 	public interface UniversalConstraint : Constraint, ICreatableInstance
 	{
+		public new UniversalConstraint Clone();
 		public bool LimitsEnabled { get; set; }
 		public float MaxAngle { get; set; }
 		public float Radius { get; set; }
@@ -1491,6 +1628,7 @@ namespace Roblox
 	
 	public interface VectorForce : Constraint, ICreatableInstance
 	{
+		public new VectorForce Clone();
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Vector3 Force { get; set; }
 		public Enum.ActuatorRelativeTo.Type RelativeTo { get; set; }
@@ -1498,6 +1636,7 @@ namespace Roblox
 	
 	public interface ContentProvider : IServiceInstance
 	{
+		public new ContentProvider Clone();
 		public string BaseUrl { get; }
 		public int RequestQueueSize { get; }
 		public Enum.AssetFetchStatus.Type GetAssetFetchStatus(string contentId);
@@ -1516,6 +1655,7 @@ namespace Roblox
 	
 	public interface ContextActionService : IServiceInstance
 	{
+		public new ContextActionService Clone();
 		public void BindAction(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
 		public void BindActionAtPriority(string actionName, Action functionToBind, bool createTouchButton, int priorityLevel, object[] inputTypes);
 		public void BindActionToInputTypes(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
@@ -1537,6 +1677,7 @@ namespace Roblox
 	
 	public interface Controller : Instance
 	{
+		public new Controller Clone();
 		public void BindButton(Enum.Button.Type button, string caption);
 		public bool GetButton(Enum.Button.Type button);
 		public void UnbindButton(Enum.Button.Type button);
@@ -1545,10 +1686,12 @@ namespace Roblox
 	
 	public interface HumanoidController : Controller, ICreatableInstance
 	{
+		public new HumanoidController Clone();
 	}
 	
 	public interface SkateboardController : Controller, ICreatableInstance
 	{
+		public new SkateboardController Clone();
 		public float Steer { get; }
 		public float Throttle { get; }
 		public ScriptSignal<string> AxisChanged { get; }
@@ -1556,10 +1699,12 @@ namespace Roblox
 	
 	public interface VehicleController : Controller, ICreatableInstance
 	{
+		public new VehicleController Clone();
 	}
 	
 	public interface ControllerBase : Instance
 	{
+		public new ControllerBase Clone();
 		public bool Active { get; }
 		public bool BalanceRigidityEnabled { get; set; }
 		public float MoveSpeedFactor { get; set; }
@@ -1567,6 +1712,7 @@ namespace Roblox
 	
 	public interface AirController : ControllerBase, ICreatableInstance
 	{
+		public new AirController Clone();
 		public float BalanceMaxTorque { get; set; }
 		public float BalanceSpeed { get; set; }
 		public bool MaintainAngularMomentum { get; set; }
@@ -1578,6 +1724,7 @@ namespace Roblox
 	
 	public interface ClimbController : ControllerBase, ICreatableInstance
 	{
+		public new ClimbController Clone();
 		public float AccelerationTime { get; set; }
 		public float BalanceMaxTorque { get; set; }
 		public float BalanceSpeed { get; set; }
@@ -1586,6 +1733,7 @@ namespace Roblox
 	
 	public interface GroundController : ControllerBase, ICreatableInstance
 	{
+		public new GroundController Clone();
 		public float AccelerationLean { get; set; }
 		public float AccelerationTime { get; set; }
 		public float BalanceMaxTorque { get; set; }
@@ -1601,6 +1749,7 @@ namespace Roblox
 	
 	public interface SwimController : ControllerBase, ICreatableInstance
 	{
+		public new SwimController Clone();
 		public float AccelerationTime { get; set; }
 		public float PitchMaxTorque { get; set; }
 		public float PitchSpeedFactor { get; set; }
@@ -1610,6 +1759,7 @@ namespace Roblox
 	
 	public interface ControllerManager : ICreatableInstance
 	{
+		public new ControllerManager Clone();
 		public ControllerBase? ActiveController { get; set; }
 		public float BaseMoveSpeed { get; set; }
 		public float BaseTurnSpeed { get; set; }
@@ -1623,26 +1773,32 @@ namespace Roblox
 	
 	public interface ControllerService : IServiceInstance
 	{
+		public new ControllerService Clone();
 	}
 	
 	public interface ConversationalAIAcceptanceService : IServiceInstance
 	{
+		public new ConversationalAIAcceptanceService Clone();
 	}
 	
 	public interface CoreScriptDebuggingManagerHelper : IServiceInstance
 	{
+		public new CoreScriptDebuggingManagerHelper Clone();
 	}
 	
 	public interface CreationDBService : IServiceInstance
 	{
+		public new CreationDBService Clone();
 	}
 	
 	public interface CrossDMScriptChangeListener : IServiceInstance
 	{
+		public new CrossDMScriptChangeListener Clone();
 	}
 	
 	public interface DataModelMesh : Instance
 	{
+		public new DataModelMesh Clone();
 		public Vector3 Offset { get; set; }
 		public Vector3 Scale { get; set; }
 		public Vector3 VertexColor { get; set; }
@@ -1650,18 +1806,22 @@ namespace Roblox
 	
 	public interface BevelMesh : DataModelMesh
 	{
+		public new BevelMesh Clone();
 	}
 	
 	public interface BlockMesh : BevelMesh, ICreatableInstance
 	{
+		public new BlockMesh Clone();
 	}
 	
 	public interface CylinderMesh : BevelMesh, ICreatableInstance
 	{
+		public new CylinderMesh Clone();
 	}
 	
 	public interface EditableMesh : DataModelMesh, ICreatableInstance
 	{
+		public new EditableMesh Clone();
 		public bool SkinningEnabled { get; set; }
 		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
 		public long AddVertex(Vector3 p);
@@ -1691,36 +1851,43 @@ namespace Roblox
 	
 	public interface RobloxEditableMesh : EditableMesh, ICreatableInstance
 	{
+		public new RobloxEditableMesh Clone();
 	}
 	
 	public interface FileMesh : DataModelMesh, ICreatableInstance
 	{
+		public new FileMesh Clone();
 		public string MeshId { get; set; }
 		public string TextureId { get; set; }
 	}
 	
 	public interface SpecialMesh : FileMesh, ICreatableInstance
 	{
+		public new SpecialMesh Clone();
 		public Enum.MeshType.Type MeshType { get; set; }
 	}
 	
 	public interface DataModelPatchService : IServiceInstance
 	{
+		public new DataModelPatchService Clone();
 	}
 	
 	public interface DataStoreGetOptions : ICreatableInstance
 	{
+		public new DataStoreGetOptions Clone();
 		public bool UseCache { get; set; }
 	}
 	
 	public interface DataStoreIncrementOptions : ICreatableInstance
 	{
+		public new DataStoreIncrementOptions Clone();
 		public object GetMetadata();
 		public void SetMetadata(object attributes);
 	}
 	
 	public interface DataStoreInfo : Instance
 	{
+		public new DataStoreInfo Clone();
 		public long CreatedTime { get; }
 		public string DataStoreName { get; }
 		public long UpdatedTime { get; }
@@ -1728,11 +1895,13 @@ namespace Roblox
 	
 	public interface DataStoreKey : Instance
 	{
+		public new DataStoreKey Clone();
 		public string KeyName { get; }
 	}
 	
 	public interface DataStoreKeyInfo : Instance
 	{
+		public new DataStoreKeyInfo Clone();
 		public long CreatedTime { get; }
 		public long UpdatedTime { get; }
 		public string Version { get; }
@@ -1742,6 +1911,7 @@ namespace Roblox
 	
 	public interface DataStoreObjectVersionInfo : Instance
 	{
+		public new DataStoreObjectVersionInfo Clone();
 		public long CreatedTime { get; }
 		public bool IsDeleted { get; }
 		public string Version { get; }
@@ -1749,12 +1919,14 @@ namespace Roblox
 	
 	public interface DataStoreOptions : ICreatableInstance
 	{
+		public new DataStoreOptions Clone();
 		public bool AllScopes { get; set; }
 		public void SetExperimentalFeatures(object experimentalFeatures);
 	}
 	
 	public interface DataStoreService : IServiceInstance
 	{
+		public new DataStoreService Clone();
 		public GlobalDataStore GetDataStore(string name, string? scope = null, Instance? options = null);
 		public GlobalDataStore GetGlobalDataStore();
 		public OrderedDataStore GetOrderedDataStore(string name, string? scope = null);
@@ -1764,50 +1936,61 @@ namespace Roblox
 	
 	public interface DataStoreSetOptions : ICreatableInstance
 	{
+		public new DataStoreSetOptions Clone();
 		public object GetMetadata();
 		public void SetMetadata(object attributes);
 	}
 	
 	public interface Debris : IServiceInstance
 	{
+		public new Debris Clone();
 		public int MaxItems { get; set; }
 		public void AddItem(Instance item, double? lifetime = null);
 	}
 	
 	public interface DebuggablePluginWatcher : IServiceInstance
 	{
+		public new DebuggablePluginWatcher Clone();
 	}
 	
 	public interface DebuggerConnection : Instance
 	{
+		public new DebuggerConnection Clone();
 	}
 	
 	public interface LocalDebuggerConnection : DebuggerConnection
 	{
+		public new LocalDebuggerConnection Clone();
 	}
 	
 	public interface DebuggerConnectionManager : IServiceInstance
 	{
+		public new DebuggerConnectionManager Clone();
 	}
 	
 	public interface DebuggerLuaResponse : Instance
 	{
+		public new DebuggerLuaResponse Clone();
 	}
 	
 	public interface DebuggerUIService : IServiceInstance
 	{
+		public new DebuggerUIService Clone();
 	}
 	
 	public interface DebuggerVariable : Instance
 	{
+		public new DebuggerVariable Clone();
 	}
 	
 	public interface DeviceIdService : IServiceInstance
 	{
+		public new DeviceIdService Clone();
 	}
 	
 	public interface Dialog : ICreatableInstance
 	{
+		public new Dialog Clone();
 		public Enum.DialogBehaviorType.Type BehaviorType { get; set; }
 		public float ConversationDistance { get; set; }
 		public bool GoodbyeChoiceActive { get; set; }
@@ -1824,6 +2007,7 @@ namespace Roblox
 	
 	public interface DialogChoice : ICreatableInstance
 	{
+		public new DialogChoice Clone();
 		public bool GoodbyeChoiceActive { get; set; }
 		public string GoodbyeDialog { get; set; }
 		public string ResponseDialog { get; set; }
@@ -1832,6 +2016,7 @@ namespace Roblox
 	
 	public interface Dragger : ICreatableInstance
 	{
+		public new Dragger Clone();
 		public void AxisRotate(Enum.Axis.Type? axis = null);
 		public void MouseDown(Instance mousePart, Vector3 pointOnMousePart, Instance[] parts);
 		public void MouseMove(Ray mouseRay);
@@ -1840,6 +2025,7 @@ namespace Roblox
 	
 	public interface DraggerService : IServiceInstance
 	{
+		public new DraggerService Clone();
 		public bool AlignDraggedObjects { get; }
 		public bool AngleSnapEnabled { get; }
 		public float AngleSnapIncrement { get; }
@@ -1859,6 +2045,7 @@ namespace Roblox
 	
 	public interface EditableImage : ICreatableInstance
 	{
+		public new EditableImage Clone();
 		public Vector2 Size { get; set; }
 		public EditableImage Copy(Vector2 min, Vector2 max);
 		public void Crop(Vector2 min, Vector2 max);
@@ -1875,14 +2062,17 @@ namespace Roblox
 	
 	public interface RobloxEditableImage : EditableImage, ICreatableInstance
 	{
+		public new RobloxEditableImage Clone();
 	}
 	
 	public interface EngineAPICloudProcessingService : IServiceInstance
 	{
+		public new EngineAPICloudProcessingService Clone();
 	}
 	
 	public interface EulerRotationCurve : ICreatableInstance
 	{
+		public new EulerRotationCurve Clone();
 		public Enum.RotationOrder.Type RotationOrder { get; set; }
 		public object[] GetAnglesAtTime(float time);
 		public CFrame GetRotationAtTime(float time);
@@ -1893,18 +2083,22 @@ namespace Roblox
 	
 	public interface EventIngestService : IServiceInstance
 	{
+		public new EventIngestService Clone();
 	}
 	
 	public interface ExampleService : IServiceInstance
 	{
+		public new ExampleService Clone();
 	}
 	
 	public interface ExperienceAuthService : IServiceInstance
 	{
+		public new ExperienceAuthService Clone();
 	}
 	
 	public interface ExperienceInviteOptions : ICreatableInstance
 	{
+		public new ExperienceInviteOptions Clone();
 		public string InviteMessageId { get; set; }
 		public long InviteUser { get; set; }
 		public string LaunchData { get; set; }
@@ -1913,6 +2107,7 @@ namespace Roblox
 	
 	public interface ExperienceNotificationService : IServiceInstance
 	{
+		public new ExperienceNotificationService Clone();
 		public void PromptOptIn();
 		public bool CanPromptOptInAsync();
 		public ScriptSignal OptInPromptClosed { get; }
@@ -1920,14 +2115,17 @@ namespace Roblox
 	
 	public interface ExperienceService : IServiceInstance
 	{
+		public new ExperienceService Clone();
 	}
 	
 	public interface ExperienceStateCaptureService : IServiceInstance
 	{
+		public new ExperienceStateCaptureService Clone();
 	}
 	
 	public interface Explosion : ICreatableInstance
 	{
+		public new Explosion Clone();
 		public float BlastPressure { get; set; }
 		public float BlastRadius { get; set; }
 		public float DestroyJointRadiusPercent { get; set; }
@@ -1940,19 +2138,23 @@ namespace Roblox
 	
 	public interface FaceAnimatorService : IServiceInstance
 	{
+		public new FaceAnimatorService Clone();
 	}
 	
 	public interface FaceControls : ICreatableInstance
 	{
+		public new FaceControls Clone();
 	}
 	
 	public interface FaceInstance : Instance
 	{
+		public new FaceInstance Clone();
 		public Enum.NormalId.Type Face { get; set; }
 	}
 	
 	public interface Decal : FaceInstance, ICreatableInstance
 	{
+		public new Decal Clone();
 		public Color3 Color3 { get; set; }
 		public float Shiny { get; set; }
 		public float Specular { get; set; }
@@ -1963,6 +2165,7 @@ namespace Roblox
 	
 	public interface Texture : Decal, ICreatableInstance
 	{
+		public new Texture Clone();
 		public float OffsetStudsU { get; set; }
 		public float OffsetStudsV { get; set; }
 		public float StudsPerTileU { get; set; }
@@ -1971,22 +2174,27 @@ namespace Roblox
 	
 	public interface FacialAnimationRecordingService : IServiceInstance
 	{
+		public new FacialAnimationRecordingService Clone();
 	}
 	
 	public interface FacialAnimationStreamingServiceStats : Instance
 	{
+		public new FacialAnimationStreamingServiceStats Clone();
 	}
 	
 	public interface FacialAnimationStreamingServiceV2 : IServiceInstance
 	{
+		public new FacialAnimationStreamingServiceV2 Clone();
 	}
 	
 	public interface FacialAnimationStreamingSubsessionStats : Instance
 	{
+		public new FacialAnimationStreamingSubsessionStats Clone();
 	}
 	
 	public interface Feature : Instance
 	{
+		public new Feature Clone();
 		public Enum.NormalId.Type FaceId { get; set; }
 		public Enum.InOut.Type InOut { get; set; }
 		public Enum.LeftRight.Type LeftRight { get; set; }
@@ -1995,14 +2203,17 @@ namespace Roblox
 	
 	public interface Hole : Feature, ICreatableInstance
 	{
+		public new Hole Clone();
 	}
 	
 	public interface MotorFeature : Feature, ICreatableInstance
 	{
+		public new MotorFeature Clone();
 	}
 	
 	public interface Fire : ICreatableInstance
 	{
+		public new Fire Clone();
 		public Color3 Color { get; set; }
 		public bool Enabled { get; set; }
 		public float Heat { get; set; }
@@ -2013,6 +2224,7 @@ namespace Roblox
 	
 	public interface FloatCurve : ICreatableInstance
 	{
+		public new FloatCurve Clone();
 		public int Length { get; }
 		public FloatCurveKey GetKeyAtIndex(int index);
 		public object[] GetKeyIndicesAtTime(float time);
@@ -2025,20 +2237,24 @@ namespace Roblox
 	
 	public interface Folder : ICreatableInstance
 	{
+		public new Folder Clone();
 	}
 	
 	public interface ForceField : ICreatableInstance
 	{
+		public new ForceField Clone();
 		public bool Visible { get; set; }
 	}
 	
 	public interface GamePassService : IServiceInstance
 	{
+		public new GamePassService Clone();
 		public bool PlayerHasPass(Player player, long gamePassId);
 	}
 	
 	public interface GamepadService : IServiceInstance
 	{
+		public new GamepadService Clone();
 		public bool GamepadCursorEnabled { get; }
 		public void DisableGamepadCursor();
 		public void EnableGamepadCursor(GuiObject guiObject);
@@ -2046,10 +2262,12 @@ namespace Roblox
 	
 	public interface GenericChallengeService : IServiceInstance
 	{
+		public new GenericChallengeService Clone();
 	}
 	
 	public interface GeometryService : IServiceInstance
 	{
+		public new GeometryService Clone();
 		public object[] CalculateConstraintsToPreserve(Instance source, object[] destination, object? options = null);
 		public object[] IntersectAsync(BasePart part, object[] parts, object? options = null);
 		public object[] SubtractAsync(BasePart part, object[] parts, object? options = null);
@@ -2058,6 +2276,7 @@ namespace Roblox
 	
 	public interface GetTextBoundsParams : ICreatableInstance
 	{
+		public new GetTextBoundsParams Clone();
 		public Font Font { get; set; }
 		public bool RichText { get; set; }
 		public float Size { get; set; }
@@ -2067,6 +2286,7 @@ namespace Roblox
 	
 	public interface GlobalDataStore : Instance
 	{
+		public new GlobalDataStore Clone();
 		public ScriptConnection OnUpdate(string key, Action callback);
 		public object[] GetAsync(string key, DataStoreGetOptions? options = null);
 		public object IncrementAsync(string key, int? delta = null, object[]? userIds = null, DataStoreIncrementOptions? options = null);
@@ -2077,6 +2297,7 @@ namespace Roblox
 	
 	public interface DataStore : GlobalDataStore
 	{
+		public new DataStore Clone();
 		public object[] GetVersionAsync(string key, string version);
 		public DataStoreKeyPages ListKeysAsync(string prefix, int? pageSize = null, string? cursor = null, bool? excludeDeleted = null);
 		public DataStoreVersionPages ListVersionsAsync(string key, Enum.SortDirection.Type? sortDirection = null, long? minDate = null, long? maxDate = null, int? pageSize = null);
@@ -2085,11 +2306,13 @@ namespace Roblox
 	
 	public interface OrderedDataStore : GlobalDataStore
 	{
+		public new OrderedDataStore Clone();
 		public Instance GetSortedAsync(bool ascending, int pagesize, object minValue, object maxValue);
 	}
 	
 	public interface GroupService : IServiceInstance
 	{
+		public new GroupService Clone();
 		public StandardPages GetAlliesAsync(long groupId);
 		public StandardPages GetEnemiesAsync(long groupId);
 		public object GetGroupInfoAsync(long groupId);
@@ -2098,10 +2321,12 @@ namespace Roblox
 	
 	public interface GuiBase : Instance
 	{
+		public new GuiBase Clone();
 	}
 	
 	public interface GuiBase2d : GuiBase
 	{
+		public new GuiBase2d Clone();
 		public Vector2 AbsolutePosition { get; }
 		public float AbsoluteRotation { get; }
 		public Vector2 AbsoluteSize { get; }
@@ -2117,6 +2342,7 @@ namespace Roblox
 	
 	public interface GuiObject : GuiBase2d
 	{
+		public new GuiObject Clone();
 		public bool Active { get; set; }
 		public Vector2 AnchorPoint { get; set; }
 		public Enum.AutomaticSize.Type AutomaticSize { get; set; }
@@ -2168,17 +2394,20 @@ namespace Roblox
 	
 	public interface CanvasGroup : GuiObject, ICreatableInstance
 	{
+		public new CanvasGroup Clone();
 		public Color3 GroupColor3 { get; set; }
 		public float GroupTransparency { get; set; }
 	}
 	
 	public interface Frame : GuiObject, ICreatableInstance
 	{
+		public new Frame Clone();
 		public Enum.FrameStyle.Type Style { get; set; }
 	}
 	
 	public interface GuiButton : GuiObject
 	{
+		public new GuiButton Clone();
 		public bool AutoButtonColor { get; set; }
 		public bool Modal { get; set; }
 		public bool Selected { get; set; }
@@ -2194,6 +2423,7 @@ namespace Roblox
 	
 	public interface ImageButton : GuiButton, ICreatableInstance
 	{
+		public new ImageButton Clone();
 		public string HoverImage { get; set; }
 		public string Image { get; set; }
 		public Color3 ImageColor3 { get; set; }
@@ -2211,6 +2441,7 @@ namespace Roblox
 	
 	public interface TextButton : GuiButton, ICreatableInstance
 	{
+		public new TextButton Clone();
 		public string ContentText { get; }
 		public Font FontFace { get; set; }
 		public Enum.FontSize.Type FontSize { get; set; }
@@ -2238,10 +2469,12 @@ namespace Roblox
 	
 	public interface GuiLabel : GuiObject
 	{
+		public new GuiLabel Clone();
 	}
 	
 	public interface ImageLabel : GuiLabel, ICreatableInstance
 	{
+		public new ImageLabel Clone();
 		public string Image { get; set; }
 		public Color3 ImageColor3 { get; set; }
 		public Vector2 ImageRectOffset { get; set; }
@@ -2257,6 +2490,7 @@ namespace Roblox
 	
 	public interface TextLabel : GuiLabel, ICreatableInstance
 	{
+		public new TextLabel Clone();
 		public string ContentText { get; }
 		public Font FontFace { get; set; }
 		public Enum.FontSize.Type FontSize { get; set; }
@@ -2284,6 +2518,7 @@ namespace Roblox
 	
 	public interface ScrollingFrame : GuiObject, ICreatableInstance
 	{
+		public new ScrollingFrame Clone();
 		public Vector2 AbsoluteCanvasSize { get; }
 		public Vector2 AbsoluteWindowSize { get; }
 		public Enum.AutomaticSize.Type AutomaticCanvasSize { get; set; }
@@ -2305,6 +2540,7 @@ namespace Roblox
 	
 	public interface TextBox : GuiObject, ICreatableInstance
 	{
+		public new TextBox Clone();
 		public bool ClearTextOnFocus { get; set; }
 		public string ContentText { get; }
 		public int CursorPosition { get; set; }
@@ -2346,6 +2582,7 @@ namespace Roblox
 	
 	public interface VideoFrame : GuiObject, ICreatableInstance
 	{
+		public new VideoFrame Clone();
 		public bool IsLoaded { get; }
 		public bool Looped { get; set; }
 		public bool Playing { get; set; }
@@ -2365,6 +2602,7 @@ namespace Roblox
 	
 	public interface ViewportFrame : GuiObject, ICreatableInstance
 	{
+		public new ViewportFrame Clone();
 		public Color3 Ambient { get; set; }
 		public Camera? CurrentCamera { get; set; }
 		public Color3 ImageColor3 { get; set; }
@@ -2375,6 +2613,7 @@ namespace Roblox
 	
 	public interface LayerCollector : GuiBase2d
 	{
+		public new LayerCollector Clone();
 		public bool Enabled { get; set; }
 		public bool ResetOnSpawn { get; set; }
 		public Enum.ZIndexBehavior.Type ZIndexBehavior { get; set; }
@@ -2383,6 +2622,7 @@ namespace Roblox
 	
 	public interface BillboardGui : LayerCollector, ICreatableInstance
 	{
+		public new BillboardGui Clone();
 		public bool Active { get; set; }
 		public Instance? Adornee { get; set; }
 		public bool AlwaysOnTop { get; set; }
@@ -2405,6 +2645,7 @@ namespace Roblox
 	
 	public interface ScreenGui : LayerCollector, ICreatableInstance
 	{
+		public new ScreenGui Clone();
 		public bool ClipToDeviceSafeArea { get; set; }
 		public int DisplayOrder { get; set; }
 		public bool IgnoreGuiInset { get; set; }
@@ -2414,6 +2655,7 @@ namespace Roblox
 	
 	public interface SurfaceGuiBase : LayerCollector
 	{
+		public new SurfaceGuiBase Clone();
 		public bool Active { get; set; }
 		public Instance? Adornee { get; set; }
 		public Enum.NormalId.Type Face { get; set; }
@@ -2421,6 +2663,7 @@ namespace Roblox
 	
 	public interface AdGui : SurfaceGuiBase, ICreatableInstance
 	{
+		public new AdGui Clone();
 		public Enum.AdShape.Type AdShape { get; set; }
 		public bool EnableVideoAds { get; set; }
 		public string FallbackImage { get; set; }
@@ -2429,6 +2672,7 @@ namespace Roblox
 	
 	public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
 	{
+		public new SurfaceGui Clone();
 		public bool AlwaysOnTop { get; set; }
 		public float Brightness { get; set; }
 		public Vector2 CanvasSize { get; set; }
@@ -2443,6 +2687,7 @@ namespace Roblox
 	
 	public interface GuiBase3d : GuiBase
 	{
+		public new GuiBase3d Clone();
 		public Color3 Color3 { get; set; }
 		public float Transparency { get; set; }
 		public bool Visible { get; set; }
@@ -2450,6 +2695,7 @@ namespace Roblox
 	
 	public interface FloorWire : GuiBase3d, ICreatableInstance
 	{
+		public new FloorWire Clone();
 		public float CycleOffset { get; set; }
 		public BasePart? From { get; set; }
 		public float StudsBetweenTextures { get; set; }
@@ -2462,11 +2708,13 @@ namespace Roblox
 	
 	public interface InstanceAdornment : GuiBase3d
 	{
+		public new InstanceAdornment Clone();
 		public Instance? Adornee { get; set; }
 	}
 	
 	public interface SelectionBox : InstanceAdornment, ICreatableInstance
 	{
+		public new SelectionBox Clone();
 		public float LineThickness { get; set; }
 		public Color3 SurfaceColor3 { get; set; }
 		public float SurfaceTransparency { get; set; }
@@ -2474,11 +2722,13 @@ namespace Roblox
 	
 	public interface PVAdornment : GuiBase3d
 	{
+		public new PVAdornment Clone();
 		public PVInstance? Adornee { get; set; }
 	}
 	
 	public interface HandleAdornment : PVAdornment
 	{
+		public new HandleAdornment Clone();
 		public Enum.AdornCullingMode.Type AdornCullingMode { get; set; }
 		public bool AlwaysOnTop { get; set; }
 		public CFrame CFrame { get; set; }
@@ -2492,17 +2742,20 @@ namespace Roblox
 	
 	public interface BoxHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new BoxHandleAdornment Clone();
 		public Vector3 Size { get; set; }
 	}
 	
 	public interface ConeHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new ConeHandleAdornment Clone();
 		public float Height { get; set; }
 		public float Radius { get; set; }
 	}
 	
 	public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new CylinderHandleAdornment Clone();
 		public float Angle { get; set; }
 		public float Height { get; set; }
 		public float InnerRadius { get; set; }
@@ -2511,23 +2764,27 @@ namespace Roblox
 	
 	public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new ImageHandleAdornment Clone();
 		public string Image { get; set; }
 		public Vector2 Size { get; set; }
 	}
 	
 	public interface LineHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new LineHandleAdornment Clone();
 		public float Length { get; set; }
 		public float Thickness { get; set; }
 	}
 	
 	public interface SphereHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new SphereHandleAdornment Clone();
 		public float Radius { get; set; }
 	}
 	
 	public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance
 	{
+		public new WireframeHandleAdornment Clone();
 		public Vector3 Scale { get; set; }
 		public void AddLine(Vector3 from, Vector3 to);
 		public void AddLines(object[] points);
@@ -2538,25 +2795,30 @@ namespace Roblox
 	
 	public interface ParabolaAdornment : PVAdornment
 	{
+		public new ParabolaAdornment Clone();
 	}
 	
 	public interface SelectionSphere : PVAdornment, ICreatableInstance
 	{
+		public new SelectionSphere Clone();
 		public Color3 SurfaceColor3 { get; set; }
 		public float SurfaceTransparency { get; set; }
 	}
 	
 	public interface PartAdornment : GuiBase3d
 	{
+		public new PartAdornment Clone();
 		public BasePart? Adornee { get; set; }
 	}
 	
 	public interface HandlesBase : PartAdornment
 	{
+		public new HandlesBase Clone();
 	}
 	
 	public interface ArcHandles : HandlesBase, ICreatableInstance
 	{
+		public new ArcHandles Clone();
 		public Axes Axes { get; set; }
 		public ScriptSignal<Enum.Axis.Type> MouseButton1Down { get; }
 		public ScriptSignal<Enum.Axis.Type> MouseButton1Up { get; }
@@ -2567,6 +2829,7 @@ namespace Roblox
 	
 	public interface Handles : HandlesBase, ICreatableInstance
 	{
+		public new Handles Clone();
 		public Faces Faces { get; set; }
 		public Enum.HandlesStyle.Type Style { get; set; }
 		public ScriptSignal<Enum.NormalId.Type> MouseButton1Down { get; }
@@ -2578,26 +2841,31 @@ namespace Roblox
 	
 	public interface SurfaceSelection : PartAdornment, ICreatableInstance
 	{
+		public new SurfaceSelection Clone();
 		public Enum.NormalId.Type TargetSurface { get; set; }
 	}
 	
 	public interface SelectionLasso : GuiBase3d
 	{
+		public new SelectionLasso Clone();
 		public Humanoid? Humanoid { get; set; }
 	}
 	
 	public interface SelectionPartLasso : SelectionLasso, ICreatableInstance
 	{
+		public new SelectionPartLasso Clone();
 		public BasePart? Part { get; set; }
 	}
 	
 	public interface SelectionPointLasso : SelectionLasso, ICreatableInstance
 	{
+		public new SelectionPointLasso Clone();
 		public Vector3 Point { get; set; }
 	}
 	
 	public interface Path2D : GuiBase, ICreatableInstance
 	{
+		public new Path2D Clone();
 		public bool Closed { get; set; }
 		public Color3 Color3 { get; set; }
 		public float Thickness { get; set; }
@@ -2621,6 +2889,7 @@ namespace Roblox
 	
 	public interface GuiService : IServiceInstance
 	{
+		public new GuiService Clone();
 		public bool AutoSelectGuiEnabled { get; set; }
 		public bool GuiNavigationEnabled { get; set; }
 		public bool IsModalDialog { get; }
@@ -2651,6 +2920,7 @@ namespace Roblox
 	
 	public interface HapticService : IServiceInstance
 	{
+		public new HapticService Clone();
 		public object[] GetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
 		public bool IsMotorSupported(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
 		public bool IsVibrationSupported(Enum.UserInputType.Type inputType);
@@ -2659,14 +2929,17 @@ namespace Roblox
 	
 	public interface HeightmapImporterService : IServiceInstance
 	{
+		public new HeightmapImporterService Clone();
 	}
 	
 	public interface HiddenSurfaceRemovalAsset : ICreatableInstance
 	{
+		public new HiddenSurfaceRemovalAsset Clone();
 	}
 	
 	public interface Highlight : ICreatableInstance
 	{
+		public new Highlight Clone();
 		public Instance? Adornee { get; set; }
 		public Enum.HighlightDepthMode.Type DepthMode { get; set; }
 		public bool Enabled { get; set; }
@@ -2678,6 +2951,7 @@ namespace Roblox
 	
 	public interface HttpService : IServiceInstance
 	{
+		public new HttpService Clone();
 		public bool HttpEnabled { get; }
 		public string GenerateGUID(bool? wrapInCurlyBraces = null);
 		public Secret GetSecret(string key);
@@ -2691,6 +2965,7 @@ namespace Roblox
 	
 	public interface Humanoid : ICreatableInstance
 	{
+		public new Humanoid Clone();
 		public bool AutoJumpEnabled { get; set; }
 		public bool AutoRotate { get; set; }
 		public bool AutomaticScalingEnabled { get; set; }
@@ -2781,6 +3056,7 @@ namespace Roblox
 	
 	public interface HumanoidDescription : ICreatableInstance
 	{
+		public new HumanoidDescription Clone();
 		public string BackAccessory { get; set; }
 		public float BodyTypeScale { get; set; }
 		public long ClimbAnimation { get; set; }
@@ -2833,6 +3109,7 @@ namespace Roblox
 	
 	public interface IKControl : ICreatableInstance
 	{
+		public new IKControl Clone();
 		public Instance? ChainRoot { get; set; }
 		public bool Enabled { get; set; }
 		public Instance? EndEffector { get; set; }
@@ -2854,18 +3131,22 @@ namespace Roblox
 	
 	public interface ILegacyStudioBridge : IServiceInstance
 	{
+		public new ILegacyStudioBridge Clone();
 	}
 	
 	public interface LegacyStudioBridge : ILegacyStudioBridge, IServiceInstance
 	{
+		public new LegacyStudioBridge Clone();
 	}
 	
 	public interface IXPService : IServiceInstance
 	{
+		public new IXPService Clone();
 	}
 	
 	public interface IncrementalPatchBuilder : IServiceInstance
 	{
+		public new IncrementalPatchBuilder Clone();
 		public bool AddPathsToBundle { get; set; }
 		public double BuildDebouncePeriod { get; set; }
 		public bool HighCompression { get; set; }
@@ -2875,6 +3156,7 @@ namespace Roblox
 	
 	public interface InputObject : Instance
 	{
+		public new InputObject Clone();
 		public Vector3 Delta { get; set; }
 		public Enum.KeyCode.Type KeyCode { get; set; }
 		public Vector3 Position { get; set; }
@@ -2885,6 +3167,7 @@ namespace Roblox
 	
 	public interface InsertService : IServiceInstance
 	{
+		public new InsertService Clone();
 		public bool AllowInsertFreeModels { get; set; }
 		public void ApproveAssetId(long assetId);
 		public void ApproveAssetVersionId(long assetVersionId);
@@ -2904,14 +3187,17 @@ namespace Roblox
 	
 	public interface InternalSyncItem : ICreatableInstance
 	{
+		public new InternalSyncItem Clone();
 	}
 	
 	public interface InternalSyncService : IServiceInstance
 	{
+		public new InternalSyncService Clone();
 	}
 	
 	public interface JointInstance : Instance
 	{
+		public new JointInstance Clone();
 		public bool Active { get; }
 		public CFrame C0 { get; set; }
 		public CFrame C1 { get; set; }
@@ -2922,19 +3208,23 @@ namespace Roblox
 	
 	public interface DynamicRotate : JointInstance
 	{
+		public new DynamicRotate Clone();
 		public float BaseAngle { get; set; }
 	}
 	
 	public interface RotateP : DynamicRotate, ICreatableInstance
 	{
+		public new RotateP Clone();
 	}
 	
 	public interface RotateV : DynamicRotate, ICreatableInstance
 	{
+		public new RotateV Clone();
 	}
 	
 	public interface Glue : JointInstance, ICreatableInstance
 	{
+		public new Glue Clone();
 		public Vector3 F0 { get; set; }
 		public Vector3 F1 { get; set; }
 		public Vector3 F2 { get; set; }
@@ -2943,18 +3233,22 @@ namespace Roblox
 	
 	public interface ManualSurfaceJointInstance : JointInstance
 	{
+		public new ManualSurfaceJointInstance Clone();
 	}
 	
 	public interface ManualGlue : ManualSurfaceJointInstance, ICreatableInstance
 	{
+		public new ManualGlue Clone();
 	}
 	
 	public interface ManualWeld : ManualSurfaceJointInstance, ICreatableInstance
 	{
+		public new ManualWeld Clone();
 	}
 	
 	public interface Motor : JointInstance, ICreatableInstance
 	{
+		public new Motor Clone();
 		public float CurrentAngle { get; set; }
 		public float DesiredAngle { get; set; }
 		public float MaxVelocity { get; set; }
@@ -2963,18 +3257,22 @@ namespace Roblox
 	
 	public interface Motor6D : Motor, ICreatableInstance
 	{
+		public new Motor6D Clone();
 	}
 	
 	public interface Rotate : JointInstance, ICreatableInstance
 	{
+		public new Rotate Clone();
 	}
 	
 	public interface Snap : JointInstance, ICreatableInstance
 	{
+		public new Snap Clone();
 	}
 	
 	public interface VelocityMotor : JointInstance, ICreatableInstance
 	{
+		public new VelocityMotor Clone();
 		public float CurrentAngle { get; set; }
 		public float DesiredAngle { get; set; }
 		public Hole? Hole { get; set; }
@@ -2983,10 +3281,12 @@ namespace Roblox
 	
 	public interface Weld : JointInstance, ICreatableInstance
 	{
+		public new Weld Clone();
 	}
 	
 	public interface JointsService : IServiceInstance
 	{
+		public new JointsService Clone();
 		public void ClearJoinAfterMoveJoints();
 		public void CreateJoinAfterMoveJoints();
 		public void SetJoinAfterMoveInstance(Instance joinInstance);
@@ -2996,6 +3296,7 @@ namespace Roblox
 	
 	public interface Keyframe : ICreatableInstance
 	{
+		public new Keyframe Clone();
 		public float Time { get; set; }
 		public void AddMarker(Instance marker);
 		public void AddPose(Pose pose);
@@ -3007,11 +3308,13 @@ namespace Roblox
 	
 	public interface KeyframeMarker : ICreatableInstance
 	{
+		public new KeyframeMarker Clone();
 		public string Value { get; set; }
 	}
 	
 	public partial interface KeyframeSequenceProvider : IServiceInstance
 	{
+		public new KeyframeSequenceProvider Clone();
 		public string RegisterActiveKeyframeSequence(KeyframeSequence keyframeSequence);
 		public string RegisterKeyframeSequence(KeyframeSequence keyframeSequence);
 		public Instance GetAnimations(long userId);
@@ -3020,14 +3323,17 @@ namespace Roblox
 	
 	public interface LSPFileSyncService : IServiceInstance
 	{
+		public new LSPFileSyncService Clone();
 	}
 	
 	public interface LanguageService : IServiceInstance
 	{
+		public new LanguageService Clone();
 	}
 	
 	public interface Light : Instance
 	{
+		public new Light Clone();
 		public float Brightness { get; set; }
 		public Color3 Color { get; set; }
 		public bool Enabled { get; set; }
@@ -3036,11 +3342,13 @@ namespace Roblox
 	
 	public interface PointLight : Light, ICreatableInstance
 	{
+		public new PointLight Clone();
 		public float Range { get; set; }
 	}
 	
 	public interface SpotLight : Light, ICreatableInstance
 	{
+		public new SpotLight Clone();
 		public float Angle { get; set; }
 		public Enum.NormalId.Type Face { get; set; }
 		public float Range { get; set; }
@@ -3048,6 +3356,7 @@ namespace Roblox
 	
 	public interface SurfaceLight : Light, ICreatableInstance
 	{
+		public new SurfaceLight Clone();
 		public float Angle { get; set; }
 		public Enum.NormalId.Type Face { get; set; }
 		public float Range { get; set; }
@@ -3055,6 +3364,7 @@ namespace Roblox
 	
 	public interface Lighting : IServiceInstance
 	{
+		public new Lighting Clone();
 		public Color3 Ambient { get; set; }
 		public float Brightness { get; set; }
 		public float ClockTime { get; set; }
@@ -3083,14 +3393,17 @@ namespace Roblox
 	
 	public interface LinkingService : IServiceInstance
 	{
+		public new LinkingService Clone();
 	}
 	
 	public interface LiveScriptingService : IServiceInstance
 	{
+		public new LiveScriptingService Clone();
 	}
 	
 	public interface LocalizationService : IServiceInstance
 	{
+		public new LocalizationService Clone();
 		public string RobloxLocaleId { get; }
 		public string SystemLocaleId { get; }
 		public Instance[] GetCorescriptLocalizations();
@@ -3103,6 +3416,7 @@ namespace Roblox
 	
 	public interface LocalizationTable : ICreatableInstance
 	{
+		public new LocalizationTable Clone();
 		public string SourceLocaleId { get; set; }
 		public string GetContents();
 		public object[] GetEntries();
@@ -3124,22 +3438,27 @@ namespace Roblox
 	
 	public interface CloudLocalizationTable : LocalizationTable
 	{
+		public new CloudLocalizationTable Clone();
 	}
 	
 	public interface LodDataEntity : Instance
 	{
+		public new LodDataEntity Clone();
 	}
 	
 	public interface LodDataService : IServiceInstance
 	{
+		public new LodDataService Clone();
 	}
 	
 	public interface LogReporterService : IServiceInstance
 	{
+		public new LogReporterService Clone();
 	}
 	
 	public interface LogService : IServiceInstance
 	{
+		public new LogService Clone();
 		public void ClearOutput();
 		public object[] GetLogHistory();
 		public ScriptSignal<string, Enum.MessageType.Type> MessageOut { get; }
@@ -3147,10 +3466,12 @@ namespace Roblox
 	
 	public interface LuaSourceContainer : Instance
 	{
+		public new LuaSourceContainer Clone();
 	}
 	
 	public interface BaseScript : LuaSourceContainer
 	{
+		public new BaseScript Clone();
 		public bool Disabled { get; set; }
 		public bool Enabled { get; set; }
 		public string LinkedSource { get; set; }
@@ -3159,23 +3480,28 @@ namespace Roblox
 	
 	public interface Script : BaseScript, ICreatableInstance
 	{
+		public new Script Clone();
 	}
 	
 	public interface LocalScript : Script, ICreatableInstance
 	{
+		public new LocalScript Clone();
 	}
 	
 	public interface ModuleScript : LuaSourceContainer, ICreatableInstance
 	{
+		public new ModuleScript Clone();
 		public string LinkedSource { get; set; }
 	}
 	
 	public interface LuauScriptAnalyzerService : IServiceInstance
 	{
+		public new LuauScriptAnalyzerService Clone();
 	}
 	
 	public interface MarkerCurve : ICreatableInstance
 	{
+		public new MarkerCurve Clone();
 		public int Length { get; }
 		public object GetMarkerAtIndex(int index);
 		public object[] GetMarkers();
@@ -3185,6 +3511,7 @@ namespace Roblox
 	
 	public interface MarketplaceService : IServiceInstance
 	{
+		public new MarketplaceService Clone();
 		public void PromptBulkPurchase(Player player, object[] lineItems, object options);
 		public void PromptBundlePurchase(Player player, long bundleId);
 		public void PromptGamePassPurchase(Player player, long gamePassId);
@@ -3212,14 +3539,17 @@ namespace Roblox
 	
 	public interface MaterialGenerationService : IServiceInstance
 	{
+		public new MaterialGenerationService Clone();
 	}
 	
 	public interface MaterialGenerationSession : Instance
 	{
+		public new MaterialGenerationSession Clone();
 	}
 	
 	public interface MaterialService : IServiceInstance
 	{
+		public new MaterialService Clone();
 		public string GetBaseMaterialOverride(Enum.Material.Type material);
 		public MaterialVariant GetMaterialVariant(Enum.Material.Type material, string name);
 		public void SetBaseMaterialOverride(Enum.Material.Type material, string name);
@@ -3227,6 +3557,7 @@ namespace Roblox
 	
 	public interface MaterialVariant : ICreatableInstance
 	{
+		public new MaterialVariant Clone();
 		public Enum.Material.Type BaseMaterial { get; set; }
 		public PhysicalProperties CustomPhysicalProperties { get; set; }
 		public Enum.MaterialPattern.Type MaterialPattern { get; set; }
@@ -3235,6 +3566,7 @@ namespace Roblox
 	
 	public interface MemoryStoreHashMap : Instance
 	{
+		public new MemoryStoreHashMap Clone();
 		public object GetAsync(string key);
 		public MemoryStoreHashMapPages ListItemsAsync(int count);
 		public void RemoveAsync(string key);
@@ -3244,6 +3576,7 @@ namespace Roblox
 	
 	public interface MemoryStoreQueue : Instance
 	{
+		public new MemoryStoreQueue Clone();
 		public void AddAsync(object value, long expiration, double? priority = null);
 		public object[] ReadAsync(int count, bool? allOrNothing = null, double? waitTimeout = null);
 		public void RemoveAsync(string id);
@@ -3251,6 +3584,7 @@ namespace Roblox
 	
 	public interface MemoryStoreService : IServiceInstance
 	{
+		public new MemoryStoreService Clone();
 		public MemoryStoreHashMap GetHashMap(string name);
 		public MemoryStoreQueue GetQueue(string name, int? invisibilityTimeout = null);
 		public MemoryStoreSortedMap GetSortedMap(string name);
@@ -3258,6 +3592,7 @@ namespace Roblox
 	
 	public interface MemoryStoreSortedMap : Instance
 	{
+		public new MemoryStoreSortedMap Clone();
 		public object[] GetAsync(string key);
 		public object[] GetRangeAsync(Enum.SortDirection.Type direction, int count, object exclusiveLowerBound, object exclusiveUpperBound);
 		public void RemoveAsync(string key);
@@ -3267,32 +3602,39 @@ namespace Roblox
 	
 	public interface MessageBusConnection : Instance
 	{
+		public new MessageBusConnection Clone();
 	}
 	
 	public interface MessageBusService : IServiceInstance
 	{
+		public new MessageBusService Clone();
 	}
 	
 	public interface MessagingService : IServiceInstance
 	{
+		public new MessagingService Clone();
 		public void PublishAsync(string topic, object message);
 		public ScriptConnection SubscribeAsync(string topic, Action callback);
 	}
 	
 	public interface MetaBreakpoint : Instance
 	{
+		public new MetaBreakpoint Clone();
 	}
 	
 	public interface MetaBreakpointContext : Instance
 	{
+		public new MetaBreakpointContext Clone();
 	}
 	
 	public interface MetaBreakpointManager : IServiceInstance
 	{
+		public new MetaBreakpointManager Clone();
 	}
 	
 	public interface Mouse : Instance
 	{
+		public new Mouse Clone();
 		public CFrame Hit { get; }
 		public string Icon { get; set; }
 		public CFrame Origin { get; }
@@ -3318,15 +3660,18 @@ namespace Roblox
 	
 	public interface PlayerMouse : Mouse
 	{
+		public new PlayerMouse Clone();
 	}
 	
 	public interface NetworkMarker : Instance
 	{
+		public new NetworkMarker Clone();
 		public ScriptSignal Received { get; }
 	}
 	
 	public interface NoCollisionConstraint : ICreatableInstance
 	{
+		public new NoCollisionConstraint Clone();
 		public bool Enabled { get; set; }
 		public BasePart? Part0 { get; set; }
 		public BasePart? Part1 { get; set; }
@@ -3334,36 +3679,43 @@ namespace Roblox
 	
 	public interface Noise : ICreatableInstance
 	{
+		public new Noise Clone();
 	}
 	
 	public interface OmniRecommendationsService : IServiceInstance
 	{
+		public new OmniRecommendationsService Clone();
 	}
 	
 	public interface OpenCloudApiV1 : Instance
 	{
+		public new OpenCloudApiV1 Clone();
 		public OpenCloudModel CreateModel(string name);
 		public OpenCloudModel CreateUserNotificationAsync(string user, OpenCloudModel userNotification);
 	}
 	
 	public interface OpenCloudService : IServiceInstance
 	{
+		public new OpenCloudService Clone();
 		public OpenCloudApiV1 GetApiV1();
 		public object InvokeAsync(string version, string methodName, object arguments);
 	}
 	
 	public interface OperationGraph : ICreatableInstance
 	{
+		public new OperationGraph Clone();
 	}
 	
 	public interface PVInstance : Instance
 	{
+		public new PVInstance Clone();
 		public CFrame GetPivot();
 		public void PivotTo(CFrame targetCFrame);
 	}
 	
 	public partial interface BasePart : PVInstance
 	{
+		public new BasePart Clone();
 		public bool Anchored { get; set; }
 		public Vector3 AssemblyAngularVelocity { get; set; }
 		public Vector3 AssemblyCenterOfMass { get; }
@@ -3441,24 +3793,29 @@ namespace Roblox
 	
 	public interface CornerWedgePart : BasePart, ICreatableInstance
 	{
+		public new CornerWedgePart Clone();
 	}
 	
 	public interface FormFactorPart : BasePart
 	{
+		public new FormFactorPart Clone();
 		public Enum.FormFactor.Type FormFactor { get; set; }
 	}
 	
 	public interface Part : FormFactorPart, ICreatableInstance
 	{
+		public new Part Clone();
 		public Enum.PartType.Type Shape { get; set; }
 	}
 	
 	public interface Platform : Part
 	{
+		public new Platform Clone();
 	}
 	
 	public interface Seat : Part, ICreatableInstance
 	{
+		public new Seat Clone();
 		public bool Disabled { get; set; }
 		public Humanoid? Occupant { get; }
 		public void Sit(Humanoid humanoid);
@@ -3466,6 +3823,7 @@ namespace Roblox
 	
 	public interface SkateboardPlatform : Part, ICreatableInstance
 	{
+		public new SkateboardPlatform Clone();
 		public SkateboardController? Controller { get; }
 		public Humanoid? ControllingHumanoid { get; }
 		public int Steer { get; set; }
@@ -3479,6 +3837,7 @@ namespace Roblox
 	
 	public interface SpawnLocation : Part, ICreatableInstance
 	{
+		public new SpawnLocation Clone();
 		public bool AllowTeamChangeOnTouch { get; set; }
 		public int Duration { get; set; }
 		public bool Enabled { get; set; }
@@ -3488,10 +3847,12 @@ namespace Roblox
 	
 	public interface WedgePart : FormFactorPart, ICreatableInstance
 	{
+		public new WedgePart Clone();
 	}
 	
 	public partial interface Terrain : BasePart
 	{
+		public new Terrain Clone();
 		public bool IsSmooth { get; }
 		public Region3int16 MaxExtents { get; }
 		public Color3 WaterColor { get; set; }
@@ -3531,6 +3892,7 @@ namespace Roblox
 	
 	public interface TriangleMeshPart : BasePart
 	{
+		public new TriangleMeshPart Clone();
 		public Enum.CollisionFidelity.Type CollisionFidelity { get; set; }
 		public Enum.FluidFidelity.Type FluidFidelity { get; set; }
 		public Vector3 MeshSize { get; }
@@ -3538,6 +3900,7 @@ namespace Roblox
 	
 	public interface MeshPart : TriangleMeshPart, ICreatableInstance
 	{
+		public new MeshPart Clone();
 		public bool DoubleSided { get; set; }
 		public string MeshId { get; }
 		public Enum.RenderFidelity.Type RenderFidelity { get; set; }
@@ -3547,6 +3910,7 @@ namespace Roblox
 	
 	public interface PartOperation : TriangleMeshPart, ICreatableInstance
 	{
+		public new PartOperation Clone();
 		public Enum.RenderFidelity.Type RenderFidelity { get; set; }
 		public float SmoothingAngle { get; set; }
 		public int TriangleCount { get; }
@@ -3556,23 +3920,28 @@ namespace Roblox
 	
 	public interface IntersectOperation : PartOperation, ICreatableInstance
 	{
+		public new IntersectOperation Clone();
 	}
 	
 	public interface NegateOperation : PartOperation, ICreatableInstance
 	{
+		public new NegateOperation Clone();
 	}
 	
 	public interface UnionOperation : PartOperation, ICreatableInstance
 	{
+		public new UnionOperation Clone();
 	}
 	
 	public interface TrussPart : BasePart, ICreatableInstance
 	{
+		public new TrussPart Clone();
 		public Enum.Style.Type Style { get; set; }
 	}
 	
 	public interface VehicleSeat : BasePart, ICreatableInstance
 	{
+		public new VehicleSeat Clone();
 		public int AreHingesDetected { get; }
 		public bool Disabled { get; set; }
 		public bool HeadsUpDisplay { get; set; }
@@ -3589,6 +3958,7 @@ namespace Roblox
 	
 	public interface Model : PVInstance, ICreatableInstance
 	{
+		public new Model Clone();
 		public Enum.ModelStreamingMode.Type ModelStreamingMode { get; set; }
 		public BasePart? PrimaryPart { get; set; }
 		public CFrame WorldPivot { get; set; }
@@ -3614,6 +3984,7 @@ namespace Roblox
 	
 	public interface Actor : Model, ICreatableInstance
 	{
+		public new Actor Clone();
 		public ScriptConnection BindToMessage(string topic, Action function);
 		public ScriptConnection BindToMessageParallel(string topic, Action function);
 		public void SendMessage(string topic, object[] message);
@@ -3621,11 +3992,13 @@ namespace Roblox
 	
 	public interface BackpackItem : Model
 	{
+		public new BackpackItem Clone();
 		public string TextureId { get; set; }
 	}
 	
 	public interface Tool : BackpackItem, ICreatableInstance
 	{
+		public new Tool Clone();
 		public bool CanBeDropped { get; set; }
 		public bool Enabled { get; set; }
 		public CFrame Grip { get; set; }
@@ -3642,6 +4015,7 @@ namespace Roblox
 	
 	public partial interface WorldRoot : Model
 	{
+		public new WorldRoot Clone();
 		public bool ArePartsTouchingOthers(Instance[] partList, float? overlapIgnored = null);
 		public RaycastResult Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
 		public void BulkMoveTo(Instance[] partList, object[] cframeList, Enum.BulkMoveMode.Type? eventMode = null);
@@ -3663,6 +4037,7 @@ namespace Roblox
 	
 	public partial interface Workspace : WorldRoot, IServiceInstance
 	{
+		public new Workspace Clone();
 		public float AirDensity { get; set; }
 		public bool AllowThirdPartySales { get; set; }
 		public Enum.ClientAnimatorThrottlingMode.Type ClientAnimatorThrottling { get; set; }
@@ -3687,10 +4062,12 @@ namespace Roblox
 	
 	public interface WorldModel : WorldRoot, ICreatableInstance
 	{
+		public new WorldModel Clone();
 	}
 	
 	public interface PackageLink : Instance
 	{
+		public new PackageLink Clone();
 		public string DefaultName { get; }
 		public string PackageId { get; }
 		public string SerializedDefaultAttributes { get; }
@@ -3699,10 +4076,12 @@ namespace Roblox
 	
 	public interface PackageUIService : IServiceInstance
 	{
+		public new PackageUIService Clone();
 	}
 	
 	public interface Pages : Instance
 	{
+		public new Pages Clone();
 		public bool IsFinished { get; }
 		public object[] GetCurrentPage();
 		public void AdvanceToNextPageAsync();
@@ -3710,60 +4089,74 @@ namespace Roblox
 	
 	public interface AudioPages : Pages
 	{
+		public new AudioPages Clone();
 	}
 	
 	public interface BanHistoryPages : Pages
 	{
+		public new BanHistoryPages Clone();
 	}
 	
 	public interface CatalogPages : Pages
 	{
+		public new CatalogPages Clone();
 	}
 	
 	public interface DataStoreKeyPages : Pages
 	{
+		public new DataStoreKeyPages Clone();
 		public string Cursor { get; }
 	}
 	
 	public interface DataStoreListingPages : Pages
 	{
+		public new DataStoreListingPages Clone();
 		public string Cursor { get; }
 	}
 	
 	public interface DataStorePages : Pages
 	{
+		public new DataStorePages Clone();
 	}
 	
 	public interface DataStoreVersionPages : Pages
 	{
+		public new DataStoreVersionPages Clone();
 	}
 	
 	public interface FriendPages : Pages
 	{
+		public new FriendPages Clone();
 	}
 	
 	public interface InventoryPages : Pages
 	{
+		public new InventoryPages Clone();
 	}
 	
 	public interface EmotesPages : InventoryPages
 	{
+		public new EmotesPages Clone();
 	}
 	
 	public interface MemoryStoreHashMapPages : Pages
 	{
+		public new MemoryStoreHashMapPages Clone();
 	}
 	
 	public interface OutfitPages : Pages
 	{
+		public new OutfitPages Clone();
 	}
 	
 	public interface StandardPages : Pages
 	{
+		public new StandardPages Clone();
 	}
 	
 	public interface ParticleEmitter : ICreatableInstance
 	{
+		public new ParticleEmitter Clone();
 		public Vector3 Acceleration { get; set; }
 		public float Brightness { get; set; }
 		public ColorSequence Color { get; set; }
@@ -3804,10 +4197,12 @@ namespace Roblox
 	
 	public interface PatchBundlerFileWatch : IServiceInstance
 	{
+		public new PatchBundlerFileWatch Clone();
 	}
 	
 	public interface PatchMapping : Instance
 	{
+		public new PatchMapping Clone();
 		public bool FlattenTree { get; set; }
 		public string PatchId { get; set; }
 		public string TargetPath { get; set; }
@@ -3815,6 +4210,7 @@ namespace Roblox
 	
 	public interface Path : Instance
 	{
+		public new Path Clone();
 		public Enum.PathStatus.Type Status { get; }
 		public object[] GetPointCoordinates();
 		public object[] GetWaypoints();
@@ -3826,6 +4222,7 @@ namespace Roblox
 	
 	public interface PathfindingLink : ICreatableInstance
 	{
+		public new PathfindingLink Clone();
 		public Attachment? Attachment0 { get; set; }
 		public Attachment? Attachment1 { get; set; }
 		public bool IsBidirectional { get; set; }
@@ -3834,12 +4231,14 @@ namespace Roblox
 	
 	public interface PathfindingModifier : ICreatableInstance
 	{
+		public new PathfindingModifier Clone();
 		public string Label { get; set; }
 		public bool PassThrough { get; set; }
 	}
 	
 	public interface PathfindingService : IServiceInstance
 	{
+		public new PathfindingService Clone();
 		public float EmptyCutoff { get; set; }
 		public Instance CreatePath(object? agentParameters = null);
 		public Instance ComputeRawPathAsync(Vector3 start, Vector3 finish, float maxDistance);
@@ -3849,18 +4248,22 @@ namespace Roblox
 	
 	public interface PausedState : Instance
 	{
+		public new PausedState Clone();
 	}
 	
 	public interface PausedStateBreakpoint : PausedState
 	{
+		public new PausedStateBreakpoint Clone();
 	}
 	
 	public interface PausedStateException : PausedState
 	{
+		public new PausedStateException Clone();
 	}
 	
 	public interface PhysicsService : IServiceInstance
 	{
+		public new PhysicsService Clone();
 		public bool CollisionGroupContainsPart(string name, BasePart part);
 		public void CollisionGroupSetCollidable(string name1, string name2, bool collidable);
 		public bool CollisionGroupsAreCollidable(string name1, string name2);
@@ -3880,22 +4283,27 @@ namespace Roblox
 	
 	public interface PlaceStatsService : IServiceInstance
 	{
+		public new PlaceStatsService Clone();
 	}
 	
 	public interface PlacesService : IServiceInstance
 	{
+		public new PlacesService Clone();
 	}
 	
 	public interface PlatformCloudStorageService : IServiceInstance
 	{
+		public new PlatformCloudStorageService Clone();
 	}
 	
 	public interface PlatformFriendsService : IServiceInstance
 	{
+		public new PlatformFriendsService Clone();
 	}
 	
 	public partial interface Player : Instance
 	{
+		public new Player Clone();
 		public int AccountAge { get; }
 		public bool AutoJumpEnabled { get; set; }
 		public float CameraMaxZoomDistance { get; set; }
@@ -3962,10 +4370,12 @@ namespace Roblox
 	
 	public interface PlayerHydrationService : IServiceInstance
 	{
+		public new PlayerHydrationService Clone();
 	}
 	
-	public interface PlayerScripts : Instance
+	public partial interface PlayerScripts : Instance
 	{
+		public new PlayerScripts Clone();
 		public void ClearComputerCameraMovementModes();
 		public void ClearComputerMovementModes();
 		public void ClearTouchCameraMovementModes();
@@ -3978,11 +4388,13 @@ namespace Roblox
 	
 	public interface PlayerViewService : IServiceInstance
 	{
+		public new PlayerViewService Clone();
 		public CFrame GetDeviceCameraCFrame(Player? player = null);
 	}
 	
 	public partial interface Players : IServiceInstance
 	{
+		public new Players Clone();
 		public bool BubbleChat { get; }
 		public bool CharacterAutoLoads { get; set; }
 		public bool ClassicChat { get; }
@@ -4016,27 +4428,33 @@ namespace Roblox
 	
 	public interface PluginCapabilities : ICreatableInstance
 	{
+		public new PluginCapabilities Clone();
 	}
 	
 	public interface PluginManagementService : IServiceInstance
 	{
+		public new PluginManagementService Clone();
 	}
 	
 	public partial interface PluginManagerInterface : Instance
 	{
+		public new PluginManagerInterface Clone();
 	}
 	
 	public interface PluginPolicyService : IServiceInstance
 	{
+		public new PluginPolicyService Clone();
 	}
 	
 	public interface PolicyService : IServiceInstance
 	{
+		public new PolicyService Clone();
 		public object GetPolicyInfoForPlayerAsync(Player player);
 	}
 	
 	public interface PoseBase : Instance
 	{
+		public new PoseBase Clone();
 		public Enum.PoseEasingDirection.Type EasingDirection { get; set; }
 		public Enum.PoseEasingStyle.Type EasingStyle { get; set; }
 		public float Weight { get; set; }
@@ -4044,11 +4462,13 @@ namespace Roblox
 	
 	public interface NumberPose : PoseBase, ICreatableInstance
 	{
+		public new NumberPose Clone();
 		public double Value { get; set; }
 	}
 	
 	public interface Pose : PoseBase, ICreatableInstance
 	{
+		public new Pose Clone();
 		public CFrame CFrame { get; set; }
 		public float MaskWeight { get; set; }
 		public void AddSubPose(Pose pose);
@@ -4058,11 +4478,13 @@ namespace Roblox
 	
 	public interface PostEffect : Instance
 	{
+		public new PostEffect Clone();
 		public bool Enabled { get; set; }
 	}
 	
 	public interface BloomEffect : PostEffect, ICreatableInstance
 	{
+		public new BloomEffect Clone();
 		public float Intensity { get; set; }
 		public float Size { get; set; }
 		public float Threshold { get; set; }
@@ -4070,11 +4492,13 @@ namespace Roblox
 	
 	public interface BlurEffect : PostEffect, ICreatableInstance
 	{
+		public new BlurEffect Clone();
 		public float Size { get; set; }
 	}
 	
 	public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
 	{
+		public new ColorCorrectionEffect Clone();
 		public float Brightness { get; set; }
 		public float Contrast { get; set; }
 		public float Saturation { get; set; }
@@ -4083,11 +4507,13 @@ namespace Roblox
 	
 	public interface ColorGradingEffect : PostEffect, ICreatableInstance
 	{
+		public new ColorGradingEffect Clone();
 		public Enum.TonemapperPreset.Type TonemapperPreset { get; set; }
 	}
 	
 	public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
 	{
+		public new DepthOfFieldEffect Clone();
 		public float FarIntensity { get; set; }
 		public float FocusDistance { get; set; }
 		public float InFocusRadius { get; set; }
@@ -4096,20 +4522,24 @@ namespace Roblox
 	
 	public interface SunRaysEffect : PostEffect, ICreatableInstance
 	{
+		public new SunRaysEffect Clone();
 		public float Intensity { get; set; }
 		public float Spread { get; set; }
 	}
 	
 	public interface ProcessInstancePhysicsService : IServiceInstance
 	{
+		public new ProcessInstancePhysicsService Clone();
 	}
 	
 	public interface ProjectFolderService : IServiceInstance
 	{
+		public new ProjectFolderService Clone();
 	}
 	
 	public interface ProximityPrompt : ICreatableInstance
 	{
+		public new ProximityPrompt Clone();
 		public string ActionText { get; set; }
 		public bool AutoLocalize { get; set; }
 		public bool ClickablePrompt { get; set; }
@@ -4136,6 +4566,7 @@ namespace Roblox
 	
 	public interface ProximityPromptService : IServiceInstance
 	{
+		public new ProximityPromptService Clone();
 		public bool Enabled { get; set; }
 		public int MaxPromptsVisible { get; set; }
 		public ScriptSignal<ProximityPrompt, Player> PromptButtonHoldBegan { get; }
@@ -4148,50 +4579,61 @@ namespace Roblox
 	
 	public interface PublishService : IServiceInstance
 	{
+		public new PublishService Clone();
 	}
 	
 	public interface RTAnimationTracker : ICreatableInstance
 	{
+		public new RTAnimationTracker Clone();
 		public ScriptSignal<Enum.TrackerError.Type, string> TrackerError { get; }
 		public ScriptSignal<Enum.TrackerPromptEvent.Type> TrackerPrompt { get; }
 	}
 	
 	public interface ReflectionService : IServiceInstance
 	{
+		public new ReflectionService Clone();
 	}
 	
 	public interface RemoteCursorService : IServiceInstance
 	{
+		public new RemoteCursorService Clone();
 	}
 	
 	public interface RemoteDebuggerServer : IServiceInstance
 	{
+		public new RemoteDebuggerServer Clone();
 	}
 	
-	public interface ReplicatedFirst : IServiceInstance
+	public partial interface ReplicatedFirst : IServiceInstance
 	{
+		public new ReplicatedFirst Clone();
 		public void RemoveDefaultLoadingScreen();
 	}
 	
-	public interface ReplicatedStorage : IServiceInstance
+	public partial interface ReplicatedStorage : IServiceInstance
 	{
+		public new ReplicatedStorage Clone();
 	}
 	
 	public interface RibbonNotificationService : IServiceInstance
 	{
+		public new RibbonNotificationService Clone();
 	}
 	
 	public interface RobloxServerStorage : IServiceInstance
 	{
+		public new RobloxServerStorage Clone();
 	}
 	
 	public interface RomarkService : IServiceInstance
 	{
+		public new RomarkService Clone();
 		public void EndRemoteRomarkTest();
 	}
 	
 	public interface RotationCurve : ICreatableInstance
 	{
+		public new RotationCurve Clone();
 		public int Length { get; }
 		public RotationCurveKey GetKeyAtIndex(int index);
 		public object[] GetKeyIndicesAtTime(float time);
@@ -4204,10 +4646,12 @@ namespace Roblox
 	
 	public interface RtMessagingService : IServiceInstance
 	{
+		public new RtMessagingService Clone();
 	}
 	
 	public partial interface RunService : IServiceInstance
 	{
+		public new RunService Clone();
 		public void BindToRenderStep(string name, int priority, Action function);
 		public bool IsClient();
 		public bool IsRunMode();
@@ -4226,10 +4670,12 @@ namespace Roblox
 	
 	public interface SafetyService : IServiceInstance
 	{
+		public new SafetyService Clone();
 	}
 	
 	public interface ScreenshotHud : Instance
 	{
+		public new ScreenshotHud Clone();
 		public string CameraButtonIcon { get; set; }
 		public UDim2 CameraButtonPosition { get; set; }
 		public UDim2 CloseButtonPosition { get; set; }
@@ -4241,10 +4687,12 @@ namespace Roblox
 	
 	public interface ScriptBuilder : Instance
 	{
+		public new ScriptBuilder Clone();
 	}
 	
 	public interface SyncScriptBuilder : ScriptBuilder
 	{
+		public new SyncScriptBuilder Clone();
 		public Enum.CompileTarget.Type CompileTarget { get; set; }
 		public bool CoverageInfo { get; set; }
 		public bool DebugInfo { get; set; }
@@ -4254,51 +4702,63 @@ namespace Roblox
 	
 	public interface ScriptChangeService : IServiceInstance
 	{
+		public new ScriptChangeService Clone();
 	}
 	
 	public interface ScriptCloneWatcher : IServiceInstance
 	{
+		public new ScriptCloneWatcher Clone();
 	}
 	
 	public interface ScriptCloneWatcherHelper : IServiceInstance
 	{
+		public new ScriptCloneWatcherHelper Clone();
 	}
 	
 	public interface ScriptCommitService : IServiceInstance
 	{
+		public new ScriptCommitService Clone();
 	}
 	
 	public partial interface ScriptContext : IServiceInstance
 	{
+		public new ScriptContext Clone();
 		public ScriptSignal<string, string, Instance> Error { get; }
 	}
 	
 	public partial interface ScriptDocument : Instance
 	{
+		public new ScriptDocument Clone();
 	}
 	
 	public partial interface ScriptEditorService : IServiceInstance
 	{
+		public new ScriptEditorService Clone();
 	}
 	
 	public partial interface ScriptProfilerService : IServiceInstance
 	{
+		public new ScriptProfilerService Clone();
 	}
 	
 	public interface ScriptRegistrationService : IServiceInstance
 	{
+		public new ScriptRegistrationService Clone();
 	}
 	
 	public interface ScriptRuntime : Instance
 	{
+		public new ScriptRuntime Clone();
 	}
 	
 	public interface SelectionHighlightManager : IServiceInstance
 	{
+		public new SelectionHighlightManager Clone();
 	}
 	
 	public interface SensorBase : Instance
 	{
+		public new SensorBase Clone();
 		public Enum.SensorUpdateType.Type UpdateType { get; set; }
 		public void Sense();
 		public ScriptSignal OnSensorOutputChanged { get; }
@@ -4306,22 +4766,26 @@ namespace Roblox
 	
 	public interface AtmosphereSensor : SensorBase, ICreatableInstance
 	{
+		public new AtmosphereSensor Clone();
 		public float AirDensity { get; }
 		public Vector3 RelativeWindVelocity { get; }
 	}
 	
 	public interface BuoyancySensor : SensorBase, ICreatableInstance
 	{
+		public new BuoyancySensor Clone();
 		public bool FullySubmerged { get; set; }
 		public bool TouchingSurface { get; set; }
 	}
 	
 	public interface ControllerSensor : SensorBase
 	{
+		public new ControllerSensor Clone();
 	}
 	
 	public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
 	{
+		public new ControllerPartSensor Clone();
 		public CFrame HitFrame { get; set; }
 		public Vector3 HitNormal { get; set; }
 		public float SearchDistance { get; set; }
@@ -4329,16 +4793,19 @@ namespace Roblox
 		public Enum.SensorMode.Type SensorMode { get; set; }
 	}
 	
-	public interface ServerScriptService : IServiceInstance
+	public partial interface ServerScriptService : IServiceInstance
 	{
+		public new ServerScriptService Clone();
 	}
 	
-	public interface ServerStorage : IServiceInstance
+	public partial interface ServerStorage : IServiceInstance
 	{
+		public new ServerStorage Clone();
 	}
 	
 	public partial interface ServiceProvider : Instance
 	{
+		public new ServiceProvider Clone();
 		public ScriptSignal Close { get; }
 		public ScriptSignal<Instance> ServiceAdded { get; }
 		public ScriptSignal<Instance> ServiceRemoving { get; }
@@ -4346,6 +4813,7 @@ namespace Roblox
 	
 	public partial interface DataModel : ServiceProvider
 	{
+		public new DataModel Clone();
 		public long CreatorId { get; }
 		public Enum.CreatorType.Type CreatorType { get; }
 		public long GameId { get; }
@@ -4370,34 +4838,41 @@ namespace Roblox
 	
 	public interface GenericSettings : ServiceProvider
 	{
+		public new GenericSettings Clone();
 	}
 	
 	public interface UserSettings : GenericSettings
 	{
+		public new UserSettings Clone();
 		public bool IsUserFeatureEnabled(string name);
 		public void Reset();
 	}
 	
 	public interface ServiceVisibilityService : IServiceInstance
 	{
+		public new ServiceVisibilityService Clone();
 	}
 	
 	public interface SessionService : IServiceInstance
 	{
+		public new SessionService Clone();
 	}
 	
 	public interface SharedTableRegistry : IServiceInstance
 	{
+		public new SharedTableRegistry Clone();
 		public SharedTable GetSharedTable(string name);
 		public void SetSharedTable(string name, SharedTable? st = null);
 	}
 	
 	public interface ShorelineUpgraderService : IServiceInstance
 	{
+		public new ShorelineUpgraderService Clone();
 	}
 	
 	public interface Sky : ICreatableInstance
 	{
+		public new Sky Clone();
 		public bool CelestialBodiesShown { get; set; }
 		public float MoonAngularSize { get; set; }
 		public string MoonTextureId { get; set; }
@@ -4414,6 +4889,7 @@ namespace Roblox
 	
 	public interface Smoke : ICreatableInstance
 	{
+		public new Smoke Clone();
 		public Color3 Color { get; set; }
 		public bool Enabled { get; set; }
 		public float Opacity { get; set; }
@@ -4424,14 +4900,17 @@ namespace Roblox
 	
 	public interface SmoothVoxelsUpgraderService : IServiceInstance
 	{
+		public new SmoothVoxelsUpgraderService Clone();
 	}
 	
 	public interface SnippetService : IServiceInstance
 	{
+		public new SnippetService Clone();
 	}
 	
 	public interface SocialService : IServiceInstance
 	{
+		public new SocialService Clone();
 		public void HideSelfView();
 		public void PromptGameInvite(Player player, ExperienceInviteOptions? experienceInviteOptions = null);
 		public void PromptPhoneBook(Player player, string tag);
@@ -4445,6 +4924,7 @@ namespace Roblox
 	
 	public interface Sound : ICreatableInstance
 	{
+		public new Sound Clone();
 		public float EmitterSize { get; set; }
 		public bool IsLoaded { get; }
 		public NumberRange LoopRegion { get; set; }
@@ -4481,12 +4961,14 @@ namespace Roblox
 	
 	public interface SoundEffect : Instance
 	{
+		public new SoundEffect Clone();
 		public bool Enabled { get; set; }
 		public int Priority { get; set; }
 	}
 	
 	public interface ChorusSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new ChorusSoundEffect Clone();
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
@@ -4494,6 +4976,7 @@ namespace Roblox
 	
 	public interface CompressorSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new CompressorSoundEffect Clone();
 		public float Attack { get; set; }
 		public float GainMakeup { get; set; }
 		public float Ratio { get; set; }
@@ -4504,24 +4987,29 @@ namespace Roblox
 	
 	public interface CustomSoundEffect : SoundEffect
 	{
+		public new CustomSoundEffect Clone();
 	}
 	
 	public interface AssetSoundEffect : CustomSoundEffect
 	{
+		public new AssetSoundEffect Clone();
 	}
 	
 	public interface ChannelSelectorSoundEffect : CustomSoundEffect
 	{
+		public new ChannelSelectorSoundEffect Clone();
 		public int Channel { get; set; }
 	}
 	
 	public interface DistortionSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new DistortionSoundEffect Clone();
 		public float Level { get; set; }
 	}
 	
 	public interface EchoSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new EchoSoundEffect Clone();
 		public float Delay { get; set; }
 		public float DryLevel { get; set; }
 		public float Feedback { get; set; }
@@ -4530,6 +5018,7 @@ namespace Roblox
 	
 	public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new EqualizerSoundEffect Clone();
 		public float HighGain { get; set; }
 		public float LowGain { get; set; }
 		public float MidGain { get; set; }
@@ -4537,6 +5026,7 @@ namespace Roblox
 	
 	public interface FlangeSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new FlangeSoundEffect Clone();
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
@@ -4544,11 +5034,13 @@ namespace Roblox
 	
 	public interface PitchShiftSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new PitchShiftSoundEffect Clone();
 		public float Octave { get; set; }
 	}
 	
 	public interface ReverbSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new ReverbSoundEffect Clone();
 		public float DecayTime { get; set; }
 		public float Density { get; set; }
 		public float Diffusion { get; set; }
@@ -4558,6 +5050,7 @@ namespace Roblox
 	
 	public interface TremoloSoundEffect : SoundEffect, ICreatableInstance
 	{
+		public new TremoloSoundEffect Clone();
 		public float Depth { get; set; }
 		public float Duty { get; set; }
 		public float Frequency { get; set; }
@@ -4565,11 +5058,13 @@ namespace Roblox
 	
 	public interface SoundGroup : ICreatableInstance
 	{
+		public new SoundGroup Clone();
 		public float Volume { get; set; }
 	}
 	
 	public partial interface SoundService : IServiceInstance
 	{
+		public new SoundService Clone();
 		public Enum.ReverbType.Type AmbientReverb { get; set; }
 		public float DistanceFactor { get; set; }
 		public float DopplerScale { get; set; }
@@ -4582,6 +5077,7 @@ namespace Roblox
 	
 	public interface Sparkles : ICreatableInstance
 	{
+		public new Sparkles Clone();
 		public bool Enabled { get; set; }
 		public Color3 SparkleColor { get; set; }
 		public float TimeScale { get; set; }
@@ -4589,18 +5085,22 @@ namespace Roblox
 	
 	public interface StackFrame : Instance
 	{
+		public new StackFrame Clone();
 	}
 	
 	public interface StarterGear : ICreatableInstance
 	{
+		public new StarterGear Clone();
 	}
 	
 	public interface StarterPack : IServiceInstance
 	{
+		public new StarterPack Clone();
 	}
 	
 	public interface StarterPlayer : IServiceInstance
 	{
+		public new StarterPlayer Clone();
 		public bool AutoJumpEnabled { get; set; }
 		public Enum.AvatarJointUpgrade.Type AvatarJointUpgrade { get; set; }
 		public float CameraMaxZoomDistance { get; set; }
@@ -4626,18 +5126,22 @@ namespace Roblox
 	
 	public interface StarterPlayerScripts : Instance
 	{
+		public new StarterPlayerScripts Clone();
 	}
 	
 	public interface StarterCharacterScripts : StarterPlayerScripts
 	{
+		public new StarterCharacterScripts Clone();
 	}
 	
 	public interface StartupMessageService : IServiceInstance
 	{
+		public new StartupMessageService Clone();
 	}
 	
 	public interface Stats : IServiceInstance
 	{
+		public new Stats Clone();
 		public int ContactsCount { get; }
 		public float DataReceiveKbps { get; }
 		public float DataSendKbps { get; }
@@ -4654,14 +5158,17 @@ namespace Roblox
 	
 	public interface StreamingService : IServiceInstance
 	{
+		public new StreamingService Clone();
 	}
 	
 	public interface StudioAssetService : IServiceInstance
 	{
+		public new StudioAssetService Clone();
 	}
 	
 	public interface StudioAttachment : ICreatableInstance
 	{
+		public new StudioAttachment Clone();
 		public bool AutoHideParent { get; set; }
 		public bool IsArrowVisible { get; set; }
 		public Vector2 Offset { get; set; }
@@ -4671,38 +5178,47 @@ namespace Roblox
 	
 	public interface StudioCallout : ICreatableInstance
 	{
+		public new StudioCallout Clone();
 	}
 	
 	public interface StudioDeviceEmulatorService : IServiceInstance
 	{
+		public new StudioDeviceEmulatorService Clone();
 	}
 	
 	public interface StudioObjectBase : Instance
 	{
+		public new StudioObjectBase Clone();
 	}
 	
 	public interface StudioWidget : StudioObjectBase
 	{
+		public new StudioWidget Clone();
 	}
 	
 	public interface StudioPublishService : IServiceInstance
 	{
+		public new StudioPublishService Clone();
 	}
 	
 	public interface StudioScriptDebugEventListener : IServiceInstance
 	{
+		public new StudioScriptDebugEventListener Clone();
 	}
 	
 	public interface StudioSdkService : IServiceInstance
 	{
+		public new StudioSdkService Clone();
 	}
 	
 	public interface StudioWidgetsService : IServiceInstance
 	{
+		public new StudioWidgetsService Clone();
 	}
 	
 	public interface StyleBase : Instance
 	{
+		public new StyleBase Clone();
 		public Instance[] GetStyleRules();
 		public void InsertStyleRule(StyleRule rule, int? index = null);
 		public void SetStyleRules(Instance[] rules);
@@ -4711,6 +5227,7 @@ namespace Roblox
 	
 	public interface StyleRule : StyleBase, ICreatableInstance
 	{
+		public new StyleRule Clone();
 		public string Selector { get; set; }
 		public string SelectorError { get; }
 		public object GetProperties();
@@ -4721,31 +5238,37 @@ namespace Roblox
 	
 	public interface StyleSheet : StyleBase, ICreatableInstance
 	{
+		public new StyleSheet Clone();
 		public Instance[] GetDerives();
 		public void SetDerives(Instance[] derives);
 	}
 	
 	public interface StyleDerive : ICreatableInstance
 	{
+		public new StyleDerive Clone();
 		public StyleSheet? StyleSheet { get; set; }
 	}
 	
 	public interface StyleLink : ICreatableInstance
 	{
+		public new StyleLink Clone();
 		public StyleSheet? StyleSheet { get; set; }
 	}
 	
 	public interface StylingService : IServiceInstance
 	{
+		public new StylingService Clone();
 	}
 	
 	public interface SurfaceAppearance : ICreatableInstance
 	{
+		public new SurfaceAppearance Clone();
 		public Color3 Color { get; set; }
 	}
 	
 	public interface Team : ICreatableInstance
 	{
+		public new Team Clone();
 		public bool AutoAssignable { get; set; }
 		public bool AutoColorCharacters { get; set; }
 		public int Score { get; set; }
@@ -4757,30 +5280,36 @@ namespace Roblox
 	
 	public interface TeamCreateData : IServiceInstance
 	{
+		public new TeamCreateData Clone();
 	}
 	
 	public interface TeamCreatePublishService : IServiceInstance
 	{
+		public new TeamCreatePublishService Clone();
 	}
 	
 	public interface TeamCreateService : IServiceInstance
 	{
+		public new TeamCreateService Clone();
 	}
 	
 	public interface Teams : IServiceInstance
 	{
+		public new Teams Clone();
 		public Instance[] GetTeams();
 		public void RebalanceTeams();
 	}
 	
 	public interface TeleportAsyncResult : Instance
 	{
+		public new TeleportAsyncResult Clone();
 		public string PrivateServerId { get; }
 		public string ReservedServerAccessCode { get; }
 	}
 	
 	public interface TeleportOptions : ICreatableInstance
 	{
+		public new TeleportOptions Clone();
 		public string ReservedServerAccessCode { get; set; }
 		public string ServerInstanceId { get; set; }
 		public bool ShouldReserveServer { get; set; }
@@ -4790,6 +5319,7 @@ namespace Roblox
 	
 	public interface TeleportService : IServiceInstance
 	{
+		public new TeleportService Clone();
 		public bool CustomizedTeleportUI { get; set; }
 		public Instance GetArrivingTeleportGui();
 		public object GetLocalPlayerTeleportData();
@@ -4810,14 +5340,17 @@ namespace Roblox
 	
 	public interface TemporaryCageMeshProvider : IServiceInstance
 	{
+		public new TemporaryCageMeshProvider Clone();
 	}
 	
 	public interface TemporaryScriptService : IServiceInstance
 	{
+		public new TemporaryScriptService Clone();
 	}
 	
 	public interface TerrainDetail : ICreatableInstance
 	{
+		public new TerrainDetail Clone();
 		public Enum.TerrainFace.Type Face { get; set; }
 		public Enum.MaterialPattern.Type MaterialPattern { get; set; }
 		public float StudsPerTile { get; set; }
@@ -4825,16 +5358,19 @@ namespace Roblox
 	
 	public partial interface TerrainRegion : ICreatableInstance
 	{
+		public new TerrainRegion Clone();
 		public bool IsSmooth { get; }
 		public Vector3 SizeInCells { get; }
 	}
 	
 	public interface TextBoxService : IServiceInstance
 	{
+		public new TextBoxService Clone();
 	}
 	
 	public interface TextChannel : ICreatableInstance
 	{
+		public new TextChannel Clone();
 		public TextChatMessage DisplaySystemMessage(string systemMessage, string metadata);
 		public object[] AddUserAsync(long userId);
 		public TextChatMessage SendAsync(string message, string metadata);
@@ -4843,6 +5379,7 @@ namespace Roblox
 	
 	public interface TextChatCommand : ICreatableInstance
 	{
+		public new TextChatCommand Clone();
 		public bool AutocompleteVisible { get; set; }
 		public bool Enabled { get; set; }
 		public string PrimaryAlias { get; set; }
@@ -4852,10 +5389,12 @@ namespace Roblox
 	
 	public interface TextChatConfigurations : Instance
 	{
+		public new TextChatConfigurations Clone();
 	}
 	
 	public interface BubbleChatConfiguration : TextChatConfigurations
 	{
+		public new BubbleChatConfiguration Clone();
 		public string AdorneeName { get; set; }
 		public Color3 BackgroundColor3 { get; set; }
 		public double BackgroundTransparency { get; set; }
@@ -4875,6 +5414,7 @@ namespace Roblox
 	
 	public interface ChannelTabsConfiguration : TextChatConfigurations
 	{
+		public new ChannelTabsConfiguration Clone();
 		public Vector2 AbsolutePosition { get; }
 		public Vector2 AbsoluteSize { get; }
 		public Color3 BackgroundColor3 { get; set; }
@@ -4891,6 +5431,7 @@ namespace Roblox
 	
 	public interface ChatInputBarConfiguration : TextChatConfigurations
 	{
+		public new ChatInputBarConfiguration Clone();
 		public Vector2 AbsolutePosition { get; }
 		public Vector2 AbsoluteSize { get; }
 		public bool AutocompleteEnabled { get; set; }
@@ -4911,6 +5452,7 @@ namespace Roblox
 	
 	public interface ChatWindowConfiguration : TextChatConfigurations
 	{
+		public new ChatWindowConfiguration Clone();
 		public Vector2 AbsolutePosition { get; }
 		public Vector2 AbsoluteSize { get; }
 		public Color3 BackgroundColor3 { get; set; }
@@ -4929,6 +5471,7 @@ namespace Roblox
 	
 	public interface TextChatMessage : Instance
 	{
+		public new TextChatMessage Clone();
 		public BubbleChatMessageProperties? BubbleChatMessageProperties { get; set; }
 		public string MessageId { get; set; }
 		public string Metadata { get; set; }
@@ -4943,6 +5486,7 @@ namespace Roblox
 	
 	public interface TextChatMessageProperties : ICreatableInstance
 	{
+		public new TextChatMessageProperties Clone();
 		public string PrefixText { get; set; }
 		public string Text { get; set; }
 		public string Translation { get; set; }
@@ -4950,6 +5494,7 @@ namespace Roblox
 	
 	public interface TextChatService : IServiceInstance
 	{
+		public new TextChatService Clone();
 		public bool ChatTranslationEnabled { get; }
 		public Enum.ChatVersion.Type ChatVersion { get; }
 		public bool CreateDefaultCommands { get; set; }
@@ -4964,6 +5509,7 @@ namespace Roblox
 	
 	public interface TextFilterResult : Instance
 	{
+		public new TextFilterResult Clone();
 		public string GetChatForUserAsync(long toUserId);
 		public string GetNonChatStringForBroadcastAsync();
 		public string GetNonChatStringForUserAsync(long toUserId);
@@ -4971,6 +5517,7 @@ namespace Roblox
 	
 	public interface TextFilterTranslatedResult : Instance
 	{
+		public new TextFilterTranslatedResult Clone();
 		public string SourceLanguage { get; }
 		public TextFilterResult? SourceText { get; }
 		public TextFilterResult GetTranslationForLocale(string locale);
@@ -4979,6 +5526,7 @@ namespace Roblox
 	
 	public interface TextService : IServiceInstance
 	{
+		public new TextService Clone();
 		public Vector2 GetTextSize(string str, int fontSize, Enum.Font.Type font, Vector2 frameSize);
 		public TextFilterTranslatedResult FilterAndTranslateStringAsync(string stringToFilter, long fromUserId, object[] targetLocales, Enum.TextFilterContext.Type? textContext = null);
 		public TextFilterResult FilterStringAsync(string stringToFilter, long fromUserId, Enum.TextFilterContext.Type? textContext = null);
@@ -4988,40 +5536,49 @@ namespace Roblox
 	
 	public interface TextSource : Instance
 	{
+		public new TextSource Clone();
 		public bool CanSend { get; set; }
 		public long UserId { get; }
 	}
 	
 	public interface TextureGenerationPartGroup : Instance
 	{
+		public new TextureGenerationPartGroup Clone();
 	}
 	
 	public interface TextureGenerationService : IServiceInstance
 	{
+		public new TextureGenerationService Clone();
 	}
 	
 	public interface TextureGenerationUnwrappingRequest : Instance
 	{
+		public new TextureGenerationUnwrappingRequest Clone();
 	}
 	
 	public interface ThreadState : Instance
 	{
+		public new ThreadState Clone();
 	}
 	
 	public interface ToastNotificationService : IServiceInstance
 	{
+		public new ToastNotificationService Clone();
 	}
 	
 	public interface TouchTransmitter : Instance
 	{
+		public new TouchTransmitter Clone();
 	}
 	
 	public interface TracerService : IServiceInstance
 	{
+		public new TracerService Clone();
 	}
 	
 	public interface TrackerLodController : Instance
 	{
+		public new TrackerLodController Clone();
 		public Enum.TrackerLodFlagMode.Type AudioMode { get; set; }
 		public Enum.TrackerExtrapolationFlagMode.Type VideoExtrapolationMode { get; set; }
 		public Enum.TrackerLodValueMode.Type VideoLodMode { get; set; }
@@ -5030,10 +5587,12 @@ namespace Roblox
 	
 	public interface TrackerStreamAnimation : ICreatableInstance
 	{
+		public new TrackerStreamAnimation Clone();
 	}
 	
 	public interface Trail : ICreatableInstance
 	{
+		public new Trail Clone();
 		public Attachment? Attachment0 { get; set; }
 		public Attachment? Attachment1 { get; set; }
 		public float Brightness { get; set; }
@@ -5055,6 +5614,7 @@ namespace Roblox
 	
 	public interface Translator : Instance
 	{
+		public new Translator Clone();
 		public string LocaleId { get; }
 		public string FormatByKey(string key, object args);
 		public string Translate(Instance context, string text);
@@ -5062,10 +5622,12 @@ namespace Roblox
 	
 	public interface TutorialService : IServiceInstance
 	{
+		public new TutorialService Clone();
 	}
 	
 	public interface TweenBase : Instance
 	{
+		public new TweenBase Clone();
 		public Enum.PlaybackState.Type PlaybackState { get; }
 		public void Cancel();
 		public void Pause();
@@ -5075,34 +5637,41 @@ namespace Roblox
 	
 	public interface Tween : TweenBase
 	{
+		public new Tween Clone();
 		public Instance? Instance { get; }
 		public TweenInfo TweenInfo { get; }
 	}
 	
 	public interface TweenService : IServiceInstance
 	{
+		public new TweenService Clone();
 		public Tween Create(Instance instance, TweenInfo tweenInfo, object propertyTable);
 		public float GetValue(float alpha, Enum.EasingStyle.Type easingStyle, Enum.EasingDirection.Type easingDirection);
 	}
 	
 	public interface UGCAvatarService : IServiceInstance
 	{
+		public new UGCAvatarService Clone();
 	}
 	
 	public interface UIBase : Instance
 	{
+		public new UIBase Clone();
 	}
 	
 	public interface UIComponent : UIBase
 	{
+		public new UIComponent Clone();
 	}
 	
 	public interface UIConstraint : UIComponent
 	{
+		public new UIConstraint Clone();
 	}
 	
 	public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UIAspectRatioConstraint Clone();
 		public float AspectRatio { get; set; }
 		public Enum.AspectType.Type AspectType { get; set; }
 		public Enum.DominantAxis.Type DominantAxis { get; set; }
@@ -5110,23 +5679,27 @@ namespace Roblox
 	
 	public interface UISizeConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UISizeConstraint Clone();
 		public Vector2 MaxSize { get; set; }
 		public Vector2 MinSize { get; set; }
 	}
 	
 	public interface UITextSizeConstraint : UIConstraint, ICreatableInstance
 	{
+		public new UITextSizeConstraint Clone();
 		public int MaxTextSize { get; set; }
 		public int MinTextSize { get; set; }
 	}
 	
 	public interface UICorner : UIComponent, ICreatableInstance
 	{
+		public new UICorner Clone();
 		public UDim CornerRadius { get; set; }
 	}
 	
 	public interface UIDragDetector : UIComponent, ICreatableInstance
 	{
+		public new UIDragDetector Clone();
 		public string ActivatedCursorIcon { get; set; }
 		public Enum.UIDragDetectorBoundingBehavior.Type BoundingBehavior { get; set; }
 		public GuiBase2d? BoundingUI { get; set; }
@@ -5155,6 +5728,7 @@ namespace Roblox
 	
 	public interface UIFlexItem : UIComponent, ICreatableInstance
 	{
+		public new UIFlexItem Clone();
 		public Enum.UIFlexMode.Type FlexMode { get; set; }
 		public float GrowRatio { get; set; }
 		public Enum.ItemLineAlignment.Type ItemLineAlignment { get; set; }
@@ -5163,6 +5737,7 @@ namespace Roblox
 	
 	public interface UIGradient : UIComponent, ICreatableInstance
 	{
+		public new UIGradient Clone();
 		public ColorSequence Color { get; set; }
 		public bool Enabled { get; set; }
 		public Vector2 Offset { get; set; }
@@ -5172,10 +5747,12 @@ namespace Roblox
 	
 	public interface UILayout : UIComponent
 	{
+		public new UILayout Clone();
 	}
 	
 	public interface UIGridStyleLayout : UILayout
 	{
+		public new UIGridStyleLayout Clone();
 		public Vector2 AbsoluteContentSize { get; }
 		public Enum.FillDirection.Type FillDirection { get; set; }
 		public Enum.HorizontalAlignment.Type HorizontalAlignment { get; set; }
@@ -5187,6 +5764,7 @@ namespace Roblox
 	
 	public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIGridLayout Clone();
 		public Vector2 AbsoluteCellCount { get; }
 		public Vector2 AbsoluteCellSize { get; }
 		public UDim2 CellPadding { get; set; }
@@ -5197,6 +5775,7 @@ namespace Roblox
 	
 	public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIListLayout Clone();
 		public Enum.UIFlexAlignment.Type HorizontalFlex { get; set; }
 		public Enum.ItemLineAlignment.Type ItemLineAlignment { get; set; }
 		public UDim Padding { get; set; }
@@ -5206,6 +5785,7 @@ namespace Roblox
 	
 	public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UIPageLayout Clone();
 		public bool Animated { get; set; }
 		public bool Circular { get; set; }
 		public GuiObject? CurrentPage { get; }
@@ -5227,6 +5807,7 @@ namespace Roblox
 	
 	public interface UITableLayout : UIGridStyleLayout, ICreatableInstance
 	{
+		public new UITableLayout Clone();
 		public bool FillEmptySpaceColumns { get; set; }
 		public bool FillEmptySpaceRows { get; set; }
 		public Enum.TableMajorAxis.Type MajorAxis { get; set; }
@@ -5235,6 +5816,7 @@ namespace Roblox
 	
 	public interface UIPadding : UIComponent, ICreatableInstance
 	{
+		public new UIPadding Clone();
 		public UDim PaddingBottom { get; set; }
 		public UDim PaddingLeft { get; set; }
 		public UDim PaddingRight { get; set; }
@@ -5243,11 +5825,13 @@ namespace Roblox
 	
 	public interface UIScale : UIComponent, ICreatableInstance
 	{
+		public new UIScale Clone();
 		public float Scale { get; set; }
 	}
 	
 	public interface UIStroke : UIComponent, ICreatableInstance
 	{
+		public new UIStroke Clone();
 		public Enum.ApplyStrokeMode.Type ApplyStrokeMode { get; set; }
 		public Color3 Color { get; set; }
 		public bool Enabled { get; set; }
@@ -5258,14 +5842,17 @@ namespace Roblox
 	
 	public interface UIDragDetectorService : IServiceInstance
 	{
+		public new UIDragDetectorService Clone();
 	}
 	
 	public interface UnvalidatedAssetService : IServiceInstance
 	{
+		public new UnvalidatedAssetService Clone();
 	}
 	
 	public interface UserGameSettings : Instance
 	{
+		public new UserGameSettings Clone();
 		public Enum.ComputerCameraMovementMode.Type ComputerCameraMovementMode { get; set; }
 		public Enum.ComputerMovementMode.Type ComputerMovementMode { get; set; }
 		public Enum.ControlMode.Type ControlMode { get; set; }
@@ -5292,6 +5879,7 @@ namespace Roblox
 	
 	public interface UserInputService : IServiceInstance
 	{
+		public new UserInputService Clone();
 		public bool AccelerometerEnabled { get; }
 		public bool GamepadEnabled { get; }
 		public bool GyroscopeEnabled { get; }
@@ -5362,11 +5950,13 @@ namespace Roblox
 	
 	public interface UserService : IServiceInstance
 	{
+		public new UserService Clone();
 		public object[] GetUserInfosByUserIdsAsync(object[] userIds);
 	}
 	
 	public interface VRService : IServiceInstance
 	{
+		public new VRService Clone();
 		public Enum.VRScaling.Type AutomaticScaling { get; set; }
 		public bool AvatarGestures { get; set; }
 		public bool FadeOutViewOnCollision { get; set; }
@@ -5387,38 +5977,45 @@ namespace Roblox
 	
 	public interface VRStatusService : IServiceInstance
 	{
+		public new VRStatusService Clone();
 	}
 	
 	public interface ValueBase : Instance
 	{
+		public new ValueBase Clone();
 	}
 	
 	public interface BoolValue : ValueBase, ICreatableInstance
 	{
+		public new BoolValue Clone();
 		public bool Value { get; set; }
 		public ScriptSignal<bool> Changed { get; }
 	}
 	
 	public interface BrickColorValue : ValueBase, ICreatableInstance
 	{
+		public new BrickColorValue Clone();
 		public BrickColor Value { get; set; }
 		public ScriptSignal<BrickColor> Changed { get; }
 	}
 	
 	public interface CFrameValue : ValueBase, ICreatableInstance
 	{
+		public new CFrameValue Clone();
 		public CFrame Value { get; set; }
 		public ScriptSignal<CFrame> Changed { get; }
 	}
 	
 	public interface Color3Value : ValueBase, ICreatableInstance
 	{
+		public new Color3Value Clone();
 		public Color3 Value { get; set; }
 		public ScriptSignal<Color3> Changed { get; }
 	}
 	
 	public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
 	{
+		public new DoubleConstrainedValue Clone();
 		public double MaxValue { get; set; }
 		public double MinValue { get; set; }
 		public double Value { get; set; }
@@ -5427,6 +6024,7 @@ namespace Roblox
 	
 	public interface IntConstrainedValue : ValueBase, ICreatableInstance
 	{
+		public new IntConstrainedValue Clone();
 		public long MaxValue { get; set; }
 		public long MinValue { get; set; }
 		public long Value { get; set; }
@@ -5435,42 +6033,49 @@ namespace Roblox
 	
 	public interface IntValue : ValueBase, ICreatableInstance
 	{
+		public new IntValue Clone();
 		public long Value { get; set; }
 		public ScriptSignal<long> Changed { get; }
 	}
 	
 	public interface NumberValue : ValueBase, ICreatableInstance
 	{
+		public new NumberValue Clone();
 		public double Value { get; set; }
 		public ScriptSignal<double> Changed { get; }
 	}
 	
 	public interface ObjectValue : ValueBase, ICreatableInstance
 	{
+		public new ObjectValue Clone();
 		public Instance? Value { get; set; }
 		public ScriptSignal<Instance> Changed { get; }
 	}
 	
 	public interface RayValue : ValueBase, ICreatableInstance
 	{
+		public new RayValue Clone();
 		public Ray Value { get; set; }
 		public ScriptSignal<Ray> Changed { get; }
 	}
 	
 	public interface StringValue : ValueBase, ICreatableInstance
 	{
+		public new StringValue Clone();
 		public string Value { get; set; }
 		public ScriptSignal<string> Changed { get; }
 	}
 	
 	public interface Vector3Value : ValueBase, ICreatableInstance
 	{
+		public new Vector3Value Clone();
 		public Vector3 Value { get; set; }
 		public ScriptSignal<Vector3> Changed { get; }
 	}
 	
 	public interface Vector3Curve : ICreatableInstance
 	{
+		public new Vector3Curve Clone();
 		public object[] GetValueAtTime(float time);
 		public FloatCurve X();
 		public FloatCurve Y();
@@ -5479,10 +6084,12 @@ namespace Roblox
 	
 	public interface VideoCaptureService : IServiceInstance
 	{
+		public new VideoCaptureService Clone();
 	}
 	
 	public interface VideoDeviceInput : ICreatableInstance
 	{
+		public new VideoDeviceInput Clone();
 		public bool Active { get; set; }
 		public string CameraId { get; set; }
 		public Enum.VideoDeviceCaptureQuality.Type CaptureQuality { get; set; }
@@ -5491,26 +6098,32 @@ namespace Roblox
 	
 	public interface VideoService : IServiceInstance
 	{
+		public new VideoService Clone();
 	}
 	
 	public interface VisibilityCheckDispatcher : IServiceInstance
 	{
+		public new VisibilityCheckDispatcher Clone();
 	}
 	
 	public interface VisualizationMode : ICreatableInstance
 	{
+		public new VisualizationMode Clone();
 	}
 	
 	public interface VisualizationModeCategory : ICreatableInstance
 	{
+		public new VisualizationModeCategory Clone();
 	}
 	
 	public interface VisualizationModeService : IServiceInstance
 	{
+		public new VisualizationModeService Clone();
 	}
 	
 	public interface VoiceChatInternal : IServiceInstance
 	{
+		public new VoiceChatInternal Clone();
 		public object[] GetAudioProcessingSettings();
 		public object[] GetMicDevices();
 		public object[] GetParticipants();
@@ -5533,11 +6146,13 @@ namespace Roblox
 	
 	public interface VoiceChatService : IServiceInstance
 	{
+		public new VoiceChatService Clone();
 		public bool IsVoiceEnabledForUserIdAsync(long userId);
 	}
 	
 	public interface WeldConstraint : ICreatableInstance
 	{
+		public new WeldConstraint Clone();
 		public bool Active { get; }
 		public bool Enabled { get; set; }
 		public BasePart? Part0 { get; set; }
@@ -5546,6 +6161,7 @@ namespace Roblox
 	
 	public interface Wire : ICreatableInstance
 	{
+		public new Wire Clone();
 		public bool Connected { get; }
 		public Instance? SourceInstance { get; set; }
 		public string SourceName { get; set; }
