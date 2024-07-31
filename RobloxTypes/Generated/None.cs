@@ -73,6 +73,7 @@ namespace Roblox
 		public static GroupService GroupService { get; } = null!;
 		public static GuiService GuiService { get; } = null!;
 		public static HapticService HapticService { get; } = null!;
+		public static HeatmapService HeatmapService { get; } = null!;
 		public static HeightmapImporterService HeightmapImporterService { get; } = null!;
 		public static HttpService HttpService { get; } = null!;
 		public static ILegacyStudioBridge ILegacyStudioBridge { get; } = null!;
@@ -581,6 +582,7 @@ namespace Roblox
 		public string AudioInteractionGroup { get; set; }
 		public object[] GetConnectedWires(string pin);
 		public object GetDistanceAttenuation();
+		public object[] GetInteractingListeners();
 		public void SetDistanceAttenuation(object curve);
 	}
 	
@@ -635,6 +637,7 @@ namespace Roblox
 		public new AudioListener Clone();
 		public string AudioInteractionGroup { get; set; }
 		public object[] GetConnectedWires(string pin);
+		public object[] GetInteractingEmitters();
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
@@ -2927,6 +2930,11 @@ namespace Roblox
 		public void SetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor, object[] vibrationValues);
 	}
 	
+	public interface HeatmapService : IServiceInstance
+	{
+		public new HeatmapService Clone();
+	}
+	
 	public interface HeightmapImporterService : IServiceInstance
 	{
 		public new HeightmapImporterService Clone();
@@ -3514,6 +3522,7 @@ namespace Roblox
 		public new MarketplaceService Clone();
 		public void PromptBulkPurchase(Player player, object[] lineItems, object options);
 		public void PromptBundlePurchase(Player player, long bundleId);
+		public void PromptCancelSubscription(Player user, string subscriptionId);
 		public void PromptGamePassPurchase(Player player, long gamePassId);
 		public void PromptPremiumPurchase(Player player);
 		public void PromptProductPurchase(Player player, long productId, bool? equipIfPurchased = null, Enum.CurrencyType.Type? currencyType = null);
@@ -5645,6 +5654,7 @@ namespace Roblox
 		public new TweenService Clone();
 		public Tween Create(Instance instance, TweenInfo tweenInfo, object propertyTable);
 		public float GetValue(float alpha, Enum.EasingStyle.Type easingStyle, Enum.EasingDirection.Type easingDirection);
+		public object SmoothDamp(object current, object target, object velocity, float smoothTime, float? maxSpeed = null, float? dt = null);
 	}
 	
 	public interface UGCAvatarService : IServiceInstance

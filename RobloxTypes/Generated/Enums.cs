@@ -1603,6 +1603,26 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class CloseReason
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Unknown { get; } = null!;
+		public static Type RobloxMaintenance { get; } = null!;
+		public static Type DeveloperShutdown { get; } = null!;
+		public static Type DeveloperUpdate { get; } = null!;
+		public static Type ServerEmpty { get; } = null!;
+		public static Type OutOfMemory { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class CollaboratorStatus
 	{
 		public interface Type : EnumItem
@@ -4201,6 +4221,23 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class LocationType
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Character { get; } = null!;
+		public static Type Camera { get; } = null!;
+		public static Type ObjectPosition { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class MarketplaceBulkPurchasePromptStatus
 	{
 		public interface Type : EnumItem
@@ -6155,6 +6192,11 @@ namespace Roblox.Enum
 		public static Type DataStore { get; } = null!;
 		public static Type Network { get; } = null!;
 		public static Type Physics { get; } = null!;
+		public static Type UI { get; } = null!;
+		public static Type CSG { get; } = null!;
+		public static Type Chat { get; } = null!;
+		public static Type Animation { get; } = null!;
+		public static Type Avatar { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
