@@ -1131,7 +1131,7 @@ namespace Roblox.PluginClasses
 		public new GetTextBoundsParams Clone();
 	}
 	
-	public interface GlobalDataStore : Instance
+	public partial interface GlobalDataStore : Instance
 	{
 		public new GlobalDataStore Clone();
 	}
@@ -1141,7 +1141,7 @@ namespace Roblox.PluginClasses
 		public new DataStore Clone();
 	}
 	
-	public interface OrderedDataStore : GlobalDataStore
+	public partial interface OrderedDataStore : GlobalDataStore
 	{
 		public new OrderedDataStore Clone();
 	}
@@ -1742,7 +1742,7 @@ namespace Roblox.PluginClasses
 		public new NetworkSettings Clone();
 		public bool HttpProxyEnabled { get; }
 		public string HttpProxyURL { get; }
-		public double IncomingReplicationLag { get; set; }
+		public float IncomingReplicationLag { get; set; }
 		public bool PrintJoinSizeBreakdown { get; set; }
 		public bool PrintPhysicsErrors { get; set; }
 		public bool PrintStreamInstanceQuota { get; set; }
@@ -1990,7 +1990,7 @@ namespace Roblox.PluginClasses
 		public bool IsTreeShown { get; set; }
 		public Enum.EnviromentalPhysicsThrottle.Type PhysicsEnvironmentalThrottle { get; set; }
 		public bool ShowDecompositionGeometry { get; set; }
-		public double ThrottleAdjustTime { get; set; }
+		public float ThrottleAdjustTime { get; set; }
 		public bool UseCSGv2 { get; set; }
 	}
 	
@@ -2344,7 +2344,7 @@ namespace Roblox.PluginClasses
 	public partial interface ScriptContext : IServiceInstance
 	{
 		public new ScriptContext Clone();
-		public void SetTimeout(double seconds);
+		public void SetTimeout(float seconds);
 	}
 	
 	public interface ScriptDebugger : Instance
@@ -2632,7 +2632,7 @@ namespace Roblox.PluginClasses
 	public interface StatsItem : Instance
 	{
 		public new StatsItem Clone();
-		public double GetValue();
+		public float GetValue();
 		public string GetValueString();
 	}
 	
@@ -2773,8 +2773,8 @@ namespace Roblox.PluginClasses
 	public interface TaskScheduler : IServiceInstance
 	{
 		public new TaskScheduler Clone();
-		public double SchedulerDutyCycle { get; }
-		public double SchedulerRate { get; }
+		public float SchedulerDutyCycle { get; }
+		public float SchedulerRate { get; }
 		public Enum.ThreadPoolConfig.Type ThreadPoolConfig { get; set; }
 		public int ThreadPoolSize { get; }
 	}
@@ -2838,9 +2838,9 @@ namespace Roblox.PluginClasses
 		public bool ExecuteWithStudioRun { get; set; }
 		public bool IsSleepAllowed { get; set; }
 		public int NumberOfPlayers { get; set; }
-		public double SimulateSecondsLag { get; set; }
+		public float SimulateSecondsLag { get; set; }
 		public int TestCount { get; }
-		public double Timeout { get; set; }
+		public float Timeout { get; set; }
 		public int WarnCount { get; }
 		public void Check(bool condition, string description, Instance? source = null, int? line = null);
 		public void Checkpoint(string text, Instance? source = null, int? line = null);
