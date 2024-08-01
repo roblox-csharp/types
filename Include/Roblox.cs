@@ -194,8 +194,8 @@
     {
         public object[] InvokeClient(Player player, params object[] arguments); // TODO: tuple
         public object[] InvokeServer(params object[] arguments); // TODO: tuple
-        public Func<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientInvoke { get; set; }
-        public Func<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerInvoke { get; set; }
+        public Func<object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnClientInvoke { get; set; }
+        public Func<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerInvoke { get; set; }
     }
 
     public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -203,8 +203,8 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientEvent { get; }
-        public ScriptSignal<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerEvent { get; }
+        public ScriptSignal OnClientEvent { get; }
+        public ScriptSignal<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerEvent { get; }
     }
 
     public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -212,8 +212,8 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal<object, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnClientEvent { get; }
-        public ScriptSignal<Player, object, object, object, object, object, object, object, object, object, object, object, object, object, object, object> OnServerEvent { get; }
+        public ScriptSignal<object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnClientEvent { get; }
+        public ScriptSignal<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerEvent { get; }
     }
 
     public partial interface NetworkPeer : Instance
