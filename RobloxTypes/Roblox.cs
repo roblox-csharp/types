@@ -19,6 +19,11 @@
         public static _G _G { get; } = null!;
         public static string _VERSION { get; } = null!;
 
+        public static (K, V)[] pairs<K, V>(IDictionary<K, V> obj)
+        {
+            return null!;
+        }
+
         public static void warn(params string[] messages)
         {
         }
