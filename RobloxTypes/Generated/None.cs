@@ -3581,6 +3581,8 @@ namespace Roblox
 		public new MemoryStoreQueue Clone();
 		public void AddAsync(object value, long expiration, float? priority = null);
 		public object ReadAsync(int count, bool? allOrNothing = null, float? waitTimeout = null);
+		public void AddAsync(object value, long expiration, double? priority = null);
+		public object ReadAsync(int count, bool? allOrNothing = null, double? waitTimeout = null);
 		public void RemoveAsync(string id);
 	}
 	
