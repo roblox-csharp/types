@@ -77,7 +77,7 @@
         }
 
         /// <summary>Returns all arguments after argument number index.</summary>
-        public static object select(string cmd, params object[] args) // TODO: return LuaTuple<object[]>
+        public static object select(char cmd, params object[] args) // TODO: return LuaTuple<object[]>
         {
             return null!;
         }
