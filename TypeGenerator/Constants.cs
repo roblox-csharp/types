@@ -324,6 +324,7 @@
             { "CoordinateFrame", "CFrame" },
             { "EventInstance", "ScriptSignal" },
             { "Function", "Action" },
+            { "double", "float" },
             { "int", "int" },
             { "int64", "long" },
             { "Dictionary", "object" },

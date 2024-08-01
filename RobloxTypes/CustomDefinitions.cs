@@ -160,6 +160,12 @@
         public Vector3 Orientation { get; set; }
     }
 
+    public partial interface WorldRoot
+    {
+        public void BulkMoveTo(BasePart[] partList, CFrame[] cframeList, Enum.BulkMoveMode.Type eventMode);
+        public bool ArePartsTouchingOthers(BasePart[] partList, float overlapIgnored);
+    }
+
     public partial interface DataModel : ServiceProvider
     {
         public Workspace Workspace { get; }
