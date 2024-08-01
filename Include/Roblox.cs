@@ -7,11 +7,22 @@
     {
     }
 
+    public partial interface _G
+    {
+    }
+
     public static partial class Globals
     {
         public static DataModel game { get; } = null!;
         public static LuaSourceContainer script { get; } = null!;
         public static PluginClasses.Plugin plugin { get; } = null!;
+        public static _G _G { get; } = null!;
+        public static string _VERSION { get; } = null!;
+
+        public static (K, V)[] pairs<K, V>(IDictionary<K, V> obj)
+        {
+            return null!;
+        }
 
         public static void warn(params string[] messages)
         {
@@ -70,6 +81,18 @@
             return default;
         }
 
+        /// <summary>Returns all arguments after argument number index.</summary>
+        public static object select(char cmd, params object[] args) // TODO: return LuaTuple<object[]>
+        {
+            return null!;
+        }
+
+        /// <summary>Returns the total number of arguments that were passed after the cmd argument.</summary>
+        public static uint select(uint index, params object[] args)
+        {
+            return default;
+        }
+
         public static void assert(object obj, string? errorMessage = null)
         { 
         }
@@ -101,6 +124,11 @@
 
         public static uint gcinfo()
         {
+            return default;
+        }
+
+        public static float collectgarbage(string option)
+        { 
             return default;
         }
     }
