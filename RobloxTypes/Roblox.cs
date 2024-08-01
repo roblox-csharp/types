@@ -24,6 +24,10 @@
             return null!;
         }
 
+        public static void print(params object[] values)
+        { 
+        }
+
         public static void warn(params string[] messages)
         {
         }
