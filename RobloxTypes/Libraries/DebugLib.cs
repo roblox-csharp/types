@@ -19,7 +19,7 @@
             /// <para>The level parameter specifies what level of the call stack to consider, with 1 being the call of <see cref="traceback(string, int?)"/> itself, 2 being the call of the function calling <see cref="traceback(string, int?)"/>, and so on.</para>
             /// <para>Note that this function will often return inaccurate results (compared to the original source code) and that the format of the returned traceback may change at any time. You should not parse the return value for specific information such as script names or line numbers.</para>
             /// </summary>
-            public static string traceback(Coroutine thread, string message, int? level = null)
+            public static string traceback(Thread thread, string message, int? level = null)
             {
                 return null!;
             }

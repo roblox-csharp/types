@@ -1,6 +1,6 @@
 ﻿namespace Roblox
 {
-    public sealed class Coroutine
+    public sealed class Thread
     { 
     }
 
@@ -9,37 +9,37 @@
         public static class coroutine
         {
             /// <summary>Closes and puts the provided coroutine in a dead state.</summary>
-            public static (bool, string?) close(Coroutine co)
+            public static (bool, string?) close(Thread co)
             {
                 return default;
             }
 
             /// <summary>Creates a new coroutine, with body f. f must be a Lua function.</summary>
-            public static Coroutine create(Delegate f)
+            public static Thread create(Delegate f)
             {
                 return null!;
             }
 
             /// <summary>Returns true if the coroutine this function is called within can safely yield.</summary>
-            public static bool isyieldable(Coroutine co)
+            public static bool isyieldable(Thread co)
             {
                 return default;
             }
 
             /// <summary>Starts or continues the execution of coroutine co.</summary>
-            public static (bool, object[]) resume(Coroutine co, params object[] args)
+            public static (bool, object[]) resume(Thread co, params object[] args)
             {
                 return default;
             }
 
             /// <summary>Returns the running coroutine.</summary>
-            public static Coroutine running()
+            public static Thread running()
             {
                 return null!;
             }
 
             /// <summary>Returns the status of coroutine co as a string.</summary>
-            public static string status(Coroutine co)
+            public static string status(Thread co)
             {
                 return null!;
             }
