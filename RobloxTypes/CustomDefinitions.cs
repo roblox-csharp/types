@@ -144,6 +144,20 @@
     {
     }
 
+    public partial interface GlobalDataStore
+    {
+        public T GetAsync<T>(string key, DataStoreGetOptions? options = null);
+        public string SetAsync(string key, object value, uint[]? userIds = null, DataStoreSetOptions? options = null);
+        public float IncrementAsync(string key, float? delta = null, uint[]? userIds = null, DataStoreSetOptions? options = null); // TODO: LuaTuple<float, DataStoreKeyInfo>
+        public object RemoveAsync(string key); // TODO: LuaTuple<object, DataStoreKeyInfo>
+        public object UpdateAsync(string key, Action transformFunction); // TODO: LuaTuple<object, DataStoreKeyInfo>
+    }
+
+    public partial interface OrderedDataStore
+    {
+        public DataStorePages GetSortedAsync(bool ascending, uint pageSize, object? minValue = null, object? maxValue = null);
+    }
+
     public partial interface DataStoreService
     {
         public DataStore GetDataStore(string name, string? scope = null, DataStoreOptions? options = null);

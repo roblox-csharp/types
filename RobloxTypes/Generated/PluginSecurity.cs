@@ -484,8 +484,8 @@ namespace Roblox.PluginClasses
 	{
 		public new ChangeHistoryService Clone();
 		public void FinishRecording(string identifier, Enum.FinishRecordingOperation.Type operation, object? finalOptions = null);
-		public object[] GetCanRedo();
-		public object[] GetCanUndo();
+		public object GetCanRedo();
+		public object GetCanUndo();
 		public bool IsRecordingInProgress(string? identifier = null);
 		public void Redo();
 		public void ResetWaypoints();
@@ -814,7 +814,7 @@ namespace Roblox.PluginClasses
 		public new DataStoreOptions Clone();
 	}
 	
-	public interface DataStoreService : IServiceInstance
+	public partial interface DataStoreService : IServiceInstance
 	{
 		public new DataStoreService Clone();
 	}
@@ -1131,7 +1131,7 @@ namespace Roblox.PluginClasses
 		public new GetTextBoundsParams Clone();
 	}
 	
-	public interface GlobalDataStore : Instance
+	public partial interface GlobalDataStore : Instance
 	{
 		public new GlobalDataStore Clone();
 	}
@@ -1141,7 +1141,7 @@ namespace Roblox.PluginClasses
 		public new DataStore Clone();
 	}
 	
-	public interface OrderedDataStore : GlobalDataStore
+	public partial interface OrderedDataStore : GlobalDataStore
 	{
 		public new OrderedDataStore Clone();
 	}
@@ -1742,7 +1742,7 @@ namespace Roblox.PluginClasses
 		public new NetworkSettings Clone();
 		public bool HttpProxyEnabled { get; }
 		public string HttpProxyURL { get; }
-		public double IncomingReplicationLag { get; set; }
+		public float IncomingReplicationLag { get; set; }
 		public bool PrintJoinSizeBreakdown { get; set; }
 		public bool PrintPhysicsErrors { get; set; }
 		public bool PrintStreamInstanceQuota { get; set; }
@@ -1990,7 +1990,7 @@ namespace Roblox.PluginClasses
 		public bool IsTreeShown { get; set; }
 		public Enum.EnviromentalPhysicsThrottle.Type PhysicsEnvironmentalThrottle { get; set; }
 		public bool ShowDecompositionGeometry { get; set; }
-		public double ThrottleAdjustTime { get; set; }
+		public float ThrottleAdjustTime { get; set; }
 		public bool UseCSGv2 { get; set; }
 	}
 	
@@ -2344,7 +2344,7 @@ namespace Roblox.PluginClasses
 	public partial interface ScriptContext : IServiceInstance
 	{
 		public new ScriptContext Clone();
-		public void SetTimeout(double seconds);
+		public void SetTimeout(float seconds);
 	}
 	
 	public interface ScriptDebugger : Instance
@@ -2381,17 +2381,17 @@ namespace Roblox.PluginClasses
 		public int GetLineCount();
 		public LuaSourceContainer GetScript();
 		public string GetSelectedText();
-		public object[] GetSelection();
-		public object[] GetSelectionEnd();
-		public object[] GetSelectionStart();
+		public object GetSelection();
+		public object GetSelectionEnd();
+		public object GetSelectionStart();
 		public string GetText(int? startLine = null, int? startCharacter = null, int? endLine = null, int? endCharacter = null);
-		public object[] GetViewport();
+		public object GetViewport();
 		public bool HasSelectedText();
 		public bool IsCommandBar();
-		public object[] CloseAsync();
-		public object[] EditTextAsync(string newText, int startLine, int startCharacter, int endLine, int endCharacter);
-		public object[] ForceSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
-		public object[] RequestSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
+		public object CloseAsync();
+		public object EditTextAsync(string newText, int startLine, int startCharacter, int endLine, int endCharacter);
+		public object ForceSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
+		public object RequestSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
 		public ScriptSignal<long, long, long, long> SelectionChanged { get; }
 		public ScriptSignal<long, long> ViewportChanged { get; }
 	}
@@ -2406,7 +2406,7 @@ namespace Roblox.PluginClasses
 		public Instance[] GetScriptDocuments();
 		public void RegisterAutocompleteCallback(string name, int priority, Action callbackFunction);
 		public void RegisterScriptAnalysisCallback(string name, int priority, Action callbackFunction);
-		public object[] OpenScriptDocumentAsync(LuaSourceContainer script);
+		public object OpenScriptDocumentAsync(LuaSourceContainer script);
 		public void UpdateSourceAsync(LuaSourceContainer script, Action callback);
 		public ScriptSignal<ScriptDocument, object> TextDocumentDidChange { get; }
 		public ScriptSignal<ScriptDocument> TextDocumentDidClose { get; }
@@ -2632,7 +2632,7 @@ namespace Roblox.PluginClasses
 	public interface StatsItem : Instance
 	{
 		public new StatsItem Clone();
-		public double GetValue();
+		public float GetValue();
 		public string GetValueString();
 	}
 	
@@ -2773,8 +2773,8 @@ namespace Roblox.PluginClasses
 	public interface TaskScheduler : IServiceInstance
 	{
 		public new TaskScheduler Clone();
-		public double SchedulerDutyCycle { get; }
-		public double SchedulerRate { get; }
+		public float SchedulerDutyCycle { get; }
+		public float SchedulerRate { get; }
 		public Enum.ThreadPoolConfig.Type ThreadPoolConfig { get; set; }
 		public int ThreadPoolSize { get; }
 	}
@@ -2838,9 +2838,9 @@ namespace Roblox.PluginClasses
 		public bool ExecuteWithStudioRun { get; set; }
 		public bool IsSleepAllowed { get; set; }
 		public int NumberOfPlayers { get; set; }
-		public double SimulateSecondsLag { get; set; }
+		public float SimulateSecondsLag { get; set; }
 		public int TestCount { get; }
-		public double Timeout { get; set; }
+		public float Timeout { get; set; }
 		public int WarnCount { get; }
 		public void Check(bool condition, string description, Instance? source = null, int? line = null);
 		public void Checkpoint(string text, Instance? source = null, int? line = null);

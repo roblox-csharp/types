@@ -57,7 +57,9 @@
             "ReplicatedFirst",
             "PlayerGui",
             "PlayerScripts",
-            "DataStoreService"
+            "DataStoreService",
+            "GlobalDataStore",
+            "OrderedDataStore",
         };
 
         public static readonly HashSet<string> CREATABLE_BLACKLIST = new HashSet<string>
@@ -238,7 +240,9 @@
             { "Model", ["FilteringEnabled"] },
             { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] }, // defined in Roblox.cs
             { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] },
-            { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] }
+            { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] }, // defined in Roblox.cs
+            { "OrderedDataStore", ["GetSortedAsync"] }, // defined in Roblox.cs
+            { "GlobalDataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] } // defined in Roblox.cs
         };
 
         public static readonly Dictionary<string, List<string>> EXPECTED_EXTRA_MEMBERS = new Dictionary<string, List<string>>

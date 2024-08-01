@@ -366,7 +366,7 @@ namespace Roblox
 		public void AdjustSpeed(float? speed = null);
 		public void AdjustWeight(float? weight = null, float? fadeTime = null);
 		public ScriptSignal GetMarkerReachedSignal(string name);
-		public double GetTimeOfKeyframe(string keyframeName);
+		public float GetTimeOfKeyframe(string keyframeName);
 		public void Play(float? fadeTime = null, float? weight = null, float? speed = null);
 		public void Stop(float? fadeTime = null);
 		public ScriptSignal DidLoop { get; }
@@ -465,8 +465,8 @@ namespace Roblox
 		public object GetBundleDetailsAsync(long bundleId);
 		public long GetCreatorAssetID(long creationID);
 		public Instance GetGamePlacesAsync();
-		public object[] PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType.Type assetType);
-		public object[] PromptImportAnimationClipFromVideoAsync(Player player, Action progressCallback);
+		public object PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType.Type assetType);
+		public object PromptImportAnimationClipFromVideoAsync(Player player, Action progressCallback);
 		public void SavePlaceAsync();
 		public AudioPages SearchAudio(AudioSearchParams searchParameters);
 	}
@@ -658,9 +658,9 @@ namespace Roblox
 		public NumberRange LoopRegion { get; set; }
 		public bool Looping { get; set; }
 		public NumberRange PlaybackRegion { get; set; }
-		public double PlaybackSpeed { get; set; }
-		public double TimeLength { get; }
-		public double TimePosition { get; set; }
+		public float PlaybackSpeed { get; set; }
+		public float TimeLength { get; }
+		public float TimePosition { get; set; }
 		public float Volume { get; set; }
 		public object[] GetConnectedWires(string pin);
 		public void Play();
@@ -715,10 +715,10 @@ namespace Roblox
 		public object GetAvatarGenerationConfig();
 		public Instance LoadAvatarModelAsync(string id);
 		public EditableImage LoadAvatarPreviewImageAsync(string avatarPreview);
-		public object[] PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription);
-		public object[] ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType.Type accessoryType);
-		public object[] ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart.Type bodyPart);
-		public object[] ValidateUGCFullBodyAsync(Player player, HumanoidDescription humanoidDescription);
+		public object PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription);
+		public object ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType.Type accessoryType);
+		public object ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart.Type bodyPart);
+		public object ValidateUGCFullBodyAsync(Player player, HumanoidDescription humanoidDescription);
 	}
 	
 	public interface AvatarEditorService : IServiceInstance
@@ -1003,14 +1003,14 @@ namespace Roblox
 	public interface BindableEvent : ICreatableInstance
 	{
 		public new BindableEvent Clone();
-		public void Fire(object[] arguments);
-		public ScriptSignal<object[]> Event { get; }
+		public void Fire(object arguments);
+		public ScriptSignal<object> Event { get; }
 	}
 	
 	public interface BindableFunction : ICreatableInstance
 	{
 		public new BindableFunction Clone();
-		public object[] Invoke(object[] arguments);
+		public object Invoke(object arguments);
 	}
 	
 	public interface BodyMover : Instance
@@ -1108,7 +1108,7 @@ namespace Roblox
 	{
 		public new BubbleChatMessageProperties Clone();
 		public Color3 BackgroundColor3 { get; set; }
-		public double BackgroundTransparency { get; set; }
+		public float BackgroundTransparency { get; set; }
 		public Font FontFace { get; set; }
 		public bool TailVisible { get; set; }
 		public Color3 TextColor3 { get; set; }
@@ -1154,8 +1154,8 @@ namespace Roblox
 		public void SetRoll(float rollAngle);
 		public bool TiltUnits(int units);
 		public Ray ViewportPointToRay(float x, float y, float? depth = null);
-		public object[] WorldToScreenPoint(Vector3 worldPoint);
-		public object[] WorldToViewportPoint(Vector3 worldPoint);
+		public object WorldToScreenPoint(Vector3 worldPoint);
+		public object WorldToViewportPoint(Vector3 worldPoint);
 		public void ZoomToExtents(CFrame boundingBoxCFrame, Vector3 boundingBoxSize);
 		public ScriptSignal InterpolationFinished { get; }
 	}
@@ -1234,7 +1234,7 @@ namespace Roblox
 		public bool BubbleChatEnabled { get; set; }
 		public bool LoadDefaultChat { get; }
 		public void Chat(Instance partOrCharacter, string message, Enum.ChatColor.Type? color = null);
-		public object[] InvokeChatCallback(Enum.ChatCallbackType.Type callbackType, object[] callbackArguments);
+		public object InvokeChatCallback(Enum.ChatCallbackType.Type callbackType, object callbackArguments);
 		public void RegisterChatCallback(Enum.ChatCallbackType.Type callbackType, Action callbackFunction);
 		public void SetBubbleChatSettings(object settings);
 		public bool CanUserChatAsync(long userId);
@@ -1659,10 +1659,10 @@ namespace Roblox
 	public interface ContextActionService : IServiceInstance
 	{
 		public new ContextActionService Clone();
-		public void BindAction(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
-		public void BindActionAtPriority(string actionName, Action functionToBind, bool createTouchButton, int priorityLevel, object[] inputTypes);
-		public void BindActionToInputTypes(string actionName, Action functionToBind, bool createTouchButton, object[] inputTypes);
-		public void BindActivate(Enum.UserInputType.Type userInputTypeForActivation, object[] keyCodesForActivation);
+		public void BindAction(string actionName, Action functionToBind, bool createTouchButton, object inputTypes);
+		public void BindActionAtPriority(string actionName, Action functionToBind, bool createTouchButton, int priorityLevel, object inputTypes);
+		public void BindActionToInputTypes(string actionName, Action functionToBind, bool createTouchButton, object inputTypes);
+		public void BindActivate(Enum.UserInputType.Type userInputTypeForActivation, object keyCodesForActivation);
 		public object GetAllBoundActionInfo();
 		public object GetBoundActionInfo(string actionName);
 		public string GetCurrentLocalToolIcon();
@@ -1828,20 +1828,20 @@ namespace Roblox
 		public bool SkinningEnabled { get; set; }
 		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
 		public long AddVertex(Vector3 p);
-		public object[] FindClosestPointOnSurface(Vector3 point);
+		public object FindClosestPointOnSurface(Vector3 point);
 		public long FindClosestVertex(Vector3 toThisPoint);
 		public object[] FindVerticesWithinSphere(Vector3 center, float radius);
 		public object[] GetAdjacentTriangles(long triangleId);
 		public object[] GetAdjacentVertices(long vertexId);
 		public Vector3 GetPosition(long vertexId);
-		public object[] GetTriangleVertices(long triangleId);
+		public object GetTriangleVertices(long triangleId);
 		public object[] GetTriangles();
 		public Vector2 GetUV(long vertexId);
 		public Color3 GetVertexColor(long vertexId);
 		public float GetVertexColorAlpha(long vertexId);
 		public Vector3 GetVertexNormal(long vertexId);
 		public object[] GetVertices();
-		public object[] RaycastLocal(Vector3 origin, Vector3 direction);
+		public object RaycastLocal(Vector3 origin, Vector3 direction);
 		public void RemoveTriangle(long triangleId);
 		public void RemoveVertex(long vertexId);
 		public void SetPosition(long vertexId, Vector3 p);
@@ -1947,7 +1947,7 @@ namespace Roblox
 	{
 		public new Debris Clone();
 		public int MaxItems { get; set; }
-		public void AddItem(Instance item, double? lifetime = null);
+		public void AddItem(Instance item, float? lifetime = null);
 	}
 	
 	public interface DebuggablePluginWatcher : IServiceInstance
@@ -2286,30 +2286,24 @@ namespace Roblox
 		public float Width { get; set; }
 	}
 	
-	public interface GlobalDataStore : Instance
+	public partial interface GlobalDataStore : Instance
 	{
 		public new GlobalDataStore Clone();
 		public ScriptConnection OnUpdate(string key, Action callback);
-		public object[] GetAsync(string key, DataStoreGetOptions? options = null);
-		public object IncrementAsync(string key, int? delta = null, object[]? userIds = null, DataStoreIncrementOptions? options = null);
-		public object[] RemoveAsync(string key);
-		public object SetAsync(string key, object value, object[]? userIds = null, DataStoreSetOptions? options = null);
-		public object[] UpdateAsync(string key, Action transformFunction);
 	}
 	
 	public interface DataStore : GlobalDataStore
 	{
 		public new DataStore Clone();
-		public object[] GetVersionAsync(string key, string version);
+		public object GetVersionAsync(string key, string version);
 		public DataStoreKeyPages ListKeysAsync(string prefix, int? pageSize = null, string? cursor = null, bool? excludeDeleted = null);
 		public DataStoreVersionPages ListVersionsAsync(string key, Enum.SortDirection.Type? sortDirection = null, long? minDate = null, long? maxDate = null, int? pageSize = null);
 		public void RemoveVersionAsync(string key, string version);
 	}
 	
-	public interface OrderedDataStore : GlobalDataStore
+	public partial interface OrderedDataStore : GlobalDataStore
 	{
 		public new OrderedDataStore Clone();
-		public Instance GetSortedAsync(bool ascending, int pagesize, object minValue, object maxValue);
 	}
 	
 	public interface GroupService : IServiceInstance
@@ -2589,8 +2583,8 @@ namespace Roblox
 		public bool Looped { get; set; }
 		public bool Playing { get; set; }
 		public Vector2 Resolution { get; }
-		public double TimeLength { get; }
-		public double TimePosition { get; set; }
+		public float TimeLength { get; }
+		public float TimePosition { get; set; }
 		public string Video { get; set; }
 		public float Volume { get; set; }
 		public void Pause();
@@ -2902,11 +2896,11 @@ namespace Roblox
 		public Rect TopbarInset { get; }
 		public bool TouchControlsEnabled { get; set; }
 		public void AddSelectionParent(string selectionName, Instance selectionParent);
-		public void AddSelectionTuple(string selectionName, object[] selections);
+		public void AddSelectionTuple(string selectionName, object selections);
 		public void CloseInspectMenu();
 		public bool GetEmotesMenuOpen();
 		public bool GetGameplayPausedNotificationEnabled();
-		public object[] GetGuiInset();
+		public object GetGuiInset();
 		public bool GetInspectMenuEnabled();
 		public void InspectPlayerFromHumanoidDescription(HumanoidDescription humanoidDescription, string name);
 		public void InspectPlayerFromUserId(long userId);
@@ -2923,10 +2917,10 @@ namespace Roblox
 	public interface HapticService : IServiceInstance
 	{
 		public new HapticService Clone();
-		public object[] GetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
+		public object GetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
 		public bool IsMotorSupported(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor);
 		public bool IsVibrationSupported(Enum.UserInputType.Type inputType);
-		public void SetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor, object[] vibrationValues);
+		public void SetMotor(Enum.UserInputType.Type inputType, Enum.VibrationMotor.Type vibrationMotor, object vibrationValues);
 	}
 	
 	public interface HeatmapService : IServiceInstance
@@ -3155,7 +3149,7 @@ namespace Roblox
 	{
 		public new IncrementalPatchBuilder Clone();
 		public bool AddPathsToBundle { get; set; }
-		public double BuildDebouncePeriod { get; set; }
+		public float BuildDebouncePeriod { get; set; }
 		public bool HighCompression { get; set; }
 		public bool SerializePatch { get; set; }
 		public bool ZstdCompression { get; set; }
@@ -3390,11 +3384,11 @@ namespace Roblox
 		public Color3 ShadowColor { get; set; }
 		public float ShadowSoftness { get; set; }
 		public string TimeOfDay { get; set; }
-		public double GetMinutesAfterMidnight();
+		public float GetMinutesAfterMidnight();
 		public Vector3 GetMoonDirection();
 		public float GetMoonPhase();
 		public Vector3 GetSunDirection();
-		public void SetMinutesAfterMidnight(double minutes);
+		public void SetMinutesAfterMidnight(float minutes);
 		public ScriptSignal<bool> LightingChanged { get; }
 	}
 	
@@ -3585,8 +3579,8 @@ namespace Roblox
 	public interface MemoryStoreQueue : Instance
 	{
 		public new MemoryStoreQueue Clone();
-		public void AddAsync(object value, long expiration, double? priority = null);
-		public object[] ReadAsync(int count, bool? allOrNothing = null, double? waitTimeout = null);
+		public void AddAsync(object value, long expiration, float? priority = null);
+		public object ReadAsync(int count, bool? allOrNothing = null, float? waitTimeout = null);
 		public void RemoveAsync(string id);
 	}
 	
@@ -3601,11 +3595,11 @@ namespace Roblox
 	public interface MemoryStoreSortedMap : Instance
 	{
 		public new MemoryStoreSortedMap Clone();
-		public object[] GetAsync(string key);
+		public object GetAsync(string key);
 		public object[] GetRangeAsync(Enum.SortDirection.Type direction, int count, object exclusiveLowerBound, object exclusiveUpperBound);
 		public void RemoveAsync(string key);
 		public bool SetAsync(string key, object value, long expiration, object sortKey);
-		public object[] UpdateAsync(string key, Action transformFunction, long expiration);
+		public object UpdateAsync(string key, Action transformFunction, long expiration);
 	}
 	
 	public interface MessageBusConnection : Instance
@@ -3771,7 +3765,7 @@ namespace Roblox
 		public void ApplyImpulseAtPosition(Vector3 impulse, Vector3 position);
 		public void BreakJoints();
 		public bool CanCollideWith(BasePart part);
-		public object[] CanSetNetworkOwnership();
+		public object CanSetNetworkOwnership();
 		public Vector3 GetClosestPointOnSurface(Vector3 position);
 		public Instance[] GetConnectedParts(bool? recursive = null);
 		public Instance[] GetJoints();
@@ -3880,12 +3874,12 @@ namespace Roblox
 		public void FillCylinder(CFrame cframe, float height, float radius, Enum.Material.Type material);
 		public void FillRegion(Region3 region, float resolution, Enum.Material.Type material);
 		public void FillWedge(CFrame cframe, Vector3 size, Enum.Material.Type material);
-		public object[] GetCell(int x, int y, int z);
+		public object GetCell(int x, int y, int z);
 		public Color3 GetMaterialColor(Enum.Material.Type material);
-		public object[] GetWaterCell(int x, int y, int z);
+		public object GetWaterCell(int x, int y, int z);
 		public void PasteRegion(TerrainRegion region, Vector3int16 corner, bool pasteEmptyCells);
 		public object ReadVoxelChannels(Region3 region, float resolution, object[] channelIds);
-		public object[] ReadVoxels(Region3 region, float resolution);
+		public object ReadVoxels(Region3 region, float resolution);
 		public void ReplaceMaterial(Region3 region, float resolution, Enum.Material.Type sourceMaterial, Enum.Material.Type targetMaterial);
 		public void SetCell(int x, int y, int z, Enum.CellMaterial.Type material, Enum.CellBlock.Type block, Enum.CellOrientation.Type orientation);
 		public void SetCells(Region3int16 region, Enum.CellMaterial.Type material, Enum.CellBlock.Type block, Enum.CellOrientation.Type orientation);
@@ -3995,7 +3989,7 @@ namespace Roblox
 		public new Actor Clone();
 		public ScriptConnection BindToMessage(string topic, Action function);
 		public ScriptConnection BindToMessageParallel(string topic, Action function);
-		public void SendMessage(string topic, object[] message);
+		public void SendMessage(string topic, object message);
 	}
 	
 	public interface BackpackItem : Model
@@ -4025,9 +4019,9 @@ namespace Roblox
 	{
 		public new WorldRoot Clone();
 		public RaycastResult Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
-		public object[] FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
-		public object[] FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
-		public object[] FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);
+		public object FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
+		public object FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
+		public object FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);
 		public Instance[] FindPartsInRegion3(Region3 region, Instance? ignoreDescendantsInstance = null, int? maxParts = null);
 		public Instance[] FindPartsInRegion3WithIgnoreList(Region3 region, Instance[] ignoreDescendantsTable, int? maxParts = null);
 		public Instance[] FindPartsInRegion3WithWhiteList(Region3 region, Instance[] whitelistDescendantsTable, int? maxParts = null);
@@ -4048,7 +4042,7 @@ namespace Roblox
 		public bool AllowThirdPartySales { get; set; }
 		public Enum.ClientAnimatorThrottlingMode.Type ClientAnimatorThrottling { get; set; }
 		public Camera? CurrentCamera { get; set; }
-		public double DistributedGameTime { get; set; }
+		public float DistributedGameTime { get; set; }
 		public float FallenPartsDestroyHeight { get; set; }
 		public Vector3 GlobalWind { get; set; }
 		public float Gravity { get; set; }
@@ -4058,8 +4052,8 @@ namespace Roblox
 		public Terrain? Terrain { get; }
 		public int GetNumAwakeParts();
 		public int GetPhysicsThrottling();
-		public double GetRealPhysicsFPS();
-		public double GetServerTimeNow();
+		public float GetRealPhysicsFPS();
+		public float GetServerTimeNow();
 		public void JoinToOutsiders(Instance[] objects, Enum.JointCreationMode.Type jointType);
 		public bool PGSIsEnabled();
 		public void UnjoinFromOutsiders(Instance[] objects);
@@ -4349,12 +4343,12 @@ namespace Roblox
 		public bool LoadBoolean(string key);
 		public void LoadCharacterAppearance(Instance assetInstance);
 		public Instance LoadInstance(string key);
-		public double LoadNumber(string key);
+		public float LoadNumber(string key);
 		public string LoadString(string key);
 		public void Move(Vector3 walkDirection, bool? relativeToCamera = null);
 		public void SaveBoolean(string key, bool value);
 		public void SaveInstance(string key, Instance value);
-		public void SaveNumber(string key, double value);
+		public void SaveNumber(string key, float value);
 		public void SaveString(string key, string value);
 		public object[] GetFriendsOnline(int? maxFriends = null);
 		public int GetRankInGroup(long groupId);
@@ -4364,13 +4358,13 @@ namespace Roblox
 		public bool IsInGroup(long groupId);
 		public void LoadCharacter();
 		public void LoadCharacterWithHumanoidDescription(HumanoidDescription humanoidDescription);
-		public void RequestStreamAroundAsync(Vector3 position, double? timeOut = null);
+		public void RequestStreamAroundAsync(Vector3 position, float? timeOut = null);
 		public bool WaitForDataReady();
 		public ScriptSignal<Model> CharacterAdded { get; }
 		public ScriptSignal<Model> CharacterAppearanceLoaded { get; }
 		public ScriptSignal<Model> CharacterRemoving { get; }
 		public ScriptSignal<string, Player> Chatted { get; }
-		public ScriptSignal<double> Idled { get; }
+		public ScriptSignal<float> Idled { get; }
 		public ScriptSignal<Enum.TeleportState.Type, long, string> OnTeleport { get; }
 	}
 	
@@ -4424,7 +4418,7 @@ namespace Roblox
 		public HumanoidDescription GetHumanoidDescriptionFromUserId(long userId);
 		public string GetNameFromUserIdAsync(long userId);
 		public long GetUserIdFromNameAsync(string userName);
-		public object[] GetUserThumbnailAsync(long userId, Enum.ThumbnailType.Type thumbnailType, Enum.ThumbnailSize.Type thumbnailSize);
+		public object GetUserThumbnailAsync(long userId, Enum.ThumbnailType.Type thumbnailType, Enum.ThumbnailSize.Type thumbnailSize);
 		public void UnbanAsync(object config);
 		public ScriptSignal<Player> PlayerAdded { get; }
 		public ScriptSignal<Player> PlayerMembershipChanged { get; }
@@ -4469,7 +4463,7 @@ namespace Roblox
 	public interface NumberPose : PoseBase, ICreatableInstance
 	{
 		public new NumberPose Clone();
-		public double Value { get; set; }
+		public float Value { get; set; }
 	}
 	
 	public interface Pose : PoseBase, ICreatableInstance
@@ -4665,13 +4659,13 @@ namespace Roblox
 		public bool IsServer();
 		public bool IsStudio();
 		public void UnbindFromRenderStep(string name);
-		public ScriptSignal<double> Heartbeat { get; }
-		public ScriptSignal<double> PostSimulation { get; }
-		public ScriptSignal<double> PreAnimation { get; }
-		public ScriptSignal<double> PreRender { get; }
-		public ScriptSignal<double> PreSimulation { get; }
-		public ScriptSignal<double> RenderStepped { get; }
-		public ScriptSignal<double, double> Stepped { get; }
+		public ScriptSignal<float> Heartbeat { get; }
+		public ScriptSignal<float> PostSimulation { get; }
+		public ScriptSignal<float> PreAnimation { get; }
+		public ScriptSignal<float> PreRender { get; }
+		public ScriptSignal<float> PreSimulation { get; }
+		public ScriptSignal<float> RenderStepped { get; }
+		public ScriptSignal<float, float> Stepped { get; }
 	}
 	
 	public interface SafetyService : IServiceInstance
@@ -4937,7 +4931,7 @@ namespace Roblox
 		public float MinDistance { get; set; }
 		public float Pitch { get; set; }
 		public bool PlayOnRemove { get; set; }
-		public double PlaybackLoudness { get; }
+		public float PlaybackLoudness { get; }
 		public NumberRange PlaybackRegion { get; set; }
 		public bool PlaybackRegionsEnabled { get; set; }
 		public float PlaybackSpeed { get; set; }
@@ -4947,8 +4941,8 @@ namespace Roblox
 		public Enum.RollOffMode.Type RollOffMode { get; set; }
 		public SoundGroup? SoundGroup { get; set; }
 		public string SoundId { get; set; }
-		public double TimeLength { get; }
-		public double TimePosition { get; set; }
+		public float TimeLength { get; }
+		public float TimePosition { get; set; }
 		public float Volume { get; set; }
 		public void Pause();
 		public void Play();
@@ -5074,9 +5068,9 @@ namespace Roblox
 		public float DopplerScale { get; set; }
 		public bool RespectFilteringEnabled { get; set; }
 		public float RolloffScale { get; set; }
-		public object[] GetListener();
+		public object GetListener();
 		public void PlayLocalSound(Sound sound);
-		public void SetListener(Enum.ListenerType.Type listenerType, object[] listener);
+		public void SetListener(Enum.ListenerType.Type listenerType, object listener);
 	}
 	
 	public interface Sparkles : ICreatableInstance
@@ -5334,8 +5328,8 @@ namespace Roblox
 		public void TeleportToPlaceInstance(long placeId, string instanceId, Player? player = null, string? spawnName = null, object? teleportData = null, Instance? customLoadingScreen = null);
 		public void TeleportToPrivateServer(long placeId, string reservedServerAccessCode, Instance[] players, string spawnName, object teleportData, Instance? customLoadingScreen = null);
 		public void TeleportToSpawnByName(long placeId, string spawnName, Player? player = null, object? teleportData = null, Instance? customLoadingScreen = null);
-		public object[] GetPlayerPlaceInstanceAsync(long userId);
-		public object[] ReserveServer(long placeId);
+		public object GetPlayerPlaceInstanceAsync(long userId);
+		public object ReserveServer(long placeId);
 		public Instance TeleportAsync(long placeId, Instance[] players, TeleportOptions? teleportOptions = null);
 		public string TeleportPartyAsync(long placeId, Instance[] players, object teleportData, Instance? customLoadingScreen = null);
 		public ScriptSignal<Instance, object> LocalPlayerArrivedFromTeleport { get; }
@@ -5376,7 +5370,7 @@ namespace Roblox
 	{
 		public new TextChannel Clone();
 		public TextChatMessage DisplaySystemMessage(string systemMessage, string metadata);
-		public object[] AddUserAsync(long userId);
+		public object AddUserAsync(long userId);
 		public TextChatMessage SendAsync(string message, string metadata);
 		public ScriptSignal<TextChatMessage> MessageReceived { get; }
 	}
@@ -5401,7 +5395,7 @@ namespace Roblox
 		public new BubbleChatConfiguration Clone();
 		public string AdorneeName { get; set; }
 		public Color3 BackgroundColor3 { get; set; }
-		public double BackgroundTransparency { get; set; }
+		public float BackgroundTransparency { get; set; }
 		public float BubbleDuration { get; set; }
 		public float BubblesSpacing { get; set; }
 		public bool Enabled { get; set; }
@@ -5422,7 +5416,7 @@ namespace Roblox
 		public Vector2 AbsolutePosition { get; }
 		public Vector2 AbsoluteSize { get; }
 		public Color3 BackgroundColor3 { get; set; }
-		public double BackgroundTransparency { get; set; }
+		public float BackgroundTransparency { get; set; }
 		public bool Enabled { get; set; }
 		public Font FontFace { get; set; }
 		public Color3 HoverBackgroundColor3 { get; set; }
@@ -5430,7 +5424,7 @@ namespace Roblox
 		public Color3 TextColor3 { get; set; }
 		public long TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
-		public double TextStrokeTransparency { get; set; }
+		public float TextStrokeTransparency { get; set; }
 	}
 	
 	public interface ChatInputBarConfiguration : TextChatConfigurations
@@ -5440,7 +5434,7 @@ namespace Roblox
 		public Vector2 AbsoluteSize { get; }
 		public bool AutocompleteEnabled { get; set; }
 		public Color3 BackgroundColor3 { get; set; }
-		public double BackgroundTransparency { get; set; }
+		public float BackgroundTransparency { get; set; }
 		public bool Enabled { get; set; }
 		public Font FontFace { get; set; }
 		public bool IsFocused { get; }
@@ -5451,7 +5445,7 @@ namespace Roblox
 		public Color3 TextColor3 { get; set; }
 		public long TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
-		public double TextStrokeTransparency { get; set; }
+		public float TextStrokeTransparency { get; set; }
 	}
 	
 	public interface ChatWindowConfiguration : TextChatConfigurations
@@ -5460,7 +5454,7 @@ namespace Roblox
 		public Vector2 AbsolutePosition { get; }
 		public Vector2 AbsoluteSize { get; }
 		public Color3 BackgroundColor3 { get; set; }
-		public double BackgroundTransparency { get; set; }
+		public float BackgroundTransparency { get; set; }
 		public bool Enabled { get; set; }
 		public Font FontFace { get; set; }
 		public float HeightScale { get; set; }
@@ -5468,7 +5462,7 @@ namespace Roblox
 		public Color3 TextColor3 { get; set; }
 		public long TextSize { get; set; }
 		public Color3 TextStrokeColor3 { get; set; }
-		public double TextStrokeTransparency { get; set; }
+		public float TextStrokeTransparency { get; set; }
 		public Enum.VerticalAlignment.Type VerticalAlignment { get; set; }
 		public float WidthScale { get; set; }
 	}
@@ -5905,7 +5899,7 @@ namespace Roblox
 		public object[] GetConnectedGamepads();
 		public InputObject GetDeviceAcceleration();
 		public InputObject GetDeviceGravity();
-		public object[] GetDeviceRotation();
+		public object GetDeviceRotation();
 		public TextBox GetFocusedTextBox();
 		public bool GetGamepadConnected(Enum.UserInputType.Type gamepadNum);
 		public object[] GetGamepadState(Enum.UserInputType.Type gamepadNum);
@@ -6021,10 +6015,10 @@ namespace Roblox
 	public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
 	{
 		public new DoubleConstrainedValue Clone();
-		public double MaxValue { get; set; }
-		public double MinValue { get; set; }
-		public double Value { get; set; }
-		public ScriptSignal<double> Changed { get; }
+		public float MaxValue { get; set; }
+		public float MinValue { get; set; }
+		public float Value { get; set; }
+		public ScriptSignal<float> Changed { get; }
 	}
 	
 	public interface IntConstrainedValue : ValueBase, ICreatableInstance
@@ -6046,8 +6040,8 @@ namespace Roblox
 	public interface NumberValue : ValueBase, ICreatableInstance
 	{
 		public new NumberValue Clone();
-		public double Value { get; set; }
-		public ScriptSignal<double> Changed { get; }
+		public float Value { get; set; }
+		public ScriptSignal<float> Changed { get; }
 	}
 	
 	public interface ObjectValue : ValueBase, ICreatableInstance
@@ -6129,10 +6123,10 @@ namespace Roblox
 	public interface VoiceChatInternal : IServiceInstance
 	{
 		public new VoiceChatInternal Clone();
-		public object[] GetAudioProcessingSettings();
-		public object[] GetMicDevices();
+		public object GetAudioProcessingSettings();
+		public object GetMicDevices();
 		public object[] GetParticipants();
-		public object[] GetSpeakerDevices();
+		public object GetSpeakerDevices();
 		public int GetVoiceChatApiVersion();
 		public int GetVoiceChatAvailable();
 		public bool IsPublishPaused();
