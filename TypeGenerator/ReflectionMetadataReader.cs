@@ -35,7 +35,7 @@ namespace TypeGenerator
             return ReadMemberDesc(className, name, ["ReflectionMetadataProperties"]);
         }
 
-        public string ReadMethodDesc(string className, string name)
+        public string ReadFunctionDesc(string className, string name)
         {
             return ReadMemberDesc(className, name, ["ReflectionMetadataFunctions", "ReflectionMetadataYieldFunctions"]);
         }

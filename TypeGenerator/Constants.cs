@@ -56,7 +56,8 @@
             "ServerScriptService",
             "ReplicatedFirst",
             "PlayerGui",
-            "PlayerScripts"
+            "PlayerScripts",
+            "DataStoreService"
         };
 
         public static readonly HashSet<string> CREATABLE_BLACKLIST = new HashSet<string>
@@ -230,13 +231,14 @@
             { "BodyGyro", ["cframe"] },
             { "BodyAngularVelocity", ["FilteringEnabled"] },
             { "BodyPosition", ["FilteringEnabled"] },
-            { "DataStoreService", ["FilteringEnabled"] },
+            { "DataStoreService", ["FilteringEnabled", "GetDataStore"] }, // defined in Roblox.cs
             { "Debris", ["FilteringEnabled"] },
             { "LayerCollector", ["FilteringEnabled"] },
             { "GuiBase3d", ["FilteringEnabled"] },
             { "Model", ["FilteringEnabled"] },
-            { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] },
-            { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] }
+            { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] }, // defined in Roblox.cs
+            { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] },
+            { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] }
         };
 
         public static readonly Dictionary<string, List<string>> EXPECTED_EXTRA_MEMBERS = new Dictionary<string, List<string>>
@@ -328,14 +330,13 @@
             { "Map", "object" },
             { "RBXScriptSignal", "ScriptSignal" },
             { "RBXScriptConnection", "ScriptConnection" },
-            // { "Instance", "Instance?" },
             { "Object", "Instance" },
             { "Objects", "Instance[]" },
             { "Property", "string" },
             { "OptionalCoordinateFrame", "CFrame?" },
             { "ProtectedString", "string" },
             { "Rect2D", "Rect" },
-            { "Tuple", "object[]" },
+            { "Tuple", "object" },
             { "Variant", "object" },
             { "Color3uint8", "Color3" },
             { "any", "object" },

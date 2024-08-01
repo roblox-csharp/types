@@ -1927,10 +1927,9 @@ namespace Roblox
 		public void SetExperimentalFeatures(object experimentalFeatures);
 	}
 	
-	public interface DataStoreService : IServiceInstance
+	public partial interface DataStoreService : IServiceInstance
 	{
 		public new DataStoreService Clone();
-		public GlobalDataStore GetDataStore(string name, string? scope = null, Instance? options = null);
 		public GlobalDataStore GetGlobalDataStore();
 		public OrderedDataStore GetOrderedDataStore(string name, string? scope = null);
 		public int GetRequestBudgetForRequestType(Enum.DataStoreRequestType.Type requestType);
@@ -4025,9 +4024,7 @@ namespace Roblox
 	public partial interface WorldRoot : Model
 	{
 		public new WorldRoot Clone();
-		public bool ArePartsTouchingOthers(Instance[] partList, float? overlapIgnored = null);
 		public RaycastResult Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
-		public void BulkMoveTo(Instance[] partList, object[] cframeList, Enum.BulkMoveMode.Type? eventMode = null);
 		public object[] FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object[] FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object[] FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);

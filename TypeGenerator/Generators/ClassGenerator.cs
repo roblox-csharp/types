@@ -462,10 +462,20 @@ namespace TypeGenerator.Generators
         private void GenerateFunction(APITypes.Function function, APITypes.Class rbxClass)
         {
             var args = GenerateArgs(function.Parameters);
-            var returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
+            string? returnType;
+            if ((object)function.ReturnType is IEnumerable<string> enumerable)
+            {
+                var typesList = enumerable.Select(t => string.Join(", ", Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType))));
+                // returnType = $"LuaTuple<{typesList}>";
+                returnType = "object"; // temporary
+            }
+            else
+            {
+                returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
+            }
             var description = !string.IsNullOrWhiteSpace(function.Description) ?
                 function.Description :
-                _metadata.ReadMethodDesc(rbxClass.Name, function.Name);
+                _metadata.ReadFunctionDesc(rbxClass.Name, function.Name);
 
             Write($"public {returnType} {function.Name}({args});");
         }
