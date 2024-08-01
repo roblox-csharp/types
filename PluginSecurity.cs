@@ -484,8 +484,8 @@ namespace Roblox.PluginClasses
 	{
 		public new ChangeHistoryService Clone();
 		public void FinishRecording(string identifier, Enum.FinishRecordingOperation.Type operation, object? finalOptions = null);
-		public object[] GetCanRedo();
-		public object[] GetCanUndo();
+		public object GetCanRedo();
+		public object GetCanUndo();
 		public bool IsRecordingInProgress(string? identifier = null);
 		public void Redo();
 		public void ResetWaypoints();
@@ -814,7 +814,7 @@ namespace Roblox.PluginClasses
 		public new DataStoreOptions Clone();
 	}
 	
-	public interface DataStoreService : IServiceInstance
+	public partial interface DataStoreService : IServiceInstance
 	{
 		public new DataStoreService Clone();
 	}
@@ -2381,17 +2381,17 @@ namespace Roblox.PluginClasses
 		public int GetLineCount();
 		public LuaSourceContainer GetScript();
 		public string GetSelectedText();
-		public object[] GetSelection();
-		public object[] GetSelectionEnd();
-		public object[] GetSelectionStart();
+		public object GetSelection();
+		public object GetSelectionEnd();
+		public object GetSelectionStart();
 		public string GetText(int? startLine = null, int? startCharacter = null, int? endLine = null, int? endCharacter = null);
-		public object[] GetViewport();
+		public object GetViewport();
 		public bool HasSelectedText();
 		public bool IsCommandBar();
-		public object[] CloseAsync();
-		public object[] EditTextAsync(string newText, int startLine, int startCharacter, int endLine, int endCharacter);
-		public object[] ForceSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
-		public object[] RequestSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
+		public object CloseAsync();
+		public object EditTextAsync(string newText, int startLine, int startCharacter, int endLine, int endCharacter);
+		public object ForceSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
+		public object RequestSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
 		public ScriptSignal<long, long, long, long> SelectionChanged { get; }
 		public ScriptSignal<long, long> ViewportChanged { get; }
 	}
@@ -2406,7 +2406,7 @@ namespace Roblox.PluginClasses
 		public Instance[] GetScriptDocuments();
 		public void RegisterAutocompleteCallback(string name, int priority, Action callbackFunction);
 		public void RegisterScriptAnalysisCallback(string name, int priority, Action callbackFunction);
-		public object[] OpenScriptDocumentAsync(LuaSourceContainer script);
+		public object OpenScriptDocumentAsync(LuaSourceContainer script);
 		public void UpdateSourceAsync(LuaSourceContainer script, Action callback);
 		public ScriptSignal<ScriptDocument, object> TextDocumentDidChange { get; }
 		public ScriptSignal<ScriptDocument> TextDocumentDidClose { get; }
