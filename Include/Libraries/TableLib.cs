@@ -40,7 +40,7 @@
         }
 
         /// <summary>Returns whether or not the list is frozen.</summary>
-        public static bool isFrozen<T>(T t)
+        public static bool isfrozen<T>(T t)
         {
             return default;
         }
@@ -61,6 +61,34 @@
         public static T[] clone<T>(T[] t)
         {
             return null!;
+        }
+
+        public static void insert<T>(T[] t, T value)
+        {
+        }
+
+        public static void insert<T>(T[] t, uint index, T value)
+        {
+        }
+
+        public static T? remove<T>(T[] t, uint? index = null)
+        {
+            return default;
+        }
+
+        public static T[] move<T>(T[] src, uint a, uint b, uint t, T[]? dst = null!)
+        {
+            return default!;
+        }
+
+        public static string concat(object[] t, string? sep = null, uint? i = null, uint? j = null)
+        {
+            return default!;
+        }
+
+        public static uint? find<T>(T[] t, T value, uint? init = null)
+        {
+            return default;
         }
     }
 }
