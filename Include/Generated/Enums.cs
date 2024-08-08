@@ -171,6 +171,7 @@ namespace Roblox.Enum
 		public static Type PlayButtonClicked { get; } = null!;
 		public static Type PauseButtonClicked { get; } = null!;
 		public static Type CloseButtonClicked { get; } = null!;
+		public static Type WhyThisAdClicked { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
@@ -447,6 +448,24 @@ namespace Roblox.Enum
 		public static Type Default { get; } = null!;
 		public static Type Disabled { get; } = null!;
 		public static Type Enabled { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class AppLifecycleManagerState
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Detached { get; } = null!;
+		public static Type Active { get; } = null!;
+		public static Type Inactive { get; } = null!;
+		public static Type Hidden { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
