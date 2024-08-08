@@ -33,6 +33,7 @@ namespace Roblox
 		public static CaptureService CaptureService { get; } = null!;
 		public static Chat Chat { get; } = null!;
 		public static ChatbotUIService ChatbotUIService { get; } = null!;
+		public static CloudCRUDService CloudCRUDService { get; } = null!;
 		public static CollaboratorsService CollaboratorsService { get; } = null!;
 		public static CollectionService CollectionService { get; } = null!;
 		public static CommandService CommandService { get; } = null!;
@@ -54,7 +55,6 @@ namespace Roblox
 		public static DebuggerUIService DebuggerUIService { get; } = null!;
 		public static DeviceIdService DeviceIdService { get; } = null!;
 		public static DraggerService DraggerService { get; } = null!;
-		public static EngineAPICloudProcessingService EngineAPICloudProcessingService { get; } = null!;
 		public static EventIngestService EventIngestService { get; } = null!;
 		public static ExampleService ExampleService { get; } = null!;
 		public static ExperienceAuthService ExperienceAuthService { get; } = null!;
@@ -278,6 +278,7 @@ namespace Roblox
 		public void FireInGameEconomyEvent(Player player, string itemName, Enum.AnalyticsEconomyAction.Type economyAction, string itemCategory, int amount, string currency, object location, object customData);
 		public void FireLogEvent(Player player, Enum.AnalyticsLogLevel.Type logLevel, string message, object debugInfo, object customData);
 		public void FirePlayerProgressionEvent(Player player, string category, Enum.AnalyticsProgressionStatus.Type progressionStatus, object location, object statistics, object customData);
+		public void LogCustomEvent(Player player, string eventName, float? value = null, object? customFields = null);
 		public void LogEconomyEvent(Player player, Enum.AnalyticsEconomyFlowType.Type flowType, string currencyType, float amount, float endingBalance, string transactionType, string itemSku, object? customFields = null);
 		public void LogFunnelStepEvent(Player player, string funnelName, string funnelSessionId, int? step = null, string? stepName = null, object? customFields = null);
 		public void LogOnboardingFunnelStepEvent(Player player, int step, string stepName, object? customFields = null);
@@ -511,7 +512,8 @@ namespace Roblox
 		public new AudioAnalyzer Clone();
 		public float PeakLevel { get; }
 		public float RmsLevel { get; }
-		public object[] GetConnectedWires(string pin);
+		public bool SpectrumEnabled { get; set; }
+		public Instance[] GetConnectedWires(string pin);
 		public object[] GetSpectrum();
 	}
 	
@@ -522,7 +524,7 @@ namespace Roblox
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioCompressor : ICreatableInstance
@@ -534,7 +536,7 @@ namespace Roblox
 		public float Ratio { get; set; }
 		public float Release { get; set; }
 		public float Threshold { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioDeviceInput : ICreatableInstance
@@ -545,7 +547,7 @@ namespace Roblox
 		public bool Muted { get; set; }
 		public Player? Player { get; set; }
 		public float Volume { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 		public object[] GetUserIdAccessList();
 		public void SetUserIdAccessList(object[] userIds);
 	}
@@ -554,7 +556,7 @@ namespace Roblox
 	{
 		public new AudioDeviceOutput Clone();
 		public Player? Player { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioDistortion : ICreatableInstance
@@ -562,7 +564,7 @@ namespace Roblox
 		public new AudioDistortion Clone();
 		public bool Bypass { get; set; }
 		public float Level { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioEcho : ICreatableInstance
@@ -573,16 +575,16 @@ namespace Roblox
 		public float DryLevel { get; set; }
 		public float Feedback { get; set; }
 		public float WetLevel { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioEmitter : ICreatableInstance
 	{
 		public new AudioEmitter Clone();
 		public string AudioInteractionGroup { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 		public object GetDistanceAttenuation();
-		public object[] GetInteractingListeners();
+		public Instance[] GetInteractingListeners();
 		public void SetDistanceAttenuation(object curve);
 	}
 	
@@ -594,7 +596,7 @@ namespace Roblox
 		public float LowGain { get; set; }
 		public float MidGain { get; set; }
 		public NumberRange MidRange { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioFader : ICreatableInstance
@@ -602,7 +604,7 @@ namespace Roblox
 		public new AudioFader Clone();
 		public bool Bypass { get; set; }
 		public float Volume { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioFilter : ICreatableInstance
@@ -613,7 +615,7 @@ namespace Roblox
 		public float Frequency { get; set; }
 		public float Gain { get; set; }
 		public float Q { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 		public float GetGainAt(float frequency);
 	}
 	
@@ -624,7 +626,7 @@ namespace Roblox
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioFocusService : IServiceInstance
@@ -636,8 +638,8 @@ namespace Roblox
 	{
 		public new AudioListener Clone();
 		public string AudioInteractionGroup { get; set; }
-		public object[] GetConnectedWires(string pin);
-		public object[] GetInteractingEmitters();
+		public Instance[] GetConnectedWires(string pin);
+		public Instance[] GetInteractingEmitters();
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
@@ -645,7 +647,7 @@ namespace Roblox
 		public new AudioPitchShifter Clone();
 		public bool Bypass { get; set; }
 		public float Pitch { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioPlayer : ICreatableInstance
@@ -662,7 +664,7 @@ namespace Roblox
 		public float TimeLength { get; }
 		public float TimePosition { get; set; }
 		public float Volume { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 		public void Play();
 		public void Stop();
 		public ScriptSignal Ended { get; }
@@ -685,7 +687,7 @@ namespace Roblox
 		public float LowShelfGain { get; set; }
 		public float ReferenceFrequency { get; set; }
 		public float WetLevel { get; set; }
-		public object[] GetConnectedWires(string pin);
+		public Instance[] GetConnectedWires(string pin);
 	}
 	
 	public interface AudioSearchParams : ICreatableInstance
@@ -1298,6 +1300,11 @@ namespace Roblox
 		public ScriptSignal<Player, Ray, CFrame, CFrame?, bool> DragContinue { get; }
 		public ScriptSignal<Player> DragEnd { get; }
 		public ScriptSignal<Player, Ray, CFrame, CFrame, BasePart, CFrame?, bool> DragStart { get; }
+	}
+	
+	public interface CloudCRUDService : IServiceInstance
+	{
+		public new CloudCRUDService Clone();
 	}
 	
 	public interface Clouds : ICreatableInstance
@@ -2065,11 +2072,6 @@ namespace Roblox
 	public interface RobloxEditableImage : EditableImage, ICreatableInstance
 	{
 		public new RobloxEditableImage Clone();
-	}
-	
-	public interface EngineAPICloudProcessingService : IServiceInstance
-	{
-		public new EngineAPICloudProcessingService Clone();
 	}
 	
 	public interface EulerRotationCurve : ICreatableInstance
