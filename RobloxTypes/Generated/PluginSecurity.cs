@@ -1390,6 +1390,11 @@ namespace Roblox.PluginClasses
 		public new GuiService Clone();
 	}
 	
+	public interface HapticEffect : ICreatableInstance
+	{
+		public new HapticEffect Clone();
+	}
+	
 	public interface HapticService : IServiceInstance
 	{
 		public new HapticService Clone();
@@ -2211,11 +2216,6 @@ namespace Roblox.PluginClasses
 		public new SunRaysEffect Clone();
 	}
 	
-	public interface ProjectFolderService : IServiceInstance
-	{
-		public new ProjectFolderService Clone();
-	}
-	
 	public interface ProximityPrompt : ICreatableInstance
 	{
 		public new ProximityPrompt Clone();
@@ -2714,7 +2714,7 @@ namespace Roblox.PluginClasses
 		public bool UseLocalSpace { get; set; }
 		public object GetClassIcon(string className);
 		public long GetUserId();
-		public RaycastResult GizmoRaycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
+		public RaycastResult? GizmoRaycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
 		public Instance PromptImportFile(object[]? fileTypeFilter = null);
 		public Instance[] PromptImportFiles(object[]? fileTypeFilter = null);
 	}
