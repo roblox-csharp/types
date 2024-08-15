@@ -910,11 +910,12 @@ namespace Roblox.Enum
 		}
 		
 		public static Type None { get; } = null!;
-		public static Type Timeout { get; } = null!;
+		public static Type Unknown { get; } = null!;
 		public static Type DownloadFailed { get; } = null!;
 		public static Type Canceled { get; } = null!;
 		public static Type Offensive { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static Type Timeout { get; } = null!;
+		public static Type JobNotFound { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
@@ -2367,6 +2368,23 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class DeviceLevel
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Low { get; } = null!;
+		public static Type Medium { get; } = null!;
+		public static Type High { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class DeviceType
 	{
 		public interface Type : EnumItem
@@ -3233,6 +3251,25 @@ namespace Roblox.Enum
 		
 		public static Type Resize { get; } = null!;
 		public static Type Movement { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class HapticEffectType
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type UIHover { get; } = null!;
+		public static Type UIClick { get; } = null!;
+		public static Type UINotification { get; } = null!;
+		public static Type GameplayExplosion { get; } = null!;
+		public static Type GameplayCollision { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
@@ -7966,6 +8003,39 @@ namespace Roblox.Enum
 		public static Type Normal { get; } = null!;
 		public static Type Expert { get; } = null!;
 		public static Type Custom { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class VRControllerModelMode
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Disabled { get; } = null!;
+		public static Type Transparent { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class VRLaserPointerMode
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Disabled { get; } = null!;
+		public static Type Pointer { get; } = null!;
+		public static Type DualPointer { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()

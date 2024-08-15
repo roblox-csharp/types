@@ -123,7 +123,6 @@ namespace Roblox
 		public static PluginPolicyService PluginPolicyService { get; } = null!;
 		public static PolicyService PolicyService { get; } = null!;
 		public static ProcessInstancePhysicsService ProcessInstancePhysicsService { get; } = null!;
-		public static ProjectFolderService ProjectFolderService { get; } = null!;
 		public static ProximityPromptService ProximityPromptService { get; } = null!;
 		public static PublishService PublishService { get; } = null!;
 		public static ReflectionService ReflectionService { get; } = null!;
@@ -714,6 +713,8 @@ namespace Roblox
 		public new AvatarCreationService Clone();
 		public void SendAnalyticsEvent(string eventName, object parameters);
 		public AvatarGenerationSession CreateAvatarGenerationSessionAsync(Player player);
+		public string GenerateAvatarModelAsync(Player player, string previewJobId, object options, Action progressCallback);
+		public string GenerateAvatarPreviewAsync(Player player, string textPrompt, object options, Action progressCallback);
 		public object GetAvatarGenerationConfig();
 		public Instance LoadAvatarModelAsync(string id);
 		public EditableImage LoadAvatarPreviewImageAsync(string avatarPreview);
@@ -1937,7 +1938,7 @@ namespace Roblox
 	public partial interface DataStoreService : IServiceInstance
 	{
 		public new DataStoreService Clone();
-		public GlobalDataStore GetGlobalDataStore();
+		public DataStore GetGlobalDataStore();
 		public OrderedDataStore GetOrderedDataStore(string name, string? scope = null);
 		public int GetRequestBudgetForRequestType(Enum.DataStoreRequestType.Type requestType);
 		public DataStoreListingPages ListDataStoresAsync(string prefix, int? pageSize = null, string? cursor = null);
@@ -2914,6 +2915,15 @@ namespace Roblox
 		public void SetInspectMenuEnabled(bool enabled);
 		public ScriptSignal MenuClosed { get; }
 		public ScriptSignal MenuOpened { get; }
+	}
+	
+	public interface HapticEffect : ICreatableInstance
+	{
+		public new HapticEffect Clone();
+		public bool Looped { get; set; }
+		public Enum.HapticEffectType.Type Type { get; set; }
+		public void Play();
+		public void Stop();
 	}
 	
 	public interface HapticService : IServiceInstance
@@ -4020,7 +4030,7 @@ namespace Roblox
 	public partial interface WorldRoot : Model
 	{
 		public new WorldRoot Clone();
-		public RaycastResult Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
+		public RaycastResult? Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
 		public object FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 		public object FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);
@@ -4032,9 +4042,9 @@ namespace Roblox
 		public Instance[] GetPartsInPart(BasePart part, OverlapParams? overlapParams = null);
 		public bool IsRegion3Empty(Region3 region, Instance? ignoreDescendentsInstance = null);
 		public bool IsRegion3EmptyWithIgnoreList(Region3 region, Instance[] ignoreDescendentsTable);
-		public RaycastResult Raycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
-		public RaycastResult Shapecast(BasePart part, Vector3 direction, RaycastParams? parameters = null);
-		public RaycastResult Spherecast(Vector3 position, float radius, Vector3 direction, RaycastParams? parameters = null);
+		public RaycastResult? Raycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
+		public RaycastResult? Shapecast(BasePart part, Vector3 direction, RaycastParams? parameters = null);
+		public RaycastResult? Spherecast(Vector3 position, float radius, Vector3 direction, RaycastParams? parameters = null);
 	}
 	
 	public partial interface Workspace : WorldRoot, IServiceInstance
@@ -4532,11 +4542,6 @@ namespace Roblox
 	public interface ProcessInstancePhysicsService : IServiceInstance
 	{
 		public new ProcessInstancePhysicsService Clone();
-	}
-	
-	public interface ProjectFolderService : IServiceInstance
-	{
-		public new ProjectFolderService Clone();
 	}
 	
 	public interface ProximityPrompt : ICreatableInstance
@@ -5960,8 +5965,10 @@ namespace Roblox
 		public new VRService Clone();
 		public Enum.VRScaling.Type AutomaticScaling { get; set; }
 		public bool AvatarGestures { get; set; }
+		public Enum.VRControllerModelMode.Type ControllerModels { get; set; }
 		public bool FadeOutViewOnCollision { get; set; }
 		public Enum.UserCFrame.Type GuiInputUserCFrame { get; set; }
+		public Enum.VRLaserPointerMode.Type LaserPointer { get; set; }
 		public bool ThirdPersonFollowCamEnabled { get; }
 		public bool VREnabled { get; }
 		public Enum.VRTouchpadMode.Type GetTouchpadMode(Enum.VRTouchpad.Type pad);
