@@ -5189,6 +5189,7 @@ namespace Roblox.Enum
 		public static Type BeOS { get; } = null!;
 		public static Type UWP { get; } = null!;
 		public static Type PS5 { get; } = null!;
+		public static Type MetaOS { get; } = null!;
 		public static Type None { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
@@ -8019,6 +8020,25 @@ namespace Roblox.Enum
 		
 		public static Type Disabled { get; } = null!;
 		public static Type Transparent { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class VRDeviceType
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Unknown { get; } = null!;
+		public static Type OculusRift { get; } = null!;
+		public static Type HTCVive { get; } = null!;
+		public static Type ValveIndex { get; } = null!;
+		public static Type OculusQuest { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
