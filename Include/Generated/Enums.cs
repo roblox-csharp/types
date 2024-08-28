@@ -1243,7 +1243,7 @@ namespace Roblox.Enum
 		
 		public static Type Default { get; } = null!;
 		public static Type Disabled { get; } = null!;
-		public static Type Experimental { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()
@@ -3206,6 +3206,23 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class GraphicsOptimizationMode
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Performance { get; } = null!;
+		public static Type Balanced { get; } = null!;
+		public static Type Quality { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class GuiState
 	{
 		public interface Type : EnumItem
@@ -4810,6 +4827,22 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class NotificationButtonType
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Primary { get; } = null!;
+		public static Type Secondary { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class OperationType
 	{
 		public interface Type : EnumItem
@@ -5102,6 +5135,23 @@ namespace Roblox.Enum
 		public static Type Walk { get; } = null!;
 		public static Type Jump { get; } = null!;
 		public static Type Custom { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
+	public static class PathfindingUseImprovedSearch
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Default { get; } = null!;
+		public static Type Disabled { get; } = null!;
+		public static Type Enabled { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()

@@ -2614,6 +2614,11 @@ namespace Roblox.PluginClasses
 		public new StackFrame Clone();
 	}
 	
+	public interface StartPageService : IServiceInstance
+	{
+		public new StartPageService Clone();
+	}
+	
 	public interface StarterPlayer : IServiceInstance
 	{
 		public new StarterPlayer Clone();
@@ -2836,6 +2841,8 @@ namespace Roblox.PluginClasses
 		public string Description { get; set; }
 		public int ErrorCount { get; }
 		public bool ExecuteWithStudioRun { get; set; }
+		public bool Is30FpsThrottleEnabled { get; set; }
+		public bool IsPhysicsEnvironmentalThrottled { get; set; }
 		public bool IsSleepAllowed { get; set; }
 		public int NumberOfPlayers { get; set; }
 		public float SimulateSecondsLag { get; set; }

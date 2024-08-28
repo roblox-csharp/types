@@ -155,6 +155,7 @@ namespace Roblox
 		public static SnippetService SnippetService { get; } = null!;
 		public static SocialService SocialService { get; } = null!;
 		public static SoundService SoundService { get; } = null!;
+		public static StartPageService StartPageService { get; } = null!;
 		public static StarterPack StarterPack { get; } = null!;
 		public static StarterPlayer StarterPlayer { get; } = null!;
 		public static StartupMessageService StartupMessageService { get; } = null!;
@@ -711,6 +712,7 @@ namespace Roblox
 	public interface AvatarCreationService : IServiceInstance
 	{
 		public new AvatarCreationService Clone();
+		public object GetValidationRules();
 		public void SendAnalyticsEvent(string eventName, object parameters);
 		public AvatarGenerationSession CreateAvatarGenerationSessionAsync(Player player);
 		public string GenerateAvatarModelAsync(Player player, string previewJobId, object options, Action progressCallback);
@@ -1360,8 +1362,10 @@ namespace Roblox
 	public interface CommerceService : IServiceInstance
 	{
 		public new CommerceService Clone();
+		public void PromptCommerceProductPurchase(Player user, long commerceProductId);
 		public void PromptRealWorldCommerceBrowser(Player player, string url);
 		public bool UserEligibleForRealWorldCommerceAsync();
+		public ScriptSignal<Player, long> PromptCommerceProductPurchaseFinished { get; }
 	}
 	
 	public interface Configuration : ICreatableInstance
@@ -1834,29 +1838,59 @@ namespace Roblox
 	{
 		public new EditableMesh Clone();
 		public bool SkinningEnabled { get; set; }
+		public long AddColor(Color3 color, float alpha);
+		public long AddNormal(Vector3? normal = null);
 		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
+		public long AddUV(Vector2 uv);
 		public long AddVertex(Vector3 p);
 		public object FindClosestPointOnSurface(Vector3 point);
 		public long FindClosestVertex(Vector3 toThisPoint);
 		public object[] FindVerticesWithinSphere(Vector3 center, float radius);
+		public object[] GetAdjacentFaces(long faceId);
 		public object[] GetAdjacentTriangles(long triangleId);
 		public object[] GetAdjacentVertices(long vertexId);
+		public Color3? GetColor(long colorId);
+		public float? GetColorAlpha(long colorId);
+		public object[] GetColors();
+		public object[] GetFaceColors(long faceId);
+		public object[] GetFaceNormals(long faceId);
+		public object[] GetFaceUVs(long faceId);
+		public object[] GetFaceVertices(long faceId);
+		public object[] GetFaces();
+		public object[] GetFacesWithAttribute(long id);
+		public Vector3? GetNormal(long normalId);
+		public object[] GetNormals();
 		public Vector3 GetPosition(long vertexId);
 		public object GetTriangleVertices(long triangleId);
 		public object[] GetTriangles();
-		public Vector2 GetUV(long vertexId);
+		public Vector2? GetUV(long uvId);
+		public object[] GetUVs();
 		public Color3 GetVertexColor(long vertexId);
 		public float GetVertexColorAlpha(long vertexId);
 		public Vector3 GetVertexNormal(long vertexId);
 		public object[] GetVertices();
+		public object[] GetVerticesWithAttribute(long id);
+		public string IdDebugString(long id);
+		public object MergeVertices(float mergeTolerance);
 		public object RaycastLocal(Vector3 origin, Vector3 direction);
+		public void RemoveFace(long faceId);
 		public void RemoveTriangle(long triangleId);
+		public object[] RemoveUnused();
 		public void RemoveVertex(long vertexId);
+		public void ResetNormal(long normalId);
+		public void SetColor(long colorId, Color3 color);
+		public void SetColorAlpha(long colorId, float alpha);
+		public void SetFaceColors(long faceId, object[] ids);
+		public void SetFaceNormals(long faceId, object[] ids);
+		public void SetFaceUVs(long faceId, object[] ids);
+		public void SetFaceVertices(long faceId, object[] ids);
+		public void SetNormal(long normalId, Vector3 normal);
 		public void SetPosition(long vertexId, Vector3 p);
-		public void SetUV(long vertexId, Vector2 uv);
+		public void SetUV(long uvId, Vector2 uv);
 		public void SetVertexColor(long vertexId, Color3 color);
 		public void SetVertexColorAlpha(long vertexId, float alpha);
 		public void SetVertexNormal(long vertexId, Vector3 vnormal);
+		public void Triangulate();
 		public MeshPart CreateMeshPartAsync(object? options = null);
 	}
 	
@@ -2065,9 +2099,11 @@ namespace Roblox
 		public void DrawProjectionImage(EditableMesh mesh, object projection, object brushConfig);
 		public void DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
 		public object[] ReadPixels(Vector2 position, Vector2 size);
+		public buffer ReadPixelsBuffer(Vector2 position, Vector2 size);
 		public void Resize(Vector2 size);
 		public void Rotate(float degrees, bool changeSize);
 		public void WritePixels(Vector2 position, Vector2 size, object[] pixels);
+		public void WritePixelsBuffer(Vector2 position, Vector2 size, buffer buffer);
 	}
 	
 	public interface RobloxEditableImage : EditableImage, ICreatableInstance
@@ -5093,6 +5129,11 @@ namespace Roblox
 		public new StackFrame Clone();
 	}
 	
+	public interface StartPageService : IServiceInstance
+	{
+		public new StartPageService Clone();
+	}
+	
 	public interface StarterGear : ICreatableInstance
 	{
 		public new StarterGear Clone();
@@ -5233,6 +5274,7 @@ namespace Roblox
 	public interface StyleRule : StyleBase, ICreatableInstance
 	{
 		public new StyleRule Clone();
+		public int Priority { get; set; }
 		public string Selector { get; set; }
 		public string SelectorError { get; }
 		public object GetProperties();
