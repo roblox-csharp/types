@@ -924,24 +924,6 @@ namespace Roblox.Enum
 		}
 	}
 	
-	public static class AvatarGenerationJobStatus
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type NotStarted { get; } = null!;
-		public static Type InProgress { get; } = null!;
-		public static Type Completed { get; } = null!;
-		public static Type Failed { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
 	public static class AvatarItemType
 	{
 		public interface Type : EnumItem
@@ -3727,6 +3709,22 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class Intent
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Realistic { get; } = null!;
+		public static Type Flat { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class InterpolationThrottlingMode
 	{
 		public interface Type : EnumItem
@@ -5612,6 +5610,22 @@ namespace Roblox.Enum
 		}
 	}
 	
+	public static class Quality
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static Type Performance { get; } = null!;
+		public static Type Quality { get; } = null!;
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static EnumItem[] GetEnumItems()
+		{
+			return null!;
+		}
+	}
+	
 	public static class QualityLevel
 	{
 		public interface Type : EnumItem
@@ -7155,6 +7169,7 @@ namespace Roblox.Enum
 		public static Type ShadowMap { get; } = null!;
 		public static Type Future { get; } = null!;
 		public static Type Legacy { get; } = null!;
+		public static Type Unified { get; } = null!;
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static EnumItem[] GetEnumItems()

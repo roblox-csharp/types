@@ -298,26 +298,6 @@ namespace Roblox.PluginClasses
 		public new AvatarEditorService Clone();
 	}
 	
-	public interface AvatarGenerationJob : Instance
-	{
-		public new AvatarGenerationJob Clone();
-	}
-	
-	public interface Avatar2DGenerationJob : AvatarGenerationJob
-	{
-		public new Avatar2DGenerationJob Clone();
-	}
-	
-	public interface Avatar3DGenerationJob : AvatarGenerationJob
-	{
-		public new Avatar3DGenerationJob Clone();
-	}
-	
-	public interface AvatarGenerationSession : Instance
-	{
-		public new AvatarGenerationSession Clone();
-	}
-	
 	public interface AvatarImportService : IServiceInstance
 	{
 		public new AvatarImportService Clone();
