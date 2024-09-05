@@ -215,6 +215,7 @@ namespace Roblox
 		public Instance[] GetChildren();
 		public string GetFullName();
 		public ScriptSignal GetPropertyChangedSignal(string property);
+		public object GetStyled(string name);
 		public bool HasTag(string tag);
 		public bool IsPropertyModified(string name);
 		public void RemoveTag(string tag);
@@ -639,7 +640,9 @@ namespace Roblox
 		public new AudioListener Clone();
 		public string AudioInteractionGroup { get; set; }
 		public Instance[] GetConnectedWires(string pin);
+		public object GetDistanceAttenuation();
 		public Instance[] GetInteractingEmitters();
+		public void SetDistanceAttenuation(object curve);
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
@@ -714,13 +717,16 @@ namespace Roblox
 		public new AvatarCreationService Clone();
 		public object GetValidationRules();
 		public void SendAnalyticsEvent(string eventName, object parameters);
-		public AvatarGenerationSession CreateAvatarGenerationSessionAsync(Player player);
+		public string GenerateAvatarAsync(string sessionId, string previewId);
 		public string GenerateAvatarModelAsync(Player player, string previewJobId, object options, Action progressCallback);
 		public string GenerateAvatarPreviewAsync(Player player, string textPrompt, object options, Action progressCallback);
+		public string GenerateAvatarPreviewAsync2(string sessionId, string fileId, string textPrompt);
 		public object GetAvatarGenerationConfig();
+		public HumanoidDescription LoadAvatarHumanoidDescriptionAsync(string id);
 		public Instance LoadAvatarModelAsync(string id);
 		public EditableImage LoadAvatarPreviewImageAsync(string avatarPreview);
 		public object PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription);
+		public object RequestAvatarGenerationSessionAsync(Player player, Action callback);
 		public object ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType.Type accessoryType);
 		public object ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart.Type bodyPart);
 		public object ValidateUGCFullBodyAsync(Player player, HumanoidDescription humanoidDescription);
@@ -756,37 +762,6 @@ namespace Roblox
 		public ScriptSignal<Enum.AvatarPromptResult.Type, HumanoidDescription> PromptSaveAvatarCompleted { get; }
 		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptSetFavoriteCompleted { get; }
 		public ScriptSignal<Enum.AvatarPromptResult.Type> PromptUpdateOutfitCompleted { get; }
-	}
-	
-	public interface AvatarGenerationJob : Instance
-	{
-		public new AvatarGenerationJob Clone();
-		public Enum.AvatarGenerationError.Type Error { get; set; }
-		public string ErrorMessage { get; set; }
-		public float Progress { get; set; }
-		public Enum.AvatarGenerationJobStatus.Type Status { get; set; }
-		public object GetOutput();
-		public void Cancel();
-		public void Wait();
-	}
-	
-	public interface Avatar2DGenerationJob : AvatarGenerationJob
-	{
-		public new Avatar2DGenerationJob Clone();
-		public string Result { get; set; }
-	}
-	
-	public interface Avatar3DGenerationJob : AvatarGenerationJob
-	{
-		public new Avatar3DGenerationJob Clone();
-		public string Result { get; set; }
-	}
-	
-	public interface AvatarGenerationSession : Instance
-	{
-		public new AvatarGenerationSession Clone();
-		public Avatar3DGenerationJob GenerateAvatarModel(Avatar2DGenerationJob previewJob, object options);
-		public Avatar2DGenerationJob GenerateAvatarPreview(string textPrompt, object options);
 	}
 	
 	public interface AvatarImportService : IServiceInstance
@@ -2937,6 +2912,7 @@ namespace Roblox
 		public void AddSelectionParent(string selectionName, Instance selectionParent);
 		public void AddSelectionTuple(string selectionName, object selections);
 		public void CloseInspectMenu();
+		public bool DismissNotification(string notificationId);
 		public bool GetEmotesMenuOpen();
 		public bool GetGameplayPausedNotificationEnabled();
 		public object GetGuiInset();
@@ -2946,6 +2922,7 @@ namespace Roblox
 		public bool IsTenFootInterface();
 		public void RemoveSelectionGroup(string selectionName);
 		public void Select(Instance selectionParent);
+		public string SendNotification(object notificationInfo);
 		public void SetEmotesMenuOpen(bool isOpen);
 		public void SetGameplayPausedNotificationEnabled(bool enabled);
 		public void SetInspectMenuEnabled(bool enabled);
