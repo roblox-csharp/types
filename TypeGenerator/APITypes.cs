@@ -34,9 +34,9 @@ namespace TypeGenerator.APITypes
     internal abstract class MemberBase
     {
         public string MemberType { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public object? Security { get; set; } // string or Security
-        public List<object> Tags { get; set; }
+        public List<object>? Tags { get; set; }
         public string Description { get; set; }
     }
 
@@ -67,12 +67,12 @@ namespace TypeGenerator.APITypes
     {
         public List<MemberBase> Members { get; set; }
         public string MemberCategory { get; set; }
-        public List<object> Tags { get; set; }
+        public List<object>? Tags { get; set; }
         public string ThreadSafety { get; set; }
         public string Name { get; set; }
         public string Superclass { get; set; }
         public List<string> Subclasses { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 
     internal sealed class Serialization

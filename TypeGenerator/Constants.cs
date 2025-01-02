@@ -1,4 +1,6 @@
-﻿namespace TypeGenerator
+﻿using TypeGenerator.APITypes;
+
+namespace TypeGenerator
 {
     internal static class Constants
     {
@@ -9,7 +11,7 @@
             "public new <INSTANCE_TYPE> Clone();"
         ];
 
-        public static readonly Dictionary<string, Dictionary<string, APITypes.Security>> SECURITY_OVERRIDES = new Dictionary<string, Dictionary<string, APITypes.Security>>
+        public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new Dictionary<string, Dictionary<string, Security>?>
         {
             ["StarterGui"] = new Dictionary<string, APITypes.Security>
             {
@@ -77,8 +79,7 @@
             "UserGameSettings"
         };
 
-        public static readonly HashSet<string> PLUGIN_ONLY_CLASSES = new HashSet<string>
-        {
+        public static readonly HashSet<string> PLUGIN_ONLY_CLASSES = [
             "ABTestService",
             "ChangeHistoryService",
             "CoreGui",
@@ -121,10 +122,9 @@
             "TaskScheduler",
             "TestService",
             "VersionControlService"
-        };
+        ];
 
-        public static readonly HashSet<string> CLASS_BLACKLIST = new HashSet<string>
-        {
+        public static readonly HashSet<string> CLASS_BLACKLIST = [
             // Classes which Roblox leverages internally/in the CoreScripts but serve no purpose to developers
             "AnalysticsSettings",
             "BinaryStringValue",
@@ -222,9 +222,15 @@
             "RemoteEvent",
             "UnreliableRemoteEvent",
             "RemoteFunction"
+        ];
+        
+        public static readonly Dictionary<string, HashSet<string>> ENUM_BLACKLIST = new()
+        {
+            { "Quality", ["Quality"] }
         };
 
-        public static readonly Dictionary<string, HashSet<string>> MEMBER_BLACKLIST = new Dictionary<string, HashSet<string>>
+
+        public static readonly Dictionary<string, HashSet<string>> MEMBER_BLACKLIST = new()
         {
             { "Workspace", ["FilteringEnabled"] },
             { "Players", ["FilteringEnabled", "LocalPlayer"] }, // defined in Roblox.cs
@@ -245,16 +251,15 @@
             { "GlobalDataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] } // defined in Roblox.cs
         };
 
-        public static readonly Dictionary<string, List<string>> EXPECTED_EXTRA_MEMBERS = new Dictionary<string, List<string>>
+        public static readonly Dictionary<string, List<string>> EXPECTED_EXTRA_MEMBERS = new()
         {
-            { "Player", new List<string> { "Name" } },
-            { "ValueBase", new List<string> { "Value", "Changed" } },
-            { "DataStore", new List<string> { "GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync" } },
-            { "OrderedDataStore", new List<string> { "GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync" } }
+            { "Player", ["Name"] },
+            { "ValueBase", ["Value", "Changed"] },
+            { "DataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] },
+            { "OrderedDataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] }
         };
-
-        public static readonly HashSet<string> ABSTRACT_CLASSES = new HashSet<string>
-        {
+        
+        public static readonly HashSet<string> ABSTRACT_CLASSES = [
             "BackpackItem",
             "BasePart",
             "BasePlayerGui",
@@ -307,7 +312,7 @@
             "UILayout",
             "ValueBase",
             "WorldRoot"
-        };
+        ];
 
         public static readonly Dictionary<string, string> RENAMEABLE_AUTO_TYPES = new Dictionary<string, string>
         {
@@ -317,7 +322,7 @@
             { "Input", "InputObject" }
         };
 
-        public static readonly Dictionary<string, string> PROP_TYPE_MAP = new Dictionary<string, string>();
+        public static readonly Dictionary<string, string> PROP_TYPE_MAP = new();
         public static readonly Dictionary<string, string> VALUE_TYPE_MAP = new Dictionary<string, string>
         {
             { "Array", "object[]" },

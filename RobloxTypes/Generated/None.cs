@@ -4,207 +4,296 @@ namespace Roblox
 {
 	public static class Services
 	{
-		public static AccountService AccountService { get; } = null!;
-		public static AchievementService AchievementService { get; } = null!;
-		public static AnalyticsService AnalyticsService { get; } = null!;
-		public static AnimationClipProvider AnimationClipProvider { get; } = null!;
-		public static AnimationFromVideoCreatorService AnimationFromVideoCreatorService { get; } = null!;
-		public static AnimationFromVideoCreatorStudioService AnimationFromVideoCreatorStudioService { get; } = null!;
-		public static AnnotationsService AnnotationsService { get; } = null!;
-		public static AppLifecycleObserverService AppLifecycleObserverService { get; } = null!;
-		public static AppUpdateService AppUpdateService { get; } = null!;
-		public static AssetCounterService AssetCounterService { get; } = null!;
-		public static AssetDeliveryProxy AssetDeliveryProxy { get; } = null!;
-		public static AssetImportService AssetImportService { get; } = null!;
-		public static AssetManagerService AssetManagerService { get; } = null!;
-		public static AssetService AssetService { get; } = null!;
-		public static AudioFocusService AudioFocusService { get; } = null!;
-		public static AvatarChatService AvatarChatService { get; } = null!;
-		public static AvatarCreationService AvatarCreationService { get; } = null!;
-		public static AvatarEditorService AvatarEditorService { get; } = null!;
-		public static AvatarImportService AvatarImportService { get; } = null!;
-		public static BadgeService BadgeService { get; } = null!;
-		public static StarterGui StarterGui { get; } = null!;
-		public static BulkImportService BulkImportService { get; } = null!;
-		public static HSRDataContentProvider HSRDataContentProvider { get; } = null!;
-		public static MeshContentProvider MeshContentProvider { get; } = null!;
-		public static SolidModelContentProvider SolidModelContentProvider { get; } = null!;
-		public static CalloutService CalloutService { get; } = null!;
-		public static CaptureService CaptureService { get; } = null!;
-		public static Chat Chat { get; } = null!;
-		public static ChatbotUIService ChatbotUIService { get; } = null!;
-		public static CloudCRUDService CloudCRUDService { get; } = null!;
-		public static CollaboratorsService CollaboratorsService { get; } = null!;
-		public static CollectionService CollectionService { get; } = null!;
-		public static CommandService CommandService { get; } = null!;
-		public static CommerceService CommerceService { get; } = null!;
-		public static ConfigureServerService ConfigureServerService { get; } = null!;
-		public static ConnectivityService ConnectivityService { get; } = null!;
-		public static ContentProvider ContentProvider { get; } = null!;
-		public static ContextActionService ContextActionService { get; } = null!;
-		public static ControllerService ControllerService { get; } = null!;
-		public static ConversationalAIAcceptanceService ConversationalAIAcceptanceService { get; } = null!;
-		public static CoreScriptDebuggingManagerHelper CoreScriptDebuggingManagerHelper { get; } = null!;
-		public static CreationDBService CreationDBService { get; } = null!;
-		public static CrossDMScriptChangeListener CrossDMScriptChangeListener { get; } = null!;
-		public static DataModelPatchService DataModelPatchService { get; } = null!;
-		public static DataStoreService DataStoreService { get; } = null!;
-		public static Debris Debris { get; } = null!;
-		public static DebuggablePluginWatcher DebuggablePluginWatcher { get; } = null!;
-		public static DebuggerConnectionManager DebuggerConnectionManager { get; } = null!;
-		public static DebuggerUIService DebuggerUIService { get; } = null!;
-		public static DeviceIdService DeviceIdService { get; } = null!;
-		public static DraggerService DraggerService { get; } = null!;
-		public static EventIngestService EventIngestService { get; } = null!;
-		public static ExampleService ExampleService { get; } = null!;
-		public static ExperienceAuthService ExperienceAuthService { get; } = null!;
-		public static ExperienceNotificationService ExperienceNotificationService { get; } = null!;
-		public static ExperienceService ExperienceService { get; } = null!;
-		public static ExperienceStateCaptureService ExperienceStateCaptureService { get; } = null!;
-		public static FaceAnimatorService FaceAnimatorService { get; } = null!;
-		public static FacialAnimationRecordingService FacialAnimationRecordingService { get; } = null!;
-		public static FacialAnimationStreamingServiceV2 FacialAnimationStreamingServiceV2 { get; } = null!;
-		public static CSGDictionaryService CSGDictionaryService { get; } = null!;
-		public static NonReplicatedCSGDictionaryService NonReplicatedCSGDictionaryService { get; } = null!;
-		public static GamePassService GamePassService { get; } = null!;
-		public static GamepadService GamepadService { get; } = null!;
-		public static GenericChallengeService GenericChallengeService { get; } = null!;
-		public static GeometryService GeometryService { get; } = null!;
-		public static GroupService GroupService { get; } = null!;
-		public static GuiService GuiService { get; } = null!;
-		public static HapticService HapticService { get; } = null!;
-		public static HeatmapService HeatmapService { get; } = null!;
-		public static HeightmapImporterService HeightmapImporterService { get; } = null!;
-		public static HttpService HttpService { get; } = null!;
-		public static ILegacyStudioBridge ILegacyStudioBridge { get; } = null!;
-		public static LegacyStudioBridge LegacyStudioBridge { get; } = null!;
-		public static IXPService IXPService { get; } = null!;
-		public static IncrementalPatchBuilder IncrementalPatchBuilder { get; } = null!;
-		public static InsertService InsertService { get; } = null!;
-		public static InternalSyncService InternalSyncService { get; } = null!;
-		public static JointsService JointsService { get; } = null!;
-		public static KeyframeSequenceProvider KeyframeSequenceProvider { get; } = null!;
-		public static LSPFileSyncService LSPFileSyncService { get; } = null!;
-		public static LanguageService LanguageService { get; } = null!;
-		public static Lighting Lighting { get; } = null!;
-		public static LinkingService LinkingService { get; } = null!;
-		public static LiveScriptingService LiveScriptingService { get; } = null!;
-		public static AppStorageService AppStorageService { get; } = null!;
-		public static UserStorageService UserStorageService { get; } = null!;
-		public static LocalizationService LocalizationService { get; } = null!;
-		public static LodDataService LodDataService { get; } = null!;
-		public static LogReporterService LogReporterService { get; } = null!;
-		public static LogService LogService { get; } = null!;
-		public static LuauScriptAnalyzerService LuauScriptAnalyzerService { get; } = null!;
-		public static MarketplaceService MarketplaceService { get; } = null!;
-		public static MaterialGenerationService MaterialGenerationService { get; } = null!;
-		public static MaterialService MaterialService { get; } = null!;
-		public static MemoryStoreService MemoryStoreService { get; } = null!;
-		public static MessageBusService MessageBusService { get; } = null!;
-		public static MessagingService MessagingService { get; } = null!;
-		public static MetaBreakpointManager MetaBreakpointManager { get; } = null!;
-		public static NetworkClient NetworkClient { get; } = null!;
-		public static NetworkServer NetworkServer { get; } = null!;
-		public static OmniRecommendationsService OmniRecommendationsService { get; } = null!;
-		public static OpenCloudService OpenCloudService { get; } = null!;
-		public static Workspace Workspace { get; } = null!;
-		public static PackageUIService PackageUIService { get; } = null!;
-		public static PatchBundlerFileWatch PatchBundlerFileWatch { get; } = null!;
-		public static PathfindingService PathfindingService { get; } = null!;
-		public static PhysicsService PhysicsService { get; } = null!;
-		public static PlaceStatsService PlaceStatsService { get; } = null!;
-		public static PlacesService PlacesService { get; } = null!;
-		public static PlatformCloudStorageService PlatformCloudStorageService { get; } = null!;
-		public static PlatformFriendsService PlatformFriendsService { get; } = null!;
-		public static PlayerHydrationService PlayerHydrationService { get; } = null!;
-		public static PlayerViewService PlayerViewService { get; } = null!;
-		public static Players Players { get; } = null!;
-		public static PluginManagementService PluginManagementService { get; } = null!;
-		public static PluginPolicyService PluginPolicyService { get; } = null!;
-		public static PolicyService PolicyService { get; } = null!;
-		public static ProcessInstancePhysicsService ProcessInstancePhysicsService { get; } = null!;
-		public static ProximityPromptService ProximityPromptService { get; } = null!;
-		public static PublishService PublishService { get; } = null!;
-		public static ReflectionService ReflectionService { get; } = null!;
-		public static RemoteCursorService RemoteCursorService { get; } = null!;
-		public static RemoteDebuggerServer RemoteDebuggerServer { get; } = null!;
-		public static ReplicatedFirst ReplicatedFirst { get; } = null!;
-		public static ReplicatedStorage ReplicatedStorage { get; } = null!;
-		public static RibbonNotificationService RibbonNotificationService { get; } = null!;
-		public static RobloxServerStorage RobloxServerStorage { get; } = null!;
-		public static RomarkService RomarkService { get; } = null!;
-		public static RtMessagingService RtMessagingService { get; } = null!;
-		public static RunService RunService { get; } = null!;
-		public static SafetyService SafetyService { get; } = null!;
-		public static ScriptChangeService ScriptChangeService { get; } = null!;
-		public static ScriptCloneWatcher ScriptCloneWatcher { get; } = null!;
-		public static ScriptCloneWatcherHelper ScriptCloneWatcherHelper { get; } = null!;
-		public static ScriptCommitService ScriptCommitService { get; } = null!;
-		public static ScriptContext ScriptContext { get; } = null!;
-		public static ScriptEditorService ScriptEditorService { get; } = null!;
-		public static ScriptProfilerService ScriptProfilerService { get; } = null!;
-		public static ScriptRegistrationService ScriptRegistrationService { get; } = null!;
-		public static SelectionHighlightManager SelectionHighlightManager { get; } = null!;
-		public static ServerScriptService ServerScriptService { get; } = null!;
-		public static ServerStorage ServerStorage { get; } = null!;
-		public static ServiceVisibilityService ServiceVisibilityService { get; } = null!;
-		public static SessionService SessionService { get; } = null!;
-		public static SharedTableRegistry SharedTableRegistry { get; } = null!;
-		public static ShorelineUpgraderService ShorelineUpgraderService { get; } = null!;
-		public static SmoothVoxelsUpgraderService SmoothVoxelsUpgraderService { get; } = null!;
-		public static SnippetService SnippetService { get; } = null!;
-		public static SocialService SocialService { get; } = null!;
-		public static SoundService SoundService { get; } = null!;
-		public static StartPageService StartPageService { get; } = null!;
-		public static StarterPack StarterPack { get; } = null!;
-		public static StarterPlayer StarterPlayer { get; } = null!;
-		public static StartupMessageService StartupMessageService { get; } = null!;
-		public static Stats Stats { get; } = null!;
-		public static StreamingService StreamingService { get; } = null!;
-		public static StudioAssetService StudioAssetService { get; } = null!;
-		public static StudioDeviceEmulatorService StudioDeviceEmulatorService { get; } = null!;
-		public static StudioPublishService StudioPublishService { get; } = null!;
-		public static StudioScriptDebugEventListener StudioScriptDebugEventListener { get; } = null!;
-		public static StudioSdkService StudioSdkService { get; } = null!;
-		public static StudioWidgetsService StudioWidgetsService { get; } = null!;
-		public static StylingService StylingService { get; } = null!;
-		public static TeamCreateData TeamCreateData { get; } = null!;
-		public static TeamCreatePublishService TeamCreatePublishService { get; } = null!;
-		public static TeamCreateService TeamCreateService { get; } = null!;
-		public static Teams Teams { get; } = null!;
-		public static TeleportService TeleportService { get; } = null!;
-		public static TemporaryCageMeshProvider TemporaryCageMeshProvider { get; } = null!;
-		public static TemporaryScriptService TemporaryScriptService { get; } = null!;
-		public static TextBoxService TextBoxService { get; } = null!;
-		public static TextChatService TextChatService { get; } = null!;
-		public static TextService TextService { get; } = null!;
-		public static TextureGenerationService TextureGenerationService { get; } = null!;
-		public static ToastNotificationService ToastNotificationService { get; } = null!;
-		public static TracerService TracerService { get; } = null!;
-		public static TutorialService TutorialService { get; } = null!;
-		public static TweenService TweenService { get; } = null!;
-		public static UGCAvatarService UGCAvatarService { get; } = null!;
-		public static UIDragDetectorService UIDragDetectorService { get; } = null!;
-		public static UnvalidatedAssetService UnvalidatedAssetService { get; } = null!;
-		public static UserInputService UserInputService { get; } = null!;
-		public static UserService UserService { get; } = null!;
-		public static VRService VRService { get; } = null!;
-		public static VRStatusService VRStatusService { get; } = null!;
-		public static VideoCaptureService VideoCaptureService { get; } = null!;
-		public static VideoService VideoService { get; } = null!;
-		public static VisibilityCheckDispatcher VisibilityCheckDispatcher { get; } = null!;
-		public static VisualizationModeService VisualizationModeService { get; } = null!;
-		public static VoiceChatInternal VoiceChatInternal { get; } = null!;
-		public static VoiceChatService VoiceChatService { get; } = null!;
+		public static extern AccountService AccountService { get; }
+		public static extern AchievementService AchievementService { get; }
+		public static extern ActivityHistoryEventService ActivityHistoryEventService { get; }
+		public static extern AnalyticsService AnalyticsService { get; }
+		public static extern AnimationClipProvider AnimationClipProvider { get; }
+		public static extern AnimationFromVideoCreatorService AnimationFromVideoCreatorService { get; }
+		public static extern AnimationFromVideoCreatorStudioService AnimationFromVideoCreatorStudioService { get; }
+		public static extern AnnotationsService AnnotationsService { get; }
+		public static extern AppLifecycleObserverService AppLifecycleObserverService { get; }
+		public static extern AppUpdateService AppUpdateService { get; }
+		public static extern AssetCounterService AssetCounterService { get; }
+		public static extern AssetDeliveryProxy AssetDeliveryProxy { get; }
+		public static extern AssetImportService AssetImportService { get; }
+		public static extern AssetManagerService AssetManagerService { get; }
+		public static extern AssetService AssetService { get; }
+		public static extern AudioFocusService AudioFocusService { get; }
+		public static extern AuroraService AuroraService { get; }
+		public static extern AvatarChatService AvatarChatService { get; }
+		public static extern AvatarCreationService AvatarCreationService { get; }
+		public static extern AvatarEditorService AvatarEditorService { get; }
+		public static extern AvatarImportService AvatarImportService { get; }
+		public static extern AvatarPreloader AvatarPreloader { get; }
+		public static extern BadgeService BadgeService { get; }
+		public static extern StarterGui StarterGui { get; }
+		public static extern BulkImportService BulkImportService { get; }
+		public static extern HSRDataContentProvider HSRDataContentProvider { get; }
+		public static extern MeshContentProvider MeshContentProvider { get; }
+		public static extern SolidModelContentProvider SolidModelContentProvider { get; }
+		public static extern CalloutService CalloutService { get; }
+		public static extern CaptureService CaptureService { get; }
+		public static extern Chat Chat { get; }
+		public static extern ChatbotUIService ChatbotUIService { get; }
+		public static extern CloudCRUDService CloudCRUDService { get; }
+		public static extern CollaboratorsService CollaboratorsService { get; }
+		public static extern CollectionService CollectionService { get; }
+		public static extern CommandService CommandService { get; }
+		public static extern CommerceService CommerceService { get; }
+		public static extern ConfigureServerService ConfigureServerService { get; }
+		public static extern ConnectivityService ConnectivityService { get; }
+		public static extern ContentProvider ContentProvider { get; }
+		public static extern ContextActionService ContextActionService { get; }
+		public static extern ControllerService ControllerService { get; }
+		public static extern ConversationalAIAcceptanceService ConversationalAIAcceptanceService { get; }
+		public static extern CoreScriptDebuggingManagerHelper CoreScriptDebuggingManagerHelper { get; }
+		public static extern CreationDBService CreationDBService { get; }
+		public static extern CreatorStoreService CreatorStoreService { get; }
+		public static extern CrossDMScriptChangeListener CrossDMScriptChangeListener { get; }
+		public static extern DataModelPatchService DataModelPatchService { get; }
+		public static extern DataStoreService DataStoreService { get; }
+		public static extern Debris Debris { get; }
+		public static extern DebuggablePluginWatcher DebuggablePluginWatcher { get; }
+		public static extern DebuggerConnectionManager DebuggerConnectionManager { get; }
+		public static extern DebuggerUIService DebuggerUIService { get; }
+		public static extern DeviceIdService DeviceIdService { get; }
+		public static extern DraggerService DraggerService { get; }
+		public static extern EditableService EditableService { get; }
+		public static extern EventIngestService EventIngestService { get; }
+		public static extern ExampleService ExampleService { get; }
+		public static extern ExperienceAuthService ExperienceAuthService { get; }
+		public static extern ExperienceNotificationService ExperienceNotificationService { get; }
+		public static extern ExperienceService ExperienceService { get; }
+		public static extern ExperienceStateCaptureService ExperienceStateCaptureService { get; }
+		public static extern ExplorerServiceVisibilityService ExplorerServiceVisibilityService { get; }
+		public static extern FaceAnimatorService FaceAnimatorService { get; }
+		public static extern FacialAnimationRecordingService FacialAnimationRecordingService { get; }
+		public static extern FacialAnimationStreamingServiceV2 FacialAnimationStreamingServiceV2 { get; }
+		public static extern FeatureRestrictionManager FeatureRestrictionManager { get; }
+		public static extern CSGDictionaryService CSGDictionaryService { get; }
+		public static extern NonReplicatedCSGDictionaryService NonReplicatedCSGDictionaryService { get; }
+		public static extern GamePassService GamePassService { get; }
+		public static extern GamepadService GamepadService { get; }
+		public static extern GenericChallengeService GenericChallengeService { get; }
+		public static extern GeometryService GeometryService { get; }
+		public static extern GroupService GroupService { get; }
+		public static extern GuiService GuiService { get; }
+		public static extern HapticService HapticService { get; }
+		public static extern HeatmapService HeatmapService { get; }
+		public static extern HeightmapImporterService HeightmapImporterService { get; }
+		public static extern HttpService HttpService { get; }
+		public static extern ILegacyStudioBridge ILegacyStudioBridge { get; }
+		public static extern LegacyStudioBridge LegacyStudioBridge { get; }
+		public static extern IXPService IXPService { get; }
+		public static extern IncrementalPatchBuilder IncrementalPatchBuilder { get; }
+		public static extern InsertService InsertService { get; }
+		public static extern InternalSyncService InternalSyncService { get; }
+		public static extern JointsService JointsService { get; }
+		public static extern KeyframeSequenceProvider KeyframeSequenceProvider { get; }
+		public static extern LSPFileSyncService LSPFileSyncService { get; }
+		public static extern LanguageService LanguageService { get; }
+		public static extern Lighting Lighting { get; }
+		public static extern LinkingService LinkingService { get; }
+		public static extern LiveScriptingService LiveScriptingService { get; }
+		public static extern AppStorageService AppStorageService { get; }
+		public static extern UserStorageService UserStorageService { get; }
+		public static extern LocalizationService LocalizationService { get; }
+		public static extern LodDataService LodDataService { get; }
+		public static extern LogReporterService LogReporterService { get; }
+		public static extern LogService LogService { get; }
+		public static extern LuauScriptAnalyzerService LuauScriptAnalyzerService { get; }
+		public static extern MLModelDeliveryService MLModelDeliveryService { get; }
+		public static extern MarketplaceService MarketplaceService { get; }
+		public static extern MaterialGenerationService MaterialGenerationService { get; }
+		public static extern MaterialService MaterialService { get; }
+		public static extern MemoryStoreService MemoryStoreService { get; }
+		public static extern MessageBusService MessageBusService { get; }
+		public static extern MessagingService MessagingService { get; }
+		public static extern MetaBreakpointManager MetaBreakpointManager { get; }
+		public static extern NetworkClient NetworkClient { get; }
+		public static extern NetworkServer NetworkServer { get; }
+		public static extern OmniRecommendationsService OmniRecommendationsService { get; }
+		public static extern OpenCloudService OpenCloudService { get; }
+		public static extern Workspace Workspace { get; }
+		public static extern PackageUIService PackageUIService { get; }
+		public static extern PatchBundlerFileWatch PatchBundlerFileWatch { get; }
+		public static extern PathfindingService PathfindingService { get; }
+		public static extern PerformanceControlService PerformanceControlService { get; }
+		public static extern PhysicsService PhysicsService { get; }
+		public static extern PlaceStatsService PlaceStatsService { get; }
+		public static extern PlacesService PlacesService { get; }
+		public static extern PlatformCloudStorageService PlatformCloudStorageService { get; }
+		public static extern PlatformFriendsService PlatformFriendsService { get; }
+		public static extern PlayerHydrationService PlayerHydrationService { get; }
+		public static extern PlayerViewService PlayerViewService { get; }
+		public static extern Players Players { get; }
+		public static extern PluginManagementService PluginManagementService { get; }
+		public static extern PluginPolicyService PluginPolicyService { get; }
+		public static extern PolicyService PolicyService { get; }
+		public static extern ProcessInstancePhysicsService ProcessInstancePhysicsService { get; }
+		public static extern ProximityPromptService ProximityPromptService { get; }
+		public static extern PublishService PublishService { get; }
+		public static extern ReflectionService ReflectionService { get; }
+		public static extern RemoteCursorService RemoteCursorService { get; }
+		public static extern RemoteDebuggerServer RemoteDebuggerServer { get; }
+		public static extern ReplicatedFirst ReplicatedFirst { get; }
+		public static extern ReplicatedStorage ReplicatedStorage { get; }
+		public static extern RibbonNotificationService RibbonNotificationService { get; }
+		public static extern RobloxServerStorage RobloxServerStorage { get; }
+		public static extern RomarkRbxAnalyticsService RomarkRbxAnalyticsService { get; }
+		public static extern RomarkService RomarkService { get; }
+		public static extern RtMessagingService RtMessagingService { get; }
+		public static extern RunService RunService { get; }
+		public static extern SafetyService SafetyService { get; }
+		public static extern ScriptChangeService ScriptChangeService { get; }
+		public static extern ScriptCloneWatcher ScriptCloneWatcher { get; }
+		public static extern ScriptCloneWatcherHelper ScriptCloneWatcherHelper { get; }
+		public static extern ScriptCommitService ScriptCommitService { get; }
+		public static extern ScriptContext ScriptContext { get; }
+		public static extern ScriptEditorService ScriptEditorService { get; }
+		public static extern ScriptProfilerService ScriptProfilerService { get; }
+		public static extern ScriptRegistrationService ScriptRegistrationService { get; }
+		public static extern SelectionHighlightManager SelectionHighlightManager { get; }
+		public static extern ServerScriptService ServerScriptService { get; }
+		public static extern ServerStorage ServerStorage { get; }
+		public static extern ServiceVisibilityService ServiceVisibilityService { get; }
+		public static extern SessionService SessionService { get; }
+		public static extern SharedTableRegistry SharedTableRegistry { get; }
+		public static extern ShorelineUpgraderService ShorelineUpgraderService { get; }
+		public static extern SmoothVoxelsUpgraderService SmoothVoxelsUpgraderService { get; }
+		public static extern SnippetService SnippetService { get; }
+		public static extern SocialService SocialService { get; }
+		public static extern SoundService SoundService { get; }
+		public static extern StartPageService StartPageService { get; }
+		public static extern StarterPack StarterPack { get; }
+		public static extern StarterPlayer StarterPlayer { get; }
+		public static extern StartupMessageService StartupMessageService { get; }
+		public static extern Stats Stats { get; }
+		public static extern StreamingService StreamingService { get; }
+		public static extern StudioAssetService StudioAssetService { get; }
+		public static extern StudioDeviceEmulatorService StudioDeviceEmulatorService { get; }
+		public static extern StudioPublishService StudioPublishService { get; }
+		public static extern StudioScriptDebugEventListener StudioScriptDebugEventListener { get; }
+		public static extern StudioSdkService StudioSdkService { get; }
+		public static extern StudioUserService StudioUserService { get; }
+		public static extern StudioWidgetsService StudioWidgetsService { get; }
+		public static extern StylingService StylingService { get; }
+		public static extern TeamCreateData TeamCreateData { get; }
+		public static extern TeamCreatePublishService TeamCreatePublishService { get; }
+		public static extern TeamCreateService TeamCreateService { get; }
+		public static extern Teams Teams { get; }
+		public static extern TelemetryService TelemetryService { get; }
+		public static extern TeleportService TeleportService { get; }
+		public static extern TemporaryCageMeshProvider TemporaryCageMeshProvider { get; }
+		public static extern TemporaryScriptService TemporaryScriptService { get; }
+		public static extern TextBoxService TextBoxService { get; }
+		public static extern TextChatService TextChatService { get; }
+		public static extern TextService TextService { get; }
+		public static extern TextureGenerationService TextureGenerationService { get; }
+		public static extern ToastNotificationService ToastNotificationService { get; }
+		public static extern TracerService TracerService { get; }
+		public static extern TutorialService TutorialService { get; }
+		public static extern TweenService TweenService { get; }
+		public static extern UGCAvatarService UGCAvatarService { get; }
+		public static extern UIDragDetectorService UIDragDetectorService { get; }
+		public static extern UnvalidatedAssetService UnvalidatedAssetService { get; }
+		public static extern UserInputService UserInputService { get; }
+		public static extern UserService UserService { get; }
+		public static extern VRService VRService { get; }
+		public static extern VRStatusService VRStatusService { get; }
+		public static extern VideoCaptureService VideoCaptureService { get; }
+		public static extern VideoService VideoService { get; }
+		public static extern VisibilityCheckDispatcher VisibilityCheckDispatcher { get; }
+		public static extern VisualizationModeService VisualizationModeService { get; }
+		public static extern VoiceChatInternal VoiceChatInternal { get; }
+		public static extern VoiceChatService VoiceChatService { get; }
+		public static extern WebViewService WebViewService { get; }
 	}
 	
 	// GENERATED ROBLOX INSTANCE CLASSES
 	
-	public partial interface Instance
+	public interface Object
+	{
+		public new Object Clone();
+		public string ClassName { get; }
+		public ScriptSignal GetPropertyChangedSignal(string property);
+		public bool IsA(string className);
+		public ScriptSignal<string> Changed { get; }
+	}
+	
+	public interface EditableImage : Object
+	{
+		public new EditableImage Clone();
+		public Vector2 Size { get; }
+		public void Destroy();
+		public void DrawCircle(Vector2 center, int radius, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
+		public void DrawImage(Vector2 position, EditableImage image, Enum.ImageCombineType.Type combineType);
+		public void DrawImageProjected(EditableMesh mesh, object projection, object brushConfig);
+		public void DrawImageTransformed(Vector2 position, Vector2 scale, float rotation, EditableImage image, object? options = null);
+		public void DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
+		public void DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
+		public buffer ReadPixelsBuffer(Vector2 position, Vector2 size);
+		public void WritePixelsBuffer(Vector2 position, Vector2 size, buffer buffer);
+	}
+	
+	public interface EditableMesh : Object
+	{
+		public new EditableMesh Clone();
+		public bool FixedSize { get; }
+		public bool SkinningEnabled { get; set; }
+		public long AddColor(Color3 color, float alpha);
+		public long AddNormal(Vector3? normal = null);
+		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
+		public long AddUV(Vector2 uv);
+		public long AddVertex(Vector3 p);
+		public void Destroy();
+		public object FindClosestPointOnSurface(Vector3 point);
+		public long FindClosestVertex(Vector3 toThisPoint);
+		public object[] FindVerticesWithinSphere(Vector3 center, float radius);
+		public object[] GetAdjacentFaces(long faceId);
+		public object[] GetAdjacentVertices(long vertexId);
+		public Vector3 GetCenter();
+		public Color3? GetColor(long colorId);
+		public float? GetColorAlpha(long colorId);
+		public object[] GetColors();
+		public object[] GetFaceColors(long faceId);
+		public object[] GetFaceNormals(long faceId);
+		public object[] GetFaceUVs(long faceId);
+		public object[] GetFaceVertices(long faceId);
+		public object[] GetFaces();
+		public object[] GetFacesWithAttribute(long id);
+		public Vector3? GetNormal(long normalId);
+		public object[] GetNormals();
+		public Vector3 GetPosition(long vertexId);
+		public Vector3 GetSize();
+		public Vector2? GetUV(long uvId);
+		public object[] GetUVs();
+		public object[] GetVertices();
+		public object[] GetVerticesWithAttribute(long id);
+		public string IdDebugString(long id);
+		public object MergeVertices(float mergeTolerance);
+		public object RaycastLocal(Vector3 origin, Vector3 direction);
+		public void RemoveFace(long faceId);
+		public object[] RemoveUnused();
+		public void ResetNormal(long normalId);
+		public void SetColor(long colorId, Color3 color);
+		public void SetColorAlpha(long colorId, float alpha);
+		public void SetFaceColors(long faceId, object[] ids);
+		public void SetFaceNormals(long faceId, object[] ids);
+		public void SetFaceUVs(long faceId, object[] ids);
+		public void SetFaceVertices(long faceId, object[] ids);
+		public void SetNormal(long normalId, Vector3 normal);
+		public void SetPosition(long vertexId, Vector3 p);
+		public void SetUV(long uvId, Vector2 uv);
+		public void Triangulate();
+		public MeshPart CreateMeshPartAsync(Vector3 initialSize, object? options = null);
+	}
+	
+	public partial interface Instance : Object
 	{
 		public new Instance Clone();
 		public bool Archivable { get; set; }
-		public string ClassName { get; }
 		public string Name { get; set; }
 		public Instance? Parent { get; set; }
 		public void AddTag(string tag);
@@ -212,9 +301,8 @@ namespace Roblox
 		public void Destroy();
 		public Actor GetActor();
 		public ScriptSignal GetAttributeChangedSignal(string attribute);
-		public Instance[] GetChildren();
+		public Instances GetChildren();
 		public string GetFullName();
-		public ScriptSignal GetPropertyChangedSignal(string property);
 		public object GetStyled(string name);
 		public bool HasTag(string tag);
 		public bool IsPropertyModified(string name);
@@ -265,6 +353,11 @@ namespace Roblox
 		public new AchievementService Clone();
 	}
 	
+	public interface ActivityHistoryEventService : IServiceInstance
+	{
+		public new ActivityHistoryEventService Clone();
+	}
+	
 	public interface AdPortal : ICreatableInstance
 	{
 		public new AdPortal Clone();
@@ -292,7 +385,7 @@ namespace Roblox
 	public interface Animation : ICreatableInstance
 	{
 		public new Animation Clone();
-		public string AnimationId { get; set; }
+		public ContentId AnimationId { get; set; }
 	}
 	
 	public interface AnimationClip : Instance
@@ -311,18 +404,18 @@ namespace Roblox
 	{
 		public new KeyframeSequence Clone();
 		public void AddKeyframe(Keyframe keyframe);
-		public Instance[] GetKeyframes();
+		public Instances GetKeyframes();
 		public void RemoveKeyframe(Keyframe keyframe);
 	}
 	
 	public partial interface AnimationClipProvider : IServiceInstance
 	{
 		public new AnimationClipProvider Clone();
-		public string RegisterActiveAnimationClip(AnimationClip animationClip);
-		public string RegisterAnimationClip(AnimationClip animationClip);
-		public AnimationClip GetAnimationClipAsync(string assetId);
+		public ContentId RegisterActiveAnimationClip(AnimationClip animationClip);
+		public ContentId RegisterAnimationClip(AnimationClip animationClip);
+		public AnimationClip GetAnimationClipAsync(ContentId assetId);
 		public Instance GetAnimations(long userId);
-		public ClipEvaluator GetClipEvaluatorAsync(string assetId);
+		public ClipEvaluator GetClipEvaluatorAsync(ContentId assetId);
 	}
 	
 	public interface AnimationController : ICreatableInstance
@@ -457,9 +550,14 @@ namespace Roblox
 	public partial interface AssetService : IServiceInstance
 	{
 		public new AssetService Clone();
-		public EditableImage CreateEditableImageAsync(string textureId);
-		public EditableMesh CreateEditableMeshAsync(string meshId);
+		public EditableImage CreateEditableImage(object? editableImageOptions = null);
+		public EditableMesh CreateEditableMesh(object? editableMeshOptions = null);
+		public object CreateAssetAsync(Instance obj, Enum.AssetType.Type assetType, object? requestParameters = null);
+		public object CreateAssetVersionAsync(Instance obj, Enum.AssetType.Type assetType, long assetId, object? requestParameters = null);
+		public EditableImage CreateEditableImageAsync(string content, object? editableImageOptions = null);
+		public EditableMesh CreateEditableMeshAsync(string content, object? editableMeshOptions = null);
 		public EditableMesh CreateEditableMeshFromPartAsync(MeshPart meshPart);
+		public MeshPart CreateMeshPartAsync(string meshContent, object? options = null);
 		public long CreatePlaceAsync(string placeName, long templatePlaceID, string description);
 		public long CreatePlaceInPlayerInventoryAsync(Player player, string placeName, long templatePlaceID, string description);
 		public object[] GetAssetIdsForPackage(long packageAssetId);
@@ -495,7 +593,7 @@ namespace Roblox
 		public CFrame WorldCFrame { get; set; }
 		public Vector3 WorldSecondaryAxis { get; set; }
 		public Vector3 GetAxis();
-		public Instance[] GetConstraints();
+		public Instances GetConstraints();
 		public Vector3 GetSecondaryAxis();
 		public void SetAxis(Vector3 axis);
 		public void SetSecondaryAxis(Vector3 axis);
@@ -514,8 +612,9 @@ namespace Roblox
 		public float PeakLevel { get; }
 		public float RmsLevel { get; }
 		public bool SpectrumEnabled { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
 		public object[] GetSpectrum();
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioChorus : ICreatableInstance
@@ -525,7 +624,8 @@ namespace Roblox
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioCompressor : ICreatableInstance
@@ -537,7 +637,8 @@ namespace Roblox
 		public float Ratio { get; set; }
 		public float Release { get; set; }
 		public float Threshold { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioDeviceInput : ICreatableInstance
@@ -548,16 +649,18 @@ namespace Roblox
 		public bool Muted { get; set; }
 		public Player? Player { get; set; }
 		public float Volume { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
 		public object[] GetUserIdAccessList();
 		public void SetUserIdAccessList(object[] userIds);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioDeviceOutput : ICreatableInstance
 	{
 		public new AudioDeviceOutput Clone();
 		public Player? Player { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioDistortion : ICreatableInstance
@@ -565,7 +668,8 @@ namespace Roblox
 		public new AudioDistortion Clone();
 		public bool Bypass { get; set; }
 		public float Level { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioEcho : ICreatableInstance
@@ -575,18 +679,24 @@ namespace Roblox
 		public float DelayTime { get; set; }
 		public float DryLevel { get; set; }
 		public float Feedback { get; set; }
+		public float RampTime { get; set; }
 		public float WetLevel { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioEmitter : ICreatableInstance
 	{
 		public new AudioEmitter Clone();
 		public string AudioInteractionGroup { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Enum.AudioSimulationFidelity.Type SimulationFidelity { get; set; }
+		public object GetAngleAttenuation();
+		public Instances GetConnectedWires(string pin);
 		public object GetDistanceAttenuation();
-		public Instance[] GetInteractingListeners();
+		public Instances GetInteractingListeners();
+		public void SetAngleAttenuation(object curve);
 		public void SetDistanceAttenuation(object curve);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioEqualizer : ICreatableInstance
@@ -597,7 +707,8 @@ namespace Roblox
 		public float LowGain { get; set; }
 		public float MidGain { get; set; }
 		public NumberRange MidRange { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioFader : ICreatableInstance
@@ -605,7 +716,8 @@ namespace Roblox
 		public new AudioFader Clone();
 		public bool Bypass { get; set; }
 		public float Volume { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioFilter : ICreatableInstance
@@ -616,8 +728,9 @@ namespace Roblox
 		public float Frequency { get; set; }
 		public float Gain { get; set; }
 		public float Q { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
 		public float GetGainAt(float frequency);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioFlanger : ICreatableInstance
@@ -627,7 +740,8 @@ namespace Roblox
 		public float Depth { get; set; }
 		public float Mix { get; set; }
 		public float Rate { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioFocusService : IServiceInstance
@@ -635,14 +749,28 @@ namespace Roblox
 		public new AudioFocusService Clone();
 	}
 	
+	public interface AudioLimiter : ICreatableInstance
+	{
+		public new AudioLimiter Clone();
+		public bool Bypass { get; set; }
+		public float MaxLevel { get; set; }
+		public float Release { get; set; }
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
+	}
+	
 	public interface AudioListener : ICreatableInstance
 	{
 		public new AudioListener Clone();
 		public string AudioInteractionGroup { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Enum.AudioSimulationFidelity.Type SimulationFidelity { get; set; }
+		public object GetAngleAttenuation();
+		public Instances GetConnectedWires(string pin);
 		public object GetDistanceAttenuation();
-		public Instance[] GetInteractingEmitters();
+		public Instances GetInteractingEmitters();
+		public void SetAngleAttenuation(object curve);
 		public void SetDistanceAttenuation(object curve);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioPitchShifter : ICreatableInstance
@@ -650,7 +778,8 @@ namespace Roblox
 		public new AudioPitchShifter Clone();
 		public bool Bypass { get; set; }
 		public float Pitch { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioPlayer : ICreatableInstance
@@ -667,11 +796,13 @@ namespace Roblox
 		public float TimeLength { get; }
 		public float TimePosition { get; set; }
 		public float Volume { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
 		public void Play();
 		public void Stop();
+		public object[] GetWaveformAsync(NumberRange timeRange, int samples);
 		public ScriptSignal Ended { get; }
 		public ScriptSignal Looped { get; }
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioReverb : ICreatableInstance
@@ -690,7 +821,8 @@ namespace Roblox
 		public float LowShelfGain { get; set; }
 		public float ReferenceFrequency { get; set; }
 		public float WetLevel { get; set; }
-		public Instance[] GetConnectedWires(string pin);
+		public Instances GetConnectedWires(string pin);
+		public ScriptSignal<bool, string, Wire, Instance> WiringChanged { get; }
 	}
 	
 	public interface AudioSearchParams : ICreatableInstance
@@ -707,6 +839,17 @@ namespace Roblox
 		public string Title { get; set; }
 	}
 	
+	public interface AuroraService : IServiceInstance
+	{
+		public new AuroraService Clone();
+		public Instance GetServerView(Instance target);
+		public bool IsDesynced(Instance target);
+		public void NetDesync(Instance target);
+		public void NetSync(Instance target);
+		public void SetIncomingReplicationLag(float seconds);
+		public void UpdateProperties(Instance target);
+	}
+	
 	public interface AvatarChatService : IServiceInstance
 	{
 		public new AvatarChatService Clone();
@@ -720,12 +863,14 @@ namespace Roblox
 		public string GenerateAvatarAsync(string sessionId, string previewId);
 		public string GenerateAvatarModelAsync(Player player, string previewJobId, object options, Action progressCallback);
 		public string GenerateAvatarPreviewAsync(Player player, string textPrompt, object options, Action progressCallback);
-		public string GenerateAvatarPreviewAsync2(string sessionId, string fileId, string textPrompt);
+		public string GenerateAvatarPreviewAsync2(string sessionId, string fileId, string textPrompt, object options);
 		public object GetAvatarGenerationConfig();
+		public object[] GetBatchTokenDetailsAsync(object[] tokenIds);
 		public HumanoidDescription LoadAvatarHumanoidDescriptionAsync(string id);
 		public Instance LoadAvatarModelAsync(string id);
 		public EditableImage LoadAvatarPreviewImageAsync(string avatarPreview);
-		public object PromptCreateAvatarAsync(Player player, HumanoidDescription humanoidDescription);
+		public object PromptCreateAvatarAsync(string tokenId, Player player, HumanoidDescription humanoidDescription);
+		public string PromptSelectAvatarGenerationImageAsync(Player player);
 		public object RequestAvatarGenerationSessionAsync(Player player, Action callback);
 		public object ValidateUGCAccessoryAsync(Player player, Accessory accessory, Enum.AccessoryType.Type accessoryType);
 		public object ValidateUGCBodyPartAsync(Player player, Instance instance, Enum.BodyPart.Type bodyPart);
@@ -767,6 +912,11 @@ namespace Roblox
 	public interface AvatarImportService : IServiceInstance
 	{
 		public new AvatarImportService Clone();
+	}
+	
+	public interface AvatarPreloader : IServiceInstance
+	{
+		public new AvatarPreloader Clone();
 	}
 	
 	public interface Backpack : ICreatableInstance
@@ -887,7 +1037,7 @@ namespace Roblox
 	public interface BasePlayerGui : Instance
 	{
 		public new BasePlayerGui Clone();
-		public Instance[] GetGuiObjectsAtPosition(int x, int y);
+		public Instances GetGuiObjectsAtPosition(int x, int y);
 	}
 	
 	public partial interface PlayerGui : BasePlayerGui
@@ -920,7 +1070,7 @@ namespace Roblox
 	public interface BaseWrap : Instance
 	{
 		public new BaseWrap Clone();
-		public string CageMeshId { get; set; }
+		public ContentId CageMeshId { get; set; }
 		public CFrame CageOrigin { get; set; }
 		public CFrame CageOriginWorld { get; }
 		public CFrame ImportOrigin { get; set; }
@@ -930,9 +1080,9 @@ namespace Roblox
 	public interface WrapDeformer : BaseWrap, ICreatableInstance
 	{
 		public new WrapDeformer Clone();
-		public float Amount { get; set; }
-		public bool Enabled { get; set; }
-		public string RenderMeshID { get; set; }
+		public void SetCageMeshContent(string content);
+		public EditableMesh CreateEditableMeshAsync();
+		public CFrame GetDeformedCFrameAsync(CFrame originalCFrame);
 	}
 	
 	public interface WrapLayer : BaseWrap, ICreatableInstance
@@ -943,7 +1093,7 @@ namespace Roblox
 		public bool Enabled { get; set; }
 		public int Order { get; set; }
 		public float Puffiness { get; set; }
-		public string ReferenceMeshId { get; set; }
+		public ContentId ReferenceMeshId { get; set; }
 		public CFrame ReferenceOrigin { get; set; }
 		public CFrame ReferenceOriginWorld { get; }
 		public float ShrinkFactor { get; set; }
@@ -969,7 +1119,7 @@ namespace Roblox
 		public float LightEmission { get; set; }
 		public float LightInfluence { get; set; }
 		public int Segments { get; set; }
-		public string Texture { get; set; }
+		public ContentId Texture { get; set; }
 		public float TextureLength { get; set; }
 		public Enum.TextureMode.Type TextureMode { get; set; }
 		public float TextureSpeed { get; set; }
@@ -1084,17 +1234,6 @@ namespace Roblox
 		public new Breakpoint Clone();
 	}
 	
-	public interface BubbleChatMessageProperties : ICreatableInstance
-	{
-		public new BubbleChatMessageProperties Clone();
-		public Color3 BackgroundColor3 { get; set; }
-		public float BackgroundTransparency { get; set; }
-		public Font FontFace { get; set; }
-		public bool TailVisible { get; set; }
-		public Color3 TextColor3 { get; set; }
-		public long TextSize { get; set; }
-	}
-	
 	public interface BulkImportService : IServiceInstance
 	{
 		public new BulkImportService Clone();
@@ -1121,9 +1260,9 @@ namespace Roblox
 		public float NearPlaneZ { get; }
 		public bool VRTiltAndRollEnabled { get; set; }
 		public Vector2 ViewportSize { get; }
-		public float GetLargestCutoffDistance(Instance[] ignoreList);
+		public float GetLargestCutoffDistance(Instances ignoreList);
 		public float GetPanSpeed();
-		public Instance[] GetPartsObscuringTarget(object[] castPoints, Instance[] ignoreList);
+		public Instances GetPartsObscuringTarget(object[] castPoints, Instances ignoreList);
 		public CFrame GetRenderCFrame();
 		public float GetRoll();
 		public float GetTiltSpeed();
@@ -1145,11 +1284,11 @@ namespace Roblox
 		public new CaptureService Clone();
 		public void CaptureScreenshot(Action onCaptureReady);
 		public void PromptSaveCapturesToGallery(object[] contentIds, Action resultCallback);
-		public void PromptShareCapture(string contentId, string launchData, Action onAcceptedCallback, Action onDeniedCallback);
+		public void PromptShareCapture(ContentId contentId, string launchData, Action onAcceptedCallback, Action onDeniedCallback);
 		public ScriptSignal CaptureBegan { get; }
 		public ScriptSignal CaptureEnded { get; }
 		public ScriptSignal<object> CaptureSaved { get; }
-		public ScriptSignal<string> UserCaptureSaved { get; }
+		public ScriptSignal<ContentId> UserCaptureSaved { get; }
 	}
 	
 	public interface CharacterAppearance : Instance
@@ -1192,20 +1331,20 @@ namespace Roblox
 	public interface Pants : Clothing, ICreatableInstance
 	{
 		public new Pants Clone();
-		public string PantsTemplate { get; set; }
+		public ContentId PantsTemplate { get; set; }
 	}
 	
 	public interface Shirt : Clothing, ICreatableInstance
 	{
 		public new Shirt Clone();
-		public string ShirtTemplate { get; set; }
+		public ContentId ShirtTemplate { get; set; }
 	}
 	
 	public interface ShirtGraphic : CharacterAppearance, ICreatableInstance
 	{
 		public new ShirtGraphic Clone();
 		public Color3 Color3 { get; set; }
-		public string Graphic { get; set; }
+		public ContentId Graphic { get; set; }
 	}
 	
 	public interface Chat : IServiceInstance
@@ -1233,7 +1372,7 @@ namespace Roblox
 	public interface ClickDetector : ICreatableInstance
 	{
 		public new ClickDetector Clone();
-		public string CursorIcon { get; set; }
+		public ContentId CursorIcon { get; set; }
 		public float MaxActivationDistance { get; set; }
 		public ScriptSignal<Player> MouseClick { get; }
 		public ScriptSignal<Player> MouseHoverEnter { get; }
@@ -1244,7 +1383,7 @@ namespace Roblox
 	public interface DragDetector : ClickDetector, ICreatableInstance
 	{
 		public new DragDetector Clone();
-		public string ActivatedCursorIcon { get; set; }
+		public ContentId ActivatedCursorIcon { get; set; }
 		public bool ApplyAtCenterOfMass { get; set; }
 		public Vector3 Axis { get; set; }
 		public CFrame DragFrame { get; set; }
@@ -1311,7 +1450,7 @@ namespace Roblox
 		public object[] GetAllTags();
 		public ScriptSignal GetInstanceAddedSignal(string tag);
 		public ScriptSignal GetInstanceRemovedSignal(string tag);
-		public Instance[] GetTagged(string tag);
+		public Instances GetTagged(string tag);
 		public object[] GetTags(Instance instance);
 		public bool HasTag(Instance instance, string tag);
 		public void RemoveTag(Instance instance, string tag);
@@ -1337,10 +1476,11 @@ namespace Roblox
 	public interface CommerceService : IServiceInstance
 	{
 		public new CommerceService Clone();
-		public void PromptCommerceProductPurchase(Player user, long commerceProductId);
+		public void PromptCommerceProductPurchase(Player user, string commerceProductId);
 		public void PromptRealWorldCommerceBrowser(Player player, string url);
+		public object GetCommerceProductInfoAsync(string commerceProductId);
 		public bool UserEligibleForRealWorldCommerceAsync();
-		public ScriptSignal<Player, long> PromptCommerceProductPurchaseFinished { get; }
+		public ScriptSignal<Player, string> PromptCommerceProductPurchaseFinished { get; }
 	}
 	
 	public interface Configuration : ICreatableInstance
@@ -1629,18 +1769,18 @@ namespace Roblox
 		public new ContentProvider Clone();
 		public string BaseUrl { get; }
 		public int RequestQueueSize { get; }
-		public Enum.AssetFetchStatus.Type GetAssetFetchStatus(string contentId);
-		public ScriptSignal GetAssetFetchStatusChangedSignal(string contentId);
+		public Enum.AssetFetchStatus.Type GetAssetFetchStatus(ContentId contentId);
+		public ScriptSignal GetAssetFetchStatusChangedSignal(ContentId contentId);
 		public object[] ListEncryptedAssets();
-		public void Preload(string contentId);
+		public void Preload(ContentId contentId);
 		public void RegisterDefaultEncryptionKey(string encryptionKey);
 		public void RegisterDefaultSessionKey(string sessionKey);
-		public void RegisterEncryptedAsset(string assetId, string encryptionKey);
-		public void RegisterSessionEncryptedAsset(string contentId, string sessionKey);
+		public void RegisterEncryptedAsset(ContentId assetId, string encryptionKey);
+		public void RegisterSessionEncryptedAsset(ContentId contentId, string sessionKey);
 		public void UnregisterDefaultEncryptionKey();
-		public void UnregisterEncryptedAsset(string assetId);
+		public void UnregisterEncryptedAsset(ContentId assetId);
 		public void PreloadAsync(object[] contentIdList, Action? callbackFunction = null);
-		public ScriptSignal<string> AssetFetchFailed { get; }
+		public ScriptSignal<ContentId> AssetFetchFailed { get; }
 	}
 	
 	public interface ContextActionService : IServiceInstance
@@ -1781,6 +1921,11 @@ namespace Roblox
 		public new CreationDBService Clone();
 	}
 	
+	public interface CreatorStoreService : IServiceInstance
+	{
+		public new CreatorStoreService Clone();
+	}
+	
 	public interface CrossDMScriptChangeListener : IServiceInstance
 	{
 		public new CrossDMScriptChangeListener Clone();
@@ -1809,76 +1954,11 @@ namespace Roblox
 		public new CylinderMesh Clone();
 	}
 	
-	public interface EditableMesh : DataModelMesh, ICreatableInstance
-	{
-		public new EditableMesh Clone();
-		public bool SkinningEnabled { get; set; }
-		public long AddColor(Color3 color, float alpha);
-		public long AddNormal(Vector3? normal = null);
-		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
-		public long AddUV(Vector2 uv);
-		public long AddVertex(Vector3 p);
-		public object FindClosestPointOnSurface(Vector3 point);
-		public long FindClosestVertex(Vector3 toThisPoint);
-		public object[] FindVerticesWithinSphere(Vector3 center, float radius);
-		public object[] GetAdjacentFaces(long faceId);
-		public object[] GetAdjacentTriangles(long triangleId);
-		public object[] GetAdjacentVertices(long vertexId);
-		public Color3? GetColor(long colorId);
-		public float? GetColorAlpha(long colorId);
-		public object[] GetColors();
-		public object[] GetFaceColors(long faceId);
-		public object[] GetFaceNormals(long faceId);
-		public object[] GetFaceUVs(long faceId);
-		public object[] GetFaceVertices(long faceId);
-		public object[] GetFaces();
-		public object[] GetFacesWithAttribute(long id);
-		public Vector3? GetNormal(long normalId);
-		public object[] GetNormals();
-		public Vector3 GetPosition(long vertexId);
-		public object GetTriangleVertices(long triangleId);
-		public object[] GetTriangles();
-		public Vector2? GetUV(long uvId);
-		public object[] GetUVs();
-		public Color3 GetVertexColor(long vertexId);
-		public float GetVertexColorAlpha(long vertexId);
-		public Vector3 GetVertexNormal(long vertexId);
-		public object[] GetVertices();
-		public object[] GetVerticesWithAttribute(long id);
-		public string IdDebugString(long id);
-		public object MergeVertices(float mergeTolerance);
-		public object RaycastLocal(Vector3 origin, Vector3 direction);
-		public void RemoveFace(long faceId);
-		public void RemoveTriangle(long triangleId);
-		public object[] RemoveUnused();
-		public void RemoveVertex(long vertexId);
-		public void ResetNormal(long normalId);
-		public void SetColor(long colorId, Color3 color);
-		public void SetColorAlpha(long colorId, float alpha);
-		public void SetFaceColors(long faceId, object[] ids);
-		public void SetFaceNormals(long faceId, object[] ids);
-		public void SetFaceUVs(long faceId, object[] ids);
-		public void SetFaceVertices(long faceId, object[] ids);
-		public void SetNormal(long normalId, Vector3 normal);
-		public void SetPosition(long vertexId, Vector3 p);
-		public void SetUV(long uvId, Vector2 uv);
-		public void SetVertexColor(long vertexId, Color3 color);
-		public void SetVertexColorAlpha(long vertexId, float alpha);
-		public void SetVertexNormal(long vertexId, Vector3 vnormal);
-		public void Triangulate();
-		public MeshPart CreateMeshPartAsync(object? options = null);
-	}
-	
-	public interface RobloxEditableMesh : EditableMesh, ICreatableInstance
-	{
-		public new RobloxEditableMesh Clone();
-	}
-	
 	public interface FileMesh : DataModelMesh, ICreatableInstance
 	{
 		public new FileMesh Clone();
-		public string MeshId { get; set; }
-		public string TextureId { get; set; }
+		public ContentId MeshId { get; set; }
+		public ContentId TextureId { get; set; }
 	}
 	
 	public interface SpecialMesh : FileMesh, ICreatableInstance
@@ -2020,7 +2100,7 @@ namespace Roblox
 		public Enum.DialogTone.Type Tone { get; set; }
 		public float TriggerDistance { get; set; }
 		public Vector3 TriggerOffset { get; set; }
-		public Instance[] GetCurrentPlayers();
+		public Instances GetCurrentPlayers();
 		public ScriptSignal<Instance, Instance> DialogChoiceSelected { get; }
 	}
 	
@@ -2037,7 +2117,7 @@ namespace Roblox
 	{
 		public new Dragger Clone();
 		public void AxisRotate(Enum.Axis.Type? axis = null);
-		public void MouseDown(Instance mousePart, Vector3 pointOnMousePart, Instance[] parts);
+		public void MouseDown(Instance mousePart, Vector3 pointOnMousePart, Instances parts);
 		public void MouseMove(Ray mouseRay);
 		public void MouseUp();
 	}
@@ -2062,28 +2142,9 @@ namespace Roblox
 		public bool ShowPivotIndicator { get; set; }
 	}
 	
-	public interface EditableImage : ICreatableInstance
+	public interface EditableService : IServiceInstance
 	{
-		public new EditableImage Clone();
-		public Vector2 Size { get; set; }
-		public EditableImage Copy(Vector2 min, Vector2 max);
-		public void Crop(Vector2 min, Vector2 max);
-		public void DrawCircle(Vector2 center, int radius, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
-		public void DrawImage(Vector2 position, EditableImage image, Enum.ImageCombineType.Type combineType);
-		public void DrawLine(Vector2 p1, Vector2 p2, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
-		public void DrawProjectionImage(EditableMesh mesh, object projection, object brushConfig);
-		public void DrawRectangle(Vector2 position, Vector2 size, Color3 color, float transparency, Enum.ImageCombineType.Type combineType);
-		public object[] ReadPixels(Vector2 position, Vector2 size);
-		public buffer ReadPixelsBuffer(Vector2 position, Vector2 size);
-		public void Resize(Vector2 size);
-		public void Rotate(float degrees, bool changeSize);
-		public void WritePixels(Vector2 position, Vector2 size, object[] pixels);
-		public void WritePixelsBuffer(Vector2 position, Vector2 size, buffer buffer);
-	}
-	
-	public interface RobloxEditableImage : EditableImage, ICreatableInstance
-	{
-		public new RobloxEditableImage Clone();
+		public new EditableService Clone();
 	}
 	
 	public interface EulerRotationCurve : ICreatableInstance
@@ -2139,6 +2200,22 @@ namespace Roblox
 		public new ExperienceStateCaptureService Clone();
 	}
 	
+	public interface ExplorerFilter : ICreatableInstance
+	{
+		public new ExplorerFilter Clone();
+	}
+	
+	public interface ExplorerFilterAutocompleter : Instance
+	{
+		public new ExplorerFilterAutocompleter Clone();
+	}
+	
+	public interface ExplorerServiceVisibilityService : IServiceInstance
+	{
+		public new ExplorerServiceVisibilityService Clone();
+		public bool GetServiceVisibility(Instance service);
+	}
+	
 	public interface Explosion : ICreatableInstance
 	{
 		public new Explosion Clone();
@@ -2174,7 +2251,7 @@ namespace Roblox
 		public Color3 Color3 { get; set; }
 		public float Shiny { get; set; }
 		public float Specular { get; set; }
-		public string Texture { get; set; }
+		public ContentId Texture { get; set; }
 		public float Transparency { get; set; }
 		public int ZIndex { get; set; }
 	}
@@ -2225,6 +2302,11 @@ namespace Roblox
 	public interface MotorFeature : Feature, ICreatableInstance
 	{
 		public new MotorFeature Clone();
+	}
+	
+	public interface FeatureRestrictionManager : IServiceInstance
+	{
+		public new FeatureRestrictionManager Clone();
 	}
 	
 	public interface Fire : ICreatableInstance
@@ -2310,6 +2392,7 @@ namespace Roblox
 	{
 		public new DataStore Clone();
 		public object GetVersionAsync(string key, string version);
+		public object GetVersionAtTimeAsync(string key, long timestamp);
 		public DataStoreKeyPages ListKeysAsync(string prefix, int? pageSize = null, string? cursor = null, bool? excludeDeleted = null);
 		public DataStoreVersionPages ListVersionsAsync(string key, Enum.SortDirection.Type? sortDirection = null, long? minDate = null, long? maxDate = null, int? pageSize = null);
 		public void RemoveVersionAsync(string key, string version);
@@ -2434,14 +2517,14 @@ namespace Roblox
 	public interface ImageButton : GuiButton, ICreatableInstance
 	{
 		public new ImageButton Clone();
-		public string HoverImage { get; set; }
-		public string Image { get; set; }
+		public ContentId HoverImage { get; set; }
+		public ContentId Image { get; set; }
 		public Color3 ImageColor3 { get; set; }
 		public Vector2 ImageRectOffset { get; set; }
 		public Vector2 ImageRectSize { get; set; }
 		public float ImageTransparency { get; set; }
 		public bool IsLoaded { get; }
-		public string PressedImage { get; set; }
+		public ContentId PressedImage { get; set; }
 		public Enum.ResamplerMode.Type ResampleMode { get; set; }
 		public Enum.ScaleType.Type ScaleType { get; set; }
 		public Rect SliceCenter { get; set; }
@@ -2485,7 +2568,7 @@ namespace Roblox
 	public interface ImageLabel : GuiLabel, ICreatableInstance
 	{
 		public new ImageLabel Clone();
-		public string Image { get; set; }
+		public ContentId Image { get; set; }
 		public Color3 ImageColor3 { get; set; }
 		public Vector2 ImageRectOffset { get; set; }
 		public Vector2 ImageRectSize { get; set; }
@@ -2526,24 +2609,29 @@ namespace Roblox
 		public Enum.TextYAlignment.Type TextYAlignment { get; set; }
 	}
 	
+	public interface RelativeGui : GuiObject, ICreatableInstance
+	{
+		public new RelativeGui Clone();
+	}
+	
 	public interface ScrollingFrame : GuiObject, ICreatableInstance
 	{
 		public new ScrollingFrame Clone();
 		public Vector2 AbsoluteCanvasSize { get; }
 		public Vector2 AbsoluteWindowSize { get; }
 		public Enum.AutomaticSize.Type AutomaticCanvasSize { get; set; }
-		public string BottomImage { get; set; }
+		public ContentId BottomImage { get; set; }
 		public Vector2 CanvasPosition { get; set; }
 		public UDim2 CanvasSize { get; set; }
 		public Enum.ElasticBehavior.Type ElasticBehavior { get; set; }
 		public Enum.ScrollBarInset.Type HorizontalScrollBarInset { get; set; }
-		public string MidImage { get; set; }
+		public ContentId MidImage { get; set; }
 		public Color3 ScrollBarImageColor3 { get; set; }
 		public float ScrollBarImageTransparency { get; set; }
 		public int ScrollBarThickness { get; set; }
 		public Enum.ScrollingDirection.Type ScrollingDirection { get; set; }
 		public bool ScrollingEnabled { get; set; }
-		public string TopImage { get; set; }
+		public ContentId TopImage { get; set; }
 		public Enum.ScrollBarInset.Type VerticalScrollBarInset { get; set; }
 		public Enum.VerticalScrollBarPosition.Type VerticalScrollBarPosition { get; set; }
 	}
@@ -2599,7 +2687,7 @@ namespace Roblox
 		public Vector2 Resolution { get; }
 		public float TimeLength { get; }
 		public float TimePosition { get; set; }
-		public string Video { get; set; }
+		public ContentId Video { get; set; }
 		public float Volume { get; set; }
 		public void Pause();
 		public void Play();
@@ -2676,7 +2764,7 @@ namespace Roblox
 		public new AdGui Clone();
 		public Enum.AdShape.Type AdShape { get; set; }
 		public bool EnableVideoAds { get; set; }
-		public string FallbackImage { get; set; }
+		public ContentId FallbackImage { get; set; }
 		public Enum.AdUnitStatus.Type Status { get; }
 	}
 	
@@ -2709,7 +2797,7 @@ namespace Roblox
 		public float CycleOffset { get; set; }
 		public BasePart? From { get; set; }
 		public float StudsBetweenTextures { get; set; }
-		public string Texture { get; set; }
+		public ContentId Texture { get; set; }
 		public Vector2 TextureSize { get; set; }
 		public BasePart? To { get; set; }
 		public float Velocity { get; set; }
@@ -2775,7 +2863,7 @@ namespace Roblox
 	public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance
 	{
 		public new ImageHandleAdornment Clone();
-		public string Image { get; set; }
+		public ContentId Image { get; set; }
 		public Vector2 Size { get; set; }
 	}
 	
@@ -3198,7 +3286,7 @@ namespace Roblox
 		public void ApproveAssetId(long assetId);
 		public void ApproveAssetVersionId(long assetVersionId);
 		public void Insert(Instance instance);
-		public MeshPart CreateMeshPartAsync(string meshId, Enum.CollisionFidelity.Type collisionFidelity, Enum.RenderFidelity.Type renderFidelity);
+		public MeshPart CreateMeshPartAsync(ContentId meshId, Enum.CollisionFidelity.Type collisionFidelity, Enum.RenderFidelity.Type renderFidelity);
 		public object[] GetBaseCategories();
 		public object[] GetBaseSets();
 		public object[] GetCollection(long categoryId);
@@ -3326,8 +3414,8 @@ namespace Roblox
 		public float Time { get; set; }
 		public void AddMarker(Instance marker);
 		public void AddPose(Pose pose);
-		public Instance[] GetMarkers();
-		public Instance[] GetPoses();
+		public Instances GetMarkers();
+		public Instances GetPoses();
 		public void RemoveMarker(Instance marker);
 		public void RemovePose(Pose pose);
 	}
@@ -3341,10 +3429,10 @@ namespace Roblox
 	public partial interface KeyframeSequenceProvider : IServiceInstance
 	{
 		public new KeyframeSequenceProvider Clone();
-		public string RegisterActiveKeyframeSequence(KeyframeSequence keyframeSequence);
-		public string RegisterKeyframeSequence(KeyframeSequence keyframeSequence);
+		public ContentId RegisterActiveKeyframeSequence(KeyframeSequence keyframeSequence);
+		public ContentId RegisterKeyframeSequence(KeyframeSequence keyframeSequence);
 		public Instance GetAnimations(long userId);
-		public Instance GetKeyframeSequenceAsync(string assetId);
+		public Instance GetKeyframeSequenceAsync(ContentId assetId);
 	}
 	
 	public interface LSPFileSyncService : IServiceInstance
@@ -3432,7 +3520,7 @@ namespace Roblox
 		public new LocalizationService Clone();
 		public string RobloxLocaleId { get; }
 		public string SystemLocaleId { get; }
-		public Instance[] GetCorescriptLocalizations();
+		public Instances GetCorescriptLocalizations();
 		public object[] GetTableEntries(Instance? instance = null);
 		public Instance GetTranslatorForPlayer(Player player);
 		public string GetCountryRegionForPlayerAsync(Player player);
@@ -3500,13 +3588,14 @@ namespace Roblox
 		public new BaseScript Clone();
 		public bool Disabled { get; set; }
 		public bool Enabled { get; set; }
-		public string LinkedSource { get; set; }
+		public ContentId LinkedSource { get; set; }
 		public Enum.RunContext.Type RunContext { get; set; }
 	}
 	
 	public interface Script : BaseScript, ICreatableInstance
 	{
 		public new Script Clone();
+		public string Source { get; set; }
 	}
 	
 	public interface LocalScript : Script, ICreatableInstance
@@ -3517,12 +3606,18 @@ namespace Roblox
 	public interface ModuleScript : LuaSourceContainer, ICreatableInstance
 	{
 		public new ModuleScript Clone();
-		public string LinkedSource { get; set; }
+		public ContentId LinkedSource { get; set; }
+		public string Source { get; set; }
 	}
 	
 	public interface LuauScriptAnalyzerService : IServiceInstance
 	{
 		public new LuauScriptAnalyzerService Clone();
+	}
+	
+	public interface MLModelDeliveryService : IServiceInstance
+	{
+		public new MLModelDeliveryService Clone();
 	}
 	
 	public interface MarkerCurve : ICreatableInstance
@@ -3663,7 +3758,7 @@ namespace Roblox
 	{
 		public new Mouse Clone();
 		public CFrame Hit { get; }
-		public string Icon { get; set; }
+		public ContentId Icon { get; set; }
 		public CFrame Origin { get; }
 		public BasePart? Target { get; }
 		public Instance? TargetFilter { get; set; }
@@ -3725,7 +3820,7 @@ namespace Roblox
 	{
 		public new OpenCloudService Clone();
 		public OpenCloudApiV1 GetApiV1();
-		public object InvokeAsync(string version, string methodName, object arguments);
+		public object InvokeAsync(string version, string methodName, object arguments, object? headers = null);
 	}
 	
 	public interface OperationGraph : ICreatableInstance
@@ -3749,6 +3844,7 @@ namespace Roblox
 		public Vector3 AssemblyLinearVelocity { get; set; }
 		public float AssemblyMass { get; }
 		public BasePart? AssemblyRootPart { get; }
+		public bool AudioCanCollide { get; set; }
 		public Enum.SurfaceType.Type BackSurface { get; set; }
 		public Enum.SurfaceType.Type BottomSurface { get; set; }
 		public BrickColor BrickColor { get; set; }
@@ -3792,15 +3888,15 @@ namespace Roblox
 		public bool CanCollideWith(BasePart part);
 		public object CanSetNetworkOwnership();
 		public Vector3 GetClosestPointOnSurface(Vector3 position);
-		public Instance[] GetConnectedParts(bool? recursive = null);
-		public Instance[] GetJoints();
+		public Instances GetConnectedParts(bool? recursive = null);
+		public Instances GetJoints();
 		public float GetMass();
 		public Instance GetNetworkOwner();
 		public bool GetNetworkOwnershipAuto();
-		public Instance[] GetNoCollisionConstraints();
+		public Instances GetNoCollisionConstraints();
 		public CFrame GetRenderCFrame();
 		public Instance GetRootPart();
-		public Instance[] GetTouchingParts();
+		public Instances GetTouchingParts();
 		public Vector3 GetVelocityAtPosition(Vector3 position);
 		public bool IsGrounded();
 		public void MakeJoints();
@@ -3808,9 +3904,9 @@ namespace Roblox
 		public void SetNetworkOwner(Player? playerInstance = null);
 		public void SetNetworkOwnershipAuto();
 		public Vector3 TorqueToAngularAcceleration(Vector3 torque, Vector3? angVelocity = null);
-		public Instance IntersectAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
-		public Instance SubtractAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
-		public Instance UnionAsync(Instance[] parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
+		public Instance IntersectAsync(Instances parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
+		public Instance SubtractAsync(Instances parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
+		public Instance UnionAsync(Instances parts, Enum.CollisionFidelity.Type? collisionfidelity = null, Enum.RenderFidelity.Type? renderFidelity = null);
 		public ScriptSignal<BasePart> LocalSimulationTouched { get; }
 		public ScriptSignal OutfitChanged { get; }
 		public ScriptSignal<BasePart> StoppedTouching { get; }
@@ -3929,9 +4025,9 @@ namespace Roblox
 	{
 		public new MeshPart Clone();
 		public bool DoubleSided { get; set; }
-		public string MeshId { get; }
+		public ContentId MeshId { get; }
 		public Enum.RenderFidelity.Type RenderFidelity { get; set; }
-		public string TextureID { get; set; }
+		public ContentId TextureID { get; set; }
 		public void ApplyMesh(MeshPart meshPart);
 	}
 	
@@ -3995,7 +4091,7 @@ namespace Roblox
 		public Vector3 GetExtentsSize();
 		public CFrame GetModelCFrame();
 		public Vector3 GetModelSize();
-		public Instance[] GetPersistentPlayers();
+		public Instances GetPersistentPlayers();
 		public CFrame GetPrimaryPartCFrame();
 		public float GetScale();
 		public void MakeJoints();
@@ -4020,7 +4116,7 @@ namespace Roblox
 	public interface BackpackItem : Model
 	{
 		public new BackpackItem Clone();
-		public string TextureId { get; set; }
+		public ContentId TextureId { get; set; }
 	}
 	
 	public interface Tool : BackpackItem, ICreatableInstance
@@ -4045,16 +4141,16 @@ namespace Roblox
 		public new WorldRoot Clone();
 		public RaycastResult? Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
 		public object FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
-		public object FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
-		public object FindPartOnRayWithWhitelist(Ray ray, Instance[] whitelistDescendantsTable, bool? ignoreWater = null);
-		public Instance[] FindPartsInRegion3(Region3 region, Instance? ignoreDescendantsInstance = null, int? maxParts = null);
-		public Instance[] FindPartsInRegion3WithIgnoreList(Region3 region, Instance[] ignoreDescendantsTable, int? maxParts = null);
-		public Instance[] FindPartsInRegion3WithWhiteList(Region3 region, Instance[] whitelistDescendantsTable, int? maxParts = null);
-		public Instance[] GetPartBoundsInBox(CFrame cframe, Vector3 size, OverlapParams? overlapParams = null);
-		public Instance[] GetPartBoundsInRadius(Vector3 position, float radius, OverlapParams? overlapParams = null);
-		public Instance[] GetPartsInPart(BasePart part, OverlapParams? overlapParams = null);
+		public object FindPartOnRayWithIgnoreList(Ray ray, Instances ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
+		public object FindPartOnRayWithWhitelist(Ray ray, Instances whitelistDescendantsTable, bool? ignoreWater = null);
+		public Instances FindPartsInRegion3(Region3 region, Instance? ignoreDescendantsInstance = null, int? maxParts = null);
+		public Instances FindPartsInRegion3WithIgnoreList(Region3 region, Instances ignoreDescendantsTable, int? maxParts = null);
+		public Instances FindPartsInRegion3WithWhiteList(Region3 region, Instances whitelistDescendantsTable, int? maxParts = null);
+		public Instances GetPartBoundsInBox(CFrame cframe, Vector3 size, OverlapParams? overlapParams = null);
+		public Instances GetPartBoundsInRadius(Vector3 position, float radius, OverlapParams? overlapParams = null);
+		public Instances GetPartsInPart(BasePart part, OverlapParams? overlapParams = null);
 		public bool IsRegion3Empty(Region3 region, Instance? ignoreDescendentsInstance = null);
-		public bool IsRegion3EmptyWithIgnoreList(Region3 region, Instance[] ignoreDescendentsTable);
+		public bool IsRegion3EmptyWithIgnoreList(Region3 region, Instances ignoreDescendentsTable);
 		public RaycastResult? Raycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
 		public RaycastResult? Shapecast(BasePart part, Vector3 direction, RaycastParams? parameters = null);
 		public RaycastResult? Spherecast(Vector3 position, float radius, Vector3 direction, RaycastParams? parameters = null);
@@ -4079,9 +4175,9 @@ namespace Roblox
 		public int GetPhysicsThrottling();
 		public float GetRealPhysicsFPS();
 		public float GetServerTimeNow();
-		public void JoinToOutsiders(Instance[] objects, Enum.JointCreationMode.Type jointType);
+		public void JoinToOutsiders(Instances objects, Enum.JointCreationMode.Type jointType);
 		public bool PGSIsEnabled();
-		public void UnjoinFromOutsiders(Instance[] objects);
+		public void UnjoinFromOutsiders(Instances objects);
 		public ScriptSignal<Player> PersistentLoaded { get; }
 	}
 	
@@ -4094,7 +4190,7 @@ namespace Roblox
 	{
 		public new PackageLink Clone();
 		public string DefaultName { get; }
-		public string PackageId { get; }
+		public ContentId PackageId { get; }
 		public string SerializedDefaultAttributes { get; }
 		public long VersionNumber { get; }
 	}
@@ -4209,7 +4305,7 @@ namespace Roblox
 		public NumberRange Speed { get; set; }
 		public Vector2 SpreadAngle { get; set; }
 		public NumberSequence Squash { get; set; }
-		public string Texture { get; set; }
+		public ContentId Texture { get; set; }
 		public float TimeScale { get; set; }
 		public NumberSequence Transparency { get; set; }
 		public float VelocityInheritance { get; set; }
@@ -4265,10 +4361,10 @@ namespace Roblox
 	{
 		public new PathfindingService Clone();
 		public float EmptyCutoff { get; set; }
-		public Instance CreatePath(object? agentParameters = null);
-		public Instance ComputeRawPathAsync(Vector3 start, Vector3 finish, float maxDistance);
-		public Instance ComputeSmoothPathAsync(Vector3 start, Vector3 finish, float maxDistance);
-		public Instance FindPathAsync(Vector3 start, Vector3 finish);
+		public Path CreatePath(object? agentParameters = null);
+		public Path ComputeRawPathAsync(Vector3 start, Vector3 finish, float maxDistance);
+		public Path ComputeSmoothPathAsync(Vector3 start, Vector3 finish, float maxDistance);
+		public Path FindPathAsync(Vector3 start, Vector3 finish);
 	}
 	
 	public interface PausedState : Instance
@@ -4284,6 +4380,11 @@ namespace Roblox
 	public interface PausedStateException : PausedState
 	{
 		public new PausedStateException Clone();
+	}
+	
+	public interface PerformanceControlService : IServiceInstance
+	{
+		public new PerformanceControlService Clone();
 	}
 	
 	public interface PhysicsService : IServiceInstance
@@ -4429,9 +4530,9 @@ namespace Roblox
 		public float RespawnTime { get; set; }
 		public Player GetPlayerByUserId(long userId);
 		public Player GetPlayerFromCharacter(Model character);
-		public Instance[] GetPlayers();
+		public Instances GetPlayers();
 		public Player playerFromCharacter(Model character);
-		public Instance[] players();
+		public Instances players();
 		public void BanAsync(object config);
 		public Model CreateHumanoidModelFromDescription(HumanoidDescription description, Enum.HumanoidRigType.Type rigType, Enum.AssetTypeVerification.Type? assetTypeVerification = null);
 		public Model CreateHumanoidModelFromUserId(long userId);
@@ -4474,6 +4575,7 @@ namespace Roblox
 	public interface PolicyService : IServiceInstance
 	{
 		public new PolicyService Clone();
+		public bool CanViewBrandProjectAsync(Player player, string brandProjectId);
 		public object GetPolicyInfoForPlayerAsync(Player player);
 	}
 	
@@ -4497,7 +4599,7 @@ namespace Roblox
 		public CFrame CFrame { get; set; }
 		public float MaskWeight { get; set; }
 		public void AddSubPose(Pose pose);
-		public Instance[] GetSubPoses();
+		public Instances GetSubPoses();
 		public void RemoveSubPose(Pose pose);
 	}
 	
@@ -4640,9 +4742,19 @@ namespace Roblox
 		public new RibbonNotificationService Clone();
 	}
 	
+	public interface RobloxSerializableInstance : Instance
+	{
+		public new RobloxSerializableInstance Clone();
+	}
+	
 	public interface RobloxServerStorage : IServiceInstance
 	{
 		public new RobloxServerStorage Clone();
+	}
+	
+	public interface RomarkRbxAnalyticsService : IServiceInstance
+	{
+		public new RomarkRbxAnalyticsService Clone();
 	}
 	
 	public interface RomarkService : IServiceInstance
@@ -4696,7 +4808,7 @@ namespace Roblox
 	public interface ScreenshotHud : Instance
 	{
 		public new ScreenshotHud Clone();
-		public string CameraButtonIcon { get; set; }
+		public ContentId CameraButtonIcon { get; set; }
 		public UDim2 CameraButtonPosition { get; set; }
 		public UDim2 CloseButtonPosition { get; set; }
 		public bool CloseWhenScreenshotTaken { get; set; }
@@ -4813,6 +4925,15 @@ namespace Roblox
 		public Enum.SensorMode.Type SensorMode { get; set; }
 	}
 	
+	public interface FluidForceSensor : SensorBase, ICreatableInstance
+	{
+		public new FluidForceSensor Clone();
+		public Vector3 CenterOfPressure { get; }
+		public Vector3 Force { get; }
+		public Vector3 Torque { get; }
+		public object EvaluateAsync(Vector3 linearVelocity, Vector3 angularVelocity, CFrame cframe);
+	}
+	
 	public partial interface ServerScriptService : IServiceInstance
 	{
 		public new ServerScriptService Clone();
@@ -4893,16 +5014,16 @@ namespace Roblox
 		public new Sky Clone();
 		public bool CelestialBodiesShown { get; set; }
 		public float MoonAngularSize { get; set; }
-		public string MoonTextureId { get; set; }
-		public string SkyboxBk { get; set; }
-		public string SkyboxDn { get; set; }
-		public string SkyboxFt { get; set; }
-		public string SkyboxLf { get; set; }
-		public string SkyboxRt { get; set; }
-		public string SkyboxUp { get; set; }
+		public ContentId MoonTextureId { get; set; }
+		public ContentId SkyboxBk { get; set; }
+		public ContentId SkyboxDn { get; set; }
+		public ContentId SkyboxFt { get; set; }
+		public ContentId SkyboxLf { get; set; }
+		public ContentId SkyboxRt { get; set; }
+		public ContentId SkyboxUp { get; set; }
 		public int StarCount { get; set; }
 		public float SunAngularSize { get; set; }
-		public string SunTextureId { get; set; }
+		public ContentId SunTextureId { get; set; }
 	}
 	
 	public interface Smoke : ICreatableInstance
@@ -4960,7 +5081,7 @@ namespace Roblox
 		public float RollOffMinDistance { get; set; }
 		public Enum.RollOffMode.Type RollOffMode { get; set; }
 		public SoundGroup? SoundGroup { get; set; }
-		public string SoundId { get; set; }
+		public ContentId SoundId { get; set; }
 		public float TimeLength { get; }
 		public float TimePosition { get; set; }
 		public float Volume { get; set; }
@@ -5125,7 +5246,6 @@ namespace Roblox
 	{
 		public new StarterPlayer Clone();
 		public bool AutoJumpEnabled { get; set; }
-		public Enum.AvatarJointUpgrade.Type AvatarJointUpgrade { get; set; }
 		public float CameraMaxZoomDistance { get; set; }
 		public float CameraMinZoomDistance { get; set; }
 		public Enum.CameraMode.Type CameraMode { get; set; }
@@ -5168,13 +5288,26 @@ namespace Roblox
 		public int ContactsCount { get; }
 		public float DataReceiveKbps { get; }
 		public float DataSendKbps { get; }
+		public float FrameTime { get; }
+		public float HeartbeatTime { get; }
 		public float HeartbeatTimeMs { get; }
 		public int InstanceCount { get; }
 		public int MovingPrimitivesCount { get; }
 		public float PhysicsReceiveKbps { get; }
 		public float PhysicsSendKbps { get; }
+		public float PhysicsStepTime { get; }
 		public float PhysicsStepTimeMs { get; }
 		public int PrimitivesCount { get; }
+		public float RenderCPUFrameTime { get; }
+		public float RenderGPUFrameTime { get; }
+		public int SceneDrawcallCount { get; }
+		public int SceneTriangleCount { get; }
+		public int ShadowsDrawcallCount { get; }
+		public int ShadowsTriangleCount { get; }
+		public int UI2DDrawcallCount { get; }
+		public int UI2DTriangleCount { get; }
+		public int UI3DDrawcallCount { get; }
+		public int UI3DTriangleCount { get; }
 		public float GetMemoryUsageMbForTag(Enum.DeveloperMemoryTag.Type tag);
 		public float GetTotalMemoryUsageMb();
 	}
@@ -5182,6 +5315,7 @@ namespace Roblox
 	public interface StreamingService : IServiceInstance
 	{
 		public new StreamingService Clone();
+		public object ExecuteCommandAsync(string requestId, string commandName, object arg);
 	}
 	
 	public interface StudioAssetService : IServiceInstance
@@ -5234,6 +5368,11 @@ namespace Roblox
 		public new StudioSdkService Clone();
 	}
 	
+	public interface StudioUserService : IServiceInstance
+	{
+		public new StudioUserService Clone();
+	}
+	
 	public interface StudioWidgetsService : IServiceInstance
 	{
 		public new StudioWidgetsService Clone();
@@ -5242,9 +5381,9 @@ namespace Roblox
 	public interface StyleBase : Instance
 	{
 		public new StyleBase Clone();
-		public Instance[] GetStyleRules();
+		public Instances GetStyleRules();
 		public void InsertStyleRule(StyleRule rule, int? index = null);
-		public void SetStyleRules(Instance[] rules);
+		public void SetStyleRules(Instances rules);
 		public ScriptSignal StyleRulesChanged { get; }
 	}
 	
@@ -5263,8 +5402,8 @@ namespace Roblox
 	public interface StyleSheet : StyleBase, ICreatableInstance
 	{
 		public new StyleSheet Clone();
-		public Instance[] GetDerives();
-		public void SetDerives(Instance[] derives);
+		public Instances GetDerives();
+		public void SetDerives(Instances derives);
 	}
 	
 	public interface StyleDerive : ICreatableInstance
@@ -5297,7 +5436,7 @@ namespace Roblox
 		public bool AutoColorCharacters { get; set; }
 		public int Score { get; set; }
 		public BrickColor TeamColor { get; set; }
-		public Instance[] GetPlayers();
+		public Instances GetPlayers();
 		public ScriptSignal<Player> PlayerAdded { get; }
 		public ScriptSignal<Player> PlayerRemoved { get; }
 	}
@@ -5320,8 +5459,13 @@ namespace Roblox
 	public interface Teams : IServiceInstance
 	{
 		public new Teams Clone();
-		public Instance[] GetTeams();
+		public Instances GetTeams();
 		public void RebalanceTeams();
+	}
+	
+	public interface TelemetryService : IServiceInstance
+	{
+		public new TelemetryService Clone();
 	}
 	
 	public interface TeleportAsyncResult : Instance
@@ -5352,12 +5496,12 @@ namespace Roblox
 		public void SetTeleportSetting(string setting, object value);
 		public void Teleport(long placeId, Player? player = null, object? teleportData = null, Instance? customLoadingScreen = null);
 		public void TeleportToPlaceInstance(long placeId, string instanceId, Player? player = null, string? spawnName = null, object? teleportData = null, Instance? customLoadingScreen = null);
-		public void TeleportToPrivateServer(long placeId, string reservedServerAccessCode, Instance[] players, string spawnName, object teleportData, Instance? customLoadingScreen = null);
+		public void TeleportToPrivateServer(long placeId, string reservedServerAccessCode, Instances players, string spawnName, object teleportData, Instance? customLoadingScreen = null);
 		public void TeleportToSpawnByName(long placeId, string spawnName, Player? player = null, object? teleportData = null, Instance? customLoadingScreen = null);
 		public object GetPlayerPlaceInstanceAsync(long userId);
 		public object ReserveServer(long placeId);
-		public Instance TeleportAsync(long placeId, Instance[] players, TeleportOptions? teleportOptions = null);
-		public string TeleportPartyAsync(long placeId, Instance[] players, object teleportData, Instance? customLoadingScreen = null);
+		public Instance TeleportAsync(long placeId, Instances players, TeleportOptions? teleportOptions = null);
+		public string TeleportPartyAsync(long placeId, Instances players, object teleportData, Instance? customLoadingScreen = null);
 		public ScriptSignal<Instance, object> LocalPlayerArrivedFromTeleport { get; }
 		public ScriptSignal<Instance, Enum.TeleportResult.Type, string, long, Instance> TeleportInitFailed { get; }
 	}
@@ -5395,7 +5539,9 @@ namespace Roblox
 	public interface TextChannel : ICreatableInstance
 	{
 		public new TextChannel Clone();
+		public Player? DirectChatRequester { get; }
 		public TextChatMessage DisplaySystemMessage(string systemMessage, string metadata);
+		public void SetDirectChatRequester(Player requester);
 		public object AddUserAsync(long userId);
 		public TextChatMessage SendAsync(string message, string metadata);
 		public ScriptSignal<TextChatMessage> MessageReceived { get; }
@@ -5491,12 +5637,14 @@ namespace Roblox
 		public float TextStrokeTransparency { get; set; }
 		public Enum.VerticalAlignment.Type VerticalAlignment { get; set; }
 		public float WidthScale { get; set; }
+		public ChatWindowMessageProperties DeriveNewMessageProperties();
 	}
 	
 	public interface TextChatMessage : Instance
 	{
 		public new TextChatMessage Clone();
 		public BubbleChatMessageProperties? BubbleChatMessageProperties { get; set; }
+		public ChatWindowMessageProperties? ChatWindowMessageProperties { get; set; }
 		public string MessageId { get; set; }
 		public string Metadata { get; set; }
 		public string PrefixText { get; set; }
@@ -5516,6 +5664,28 @@ namespace Roblox
 		public string Translation { get; set; }
 	}
 	
+	public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreatableInstance
+	{
+		public new BubbleChatMessageProperties Clone();
+		public Color3 BackgroundColor3 { get; set; }
+		public float BackgroundTransparency { get; set; }
+		public Font FontFace { get; set; }
+		public bool TailVisible { get; set; }
+		public Color3 TextColor3 { get; set; }
+		public long TextSize { get; set; }
+	}
+	
+	public interface ChatWindowMessageProperties : TextChatMessageProperties
+	{
+		public new ChatWindowMessageProperties Clone();
+		public Font FontFace { get; set; }
+		public ChatWindowMessageProperties? PrefixTextProperties { get; set; }
+		public Color3 TextColor3 { get; set; }
+		public int TextSize { get; set; }
+		public Color3 TextStrokeColor3 { get; set; }
+		public float TextStrokeTransparency { get; set; }
+	}
+	
 	public interface TextChatService : IServiceInstance
 	{
 		public new TextChatService Clone();
@@ -5526,6 +5696,7 @@ namespace Roblox
 		public void DisplayBubble(Instance partOrCharacter, string message);
 		public bool CanUserChatAsync(long userId);
 		public bool CanUsersChatAsync(long userIdFrom, long userIdTo);
+		public object[] CanUsersDirectChatAsync(long requesterUserId, object[] userIds);
 		public ScriptSignal<Instance, TextChatMessage> BubbleDisplayed { get; }
 		public ScriptSignal<TextChatMessage> MessageReceived { get; }
 		public ScriptSignal<TextChatMessage> SendingMessage { get; }
@@ -5554,8 +5725,9 @@ namespace Roblox
 		public Vector2 GetTextSize(string str, int fontSize, Enum.Font.Type font, Vector2 frameSize);
 		public TextFilterTranslatedResult FilterAndTranslateStringAsync(string stringToFilter, long fromUserId, object[] targetLocales, Enum.TextFilterContext.Type? textContext = null);
 		public TextFilterResult FilterStringAsync(string stringToFilter, long fromUserId, Enum.TextFilterContext.Type? textContext = null);
-		public object GetFamilyInfoAsync(string assetId);
+		public object GetFamilyInfoAsync(ContentId assetId);
 		public Vector2 GetTextBoundsAsync(GetTextBoundsParams parameters);
+		public float GetTextSizeOffsetAsync(int fontSize, Font font);
 	}
 	
 	public interface TextSource : Instance
@@ -5628,7 +5800,7 @@ namespace Roblox
 		public float LightInfluence { get; set; }
 		public float MaxLength { get; set; }
 		public float MinLength { get; set; }
-		public string Texture { get; set; }
+		public ContentId Texture { get; set; }
 		public float TextureLength { get; set; }
 		public Enum.TextureMode.Type TextureMode { get; set; }
 		public NumberSequence Transparency { get; set; }
@@ -5725,10 +5897,10 @@ namespace Roblox
 	public interface UIDragDetector : UIComponent, ICreatableInstance
 	{
 		public new UIDragDetector Clone();
-		public string ActivatedCursorIcon { get; set; }
+		public ContentId ActivatedCursorIcon { get; set; }
 		public Enum.UIDragDetectorBoundingBehavior.Type BoundingBehavior { get; set; }
 		public GuiBase2d? BoundingUI { get; set; }
-		public string CursorIcon { get; set; }
+		public ContentId CursorIcon { get; set; }
 		public Vector2 DragAxis { get; set; }
 		public Enum.UIDragDetectorDragRelativity.Type DragRelativity { get; set; }
 		public float DragRotation { get; set; }
@@ -5742,6 +5914,9 @@ namespace Roblox
 		public UDim2 MinDragTranslation { get; set; }
 		public GuiObject? ReferenceUIInstance { get; set; }
 		public Enum.UIDragDetectorResponseStyle.Type ResponseStyle { get; set; }
+		public UDim2 SelectionModeDragSpeed { get; set; }
+		public float SelectionModeRotateSpeed { get; set; }
+		public Enum.UIDragSpeedAxisMapping.Type UIDragSpeedAxisMapping { get; set; }
 		public ScriptConnection AddConstraintFunction(int priority, Action function);
 		public UDim2 GetReferencePosition();
 		public float GetReferenceRotation();
@@ -5913,7 +6088,7 @@ namespace Roblox
 		public Enum.MouseBehavior.Type MouseBehavior { get; set; }
 		public float MouseDeltaSensitivity { get; set; }
 		public bool MouseEnabled { get; }
-		public string MouseIcon { get; set; }
+		public ContentId MouseIcon { get; set; }
 		public bool MouseIconEnabled { get; set; }
 		public Vector2 OnScreenKeyboardPosition { get; }
 		public Vector2 OnScreenKeyboardSize { get; }
@@ -5929,7 +6104,7 @@ namespace Roblox
 		public TextBox GetFocusedTextBox();
 		public bool GetGamepadConnected(Enum.UserInputType.Type gamepadNum);
 		public object[] GetGamepadState(Enum.UserInputType.Type gamepadNum);
-		public string GetImageForKeyCode(Enum.KeyCode.Type keyCode);
+		public ContentId GetImageForKeyCode(Enum.KeyCode.Type keyCode);
 		public object[] GetKeysPressed();
 		public Enum.UserInputType.Type GetLastInputType();
 		public object[] GetMouseButtonsPressed();
@@ -5958,6 +6133,7 @@ namespace Roblox
 		public ScriptSignal<float, Vector2, float, bool> PointerAction { get; }
 		public ScriptSignal<TextBox> TextBoxFocusReleased { get; }
 		public ScriptSignal<TextBox> TextBoxFocused { get; }
+		public ScriptSignal<Enum.SwipeDirection.Type, int, bool> TouchDrag { get; }
 		public ScriptSignal<InputObject, bool> TouchEnded { get; }
 		public ScriptSignal<object[], Enum.UserInputState.Type, bool> TouchLongPress { get; }
 		public ScriptSignal<InputObject, bool> TouchMoved { get; }
@@ -6123,6 +6299,27 @@ namespace Roblox
 		public bool IsReady { get; }
 	}
 	
+	public interface VideoPlayer : ICreatableInstance
+	{
+		public new VideoPlayer Clone();
+		public ContentId Asset { get; set; }
+		public bool AutoLoad { get; set; }
+		public bool IsPlaying { get; }
+		public bool IsReady { get; }
+		public bool Looping { get; set; }
+		public float PlaybackSpeed { get; set; }
+		public Vector2 Resolution { get; }
+		public ContentId Thumbnail { get; set; }
+		public float TimeLength { get; }
+		public float TimePosition { get; set; }
+		public float Volume { get; set; }
+		public Instances GetConnectedWires(string pin);
+		public void Play();
+		public void Stop();
+		public ScriptSignal Ended { get; }
+		public ScriptSignal Looped { get; }
+	}
+	
 	public interface VideoService : IServiceInstance
 	{
 		public new VideoService Clone();
@@ -6175,6 +6372,11 @@ namespace Roblox
 	{
 		public new VoiceChatService Clone();
 		public bool IsVoiceEnabledForUserIdAsync(long userId);
+	}
+	
+	public interface WebViewService : IServiceInstance
+	{
+		public new WebViewService Clone();
 	}
 	
 	public interface WeldConstraint : ICreatableInstance
