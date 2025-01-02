@@ -9,14 +9,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Allow { get; } = null!;
-		public static Type Deny { get; } = null!;
+		public static extern Type Allow { get; }
+		public static extern Type Deny { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AccessoryType
@@ -25,32 +22,43 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Hat { get; } = null!;
-		public static Type Hair { get; } = null!;
-		public static Type Face { get; } = null!;
-		public static Type Neck { get; } = null!;
-		public static Type Shoulder { get; } = null!;
-		public static Type Front { get; } = null!;
-		public static Type Back { get; } = null!;
-		public static Type Waist { get; } = null!;
-		public static Type TShirt { get; } = null!;
-		public static Type Shirt { get; } = null!;
-		public static Type Pants { get; } = null!;
-		public static Type Jacket { get; } = null!;
-		public static Type Sweater { get; } = null!;
-		public static Type Shorts { get; } = null!;
-		public static Type LeftShoe { get; } = null!;
-		public static Type RightShoe { get; } = null!;
-		public static Type DressSkirt { get; } = null!;
-		public static Type Eyebrow { get; } = null!;
-		public static Type Eyelash { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Hat { get; }
+		public static extern Type Hair { get; }
+		public static extern Type Face { get; }
+		public static extern Type Neck { get; }
+		public static extern Type Shoulder { get; }
+		public static extern Type Front { get; }
+		public static extern Type Back { get; }
+		public static extern Type Waist { get; }
+		public static extern Type TShirt { get; }
+		public static extern Type Shirt { get; }
+		public static extern Type Pants { get; }
+		public static extern Type Jacket { get; }
+		public static extern Type Sweater { get; }
+		public static extern Type Shorts { get; }
+		public static extern Type LeftShoe { get; }
+		public static extern Type RightShoe { get; }
+		public static extern Type DressSkirt { get; }
+		public static extern Type Eyebrow { get; }
+		public static extern Type Eyelash { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class ActionOnStopSync
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type AlwaysAsk { get; }
+		public static extern Type KeepLocalFiles { get; }
+		public static extern Type DeleteLocalFiles { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ActionType
@@ -59,17 +67,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Nothing { get; } = null!;
-		public static Type Pause { get; } = null!;
-		public static Type Lose { get; } = null!;
-		public static Type Draw { get; } = null!;
-		public static Type Win { get; } = null!;
+		public static extern Type Nothing { get; }
+		public static extern Type Pause { get; }
+		public static extern Type Lose { get; }
+		public static extern Type Draw { get; }
+		public static extern Type Win { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ActuatorRelativeTo
@@ -78,15 +83,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Attachment0 { get; } = null!;
-		public static Type Attachment1 { get; } = null!;
-		public static Type World { get; } = null!;
+		public static extern Type Attachment0 { get; }
+		public static extern Type Attachment1 { get; }
+		public static extern Type World { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ActuatorType
@@ -95,15 +97,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Motor { get; } = null!;
-		public static Type Servo { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Motor { get; }
+		public static extern Type Servo { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdEventType
@@ -112,18 +111,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RewardedAdLoaded { get; } = null!;
-		public static Type RewardedAdGrant { get; } = null!;
-		public static Type RewardedAdUnloaded { get; } = null!;
-		public static Type VideoLoaded { get; } = null!;
-		public static Type VideoRemoved { get; } = null!;
-		public static Type UserCompletedVideo { get; } = null!;
+		public static extern Type RewardedAdLoaded { get; }
+		public static extern Type RewardedAdGrant { get; }
+		public static extern Type RewardedAdUnloaded { get; }
+		public static extern Type VideoLoaded { get; }
+		public static extern Type VideoRemoved { get; }
+		public static extern Type UserCompletedVideo { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdShape
@@ -132,13 +128,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type HorizontalRectangle { get; } = null!;
+		public static extern Type HorizontalRectangle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdTeleportMethod
@@ -147,16 +140,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Undefined { get; } = null!;
-		public static Type PortalForward { get; } = null!;
-		public static Type InGameMenuBackButton { get; } = null!;
-		public static Type UIBackButton { get; } = null!;
+		public static extern Type Undefined { get; }
+		public static extern Type PortalForward { get; }
+		public static extern Type InGameMenuBackButton { get; }
+		public static extern Type UIBackButton { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdUIEventType
@@ -165,19 +155,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AdLabelClicked { get; } = null!;
-		public static Type VolumeButtonClicked { get; } = null!;
-		public static Type FullscreenButtonClicked { get; } = null!;
-		public static Type PlayButtonClicked { get; } = null!;
-		public static Type PauseButtonClicked { get; } = null!;
-		public static Type CloseButtonClicked { get; } = null!;
-		public static Type WhyThisAdClicked { get; } = null!;
+		public static extern Type AdLabelClicked { get; }
+		public static extern Type VolumeButtonClicked { get; }
+		public static extern Type FullscreenButtonClicked { get; }
+		public static extern Type PlayButtonClicked { get; }
+		public static extern Type PauseButtonClicked { get; }
+		public static extern Type CloseButtonClicked { get; }
+		public static extern Type WhyThisAdClicked { get; }
+		public static extern Type PlayEventTriggered { get; }
+		public static extern Type PauseEventTriggered { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdUIType
@@ -186,15 +175,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Image { get; } = null!;
-		public static Type Video { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Image { get; }
+		public static extern Type Video { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdUnitStatus
@@ -203,14 +189,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Inactive { get; } = null!;
-		public static Type Active { get; } = null!;
+		public static extern Type Inactive { get; }
+		public static extern Type Active { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AdornCullingMode
@@ -219,14 +202,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Never { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Never { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AlignType
@@ -235,18 +215,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type PrimaryAxisParallel { get; } = null!;
-		public static Type PrimaryAxisPerpendicular { get; } = null!;
-		public static Type PrimaryAxisLookAt { get; } = null!;
-		public static Type AllAxes { get; } = null!;
-		public static Type Parallel { get; } = null!;
-		public static Type Perpendicular { get; } = null!;
+		public static extern Type PrimaryAxisParallel { get; }
+		public static extern Type PrimaryAxisPerpendicular { get; }
+		public static extern Type PrimaryAxisLookAt { get; }
+		public static extern Type AllAxes { get; }
+		public static extern Type Parallel { get; }
+		public static extern Type Perpendicular { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AlphaMode
@@ -255,14 +232,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Overlay { get; } = null!;
-		public static Type Transparency { get; } = null!;
+		public static extern Type Overlay { get; }
+		public static extern Type Transparency { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsCustomFieldKeys
@@ -271,15 +245,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type CustomField01 { get; } = null!;
-		public static Type CustomField02 { get; } = null!;
-		public static Type CustomField03 { get; } = null!;
+		public static extern Type CustomField01 { get; }
+		public static extern Type CustomField02 { get; }
+		public static extern Type CustomField03 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsEconomyAction
@@ -288,15 +259,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Acquire { get; } = null!;
-		public static Type Spend { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Acquire { get; }
+		public static extern Type Spend { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsEconomyFlowType
@@ -305,14 +273,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Sink { get; } = null!;
-		public static Type Source { get; } = null!;
+		public static extern Type Sink { get; }
+		public static extern Type Source { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsEconomyTransactionType
@@ -321,18 +286,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type IAP { get; } = null!;
-		public static Type Shop { get; } = null!;
-		public static Type Gameplay { get; } = null!;
-		public static Type ContextualPurchase { get; } = null!;
-		public static Type TimedReward { get; } = null!;
-		public static Type Onboarding { get; } = null!;
+		public static extern Type IAP { get; }
+		public static extern Type Shop { get; }
+		public static extern Type Gameplay { get; }
+		public static extern Type ContextualPurchase { get; }
+		public static extern Type TimedReward { get; }
+		public static extern Type Onboarding { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsLogLevel
@@ -341,18 +303,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Trace { get; } = null!;
-		public static Type Debug { get; } = null!;
-		public static Type Information { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Error { get; } = null!;
-		public static Type Fatal { get; } = null!;
+		public static extern Type Trace { get; }
+		public static extern Type Debug { get; }
+		public static extern Type Information { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Error { get; }
+		public static extern Type Fatal { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsProgressionStatus
@@ -361,17 +320,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Begin { get; } = null!;
-		public static Type Complete { get; } = null!;
-		public static Type Abandon { get; } = null!;
-		public static Type Fail { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Begin { get; }
+		public static extern Type Complete { get; }
+		public static extern Type Abandon { get; }
+		public static extern Type Fail { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnalyticsProgressionType
@@ -380,16 +336,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Custom { get; } = null!;
-		public static Type Start { get; } = null!;
-		public static Type Fail { get; } = null!;
-		public static Type Complete { get; } = null!;
+		public static extern Type Custom { get; }
+		public static extern Type Start { get; }
+		public static extern Type Fail { get; }
+		public static extern Type Complete { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnimationClipFromVideoStatus
@@ -398,24 +351,21 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Initializing { get; } = null!;
-		public static Type Pending { get; } = null!;
-		public static Type Processing { get; } = null!;
-		public static Type ErrorGeneric { get; } = null!;
-		public static Type Success { get; } = null!;
-		public static Type ErrorVideoTooLong { get; } = null!;
-		public static Type ErrorNoPersonDetected { get; } = null!;
-		public static Type ErrorVideoUnstable { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type Cancelled { get; } = null!;
-		public static Type ErrorMultiplePeople { get; } = null!;
-		public static Type ErrorUploadingVideo { get; } = null!;
+		public static extern Type Initializing { get; }
+		public static extern Type Pending { get; }
+		public static extern Type Processing { get; }
+		public static extern Type ErrorGeneric { get; }
+		public static extern Type Success { get; }
+		public static extern Type ErrorVideoTooLong { get; }
+		public static extern Type ErrorNoPersonDetected { get; }
+		public static extern Type ErrorVideoUnstable { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type Cancelled { get; }
+		public static extern Type ErrorMultiplePeople { get; }
+		public static extern Type ErrorUploadingVideo { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnimationPriority
@@ -424,19 +374,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Core { get; } = null!;
-		public static Type Idle { get; } = null!;
-		public static Type Movement { get; } = null!;
-		public static Type Action { get; } = null!;
-		public static Type Action2 { get; } = null!;
-		public static Type Action3 { get; } = null!;
-		public static Type Action4 { get; } = null!;
+		public static extern Type Core { get; }
+		public static extern Type Idle { get; }
+		public static extern Type Movement { get; }
+		public static extern Type Action { get; }
+		public static extern Type Action2 { get; }
+		public static extern Type Action3 { get; }
+		public static extern Type Action4 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AnimatorRetargetingMode
@@ -445,15 +392,56 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class AnnotationEditingMode
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type None { get; }
+		public static extern Type PlacingNew { get; }
+		public static extern Type WritingNew { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class AnnotationRequestResult
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type Success { get; }
+		public static extern Type ErrorInternalFailure { get; }
+		public static extern Type ErrorNotFound { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class AnnotationRequestType
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type Unknown { get; }
+		public static extern Type Create { get; }
+		public static extern Type Resolve { get; }
+		public static extern Type Delete { get; }
+		public static extern Type Edit { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AppLifecycleManagerState
@@ -462,16 +450,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Detached { get; } = null!;
-		public static Type Active { get; } = null!;
-		public static Type Inactive { get; } = null!;
-		public static Type Hidden { get; } = null!;
+		public static extern Type Detached { get; }
+		public static extern Type Active { get; }
+		public static extern Type Inactive { get; }
+		public static extern Type Hidden { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AppShellActionType
@@ -480,23 +465,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type OpenApp { get; } = null!;
-		public static Type TapChatTab { get; } = null!;
-		public static Type TapConversationEntry { get; } = null!;
-		public static Type TapAvatarTab { get; } = null!;
-		public static Type ReadConversation { get; } = null!;
-		public static Type TapGamePageTab { get; } = null!;
-		public static Type TapHomePageTab { get; } = null!;
-		public static Type GamePageLoaded { get; } = null!;
-		public static Type HomePageLoaded { get; } = null!;
-		public static Type AvatarEditorPageLoaded { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type OpenApp { get; }
+		public static extern Type TapChatTab { get; }
+		public static extern Type TapConversationEntry { get; }
+		public static extern Type TapAvatarTab { get; }
+		public static extern Type ReadConversation { get; }
+		public static extern Type TapGamePageTab { get; }
+		public static extern Type TapHomePageTab { get; }
+		public static extern Type GamePageLoaded { get; }
+		public static extern Type HomePageLoaded { get; }
+		public static extern Type AvatarEditorPageLoaded { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AppShellFeature
@@ -505,19 +487,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Chat { get; } = null!;
-		public static Type AvatarEditor { get; } = null!;
-		public static Type GamePage { get; } = null!;
-		public static Type HomePage { get; } = null!;
-		public static Type More { get; } = null!;
-		public static Type Landing { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Chat { get; }
+		public static extern Type AvatarEditor { get; }
+		public static extern Type GamePage { get; }
+		public static extern Type HomePage { get; }
+		public static extern Type More { get; }
+		public static extern Type Landing { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AppUpdateStatus
@@ -526,17 +505,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type NotSupported { get; } = null!;
-		public static Type Failed { get; } = null!;
-		public static Type NotAvailable { get; } = null!;
-		public static Type Available { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type NotSupported { get; }
+		public static extern Type Failed { get; }
+		public static extern Type NotAvailable { get; }
+		public static extern Type Available { get; }
+		public static extern Type AvailableBoundChannel { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ApplyStrokeMode
@@ -545,14 +522,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Contextual { get; } = null!;
-		public static Type Border { get; } = null!;
+		public static extern Type Contextual { get; }
+		public static extern Type Border { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AspectType
@@ -561,14 +535,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FitWithinMaxSize { get; } = null!;
-		public static Type ScaleWithParentSize { get; } = null!;
+		public static extern Type FitWithinMaxSize { get; }
+		public static extern Type ScaleWithParentSize { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AssetCreatorType
@@ -577,14 +548,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type User { get; } = null!;
-		public static Type Group { get; } = null!;
+		public static extern Type User { get; }
+		public static extern Type Group { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AssetFetchStatus
@@ -593,17 +561,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type Failure { get; } = null!;
-		public static Type None { get; } = null!;
-		public static Type Loading { get; } = null!;
-		public static Type TimedOut { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type Failure { get; }
+		public static extern Type None { get; }
+		public static extern Type Loading { get; }
+		public static extern Type TimedOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AssetType
@@ -612,71 +577,68 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Image { get; } = null!;
-		public static Type TShirt { get; } = null!;
-		public static Type Audio { get; } = null!;
-		public static Type Mesh { get; } = null!;
-		public static Type Lua { get; } = null!;
-		public static Type Hat { get; } = null!;
-		public static Type Place { get; } = null!;
-		public static Type Model { get; } = null!;
-		public static Type Shirt { get; } = null!;
-		public static Type Pants { get; } = null!;
-		public static Type Decal { get; } = null!;
-		public static Type Head { get; } = null!;
-		public static Type Face { get; } = null!;
-		public static Type Gear { get; } = null!;
-		public static Type Badge { get; } = null!;
-		public static Type Animation { get; } = null!;
-		public static Type Torso { get; } = null!;
-		public static Type RightArm { get; } = null!;
-		public static Type LeftArm { get; } = null!;
-		public static Type LeftLeg { get; } = null!;
-		public static Type RightLeg { get; } = null!;
-		public static Type Package { get; } = null!;
-		public static Type GamePass { get; } = null!;
-		public static Type Plugin { get; } = null!;
-		public static Type MeshPart { get; } = null!;
-		public static Type HairAccessory { get; } = null!;
-		public static Type FaceAccessory { get; } = null!;
-		public static Type NeckAccessory { get; } = null!;
-		public static Type ShoulderAccessory { get; } = null!;
-		public static Type FrontAccessory { get; } = null!;
-		public static Type BackAccessory { get; } = null!;
-		public static Type WaistAccessory { get; } = null!;
-		public static Type ClimbAnimation { get; } = null!;
-		public static Type DeathAnimation { get; } = null!;
-		public static Type FallAnimation { get; } = null!;
-		public static Type IdleAnimation { get; } = null!;
-		public static Type JumpAnimation { get; } = null!;
-		public static Type RunAnimation { get; } = null!;
-		public static Type SwimAnimation { get; } = null!;
-		public static Type WalkAnimation { get; } = null!;
-		public static Type PoseAnimation { get; } = null!;
-		public static Type EarAccessory { get; } = null!;
-		public static Type EyeAccessory { get; } = null!;
-		public static Type EmoteAnimation { get; } = null!;
-		public static Type Video { get; } = null!;
-		public static Type TShirtAccessory { get; } = null!;
-		public static Type ShirtAccessory { get; } = null!;
-		public static Type PantsAccessory { get; } = null!;
-		public static Type JacketAccessory { get; } = null!;
-		public static Type SweaterAccessory { get; } = null!;
-		public static Type ShortsAccessory { get; } = null!;
-		public static Type LeftShoeAccessory { get; } = null!;
-		public static Type RightShoeAccessory { get; } = null!;
-		public static Type DressSkirtAccessory { get; } = null!;
-		public static Type FontFamily { get; } = null!;
-		public static Type EyebrowAccessory { get; } = null!;
-		public static Type EyelashAccessory { get; } = null!;
-		public static Type MoodAnimation { get; } = null!;
-		public static Type DynamicHead { get; } = null!;
+		public static extern Type Image { get; }
+		public static extern Type TShirt { get; }
+		public static extern Type Audio { get; }
+		public static extern Type Mesh { get; }
+		public static extern Type Lua { get; }
+		public static extern Type Hat { get; }
+		public static extern Type Place { get; }
+		public static extern Type Model { get; }
+		public static extern Type Shirt { get; }
+		public static extern Type Pants { get; }
+		public static extern Type Decal { get; }
+		public static extern Type Head { get; }
+		public static extern Type Face { get; }
+		public static extern Type Gear { get; }
+		public static extern Type Badge { get; }
+		public static extern Type Animation { get; }
+		public static extern Type Torso { get; }
+		public static extern Type RightArm { get; }
+		public static extern Type LeftArm { get; }
+		public static extern Type LeftLeg { get; }
+		public static extern Type RightLeg { get; }
+		public static extern Type Package { get; }
+		public static extern Type GamePass { get; }
+		public static extern Type Plugin { get; }
+		public static extern Type MeshPart { get; }
+		public static extern Type HairAccessory { get; }
+		public static extern Type FaceAccessory { get; }
+		public static extern Type NeckAccessory { get; }
+		public static extern Type ShoulderAccessory { get; }
+		public static extern Type FrontAccessory { get; }
+		public static extern Type BackAccessory { get; }
+		public static extern Type WaistAccessory { get; }
+		public static extern Type ClimbAnimation { get; }
+		public static extern Type DeathAnimation { get; }
+		public static extern Type FallAnimation { get; }
+		public static extern Type IdleAnimation { get; }
+		public static extern Type JumpAnimation { get; }
+		public static extern Type RunAnimation { get; }
+		public static extern Type SwimAnimation { get; }
+		public static extern Type WalkAnimation { get; }
+		public static extern Type PoseAnimation { get; }
+		public static extern Type EarAccessory { get; }
+		public static extern Type EyeAccessory { get; }
+		public static extern Type EmoteAnimation { get; }
+		public static extern Type Video { get; }
+		public static extern Type TShirtAccessory { get; }
+		public static extern Type ShirtAccessory { get; }
+		public static extern Type PantsAccessory { get; }
+		public static extern Type JacketAccessory { get; }
+		public static extern Type SweaterAccessory { get; }
+		public static extern Type ShortsAccessory { get; }
+		public static extern Type LeftShoeAccessory { get; }
+		public static extern Type RightShoeAccessory { get; }
+		public static extern Type DressSkirtAccessory { get; }
+		public static extern Type FontFamily { get; }
+		public static extern Type EyebrowAccessory { get; }
+		public static extern Type EyelashAccessory { get; }
+		public static extern Type MoodAnimation { get; }
+		public static extern Type DynamicHead { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AssetTypeVerification
@@ -685,15 +647,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type ClientOnly { get; } = null!;
-		public static Type Always { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type ClientOnly { get; }
+		public static extern Type Always { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AudioApiRollout
@@ -702,15 +661,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type Automatic { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type Automatic { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AudioFilterType
@@ -719,23 +675,33 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Peak { get; } = null!;
-		public static Type LowShelf { get; } = null!;
-		public static Type HighShelf { get; } = null!;
-		public static Type Lowpass12dB { get; } = null!;
-		public static Type Lowpass24dB { get; } = null!;
-		public static Type Lowpass48dB { get; } = null!;
-		public static Type Highpass12dB { get; } = null!;
-		public static Type Highpass24dB { get; } = null!;
-		public static Type Highpass48dB { get; } = null!;
-		public static Type Bandpass { get; } = null!;
-		public static Type Notch { get; } = null!;
+		public static extern Type Peak { get; }
+		public static extern Type LowShelf { get; }
+		public static extern Type HighShelf { get; }
+		public static extern Type Lowpass12dB { get; }
+		public static extern Type Lowpass24dB { get; }
+		public static extern Type Lowpass48dB { get; }
+		public static extern Type Highpass12dB { get; }
+		public static extern Type Highpass24dB { get; }
+		public static extern Type Highpass48dB { get; }
+		public static extern Type Bandpass { get; }
+		public static extern Type Notch { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class AudioSimulationFidelity
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type None { get; }
+		public static extern Type Automatic { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AudioSubType
@@ -744,14 +710,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Music { get; } = null!;
-		public static Type SoundEffect { get; } = null!;
+		public static extern Type Music { get; }
+		public static extern Type SoundEffect { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AudioWindowSize
@@ -760,15 +723,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Small { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type Large { get; } = null!;
+		public static extern Type Small { get; }
+		public static extern Type Medium { get; }
+		public static extern Type Large { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AutoIndentRule
@@ -777,15 +737,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Off { get; } = null!;
-		public static Type Absolute { get; } = null!;
-		public static Type Relative { get; } = null!;
+		public static extern Type Off { get; }
+		public static extern Type Absolute { get; }
+		public static extern Type Relative { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AutomaticSize
@@ -794,16 +751,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type X { get; } = null!;
-		public static Type Y { get; } = null!;
-		public static Type XY { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type X { get; }
+		public static extern Type Y { get; }
+		public static extern Type XY { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarAssetType
@@ -812,52 +766,49 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type TShirt { get; } = null!;
-		public static Type Hat { get; } = null!;
-		public static Type Shirt { get; } = null!;
-		public static Type Pants { get; } = null!;
-		public static Type Head { get; } = null!;
-		public static Type Face { get; } = null!;
-		public static Type Gear { get; } = null!;
-		public static Type Torso { get; } = null!;
-		public static Type RightArm { get; } = null!;
-		public static Type LeftArm { get; } = null!;
-		public static Type LeftLeg { get; } = null!;
-		public static Type RightLeg { get; } = null!;
-		public static Type HairAccessory { get; } = null!;
-		public static Type FaceAccessory { get; } = null!;
-		public static Type NeckAccessory { get; } = null!;
-		public static Type ShoulderAccessory { get; } = null!;
-		public static Type FrontAccessory { get; } = null!;
-		public static Type BackAccessory { get; } = null!;
-		public static Type WaistAccessory { get; } = null!;
-		public static Type ClimbAnimation { get; } = null!;
-		public static Type FallAnimation { get; } = null!;
-		public static Type IdleAnimation { get; } = null!;
-		public static Type JumpAnimation { get; } = null!;
-		public static Type RunAnimation { get; } = null!;
-		public static Type SwimAnimation { get; } = null!;
-		public static Type WalkAnimation { get; } = null!;
-		public static Type MoodAnimation { get; } = null!;
-		public static Type EmoteAnimation { get; } = null!;
-		public static Type TShirtAccessory { get; } = null!;
-		public static Type ShirtAccessory { get; } = null!;
-		public static Type PantsAccessory { get; } = null!;
-		public static Type JacketAccessory { get; } = null!;
-		public static Type SweaterAccessory { get; } = null!;
-		public static Type ShortsAccessory { get; } = null!;
-		public static Type LeftShoeAccessory { get; } = null!;
-		public static Type RightShoeAccessory { get; } = null!;
-		public static Type DressSkirtAccessory { get; } = null!;
-		public static Type EyebrowAccessory { get; } = null!;
-		public static Type EyelashAccessory { get; } = null!;
-		public static Type DynamicHead { get; } = null!;
+		public static extern Type TShirt { get; }
+		public static extern Type Hat { get; }
+		public static extern Type Shirt { get; }
+		public static extern Type Pants { get; }
+		public static extern Type Head { get; }
+		public static extern Type Face { get; }
+		public static extern Type Gear { get; }
+		public static extern Type Torso { get; }
+		public static extern Type RightArm { get; }
+		public static extern Type LeftArm { get; }
+		public static extern Type LeftLeg { get; }
+		public static extern Type RightLeg { get; }
+		public static extern Type HairAccessory { get; }
+		public static extern Type FaceAccessory { get; }
+		public static extern Type NeckAccessory { get; }
+		public static extern Type ShoulderAccessory { get; }
+		public static extern Type FrontAccessory { get; }
+		public static extern Type BackAccessory { get; }
+		public static extern Type WaistAccessory { get; }
+		public static extern Type ClimbAnimation { get; }
+		public static extern Type FallAnimation { get; }
+		public static extern Type IdleAnimation { get; }
+		public static extern Type JumpAnimation { get; }
+		public static extern Type RunAnimation { get; }
+		public static extern Type SwimAnimation { get; }
+		public static extern Type WalkAnimation { get; }
+		public static extern Type MoodAnimation { get; }
+		public static extern Type EmoteAnimation { get; }
+		public static extern Type TShirtAccessory { get; }
+		public static extern Type ShirtAccessory { get; }
+		public static extern Type PantsAccessory { get; }
+		public static extern Type JacketAccessory { get; }
+		public static extern Type SweaterAccessory { get; }
+		public static extern Type ShortsAccessory { get; }
+		public static extern Type LeftShoeAccessory { get; }
+		public static extern Type RightShoeAccessory { get; }
+		public static extern Type DressSkirtAccessory { get; }
+		public static extern Type EyebrowAccessory { get; }
+		public static extern Type EyelashAccessory { get; }
+		public static extern Type DynamicHead { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarChatServiceFeature
@@ -866,23 +817,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type UniverseAudio { get; } = null!;
-		public static Type UniverseVideo { get; } = null!;
-		public static Type PlaceAudio { get; } = null!;
-		public static Type PlaceVideo { get; } = null!;
-		public static Type UserAudioEligible { get; } = null!;
-		public static Type UserAudio { get; } = null!;
-		public static Type UserVideoEligible { get; } = null!;
-		public static Type UserVideo { get; } = null!;
-		public static Type UserBanned { get; } = null!;
-		public static Type UserVerifiedForVoice { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type UniverseAudio { get; }
+		public static extern Type UniverseVideo { get; }
+		public static extern Type PlaceAudio { get; }
+		public static extern Type PlaceVideo { get; }
+		public static extern Type UserAudioEligible { get; }
+		public static extern Type UserAudio { get; }
+		public static extern Type UserVideoEligible { get; }
+		public static extern Type UserVideo { get; }
+		public static extern Type UserBanned { get; }
+		public static extern Type UserVerifiedForVoice { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarContextMenuOption
@@ -891,16 +839,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Friend { get; } = null!;
-		public static Type Chat { get; } = null!;
-		public static Type Emote { get; } = null!;
-		public static Type InspectMenu { get; } = null!;
+		public static extern Type Friend { get; }
+		public static extern Type Chat { get; }
+		public static extern Type Emote { get; }
+		public static extern Type InspectMenu { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarGenerationError
@@ -909,19 +854,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Unknown { get; } = null!;
-		public static Type DownloadFailed { get; } = null!;
-		public static Type Canceled { get; } = null!;
-		public static Type Offensive { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type JobNotFound { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Unknown { get; }
+		public static extern Type DownloadFailed { get; }
+		public static extern Type Canceled { get; }
+		public static extern Type Offensive { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type JobNotFound { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarItemType
@@ -930,31 +872,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Asset { get; } = null!;
-		public static Type Bundle { get; } = null!;
+		public static extern Type Asset { get; }
+		public static extern Type Bundle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
-	public static class AvatarJointUpgrade
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type Default { get; } = null!;
-		public static Type Enabled { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarPromptResult
@@ -963,15 +885,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type PermissionDenied { get; } = null!;
-		public static Type Failed { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type PermissionDenied { get; }
+		public static extern Type Failed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarThumbnailCustomizationType
@@ -980,14 +899,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Closeup { get; } = null!;
-		public static Type FullBody { get; } = null!;
+		public static extern Type Closeup { get; }
+		public static extern Type FullBody { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class AvatarUnificationMode
@@ -996,15 +912,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Axis
@@ -1013,15 +926,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type X { get; } = null!;
-		public static Type Y { get; } = null!;
-		public static Type Z { get; } = null!;
+		public static extern Type X { get; }
+		public static extern Type Y { get; }
+		public static extern Type Z { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BinType
@@ -1030,17 +940,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Script { get; } = null!;
-		public static Type GameTool { get; } = null!;
-		public static Type Grab { get; } = null!;
-		public static Type Clone { get; } = null!;
-		public static Type Hammer { get; } = null!;
+		public static extern Type Script { get; }
+		public static extern Type GameTool { get; }
+		public static extern Type Grab { get; }
+		public static extern Type Clone { get; }
+		public static extern Type Hammer { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BodyPart
@@ -1049,18 +956,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Head { get; } = null!;
-		public static Type Torso { get; } = null!;
-		public static Type LeftArm { get; } = null!;
-		public static Type RightArm { get; } = null!;
-		public static Type LeftLeg { get; } = null!;
-		public static Type RightLeg { get; } = null!;
+		public static extern Type Head { get; }
+		public static extern Type Torso { get; }
+		public static extern Type LeftArm { get; }
+		public static extern Type RightArm { get; }
+		public static extern Type LeftLeg { get; }
+		public static extern Type RightLeg { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BodyPartR15
@@ -1069,29 +973,26 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Head { get; } = null!;
-		public static Type UpperTorso { get; } = null!;
-		public static Type LowerTorso { get; } = null!;
-		public static Type LeftFoot { get; } = null!;
-		public static Type LeftLowerLeg { get; } = null!;
-		public static Type LeftUpperLeg { get; } = null!;
-		public static Type RightFoot { get; } = null!;
-		public static Type RightLowerLeg { get; } = null!;
-		public static Type RightUpperLeg { get; } = null!;
-		public static Type LeftHand { get; } = null!;
-		public static Type LeftLowerArm { get; } = null!;
-		public static Type LeftUpperArm { get; } = null!;
-		public static Type RightHand { get; } = null!;
-		public static Type RightLowerArm { get; } = null!;
-		public static Type RightUpperArm { get; } = null!;
-		public static Type RootPart { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type Head { get; }
+		public static extern Type UpperTorso { get; }
+		public static extern Type LowerTorso { get; }
+		public static extern Type LeftFoot { get; }
+		public static extern Type LeftLowerLeg { get; }
+		public static extern Type LeftUpperLeg { get; }
+		public static extern Type RightFoot { get; }
+		public static extern Type RightLowerLeg { get; }
+		public static extern Type RightUpperLeg { get; }
+		public static extern Type LeftHand { get; }
+		public static extern Type LeftLowerArm { get; }
+		public static extern Type LeftUpperArm { get; }
+		public static extern Type RightHand { get; }
+		public static extern Type RightLowerArm { get; }
+		public static extern Type RightUpperArm { get; }
+		public static extern Type RootPart { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BorderMode
@@ -1100,15 +1001,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Outline { get; } = null!;
-		public static Type Middle { get; } = null!;
-		public static Type Inset { get; } = null!;
+		public static extern Type Outline { get; }
+		public static extern Type Middle { get; }
+		public static extern Type Inset { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BreakReason
@@ -1117,16 +1015,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Other { get; } = null!;
-		public static Type Error { get; } = null!;
-		public static Type SpecialBreakpoint { get; } = null!;
-		public static Type UserBreakpoint { get; } = null!;
+		public static extern Type Other { get; }
+		public static extern Type Error { get; }
+		public static extern Type SpecialBreakpoint { get; }
+		public static extern Type UserBreakpoint { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BreakpointRemoveReason
@@ -1135,15 +1030,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Requested { get; } = null!;
-		public static Type ScriptChanged { get; } = null!;
-		public static Type ScriptRemoved { get; } = null!;
+		public static extern Type Requested { get; }
+		public static extern Type ScriptChanged { get; }
+		public static extern Type ScriptRemoved { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BulkMoveMode
@@ -1152,14 +1044,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FireAllEvents { get; } = null!;
-		public static Type FireCFrameChanged { get; } = null!;
+		public static extern Type FireAllEvents { get; }
+		public static extern Type FireCFrameChanged { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class BundleType
@@ -1168,17 +1057,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type BodyParts { get; } = null!;
-		public static Type Animations { get; } = null!;
-		public static Type Shoes { get; } = null!;
-		public static Type DynamicHead { get; } = null!;
-		public static Type DynamicHeadAvatar { get; } = null!;
+		public static extern Type BodyParts { get; }
+		public static extern Type Animations { get; }
+		public static extern Type Shoes { get; }
+		public static extern Type DynamicHead { get; }
+		public static extern Type DynamicHeadAvatar { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Button
@@ -1187,14 +1073,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Jump { get; } = null!;
-		public static Type Dismount { get; } = null!;
+		public static extern Type Jump { get; }
+		public static extern Type Dismount { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ButtonStyle
@@ -1203,35 +1086,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Custom { get; } = null!;
-		public static Type RobloxButtonDefault { get; } = null!;
-		public static Type RobloxButton { get; } = null!;
-		public static Type RobloxRoundButton { get; } = null!;
-		public static Type RobloxRoundDefaultButton { get; } = null!;
-		public static Type RobloxRoundDropdownButton { get; } = null!;
+		public static extern Type Custom { get; }
+		public static extern Type RobloxButtonDefault { get; }
+		public static extern Type RobloxButton { get; }
+		public static extern Type RobloxRoundButton { get; }
+		public static extern Type RobloxRoundDefaultButton { get; }
+		public static extern Type RobloxRoundDropdownButton { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
-	public static class CSGAsyncDynamicCollision
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CageType
@@ -1240,14 +1103,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Inner { get; } = null!;
-		public static Type Outer { get; } = null!;
+		public static extern Type Inner { get; }
+		public static extern Type Outer { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CameraMode
@@ -1256,14 +1116,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Classic { get; } = null!;
-		public static Type LockFirstPerson { get; } = null!;
+		public static extern Type Classic { get; }
+		public static extern Type LockFirstPerson { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CameraPanMode
@@ -1272,14 +1129,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Classic { get; } = null!;
-		public static Type EdgeBump { get; } = null!;
+		public static extern Type Classic { get; }
+		public static extern Type EdgeBump { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CameraSpeedAdjustBinding
@@ -1288,15 +1142,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type RmbScroll { get; } = null!;
-		public static Type AltScroll { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type RmbScroll { get; }
+		public static extern Type AltScroll { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CameraType
@@ -1305,20 +1156,17 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Fixed { get; } = null!;
-		public static Type Attach { get; } = null!;
-		public static Type Watch { get; } = null!;
-		public static Type Track { get; } = null!;
-		public static Type Follow { get; } = null!;
-		public static Type Custom { get; } = null!;
-		public static Type Scriptable { get; } = null!;
-		public static Type Orbital { get; } = null!;
+		public static extern Type Fixed { get; }
+		public static extern Type Attach { get; }
+		public static extern Type Watch { get; }
+		public static extern Type Track { get; }
+		public static extern Type Follow { get; }
+		public static extern Type Custom { get; }
+		public static extern Type Scriptable { get; }
+		public static extern Type Orbital { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CatalogCategoryFilter
@@ -1327,18 +1175,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Featured { get; } = null!;
-		public static Type Collectibles { get; } = null!;
-		public static Type CommunityCreations { get; } = null!;
-		public static Type Premium { get; } = null!;
-		public static Type Recommended { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Featured { get; }
+		public static extern Type Collectibles { get; }
+		public static extern Type CommunityCreations { get; }
+		public static extern Type Premium { get; }
+		public static extern Type Recommended { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CatalogSortAggregation
@@ -1347,18 +1192,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Past12Hours { get; } = null!;
-		public static Type PastDay { get; } = null!;
-		public static Type Past3Days { get; } = null!;
-		public static Type PastWeek { get; } = null!;
-		public static Type PastMonth { get; } = null!;
-		public static Type AllTime { get; } = null!;
+		public static extern Type Past12Hours { get; }
+		public static extern Type PastDay { get; }
+		public static extern Type Past3Days { get; }
+		public static extern Type PastWeek { get; }
+		public static extern Type PastMonth { get; }
+		public static extern Type AllTime { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CatalogSortType
@@ -1367,18 +1209,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Relevance { get; } = null!;
-		public static Type PriceHighToLow { get; } = null!;
-		public static Type PriceLowToHigh { get; } = null!;
-		public static Type MostFavorited { get; } = null!;
-		public static Type RecentlyCreated { get; } = null!;
-		public static Type Bestselling { get; } = null!;
+		public static extern Type Relevance { get; }
+		public static extern Type PriceHighToLow { get; }
+		public static extern Type PriceLowToHigh { get; }
+		public static extern Type MostFavorited { get; }
+		public static extern Type RecentlyCreated { get; }
+		public static extern Type Bestselling { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CellBlock
@@ -1387,17 +1226,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Solid { get; } = null!;
-		public static Type VerticalWedge { get; } = null!;
-		public static Type CornerWedge { get; } = null!;
-		public static Type InverseCornerWedge { get; } = null!;
-		public static Type HorizontalWedge { get; } = null!;
+		public static extern Type Solid { get; }
+		public static extern Type VerticalWedge { get; }
+		public static extern Type CornerWedge { get; }
+		public static extern Type InverseCornerWedge { get; }
+		public static extern Type HorizontalWedge { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CellMaterial
@@ -1406,30 +1242,27 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Empty { get; } = null!;
-		public static Type Grass { get; } = null!;
-		public static Type Sand { get; } = null!;
-		public static Type Brick { get; } = null!;
-		public static Type Granite { get; } = null!;
-		public static Type Asphalt { get; } = null!;
-		public static Type Iron { get; } = null!;
-		public static Type Aluminum { get; } = null!;
-		public static Type Gold { get; } = null!;
-		public static Type WoodPlank { get; } = null!;
-		public static Type WoodLog { get; } = null!;
-		public static Type Gravel { get; } = null!;
-		public static Type CinderBlock { get; } = null!;
-		public static Type MossyStone { get; } = null!;
-		public static Type Cement { get; } = null!;
-		public static Type RedPlastic { get; } = null!;
-		public static Type BluePlastic { get; } = null!;
-		public static Type Water { get; } = null!;
+		public static extern Type Empty { get; }
+		public static extern Type Grass { get; }
+		public static extern Type Sand { get; }
+		public static extern Type Brick { get; }
+		public static extern Type Granite { get; }
+		public static extern Type Asphalt { get; }
+		public static extern Type Iron { get; }
+		public static extern Type Aluminum { get; }
+		public static extern Type Gold { get; }
+		public static extern Type WoodPlank { get; }
+		public static extern Type WoodLog { get; }
+		public static extern Type Gravel { get; }
+		public static extern Type CinderBlock { get; }
+		public static extern Type MossyStone { get; }
+		public static extern Type Cement { get; }
+		public static extern Type RedPlastic { get; }
+		public static extern Type BluePlastic { get; }
+		public static extern Type Water { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CellOrientation
@@ -1438,16 +1271,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NegZ { get; } = null!;
-		public static Type X { get; } = null!;
-		public static Type Z { get; } = null!;
-		public static Type NegX { get; } = null!;
+		public static extern Type NegZ { get; }
+		public static extern Type X { get; }
+		public static extern Type Z { get; }
+		public static extern Type NegX { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CenterDialogType
@@ -1456,16 +1286,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UnsolicitedDialog { get; } = null!;
-		public static Type PlayerInitiatedDialog { get; } = null!;
-		public static Type ModalDialog { get; } = null!;
-		public static Type QuitDialog { get; } = null!;
+		public static extern Type UnsolicitedDialog { get; }
+		public static extern Type PlayerInitiatedDialog { get; }
+		public static extern Type ModalDialog { get; }
+		public static extern Type QuitDialog { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CharacterControlMode
@@ -1474,16 +1301,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Legacy { get; } = null!;
-		public static Type NoCharacterController { get; } = null!;
-		public static Type LuaCharacterController { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Legacy { get; }
+		public static extern Type NoCharacterController { get; }
+		public static extern Type LuaCharacterController { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatCallbackType
@@ -1492,16 +1316,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OnCreatingChatWindow { get; } = null!;
-		public static Type OnClientSendingMessage { get; } = null!;
-		public static Type OnClientFormattingMessage { get; } = null!;
-		public static Type OnServerReceivingMessage { get; } = null!;
+		public static extern Type OnCreatingChatWindow { get; }
+		public static extern Type OnClientSendingMessage { get; }
+		public static extern Type OnClientFormattingMessage { get; }
+		public static extern Type OnServerReceivingMessage { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatColor
@@ -1510,16 +1331,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Blue { get; } = null!;
-		public static Type Green { get; } = null!;
-		public static Type Red { get; } = null!;
-		public static Type White { get; } = null!;
+		public static extern Type Blue { get; }
+		public static extern Type Green { get; }
+		public static extern Type Red { get; }
+		public static extern Type White { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatMode
@@ -1528,14 +1346,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Menu { get; } = null!;
-		public static Type TextAndMenu { get; } = null!;
+		public static extern Type Menu { get; }
+		public static extern Type TextAndMenu { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatPrivacyMode
@@ -1544,15 +1359,26 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AllUsers { get; } = null!;
-		public static Type NoOne { get; } = null!;
-		public static Type Friends { get; } = null!;
+		public static extern Type AllUsers { get; }
+		public static extern Type NoOne { get; }
+		public static extern Type Friends { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class ChatRestrictionStatus
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Unknown { get; }
+		public static extern Type NotRestricted { get; }
+		public static extern Type Restricted { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatStyle
@@ -1561,15 +1387,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Classic { get; } = null!;
-		public static Type Bubble { get; } = null!;
-		public static Type ClassicAndBubble { get; } = null!;
+		public static extern Type Classic { get; }
+		public static extern Type Bubble { get; }
+		public static extern Type ClassicAndBubble { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ChatVersion
@@ -1578,14 +1401,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type LegacyChatService { get; } = null!;
-		public static Type TextChatService { get; } = null!;
+		public static extern Type LegacyChatService { get; }
+		public static extern Type TextChatService { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ClientAnimatorThrottlingMode
@@ -1594,15 +1414,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CloseReason
@@ -1611,18 +1428,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type RobloxMaintenance { get; } = null!;
-		public static Type DeveloperShutdown { get; } = null!;
-		public static Type DeveloperUpdate { get; } = null!;
-		public static Type ServerEmpty { get; } = null!;
-		public static Type OutOfMemory { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type RobloxMaintenance { get; }
+		public static extern Type DeveloperShutdown { get; }
+		public static extern Type DeveloperUpdate { get; }
+		public static extern Type ServerEmpty { get; }
+		public static extern Type OutOfMemory { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CollaboratorStatus
@@ -1631,16 +1445,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Editing3D { get; } = null!;
-		public static Type Scripting { get; } = null!;
-		public static Type PrivateScripting { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Editing3D { get; }
+		public static extern Type Scripting { get; }
+		public static extern Type PrivateScripting { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CollisionFidelity
@@ -1649,16 +1460,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Hull { get; } = null!;
-		public static Type Box { get; } = null!;
-		public static Type PreciseConvexDecomposition { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Hull { get; }
+		public static extern Type Box { get; }
+		public static extern Type PreciseConvexDecomposition { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CommandPermission
@@ -1667,14 +1475,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Plugin { get; } = null!;
-		public static Type LocalUser { get; } = null!;
+		public static extern Type Plugin { get; }
+		public static extern Type LocalUser { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CompileTarget
@@ -1683,16 +1488,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Client { get; } = null!;
-		public static Type CoreScript { get; } = null!;
-		public static Type Studio { get; } = null!;
-		public static Type CoreScriptRaw { get; } = null!;
+		public static extern Type Client { get; }
+		public static extern Type CoreScript { get; }
+		public static extern Type Studio { get; }
+		public static extern Type CoreScriptRaw { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CompletionItemKind
@@ -1701,37 +1503,34 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Text { get; } = null!;
-		public static Type Method { get; } = null!;
-		public static Type Function { get; } = null!;
-		public static Type Constructor { get; } = null!;
-		public static Type Field { get; } = null!;
-		public static Type Variable { get; } = null!;
-		public static Type Class { get; } = null!;
-		public static Type Interface { get; } = null!;
-		public static Type Module { get; } = null!;
-		public static Type Property { get; } = null!;
-		public static Type Unit { get; } = null!;
-		public static Type Value { get; } = null!;
-		public static Type Enum { get; } = null!;
-		public static Type Keyword { get; } = null!;
-		public static Type Snippet { get; } = null!;
-		public static Type Color { get; } = null!;
-		public static Type File { get; } = null!;
-		public static Type Reference { get; } = null!;
-		public static Type Folder { get; } = null!;
-		public static Type EnumMember { get; } = null!;
-		public static Type Constant { get; } = null!;
-		public static Type Struct { get; } = null!;
-		public static Type Event { get; } = null!;
-		public static Type Operator { get; } = null!;
-		public static Type TypeParameter { get; } = null!;
+		public static extern Type Text { get; }
+		public static extern Type Method { get; }
+		public static extern Type Function { get; }
+		public static extern Type Constructor { get; }
+		public static extern Type Field { get; }
+		public static extern Type Variable { get; }
+		public static extern Type Class { get; }
+		public static extern Type Interface { get; }
+		public static extern Type Module { get; }
+		public static extern Type Property { get; }
+		public static extern Type Unit { get; }
+		public static extern Type Value { get; }
+		public static extern Type Enum { get; }
+		public static extern Type Keyword { get; }
+		public static extern Type Snippet { get; }
+		public static extern Type Color { get; }
+		public static extern Type File { get; }
+		public static extern Type Reference { get; }
+		public static extern Type Folder { get; }
+		public static extern Type EnumMember { get; }
+		public static extern Type Constant { get; }
+		public static extern Type Struct { get; }
+		public static extern Type Event { get; }
+		public static extern Type Operator { get; }
+		public static extern Type TypeParameter { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CompletionItemTag
@@ -1740,23 +1539,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Deprecated { get; } = null!;
-		public static Type IncorrectIndexType { get; } = null!;
-		public static Type PluginPermissions { get; } = null!;
-		public static Type CommandLinePermissions { get; } = null!;
-		public static Type RobloxPermissions { get; } = null!;
-		public static Type AddParens { get; } = null!;
-		public static Type PutCursorInParens { get; } = null!;
-		public static Type TypeCorrect { get; } = null!;
-		public static Type ClientServerBoundaryViolation { get; } = null!;
-		public static Type Invalidated { get; } = null!;
-		public static Type PutCursorBeforeEnd { get; } = null!;
+		public static extern Type Deprecated { get; }
+		public static extern Type IncorrectIndexType { get; }
+		public static extern Type PluginPermissions { get; }
+		public static extern Type CommandLinePermissions { get; }
+		public static extern Type RobloxPermissions { get; }
+		public static extern Type AddParens { get; }
+		public static extern Type PutCursorInParens { get; }
+		public static extern Type TypeCorrect { get; }
+		public static extern Type ClientServerBoundaryViolation { get; }
+		public static extern Type Invalidated { get; }
+		public static extern Type PutCursorBeforeEnd { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CompletionTriggerKind
@@ -1765,15 +1561,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Invoked { get; } = null!;
-		public static Type TriggerCharacter { get; } = null!;
-		public static Type TriggerForIncompleteCompletions { get; } = null!;
+		public static extern Type Invoked { get; }
+		public static extern Type TriggerCharacter { get; }
+		public static extern Type TriggerForIncompleteCompletions { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ComputerCameraMovementMode
@@ -1782,17 +1575,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Classic { get; } = null!;
-		public static Type Follow { get; } = null!;
-		public static Type Orbital { get; } = null!;
-		public static Type CameraToggle { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Classic { get; }
+		public static extern Type Follow { get; }
+		public static extern Type Orbital { get; }
+		public static extern Type CameraToggle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ComputerMovementMode
@@ -1801,15 +1591,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type KeyboardMouse { get; } = null!;
-		public static Type ClickToMove { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type KeyboardMouse { get; }
+		public static extern Type ClickToMove { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ConnectionError
@@ -1818,83 +1605,81 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OK { get; } = null!;
-		public static Type Unknown { get; } = null!;
-		public static Type DisconnectErrors { get; } = null!;
-		public static Type DisconnectBadhash { get; } = null!;
-		public static Type DisconnectSecurityKeyMismatch { get; } = null!;
-		public static Type DisconnectProtocolMismatch { get; } = null!;
-		public static Type DisconnectReceivePacketError { get; } = null!;
-		public static Type DisconnectReceivePacketStreamError { get; } = null!;
-		public static Type DisconnectSendPacketError { get; } = null!;
-		public static Type DisconnectIllegalTeleport { get; } = null!;
-		public static Type DisconnectDuplicatePlayer { get; } = null!;
-		public static Type DisconnectDuplicateTicket { get; } = null!;
-		public static Type DisconnectTimeout { get; } = null!;
-		public static Type DisconnectLuaKick { get; } = null!;
-		public static Type DisconnectOnRemoteSysStats { get; } = null!;
-		public static Type DisconnectHashTimeout { get; } = null!;
-		public static Type DisconnectCloudEditKick { get; } = null!;
-		public static Type DisconnectPlayerless { get; } = null!;
-		public static Type DisconnectNewSecurityKeyMismatch { get; } = null!;
-		public static Type DisconnectEvicted { get; } = null!;
-		public static Type DisconnectDevMaintenance { get; } = null!;
-		public static Type DisconnectRobloxMaintenance { get; } = null!;
-		public static Type DisconnectRejoin { get; } = null!;
-		public static Type DisconnectConnectionLost { get; } = null!;
-		public static Type DisconnectIdle { get; } = null!;
-		public static Type DisconnectRaknetErrors { get; } = null!;
-		public static Type DisconnectWrongVersion { get; } = null!;
-		public static Type DisconnectBySecurityPolicy { get; } = null!;
-		public static Type DisconnectBlockedIP { get; } = null!;
-		public static Type DisconnectClientFailure { get; } = null!;
-		public static Type DisconnectClientRequest { get; } = null!;
-		public static Type DisconnectPrivateServerKickout { get; } = null!;
-		public static Type DisconnectModeratedGame { get; } = null!;
-		public static Type ServerShutdown { get; } = null!;
-		public static Type ReplicatorTimeout { get; } = null!;
-		public static Type PlayerRemoved { get; } = null!;
-		public static Type DisconnectOutOfMemoryKeepPlayingLeave { get; } = null!;
-		public static Type DisconnectRomarkEndOfTest { get; } = null!;
-		public static Type DisconnectCollaboratorPermissionRevoked { get; } = null!;
-		public static Type DisconnectCollaboratorUnderage { get; } = null!;
-		public static Type NetworkInternal { get; } = null!;
-		public static Type NetworkSend { get; } = null!;
-		public static Type NetworkTimeout { get; } = null!;
-		public static Type NetworkMisbehavior { get; } = null!;
-		public static Type NetworkSecurity { get; } = null!;
-		public static Type ReplacementReady { get; } = null!;
-		public static Type PlacelaunchErrors { get; } = null!;
-		public static Type PlacelaunchDisabled { get; } = null!;
-		public static Type PlacelaunchError { get; } = null!;
-		public static Type PlacelaunchGameEnded { get; } = null!;
-		public static Type PlacelaunchGameFull { get; } = null!;
-		public static Type PlacelaunchUserLeft { get; } = null!;
-		public static Type PlacelaunchRestricted { get; } = null!;
-		public static Type PlacelaunchUnauthorized { get; } = null!;
-		public static Type PlacelaunchFlooded { get; } = null!;
-		public static Type PlacelaunchHashExpired { get; } = null!;
-		public static Type PlacelaunchHashException { get; } = null!;
-		public static Type PlacelaunchPartyCannotFit { get; } = null!;
-		public static Type PlacelaunchHttpError { get; } = null!;
-		public static Type PlacelaunchUserPrivacyUnauthorized { get; } = null!;
-		public static Type PlacelaunchCreatorBan { get; } = null!;
-		public static Type PlacelaunchCustomMessage { get; } = null!;
-		public static Type PlacelaunchOtherError { get; } = null!;
-		public static Type TeleportErrors { get; } = null!;
-		public static Type TeleportFailure { get; } = null!;
-		public static Type TeleportGameNotFound { get; } = null!;
-		public static Type TeleportGameEnded { get; } = null!;
-		public static Type TeleportGameFull { get; } = null!;
-		public static Type TeleportUnauthorized { get; } = null!;
-		public static Type TeleportFlooded { get; } = null!;
-		public static Type TeleportIsTeleporting { get; } = null!;
+		public static extern Type OK { get; }
+		public static extern Type Unknown { get; }
+		public static extern Type DisconnectErrors { get; }
+		public static extern Type DisconnectBadhash { get; }
+		public static extern Type DisconnectSecurityKeyMismatch { get; }
+		public static extern Type DisconnectProtocolMismatch { get; }
+		public static extern Type DisconnectReceivePacketError { get; }
+		public static extern Type DisconnectReceivePacketStreamError { get; }
+		public static extern Type DisconnectSendPacketError { get; }
+		public static extern Type DisconnectIllegalTeleport { get; }
+		public static extern Type DisconnectDuplicatePlayer { get; }
+		public static extern Type DisconnectDuplicateTicket { get; }
+		public static extern Type DisconnectTimeout { get; }
+		public static extern Type DisconnectLuaKick { get; }
+		public static extern Type DisconnectOnRemoteSysStats { get; }
+		public static extern Type DisconnectHashTimeout { get; }
+		public static extern Type DisconnectCloudEditKick { get; }
+		public static extern Type DisconnectPlayerless { get; }
+		public static extern Type DisconnectNewSecurityKeyMismatch { get; }
+		public static extern Type DisconnectEvicted { get; }
+		public static extern Type DisconnectDevMaintenance { get; }
+		public static extern Type DisconnectRobloxMaintenance { get; }
+		public static extern Type DisconnectRejoin { get; }
+		public static extern Type DisconnectConnectionLost { get; }
+		public static extern Type DisconnectIdle { get; }
+		public static extern Type DisconnectRaknetErrors { get; }
+		public static extern Type DisconnectWrongVersion { get; }
+		public static extern Type DisconnectBySecurityPolicy { get; }
+		public static extern Type DisconnectBlockedIP { get; }
+		public static extern Type DisconnectClientFailure { get; }
+		public static extern Type DisconnectClientRequest { get; }
+		public static extern Type DisconnectPrivateServerKickout { get; }
+		public static extern Type DisconnectModeratedGame { get; }
+		public static extern Type ServerShutdown { get; }
+		public static extern Type ReplicatorTimeout { get; }
+		public static extern Type PlayerRemoved { get; }
+		public static extern Type DisconnectOutOfMemoryKeepPlayingLeave { get; }
+		public static extern Type DisconnectRomarkEndOfTest { get; }
+		public static extern Type DisconnectCollaboratorPermissionRevoked { get; }
+		public static extern Type DisconnectCollaboratorUnderage { get; }
+		public static extern Type NetworkInternal { get; }
+		public static extern Type NetworkSend { get; }
+		public static extern Type NetworkTimeout { get; }
+		public static extern Type NetworkMisbehavior { get; }
+		public static extern Type NetworkSecurity { get; }
+		public static extern Type ReplacementReady { get; }
+		public static extern Type ServerEmpty { get; }
+		public static extern Type PlacelaunchErrors { get; }
+		public static extern Type PlacelaunchDisabled { get; }
+		public static extern Type PlacelaunchError { get; }
+		public static extern Type PlacelaunchGameEnded { get; }
+		public static extern Type PlacelaunchGameFull { get; }
+		public static extern Type PlacelaunchUserLeft { get; }
+		public static extern Type PlacelaunchRestricted { get; }
+		public static extern Type PlacelaunchUnauthorized { get; }
+		public static extern Type PlacelaunchFlooded { get; }
+		public static extern Type PlacelaunchHashExpired { get; }
+		public static extern Type PlacelaunchHashException { get; }
+		public static extern Type PlacelaunchPartyCannotFit { get; }
+		public static extern Type PlacelaunchHttpError { get; }
+		public static extern Type PlacelaunchUserPrivacyUnauthorized { get; }
+		public static extern Type PlacelaunchCreatorBan { get; }
+		public static extern Type PlacelaunchCustomMessage { get; }
+		public static extern Type PlacelaunchOtherError { get; }
+		public static extern Type TeleportErrors { get; }
+		public static extern Type TeleportFailure { get; }
+		public static extern Type TeleportGameNotFound { get; }
+		public static extern Type TeleportGameEnded { get; }
+		public static extern Type TeleportGameFull { get; }
+		public static extern Type TeleportUnauthorized { get; }
+		public static extern Type TeleportFlooded { get; }
+		public static extern Type TeleportIsTeleporting { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ConnectionState
@@ -1903,14 +1688,25 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Connected { get; } = null!;
-		public static Type Disconnected { get; } = null!;
+		public static extern Type Connected { get; }
+		public static extern Type Disconnected { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class ContentSourceType
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type None { get; }
+		public static extern Type Uri { get; }
+		public static extern Type Object { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ContextActionPriority
@@ -1919,15 +1715,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Low { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type High { get; } = null!;
+		public static extern Type Low { get; }
+		public static extern Type Medium { get; }
+		public static extern Type High { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ContextActionResult
@@ -1936,14 +1729,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Sink { get; } = null!;
-		public static Type Pass { get; } = null!;
+		public static extern Type Sink { get; }
+		public static extern Type Pass { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ControlMode
@@ -1952,14 +1742,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Classic { get; } = null!;
-		public static Type MouseLockSwitch { get; } = null!;
+		public static extern Type Classic { get; }
+		public static extern Type MouseLockSwitch { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CoreGuiType
@@ -1968,20 +1755,32 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type PlayerList { get; } = null!;
-		public static Type Health { get; } = null!;
-		public static Type Backpack { get; } = null!;
-		public static Type Chat { get; } = null!;
-		public static Type All { get; } = null!;
-		public static Type EmotesMenu { get; } = null!;
-		public static Type SelfView { get; } = null!;
-		public static Type Captures { get; } = null!;
+		public static extern Type PlayerList { get; }
+		public static extern Type Health { get; }
+		public static extern Type Backpack { get; }
+		public static extern Type Chat { get; }
+		public static extern Type All { get; }
+		public static extern Type EmotesMenu { get; }
+		public static extern Type SelfView { get; }
+		public static extern Type Captures { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class CreateAssetResult
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Success { get; }
+		public static extern Type PermissionDenied { get; }
+		public static extern Type UploadFailed { get; }
+		public static extern Type Unknown { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CreateOutfitFailure
@@ -1990,15 +1789,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type InvalidName { get; } = null!;
-		public static Type OutfitLimitReached { get; } = null!;
-		public static Type Other { get; } = null!;
+		public static extern Type InvalidName { get; }
+		public static extern Type OutfitLimitReached { get; }
+		public static extern Type Other { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CreatorType
@@ -2007,14 +1803,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type User { get; } = null!;
-		public static Type Group { get; } = null!;
+		public static extern Type User { get; }
+		public static extern Type Group { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CreatorTypeFilter
@@ -2023,15 +1816,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type User { get; } = null!;
-		public static Type Group { get; } = null!;
-		public static Type All { get; } = null!;
+		public static extern Type User { get; }
+		public static extern Type Group { get; }
+		public static extern Type All { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CurrencyType
@@ -2040,15 +1830,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Robux { get; } = null!;
-		public static Type Tix { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Robux { get; }
+		public static extern Type Tix { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class CustomCameraMode
@@ -2057,15 +1844,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Classic { get; } = null!;
-		public static Type Follow { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Classic { get; }
+		public static extern Type Follow { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DataStoreRequestType
@@ -2074,21 +1858,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type GetAsync { get; } = null!;
-		public static Type SetIncrementAsync { get; } = null!;
-		public static Type UpdateAsync { get; } = null!;
-		public static Type GetSortedAsync { get; } = null!;
-		public static Type SetIncrementSortedAsync { get; } = null!;
-		public static Type OnUpdate { get; } = null!;
-		public static Type ListAsync { get; } = null!;
-		public static Type GetVersionAsync { get; } = null!;
-		public static Type RemoveVersionAsync { get; } = null!;
+		public static extern Type GetAsync { get; }
+		public static extern Type SetIncrementAsync { get; }
+		public static extern Type UpdateAsync { get; }
+		public static extern Type GetSortedAsync { get; }
+		public static extern Type SetIncrementSortedAsync { get; }
+		public static extern Type OnUpdate { get; }
+		public static extern Type ListAsync { get; }
+		public static extern Type GetVersionAsync { get; }
+		public static extern Type RemoveVersionAsync { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DebuggerEndReason
@@ -2097,20 +1878,17 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ClientRequest { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type InvalidHost { get; } = null!;
-		public static Type Disconnected { get; } = null!;
-		public static Type ServerShutdown { get; } = null!;
-		public static Type ServerProtocolMismatch { get; } = null!;
-		public static Type ConfigurationFailed { get; } = null!;
-		public static Type RpcError { get; } = null!;
+		public static extern Type ClientRequest { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type InvalidHost { get; }
+		public static extern Type Disconnected { get; }
+		public static extern Type ServerShutdown { get; }
+		public static extern Type ServerProtocolMismatch { get; }
+		public static extern Type ConfigurationFailed { get; }
+		public static extern Type RpcError { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DebuggerExceptionBreakMode
@@ -2119,15 +1897,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Never { get; } = null!;
-		public static Type Always { get; } = null!;
-		public static Type Unhandled { get; } = null!;
+		public static extern Type Never { get; }
+		public static extern Type Always { get; }
+		public static extern Type Unhandled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DebuggerFrameType
@@ -2136,14 +1911,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type C { get; } = null!;
-		public static Type Lua { get; } = null!;
+		public static extern Type C { get; }
+		public static extern Type Lua { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DebuggerPauseReason
@@ -2152,18 +1924,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Requested { get; } = null!;
-		public static Type Breakpoint { get; } = null!;
-		public static Type Exception { get; } = null!;
-		public static Type SingleStep { get; } = null!;
-		public static Type Entrypoint { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Requested { get; }
+		public static extern Type Breakpoint { get; }
+		public static extern Type Exception { get; }
+		public static extern Type SingleStep { get; }
+		public static extern Type Entrypoint { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DebuggerStatus
@@ -2172,38 +1941,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type ConnectionLost { get; } = null!;
-		public static Type InvalidResponse { get; } = null!;
-		public static Type InternalError { get; } = null!;
-		public static Type InvalidState { get; } = null!;
-		public static Type RpcError { get; } = null!;
-		public static Type InvalidArgument { get; } = null!;
-		public static Type ConnectionClosed { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type ConnectionLost { get; }
+		public static extern Type InvalidResponse { get; }
+		public static extern Type InternalError { get; }
+		public static extern Type InvalidState { get; }
+		public static extern Type RpcError { get; }
+		public static extern Type InvalidArgument { get; }
+		public static extern Type ConnectionClosed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
-	public static class DecreaseMinimumPartDensityMode
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DevCameraOcclusionMode
@@ -2212,14 +1961,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Zoom { get; } = null!;
-		public static Type Invisicam { get; } = null!;
+		public static extern Type Zoom { get; }
+		public static extern Type Invisicam { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DevComputerCameraMovementMode
@@ -2228,17 +1974,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UserChoice { get; } = null!;
-		public static Type Classic { get; } = null!;
-		public static Type Follow { get; } = null!;
-		public static Type Orbital { get; } = null!;
-		public static Type CameraToggle { get; } = null!;
+		public static extern Type UserChoice { get; }
+		public static extern Type Classic { get; }
+		public static extern Type Follow { get; }
+		public static extern Type Orbital { get; }
+		public static extern Type CameraToggle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DevComputerMovementMode
@@ -2247,16 +1990,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UserChoice { get; } = null!;
-		public static Type KeyboardMouse { get; } = null!;
-		public static Type ClickToMove { get; } = null!;
-		public static Type Scriptable { get; } = null!;
+		public static extern Type UserChoice { get; }
+		public static extern Type KeyboardMouse { get; }
+		public static extern Type ClickToMove { get; }
+		public static extern Type Scriptable { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DevTouchCameraMovementMode
@@ -2265,16 +2005,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UserChoice { get; } = null!;
-		public static Type Classic { get; } = null!;
-		public static Type Follow { get; } = null!;
-		public static Type Orbital { get; } = null!;
+		public static extern Type UserChoice { get; }
+		public static extern Type Classic { get; }
+		public static extern Type Follow { get; }
+		public static extern Type Orbital { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DevTouchMovementMode
@@ -2283,19 +2020,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UserChoice { get; } = null!;
-		public static Type Thumbstick { get; } = null!;
-		public static Type DPad { get; } = null!;
-		public static Type Thumbpad { get; } = null!;
-		public static Type ClickToMove { get; } = null!;
-		public static Type Scriptable { get; } = null!;
-		public static Type DynamicThumbstick { get; } = null!;
+		public static extern Type UserChoice { get; }
+		public static extern Type Thumbstick { get; }
+		public static extern Type DPad { get; }
+		public static extern Type Thumbpad { get; }
+		public static extern Type ClickToMove { get; }
+		public static extern Type Scriptable { get; }
+		public static extern Type DynamicThumbstick { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DeveloperMemoryTag
@@ -2304,35 +2038,32 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Internal { get; } = null!;
-		public static Type HttpCache { get; } = null!;
-		public static Type Instances { get; } = null!;
-		public static Type Signals { get; } = null!;
-		public static Type LuaHeap { get; } = null!;
-		public static Type Script { get; } = null!;
-		public static Type PhysicsCollision { get; } = null!;
-		public static Type PhysicsParts { get; } = null!;
-		public static Type GraphicsSolidModels { get; } = null!;
-		public static Type GraphicsMeshParts { get; } = null!;
-		public static Type GraphicsParticles { get; } = null!;
-		public static Type GraphicsParts { get; } = null!;
-		public static Type GraphicsSpatialHash { get; } = null!;
-		public static Type GraphicsTerrain { get; } = null!;
-		public static Type GraphicsTexture { get; } = null!;
-		public static Type GraphicsTextureCharacter { get; } = null!;
-		public static Type Sounds { get; } = null!;
-		public static Type StreamingSounds { get; } = null!;
-		public static Type TerrainVoxels { get; } = null!;
-		public static Type Gui { get; } = null!;
-		public static Type Animation { get; } = null!;
-		public static Type Navigation { get; } = null!;
-		public static Type GeometryCSG { get; } = null!;
+		public static extern Type Internal { get; }
+		public static extern Type HttpCache { get; }
+		public static extern Type Instances { get; }
+		public static extern Type Signals { get; }
+		public static extern Type LuaHeap { get; }
+		public static extern Type Script { get; }
+		public static extern Type PhysicsCollision { get; }
+		public static extern Type PhysicsParts { get; }
+		public static extern Type GraphicsSolidModels { get; }
+		public static extern Type GraphicsMeshParts { get; }
+		public static extern Type GraphicsParticles { get; }
+		public static extern Type GraphicsParts { get; }
+		public static extern Type GraphicsSpatialHash { get; }
+		public static extern Type GraphicsTerrain { get; }
+		public static extern Type GraphicsTexture { get; }
+		public static extern Type GraphicsTextureCharacter { get; }
+		public static extern Type Sounds { get; }
+		public static extern Type StreamingSounds { get; }
+		public static extern Type TerrainVoxels { get; }
+		public static extern Type Gui { get; }
+		public static extern Type Animation { get; }
+		public static extern Type Navigation { get; }
+		public static extern Type GeometryCSG { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DeviceFeatureType
@@ -2341,13 +2072,26 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type DeviceCapture { get; } = null!;
+		public static extern Type DeviceCapture { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class DeviceForm
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Console { get; }
+		public static extern Type Phone { get; }
+		public static extern Type Tablet { get; }
+		public static extern Type Desktop { get; }
+		public static extern Type VR { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DeviceLevel
@@ -2356,15 +2100,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Low { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type High { get; } = null!;
+		public static extern Type Low { get; }
+		public static extern Type Medium { get; }
+		public static extern Type High { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DeviceType
@@ -2373,16 +2114,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Desktop { get; } = null!;
-		public static Type Tablet { get; } = null!;
-		public static Type Phone { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Desktop { get; }
+		public static extern Type Tablet { get; }
+		public static extern Type Phone { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DialogBehaviorType
@@ -2391,14 +2129,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type SinglePlayer { get; } = null!;
-		public static Type MultiplePlayers { get; } = null!;
+		public static extern Type SinglePlayer { get; }
+		public static extern Type MultiplePlayers { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DialogPurpose
@@ -2407,15 +2142,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Quest { get; } = null!;
-		public static Type Help { get; } = null!;
-		public static Type Shop { get; } = null!;
+		public static extern Type Quest { get; }
+		public static extern Type Help { get; }
+		public static extern Type Shop { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DialogTone
@@ -2424,15 +2156,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Neutral { get; } = null!;
-		public static Type Friendly { get; } = null!;
-		public static Type Enemy { get; } = null!;
+		public static extern Type Neutral { get; }
+		public static extern Type Friendly { get; }
+		public static extern Type Enemy { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DominantAxis
@@ -2441,14 +2170,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Width { get; } = null!;
-		public static Type Height { get; } = null!;
+		public static extern Type Width { get; }
+		public static extern Type Height { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DraftStatusCode
@@ -2457,16 +2183,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OK { get; } = null!;
-		public static Type DraftOutdated { get; } = null!;
-		public static Type ScriptRemoved { get; } = null!;
-		public static Type DraftCommitted { get; } = null!;
+		public static extern Type OK { get; }
+		public static extern Type DraftOutdated { get; }
+		public static extern Type ScriptRemoved { get; }
+		public static extern Type DraftCommitted { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DragDetectorDragStyle
@@ -2475,21 +2198,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type TranslateLine { get; } = null!;
-		public static Type TranslatePlane { get; } = null!;
-		public static Type TranslatePlaneOrLine { get; } = null!;
-		public static Type TranslateLineOrPlane { get; } = null!;
-		public static Type TranslateViewPlane { get; } = null!;
-		public static Type RotateAxis { get; } = null!;
-		public static Type RotateTrackball { get; } = null!;
-		public static Type Scriptable { get; } = null!;
-		public static Type BestForDevice { get; } = null!;
+		public static extern Type TranslateLine { get; }
+		public static extern Type TranslatePlane { get; }
+		public static extern Type TranslatePlaneOrLine { get; }
+		public static extern Type TranslateLineOrPlane { get; }
+		public static extern Type TranslateViewPlane { get; }
+		public static extern Type RotateAxis { get; }
+		public static extern Type RotateTrackball { get; }
+		public static extern Type Scriptable { get; }
+		public static extern Type BestForDevice { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DragDetectorPermissionPolicy
@@ -2498,15 +2218,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Nobody { get; } = null!;
-		public static Type Everybody { get; } = null!;
-		public static Type Scriptable { get; } = null!;
+		public static extern Type Nobody { get; }
+		public static extern Type Everybody { get; }
+		public static extern Type Scriptable { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DragDetectorResponseStyle
@@ -2515,15 +2232,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Geometric { get; } = null!;
-		public static Type Physical { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Geometric { get; }
+		public static extern Type Physical { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DraggerCoordinateSpace
@@ -2532,14 +2246,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Object { get; } = null!;
-		public static Type World { get; } = null!;
+		public static extern Type Object { get; }
+		public static extern Type World { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class DraggerMovementMode
@@ -2548,14 +2259,25 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Geometric { get; } = null!;
-		public static Type Physical { get; } = null!;
+		public static extern Type Geometric { get; }
+		public static extern Type Physical { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class DraggingScrollBar
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type None { get; }
+		public static extern Type Horizontal { get; }
+		public static extern Type Vertical { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class EasingDirection
@@ -2564,15 +2286,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type In { get; } = null!;
-		public static Type Out { get; } = null!;
-		public static Type InOut { get; } = null!;
+		public static extern Type In { get; }
+		public static extern Type Out { get; }
+		public static extern Type InOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class EasingStyle
@@ -2581,23 +2300,34 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Linear { get; } = null!;
-		public static Type Sine { get; } = null!;
-		public static Type Back { get; } = null!;
-		public static Type Quad { get; } = null!;
-		public static Type Quart { get; } = null!;
-		public static Type Quint { get; } = null!;
-		public static Type Bounce { get; } = null!;
-		public static Type Elastic { get; } = null!;
-		public static Type Exponential { get; } = null!;
-		public static Type Circular { get; } = null!;
-		public static Type Cubic { get; } = null!;
+		public static extern Type Linear { get; }
+		public static extern Type Sine { get; }
+		public static extern Type Back { get; }
+		public static extern Type Quad { get; }
+		public static extern Type Quart { get; }
+		public static extern Type Quint { get; }
+		public static extern Type Bounce { get; }
+		public static extern Type Elastic { get; }
+		public static extern Type Exponential { get; }
+		public static extern Type Circular { get; }
+		public static extern Type Cubic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class EditableStatus
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Unknown { get; }
+		public static extern Type Allowed { get; }
+		public static extern Type Disallowed { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ElasticBehavior
@@ -2606,15 +2336,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type WhenScrollable { get; } = null!;
-		public static Type Always { get; } = null!;
-		public static Type Never { get; } = null!;
+		public static extern Type WhenScrollable { get; }
+		public static extern Type Always { get; }
+		public static extern Type Never { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class EnviromentalPhysicsThrottle
@@ -2623,19 +2350,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type DefaultAuto { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Always { get; } = null!;
-		public static Type Skip2 { get; } = null!;
-		public static Type Skip4 { get; } = null!;
-		public static Type Skip8 { get; } = null!;
-		public static Type Skip16 { get; } = null!;
+		public static extern Type DefaultAuto { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Always { get; }
+		public static extern Type Skip2 { get; }
+		public static extern Type Skip4 { get; }
+		public static extern Type Skip8 { get; }
+		public static extern Type Skip16 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ExperienceAuthScope
@@ -2644,14 +2368,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type DefaultScope { get; } = null!;
-		public static Type CreatorAssetsCreate { get; } = null!;
+		public static extern Type DefaultScope { get; }
+		public static extern Type CreatorAssetsCreate { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ExplosionType
@@ -2660,14 +2381,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoCraters { get; } = null!;
-		public static Type Craters { get; } = null!;
+		public static extern Type NoCraters { get; }
+		public static extern Type Craters { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FACSDataLod
@@ -2676,15 +2394,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type LOD0 { get; } = null!;
-		public static Type LOD1 { get; } = null!;
-		public static Type LODCount { get; } = null!;
+		public static extern Type LOD0 { get; }
+		public static extern Type LOD1 { get; }
+		public static extern Type LODCount { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FacialAnimationStreamingState
@@ -2693,17 +2408,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Audio { get; } = null!;
-		public static Type Video { get; } = null!;
-		public static Type Place { get; } = null!;
-		public static Type Server { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Audio { get; }
+		public static extern Type Video { get; }
+		public static extern Type Place { get; }
+		public static extern Type Server { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FieldOfViewMode
@@ -2712,15 +2424,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Vertical { get; } = null!;
-		public static Type Diagonal { get; } = null!;
-		public static Type MaxAxis { get; } = null!;
+		public static extern Type Vertical { get; }
+		public static extern Type Diagonal { get; }
+		public static extern Type MaxAxis { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FillDirection
@@ -2729,14 +2438,41 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Horizontal { get; } = null!;
-		public static Type Vertical { get; } = null!;
+		public static extern Type Horizontal { get; }
+		public static extern Type Vertical { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class FilterErrorType
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type BackslashNotEscapingAnything { get; }
+		public static extern Type BadBespokeFilter { get; }
+		public static extern Type BadName { get; }
+		public static extern Type IncompleteOr { get; }
+		public static extern Type IncompleteParenthesis { get; }
+		public static extern Type InvalidDoubleStar { get; }
+		public static extern Type InvalidTilde { get; }
+		public static extern Type PropertyBadOperator { get; }
+		public static extern Type PropertyDoesNotExist { get; }
+		public static extern Type PropertyInvalidField { get; }
+		public static extern Type PropertyInvalidValue { get; }
+		public static extern Type PropertyUnsupportedFields { get; }
+		public static extern Type PropertyUnsupportedProperty { get; }
+		public static extern Type UnexpectedNameIndex { get; }
+		public static extern Type UnexpectedToken { get; }
+		public static extern Type UnfinishedBinaryOperator { get; }
+		public static extern Type UnfinishedQuote { get; }
+		public static extern Type UnknownBespokeFilter { get; }
+		public static extern Type WildcardInProperty { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FilterResult
@@ -2745,14 +2481,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Accepted { get; } = null!;
-		public static Type Rejected { get; } = null!;
+		public static extern Type Accepted { get; }
+		public static extern Type Rejected { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FinishRecordingOperation
@@ -2761,15 +2494,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Cancel { get; } = null!;
-		public static Type Commit { get; } = null!;
-		public static Type Append { get; } = null!;
+		public static extern Type Cancel { get; }
+		public static extern Type Commit { get; }
+		public static extern Type Append { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FluidFidelity
@@ -2778,15 +2508,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type UseCollisionGeometry { get; } = null!;
-		public static Type UsePreciseGeometry { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type UseCollisionGeometry { get; }
+		public static extern Type UsePreciseGeometry { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FluidForces
@@ -2795,14 +2522,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Experimental { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Experimental { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Font
@@ -2811,65 +2535,62 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Legacy { get; } = null!;
-		public static Type Arial { get; } = null!;
-		public static Type ArialBold { get; } = null!;
-		public static Type SourceSans { get; } = null!;
-		public static Type SourceSansBold { get; } = null!;
-		public static Type SourceSansLight { get; } = null!;
-		public static Type SourceSansItalic { get; } = null!;
-		public static Type Bodoni { get; } = null!;
-		public static Type Garamond { get; } = null!;
-		public static Type Cartoon { get; } = null!;
-		public static Type Code { get; } = null!;
-		public static Type Highway { get; } = null!;
-		public static Type SciFi { get; } = null!;
-		public static Type Arcade { get; } = null!;
-		public static Type Fantasy { get; } = null!;
-		public static Type Antique { get; } = null!;
-		public static Type SourceSansSemibold { get; } = null!;
-		public static Type Gotham { get; } = null!;
-		public static Type GothamMedium { get; } = null!;
-		public static Type GothamBold { get; } = null!;
-		public static Type GothamBlack { get; } = null!;
-		public static Type AmaticSC { get; } = null!;
-		public static Type Bangers { get; } = null!;
-		public static Type Creepster { get; } = null!;
-		public static Type DenkOne { get; } = null!;
-		public static Type Fondamento { get; } = null!;
-		public static Type FredokaOne { get; } = null!;
-		public static Type GrenzeGotisch { get; } = null!;
-		public static Type IndieFlower { get; } = null!;
-		public static Type JosefinSans { get; } = null!;
-		public static Type Jura { get; } = null!;
-		public static Type Kalam { get; } = null!;
-		public static Type LuckiestGuy { get; } = null!;
-		public static Type Merriweather { get; } = null!;
-		public static Type Michroma { get; } = null!;
-		public static Type Nunito { get; } = null!;
-		public static Type Oswald { get; } = null!;
-		public static Type PatrickHand { get; } = null!;
-		public static Type PermanentMarker { get; } = null!;
-		public static Type Roboto { get; } = null!;
-		public static Type RobotoCondensed { get; } = null!;
-		public static Type RobotoMono { get; } = null!;
-		public static Type Sarpanch { get; } = null!;
-		public static Type SpecialElite { get; } = null!;
-		public static Type TitilliumWeb { get; } = null!;
-		public static Type Ubuntu { get; } = null!;
-		public static Type BuilderSans { get; } = null!;
-		public static Type BuilderSansMedium { get; } = null!;
-		public static Type BuilderSansBold { get; } = null!;
-		public static Type BuilderSansExtraBold { get; } = null!;
-		public static Type Arimo { get; } = null!;
-		public static Type ArimoBold { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type Legacy { get; }
+		public static extern Type Arial { get; }
+		public static extern Type ArialBold { get; }
+		public static extern Type SourceSans { get; }
+		public static extern Type SourceSansBold { get; }
+		public static extern Type SourceSansLight { get; }
+		public static extern Type SourceSansItalic { get; }
+		public static extern Type Bodoni { get; }
+		public static extern Type Garamond { get; }
+		public static extern Type Cartoon { get; }
+		public static extern Type Code { get; }
+		public static extern Type Highway { get; }
+		public static extern Type SciFi { get; }
+		public static extern Type Arcade { get; }
+		public static extern Type Fantasy { get; }
+		public static extern Type Antique { get; }
+		public static extern Type SourceSansSemibold { get; }
+		public static extern Type Gotham { get; }
+		public static extern Type GothamMedium { get; }
+		public static extern Type GothamBold { get; }
+		public static extern Type GothamBlack { get; }
+		public static extern Type AmaticSC { get; }
+		public static extern Type Bangers { get; }
+		public static extern Type Creepster { get; }
+		public static extern Type DenkOne { get; }
+		public static extern Type Fondamento { get; }
+		public static extern Type FredokaOne { get; }
+		public static extern Type GrenzeGotisch { get; }
+		public static extern Type IndieFlower { get; }
+		public static extern Type JosefinSans { get; }
+		public static extern Type Jura { get; }
+		public static extern Type Kalam { get; }
+		public static extern Type LuckiestGuy { get; }
+		public static extern Type Merriweather { get; }
+		public static extern Type Michroma { get; }
+		public static extern Type Nunito { get; }
+		public static extern Type Oswald { get; }
+		public static extern Type PatrickHand { get; }
+		public static extern Type PermanentMarker { get; }
+		public static extern Type Roboto { get; }
+		public static extern Type RobotoCondensed { get; }
+		public static extern Type RobotoMono { get; }
+		public static extern Type Sarpanch { get; }
+		public static extern Type SpecialElite { get; }
+		public static extern Type TitilliumWeb { get; }
+		public static extern Type Ubuntu { get; }
+		public static extern Type BuilderSans { get; }
+		public static extern Type BuilderSansMedium { get; }
+		public static extern Type BuilderSansBold { get; }
+		public static extern Type BuilderSansExtraBold { get; }
+		public static extern Type Arimo { get; }
+		public static extern Type ArimoBold { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FontSize
@@ -2878,27 +2599,24 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Size8 { get; } = null!;
-		public static Type Size9 { get; } = null!;
-		public static Type Size10 { get; } = null!;
-		public static Type Size11 { get; } = null!;
-		public static Type Size12 { get; } = null!;
-		public static Type Size14 { get; } = null!;
-		public static Type Size18 { get; } = null!;
-		public static Type Size24 { get; } = null!;
-		public static Type Size36 { get; } = null!;
-		public static Type Size48 { get; } = null!;
-		public static Type Size28 { get; } = null!;
-		public static Type Size32 { get; } = null!;
-		public static Type Size42 { get; } = null!;
-		public static Type Size60 { get; } = null!;
-		public static Type Size96 { get; } = null!;
+		public static extern Type Size8 { get; }
+		public static extern Type Size9 { get; }
+		public static extern Type Size10 { get; }
+		public static extern Type Size11 { get; }
+		public static extern Type Size12 { get; }
+		public static extern Type Size14 { get; }
+		public static extern Type Size18 { get; }
+		public static extern Type Size24 { get; }
+		public static extern Type Size36 { get; }
+		public static extern Type Size48 { get; }
+		public static extern Type Size28 { get; }
+		public static extern Type Size32 { get; }
+		public static extern Type Size42 { get; }
+		public static extern Type Size60 { get; }
+		public static extern Type Size96 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FontStyle
@@ -2907,14 +2625,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Normal { get; } = null!;
-		public static Type Italic { get; } = null!;
+		public static extern Type Normal { get; }
+		public static extern Type Italic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FontWeight
@@ -2923,21 +2638,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Thin { get; } = null!;
-		public static Type ExtraLight { get; } = null!;
-		public static Type Light { get; } = null!;
-		public static Type Regular { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type SemiBold { get; } = null!;
-		public static Type Bold { get; } = null!;
-		public static Type ExtraBold { get; } = null!;
-		public static Type Heavy { get; } = null!;
+		public static extern Type Thin { get; }
+		public static extern Type ExtraLight { get; }
+		public static extern Type Light { get; }
+		public static extern Type Regular { get; }
+		public static extern Type Medium { get; }
+		public static extern Type SemiBold { get; }
+		public static extern Type Bold { get; }
+		public static extern Type ExtraBold { get; }
+		public static extern Type Heavy { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ForceLimitMode
@@ -2946,14 +2658,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Magnitude { get; } = null!;
-		public static Type PerAxis { get; } = null!;
+		public static extern Type Magnitude { get; }
+		public static extern Type PerAxis { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FormFactor
@@ -2962,16 +2671,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Symmetric { get; } = null!;
-		public static Type Brick { get; } = null!;
-		public static Type Plate { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Symmetric { get; }
+		public static extern Type Brick { get; }
+		public static extern Type Plate { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FrameStyle
@@ -2980,19 +2686,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Custom { get; } = null!;
-		public static Type ChatBlue { get; } = null!;
-		public static Type RobloxSquare { get; } = null!;
-		public static Type RobloxRound { get; } = null!;
-		public static Type ChatGreen { get; } = null!;
-		public static Type ChatRed { get; } = null!;
-		public static Type DropShadow { get; } = null!;
+		public static extern Type Custom { get; }
+		public static extern Type ChatBlue { get; }
+		public static extern Type RobloxSquare { get; }
+		public static extern Type RobloxRound { get; }
+		public static extern Type ChatGreen { get; }
+		public static extern Type ChatRed { get; }
+		public static extern Type DropShadow { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FramerateManagerMode
@@ -3001,15 +2704,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type On { get; } = null!;
-		public static Type Off { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type On { get; }
+		public static extern Type Off { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FriendRequestEvent
@@ -3018,16 +2718,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Issue { get; } = null!;
-		public static Type Revoke { get; } = null!;
-		public static Type Accept { get; } = null!;
-		public static Type Deny { get; } = null!;
+		public static extern Type Issue { get; }
+		public static extern Type Revoke { get; }
+		public static extern Type Accept { get; }
+		public static extern Type Deny { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FriendStatus
@@ -3036,17 +2733,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type NotFriend { get; } = null!;
-		public static Type Friend { get; } = null!;
-		public static Type FriendRequestSent { get; } = null!;
-		public static Type FriendRequestReceived { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type NotFriend { get; }
+		public static extern Type Friend { get; }
+		public static extern Type FriendRequestSent { get; }
+		public static extern Type FriendRequestReceived { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class FunctionalTestResult
@@ -3055,15 +2749,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Passed { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Error { get; } = null!;
+		public static extern Type Passed { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Error { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GameAvatarType
@@ -3072,15 +2763,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type R6 { get; } = null!;
-		public static Type R15 { get; } = null!;
-		public static Type PlayerChoice { get; } = null!;
+		public static extern Type R6 { get; }
+		public static extern Type R15 { get; }
+		public static extern Type PlayerChoice { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GamepadType
@@ -3089,16 +2777,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type PS4 { get; } = null!;
-		public static Type PS5 { get; } = null!;
-		public static Type XboxOne { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type PS4 { get; }
+		public static extern Type PS5 { get; }
+		public static extern Type XboxOne { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GearGenreSetting
@@ -3107,14 +2792,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AllGenres { get; } = null!;
-		public static Type MatchingGenreOnly { get; } = null!;
+		public static extern Type AllGenres { get; }
+		public static extern Type MatchingGenreOnly { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GearType
@@ -3123,21 +2805,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type MeleeWeapons { get; } = null!;
-		public static Type RangedWeapons { get; } = null!;
-		public static Type Explosives { get; } = null!;
-		public static Type PowerUps { get; } = null!;
-		public static Type NavigationEnhancers { get; } = null!;
-		public static Type MusicalInstruments { get; } = null!;
-		public static Type SocialItems { get; } = null!;
-		public static Type BuildingTools { get; } = null!;
-		public static Type Transport { get; } = null!;
+		public static extern Type MeleeWeapons { get; }
+		public static extern Type RangedWeapons { get; }
+		public static extern Type Explosives { get; }
+		public static extern Type PowerUps { get; }
+		public static extern Type NavigationEnhancers { get; }
+		public static extern Type MusicalInstruments { get; }
+		public static extern Type SocialItems { get; }
+		public static extern Type BuildingTools { get; }
+		public static extern Type Transport { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Genre
@@ -3146,26 +2825,23 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type TownAndCity { get; } = null!;
-		public static Type Fantasy { get; } = null!;
-		public static Type SciFi { get; } = null!;
-		public static Type Ninja { get; } = null!;
-		public static Type Scary { get; } = null!;
-		public static Type Pirate { get; } = null!;
-		public static Type Adventure { get; } = null!;
-		public static Type Sports { get; } = null!;
-		public static Type Funny { get; } = null!;
-		public static Type WildWest { get; } = null!;
-		public static Type War { get; } = null!;
-		public static Type SkatePark { get; } = null!;
-		public static Type Tutorial { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type TownAndCity { get; }
+		public static extern Type Fantasy { get; }
+		public static extern Type SciFi { get; }
+		public static extern Type Ninja { get; }
+		public static extern Type Scary { get; }
+		public static extern Type Pirate { get; }
+		public static extern Type Adventure { get; }
+		public static extern Type Sports { get; }
+		public static extern Type Funny { get; }
+		public static extern Type WildWest { get; }
+		public static extern Type War { get; }
+		public static extern Type SkatePark { get; }
+		public static extern Type Tutorial { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GraphicsMode
@@ -3174,18 +2850,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Direct3D11 { get; } = null!;
-		public static Type OpenGL { get; } = null!;
-		public static Type Metal { get; } = null!;
-		public static Type Vulkan { get; } = null!;
-		public static Type NoGraphics { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Direct3D11 { get; }
+		public static extern Type OpenGL { get; }
+		public static extern Type Metal { get; }
+		public static extern Type Vulkan { get; }
+		public static extern Type NoGraphics { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GraphicsOptimizationMode
@@ -3194,15 +2867,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Performance { get; } = null!;
-		public static Type Balanced { get; } = null!;
-		public static Type Quality { get; } = null!;
+		public static extern Type Performance { get; }
+		public static extern Type Balanced { get; }
+		public static extern Type Quality { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GuiState
@@ -3211,16 +2881,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Idle { get; } = null!;
-		public static Type Hover { get; } = null!;
-		public static Type Press { get; } = null!;
-		public static Type NonInteractable { get; } = null!;
+		public static extern Type Idle { get; }
+		public static extern Type Hover { get; }
+		public static extern Type Press { get; }
+		public static extern Type NonInteractable { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class GuiType
@@ -3229,17 +2896,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Core { get; } = null!;
-		public static Type Custom { get; } = null!;
-		public static Type PlayerNameplates { get; } = null!;
-		public static Type CustomBillboards { get; } = null!;
-		public static Type CoreBillboards { get; } = null!;
+		public static extern Type Core { get; }
+		public static extern Type Custom { get; }
+		public static extern Type PlayerNameplates { get; }
+		public static extern Type CustomBillboards { get; }
+		public static extern Type CoreBillboards { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HandlesStyle
@@ -3248,14 +2912,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Resize { get; } = null!;
-		public static Type Movement { get; } = null!;
+		public static extern Type Resize { get; }
+		public static extern Type Movement { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HapticEffectType
@@ -3264,17 +2925,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UIHover { get; } = null!;
-		public static Type UIClick { get; } = null!;
-		public static Type UINotification { get; } = null!;
-		public static Type GameplayExplosion { get; } = null!;
-		public static Type GameplayCollision { get; } = null!;
+		public static extern Type UIHover { get; }
+		public static extern Type UIClick { get; }
+		public static extern Type UINotification { get; }
+		public static extern Type GameplayExplosion { get; }
+		public static extern Type GameplayCollision { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HighlightDepthMode
@@ -3283,14 +2941,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AlwaysOnTop { get; } = null!;
-		public static Type Occluded { get; } = null!;
+		public static extern Type AlwaysOnTop { get; }
+		public static extern Type Occluded { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HorizontalAlignment
@@ -3299,15 +2954,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Center { get; } = null!;
-		public static Type Left { get; } = null!;
-		public static Type Right { get; } = null!;
+		public static extern Type Center { get; }
+		public static extern Type Left { get; }
+		public static extern Type Right { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HoverAnimateSpeed
@@ -3316,17 +2968,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type VerySlow { get; } = null!;
-		public static Type Slow { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type Fast { get; } = null!;
-		public static Type VeryFast { get; } = null!;
+		public static extern Type VerySlow { get; }
+		public static extern Type Slow { get; }
+		public static extern Type Medium { get; }
+		public static extern Type Fast { get; }
+		public static extern Type VeryFast { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HttpCachePolicy
@@ -3335,17 +2984,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Full { get; } = null!;
-		public static Type DataOnly { get; } = null!;
-		public static Type Default { get; } = null!;
-		public static Type InternalRedirectRefresh { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Full { get; }
+		public static extern Type DataOnly { get; }
+		public static extern Type Default { get; }
+		public static extern Type InternalRedirectRefresh { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HttpCompression
@@ -3354,14 +3000,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Gzip { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Gzip { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HttpContentType
@@ -3370,17 +3013,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ApplicationJson { get; } = null!;
-		public static Type ApplicationXml { get; } = null!;
-		public static Type ApplicationUrlEncoded { get; } = null!;
-		public static Type TextPlain { get; } = null!;
-		public static Type TextXml { get; } = null!;
+		public static extern Type ApplicationJson { get; }
+		public static extern Type ApplicationXml { get; }
+		public static extern Type ApplicationUrlEncoded { get; }
+		public static extern Type TextPlain { get; }
+		public static extern Type TextXml { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HttpError
@@ -3389,25 +3029,22 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OK { get; } = null!;
-		public static Type InvalidUrl { get; } = null!;
-		public static Type DnsResolve { get; } = null!;
-		public static Type ConnectFail { get; } = null!;
-		public static Type OutOfMemory { get; } = null!;
-		public static Type TimedOut { get; } = null!;
-		public static Type TooManyRedirects { get; } = null!;
-		public static Type InvalidRedirect { get; } = null!;
-		public static Type NetFail { get; } = null!;
-		public static Type Aborted { get; } = null!;
-		public static Type SslConnectFail { get; } = null!;
-		public static Type SslVerificationFail { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type OK { get; }
+		public static extern Type InvalidUrl { get; }
+		public static extern Type DnsResolve { get; }
+		public static extern Type ConnectFail { get; }
+		public static extern Type OutOfMemory { get; }
+		public static extern Type TimedOut { get; }
+		public static extern Type TooManyRedirects { get; }
+		public static extern Type InvalidRedirect { get; }
+		public static extern Type NetFail { get; }
+		public static extern Type Aborted { get; }
+		public static extern Type SslConnectFail { get; }
+		public static extern Type SslVerificationFail { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HttpRequestType
@@ -3416,19 +3053,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type MarketplaceService { get; } = null!;
-		public static Type Players { get; } = null!;
-		public static Type Chat { get; } = null!;
-		public static Type Avatar { get; } = null!;
-		public static Type Analytics { get; } = null!;
-		public static Type Localization { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type MarketplaceService { get; }
+		public static extern Type Players { get; }
+		public static extern Type Chat { get; }
+		public static extern Type Avatar { get; }
+		public static extern Type Analytics { get; }
+		public static extern Type Localization { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HumanoidCollisionType
@@ -3437,14 +3071,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OuterBox { get; } = null!;
-		public static Type InnerBox { get; } = null!;
+		public static extern Type OuterBox { get; }
+		public static extern Type InnerBox { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HumanoidDisplayDistanceType
@@ -3453,15 +3084,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Viewer { get; } = null!;
-		public static Type Subject { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type Viewer { get; }
+		public static extern Type Subject { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HumanoidHealthDisplayType
@@ -3470,15 +3098,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type DisplayWhenDamaged { get; } = null!;
-		public static Type AlwaysOn { get; } = null!;
-		public static Type AlwaysOff { get; } = null!;
+		public static extern Type DisplayWhenDamaged { get; }
+		public static extern Type AlwaysOn { get; }
+		public static extern Type AlwaysOff { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HumanoidRigType
@@ -3487,14 +3112,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type R6 { get; } = null!;
-		public static Type R15 { get; } = null!;
+		public static extern Type R6 { get; }
+		public static extern Type R15 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class HumanoidStateType
@@ -3503,29 +3125,26 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FallingDown { get; } = null!;
-		public static Type Ragdoll { get; } = null!;
-		public static Type GettingUp { get; } = null!;
-		public static Type Jumping { get; } = null!;
-		public static Type Swimming { get; } = null!;
-		public static Type Freefall { get; } = null!;
-		public static Type Flying { get; } = null!;
-		public static Type Landed { get; } = null!;
-		public static Type Running { get; } = null!;
-		public static Type RunningNoPhysics { get; } = null!;
-		public static Type StrafingNoPhysics { get; } = null!;
-		public static Type Climbing { get; } = null!;
-		public static Type Seated { get; } = null!;
-		public static Type PlatformStanding { get; } = null!;
-		public static Type Dead { get; } = null!;
-		public static Type Physics { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type FallingDown { get; }
+		public static extern Type Ragdoll { get; }
+		public static extern Type GettingUp { get; }
+		public static extern Type Jumping { get; }
+		public static extern Type Swimming { get; }
+		public static extern Type Freefall { get; }
+		public static extern Type Flying { get; }
+		public static extern Type Landed { get; }
+		public static extern Type Running { get; }
+		public static extern Type RunningNoPhysics { get; }
+		public static extern Type StrafingNoPhysics { get; }
+		public static extern Type Climbing { get; }
+		public static extern Type Seated { get; }
+		public static extern Type PlatformStanding { get; }
+		public static extern Type Dead { get; }
+		public static extern Type Physics { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class IKCollisionsMode
@@ -3534,15 +3153,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoCollisions { get; } = null!;
-		public static Type OtherMechanismsAnchored { get; } = null!;
-		public static Type IncludeContactedMechanisms { get; } = null!;
+		public static extern Type NoCollisions { get; }
+		public static extern Type OtherMechanismsAnchored { get; }
+		public static extern Type IncludeContactedMechanisms { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class IKControlConstraintSupport
@@ -3551,15 +3167,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class IKControlType
@@ -3568,16 +3181,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Transform { get; } = null!;
-		public static Type Position { get; } = null!;
-		public static Type Rotation { get; } = null!;
-		public static Type LookAt { get; } = null!;
+		public static extern Type Transform { get; }
+		public static extern Type Position { get; }
+		public static extern Type Rotation { get; }
+		public static extern Type LookAt { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class IXPLoadingStatus
@@ -3586,19 +3196,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Pending { get; } = null!;
-		public static Type Initialized { get; } = null!;
-		public static Type ErrorInvalidUser { get; } = null!;
-		public static Type ErrorConnection { get; } = null!;
-		public static Type ErrorJsonParse { get; } = null!;
-		public static Type ErrorTimedOut { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Pending { get; }
+		public static extern Type Initialized { get; }
+		public static extern Type ErrorInvalidUser { get; }
+		public static extern Type ErrorConnection { get; }
+		public static extern Type ErrorJsonParse { get; }
+		public static extern Type ErrorTimedOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ImageAlphaType
@@ -3607,15 +3214,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type LockCanvasAlpha { get; } = null!;
-		public static Type LockCanvasColor { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type LockCanvasAlpha { get; }
+		public static extern Type LockCanvasColor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ImageCombineType
@@ -3624,17 +3228,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type BlendSourceOver { get; } = null!;
-		public static Type Overwrite { get; } = null!;
-		public static Type Add { get; } = null!;
-		public static Type Multiply { get; } = null!;
-		public static Type AlphaBlend { get; } = null!;
+		public static extern Type BlendSourceOver { get; }
+		public static extern Type Overwrite { get; }
+		public static extern Type Add { get; }
+		public static extern Type Multiply { get; }
+		public static extern Type AlphaBlend { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InOut
@@ -3643,15 +3244,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Edge { get; } = null!;
-		public static Type Inset { get; } = null!;
-		public static Type Center { get; } = null!;
+		public static extern Type Edge { get; }
+		public static extern Type Inset { get; }
+		public static extern Type Center { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InfoType
@@ -3660,17 +3258,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Asset { get; } = null!;
-		public static Type Product { get; } = null!;
-		public static Type GamePass { get; } = null!;
-		public static Type Subscription { get; } = null!;
-		public static Type Bundle { get; } = null!;
+		public static extern Type Asset { get; }
+		public static extern Type Product { get; }
+		public static extern Type GamePass { get; }
+		public static extern Type Subscription { get; }
+		public static extern Type Bundle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InitialDockState
@@ -3679,17 +3274,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Top { get; } = null!;
-		public static Type Bottom { get; } = null!;
-		public static Type Left { get; } = null!;
-		public static Type Right { get; } = null!;
-		public static Type Float { get; } = null!;
+		public static extern Type Top { get; }
+		public static extern Type Bottom { get; }
+		public static extern Type Left { get; }
+		public static extern Type Right { get; }
+		public static extern Type Float { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InputType
@@ -3698,31 +3290,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoInput { get; } = null!;
-		public static Type Constant { get; } = null!;
-		public static Type Sin { get; } = null!;
+		public static extern Type NoInput { get; }
+		public static extern Type Constant { get; }
+		public static extern Type Sin { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
-	public static class Intent
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type Realistic { get; } = null!;
-		public static Type Flat { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InterpolationThrottlingMode
@@ -3731,15 +3304,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class InviteState
@@ -3748,16 +3318,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Placed { get; } = null!;
-		public static Type Accepted { get; } = null!;
-		public static Type Declined { get; } = null!;
-		public static Type Missed { get; } = null!;
+		public static extern Type Placed { get; }
+		public static extern Type Accepted { get; }
+		public static extern Type Declined { get; }
+		public static extern Type Missed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ItemLineAlignment
@@ -3766,17 +3333,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Start { get; } = null!;
-		public static Type Center { get; } = null!;
-		public static Type End { get; } = null!;
-		public static Type Stretch { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Start { get; }
+		public static extern Type Center { get; }
+		public static extern Type End { get; }
+		public static extern Type Stretch { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class JoinSource
@@ -3785,13 +3349,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type CreatedItemAttribution { get; } = null!;
+		public static extern Type CreatedItemAttribution { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class JointCreationMode
@@ -3800,15 +3361,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type Surface { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type Surface { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class KeyCode
@@ -3817,273 +3375,270 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Backspace { get; } = null!;
-		public static Type Tab { get; } = null!;
-		public static Type Clear { get; } = null!;
-		public static Type Return { get; } = null!;
-		public static Type Pause { get; } = null!;
-		public static Type Escape { get; } = null!;
-		public static Type Space { get; } = null!;
-		public static Type QuotedDouble { get; } = null!;
-		public static Type Hash { get; } = null!;
-		public static Type Dollar { get; } = null!;
-		public static Type Percent { get; } = null!;
-		public static Type Ampersand { get; } = null!;
-		public static Type Quote { get; } = null!;
-		public static Type LeftParenthesis { get; } = null!;
-		public static Type RightParenthesis { get; } = null!;
-		public static Type Asterisk { get; } = null!;
-		public static Type Plus { get; } = null!;
-		public static Type Comma { get; } = null!;
-		public static Type Minus { get; } = null!;
-		public static Type Period { get; } = null!;
-		public static Type Slash { get; } = null!;
-		public static Type Zero { get; } = null!;
-		public static Type One { get; } = null!;
-		public static Type Two { get; } = null!;
-		public static Type Three { get; } = null!;
-		public static Type Four { get; } = null!;
-		public static Type Five { get; } = null!;
-		public static Type Six { get; } = null!;
-		public static Type Seven { get; } = null!;
-		public static Type Eight { get; } = null!;
-		public static Type Nine { get; } = null!;
-		public static Type Colon { get; } = null!;
-		public static Type Semicolon { get; } = null!;
-		public static Type LessThan { get; } = null!;
-		public static Type Equals { get; } = null!;
-		public static Type GreaterThan { get; } = null!;
-		public static Type Question { get; } = null!;
-		public static Type At { get; } = null!;
-		public static Type LeftBracket { get; } = null!;
-		public static Type BackSlash { get; } = null!;
-		public static Type RightBracket { get; } = null!;
-		public static Type Caret { get; } = null!;
-		public static Type Underscore { get; } = null!;
-		public static Type Backquote { get; } = null!;
-		public static Type A { get; } = null!;
-		public static Type B { get; } = null!;
-		public static Type C { get; } = null!;
-		public static Type D { get; } = null!;
-		public static Type E { get; } = null!;
-		public static Type F { get; } = null!;
-		public static Type G { get; } = null!;
-		public static Type H { get; } = null!;
-		public static Type I { get; } = null!;
-		public static Type J { get; } = null!;
-		public static Type K { get; } = null!;
-		public static Type L { get; } = null!;
-		public static Type M { get; } = null!;
-		public static Type N { get; } = null!;
-		public static Type O { get; } = null!;
-		public static Type P { get; } = null!;
-		public static Type Q { get; } = null!;
-		public static Type R { get; } = null!;
-		public static Type S { get; } = null!;
-		public static Type T { get; } = null!;
-		public static Type U { get; } = null!;
-		public static Type V { get; } = null!;
-		public static Type W { get; } = null!;
-		public static Type X { get; } = null!;
-		public static Type Y { get; } = null!;
-		public static Type Z { get; } = null!;
-		public static Type LeftCurly { get; } = null!;
-		public static Type Pipe { get; } = null!;
-		public static Type RightCurly { get; } = null!;
-		public static Type Tilde { get; } = null!;
-		public static Type Delete { get; } = null!;
-		public static Type World0 { get; } = null!;
-		public static Type World1 { get; } = null!;
-		public static Type World2 { get; } = null!;
-		public static Type World3 { get; } = null!;
-		public static Type World4 { get; } = null!;
-		public static Type World5 { get; } = null!;
-		public static Type World6 { get; } = null!;
-		public static Type World7 { get; } = null!;
-		public static Type World8 { get; } = null!;
-		public static Type World9 { get; } = null!;
-		public static Type World10 { get; } = null!;
-		public static Type World11 { get; } = null!;
-		public static Type World12 { get; } = null!;
-		public static Type World13 { get; } = null!;
-		public static Type World14 { get; } = null!;
-		public static Type World15 { get; } = null!;
-		public static Type World16 { get; } = null!;
-		public static Type World17 { get; } = null!;
-		public static Type World18 { get; } = null!;
-		public static Type World19 { get; } = null!;
-		public static Type World20 { get; } = null!;
-		public static Type World21 { get; } = null!;
-		public static Type World22 { get; } = null!;
-		public static Type World23 { get; } = null!;
-		public static Type World24 { get; } = null!;
-		public static Type World25 { get; } = null!;
-		public static Type World26 { get; } = null!;
-		public static Type World27 { get; } = null!;
-		public static Type World28 { get; } = null!;
-		public static Type World29 { get; } = null!;
-		public static Type World30 { get; } = null!;
-		public static Type World31 { get; } = null!;
-		public static Type World32 { get; } = null!;
-		public static Type World33 { get; } = null!;
-		public static Type World34 { get; } = null!;
-		public static Type World35 { get; } = null!;
-		public static Type World36 { get; } = null!;
-		public static Type World37 { get; } = null!;
-		public static Type World38 { get; } = null!;
-		public static Type World39 { get; } = null!;
-		public static Type World40 { get; } = null!;
-		public static Type World41 { get; } = null!;
-		public static Type World42 { get; } = null!;
-		public static Type World43 { get; } = null!;
-		public static Type World44 { get; } = null!;
-		public static Type World45 { get; } = null!;
-		public static Type World46 { get; } = null!;
-		public static Type World47 { get; } = null!;
-		public static Type World48 { get; } = null!;
-		public static Type World49 { get; } = null!;
-		public static Type World50 { get; } = null!;
-		public static Type World51 { get; } = null!;
-		public static Type World52 { get; } = null!;
-		public static Type World53 { get; } = null!;
-		public static Type World54 { get; } = null!;
-		public static Type World55 { get; } = null!;
-		public static Type World56 { get; } = null!;
-		public static Type World57 { get; } = null!;
-		public static Type World58 { get; } = null!;
-		public static Type World59 { get; } = null!;
-		public static Type World60 { get; } = null!;
-		public static Type World61 { get; } = null!;
-		public static Type World62 { get; } = null!;
-		public static Type World63 { get; } = null!;
-		public static Type World64 { get; } = null!;
-		public static Type World65 { get; } = null!;
-		public static Type World66 { get; } = null!;
-		public static Type World67 { get; } = null!;
-		public static Type World68 { get; } = null!;
-		public static Type World69 { get; } = null!;
-		public static Type World70 { get; } = null!;
-		public static Type World71 { get; } = null!;
-		public static Type World72 { get; } = null!;
-		public static Type World73 { get; } = null!;
-		public static Type World74 { get; } = null!;
-		public static Type World75 { get; } = null!;
-		public static Type World76 { get; } = null!;
-		public static Type World77 { get; } = null!;
-		public static Type World78 { get; } = null!;
-		public static Type World79 { get; } = null!;
-		public static Type World80 { get; } = null!;
-		public static Type World81 { get; } = null!;
-		public static Type World82 { get; } = null!;
-		public static Type World83 { get; } = null!;
-		public static Type World84 { get; } = null!;
-		public static Type World85 { get; } = null!;
-		public static Type World86 { get; } = null!;
-		public static Type World87 { get; } = null!;
-		public static Type World88 { get; } = null!;
-		public static Type World89 { get; } = null!;
-		public static Type World90 { get; } = null!;
-		public static Type World91 { get; } = null!;
-		public static Type World92 { get; } = null!;
-		public static Type World93 { get; } = null!;
-		public static Type World94 { get; } = null!;
-		public static Type World95 { get; } = null!;
-		public static Type KeypadZero { get; } = null!;
-		public static Type KeypadOne { get; } = null!;
-		public static Type KeypadTwo { get; } = null!;
-		public static Type KeypadThree { get; } = null!;
-		public static Type KeypadFour { get; } = null!;
-		public static Type KeypadFive { get; } = null!;
-		public static Type KeypadSix { get; } = null!;
-		public static Type KeypadSeven { get; } = null!;
-		public static Type KeypadEight { get; } = null!;
-		public static Type KeypadNine { get; } = null!;
-		public static Type KeypadPeriod { get; } = null!;
-		public static Type KeypadDivide { get; } = null!;
-		public static Type KeypadMultiply { get; } = null!;
-		public static Type KeypadMinus { get; } = null!;
-		public static Type KeypadPlus { get; } = null!;
-		public static Type KeypadEnter { get; } = null!;
-		public static Type KeypadEquals { get; } = null!;
-		public static Type Up { get; } = null!;
-		public static Type Down { get; } = null!;
-		public static Type Right { get; } = null!;
-		public static Type Left { get; } = null!;
-		public static Type Insert { get; } = null!;
-		public static Type Home { get; } = null!;
-		public static Type End { get; } = null!;
-		public static Type PageUp { get; } = null!;
-		public static Type PageDown { get; } = null!;
-		public static Type F1 { get; } = null!;
-		public static Type F2 { get; } = null!;
-		public static Type F3 { get; } = null!;
-		public static Type F4 { get; } = null!;
-		public static Type F5 { get; } = null!;
-		public static Type F6 { get; } = null!;
-		public static Type F7 { get; } = null!;
-		public static Type F8 { get; } = null!;
-		public static Type F9 { get; } = null!;
-		public static Type F10 { get; } = null!;
-		public static Type F11 { get; } = null!;
-		public static Type F12 { get; } = null!;
-		public static Type F13 { get; } = null!;
-		public static Type F14 { get; } = null!;
-		public static Type F15 { get; } = null!;
-		public static Type NumLock { get; } = null!;
-		public static Type CapsLock { get; } = null!;
-		public static Type ScrollLock { get; } = null!;
-		public static Type RightShift { get; } = null!;
-		public static Type LeftShift { get; } = null!;
-		public static Type RightControl { get; } = null!;
-		public static Type LeftControl { get; } = null!;
-		public static Type RightAlt { get; } = null!;
-		public static Type LeftAlt { get; } = null!;
-		public static Type RightMeta { get; } = null!;
-		public static Type LeftMeta { get; } = null!;
-		public static Type LeftSuper { get; } = null!;
-		public static Type RightSuper { get; } = null!;
-		public static Type Mode { get; } = null!;
-		public static Type Compose { get; } = null!;
-		public static Type Help { get; } = null!;
-		public static Type Print { get; } = null!;
-		public static Type SysReq { get; } = null!;
-		public static Type Break { get; } = null!;
-		public static Type Menu { get; } = null!;
-		public static Type Power { get; } = null!;
-		public static Type Euro { get; } = null!;
-		public static Type Undo { get; } = null!;
-		public static Type ButtonX { get; } = null!;
-		public static Type ButtonY { get; } = null!;
-		public static Type ButtonA { get; } = null!;
-		public static Type ButtonB { get; } = null!;
-		public static Type ButtonR1 { get; } = null!;
-		public static Type ButtonL1 { get; } = null!;
-		public static Type ButtonR2 { get; } = null!;
-		public static Type ButtonL2 { get; } = null!;
-		public static Type ButtonR3 { get; } = null!;
-		public static Type ButtonL3 { get; } = null!;
-		public static Type ButtonStart { get; } = null!;
-		public static Type ButtonSelect { get; } = null!;
-		public static Type DPadLeft { get; } = null!;
-		public static Type DPadRight { get; } = null!;
-		public static Type DPadUp { get; } = null!;
-		public static Type DPadDown { get; } = null!;
-		public static Type Thumbstick1 { get; } = null!;
-		public static Type Thumbstick2 { get; } = null!;
-		public static Type MouseLeftButton { get; } = null!;
-		public static Type MouseRightButton { get; } = null!;
-		public static Type MouseMiddleButton { get; } = null!;
-		public static Type MouseBackButton { get; } = null!;
-		public static Type MouseNoButton { get; } = null!;
-		public static Type MouseX { get; } = null!;
-		public static Type MouseY { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Backspace { get; }
+		public static extern Type Tab { get; }
+		public static extern Type Clear { get; }
+		public static extern Type Return { get; }
+		public static extern Type Pause { get; }
+		public static extern Type Escape { get; }
+		public static extern Type Space { get; }
+		public static extern Type QuotedDouble { get; }
+		public static extern Type Hash { get; }
+		public static extern Type Dollar { get; }
+		public static extern Type Percent { get; }
+		public static extern Type Ampersand { get; }
+		public static extern Type Quote { get; }
+		public static extern Type LeftParenthesis { get; }
+		public static extern Type RightParenthesis { get; }
+		public static extern Type Asterisk { get; }
+		public static extern Type Plus { get; }
+		public static extern Type Comma { get; }
+		public static extern Type Minus { get; }
+		public static extern Type Period { get; }
+		public static extern Type Slash { get; }
+		public static extern Type Zero { get; }
+		public static extern Type One { get; }
+		public static extern Type Two { get; }
+		public static extern Type Three { get; }
+		public static extern Type Four { get; }
+		public static extern Type Five { get; }
+		public static extern Type Six { get; }
+		public static extern Type Seven { get; }
+		public static extern Type Eight { get; }
+		public static extern Type Nine { get; }
+		public static extern Type Colon { get; }
+		public static extern Type Semicolon { get; }
+		public static extern Type LessThan { get; }
+		public static extern Type Equals { get; }
+		public static extern Type GreaterThan { get; }
+		public static extern Type Question { get; }
+		public static extern Type At { get; }
+		public static extern Type LeftBracket { get; }
+		public static extern Type BackSlash { get; }
+		public static extern Type RightBracket { get; }
+		public static extern Type Caret { get; }
+		public static extern Type Underscore { get; }
+		public static extern Type Backquote { get; }
+		public static extern Type A { get; }
+		public static extern Type B { get; }
+		public static extern Type C { get; }
+		public static extern Type D { get; }
+		public static extern Type E { get; }
+		public static extern Type F { get; }
+		public static extern Type G { get; }
+		public static extern Type H { get; }
+		public static extern Type I { get; }
+		public static extern Type J { get; }
+		public static extern Type K { get; }
+		public static extern Type L { get; }
+		public static extern Type M { get; }
+		public static extern Type N { get; }
+		public static extern Type O { get; }
+		public static extern Type P { get; }
+		public static extern Type Q { get; }
+		public static extern Type R { get; }
+		public static extern Type S { get; }
+		public static extern Type T { get; }
+		public static extern Type U { get; }
+		public static extern Type V { get; }
+		public static extern Type W { get; }
+		public static extern Type X { get; }
+		public static extern Type Y { get; }
+		public static extern Type Z { get; }
+		public static extern Type LeftCurly { get; }
+		public static extern Type Pipe { get; }
+		public static extern Type RightCurly { get; }
+		public static extern Type Tilde { get; }
+		public static extern Type Delete { get; }
+		public static extern Type World0 { get; }
+		public static extern Type World1 { get; }
+		public static extern Type World2 { get; }
+		public static extern Type World3 { get; }
+		public static extern Type World4 { get; }
+		public static extern Type World5 { get; }
+		public static extern Type World6 { get; }
+		public static extern Type World7 { get; }
+		public static extern Type World8 { get; }
+		public static extern Type World9 { get; }
+		public static extern Type World10 { get; }
+		public static extern Type World11 { get; }
+		public static extern Type World12 { get; }
+		public static extern Type World13 { get; }
+		public static extern Type World14 { get; }
+		public static extern Type World15 { get; }
+		public static extern Type World16 { get; }
+		public static extern Type World17 { get; }
+		public static extern Type World18 { get; }
+		public static extern Type World19 { get; }
+		public static extern Type World20 { get; }
+		public static extern Type World21 { get; }
+		public static extern Type World22 { get; }
+		public static extern Type World23 { get; }
+		public static extern Type World24 { get; }
+		public static extern Type World25 { get; }
+		public static extern Type World26 { get; }
+		public static extern Type World27 { get; }
+		public static extern Type World28 { get; }
+		public static extern Type World29 { get; }
+		public static extern Type World30 { get; }
+		public static extern Type World31 { get; }
+		public static extern Type World32 { get; }
+		public static extern Type World33 { get; }
+		public static extern Type World34 { get; }
+		public static extern Type World35 { get; }
+		public static extern Type World36 { get; }
+		public static extern Type World37 { get; }
+		public static extern Type World38 { get; }
+		public static extern Type World39 { get; }
+		public static extern Type World40 { get; }
+		public static extern Type World41 { get; }
+		public static extern Type World42 { get; }
+		public static extern Type World43 { get; }
+		public static extern Type World44 { get; }
+		public static extern Type World45 { get; }
+		public static extern Type World46 { get; }
+		public static extern Type World47 { get; }
+		public static extern Type World48 { get; }
+		public static extern Type World49 { get; }
+		public static extern Type World50 { get; }
+		public static extern Type World51 { get; }
+		public static extern Type World52 { get; }
+		public static extern Type World53 { get; }
+		public static extern Type World54 { get; }
+		public static extern Type World55 { get; }
+		public static extern Type World56 { get; }
+		public static extern Type World57 { get; }
+		public static extern Type World58 { get; }
+		public static extern Type World59 { get; }
+		public static extern Type World60 { get; }
+		public static extern Type World61 { get; }
+		public static extern Type World62 { get; }
+		public static extern Type World63 { get; }
+		public static extern Type World64 { get; }
+		public static extern Type World65 { get; }
+		public static extern Type World66 { get; }
+		public static extern Type World67 { get; }
+		public static extern Type World68 { get; }
+		public static extern Type World69 { get; }
+		public static extern Type World70 { get; }
+		public static extern Type World71 { get; }
+		public static extern Type World72 { get; }
+		public static extern Type World73 { get; }
+		public static extern Type World74 { get; }
+		public static extern Type World75 { get; }
+		public static extern Type World76 { get; }
+		public static extern Type World77 { get; }
+		public static extern Type World78 { get; }
+		public static extern Type World79 { get; }
+		public static extern Type World80 { get; }
+		public static extern Type World81 { get; }
+		public static extern Type World82 { get; }
+		public static extern Type World83 { get; }
+		public static extern Type World84 { get; }
+		public static extern Type World85 { get; }
+		public static extern Type World86 { get; }
+		public static extern Type World87 { get; }
+		public static extern Type World88 { get; }
+		public static extern Type World89 { get; }
+		public static extern Type World90 { get; }
+		public static extern Type World91 { get; }
+		public static extern Type World92 { get; }
+		public static extern Type World93 { get; }
+		public static extern Type World94 { get; }
+		public static extern Type World95 { get; }
+		public static extern Type KeypadZero { get; }
+		public static extern Type KeypadOne { get; }
+		public static extern Type KeypadTwo { get; }
+		public static extern Type KeypadThree { get; }
+		public static extern Type KeypadFour { get; }
+		public static extern Type KeypadFive { get; }
+		public static extern Type KeypadSix { get; }
+		public static extern Type KeypadSeven { get; }
+		public static extern Type KeypadEight { get; }
+		public static extern Type KeypadNine { get; }
+		public static extern Type KeypadPeriod { get; }
+		public static extern Type KeypadDivide { get; }
+		public static extern Type KeypadMultiply { get; }
+		public static extern Type KeypadMinus { get; }
+		public static extern Type KeypadPlus { get; }
+		public static extern Type KeypadEnter { get; }
+		public static extern Type KeypadEquals { get; }
+		public static extern Type Up { get; }
+		public static extern Type Down { get; }
+		public static extern Type Right { get; }
+		public static extern Type Left { get; }
+		public static extern Type Insert { get; }
+		public static extern Type Home { get; }
+		public static extern Type End { get; }
+		public static extern Type PageUp { get; }
+		public static extern Type PageDown { get; }
+		public static extern Type F1 { get; }
+		public static extern Type F2 { get; }
+		public static extern Type F3 { get; }
+		public static extern Type F4 { get; }
+		public static extern Type F5 { get; }
+		public static extern Type F6 { get; }
+		public static extern Type F7 { get; }
+		public static extern Type F8 { get; }
+		public static extern Type F9 { get; }
+		public static extern Type F10 { get; }
+		public static extern Type F11 { get; }
+		public static extern Type F12 { get; }
+		public static extern Type F13 { get; }
+		public static extern Type F14 { get; }
+		public static extern Type F15 { get; }
+		public static extern Type NumLock { get; }
+		public static extern Type CapsLock { get; }
+		public static extern Type ScrollLock { get; }
+		public static extern Type RightShift { get; }
+		public static extern Type LeftShift { get; }
+		public static extern Type RightControl { get; }
+		public static extern Type LeftControl { get; }
+		public static extern Type RightAlt { get; }
+		public static extern Type LeftAlt { get; }
+		public static extern Type RightMeta { get; }
+		public static extern Type LeftMeta { get; }
+		public static extern Type LeftSuper { get; }
+		public static extern Type RightSuper { get; }
+		public static extern Type Mode { get; }
+		public static extern Type Compose { get; }
+		public static extern Type Help { get; }
+		public static extern Type Print { get; }
+		public static extern Type SysReq { get; }
+		public static extern Type Break { get; }
+		public static extern Type Menu { get; }
+		public static extern Type Power { get; }
+		public static extern Type Euro { get; }
+		public static extern Type Undo { get; }
+		public static extern Type ButtonX { get; }
+		public static extern Type ButtonY { get; }
+		public static extern Type ButtonA { get; }
+		public static extern Type ButtonB { get; }
+		public static extern Type ButtonR1 { get; }
+		public static extern Type ButtonL1 { get; }
+		public static extern Type ButtonR2 { get; }
+		public static extern Type ButtonL2 { get; }
+		public static extern Type ButtonR3 { get; }
+		public static extern Type ButtonL3 { get; }
+		public static extern Type ButtonStart { get; }
+		public static extern Type ButtonSelect { get; }
+		public static extern Type DPadLeft { get; }
+		public static extern Type DPadRight { get; }
+		public static extern Type DPadUp { get; }
+		public static extern Type DPadDown { get; }
+		public static extern Type Thumbstick1 { get; }
+		public static extern Type Thumbstick2 { get; }
+		public static extern Type MouseLeftButton { get; }
+		public static extern Type MouseRightButton { get; }
+		public static extern Type MouseMiddleButton { get; }
+		public static extern Type MouseBackButton { get; }
+		public static extern Type MouseNoButton { get; }
+		public static extern Type MouseX { get; }
+		public static extern Type MouseY { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class KeyInterpolationMode
@@ -4092,15 +3647,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Constant { get; } = null!;
-		public static Type Linear { get; } = null!;
-		public static Type Cubic { get; } = null!;
+		public static extern Type Constant { get; }
+		public static extern Type Linear { get; }
+		public static extern Type Cubic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class KeywordFilterType
@@ -4109,14 +3661,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Include { get; } = null!;
-		public static Type Exclude { get; } = null!;
+		public static extern Type Include { get; }
+		public static extern Type Exclude { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Language
@@ -4125,13 +3674,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
+		public static extern Type Default { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LeftRight
@@ -4140,15 +3686,55 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Left { get; } = null!;
-		public static Type Center { get; } = null!;
-		public static Type Right { get; } = null!;
+		public static extern Type Left { get; }
+		public static extern Type Center { get; }
+		public static extern Type Right { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class LexemeType
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Eof { get; }
+		public static extern Type Name { get; }
+		public static extern Type QuotedString { get; }
+		public static extern Type Number { get; }
+		public static extern Type And { get; }
+		public static extern Type Or { get; }
+		public static extern Type Equal { get; }
+		public static extern Type TildeEqual { get; }
+		public static extern Type GreaterThan { get; }
+		public static extern Type GreaterThanEqual { get; }
+		public static extern Type LessThan { get; }
+		public static extern Type LessThanEqual { get; }
+		public static extern Type Colon { get; }
+		public static extern Type Dot { get; }
+		public static extern Type LeftParenthesis { get; }
+		public static extern Type RightParenthesis { get; }
+		public static extern Type Star { get; }
+		public static extern Type DoubleStar { get; }
+		public static extern Type ReservedSpecial { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class LightingStyle
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type Realistic { get; }
+		public static extern Type Soft { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Limb
@@ -4157,19 +3743,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Head { get; } = null!;
-		public static Type Torso { get; } = null!;
-		public static Type LeftArm { get; } = null!;
-		public static Type RightArm { get; } = null!;
-		public static Type LeftLeg { get; } = null!;
-		public static Type RightLeg { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type Head { get; }
+		public static extern Type Torso { get; }
+		public static extern Type LeftArm { get; }
+		public static extern Type RightArm { get; }
+		public static extern Type LeftLeg { get; }
+		public static extern Type RightLeg { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LineJoinMode
@@ -4178,15 +3761,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Round { get; } = null!;
-		public static Type Bevel { get; } = null!;
-		public static Type Miter { get; } = null!;
+		public static extern Type Round { get; }
+		public static extern Type Bevel { get; }
+		public static extern Type Miter { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ListDisplayMode
@@ -4195,14 +3775,26 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Horizontal { get; } = null!;
-		public static Type Vertical { get; } = null!;
+		public static extern Type Horizontal { get; }
+		public static extern Type Vertical { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class ListenerLocation
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Default { get; }
+		public static extern Type None { get; }
+		public static extern Type Character { get; }
+		public static extern Type Camera { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ListenerType
@@ -4211,16 +3803,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Camera { get; } = null!;
-		public static Type CFrame { get; } = null!;
-		public static Type ObjectPosition { get; } = null!;
-		public static Type ObjectCFrame { get; } = null!;
+		public static extern Type Camera { get; }
+		public static extern Type CFrame { get; }
+		public static extern Type ObjectPosition { get; }
+		public static extern Type ObjectCFrame { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LiveEditingAtomicUpdateResponse
@@ -4229,16 +3818,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type FailureGuidNotFound { get; } = null!;
-		public static Type FailureHashMismatch { get; } = null!;
-		public static Type FailureOperationIllegal { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type FailureGuidNotFound { get; }
+		public static extern Type FailureHashMismatch { get; }
+		public static extern Type FailureOperationIllegal { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LiveEditingBroadcastMessageType
@@ -4247,15 +3833,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Normal { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Error { get; } = null!;
+		public static extern Type Normal { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Error { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LoadCharacterLayeredClothing
@@ -4264,15 +3847,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LoadDynamicHeads
@@ -4281,15 +3861,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class LocationType
@@ -4298,15 +3875,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Character { get; } = null!;
-		public static Type Camera { get; } = null!;
-		public static Type ObjectPosition { get; } = null!;
+		public static extern Type Character { get; }
+		public static extern Type Camera { get; }
+		public static extern Type ObjectPosition { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MarketplaceBulkPurchasePromptStatus
@@ -4315,15 +3889,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Completed { get; } = null!;
-		public static Type Aborted { get; } = null!;
-		public static Type Error { get; } = null!;
+		public static extern Type Completed { get; }
+		public static extern Type Aborted { get; }
+		public static extern Type Error { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MarketplaceItemPurchaseStatus
@@ -4332,25 +3903,22 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type SystemError { get; } = null!;
-		public static Type AlreadyOwned { get; } = null!;
-		public static Type InsufficientRobux { get; } = null!;
-		public static Type QuantityLimitExceeded { get; } = null!;
-		public static Type QuotaExceeded { get; } = null!;
-		public static Type NotForSale { get; } = null!;
-		public static Type NotAvailableForPurchaser { get; } = null!;
-		public static Type PriceMismatch { get; } = null!;
-		public static Type SoldOut { get; } = null!;
-		public static Type PurchaserIsSeller { get; } = null!;
-		public static Type InsufficientMembership { get; } = null!;
-		public static Type PlaceInvalid { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type SystemError { get; }
+		public static extern Type AlreadyOwned { get; }
+		public static extern Type InsufficientRobux { get; }
+		public static extern Type QuantityLimitExceeded { get; }
+		public static extern Type QuotaExceeded { get; }
+		public static extern Type NotForSale { get; }
+		public static extern Type NotAvailableForPurchaser { get; }
+		public static extern Type PriceMismatch { get; }
+		public static extern Type SoldOut { get; }
+		public static extern Type PurchaserIsSeller { get; }
+		public static extern Type InsufficientMembership { get; }
+		public static extern Type PlaceInvalid { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MarketplaceProductType
@@ -4359,14 +3927,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AvatarAsset { get; } = null!;
-		public static Type AvatarBundle { get; } = null!;
+		public static extern Type AvatarAsset { get; }
+		public static extern Type AvatarBundle { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MarkupKind
@@ -4375,14 +3940,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type PlainText { get; } = null!;
-		public static Type Markdown { get; } = null!;
+		public static extern Type PlainText { get; }
+		public static extern Type Markdown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Material
@@ -4391,57 +3953,54 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Plastic { get; } = null!;
-		public static Type SmoothPlastic { get; } = null!;
-		public static Type Neon { get; } = null!;
-		public static Type Wood { get; } = null!;
-		public static Type WoodPlanks { get; } = null!;
-		public static Type Marble { get; } = null!;
-		public static Type Slate { get; } = null!;
-		public static Type Concrete { get; } = null!;
-		public static Type Granite { get; } = null!;
-		public static Type Brick { get; } = null!;
-		public static Type Pebble { get; } = null!;
-		public static Type Cobblestone { get; } = null!;
-		public static Type Rock { get; } = null!;
-		public static Type Sandstone { get; } = null!;
-		public static Type Basalt { get; } = null!;
-		public static Type CrackedLava { get; } = null!;
-		public static Type Limestone { get; } = null!;
-		public static Type Pavement { get; } = null!;
-		public static Type CorrodedMetal { get; } = null!;
-		public static Type DiamondPlate { get; } = null!;
-		public static Type Foil { get; } = null!;
-		public static Type Metal { get; } = null!;
-		public static Type Grass { get; } = null!;
-		public static Type LeafyGrass { get; } = null!;
-		public static Type Sand { get; } = null!;
-		public static Type Fabric { get; } = null!;
-		public static Type Snow { get; } = null!;
-		public static Type Mud { get; } = null!;
-		public static Type Ground { get; } = null!;
-		public static Type Asphalt { get; } = null!;
-		public static Type Salt { get; } = null!;
-		public static Type Ice { get; } = null!;
-		public static Type Glacier { get; } = null!;
-		public static Type Glass { get; } = null!;
-		public static Type ForceField { get; } = null!;
-		public static Type Air { get; } = null!;
-		public static Type Water { get; } = null!;
-		public static Type Cardboard { get; } = null!;
-		public static Type Carpet { get; } = null!;
-		public static Type CeramicTiles { get; } = null!;
-		public static Type ClayRoofTiles { get; } = null!;
-		public static Type RoofShingles { get; } = null!;
-		public static Type Leather { get; } = null!;
-		public static Type Plaster { get; } = null!;
-		public static Type Rubber { get; } = null!;
+		public static extern Type Plastic { get; }
+		public static extern Type SmoothPlastic { get; }
+		public static extern Type Neon { get; }
+		public static extern Type Wood { get; }
+		public static extern Type WoodPlanks { get; }
+		public static extern Type Marble { get; }
+		public static extern Type Slate { get; }
+		public static extern Type Concrete { get; }
+		public static extern Type Granite { get; }
+		public static extern Type Brick { get; }
+		public static extern Type Pebble { get; }
+		public static extern Type Cobblestone { get; }
+		public static extern Type Rock { get; }
+		public static extern Type Sandstone { get; }
+		public static extern Type Basalt { get; }
+		public static extern Type CrackedLava { get; }
+		public static extern Type Limestone { get; }
+		public static extern Type Pavement { get; }
+		public static extern Type CorrodedMetal { get; }
+		public static extern Type DiamondPlate { get; }
+		public static extern Type Foil { get; }
+		public static extern Type Metal { get; }
+		public static extern Type Grass { get; }
+		public static extern Type LeafyGrass { get; }
+		public static extern Type Sand { get; }
+		public static extern Type Fabric { get; }
+		public static extern Type Snow { get; }
+		public static extern Type Mud { get; }
+		public static extern Type Ground { get; }
+		public static extern Type Asphalt { get; }
+		public static extern Type Salt { get; }
+		public static extern Type Ice { get; }
+		public static extern Type Glacier { get; }
+		public static extern Type Glass { get; }
+		public static extern Type ForceField { get; }
+		public static extern Type Air { get; }
+		public static extern Type Water { get; }
+		public static extern Type Cardboard { get; }
+		public static extern Type Carpet { get; }
+		public static extern Type CeramicTiles { get; }
+		public static extern Type ClayRoofTiles { get; }
+		public static extern Type RoofShingles { get; }
+		public static extern Type Leather { get; }
+		public static extern Type Plaster { get; }
+		public static extern Type Rubber { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MaterialPattern
@@ -4450,14 +4009,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Regular { get; } = null!;
-		public static Type Organic { get; } = null!;
+		public static extern Type Regular { get; }
+		public static extern Type Organic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MembershipType
@@ -4466,17 +4022,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type BuildersClub { get; } = null!;
-		public static Type TurboBuildersClub { get; } = null!;
-		public static Type OutrageousBuildersClub { get; } = null!;
-		public static Type Premium { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type BuildersClub { get; }
+		public static extern Type TurboBuildersClub { get; }
+		public static extern Type OutrageousBuildersClub { get; }
+		public static extern Type Premium { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MeshPartDetailLevel
@@ -4485,18 +4038,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type DistanceBased { get; } = null!;
-		public static Type Level00 { get; } = null!;
-		public static Type Level01 { get; } = null!;
-		public static Type Level02 { get; } = null!;
-		public static Type Level03 { get; } = null!;
-		public static Type Level04 { get; } = null!;
+		public static extern Type DistanceBased { get; }
+		public static extern Type Level00 { get; }
+		public static extern Type Level01 { get; }
+		public static extern Type Level02 { get; }
+		public static extern Type Level03 { get; }
+		public static extern Type Level04 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MeshPartHeadsAndAccessories
@@ -4505,15 +4055,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MeshScaleUnit
@@ -4522,18 +4069,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Stud { get; } = null!;
-		public static Type Meter { get; } = null!;
-		public static Type CM { get; } = null!;
-		public static Type MM { get; } = null!;
-		public static Type Foot { get; } = null!;
-		public static Type Inch { get; } = null!;
+		public static extern Type Stud { get; }
+		public static extern Type Meter { get; }
+		public static extern Type CM { get; }
+		public static extern Type MM { get; }
+		public static extern Type Foot { get; }
+		public static extern Type Inch { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MeshType
@@ -4542,24 +4086,21 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Head { get; } = null!;
-		public static Type Torso { get; } = null!;
-		public static Type Wedge { get; } = null!;
-		public static Type Sphere { get; } = null!;
-		public static Type Cylinder { get; } = null!;
-		public static Type FileMesh { get; } = null!;
-		public static Type Brick { get; } = null!;
-		public static Type Prism { get; } = null!;
-		public static Type Pyramid { get; } = null!;
-		public static Type ParallelRamp { get; } = null!;
-		public static Type RightAngleRamp { get; } = null!;
-		public static Type CornerWedge { get; } = null!;
+		public static extern Type Head { get; }
+		public static extern Type Torso { get; }
+		public static extern Type Wedge { get; }
+		public static extern Type Sphere { get; }
+		public static extern Type Cylinder { get; }
+		public static extern Type FileMesh { get; }
+		public static extern Type Brick { get; }
+		public static extern Type Prism { get; }
+		public static extern Type Pyramid { get; }
+		public static extern Type ParallelRamp { get; }
+		public static extern Type RightAngleRamp { get; }
+		public static extern Type CornerWedge { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MessageType
@@ -4568,16 +4109,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type MessageOutput { get; } = null!;
-		public static Type MessageInfo { get; } = null!;
-		public static Type MessageWarning { get; } = null!;
-		public static Type MessageError { get; } = null!;
+		public static extern Type MessageOutput { get; }
+		public static extern Type MessageInfo { get; }
+		public static extern Type MessageWarning { get; }
+		public static extern Type MessageError { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ModelLevelOfDetail
@@ -4586,15 +4124,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type StreamingMesh { get; } = null!;
-		public static Type Disabled { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type StreamingMesh { get; }
+		public static extern Type Disabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ModelStreamingBehavior
@@ -4603,15 +4138,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Legacy { get; } = null!;
-		public static Type Improved { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Legacy { get; }
+		public static extern Type Improved { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ModelStreamingMode
@@ -4620,17 +4152,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Atomic { get; } = null!;
-		public static Type Persistent { get; } = null!;
-		public static Type PersistentPerPlayer { get; } = null!;
-		public static Type Nonatomic { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Atomic { get; }
+		public static extern Type Persistent { get; }
+		public static extern Type PersistentPerPlayer { get; }
+		public static extern Type Nonatomic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ModerationStatus
@@ -4639,17 +4168,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ReviewedApproved { get; } = null!;
-		public static Type ReviewedRejected { get; } = null!;
-		public static Type NotReviewed { get; } = null!;
-		public static Type NotApplicable { get; } = null!;
-		public static Type Invalid { get; } = null!;
+		public static extern Type ReviewedApproved { get; }
+		public static extern Type ReviewedRejected { get; }
+		public static extern Type NotReviewed { get; }
+		public static extern Type NotApplicable { get; }
+		public static extern Type Invalid { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ModifierKey
@@ -4658,16 +4184,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Shift { get; } = null!;
-		public static Type Ctrl { get; } = null!;
-		public static Type Alt { get; } = null!;
-		public static Type Meta { get; } = null!;
+		public static extern Type Shift { get; }
+		public static extern Type Ctrl { get; }
+		public static extern Type Alt { get; }
+		public static extern Type Meta { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MouseBehavior
@@ -4676,15 +4199,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type LockCenter { get; } = null!;
-		public static Type LockCurrentPosition { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type LockCenter { get; }
+		public static extern Type LockCurrentPosition { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MoveState
@@ -4693,17 +4213,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Stopped { get; } = null!;
-		public static Type Coasting { get; } = null!;
-		public static Type Pushing { get; } = null!;
-		public static Type Stopping { get; } = null!;
-		public static Type AirFree { get; } = null!;
+		public static extern Type Stopped { get; }
+		public static extern Type Coasting { get; }
+		public static extern Type Pushing { get; }
+		public static extern Type Stopping { get; }
+		public static extern Type AirFree { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MoverConstraintRootBehaviorMode
@@ -4712,15 +4229,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class MuteState
@@ -4729,14 +4243,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unmuted { get; } = null!;
-		public static Type Muted { get; } = null!;
+		public static extern Type Unmuted { get; }
+		public static extern Type Muted { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NameOcclusion
@@ -4745,15 +4256,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoOcclusion { get; } = null!;
-		public static Type EnemyOcclusion { get; } = null!;
-		public static Type OccludeAll { get; } = null!;
+		public static extern Type NoOcclusion { get; }
+		public static extern Type EnemyOcclusion { get; }
+		public static extern Type OccludeAll { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NetworkOwnership
@@ -4762,15 +4270,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Manual { get; } = null!;
-		public static Type OnContact { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Manual { get; }
+		public static extern Type OnContact { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NetworkStatus
@@ -4779,15 +4284,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Connected { get; } = null!;
-		public static Type Disconnected { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Connected { get; }
+		public static extern Type Disconnected { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NoiseType
@@ -4796,13 +4298,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type SimplexGabor { get; } = null!;
+		public static extern Type SimplexGabor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NormalId
@@ -4811,18 +4310,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Right { get; } = null!;
-		public static Type Top { get; } = null!;
-		public static Type Back { get; } = null!;
-		public static Type Left { get; } = null!;
-		public static Type Bottom { get; } = null!;
-		public static Type Front { get; } = null!;
+		public static extern Type Right { get; }
+		public static extern Type Top { get; }
+		public static extern Type Back { get; }
+		public static extern Type Left { get; }
+		public static extern Type Bottom { get; }
+		public static extern Type Front { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class NotificationButtonType
@@ -4831,14 +4327,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Primary { get; } = null!;
-		public static Type Secondary { get; } = null!;
+		public static extern Type Primary { get; }
+		public static extern Type Secondary { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OperationType
@@ -4847,17 +4340,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Null { get; } = null!;
-		public static Type Union { get; } = null!;
-		public static Type Subtraction { get; } = null!;
-		public static Type Intersection { get; } = null!;
-		public static Type Primitive { get; } = null!;
+		public static extern Type Null { get; }
+		public static extern Type Union { get; }
+		public static extern Type Subtraction { get; }
+		public static extern Type Intersection { get; }
+		public static extern Type Primitive { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OrientationAlignmentMode
@@ -4866,14 +4356,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OneAttachment { get; } = null!;
-		public static Type TwoAttachment { get; } = null!;
+		public static extern Type OneAttachment { get; }
+		public static extern Type TwoAttachment { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OutfitSource
@@ -4882,15 +4369,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type Created { get; } = null!;
-		public static Type Purchased { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type Created { get; }
+		public static extern Type Purchased { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OutfitType
@@ -4899,15 +4383,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type Avatar { get; } = null!;
-		public static Type DynamicHead { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type Avatar { get; }
+		public static extern Type DynamicHead { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OutputLayoutMode
@@ -4916,14 +4397,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Horizontal { get; } = null!;
-		public static Type Vertical { get; } = null!;
+		public static extern Type Horizontal { get; }
+		public static extern Type Vertical { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class OverrideMouseIconBehavior
@@ -4932,15 +4410,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type ForceShow { get; } = null!;
-		public static Type ForceHide { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type ForceShow { get; }
+		public static extern Type ForceHide { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PackagePermission
@@ -4949,18 +4424,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type NoAccess { get; } = null!;
-		public static Type Revoked { get; } = null!;
-		public static Type UseView { get; } = null!;
-		public static Type Edit { get; } = null!;
-		public static Type Own { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type NoAccess { get; }
+		public static extern Type Revoked { get; }
+		public static extern Type UseView { get; }
+		public static extern Type Edit { get; }
+		public static extern Type Own { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PartType
@@ -4969,17 +4441,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Ball { get; } = null!;
-		public static Type Block { get; } = null!;
-		public static Type Cylinder { get; } = null!;
-		public static Type Wedge { get; } = null!;
-		public static Type CornerWedge { get; } = null!;
+		public static extern Type Ball { get; }
+		public static extern Type Block { get; }
+		public static extern Type Cylinder { get; }
+		public static extern Type Wedge { get; }
+		public static extern Type CornerWedge { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleEmitterShape
@@ -4988,16 +4457,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Box { get; } = null!;
-		public static Type Sphere { get; } = null!;
-		public static Type Cylinder { get; } = null!;
-		public static Type Disc { get; } = null!;
+		public static extern Type Box { get; }
+		public static extern Type Sphere { get; }
+		public static extern Type Cylinder { get; }
+		public static extern Type Disc { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleEmitterShapeInOut
@@ -5006,15 +4472,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Outward { get; } = null!;
-		public static Type Inward { get; } = null!;
-		public static Type InAndOut { get; } = null!;
+		public static extern Type Outward { get; }
+		public static extern Type Inward { get; }
+		public static extern Type InAndOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleEmitterShapeStyle
@@ -5023,14 +4486,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Volume { get; } = null!;
-		public static Type Surface { get; } = null!;
+		public static extern Type Volume { get; }
+		public static extern Type Surface { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleFlipbookLayout
@@ -5039,16 +4499,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Grid2x2 { get; } = null!;
-		public static Type Grid4x4 { get; } = null!;
-		public static Type Grid8x8 { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Grid2x2 { get; }
+		public static extern Type Grid4x4 { get; }
+		public static extern Type Grid8x8 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleFlipbookMode
@@ -5057,16 +4514,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Loop { get; } = null!;
-		public static Type OneShot { get; } = null!;
-		public static Type PingPong { get; } = null!;
-		public static Type Random { get; } = null!;
+		public static extern Type Loop { get; }
+		public static extern Type OneShot { get; }
+		public static extern Type PingPong { get; }
+		public static extern Type Random { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleFlipbookTextureCompatible
@@ -5075,15 +4529,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NotCompatible { get; } = null!;
-		public static Type Compatible { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type NotCompatible { get; }
+		public static extern Type Compatible { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ParticleOrientation
@@ -5092,16 +4543,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FacingCamera { get; } = null!;
-		public static Type FacingCameraWorldUp { get; } = null!;
-		public static Type VelocityParallel { get; } = null!;
-		public static Type VelocityPerpendicular { get; } = null!;
+		public static extern Type FacingCamera { get; }
+		public static extern Type FacingCameraWorldUp { get; }
+		public static extern Type VelocityParallel { get; }
+		public static extern Type VelocityPerpendicular { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PathStatus
@@ -5110,18 +4558,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type NoPath { get; } = null!;
-		public static Type ClosestNoPath { get; } = null!;
-		public static Type ClosestOutOfRange { get; } = null!;
-		public static Type FailStartNotEmpty { get; } = null!;
-		public static Type FailFinishNotEmpty { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type NoPath { get; }
+		public static extern Type ClosestNoPath { get; }
+		public static extern Type ClosestOutOfRange { get; }
+		public static extern Type FailStartNotEmpty { get; }
+		public static extern Type FailFinishNotEmpty { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PathWaypointAction
@@ -5130,15 +4575,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Walk { get; } = null!;
-		public static Type Jump { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Walk { get; }
+		public static extern Type Jump { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PathfindingUseImprovedSearch
@@ -5147,15 +4589,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PermissionLevelShown
@@ -5164,17 +4603,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Game { get; } = null!;
-		public static Type RobloxGame { get; } = null!;
-		public static Type RobloxScript { get; } = null!;
-		public static Type Studio { get; } = null!;
-		public static Type Roblox { get; } = null!;
+		public static extern Type Game { get; }
+		public static extern Type RobloxGame { get; }
+		public static extern Type RobloxScript { get; }
+		public static extern Type Studio { get; }
+		public static extern Type Roblox { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PhysicsSimulationRate
@@ -5183,15 +4619,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Fixed240Hz { get; } = null!;
-		public static Type Fixed120Hz { get; } = null!;
-		public static Type Fixed60Hz { get; } = null!;
+		public static extern Type Fixed240Hz { get; }
+		public static extern Type Fixed120Hz { get; }
+		public static extern Type Fixed60Hz { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PhysicsSteppingMethod
@@ -5200,15 +4633,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Fixed { get; } = null!;
-		public static Type Adaptive { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Fixed { get; }
+		public static extern Type Adaptive { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Platform
@@ -5217,34 +4647,31 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Windows { get; } = null!;
-		public static Type OSX { get; } = null!;
-		public static Type IOS { get; } = null!;
-		public static Type Android { get; } = null!;
-		public static Type XBoxOne { get; } = null!;
-		public static Type PS4 { get; } = null!;
-		public static Type PS3 { get; } = null!;
-		public static Type XBox360 { get; } = null!;
-		public static Type WiiU { get; } = null!;
-		public static Type NX { get; } = null!;
-		public static Type Ouya { get; } = null!;
-		public static Type AndroidTV { get; } = null!;
-		public static Type Chromecast { get; } = null!;
-		public static Type Linux { get; } = null!;
-		public static Type SteamOS { get; } = null!;
-		public static Type WebOS { get; } = null!;
-		public static Type DOS { get; } = null!;
-		public static Type BeOS { get; } = null!;
-		public static Type UWP { get; } = null!;
-		public static Type PS5 { get; } = null!;
-		public static Type MetaOS { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type Windows { get; }
+		public static extern Type OSX { get; }
+		public static extern Type IOS { get; }
+		public static extern Type Android { get; }
+		public static extern Type XBoxOne { get; }
+		public static extern Type PS4 { get; }
+		public static extern Type PS3 { get; }
+		public static extern Type XBox360 { get; }
+		public static extern Type WiiU { get; }
+		public static extern Type NX { get; }
+		public static extern Type Ouya { get; }
+		public static extern Type AndroidTV { get; }
+		public static extern Type Chromecast { get; }
+		public static extern Type Linux { get; }
+		public static extern Type SteamOS { get; }
+		public static extern Type WebOS { get; }
+		public static extern Type DOS { get; }
+		public static extern Type BeOS { get; }
+		public static extern Type UWP { get; }
+		public static extern Type PS5 { get; }
+		public static extern Type MetaOS { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PlaybackState
@@ -5253,18 +4680,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Begin { get; } = null!;
-		public static Type Delayed { get; } = null!;
-		public static Type Playing { get; } = null!;
-		public static Type Paused { get; } = null!;
-		public static Type Completed { get; } = null!;
-		public static Type Cancelled { get; } = null!;
+		public static extern Type Begin { get; }
+		public static extern Type Delayed { get; }
+		public static extern Type Playing { get; }
+		public static extern Type Paused { get; }
+		public static extern Type Completed { get; }
+		public static extern Type Cancelled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PlayerActions
@@ -5273,17 +4697,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type CharacterForward { get; } = null!;
-		public static Type CharacterBackward { get; } = null!;
-		public static Type CharacterLeft { get; } = null!;
-		public static Type CharacterRight { get; } = null!;
-		public static Type CharacterJump { get; } = null!;
+		public static extern Type CharacterForward { get; }
+		public static extern Type CharacterBackward { get; }
+		public static extern Type CharacterLeft { get; }
+		public static extern Type CharacterRight { get; }
+		public static extern Type CharacterJump { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PlayerCharacterDestroyBehavior
@@ -5292,15 +4713,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PlayerChatType
@@ -5309,15 +4727,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type Team { get; } = null!;
-		public static Type Whisper { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type Team { get; }
+		public static extern Type Whisper { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PoseEasingDirection
@@ -5326,15 +4741,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type In { get; } = null!;
-		public static Type Out { get; } = null!;
-		public static Type InOut { get; } = null!;
+		public static extern Type In { get; }
+		public static extern Type Out { get; }
+		public static extern Type InOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PoseEasingStyle
@@ -5343,17 +4755,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Linear { get; } = null!;
-		public static Type Constant { get; } = null!;
-		public static Type Elastic { get; } = null!;
-		public static Type Cubic { get; } = null!;
-		public static Type Bounce { get; } = null!;
+		public static extern Type Linear { get; }
+		public static extern Type Constant { get; }
+		public static extern Type Elastic { get; }
+		public static extern Type Cubic { get; }
+		public static extern Type Bounce { get; }
+		public static extern Type CubicV2 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PositionAlignmentMode
@@ -5362,14 +4772,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OneAttachment { get; } = null!;
-		public static Type TwoAttachment { get; } = null!;
+		public static extern Type OneAttachment { get; }
+		public static extern Type TwoAttachment { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PreferredTextSize
@@ -5378,16 +4785,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Medium { get; } = null!;
-		public static Type Large { get; } = null!;
-		public static Type Larger { get; } = null!;
-		public static Type Largest { get; } = null!;
+		public static extern Type Medium { get; }
+		public static extern Type Large { get; }
+		public static extern Type Larger { get; }
+		public static extern Type Largest { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PrimalPhysicsSolver
@@ -5396,15 +4800,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Experimental { get; } = null!;
-		public static Type Disabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Experimental { get; }
+		public static extern Type Disabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PrimitiveType
@@ -5413,18 +4814,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Null { get; } = null!;
-		public static Type Ball { get; } = null!;
-		public static Type Cylinder { get; } = null!;
-		public static Type Block { get; } = null!;
-		public static Type Wedge { get; } = null!;
-		public static Type CornerWedge { get; } = null!;
+		public static extern Type Null { get; }
+		public static extern Type Ball { get; }
+		public static extern Type Cylinder { get; }
+		public static extern Type Block { get; }
+		public static extern Type Wedge { get; }
+		public static extern Type CornerWedge { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PrivilegeType
@@ -5433,17 +4831,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Owner { get; } = null!;
-		public static Type Admin { get; } = null!;
-		public static Type Member { get; } = null!;
-		public static Type Visitor { get; } = null!;
-		public static Type Banned { get; } = null!;
+		public static extern Type Owner { get; }
+		public static extern Type Admin { get; }
+		public static extern Type Member { get; }
+		public static extern Type Visitor { get; }
+		public static extern Type Banned { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ProductLocationRestriction
@@ -5452,15 +4847,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AvatarShop { get; } = null!;
-		public static Type AllowedGames { get; } = null!;
-		public static Type AllGames { get; } = null!;
+		public static extern Type AvatarShop { get; }
+		public static extern Type AllowedGames { get; }
+		public static extern Type AllGames { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ProductPurchaseDecision
@@ -5469,14 +4861,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NotProcessedYet { get; } = null!;
-		public static Type PurchaseGranted { get; } = null!;
+		public static extern Type NotProcessedYet { get; }
+		public static extern Type PurchaseGranted { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PromptCreateAssetResult
@@ -5485,18 +4874,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type PermissionDenied { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type UploadFailed { get; } = null!;
-		public static Type NoUserInput { get; } = null!;
-		public static Type UnknownFailure { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type PermissionDenied { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type UploadFailed { get; }
+		public static extern Type NoUserInput { get; }
+		public static extern Type UnknownFailure { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PromptCreateAvatarResult
@@ -5505,22 +4891,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type PermissionDenied { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type UploadFailed { get; } = null!;
-		public static Type NoUserInput { get; } = null!;
-		public static Type InvalidHumanoidDescription { get; } = null!;
-		public static Type UGCValidationFailed { get; } = null!;
-		public static Type ModeratedName { get; } = null!;
-		public static Type MaxOutfits { get; } = null!;
-		public static Type UnknownFailure { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type PermissionDenied { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type UploadFailed { get; }
+		public static extern Type NoUserInput { get; }
+		public static extern Type InvalidHumanoidDescription { get; }
+		public static extern Type UGCValidationFailed { get; }
+		public static extern Type ModeratedName { get; }
+		public static extern Type MaxOutfits { get; }
+		public static extern Type PurchaseFailure { get; }
+		public static extern Type UnknownFailure { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PromptPublishAssetResult
@@ -5529,18 +4913,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type PermissionDenied { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type UploadFailed { get; } = null!;
-		public static Type NoUserInput { get; } = null!;
-		public static Type UnknownFailure { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type PermissionDenied { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type UploadFailed { get; }
+		public static extern Type NoUserInput { get; }
+		public static extern Type UnknownFailure { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class PropertyStatus
@@ -5549,15 +4930,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Ok { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Error { get; } = null!;
+		public static extern Type Ok { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Error { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ProximityPromptExclusivity
@@ -5566,15 +4944,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OnePerButton { get; } = null!;
-		public static Type OneGlobally { get; } = null!;
-		public static Type AlwaysShow { get; } = null!;
+		public static extern Type OnePerButton { get; }
+		public static extern Type OneGlobally { get; }
+		public static extern Type AlwaysShow { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ProximityPromptInputType
@@ -5583,15 +4958,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Keyboard { get; } = null!;
-		public static Type Gamepad { get; } = null!;
-		public static Type Touch { get; } = null!;
+		public static extern Type Keyboard { get; }
+		public static extern Type Gamepad { get; }
+		public static extern Type Touch { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ProximityPromptStyle
@@ -5600,30 +4972,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
-	}
-	
-	public static class Quality
-	{
-		public interface Type : EnumItem
-		{
-		}
-		
-		public static Type Performance { get; } = null!;
-		public static Type Quality { get; } = null!;
-		
-		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class QualityLevel
@@ -5632,34 +4985,31 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Level01 { get; } = null!;
-		public static Type Level02 { get; } = null!;
-		public static Type Level03 { get; } = null!;
-		public static Type Level04 { get; } = null!;
-		public static Type Level05 { get; } = null!;
-		public static Type Level06 { get; } = null!;
-		public static Type Level07 { get; } = null!;
-		public static Type Level08 { get; } = null!;
-		public static Type Level09 { get; } = null!;
-		public static Type Level10 { get; } = null!;
-		public static Type Level11 { get; } = null!;
-		public static Type Level12 { get; } = null!;
-		public static Type Level13 { get; } = null!;
-		public static Type Level14 { get; } = null!;
-		public static Type Level15 { get; } = null!;
-		public static Type Level16 { get; } = null!;
-		public static Type Level17 { get; } = null!;
-		public static Type Level18 { get; } = null!;
-		public static Type Level19 { get; } = null!;
-		public static Type Level20 { get; } = null!;
-		public static Type Level21 { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Level01 { get; }
+		public static extern Type Level02 { get; }
+		public static extern Type Level03 { get; }
+		public static extern Type Level04 { get; }
+		public static extern Type Level05 { get; }
+		public static extern Type Level06 { get; }
+		public static extern Type Level07 { get; }
+		public static extern Type Level08 { get; }
+		public static extern Type Level09 { get; }
+		public static extern Type Level10 { get; }
+		public static extern Type Level11 { get; }
+		public static extern Type Level12 { get; }
+		public static extern Type Level13 { get; }
+		public static extern Type Level14 { get; }
+		public static extern Type Level15 { get; }
+		public static extern Type Level16 { get; }
+		public static extern Type Level17 { get; }
+		public static extern Type Level18 { get; }
+		public static extern Type Level19 { get; }
+		public static extern Type Level20 { get; }
+		public static extern Type Level21 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class R15CollisionType
@@ -5668,14 +5018,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OuterBox { get; } = null!;
-		public static Type InnerBox { get; } = null!;
+		public static extern Type OuterBox { get; }
+		public static extern Type InnerBox { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RaycastFilterType
@@ -5684,14 +5031,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Exclude { get; } = null!;
-		public static Type Include { get; } = null!;
+		public static extern Type Exclude { get; }
+		public static extern Type Include { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RejectCharacterDeletions
@@ -5700,15 +5044,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RenderFidelity
@@ -5717,15 +5058,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type Precise { get; } = null!;
-		public static Type Performance { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type Precise { get; }
+		public static extern Type Performance { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RenderPriority
@@ -5734,17 +5072,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type First { get; } = null!;
-		public static Type Input { get; } = null!;
-		public static Type Camera { get; } = null!;
-		public static Type Character { get; } = null!;
-		public static Type Last { get; } = null!;
+		public static extern Type First { get; }
+		public static extern Type Input { get; }
+		public static extern Type Camera { get; }
+		public static extern Type Character { get; }
+		public static extern Type Last { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RenderingCacheOptimizationMode
@@ -5753,15 +5088,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RenderingTestComparisonMethod
@@ -5770,14 +5102,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type psnr { get; } = null!;
-		public static Type diff { get; } = null!;
+		public static extern Type psnr { get; }
+		public static extern Type diff { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ReplicateInstanceDestroySetting
@@ -5786,15 +5115,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ResamplerMode
@@ -5803,14 +5129,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Pixelated { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Pixelated { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ReservedHighlightId
@@ -5819,16 +5142,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Standard { get; } = null!;
-		public static Type Selection { get; } = null!;
-		public static Type Hover { get; } = null!;
-		public static Type Active { get; } = null!;
+		public static extern Type Standard { get; }
+		public static extern Type Selection { get; }
+		public static extern Type Hover { get; }
+		public static extern Type Active { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RestPose
@@ -5837,15 +5157,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type RotationsReset { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type RotationsReset { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ReturnKeyType
@@ -5854,18 +5171,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Done { get; } = null!;
-		public static Type Go { get; } = null!;
-		public static Type Next { get; } = null!;
-		public static Type Search { get; } = null!;
-		public static Type Send { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Done { get; }
+		public static extern Type Go { get; }
+		public static extern Type Next { get; }
+		public static extern Type Search { get; }
+		public static extern Type Send { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ReverbType
@@ -5874,36 +5188,33 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoReverb { get; } = null!;
-		public static Type GenericReverb { get; } = null!;
-		public static Type PaddedCell { get; } = null!;
-		public static Type Room { get; } = null!;
-		public static Type Bathroom { get; } = null!;
-		public static Type LivingRoom { get; } = null!;
-		public static Type StoneRoom { get; } = null!;
-		public static Type Auditorium { get; } = null!;
-		public static Type ConcertHall { get; } = null!;
-		public static Type Cave { get; } = null!;
-		public static Type Arena { get; } = null!;
-		public static Type Hangar { get; } = null!;
-		public static Type CarpettedHallway { get; } = null!;
-		public static Type Hallway { get; } = null!;
-		public static Type StoneCorridor { get; } = null!;
-		public static Type Alley { get; } = null!;
-		public static Type Forest { get; } = null!;
-		public static Type City { get; } = null!;
-		public static Type Mountains { get; } = null!;
-		public static Type Quarry { get; } = null!;
-		public static Type Plain { get; } = null!;
-		public static Type ParkingLot { get; } = null!;
-		public static Type SewerPipe { get; } = null!;
-		public static Type UnderWater { get; } = null!;
+		public static extern Type NoReverb { get; }
+		public static extern Type GenericReverb { get; }
+		public static extern Type PaddedCell { get; }
+		public static extern Type Room { get; }
+		public static extern Type Bathroom { get; }
+		public static extern Type LivingRoom { get; }
+		public static extern Type StoneRoom { get; }
+		public static extern Type Auditorium { get; }
+		public static extern Type ConcertHall { get; }
+		public static extern Type Cave { get; }
+		public static extern Type Arena { get; }
+		public static extern Type Hangar { get; }
+		public static extern Type CarpettedHallway { get; }
+		public static extern Type Hallway { get; }
+		public static extern Type StoneCorridor { get; }
+		public static extern Type Alley { get; }
+		public static extern Type Forest { get; }
+		public static extern Type City { get; }
+		public static extern Type Mountains { get; }
+		public static extern Type Quarry { get; }
+		public static extern Type Plain { get; }
+		public static extern Type ParkingLot { get; }
+		public static extern Type SewerPipe { get; }
+		public static extern Type UnderWater { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RibbonTool
@@ -5912,23 +5223,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Select { get; } = null!;
-		public static Type Scale { get; } = null!;
-		public static Type Rotate { get; } = null!;
-		public static Type Move { get; } = null!;
-		public static Type Transform { get; } = null!;
-		public static Type ColorPicker { get; } = null!;
-		public static Type MaterialPicker { get; } = null!;
-		public static Type Group { get; } = null!;
-		public static Type Ungroup { get; } = null!;
-		public static Type None { get; } = null!;
-		public static Type PivotEditor { get; } = null!;
+		public static extern Type Select { get; }
+		public static extern Type Scale { get; }
+		public static extern Type Rotate { get; }
+		public static extern Type Move { get; }
+		public static extern Type Transform { get; }
+		public static extern Type ColorPicker { get; }
+		public static extern Type MaterialPicker { get; }
+		public static extern Type Group { get; }
+		public static extern Type Ungroup { get; }
+		public static extern Type None { get; }
+		public static extern Type PivotEditor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RigScale
@@ -5937,15 +5245,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Rthro { get; } = null!;
-		public static Type RthroNarrow { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Rthro { get; }
+		public static extern Type RthroNarrow { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RigType
@@ -5954,15 +5259,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type R15 { get; } = null!;
-		public static Type Custom { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type R15 { get; }
+		public static extern Type Custom { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RollOffMode
@@ -5971,16 +5273,27 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Inverse { get; } = null!;
-		public static Type Linear { get; } = null!;
-		public static Type LinearSquare { get; } = null!;
-		public static Type InverseTapered { get; } = null!;
+		public static extern Type Inverse { get; }
+		public static extern Type Linear { get; }
+		public static extern Type LinearSquare { get; }
+		public static extern Type InverseTapered { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class RolloutState
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RotationOrder
@@ -5989,18 +5302,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type XYZ { get; } = null!;
-		public static Type XZY { get; } = null!;
-		public static Type YZX { get; } = null!;
-		public static Type YXZ { get; } = null!;
-		public static Type ZXY { get; } = null!;
-		public static Type ZYX { get; } = null!;
+		public static extern Type XYZ { get; }
+		public static extern Type XZY { get; }
+		public static extern Type YZX { get; }
+		public static extern Type YXZ { get; }
+		public static extern Type ZXY { get; }
+		public static extern Type ZYX { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RotationType
@@ -6009,14 +5319,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type MovementRelative { get; } = null!;
-		public static Type CameraRelative { get; } = null!;
+		public static extern Type MovementRelative { get; }
+		public static extern Type CameraRelative { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RtlTextSupport
@@ -6025,15 +5332,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RunContext
@@ -6042,16 +5346,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Legacy { get; } = null!;
-		public static Type Server { get; } = null!;
-		public static Type Client { get; } = null!;
-		public static Type Plugin { get; } = null!;
+		public static extern Type Legacy { get; }
+		public static extern Type Server { get; }
+		public static extern Type Client { get; }
+		public static extern Type Plugin { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RunState
@@ -6060,15 +5361,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Stopped { get; } = null!;
-		public static Type Running { get; } = null!;
-		public static Type Paused { get; } = null!;
+		public static extern Type Stopped { get; }
+		public static extern Type Running { get; }
+		public static extern Type Paused { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class RuntimeUndoBehavior
@@ -6077,15 +5375,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Aggregate { get; } = null!;
-		public static Type Snapshot { get; } = null!;
-		public static Type Hybrid { get; } = null!;
+		public static extern Type Aggregate { get; }
+		public static extern Type Snapshot { get; }
+		public static extern Type Hybrid { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SafeAreaCompatibility
@@ -6094,14 +5389,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type FullscreenExtension { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type FullscreenExtension { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SalesTypeFilter
@@ -6110,15 +5402,25 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type Collectibles { get; } = null!;
-		public static Type Premium { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type Collectibles { get; }
+		public static extern Type Premium { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class SandboxedInstanceMode
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type Default { get; }
+		public static extern Type Experimental { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SaveAvatarThumbnailCustomizationFailure
@@ -6127,18 +5429,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type BadThumbnailType { get; } = null!;
-		public static Type BadYRotDeg { get; } = null!;
-		public static Type BadFieldOfViewDeg { get; } = null!;
-		public static Type BadDistanceScale { get; } = null!;
-		public static Type Other { get; } = null!;
-		public static Type Throttled { get; } = null!;
+		public static extern Type BadThumbnailType { get; }
+		public static extern Type BadYRotDeg { get; }
+		public static extern Type BadFieldOfViewDeg { get; }
+		public static extern Type BadDistanceScale { get; }
+		public static extern Type Other { get; }
+		public static extern Type Throttled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SaveFilter
@@ -6147,15 +5446,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type SaveWorld { get; } = null!;
-		public static Type SaveGame { get; } = null!;
-		public static Type SaveAll { get; } = null!;
+		public static extern Type SaveWorld { get; }
+		public static extern Type SaveGame { get; }
+		public static extern Type SaveAll { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SavedQualitySetting
@@ -6164,23 +5460,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type QualityLevel1 { get; } = null!;
-		public static Type QualityLevel2 { get; } = null!;
-		public static Type QualityLevel3 { get; } = null!;
-		public static Type QualityLevel4 { get; } = null!;
-		public static Type QualityLevel5 { get; } = null!;
-		public static Type QualityLevel6 { get; } = null!;
-		public static Type QualityLevel7 { get; } = null!;
-		public static Type QualityLevel8 { get; } = null!;
-		public static Type QualityLevel9 { get; } = null!;
-		public static Type QualityLevel10 { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type QualityLevel1 { get; }
+		public static extern Type QualityLevel2 { get; }
+		public static extern Type QualityLevel3 { get; }
+		public static extern Type QualityLevel4 { get; }
+		public static extern Type QualityLevel5 { get; }
+		public static extern Type QualityLevel6 { get; }
+		public static extern Type QualityLevel7 { get; }
+		public static extern Type QualityLevel8 { get; }
+		public static extern Type QualityLevel9 { get; }
+		public static extern Type QualityLevel10 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScaleType
@@ -6189,17 +5482,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Stretch { get; } = null!;
-		public static Type Slice { get; } = null!;
-		public static Type Tile { get; } = null!;
-		public static Type Fit { get; } = null!;
-		public static Type Crop { get; } = null!;
+		public static extern Type Stretch { get; }
+		public static extern Type Slice { get; }
+		public static extern Type Tile { get; }
+		public static extern Type Fit { get; }
+		public static extern Type Crop { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScopeCheckResult
@@ -6208,20 +5498,17 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ConsentAccepted { get; } = null!;
-		public static Type InvalidScopes { get; } = null!;
-		public static Type Timeout { get; } = null!;
-		public static Type NoUserInput { get; } = null!;
-		public static Type BackendError { get; } = null!;
-		public static Type UnexpectedError { get; } = null!;
-		public static Type InvalidArgument { get; } = null!;
-		public static Type ConsentDenied { get; } = null!;
+		public static extern Type ConsentAccepted { get; }
+		public static extern Type InvalidScopes { get; }
+		public static extern Type Timeout { get; }
+		public static extern Type NoUserInput { get; }
+		public static extern Type BackendError { get; }
+		public static extern Type UnexpectedError { get; }
+		public static extern Type InvalidArgument { get; }
+		public static extern Type ConsentDenied { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScreenInsets
@@ -6230,16 +5517,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type DeviceSafeInsets { get; } = null!;
-		public static Type CoreUISafeInsets { get; } = null!;
-		public static Type TopbarSafeInsets { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type DeviceSafeInsets { get; }
+		public static extern Type CoreUISafeInsets { get; }
+		public static extern Type TopbarSafeInsets { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScreenOrientation
@@ -6248,17 +5532,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type LandscapeLeft { get; } = null!;
-		public static Type LandscapeRight { get; } = null!;
-		public static Type LandscapeSensor { get; } = null!;
-		public static Type Portrait { get; } = null!;
-		public static Type Sensor { get; } = null!;
+		public static extern Type LandscapeLeft { get; }
+		public static extern Type LandscapeRight { get; }
+		public static extern Type LandscapeSensor { get; }
+		public static extern Type Portrait { get; }
+		public static extern Type Sensor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScrollBarInset
@@ -6267,15 +5548,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type ScrollBar { get; } = null!;
-		public static Type Always { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type ScrollBar { get; }
+		public static extern Type Always { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ScrollingDirection
@@ -6284,15 +5562,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type X { get; } = null!;
-		public static Type Y { get; } = null!;
-		public static Type XY { get; } = null!;
+		public static extern Type X { get; }
+		public static extern Type Y { get; }
+		public static extern Type XY { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SecurityCapability
@@ -6301,29 +5576,30 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RunClientScript { get; } = null!;
-		public static Type RunServerScript { get; } = null!;
-		public static Type AccessOutsideWrite { get; } = null!;
-		public static Type AssetRequire { get; } = null!;
-		public static Type LoadString { get; } = null!;
-		public static Type ScriptGlobals { get; } = null!;
-		public static Type CreateInstances { get; } = null!;
-		public static Type Basic { get; } = null!;
-		public static Type Audio { get; } = null!;
-		public static Type DataStore { get; } = null!;
-		public static Type Network { get; } = null!;
-		public static Type Physics { get; } = null!;
-		public static Type UI { get; } = null!;
-		public static Type CSG { get; } = null!;
-		public static Type Chat { get; } = null!;
-		public static Type Animation { get; } = null!;
-		public static Type Avatar { get; } = null!;
+		public static extern Type RunClientScript { get; }
+		public static extern Type RunServerScript { get; }
+		public static extern Type AccessOutsideWrite { get; }
+		public static extern Type AssetRequire { get; }
+		public static extern Type LoadString { get; }
+		public static extern Type ScriptGlobals { get; }
+		public static extern Type CreateInstances { get; }
+		public static extern Type Basic { get; }
+		public static extern Type Audio { get; }
+		public static extern Type DataStore { get; }
+		public static extern Type Network { get; }
+		public static extern Type Physics { get; }
+		public static extern Type UI { get; }
+		public static extern Type CSG { get; }
+		public static extern Type Chat { get; }
+		public static extern Type Animation { get; }
+		public static extern Type Avatar { get; }
+		public static extern Type Input { get; }
+		public static extern Type Environment { get; }
+		public static extern Type RemoteEvent { get; }
+		public static extern Type LegacySound { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SelectionBehavior
@@ -6332,14 +5608,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Escape { get; } = null!;
-		public static Type Stop { get; } = null!;
+		public static extern Type Escape { get; }
+		public static extern Type Stop { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SelectionRenderMode
@@ -6348,15 +5621,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Outlines { get; } = null!;
-		public static Type BoundingBoxes { get; } = null!;
-		public static Type Both { get; } = null!;
+		public static extern Type Outlines { get; }
+		public static extern Type BoundingBoxes { get; }
+		public static extern Type Both { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SelfViewPosition
@@ -6365,17 +5635,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type LastPosition { get; } = null!;
-		public static Type TopLeft { get; } = null!;
-		public static Type TopRight { get; } = null!;
-		public static Type BottomLeft { get; } = null!;
-		public static Type BottomRight { get; } = null!;
+		public static extern Type LastPosition { get; }
+		public static extern Type TopLeft { get; }
+		public static extern Type TopRight { get; }
+		public static extern Type BottomLeft { get; }
+		public static extern Type BottomRight { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SensorMode
@@ -6384,14 +5651,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Floor { get; } = null!;
-		public static Type Ladder { get; } = null!;
+		public static extern Type Floor { get; }
+		public static extern Type Ladder { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SensorUpdateType
@@ -6400,14 +5664,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type OnRead { get; } = null!;
-		public static Type Manual { get; } = null!;
+		public static extern Type OnRead { get; }
+		public static extern Type Manual { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ServerLiveEditingMode
@@ -6416,15 +5677,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Uninitialized { get; } = null!;
-		public static Type Enabled { get; } = null!;
-		public static Type Disabled { get; } = null!;
+		public static extern Type Uninitialized { get; }
+		public static extern Type Enabled { get; }
+		public static extern Type Disabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ServiceVisibility
@@ -6433,15 +5691,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Always { get; } = null!;
-		public static Type Off { get; } = null!;
-		public static Type WithChildren { get; } = null!;
+		public static extern Type Always { get; }
+		public static extern Type Off { get; }
+		public static extern Type WithChildren { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Severity
@@ -6450,16 +5705,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Error { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Information { get; } = null!;
-		public static Type Hint { get; } = null!;
+		public static extern Type Error { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Information { get; }
+		public static extern Type Hint { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SignalBehavior
@@ -6468,16 +5720,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Immediate { get; } = null!;
-		public static Type Deferred { get; } = null!;
-		public static Type AncestryDeferred { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Immediate { get; }
+		public static extern Type Deferred { get; }
+		public static extern Type AncestryDeferred { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SizeConstraint
@@ -6486,15 +5735,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RelativeXY { get; } = null!;
-		public static Type RelativeXX { get; } = null!;
-		public static Type RelativeYY { get; } = null!;
+		public static extern Type RelativeXY { get; }
+		public static extern Type RelativeXX { get; }
+		public static extern Type RelativeYY { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SolverConvergenceMetricType
@@ -6503,14 +5749,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type IterationBased { get; } = null!;
-		public static Type AlgorithmAgnostic { get; } = null!;
+		public static extern Type IterationBased { get; }
+		public static extern Type AlgorithmAgnostic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SolverConvergenceVisualizationMode
@@ -6519,15 +5762,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type PerIsland { get; } = null!;
-		public static Type PerEdge { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type PerIsland { get; }
+		public static extern Type PerEdge { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SortDirection
@@ -6536,14 +5776,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Ascending { get; } = null!;
-		public static Type Descending { get; } = null!;
+		public static extern Type Ascending { get; }
+		public static extern Type Descending { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SortOrder
@@ -6552,15 +5789,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Name { get; } = null!;
-		public static Type Custom { get; } = null!;
-		public static Type LayoutOrder { get; } = null!;
+		public static extern Type Name { get; }
+		public static extern Type Custom { get; }
+		public static extern Type LayoutOrder { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SpecialKey
@@ -6569,18 +5803,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Insert { get; } = null!;
-		public static Type Home { get; } = null!;
-		public static Type End { get; } = null!;
-		public static Type PageUp { get; } = null!;
-		public static Type PageDown { get; } = null!;
-		public static Type ChatHotkey { get; } = null!;
+		public static extern Type Insert { get; }
+		public static extern Type Home { get; }
+		public static extern Type End { get; }
+		public static extern Type PageUp { get; }
+		public static extern Type PageDown { get; }
+		public static extern Type ChatHotkey { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StartCorner
@@ -6589,16 +5820,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type TopLeft { get; } = null!;
-		public static Type TopRight { get; } = null!;
-		public static Type BottomLeft { get; } = null!;
-		public static Type BottomRight { get; } = null!;
+		public static extern Type TopLeft { get; }
+		public static extern Type TopRight { get; }
+		public static extern Type BottomLeft { get; }
+		public static extern Type BottomRight { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Status
@@ -6607,14 +5835,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Poison { get; } = null!;
-		public static Type Confusion { get; } = null!;
+		public static extern Type Poison { get; }
+		public static extern Type Confusion { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StreamOutBehavior
@@ -6623,15 +5848,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type LowMemory { get; } = null!;
-		public static Type Opportunistic { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type LowMemory { get; }
+		public static extern Type Opportunistic { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StreamingIntegrityMode
@@ -6640,16 +5862,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type MinimumRadiusPause { get; } = null!;
-		public static Type PauseOutsideLoadedArea { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type MinimumRadiusPause { get; }
+		public static extern Type PauseOutsideLoadedArea { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StreamingPauseMode
@@ -6658,15 +5877,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type ClientPhysicsPause { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type ClientPhysicsPause { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioCloseMode
@@ -6675,16 +5891,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type CloseStudio { get; } = null!;
-		public static Type CloseDoc { get; } = null!;
-		public static Type LogOut { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type CloseStudio { get; }
+		public static extern Type CloseDoc { get; }
+		public static extern Type LogOut { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioDataModelType
@@ -6693,17 +5906,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Edit { get; } = null!;
-		public static Type PlayClient { get; } = null!;
-		public static Type PlayServer { get; } = null!;
-		public static Type Standalone { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type Edit { get; }
+		public static extern Type PlayClient { get; }
+		public static extern Type PlayServer { get; }
+		public static extern Type Standalone { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioPlaceUpdateFailureReason
@@ -6712,14 +5922,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Other { get; } = null!;
-		public static Type TeamCreateConflict { get; } = null!;
+		public static extern Type Other { get; }
+		public static extern Type TeamCreateConflict { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioScriptEditorColorCategories
@@ -6728,58 +5935,55 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Operator { get; } = null!;
-		public static Type Number { get; } = null!;
-		public static Type String { get; } = null!;
-		public static Type Comment { get; } = null!;
-		public static Type Keyword { get; } = null!;
-		public static Type Builtin { get; } = null!;
-		public static Type Method { get; } = null!;
-		public static Type Property { get; } = null!;
-		public static Type Nil { get; } = null!;
-		public static Type Bool { get; } = null!;
-		public static Type Function { get; } = null!;
-		public static Type Local { get; } = null!;
-		public static Type Self { get; } = null!;
-		public static Type LuauKeyword { get; } = null!;
-		public static Type FunctionName { get; } = null!;
-		public static Type TODO { get; } = null!;
-		public static Type Background { get; } = null!;
-		public static Type SelectionText { get; } = null!;
-		public static Type SelectionBackground { get; } = null!;
-		public static Type FindSelectionBackground { get; } = null!;
-		public static Type MatchingWordBackground { get; } = null!;
-		public static Type Warning { get; } = null!;
-		public static Type Error { get; } = null!;
-		public static Type Info { get; } = null!;
-		public static Type Hint { get; } = null!;
-		public static Type Whitespace { get; } = null!;
-		public static Type ActiveLine { get; } = null!;
-		public static Type DebuggerCurrentLine { get; } = null!;
-		public static Type DebuggerErrorLine { get; } = null!;
-		public static Type Ruler { get; } = null!;
-		public static Type Bracket { get; } = null!;
-		public static Type MenuPrimaryText { get; } = null!;
-		public static Type MenuSecondaryText { get; } = null!;
-		public static Type MenuSelectedText { get; } = null!;
-		public static Type MenuBackground { get; } = null!;
-		public static Type MenuSelectedBackground { get; } = null!;
-		public static Type MenuScrollbarBackground { get; } = null!;
-		public static Type MenuScrollbarHandle { get; } = null!;
-		public static Type MenuBorder { get; } = null!;
-		public static Type DocViewCodeBackground { get; } = null!;
-		public static Type AICOOverlayText { get; } = null!;
-		public static Type AICOOverlayButtonBackground { get; } = null!;
-		public static Type AICOOverlayButtonBackgroundHover { get; } = null!;
-		public static Type AICOOverlayButtonBackgroundPressed { get; } = null!;
-		public static Type IndentationRuler { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Operator { get; }
+		public static extern Type Number { get; }
+		public static extern Type String { get; }
+		public static extern Type Comment { get; }
+		public static extern Type Keyword { get; }
+		public static extern Type Builtin { get; }
+		public static extern Type Method { get; }
+		public static extern Type Property { get; }
+		public static extern Type Nil { get; }
+		public static extern Type Bool { get; }
+		public static extern Type Function { get; }
+		public static extern Type Local { get; }
+		public static extern Type Self { get; }
+		public static extern Type LuauKeyword { get; }
+		public static extern Type FunctionName { get; }
+		public static extern Type TODO { get; }
+		public static extern Type Background { get; }
+		public static extern Type SelectionText { get; }
+		public static extern Type SelectionBackground { get; }
+		public static extern Type FindSelectionBackground { get; }
+		public static extern Type MatchingWordBackground { get; }
+		public static extern Type Warning { get; }
+		public static extern Type Error { get; }
+		public static extern Type Info { get; }
+		public static extern Type Hint { get; }
+		public static extern Type Whitespace { get; }
+		public static extern Type ActiveLine { get; }
+		public static extern Type DebuggerCurrentLine { get; }
+		public static extern Type DebuggerErrorLine { get; }
+		public static extern Type Ruler { get; }
+		public static extern Type Bracket { get; }
+		public static extern Type MenuPrimaryText { get; }
+		public static extern Type MenuSecondaryText { get; }
+		public static extern Type MenuSelectedText { get; }
+		public static extern Type MenuBackground { get; }
+		public static extern Type MenuSelectedBackground { get; }
+		public static extern Type MenuScrollbarBackground { get; }
+		public static extern Type MenuScrollbarHandle { get; }
+		public static extern Type MenuBorder { get; }
+		public static extern Type DocViewCodeBackground { get; }
+		public static extern Type AICOOverlayText { get; }
+		public static extern Type AICOOverlayButtonBackground { get; }
+		public static extern Type AICOOverlayButtonBackgroundHover { get; }
+		public static extern Type AICOOverlayButtonBackgroundPressed { get; }
+		public static extern Type IndentationRuler { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioScriptEditorColorPresets
@@ -6788,16 +5992,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RobloxDefault { get; } = null!;
-		public static Type Extra1 { get; } = null!;
-		public static Type Extra2 { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type RobloxDefault { get; }
+		public static extern Type Extra1 { get; }
+		public static extern Type Extra2 { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioStyleGuideColor
@@ -6806,142 +6007,139 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type MainBackground { get; } = null!;
-		public static Type Titlebar { get; } = null!;
-		public static Type Dropdown { get; } = null!;
-		public static Type Tooltip { get; } = null!;
-		public static Type Notification { get; } = null!;
-		public static Type ScrollBar { get; } = null!;
-		public static Type ScrollBarBackground { get; } = null!;
-		public static Type TabBar { get; } = null!;
-		public static Type Tab { get; } = null!;
-		public static Type FilterButtonDefault { get; } = null!;
-		public static Type FilterButtonHover { get; } = null!;
-		public static Type FilterButtonChecked { get; } = null!;
-		public static Type FilterButtonAccent { get; } = null!;
-		public static Type FilterButtonBorder { get; } = null!;
-		public static Type FilterButtonBorderAlt { get; } = null!;
-		public static Type RibbonTab { get; } = null!;
-		public static Type RibbonTabTopBar { get; } = null!;
-		public static Type Button { get; } = null!;
-		public static Type MainButton { get; } = null!;
-		public static Type RibbonButton { get; } = null!;
-		public static Type ViewPortBackground { get; } = null!;
-		public static Type InputFieldBackground { get; } = null!;
-		public static Type Item { get; } = null!;
-		public static Type TableItem { get; } = null!;
-		public static Type CategoryItem { get; } = null!;
-		public static Type GameSettingsTableItem { get; } = null!;
-		public static Type GameSettingsTooltip { get; } = null!;
-		public static Type EmulatorBar { get; } = null!;
-		public static Type EmulatorDropDown { get; } = null!;
-		public static Type ColorPickerFrame { get; } = null!;
-		public static Type CurrentMarker { get; } = null!;
-		public static Type Border { get; } = null!;
-		public static Type DropShadow { get; } = null!;
-		public static Type Shadow { get; } = null!;
-		public static Type Light { get; } = null!;
-		public static Type Dark { get; } = null!;
-		public static Type Mid { get; } = null!;
-		public static Type MainText { get; } = null!;
-		public static Type SubText { get; } = null!;
-		public static Type TitlebarText { get; } = null!;
-		public static Type BrightText { get; } = null!;
-		public static Type DimmedText { get; } = null!;
-		public static Type LinkText { get; } = null!;
-		public static Type WarningText { get; } = null!;
-		public static Type ErrorText { get; } = null!;
-		public static Type InfoText { get; } = null!;
-		public static Type SensitiveText { get; } = null!;
-		public static Type ScriptSideWidget { get; } = null!;
-		public static Type ScriptBackground { get; } = null!;
-		public static Type ScriptText { get; } = null!;
-		public static Type ScriptSelectionText { get; } = null!;
-		public static Type ScriptSelectionBackground { get; } = null!;
-		public static Type ScriptFindSelectionBackground { get; } = null!;
-		public static Type ScriptMatchingWordSelectionBackground { get; } = null!;
-		public static Type ScriptOperator { get; } = null!;
-		public static Type ScriptNumber { get; } = null!;
-		public static Type ScriptString { get; } = null!;
-		public static Type ScriptComment { get; } = null!;
-		public static Type ScriptKeyword { get; } = null!;
-		public static Type ScriptBuiltInFunction { get; } = null!;
-		public static Type ScriptWarning { get; } = null!;
-		public static Type ScriptError { get; } = null!;
-		public static Type ScriptInformation { get; } = null!;
-		public static Type ScriptHint { get; } = null!;
-		public static Type ScriptWhitespace { get; } = null!;
-		public static Type ScriptRuler { get; } = null!;
-		public static Type DocViewCodeBackground { get; } = null!;
-		public static Type DebuggerCurrentLine { get; } = null!;
-		public static Type DebuggerErrorLine { get; } = null!;
-		public static Type DiffFilePathText { get; } = null!;
-		public static Type DiffTextHunkInfo { get; } = null!;
-		public static Type DiffTextNoChange { get; } = null!;
-		public static Type DiffTextAddition { get; } = null!;
-		public static Type DiffTextDeletion { get; } = null!;
-		public static Type DiffTextSeparatorBackground { get; } = null!;
-		public static Type DiffTextNoChangeBackground { get; } = null!;
-		public static Type DiffTextAdditionBackground { get; } = null!;
-		public static Type DiffTextDeletionBackground { get; } = null!;
-		public static Type DiffLineNum { get; } = null!;
-		public static Type DiffLineNumSeparatorBackground { get; } = null!;
-		public static Type DiffLineNumNoChangeBackground { get; } = null!;
-		public static Type DiffLineNumAdditionBackground { get; } = null!;
-		public static Type DiffLineNumDeletionBackground { get; } = null!;
-		public static Type DiffFilePathBackground { get; } = null!;
-		public static Type DiffFilePathBorder { get; } = null!;
-		public static Type ChatIncomingBgColor { get; } = null!;
-		public static Type ChatIncomingTextColor { get; } = null!;
-		public static Type ChatOutgoingBgColor { get; } = null!;
-		public static Type ChatOutgoingTextColor { get; } = null!;
-		public static Type ChatModeratedMessageColor { get; } = null!;
-		public static Type Separator { get; } = null!;
-		public static Type ButtonBorder { get; } = null!;
-		public static Type ButtonText { get; } = null!;
-		public static Type InputFieldBorder { get; } = null!;
-		public static Type CheckedFieldBackground { get; } = null!;
-		public static Type CheckedFieldBorder { get; } = null!;
-		public static Type CheckedFieldIndicator { get; } = null!;
-		public static Type HeaderSection { get; } = null!;
-		public static Type Midlight { get; } = null!;
-		public static Type StatusBar { get; } = null!;
-		public static Type DialogButton { get; } = null!;
-		public static Type DialogButtonText { get; } = null!;
-		public static Type DialogButtonBorder { get; } = null!;
-		public static Type DialogMainButton { get; } = null!;
-		public static Type DialogMainButtonText { get; } = null!;
-		public static Type InfoBarWarningBackground { get; } = null!;
-		public static Type InfoBarWarningText { get; } = null!;
-		public static Type ScriptEditorCurrentLine { get; } = null!;
-		public static Type ScriptMethod { get; } = null!;
-		public static Type ScriptProperty { get; } = null!;
-		public static Type ScriptNil { get; } = null!;
-		public static Type ScriptBool { get; } = null!;
-		public static Type ScriptFunction { get; } = null!;
-		public static Type ScriptLocal { get; } = null!;
-		public static Type ScriptSelf { get; } = null!;
-		public static Type ScriptLuauKeyword { get; } = null!;
-		public static Type ScriptFunctionName { get; } = null!;
-		public static Type ScriptTodo { get; } = null!;
-		public static Type ScriptBracket { get; } = null!;
-		public static Type AttributeCog { get; } = null!;
-		public static Type AICOOverlayText { get; } = null!;
-		public static Type AICOOverlayButtonBackground { get; } = null!;
-		public static Type AICOOverlayButtonBackgroundHover { get; } = null!;
-		public static Type AICOOverlayButtonBackgroundPressed { get; } = null!;
-		public static Type OnboardingCover { get; } = null!;
-		public static Type OnboardingHighlight { get; } = null!;
-		public static Type OnboardingShadow { get; } = null!;
-		public static Type BreakpointMarker { get; } = null!;
-		public static Type DiffLineNumHover { get; } = null!;
-		public static Type DiffLineNumSeparatorBackgroundHover { get; } = null!;
+		public static extern Type MainBackground { get; }
+		public static extern Type Titlebar { get; }
+		public static extern Type Dropdown { get; }
+		public static extern Type Tooltip { get; }
+		public static extern Type Notification { get; }
+		public static extern Type ScrollBar { get; }
+		public static extern Type ScrollBarBackground { get; }
+		public static extern Type TabBar { get; }
+		public static extern Type Tab { get; }
+		public static extern Type FilterButtonDefault { get; }
+		public static extern Type FilterButtonHover { get; }
+		public static extern Type FilterButtonChecked { get; }
+		public static extern Type FilterButtonAccent { get; }
+		public static extern Type FilterButtonBorder { get; }
+		public static extern Type FilterButtonBorderAlt { get; }
+		public static extern Type RibbonTab { get; }
+		public static extern Type RibbonTabTopBar { get; }
+		public static extern Type Button { get; }
+		public static extern Type MainButton { get; }
+		public static extern Type RibbonButton { get; }
+		public static extern Type ViewPortBackground { get; }
+		public static extern Type InputFieldBackground { get; }
+		public static extern Type Item { get; }
+		public static extern Type TableItem { get; }
+		public static extern Type CategoryItem { get; }
+		public static extern Type GameSettingsTableItem { get; }
+		public static extern Type GameSettingsTooltip { get; }
+		public static extern Type EmulatorBar { get; }
+		public static extern Type EmulatorDropDown { get; }
+		public static extern Type ColorPickerFrame { get; }
+		public static extern Type CurrentMarker { get; }
+		public static extern Type Border { get; }
+		public static extern Type DropShadow { get; }
+		public static extern Type Shadow { get; }
+		public static extern Type Light { get; }
+		public static extern Type Dark { get; }
+		public static extern Type Mid { get; }
+		public static extern Type MainText { get; }
+		public static extern Type SubText { get; }
+		public static extern Type TitlebarText { get; }
+		public static extern Type BrightText { get; }
+		public static extern Type DimmedText { get; }
+		public static extern Type LinkText { get; }
+		public static extern Type WarningText { get; }
+		public static extern Type ErrorText { get; }
+		public static extern Type InfoText { get; }
+		public static extern Type SensitiveText { get; }
+		public static extern Type ScriptSideWidget { get; }
+		public static extern Type ScriptBackground { get; }
+		public static extern Type ScriptText { get; }
+		public static extern Type ScriptSelectionText { get; }
+		public static extern Type ScriptSelectionBackground { get; }
+		public static extern Type ScriptFindSelectionBackground { get; }
+		public static extern Type ScriptMatchingWordSelectionBackground { get; }
+		public static extern Type ScriptOperator { get; }
+		public static extern Type ScriptNumber { get; }
+		public static extern Type ScriptString { get; }
+		public static extern Type ScriptComment { get; }
+		public static extern Type ScriptKeyword { get; }
+		public static extern Type ScriptBuiltInFunction { get; }
+		public static extern Type ScriptWarning { get; }
+		public static extern Type ScriptError { get; }
+		public static extern Type ScriptInformation { get; }
+		public static extern Type ScriptHint { get; }
+		public static extern Type ScriptWhitespace { get; }
+		public static extern Type ScriptRuler { get; }
+		public static extern Type DocViewCodeBackground { get; }
+		public static extern Type DebuggerCurrentLine { get; }
+		public static extern Type DebuggerErrorLine { get; }
+		public static extern Type DiffFilePathText { get; }
+		public static extern Type DiffTextHunkInfo { get; }
+		public static extern Type DiffTextNoChange { get; }
+		public static extern Type DiffTextAddition { get; }
+		public static extern Type DiffTextDeletion { get; }
+		public static extern Type DiffTextSeparatorBackground { get; }
+		public static extern Type DiffTextNoChangeBackground { get; }
+		public static extern Type DiffTextAdditionBackground { get; }
+		public static extern Type DiffTextDeletionBackground { get; }
+		public static extern Type DiffLineNum { get; }
+		public static extern Type DiffLineNumSeparatorBackground { get; }
+		public static extern Type DiffLineNumNoChangeBackground { get; }
+		public static extern Type DiffLineNumAdditionBackground { get; }
+		public static extern Type DiffLineNumDeletionBackground { get; }
+		public static extern Type DiffFilePathBackground { get; }
+		public static extern Type DiffFilePathBorder { get; }
+		public static extern Type ChatIncomingBgColor { get; }
+		public static extern Type ChatIncomingTextColor { get; }
+		public static extern Type ChatOutgoingBgColor { get; }
+		public static extern Type ChatOutgoingTextColor { get; }
+		public static extern Type ChatModeratedMessageColor { get; }
+		public static extern Type Separator { get; }
+		public static extern Type ButtonBorder { get; }
+		public static extern Type ButtonText { get; }
+		public static extern Type InputFieldBorder { get; }
+		public static extern Type CheckedFieldBackground { get; }
+		public static extern Type CheckedFieldBorder { get; }
+		public static extern Type CheckedFieldIndicator { get; }
+		public static extern Type HeaderSection { get; }
+		public static extern Type Midlight { get; }
+		public static extern Type StatusBar { get; }
+		public static extern Type DialogButton { get; }
+		public static extern Type DialogButtonText { get; }
+		public static extern Type DialogButtonBorder { get; }
+		public static extern Type DialogMainButton { get; }
+		public static extern Type DialogMainButtonText { get; }
+		public static extern Type InfoBarWarningBackground { get; }
+		public static extern Type InfoBarWarningText { get; }
+		public static extern Type ScriptEditorCurrentLine { get; }
+		public static extern Type ScriptMethod { get; }
+		public static extern Type ScriptProperty { get; }
+		public static extern Type ScriptNil { get; }
+		public static extern Type ScriptBool { get; }
+		public static extern Type ScriptFunction { get; }
+		public static extern Type ScriptLocal { get; }
+		public static extern Type ScriptSelf { get; }
+		public static extern Type ScriptLuauKeyword { get; }
+		public static extern Type ScriptFunctionName { get; }
+		public static extern Type ScriptTodo { get; }
+		public static extern Type ScriptBracket { get; }
+		public static extern Type AttributeCog { get; }
+		public static extern Type AICOOverlayText { get; }
+		public static extern Type AICOOverlayButtonBackground { get; }
+		public static extern Type AICOOverlayButtonBackgroundHover { get; }
+		public static extern Type AICOOverlayButtonBackgroundPressed { get; }
+		public static extern Type OnboardingCover { get; }
+		public static extern Type OnboardingHighlight { get; }
+		public static extern Type OnboardingShadow { get; }
+		public static extern Type BreakpointMarker { get; }
+		public static extern Type DiffLineNumHover { get; }
+		public static extern Type DiffLineNumSeparatorBackgroundHover { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class StudioStyleGuideModifier
@@ -6950,17 +6148,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Selected { get; } = null!;
-		public static Type Pressed { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Hover { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Selected { get; }
+		public static extern Type Pressed { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Hover { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Style
@@ -6969,15 +6164,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type AlternatingSupports { get; } = null!;
-		public static Type BridgeStyleSupports { get; } = null!;
-		public static Type NoSupports { get; } = null!;
+		public static extern Type AlternatingSupports { get; }
+		public static extern Type BridgeStyleSupports { get; }
+		public static extern Type NoSupports { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SubscriptionExpirationReason
@@ -6986,17 +6178,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ProductInactive { get; } = null!;
-		public static Type ProductDeleted { get; } = null!;
-		public static Type SubscriberCancelled { get; } = null!;
-		public static Type SubscriberRefunded { get; } = null!;
-		public static Type Lapsed { get; } = null!;
+		public static extern Type ProductInactive { get; }
+		public static extern Type ProductDeleted { get; }
+		public static extern Type SubscriberCancelled { get; }
+		public static extern Type SubscriberRefunded { get; }
+		public static extern Type Lapsed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SubscriptionPaymentStatus
@@ -7005,14 +6194,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Paid { get; } = null!;
-		public static Type Refunded { get; } = null!;
+		public static extern Type Paid { get; }
+		public static extern Type Refunded { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SubscriptionPeriod
@@ -7021,13 +6207,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Month { get; } = null!;
+		public static extern Type Month { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SubscriptionState
@@ -7036,17 +6219,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NeverSubscribed { get; } = null!;
-		public static Type SubscribedWillRenew { get; } = null!;
-		public static Type SubscribedWillNotRenew { get; } = null!;
-		public static Type SubscribedRenewalPaymentPending { get; } = null!;
-		public static Type Expired { get; } = null!;
+		public static extern Type NeverSubscribed { get; }
+		public static extern Type SubscribedWillRenew { get; }
+		public static extern Type SubscribedWillNotRenew { get; }
+		public static extern Type SubscribedRenewalPaymentPending { get; }
+		public static extern Type Expired { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SurfaceConstraint
@@ -7055,16 +6235,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Hinge { get; } = null!;
-		public static Type SteppingMotor { get; } = null!;
-		public static Type Motor { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Hinge { get; }
+		public static extern Type SteppingMotor { get; }
+		public static extern Type Motor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SurfaceGuiShape
@@ -7073,14 +6250,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Flat { get; } = null!;
-		public static Type CurvedHorizontally { get; } = null!;
+		public static extern Type Flat { get; }
+		public static extern Type CurvedHorizontally { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SurfaceGuiSizingMode
@@ -7089,14 +6263,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FixedSize { get; } = null!;
-		public static Type PixelsPerStud { get; } = null!;
+		public static extern Type FixedSize { get; }
+		public static extern Type PixelsPerStud { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SurfaceType
@@ -7105,22 +6276,19 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Smooth { get; } = null!;
-		public static Type Glue { get; } = null!;
-		public static Type Weld { get; } = null!;
-		public static Type Studs { get; } = null!;
-		public static Type Inlet { get; } = null!;
-		public static Type Universal { get; } = null!;
-		public static Type Hinge { get; } = null!;
-		public static Type Motor { get; } = null!;
-		public static Type SteppingMotor { get; } = null!;
-		public static Type SmoothNoOutlines { get; } = null!;
+		public static extern Type Smooth { get; }
+		public static extern Type Glue { get; }
+		public static extern Type Weld { get; }
+		public static extern Type Studs { get; }
+		public static extern Type Inlet { get; }
+		public static extern Type Universal { get; }
+		public static extern Type Hinge { get; }
+		public static extern Type Motor { get; }
+		public static extern Type SteppingMotor { get; }
+		public static extern Type SmoothNoOutlines { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class SwipeDirection
@@ -7129,17 +6297,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Right { get; } = null!;
-		public static Type Left { get; } = null!;
-		public static Type Up { get; } = null!;
-		public static Type Down { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type Right { get; }
+		public static extern Type Left { get; }
+		public static extern Type Up { get; }
+		public static extern Type Down { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TableMajorAxis
@@ -7148,14 +6313,25 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RowMajor { get; } = null!;
-		public static Type ColumnMajor { get; } = null!;
+		public static extern Type RowMajor { get; }
+		public static extern Type ColumnMajor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class TeamCreateErrorState
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type PlaceSizeTooLarge { get; }
+		public static extern Type PlaceSizeApproachingLimit { get; }
+		public static extern Type NoError { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class Technology
@@ -7164,18 +6340,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Voxel { get; } = null!;
-		public static Type Compatibility { get; } = null!;
-		public static Type ShadowMap { get; } = null!;
-		public static Type Future { get; } = null!;
-		public static Type Legacy { get; } = null!;
-		public static Type Unified { get; } = null!;
+		public static extern Type Voxel { get; }
+		public static extern Type Compatibility { get; }
+		public static extern Type ShadowMap { get; }
+		public static extern Type Future { get; }
+		public static extern Type Legacy { get; }
+		public static extern Type Unified { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TeleportMethod
@@ -7184,19 +6357,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type TeleportToSpawnByName { get; } = null!;
-		public static Type TeleportToPlaceInstance { get; } = null!;
-		public static Type TeleportToPrivateServer { get; } = null!;
-		public static Type TeleportPartyAsync { get; } = null!;
-		public static Type TeleportToVIPServer { get; } = null!;
-		public static Type TeleportToInstanceBack { get; } = null!;
-		public static Type TeleportUnknown { get; } = null!;
+		public static extern Type TeleportToSpawnByName { get; }
+		public static extern Type TeleportToPlaceInstance { get; }
+		public static extern Type TeleportToPrivateServer { get; }
+		public static extern Type TeleportPartyAsync { get; }
+		public static extern Type TeleportToVIPServer { get; }
+		public static extern Type TeleportToInstanceBack { get; }
+		public static extern Type TeleportUnknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TeleportResult
@@ -7205,20 +6375,17 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Success { get; } = null!;
-		public static Type Failure { get; } = null!;
-		public static Type GameNotFound { get; } = null!;
-		public static Type GameEnded { get; } = null!;
-		public static Type GameFull { get; } = null!;
-		public static Type Unauthorized { get; } = null!;
-		public static Type Flooded { get; } = null!;
-		public static Type IsTeleporting { get; } = null!;
+		public static extern Type Success { get; }
+		public static extern Type Failure { get; }
+		public static extern Type GameNotFound { get; }
+		public static extern Type GameEnded { get; }
+		public static extern Type GameFull { get; }
+		public static extern Type Unauthorized { get; }
+		public static extern Type Flooded { get; }
+		public static extern Type IsTeleporting { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TeleportState
@@ -7227,17 +6394,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type RequestedFromServer { get; } = null!;
-		public static Type Started { get; } = null!;
-		public static Type WaitingForServer { get; } = null!;
-		public static Type Failed { get; } = null!;
-		public static Type InProgress { get; } = null!;
+		public static extern Type RequestedFromServer { get; }
+		public static extern Type Started { get; }
+		public static extern Type WaitingForServer { get; }
+		public static extern Type Failed { get; }
+		public static extern Type InProgress { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TeleportType
@@ -7246,17 +6410,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type ToPlace { get; } = null!;
-		public static Type ToInstance { get; } = null!;
-		public static Type ToReservedServer { get; } = null!;
-		public static Type ToVIPServer { get; } = null!;
-		public static Type ToInstanceBack { get; } = null!;
+		public static extern Type ToPlace { get; }
+		public static extern Type ToInstance { get; }
+		public static extern Type ToReservedServer { get; }
+		public static extern Type ToVIPServer { get; }
+		public static extern Type ToInstanceBack { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TerrainAcquisitionMethod
@@ -7265,24 +6426,21 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Legacy { get; } = null!;
-		public static Type Template { get; } = null!;
-		public static Type Generate { get; } = null!;
-		public static Type Import { get; } = null!;
-		public static Type Convert { get; } = null!;
-		public static Type EditAddTool { get; } = null!;
-		public static Type EditSeaLevelTool { get; } = null!;
-		public static Type EditReplaceTool { get; } = null!;
-		public static Type RegionFillTool { get; } = null!;
-		public static Type RegionPasteTool { get; } = null!;
-		public static Type Other { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Legacy { get; }
+		public static extern Type Template { get; }
+		public static extern Type Generate { get; }
+		public static extern Type Import { get; }
+		public static extern Type Convert { get; }
+		public static extern Type EditAddTool { get; }
+		public static extern Type EditSeaLevelTool { get; }
+		public static extern Type EditReplaceTool { get; }
+		public static extern Type RegionFillTool { get; }
+		public static extern Type RegionPasteTool { get; }
+		public static extern Type Other { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TerrainFace
@@ -7291,15 +6449,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Top { get; } = null!;
-		public static Type Side { get; } = null!;
-		public static Type Bottom { get; } = null!;
+		public static extern Type Top { get; }
+		public static extern Type Side { get; }
+		public static extern Type Bottom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextChatMessageStatus
@@ -7308,20 +6463,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type Success { get; } = null!;
-		public static Type Sending { get; } = null!;
-		public static Type TextFilterFailed { get; } = null!;
-		public static Type Floodchecked { get; } = null!;
-		public static Type InvalidPrivacySettings { get; } = null!;
-		public static Type InvalidTextChannelPermissions { get; } = null!;
-		public static Type MessageTooLong { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type Success { get; }
+		public static extern Type Sending { get; }
+		public static extern Type TextFilterFailed { get; }
+		public static extern Type Floodchecked { get; }
+		public static extern Type InvalidPrivacySettings { get; }
+		public static extern Type InvalidTextChannelPermissions { get; }
+		public static extern Type MessageTooLong { get; }
+		public static extern Type ModerationTimeout { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextDirection
@@ -7330,15 +6483,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Auto { get; } = null!;
-		public static Type LeftToRight { get; } = null!;
-		public static Type RightToLeft { get; } = null!;
+		public static extern Type Auto { get; }
+		public static extern Type LeftToRight { get; }
+		public static extern Type RightToLeft { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextFilterContext
@@ -7347,14 +6497,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type PublicChat { get; } = null!;
-		public static Type PrivateChat { get; } = null!;
+		public static extern Type PublicChat { get; }
+		public static extern Type PrivateChat { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextInputType
@@ -7363,21 +6510,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type NoSuggestions { get; } = null!;
-		public static Type Number { get; } = null!;
-		public static Type Email { get; } = null!;
-		public static Type Phone { get; } = null!;
-		public static Type Password { get; } = null!;
-		public static Type PasswordShown { get; } = null!;
-		public static Type Username { get; } = null!;
-		public static Type OneTimePassword { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type NoSuggestions { get; }
+		public static extern Type Number { get; }
+		public static extern Type Email { get; }
+		public static extern Type Phone { get; }
+		public static extern Type Password { get; }
+		public static extern Type PasswordShown { get; }
+		public static extern Type Username { get; }
+		public static extern Type OneTimePassword { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextTruncate
@@ -7386,15 +6530,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type AtEnd { get; } = null!;
-		public static Type SplitWord { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type AtEnd { get; }
+		public static extern Type SplitWord { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextXAlignment
@@ -7403,15 +6544,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Left { get; } = null!;
-		public static Type Right { get; } = null!;
-		public static Type Center { get; } = null!;
+		public static extern Type Left { get; }
+		public static extern Type Right { get; }
+		public static extern Type Center { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextYAlignment
@@ -7420,15 +6558,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Top { get; } = null!;
-		public static Type Center { get; } = null!;
-		public static Type Bottom { get; } = null!;
+		public static extern Type Top { get; }
+		public static extern Type Center { get; }
+		public static extern Type Bottom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextureMode
@@ -7437,15 +6572,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Stretch { get; } = null!;
-		public static Type Wrap { get; } = null!;
-		public static Type Static { get; } = null!;
+		public static extern Type Stretch { get; }
+		public static extern Type Wrap { get; }
+		public static extern Type Static { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TextureQueryType
@@ -7454,16 +6586,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NonHumanoid { get; } = null!;
-		public static Type NonHumanoidOrphaned { get; } = null!;
-		public static Type Humanoid { get; } = null!;
-		public static Type HumanoidOrphaned { get; } = null!;
+		public static extern Type NonHumanoid { get; }
+		public static extern Type NonHumanoidOrphaned { get; }
+		public static extern Type Humanoid { get; }
+		public static extern Type HumanoidOrphaned { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ThreadPoolConfig
@@ -7472,23 +6601,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type PerCore4 { get; } = null!;
-		public static Type PerCore3 { get; } = null!;
-		public static Type PerCore2 { get; } = null!;
-		public static Type PerCore1 { get; } = null!;
-		public static Type Auto { get; } = null!;
-		public static Type Threads1 { get; } = null!;
-		public static Type Threads2 { get; } = null!;
-		public static Type Threads3 { get; } = null!;
-		public static Type Threads4 { get; } = null!;
-		public static Type Threads8 { get; } = null!;
-		public static Type Threads16 { get; } = null!;
+		public static extern Type PerCore4 { get; }
+		public static extern Type PerCore3 { get; }
+		public static extern Type PerCore2 { get; }
+		public static extern Type PerCore1 { get; }
+		public static extern Type Auto { get; }
+		public static extern Type Threads1 { get; }
+		public static extern Type Threads2 { get; }
+		public static extern Type Threads3 { get; }
+		public static extern Type Threads4 { get; }
+		public static extern Type Threads8 { get; }
+		public static extern Type Threads16 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ThrottlingPriority
@@ -7497,15 +6623,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Extreme { get; } = null!;
-		public static Type ElevatedOnServer { get; } = null!;
-		public static Type Default { get; } = null!;
+		public static extern Type Extreme { get; }
+		public static extern Type ElevatedOnServer { get; }
+		public static extern Type Default { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ThumbnailSize
@@ -7514,19 +6637,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Size48x48 { get; } = null!;
-		public static Type Size180x180 { get; } = null!;
-		public static Type Size420x420 { get; } = null!;
-		public static Type Size60x60 { get; } = null!;
-		public static Type Size100x100 { get; } = null!;
-		public static Type Size150x150 { get; } = null!;
-		public static Type Size352x352 { get; } = null!;
+		public static extern Type Size48x48 { get; }
+		public static extern Type Size180x180 { get; }
+		public static extern Type Size420x420 { get; }
+		public static extern Type Size60x60 { get; }
+		public static extern Type Size100x100 { get; }
+		public static extern Type Size150x150 { get; }
+		public static extern Type Size352x352 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ThumbnailType
@@ -7535,15 +6655,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type HeadShot { get; } = null!;
-		public static Type AvatarBust { get; } = null!;
-		public static Type AvatarThumbnail { get; } = null!;
+		public static extern Type HeadShot { get; }
+		public static extern Type AvatarBust { get; }
+		public static extern Type AvatarThumbnail { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TickCountSampleMethod
@@ -7552,15 +6669,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Fast { get; } = null!;
-		public static Type Benchmark { get; } = null!;
-		public static Type Precise { get; } = null!;
+		public static extern Type Fast { get; }
+		public static extern Type Benchmark { get; }
+		public static extern Type Precise { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TonemapperPreset
@@ -7569,14 +6683,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Retro { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Retro { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TopBottom
@@ -7585,15 +6696,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Top { get; } = null!;
-		public static Type Center { get; } = null!;
-		public static Type Bottom { get; } = null!;
+		public static extern Type Top { get; }
+		public static extern Type Center { get; }
+		public static extern Type Bottom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TouchCameraMovementMode
@@ -7602,16 +6710,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Classic { get; } = null!;
-		public static Type Follow { get; } = null!;
-		public static Type Orbital { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Classic { get; }
+		public static extern Type Follow { get; }
+		public static extern Type Orbital { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TouchMovementMode
@@ -7620,18 +6725,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Thumbstick { get; } = null!;
-		public static Type DPad { get; } = null!;
-		public static Type Thumbpad { get; } = null!;
-		public static Type ClickToMove { get; } = null!;
-		public static Type DynamicThumbstick { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Thumbstick { get; }
+		public static extern Type DPad { get; }
+		public static extern Type Thumbpad { get; }
+		public static extern Type ClickToMove { get; }
+		public static extern Type DynamicThumbstick { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerError
@@ -7640,23 +6742,20 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Ok { get; } = null!;
-		public static Type NoService { get; } = null!;
-		public static Type InitFailed { get; } = null!;
-		public static Type NoVideo { get; } = null!;
-		public static Type VideoError { get; } = null!;
-		public static Type VideoNoPermission { get; } = null!;
-		public static Type VideoUnsupported { get; } = null!;
-		public static Type NoAudio { get; } = null!;
-		public static Type AudioError { get; } = null!;
-		public static Type AudioNoPermission { get; } = null!;
-		public static Type UnsupportedDevice { get; } = null!;
+		public static extern Type Ok { get; }
+		public static extern Type NoService { get; }
+		public static extern Type InitFailed { get; }
+		public static extern Type NoVideo { get; }
+		public static extern Type VideoError { get; }
+		public static extern Type VideoNoPermission { get; }
+		public static extern Type VideoUnsupported { get; }
+		public static extern Type NoAudio { get; }
+		public static extern Type AudioError { get; }
+		public static extern Type AudioNoPermission { get; }
+		public static extern Type UnsupportedDevice { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerExtrapolationFlagMode
@@ -7665,16 +6764,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Auto { get; } = null!;
-		public static Type ForceDisabled { get; } = null!;
-		public static Type ExtrapolateFacsAndPose { get; } = null!;
-		public static Type ExtrapolateFacsOnly { get; } = null!;
+		public static extern Type Auto { get; }
+		public static extern Type ForceDisabled { get; }
+		public static extern Type ExtrapolateFacsAndPose { get; }
+		public static extern Type ExtrapolateFacsOnly { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerFaceTrackingStatus
@@ -7683,19 +6779,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type FaceTrackingSuccess { get; } = null!;
-		public static Type FaceTrackingNoFaceFound { get; } = null!;
-		public static Type FaceTrackingUnknown { get; } = null!;
-		public static Type FaceTrackingLost { get; } = null!;
-		public static Type FaceTrackingHasTrackingError { get; } = null!;
-		public static Type FaceTrackingIsOccluded { get; } = null!;
-		public static Type FaceTrackingUninitialized { get; } = null!;
+		public static extern Type FaceTrackingSuccess { get; }
+		public static extern Type FaceTrackingNoFaceFound { get; }
+		public static extern Type FaceTrackingUnknown { get; }
+		public static extern Type FaceTrackingLost { get; }
+		public static extern Type FaceTrackingHasTrackingError { get; }
+		public static extern Type FaceTrackingIsOccluded { get; }
+		public static extern Type FaceTrackingUninitialized { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerLodFlagMode
@@ -7704,15 +6797,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Auto { get; } = null!;
-		public static Type ForceFalse { get; } = null!;
-		public static Type ForceTrue { get; } = null!;
+		public static extern Type Auto { get; }
+		public static extern Type ForceFalse { get; }
+		public static extern Type ForceTrue { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerLodValueMode
@@ -7721,15 +6811,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Auto { get; } = null!;
-		public static Type Force0 { get; } = null!;
-		public static Type Force1 { get; } = null!;
+		public static extern Type Auto { get; }
+		public static extern Type Force0 { get; }
+		public static extern Type Force1 { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerMode
@@ -7738,16 +6825,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Audio { get; } = null!;
-		public static Type Video { get; } = null!;
-		public static Type AudioVideo { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Audio { get; }
+		public static extern Type Video { get; }
+		public static extern Type AudioVideo { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerPromptEvent
@@ -7756,13 +6840,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type LODCameraRecommendDisable { get; } = null!;
+		public static extern Type LODCameraRecommendDisable { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TrackerType
@@ -7771,15 +6852,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Face { get; } = null!;
-		public static Type UpperBody { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Face { get; }
+		public static extern Type UpperBody { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TriStateBoolean
@@ -7788,15 +6866,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type False { get; } = null!;
-		public static Type True { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type False { get; }
+		public static extern Type True { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class TweenStatus
@@ -7805,14 +6880,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Canceled { get; } = null!;
-		public static Type Completed { get; } = null!;
+		public static extern Type Canceled { get; }
+		public static extern Type Completed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIDragDetectorBoundingBehavior
@@ -7821,15 +6893,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Automatic { get; } = null!;
-		public static Type EntireObject { get; } = null!;
-		public static Type HitPoint { get; } = null!;
+		public static extern Type Automatic { get; }
+		public static extern Type EntireObject { get; }
+		public static extern Type HitPoint { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIDragDetectorDragRelativity
@@ -7838,14 +6907,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Absolute { get; } = null!;
-		public static Type Relative { get; } = null!;
+		public static extern Type Absolute { get; }
+		public static extern Type Relative { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIDragDetectorDragSpace
@@ -7854,15 +6920,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Parent { get; } = null!;
-		public static Type LayerCollector { get; } = null!;
-		public static Type Reference { get; } = null!;
+		public static extern Type Parent { get; }
+		public static extern Type LayerCollector { get; }
+		public static extern Type Reference { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIDragDetectorDragStyle
@@ -7871,16 +6934,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type TranslatePlane { get; } = null!;
-		public static Type TranslateLine { get; } = null!;
-		public static Type Rotate { get; } = null!;
-		public static Type Scriptable { get; } = null!;
+		public static extern Type TranslatePlane { get; }
+		public static extern Type TranslateLine { get; }
+		public static extern Type Rotate { get; }
+		public static extern Type Scriptable { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIDragDetectorResponseStyle
@@ -7889,16 +6949,27 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Offset { get; } = null!;
-		public static Type Scale { get; } = null!;
-		public static Type CustomOffset { get; } = null!;
-		public static Type CustomScale { get; } = null!;
+		public static extern Type Offset { get; }
+		public static extern Type Scale { get; }
+		public static extern Type CustomOffset { get; }
+		public static extern Type CustomScale { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class UIDragSpeedAxisMapping
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type XY { get; }
+		public static extern Type XX { get; }
+		public static extern Type YY { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIFlexAlignment
@@ -7907,17 +6978,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Fill { get; } = null!;
-		public static Type SpaceAround { get; } = null!;
-		public static Type SpaceBetween { get; } = null!;
-		public static Type SpaceEvenly { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Fill { get; }
+		public static extern Type SpaceAround { get; }
+		public static extern Type SpaceBetween { get; }
+		public static extern Type SpaceEvenly { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UIFlexMode
@@ -7926,17 +6994,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Grow { get; } = null!;
-		public static Type Shrink { get; } = null!;
-		public static Type Fill { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Grow { get; }
+		public static extern Type Shrink { get; }
+		public static extern Type Fill { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UITheme
@@ -7945,14 +7010,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Light { get; } = null!;
-		public static Type Dark { get; } = null!;
+		public static extern Type Light { get; }
+		public static extern Type Dark { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UiMessageType
@@ -7961,14 +7023,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type UiMessageError { get; } = null!;
-		public static Type UiMessageInfo { get; } = null!;
+		public static extern Type UiMessageError { get; }
+		public static extern Type UiMessageInfo { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UsageContext
@@ -7977,14 +7036,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Preview { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Preview { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UserCFrame
@@ -7993,16 +7049,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Head { get; } = null!;
-		public static Type LeftHand { get; } = null!;
-		public static Type RightHand { get; } = null!;
-		public static Type Floor { get; } = null!;
+		public static extern Type Head { get; }
+		public static extern Type LeftHand { get; }
+		public static extern Type RightHand { get; }
+		public static extern Type Floor { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UserInputState
@@ -8011,17 +7064,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Begin { get; } = null!;
-		public static Type Change { get; } = null!;
-		public static Type End { get; } = null!;
-		public static Type Cancel { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type Begin { get; }
+		public static extern Type Change { get; }
+		public static extern Type End { get; }
+		public static extern Type Cancel { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class UserInputType
@@ -8030,33 +7080,30 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type MouseButton1 { get; } = null!;
-		public static Type MouseButton2 { get; } = null!;
-		public static Type MouseButton3 { get; } = null!;
-		public static Type MouseWheel { get; } = null!;
-		public static Type MouseMovement { get; } = null!;
-		public static Type Touch { get; } = null!;
-		public static Type Keyboard { get; } = null!;
-		public static Type Focus { get; } = null!;
-		public static Type Accelerometer { get; } = null!;
-		public static Type Gyro { get; } = null!;
-		public static Type Gamepad1 { get; } = null!;
-		public static Type Gamepad2 { get; } = null!;
-		public static Type Gamepad3 { get; } = null!;
-		public static Type Gamepad4 { get; } = null!;
-		public static Type Gamepad5 { get; } = null!;
-		public static Type Gamepad6 { get; } = null!;
-		public static Type Gamepad7 { get; } = null!;
-		public static Type Gamepad8 { get; } = null!;
-		public static Type TextInput { get; } = null!;
-		public static Type InputMethod { get; } = null!;
-		public static Type None { get; } = null!;
+		public static extern Type MouseButton1 { get; }
+		public static extern Type MouseButton2 { get; }
+		public static extern Type MouseButton3 { get; }
+		public static extern Type MouseWheel { get; }
+		public static extern Type MouseMovement { get; }
+		public static extern Type Touch { get; }
+		public static extern Type Keyboard { get; }
+		public static extern Type Focus { get; }
+		public static extern Type Accelerometer { get; }
+		public static extern Type Gyro { get; }
+		public static extern Type Gamepad1 { get; }
+		public static extern Type Gamepad2 { get; }
+		public static extern Type Gamepad3 { get; }
+		public static extern Type Gamepad4 { get; }
+		public static extern Type Gamepad5 { get; }
+		public static extern Type Gamepad6 { get; }
+		public static extern Type Gamepad7 { get; }
+		public static extern Type Gamepad8 { get; }
+		public static extern Type TextInput { get; }
+		public static extern Type InputMethod { get; }
+		public static extern Type None { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRComfortSetting
@@ -8065,16 +7112,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Comfort { get; } = null!;
-		public static Type Normal { get; } = null!;
-		public static Type Expert { get; } = null!;
-		public static Type Custom { get; } = null!;
+		public static extern Type Comfort { get; }
+		public static extern Type Normal { get; }
+		public static extern Type Expert { get; }
+		public static extern Type Custom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRControllerModelMode
@@ -8083,14 +7127,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type Transparent { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type Transparent { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRDeviceType
@@ -8099,17 +7140,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Unknown { get; } = null!;
-		public static Type OculusRift { get; } = null!;
-		public static Type HTCVive { get; } = null!;
-		public static Type ValveIndex { get; } = null!;
-		public static Type OculusQuest { get; } = null!;
+		public static extern Type Unknown { get; }
+		public static extern Type OculusRift { get; }
+		public static extern Type HTCVive { get; }
+		public static extern Type ValveIndex { get; }
+		public static extern Type OculusQuest { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRLaserPointerMode
@@ -8118,15 +7156,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type Pointer { get; } = null!;
-		public static Type DualPointer { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type Pointer { get; }
+		public static extern Type DualPointer { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRSafetyBubbleMode
@@ -8135,15 +7170,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NoOne { get; } = null!;
-		public static Type OnlyFriends { get; } = null!;
-		public static Type Anyone { get; } = null!;
+		public static extern Type NoOne { get; }
+		public static extern Type OnlyFriends { get; }
+		public static extern Type Anyone { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRScaling
@@ -8152,14 +7184,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type World { get; } = null!;
-		public static Type Off { get; } = null!;
+		public static extern Type World { get; }
+		public static extern Type Off { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRSessionState
@@ -8168,17 +7197,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Undefined { get; } = null!;
-		public static Type Idle { get; } = null!;
-		public static Type Visible { get; } = null!;
-		public static Type Focused { get; } = null!;
-		public static Type Stopping { get; } = null!;
+		public static extern Type Undefined { get; }
+		public static extern Type Idle { get; }
+		public static extern Type Visible { get; }
+		public static extern Type Focused { get; }
+		public static extern Type Stopping { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRTouchpad
@@ -8187,14 +7213,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Left { get; } = null!;
-		public static Type Right { get; } = null!;
+		public static extern Type Left { get; }
+		public static extern Type Right { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VRTouchpadMode
@@ -8203,15 +7226,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Touch { get; } = null!;
-		public static Type VirtualThumbstick { get; } = null!;
-		public static Type ABXY { get; } = null!;
+		public static extern Type Touch { get; }
+		public static extern Type VirtualThumbstick { get; }
+		public static extern Type ABXY { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VelocityConstraintMode
@@ -8220,15 +7240,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Line { get; } = null!;
-		public static Type Plane { get; } = null!;
-		public static Type Vector { get; } = null!;
+		public static extern Type Line { get; }
+		public static extern Type Plane { get; }
+		public static extern Type Vector { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VerticalAlignment
@@ -8237,15 +7254,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Center { get; } = null!;
-		public static Type Top { get; } = null!;
-		public static Type Bottom { get; } = null!;
+		public static extern Type Center { get; }
+		public static extern Type Top { get; }
+		public static extern Type Bottom { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VerticalScrollBarPosition
@@ -8254,14 +7268,11 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Right { get; } = null!;
-		public static Type Left { get; } = null!;
+		public static extern Type Right { get; }
+		public static extern Type Left { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VibrationMotor
@@ -8270,18 +7281,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Large { get; } = null!;
-		public static Type Small { get; } = null!;
-		public static Type LeftTrigger { get; } = null!;
-		public static Type RightTrigger { get; } = null!;
-		public static Type LeftHand { get; } = null!;
-		public static Type RightHand { get; } = null!;
+		public static extern Type Large { get; }
+		public static extern Type Small { get; }
+		public static extern Type LeftTrigger { get; }
+		public static extern Type RightTrigger { get; }
+		public static extern Type LeftHand { get; }
+		public static extern Type RightHand { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VideoDeviceCaptureQuality
@@ -8290,16 +7298,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Low { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type High { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Low { get; }
+		public static extern Type Medium { get; }
+		public static extern Type High { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VideoError
@@ -8308,31 +7313,28 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Ok { get; } = null!;
-		public static Type Eof { get; } = null!;
-		public static Type EAgain { get; } = null!;
-		public static Type BadParameter { get; } = null!;
-		public static Type AllocFailed { get; } = null!;
-		public static Type CodecInitFailed { get; } = null!;
-		public static Type CodecCloseFailed { get; } = null!;
-		public static Type DecodeFailed { get; } = null!;
-		public static Type ParsingFailed { get; } = null!;
-		public static Type Unsupported { get; } = null!;
-		public static Type Generic { get; } = null!;
-		public static Type DownloadFailed { get; } = null!;
-		public static Type StreamNotFound { get; } = null!;
-		public static Type EncodeFailed { get; } = null!;
-		public static Type CreateFailed { get; } = null!;
-		public static Type NoPermission { get; } = null!;
-		public static Type NoService { get; } = null!;
-		public static Type ReleaseFailed { get; } = null!;
-		public static Type Unknown { get; } = null!;
+		public static extern Type Ok { get; }
+		public static extern Type Eof { get; }
+		public static extern Type EAgain { get; }
+		public static extern Type BadParameter { get; }
+		public static extern Type AllocFailed { get; }
+		public static extern Type CodecInitFailed { get; }
+		public static extern Type CodecCloseFailed { get; }
+		public static extern Type DecodeFailed { get; }
+		public static extern Type ParsingFailed { get; }
+		public static extern Type Unsupported { get; }
+		public static extern Type Generic { get; }
+		public static extern Type DownloadFailed { get; }
+		public static extern Type StreamNotFound { get; }
+		public static extern Type EncodeFailed { get; }
+		public static extern Type CreateFailed { get; }
+		public static extern Type NoPermission { get; }
+		public static extern Type NoService { get; }
+		public static extern Type ReleaseFailed { get; }
+		public static extern Type Unknown { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ViewMode
@@ -8341,16 +7343,13 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type GeometryComplexity { get; } = null!;
-		public static Type Transparent { get; } = null!;
-		public static Type Decal { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type GeometryComplexity { get; }
+		public static extern Type Transparent { get; }
+		public static extern Type Decal { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VirtualCursorMode
@@ -8359,15 +7358,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Default { get; } = null!;
-		public static Type Disabled { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Default { get; }
+		public static extern Type Disabled { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VirtualInputMode
@@ -8376,15 +7372,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Recording { get; } = null!;
-		public static Type Playing { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Recording { get; }
+		public static extern Type Playing { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VoiceChatState
@@ -8393,19 +7386,16 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Idle { get; } = null!;
-		public static Type Joining { get; } = null!;
-		public static Type JoiningRetry { get; } = null!;
-		public static Type Joined { get; } = null!;
-		public static Type Leaving { get; } = null!;
-		public static Type Ended { get; } = null!;
-		public static Type Failed { get; } = null!;
+		public static extern Type Idle { get; }
+		public static extern Type Joining { get; }
+		public static extern Type JoiningRetry { get; }
+		public static extern Type Joined { get; }
+		public static extern Type Leaving { get; }
+		public static extern Type Ended { get; }
+		public static extern Type Failed { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VoiceControlPath
@@ -8414,15 +7404,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Publish { get; } = null!;
-		public static Type Subscribe { get; } = null!;
-		public static Type Join { get; } = null!;
+		public static extern Type Publish { get; }
+		public static extern Type Subscribe { get; }
+		public static extern Type Join { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class VolumetricAudio
@@ -8431,15 +7418,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type Automatic { get; } = null!;
-		public static Type Enabled { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type Automatic { get; }
+		public static extern Type Enabled { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WaterDirection
@@ -8448,18 +7432,15 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type NegX { get; } = null!;
-		public static Type X { get; } = null!;
-		public static Type NegY { get; } = null!;
-		public static Type Y { get; } = null!;
-		public static Type NegZ { get; } = null!;
-		public static Type Z { get; } = null!;
+		public static extern Type NegX { get; }
+		public static extern Type X { get; }
+		public static extern Type NegY { get; }
+		public static extern Type Y { get; }
+		public static extern Type NegZ { get; }
+		public static extern Type Z { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WaterForce
@@ -8468,17 +7449,14 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type Small { get; } = null!;
-		public static Type Medium { get; } = null!;
-		public static Type Strong { get; } = null!;
-		public static Type Max { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type Small { get; }
+		public static extern Type Medium { get; }
+		public static extern Type Strong { get; }
+		public static extern Type Max { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WeldConstraintPreserve
@@ -8487,15 +7465,25 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type All { get; } = null!;
-		public static Type None { get; } = null!;
-		public static Type Touching { get; } = null!;
+		public static extern Type All { get; }
+		public static extern Type None { get; }
+		public static extern Type Touching { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class WhisperChatPrivacyMode
+	{
+		public interface Type : EnumItem
 		{
-			return null!;
 		}
+		
+		public static extern Type AllUsers { get; }
+		public static extern Type NoOne { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WrapLayerAutoSkin
@@ -8504,15 +7492,12 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Disabled { get; } = null!;
-		public static Type EnabledPreserve { get; } = null!;
-		public static Type EnabledOverride { get; } = null!;
+		public static extern Type Disabled { get; }
+		public static extern Type EnabledPreserve { get; }
+		public static extern Type EnabledOverride { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WrapLayerDebugMode
@@ -8521,26 +7506,23 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type BoundCage { get; } = null!;
-		public static Type LayerCage { get; } = null!;
-		public static Type BoundCageAndLinks { get; } = null!;
-		public static Type Reference { get; } = null!;
-		public static Type Rbf { get; } = null!;
-		public static Type OuterCage { get; } = null!;
-		public static Type ReferenceMeshAfterMorph { get; } = null!;
-		public static Type HSROuterDetail { get; } = null!;
-		public static Type HSROuter { get; } = null!;
-		public static Type HSRInner { get; } = null!;
-		public static Type HSRInnerReverse { get; } = null!;
-		public static Type LayerCageFittedToBase { get; } = null!;
-		public static Type LayerCageFittedToPrev { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type BoundCage { get; }
+		public static extern Type LayerCage { get; }
+		public static extern Type BoundCageAndLinks { get; }
+		public static extern Type Reference { get; }
+		public static extern Type Rbf { get; }
+		public static extern Type OuterCage { get; }
+		public static extern Type ReferenceMeshAfterMorph { get; }
+		public static extern Type HSROuterDetail { get; }
+		public static extern Type HSROuter { get; }
+		public static extern Type HSRInner { get; }
+		public static extern Type HSRInnerReverse { get; }
+		public static extern Type LayerCageFittedToBase { get; }
+		public static extern Type LayerCageFittedToPrev { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class WrapTargetDebugMode
@@ -8549,21 +7531,18 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type None { get; } = null!;
-		public static Type TargetCageOriginal { get; } = null!;
-		public static Type TargetCageCompressed { get; } = null!;
-		public static Type TargetCageInterface { get; } = null!;
-		public static Type TargetLayerCageOriginal { get; } = null!;
-		public static Type TargetLayerCageCompressed { get; } = null!;
-		public static Type TargetLayerInterface { get; } = null!;
-		public static Type Rbf { get; } = null!;
-		public static Type OuterCageDetail { get; } = null!;
+		public static extern Type None { get; }
+		public static extern Type TargetCageOriginal { get; }
+		public static extern Type TargetCageCompressed { get; }
+		public static extern Type TargetCageInterface { get; }
+		public static extern Type TargetLayerCageOriginal { get; }
+		public static extern Type TargetLayerCageCompressed { get; }
+		public static extern Type TargetLayerInterface { get; }
+		public static extern Type Rbf { get; }
+		public static extern Type OuterCageDetail { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 	
 	public static class ZIndexBehavior
@@ -8572,13 +7551,10 @@ namespace Roblox.Enum
 		{
 		}
 		
-		public static Type Global { get; } = null!;
-		public static Type Sibling { get; } = null!;
+		public static extern Type Global { get; }
+		public static extern Type Sibling { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-		public static EnumItem[] GetEnumItems()
-		{
-			return null!;
-		}
+		public static extern EnumItem[] GetEnumItems();
 	}
 }

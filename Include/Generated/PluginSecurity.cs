@@ -4,26 +4,41 @@ namespace Roblox.PluginClasses
 {
 	public static class Services
 	{
-		public static CoreGui CoreGui { get; } = null!;
-		public static ChangeHistoryService ChangeHistoryService { get; } = null!;
-		public static DebuggerManager DebuggerManager { get; } = null!;
-		public static NetworkSettings NetworkSettings { get; } = null!;
-		public static PackageService PackageService { get; } = null!;
-		public static PluginDebugService PluginDebugService { get; } = null!;
-		public static PluginGuiService PluginGuiService { get; } = null!;
-		public static RenderSettings RenderSettings { get; } = null!;
-		public static RobloxPluginGuiService RobloxPluginGuiService { get; } = null!;
-		public static Selection Selection { get; } = null!;
-		public static StudioData StudioData { get; } = null!;
-		public static StudioService StudioService { get; } = null!;
-		public static TaskScheduler TaskScheduler { get; } = null!;
-		public static TestService TestService { get; } = null!;
-		public static VersionControlService VersionControlService { get; } = null!;
+		public static extern CoreGui CoreGui { get; }
+		public static extern ChangeHistoryService ChangeHistoryService { get; }
+		public static extern DebuggerManager DebuggerManager { get; }
+		public static extern NetworkSettings NetworkSettings { get; }
+		public static extern PackageService PackageService { get; }
+		public static extern PluginDebugService PluginDebugService { get; }
+		public static extern PluginGuiService PluginGuiService { get; }
+		public static extern RenderSettings RenderSettings { get; }
+		public static extern RobloxPluginGuiService RobloxPluginGuiService { get; }
+		public static extern Selection Selection { get; }
+		public static extern StudioData StudioData { get; }
+		public static extern StudioService StudioService { get; }
+		public static extern TaskScheduler TaskScheduler { get; }
+		public static extern TestService TestService { get; }
+		public static extern VersionControlService VersionControlService { get; }
 	}
 	
 	// GENERATED ROBLOX INSTANCE CLASSES
 	
-	public partial interface Instance
+	public interface Object
+	{
+		public new Object Clone();
+	}
+	
+	public interface EditableImage : Object
+	{
+		public new EditableImage Clone();
+	}
+	
+	public interface EditableMesh : Object
+	{
+		public new EditableMesh Clone();
+	}
+	
+	public partial interface Instance : Object
 	{
 		public new Instance Clone();
 		public string GetDebugId(int? scopeLength = null);
@@ -52,6 +67,11 @@ namespace Roblox.PluginClasses
 	public interface AchievementService : IServiceInstance
 	{
 		public new AchievementService Clone();
+	}
+	
+	public interface ActivityHistoryEventService : IServiceInstance
+	{
+		public new ActivityHistoryEventService Clone();
 	}
 	
 	public interface AdPortal : ICreatableInstance
@@ -175,7 +195,6 @@ namespace Roblox.PluginClasses
 	public partial interface AssetService : IServiceInstance
 	{
 		public new AssetService Clone();
-		public MeshPart CreateMeshPartAsync(string meshId, object? options = null);
 	}
 	
 	public interface Atmosphere : ICreatableInstance
@@ -258,6 +277,11 @@ namespace Roblox.PluginClasses
 		public new AudioFocusService Clone();
 	}
 	
+	public interface AudioLimiter : ICreatableInstance
+	{
+		public new AudioLimiter Clone();
+	}
+	
 	public interface AudioListener : ICreatableInstance
 	{
 		public new AudioListener Clone();
@@ -283,6 +307,11 @@ namespace Roblox.PluginClasses
 		public new AudioSearchParams Clone();
 	}
 	
+	public interface AuroraService : IServiceInstance
+	{
+		public new AuroraService Clone();
+	}
+	
 	public interface AvatarChatService : IServiceInstance
 	{
 		public new AvatarChatService Clone();
@@ -301,6 +330,11 @@ namespace Roblox.PluginClasses
 	public interface AvatarImportService : IServiceInstance
 	{
 		public new AvatarImportService Clone();
+	}
+	
+	public interface AvatarPreloader : IServiceInstance
+	{
+		public new AvatarPreloader Clone();
 	}
 	
 	public interface BadgeService : IServiceInstance
@@ -433,11 +467,6 @@ namespace Roblox.PluginClasses
 	public interface Breakpoint : ICreatableInstance
 	{
 		public new Breakpoint Clone();
-	}
-	
-	public interface BubbleChatMessageProperties : ICreatableInstance
-	{
-		public new BubbleChatMessageProperties Clone();
 	}
 	
 	public interface BulkImportService : IServiceInstance
@@ -729,16 +758,6 @@ namespace Roblox.PluginClasses
 		public new BevelMesh Clone();
 	}
 	
-	public interface EditableMesh : DataModelMesh, ICreatableInstance
-	{
-		public new EditableMesh Clone();
-	}
-	
-	public interface RobloxEditableMesh : EditableMesh, ICreatableInstance
-	{
-		public new RobloxEditableMesh Clone();
-	}
-	
 	public interface FileMesh : DataModelMesh, ICreatableInstance
 	{
 		public new FileMesh Clone();
@@ -903,14 +922,9 @@ namespace Roblox.PluginClasses
 		public new DraggerService Clone();
 	}
 	
-	public interface EditableImage : ICreatableInstance
+	public interface EditableService : IServiceInstance
 	{
-		public new EditableImage Clone();
-	}
-	
-	public interface RobloxEditableImage : EditableImage, ICreatableInstance
-	{
-		public new RobloxEditableImage Clone();
+		public new EditableService Clone();
 	}
 	
 	public interface EulerRotationCurve : ICreatableInstance
@@ -951,6 +965,21 @@ namespace Roblox.PluginClasses
 	public interface ExperienceStateCaptureService : IServiceInstance
 	{
 		public new ExperienceStateCaptureService Clone();
+	}
+	
+	public interface ExplorerFilter : ICreatableInstance
+	{
+		public new ExplorerFilter Clone();
+	}
+	
+	public interface ExplorerFilterAutocompleter : Instance
+	{
+		public new ExplorerFilterAutocompleter Clone();
+	}
+	
+	public interface ExplorerServiceVisibilityService : IServiceInstance
+	{
+		public new ExplorerServiceVisibilityService Clone();
 	}
 	
 	public interface Explosion : ICreatableInstance
@@ -1051,6 +1080,11 @@ namespace Roblox.PluginClasses
 	public interface Feature : Instance
 	{
 		public new Feature Clone();
+	}
+	
+	public interface FeatureRestrictionManager : IServiceInstance
+	{
+		public new FeatureRestrictionManager Clone();
 	}
 	
 	public interface File : Instance
@@ -1570,13 +1604,11 @@ namespace Roblox.PluginClasses
 	public interface Script : BaseScript, ICreatableInstance
 	{
 		public new Script Clone();
-		public string Source { get; set; }
 	}
 	
 	public interface ModuleScript : LuaSourceContainer, ICreatableInstance
 	{
 		public new ModuleScript Clone();
-		public string Source { get; set; }
 	}
 	
 	public interface MarkerCurve : ICreatableInstance
@@ -1943,6 +1975,11 @@ namespace Roblox.PluginClasses
 		public new PausedStateException Clone();
 	}
 	
+	public interface PerformanceControlService : IServiceInstance
+	{
+		public new PerformanceControlService Clone();
+	}
+	
 	public interface PhysicsService : IServiceInstance
 	{
 		public new PhysicsService Clone();
@@ -2280,6 +2317,11 @@ namespace Roblox.PluginClasses
 		public new RobloxPluginGuiService Clone();
 	}
 	
+	public interface RobloxSerializableInstance : Instance
+	{
+		public new RobloxSerializableInstance Clone();
+	}
+	
 	public interface RomarkService : IServiceInstance
 	{
 		public new RomarkService Clone();
@@ -2371,6 +2413,7 @@ namespace Roblox.PluginClasses
 		public object CloseAsync();
 		public object EditTextAsync(string newText, int startLine, int startCharacter, int endLine, int endCharacter);
 		public object ForceSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
+		public object MultiEditTextAsync(object[] edits);
 		public object RequestSetSelectionAsync(int cursorLine, int cursorCharacter, int? anchorLine = null, int? anchorCharacter = null);
 		public ScriptSignal<long, long, long, long> SelectionChanged { get; }
 		public ScriptSignal<long, long> ViewportChanged { get; }
@@ -2440,6 +2483,11 @@ namespace Roblox.PluginClasses
 	public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
 	{
 		public new ControllerPartSensor Clone();
+	}
+	
+	public interface FluidForceSensor : SensorBase, ICreatableInstance
+	{
+		public new FluidForceSensor Clone();
 	}
 	
 	public partial interface ServerScriptService : IServiceInstance
@@ -2581,7 +2629,9 @@ namespace Roblox.PluginClasses
 	public partial interface SoundService : IServiceInstance
 	{
 		public new SoundService Clone();
+		public Enum.ListenerLocation.Type DefaultListenerLocation { get; set; }
 		public void OpenAttenuationCurveEditor(Instance[] selectedCurveObjects);
+		public void OpenDirectionalCurveEditor(Instance[] selectedCurveObjects);
 	}
 	
 	public interface Sparkles : ICreatableInstance
@@ -2710,6 +2760,11 @@ namespace Roblox.PluginClasses
 		public Color3 GetColor(Enum.StudioStyleGuideColor.Type styleguideitem, Enum.StudioStyleGuideModifier.Type? modifier = null);
 	}
 	
+	public interface StudioUserService : IServiceInstance
+	{
+		public new StudioUserService Clone();
+	}
+	
 	public interface StudioWidgetsService : IServiceInstance
 	{
 		public new StudioWidgetsService Clone();
@@ -2774,6 +2829,11 @@ namespace Roblox.PluginClasses
 		public new TeamCreateData Clone();
 	}
 	
+	public interface TeamCreatePublishService : IServiceInstance
+	{
+		public new TeamCreatePublishService Clone();
+	}
+	
 	public interface TeamCreateService : IServiceInstance
 	{
 		public new TeamCreateService Clone();
@@ -2782,6 +2842,11 @@ namespace Roblox.PluginClasses
 	public interface Teams : IServiceInstance
 	{
 		public new Teams Clone();
+	}
+	
+	public interface TelemetryService : IServiceInstance
+	{
+		public new TelemetryService Clone();
 	}
 	
 	public interface TeleportAsyncResult : Instance
@@ -2882,6 +2947,16 @@ namespace Roblox.PluginClasses
 	public interface TextChatMessageProperties : ICreatableInstance
 	{
 		public new TextChatMessageProperties Clone();
+	}
+	
+	public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreatableInstance
+	{
+		public new BubbleChatMessageProperties Clone();
+	}
+	
+	public interface ChatWindowMessageProperties : TextChatMessageProperties
+	{
+		public new ChatWindowMessageProperties Clone();
 	}
 	
 	public interface TextChatService : IServiceInstance
@@ -3154,6 +3229,11 @@ namespace Roblox.PluginClasses
 		public new VideoDeviceInput Clone();
 	}
 	
+	public interface VideoPlayer : ICreatableInstance
+	{
+		public new VideoPlayer Clone();
+	}
+	
 	public interface VisualizationMode : ICreatableInstance
 	{
 		public new VisualizationMode Clone();
@@ -3174,6 +3254,11 @@ namespace Roblox.PluginClasses
 		public new VoiceChatService Clone();
 		public bool EnableDefaultVoice { get; set; }
 		public Enum.AudioApiRollout.Type UseAudioApi { get; set; }
+	}
+	
+	public interface WebViewService : IServiceInstance
+	{
+		public new WebViewService Clone();
 	}
 	
 	public interface WeldConstraint : ICreatableInstance
