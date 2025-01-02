@@ -41,7 +41,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y xmlstarlet
 
       - name: Generate Files
-        run: TypeGenerator/bin/Release/net8.0/TypeGenerator -o RobloxTypes
+        run: TypeGenerator/bin/Release/net9.0/TypeGenerator -o ./RobloxTypes
 
       - name: Push Generated Files
         run: |
