@@ -10,4 +10,8 @@
     <PackageId>RobloxCS.Types</PackageId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="./test.cs" />
+  </ItemGroup>
+  
 </Project>

@@ -3,138 +3,45 @@
     using HttpHeaders = IDictionary<string, string>;
 
     [AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false)]
-    public sealed class Native : Attribute
-    {
-    }
+    public sealed class Native : Attribute;
 
-    public partial interface _G
-    {
-    }
+    public partial interface _G;
 
     public static partial class Globals
     {
-        public static DataModel game { get; } = null!;
-        public static LuaSourceContainer script { get; } = null!;
-        public static PluginClasses.Plugin plugin { get; } = null!;
-        public static _G _G { get; } = null!;
-        public static string _VERSION { get; } = null!;
+        public static extern DataModel game { get; }
+        public static extern LuaSourceContainer script { get; }
+        public static extern PluginClasses.Plugin plugin { get; }
+        public static extern _G _G { get; }
+        public static extern string _VERSION { get; }
 
-        public static (K, V)[] pairs<K, V>(IDictionary<K, V> obj)
-        {
-            return null!;
-        }
-
-        public static void print(params object[] values)
-        { 
-        }
-
-        public static void warn(params string[] messages)
-        {
-        }
-
-        public static void error(string message, int? level = null)
-        {
-        }
-
-        public static object require(ModuleScript module)
-        {
-            return null!;
-        }
-
-        public static float tick()
-        {
-            return default;
-        }
-
-        public static string TypeOf(object obj)
-        {
-            return null!;
-        }
-
-        public static IEnumerable<(TKey, TValue)> pairs<TKey, TValue>(Dictionary<TKey, TValue> table) where TKey : notnull
-        {
-            return null!;
-        }
-
-        public static object getmetatable(object obj)
-        {
-            return null!;
-        }
-
-        public static void setmetatable(object obj, object meta)
-        {
-        }
-
-        public static object rawget(object obj, object index)
-        {
-            return null!;
-        }
-
-        public static object rawset(object obj, object index, object value)
-        {
-            return null!;
-        }
-
-        public static uint rawlen(object obj)
-        {
-            return default;
-        }
-
-        public static bool raweq(object a, object b)
-        {
-            return default;
-        }
-
+        public static extern (K, V)[] pairs<K, V>(IDictionary<K, V> obj);
+        public static extern void print(params object[] values);
+        public static extern void warn(params string[] messages);
+        public static extern void error(string message, int? level = null);
+        public static extern object require(ModuleScript module);
+        public static extern float tick();
+        public static extern string TypeOf(object obj);
+        public static extern IEnumerable<(TKey, TValue)> pairs<TKey, TValue>(Dictionary<TKey, TValue> table)
+            where TKey : notnull;
+        public static extern object getmetatable(object obj);
+        public static extern void setmetatable(object obj, object meta);
+        public static extern object rawget(object obj, object index);
+        public static extern object rawset(object obj, object index, object value);
+        public static extern uint rawlen(object obj);
+        public static extern bool raweq(object a, object b);
         /// <summary>Returns all arguments after argument number index.</summary>
-        public static object select(char cmd, params object[] args) // TODO: return LuaTuple<object[]>
-        {
-            return null!;
-        }
-
+        public static extern object select(char cmd, params object[] args); // TODO: return LuaTuple<object[]>;=
         /// <summary>Returns the total number of arguments that were passed after the cmd argument.</summary>
-        public static uint select(uint index, params object[] args)
-        {
-            return default;
-        }
-
-        public static void assert(object obj, string? errorMessage = null)
-        { 
-        }
-
-        public static object newproxy(bool addMetatable)
-        {
-            return null!;
-        }
-
-        public static object loadstring(string str, string? chunkName = null)
-        {
-            return null!;
-        }
-
-        public static string version()
-        {
-            return null!;
-        }
-
-        public static UserSettings UserSettings()
-        {
-            return null!;
-        }
-
-        public static PluginClasses.GlobalSettings settings()
-        {
-            return null!;
-        }
-
-        public static uint gcinfo()
-        {
-            return default;
-        }
-
-        public static float collectgarbage(string option)
-        { 
-            return default;
-        }
+        public static extern uint select(uint index, params object[] args);
+        public static extern void assert(object obj, string? errorMessage = null);
+        public static extern object newproxy(bool addMetatable);
+        public static extern object loadstring(string str, string? chunkName = null);
+        public static extern string version();
+        public static extern UserSettings UserSettings();
+        public static extern PluginClasses.GlobalSettings settings();
+        public static extern uint gcinfo();
+        public static extern float collectgarbage(string option);
     }
 
     /// <summary>The <see cref="EnumItem"/> data type represents an individual item in a Roblox enum.</summary>
@@ -157,7 +64,7 @@
         }
     }
 
-    public interface IScriptSignal<TAction>
+    public interface IScriptSignal<in TAction> where TAction : Delegate
     {
         public ScriptConnection Connect(TAction func);
         public ScriptConnection ConnectParellel(TAction func);
@@ -254,6 +161,49 @@
         public bool Connected { get; set; }
 
         public void Disconnect();
+    }
+
+    /// <summary>
+    /// The <see cref="Roblox.Content"/> data type represents a reference to asset content stored externally or as an object within the place, wrapping a single value of one of the supported <see cref="Roblox.Enum.ContentSourceType">Enum.ContentSourceType</see> values.
+    /// <h3>Warning</h3>
+    /// Replication is not yet supported for <see cref="Roblox.Object"/> values. When an <see cref="Roblox.Instance"/> with a <see cref="Roblox.Content"/> property containing an <see cref="Roblox.Object"/> value is replicated, an unusable placeholder <see cref="Roblox.Object"/> of the same type will be used instead of the <see cref="Roblox.Object"/> itself, and any attempt to read or write the contents of that placeholder object will throw. These placeholder objects will render as a cyan and magenta checkerboard pattern.
+    /// This will be replaced with standard replication behavior in the future. For now, do not use <see cref="Roblox.EditableImage"/> or <see cref="Roblox.EditableMesh"/> as <see cref="Roblox.Content"/> on the server on an <see cref="Roblox.Instance"/> that can replicate to clients.
+    /// </summary>
+    public sealed class Content
+    {
+        /// <summary>
+        /// An empty <see cref="Roblox.Content"/> value with <see cref="Roblox.Content.SourceType">Content.SourceType</see> of <see cref="Roblox.Enum.ContentSourceType.None">None</see>.
+        /// </summary>
+        public static extern Content none { get; }
+        
+        /// <summary>
+        /// The source type of the contained value. Indicates which property contains a non‑nil value.
+        /// </summary>
+        public extern Enum.ContentSourceType.Type SourceType { get; }
+        /// <summary>
+        /// A URI string if <see cref="Roblox.Content.SourceType">Content.SourceType</see> is <see cref="Roblox.Enum.ContentSourceType.Uri">Uri</see>, otherwise `nil`.
+        /// </summary>
+        public extern string? Uri { get; }
+        /// <summary>
+        /// A reference to a non-nil <see cref="Roblox.Object"/> if <see cref="Roblox.Content.SourceType">Content.SourceType</see> is <see cref="Roblox.Object"/>, otherwise `nil`.
+        /// </summary>
+        public extern Object? Object { get; }
+        
+        /// <summary>
+        /// <para>Returns a new <see cref="Roblox.Content"/> with an <a href="https://create.roblox.com/docs/projects/assets#asset-uris">asset URI</a> string value referencing content external to the place.</para>
+        /// <para><see cref="Roblox.Content.SourceType">Content.SourceType</see> will be <see cref="Roblox.Enum.ContentSourceType.Uri">Uri</see>, and <see cref="Roblox.Content.Uri">Content.Uri</see> will contain a non‑nil string value.</para>
+        /// <para>If <c>uri</c> is empty, <see cref="Roblox.Content.none">Content.none</see> will be returned instead.</para>
+        /// </summary>
+        /// <param name="uri">The <a href="https://create.roblox.com/docs/projects/assets#asset-uris">asset URI</a> string.</param>
+        public static extern Content fromUri(string uri);
+        /// <summary>
+        /// <para>Returns a new <see cref="Roblox.Content"/> with a strong reference to an <see cref="Roblox.Object"/>.</para>
+        /// <para><see cref="Roblox.Content.SourceType">Content.SourceType</see> will be <see cref="Roblox.Object"/>, and <see cref="Roblox.Content.Object">Content.Object</see> will contain a non‑nil <see cref="Roblox.Object"/> reference.</para>
+        /// <para><see cref="Roblox.Content.Object">Content.Object</see> references are strong references that hold shared ownership of the <see cref="Roblox.Object"/>. Any <see cref="Roblox.Content.Object">Content.Object</see> reference will extend the lifetime of that <see cref="Roblox.Object"/> and prevent it from being garbage collected.</para>
+        /// </summary>
+        /// <param name="obj">The <see cref="Roblox.Object"/> to reference.</param>
+        /// <throws>If object is nil.</throws>
+        public static extern Content fromObject(Object obj);
     }
 
     /// <summary>
@@ -1592,7 +1542,7 @@
     /// <summary>
     /// The <see cref="Axes"/> data type is for the <see cref="ArcHandles"/> class to control which rotation axes are currently enabled.
     /// </summary>
-    public class Axes
+    public sealed class Axes
     {
         /// <summary>Whether the X axis is enabled.</summary>
         public readonly bool X;

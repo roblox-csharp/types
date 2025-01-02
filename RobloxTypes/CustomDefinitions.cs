@@ -19,50 +19,23 @@
 
     public static partial class Globals
     {
-        public static float ToNumber(string str)
-        {
-            return default;
-        }
+        public static extern float ToNumber(string str);
 
-        public static float ToFloat(string str)
-        {
-            return default;
-        }
+        public static extern float ToFloat(string str);
 
-        public static double ToDouble(string str)
-        {
-            return default;
-        }
+        public static extern double ToDouble(string str);
 
-        public static int ToInt(string str)
-        {
-            return default;
-        }
+        public static extern int ToInt(string str);
 
-        public static uint ToUInt(string str)
-        {
-            return default;
-        }
+        public static extern uint ToUInt(string str);
 
-        public static short ToShort(string str)
-        {
-            return default;
-        }
+        public static extern short ToShort(string str);
 
-        public static ushort ToUShort(string str)
-        {
-            return default;
-        }
+        public static extern ushort ToUShort(string str);
 
-        public static byte ToByte(string str)
-        {
-            return default;
-        }
+        public static extern byte ToByte(string str);
 
-        public static sbyte ToSByte(string str)
-        {
-            return default;
-        }
+        public static extern sbyte ToSByte(string str);
     }
 
     public interface ClipEvaluator : Instance
@@ -203,10 +176,7 @@
 
     public partial interface Instance
     {
-        public static sealed T Create<T>(Instance? parent = null) where T : ICreatableInstance
-        {
-            return default!;
-        }
+        public static sealed extern T Create<T>(Instance? parent = null) where T : ICreatableInstance;
 
         public Instance? FindFirstAncestor(string name);
         public Instance? FindFirstChild(string name, bool? recursive = null);
@@ -232,7 +202,7 @@
         public bool isDescendantOf(Instance ancestor);
         public ScriptSignal<Instance, Instance> AncestryChanged { get; }
         public ScriptSignal<string> AttributeChanged { get; }
-        public ScriptSignal<string> Changed { get; }
+        public new ScriptSignal<string> Changed { get; }
         public ScriptSignal<Instance> ChildAdded { get; }
         public ScriptSignal<Instance> ChildRemoved { get; }
         public ScriptSignal<Instance> DescendantAdded { get; }

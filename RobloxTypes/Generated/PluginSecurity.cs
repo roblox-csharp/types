@@ -102,7 +102,7 @@ namespace Roblox.PluginClasses
 	public partial interface AnimationClipProvider : IServiceInstance
 	{
 		public new AnimationClipProvider Clone();
-		public AnimationClip GetAnimationClip(ContentId assetId);
+		public AnimationClip GetAnimationClip(string assetId);
 		public AnimationClip GetAnimationClipById(long assetId, bool useCache);
 	}
 	
@@ -872,7 +872,7 @@ namespace Roblox.PluginClasses
 		public new DebuggerManager Clone();
 		public bool DebuggingEnabled { get; }
 		public Instance AddDebugger(LuaSourceContainer script);
-		public Instances GetDebuggers();
+		public Instance[] GetDebuggers();
 		public void Resume();
 		public void StepIn();
 		public void StepOut();
@@ -1091,7 +1091,7 @@ namespace Roblox.PluginClasses
 	{
 		public new File Clone();
 		public string GetBinaryContents();
-		public ContentId GetTemporaryId();
+		public string GetTemporaryId();
 	}
 	
 	public interface Fire : ICreatableInstance
@@ -1522,7 +1522,7 @@ namespace Roblox.PluginClasses
 	public partial interface KeyframeSequenceProvider : IServiceInstance
 	{
 		public new KeyframeSequenceProvider Clone();
-		public Instance GetKeyframeSequence(ContentId assetId);
+		public Instance GetKeyframeSequence(string assetId);
 		public Instance GetKeyframeSequenceById(long assetId, bool useCache);
 	}
 	
@@ -1639,10 +1639,10 @@ namespace Roblox.PluginClasses
 	public interface MaterialVariant : ICreatableInstance
 	{
 		public new MaterialVariant Clone();
-		public ContentId ColorMap { get; set; }
-		public ContentId MetalnessMap { get; set; }
-		public ContentId NormalMap { get; set; }
-		public ContentId RoughnessMap { get; set; }
+		public string ColorMap { get; set; }
+		public string MetalnessMap { get; set; }
+		public string NormalMap { get; set; }
+		public string RoughnessMap { get; set; }
 	}
 	
 	public interface MemStorageConnection : Instance
@@ -1709,7 +1709,7 @@ namespace Roblox.PluginClasses
 	public interface PluginMouse : Mouse
 	{
 		public new PluginMouse Clone();
-		public ScriptSignal<Instances> DragEnter { get; }
+		public ScriptSignal<Instance[]> DragEnter { get; }
 	}
 	
 	public interface MultipleDocumentInterfaceInstance : Instance
@@ -1889,14 +1889,14 @@ namespace Roblox.PluginClasses
 	{
 		public new WorldRoot Clone();
 		public void IKMoveTo(BasePart part, CFrame target, float? translateStiffness = null, float? rotateStiffness = null, Enum.IKCollisionsMode.Type? collisionsMode = null);
-		public void StepPhysics(float dt, Instances? parts = null);
+		public void StepPhysics(float dt, Instance[]? parts = null);
 	}
 	
 	public partial interface Workspace : WorldRoot, IServiceInstance
 	{
 		public new Workspace Clone();
-		public void BreakJoints(Instances objects);
-		public void MakeJoints(Instances objects);
+		public void BreakJoints(Instance[] objects);
+		public void MakeJoints(Instance[] objects);
 		public void ZoomToExtents();
 	}
 	
@@ -2076,18 +2076,18 @@ namespace Roblox.PluginClasses
 		public Enum.RibbonTool.Type GetSelectedRibbonTool();
 		public object GetSetting(string key);
 		public long GetStudioUserId();
-		public Instance Intersect(Instances objects);
+		public Instance Intersect(Instance[] objects);
 		public bool IsActivated();
 		public bool IsActivatedWithExclusiveMouse();
-		public Instances Negate(Instances objects);
+		public Instance[] Negate(Instance[] objects);
 		public void OpenScript(LuaSourceContainer script, int? lineNumber = null);
 		public void OpenWikiPage(string url);
 		public void SaveSelectedToRoblox();
 		public void SelectRibbonTool(Enum.RibbonTool.Type tool, UDim2 position);
-		public Instances Separate(Instances objects);
+		public Instance[] Separate(Instance[] objects);
 		public void SetSetting(string key, object value);
 		public void StartDrag(object dragData);
-		public Instance Union(Instances objects);
+		public Instance Union(Instance[] objects);
 		public DockWidgetPluginGui CreateDockWidgetPluginGui(string pluginGuiId, DockWidgetPluginGuiInfo dockWidgetPluginGuiInfo);
 		public Instance ImportFbxAnimation(Instance rigModel, bool? isR15 = null);
 		public Instance ImportFbxRig(bool? isR15 = null);
@@ -2173,7 +2173,7 @@ namespace Roblox.PluginClasses
 		public new PluginToolbarButton Clone();
 		public bool ClickableWhenViewportHidden { get; set; }
 		public bool Enabled { get; set; }
-		public ContentId Icon { get; set; }
+		public string Icon { get; set; }
 		public void SetActive(bool active);
 		public ScriptSignal Click { get; }
 	}
@@ -2377,13 +2377,13 @@ namespace Roblox.PluginClasses
 		public bool IsPaused { get; }
 		public Instance? Script { get; }
 		public Instance AddWatch(string expression);
-		public Instances GetBreakpoints();
+		public Instance[] GetBreakpoints();
 		public object GetGlobals(int? stackFrame = null);
 		public object GetLocals(int? stackFrame = null);
 		public object[] GetStack();
 		public object GetUpvalues(int? stackFrame = null);
 		public object GetWatchValue(Instance watch);
-		public Instances GetWatches();
+		public Instance[] GetWatches();
 		public Instance SetBreakpoint(int line, bool isContextDependentBreakpoint);
 		public void SetGlobal(string name, object value, int stackFrame);
 		public void SetLocal(string name, object value, int? stackFrame = null);
@@ -2426,7 +2426,7 @@ namespace Roblox.PluginClasses
 		public void DeregisterScriptAnalysisCallback(string name);
 		public ScriptDocument FindScriptDocument(LuaSourceContainer script);
 		public string GetEditorSource(LuaSourceContainer script);
-		public Instances GetScriptDocuments();
+		public Instance[] GetScriptDocuments();
 		public void RegisterAutocompleteCallback(string name, int priority, Action callbackFunction);
 		public void RegisterScriptAnalysisCallback(string name, int priority, Action callbackFunction);
 		public object OpenScriptDocumentAsync(LuaSourceContainer script);
@@ -2458,10 +2458,10 @@ namespace Roblox.PluginClasses
 	{
 		public new Selection Clone();
 		public float SelectionThickness { get; }
-		public void Add(Instances instancesToAdd);
-		public Instances Get();
-		public void Remove(Instances instancesToRemove);
-		public void Set(Instances selection);
+		public void Add(Instance[] instancesToAdd);
+		public Instance[] Get();
+		public void Remove(Instance[] instancesToRemove);
+		public void Set(Instance[] selection);
 		public ScriptSignal SelectionChanged { get; }
 	}
 	
@@ -2504,7 +2504,7 @@ namespace Roblox.PluginClasses
 	{
 		public new DataModel Clone();
 		public object[] GetJobsInfo();
-		public Instances GetObjects(ContentId url);
+		public Instance[] GetObjects(string url);
 		public void SetPlaceId(long placeId);
 		public void SetUniverseId(long universeId);
 	}
@@ -2630,8 +2630,8 @@ namespace Roblox.PluginClasses
 	{
 		public new SoundService Clone();
 		public Enum.ListenerLocation.Type DefaultListenerLocation { get; set; }
-		public void OpenAttenuationCurveEditor(Instances selectedCurveObjects);
-		public void OpenDirectionalCurveEditor(Instances selectedCurveObjects);
+		public void OpenAttenuationCurveEditor(Instance[] selectedCurveObjects);
+		public void OpenDirectionalCurveEditor(Instance[] selectedCurveObjects);
 	}
 	
 	public interface Sparkles : ICreatableInstance
@@ -2751,7 +2751,7 @@ namespace Roblox.PluginClasses
 		public long GetUserId();
 		public RaycastResult? GizmoRaycast(Vector3 origin, Vector3 direction, RaycastParams? raycastParams = null);
 		public Instance PromptImportFile(object[]? fileTypeFilter = null);
-		public Instances PromptImportFiles(object[]? fileTypeFilter = null);
+		public Instance[] PromptImportFiles(object[]? fileTypeFilter = null);
 	}
 	
 	public interface StudioTheme : Instance
@@ -2804,10 +2804,10 @@ namespace Roblox.PluginClasses
 	{
 		public new SurfaceAppearance Clone();
 		public Enum.AlphaMode.Type AlphaMode { get; set; }
-		public ContentId ColorMap { get; set; }
-		public ContentId MetalnessMap { get; set; }
-		public ContentId NormalMap { get; set; }
-		public ContentId RoughnessMap { get; set; }
+		public string ColorMap { get; set; }
+		public string MetalnessMap { get; set; }
+		public string NormalMap { get; set; }
+		public string RoughnessMap { get; set; }
 	}
 	
 	public interface TaskScheduler : IServiceInstance
@@ -2867,10 +2867,10 @@ namespace Roblox.PluginClasses
 	public interface TerrainDetail : ICreatableInstance
 	{
 		public new TerrainDetail Clone();
-		public ContentId ColorMap { get; set; }
-		public ContentId MetalnessMap { get; set; }
-		public ContentId NormalMap { get; set; }
-		public ContentId RoughnessMap { get; set; }
+		public string ColorMap { get; set; }
+		public string MetalnessMap { get; set; }
+		public string NormalMap { get; set; }
+		public string RoughnessMap { get; set; }
 	}
 	
 	public partial interface TerrainRegion : ICreatableInstance

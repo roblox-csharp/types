@@ -18,7 +18,7 @@ namespace TypeGenerator.Generators
 
         public static string? SafeRenamedInstance(string? name)
         {
-            return name != null && Constants.RENAMEABLE_AUTO_TYPES.TryGetValue(name, out var value) ? value : name;
+            return name != null && Constants.RENAMABLE_AUTO_TYPES.TryGetValue(name, out var value) ? value : name;
         }
 
         public static string? SafeValueType(APITypes.ValueType valueType)

@@ -5,13 +5,13 @@ namespace TypeGenerator
     internal static class Constants
     {
         public const string ROOT_CLASS_NAME = "<<<ROOT>>>";
-        public static readonly List<string> BAD_NAME_CHARS = new List<string> { " ", "/", "\"" };
+        public static readonly List<string> BAD_NAME_CHARS = [" ", "/", "\""];
 
         public static readonly HashSet<string> PER_INSTANCE_MEMBERS = [
             "public new <INSTANCE_TYPE> Clone();"
         ];
 
-        public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new Dictionary<string, Dictionary<string, Security>?>
+        public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new()
         {
             ["StarterGui"] = new Dictionary<string, APITypes.Security>
             {
@@ -23,8 +23,7 @@ namespace TypeGenerator
             }
         };
 
-        public static readonly HashSet<string> PARTIAL_INTERFACES = new HashSet<string>
-        {
+        public static readonly HashSet<string> PARTIAL_INTERFACES = [
             "AnimationClipProvider",
             "Animator",
             "AssetService",
@@ -61,11 +60,10 @@ namespace TypeGenerator
             "PlayerScripts",
             "DataStoreService",
             "GlobalDataStore",
-            "OrderedDataStore",
-        };
+            "OrderedDataStore"
+        ];
 
-        public static readonly HashSet<string> CREATABLE_BLACKLIST = new HashSet<string>
-        {
+        public static readonly HashSet<string> CREATABLE_BLACKLIST = [
             "UserSettings",
             "DebugSettings",
             "Studio",
@@ -77,7 +75,7 @@ namespace TypeGenerator
             "DebuggerWatch",
             "Tween",
             "UserGameSettings"
-        };
+        ];
 
         public static readonly HashSet<string> PLUGIN_ONLY_CLASSES = [
             "ABTestService",
@@ -126,7 +124,7 @@ namespace TypeGenerator
 
         public static readonly HashSet<string> CLASS_BLACKLIST = [
             // Classes which Roblox leverages internally/in the CoreScripts but serve no purpose to developers
-            "AnalysticsSettings",
+            "AnalyticsSettings",
             "BinaryStringValue",
             "BrowserService",
             "CacheableContentProvider",
@@ -314,7 +312,7 @@ namespace TypeGenerator
             "WorldRoot"
         ];
 
-        public static readonly Dictionary<string, string> RENAMEABLE_AUTO_TYPES = new Dictionary<string, string>
+        public static readonly Dictionary<string, string> RENAMABLE_AUTO_TYPES = new()
         {
             { "Part", "BasePart" },
             { "Script", "LuaSourceContainer" },
@@ -323,13 +321,14 @@ namespace TypeGenerator
         };
 
         public static readonly Dictionary<string, string> PROP_TYPE_MAP = new();
-        public static readonly Dictionary<string, string> VALUE_TYPE_MAP = new Dictionary<string, string>
+        public static readonly Dictionary<string, string> VALUE_TYPE_MAP = new()
         {
             { "Array", "object[]" },
             { "BinaryString", "string" },
             { "SharedString", "string" },
+            { "String", "string" },
             { "Connection", "ScriptConnection" },
-            { "Content", "string" },
+            { "ContentId", "string" },
             { "CoordinateFrame", "CFrame" },
             { "EventInstance", "ScriptSignal" },
             { "Function", "Action" },
@@ -340,8 +339,8 @@ namespace TypeGenerator
             { "Map", "object" },
             { "RBXScriptSignal", "ScriptSignal" },
             { "RBXScriptConnection", "ScriptConnection" },
-            { "Object", "Instance" },
-            { "Objects", "Instance[]" },
+            { "Objects", "Object[]" },
+            { "Instances", "Instance[]" },
             { "Property", "string" },
             { "OptionalCoordinateFrame", "CFrame?" },
             { "ProtectedString", "string" },
@@ -350,15 +349,16 @@ namespace TypeGenerator
             { "Variant", "object" },
             { "Color3uint8", "Color3" },
             { "any", "object" },
-            { "Array<any>", "object[]" }
+            { "Array<any>", "object[]" },
+            { "buffer", "Buffer" },
         };
 
-        public static readonly Dictionary<string, string> RETURN_TYPE_MAP = new Dictionary<string, string>
+        public static readonly Dictionary<string, string> RETURN_TYPE_MAP = new()
         {
             { "null", "void" }
         };
 
-        public static readonly Dictionary<string, string> ARG_NAME_MAP = new Dictionary<string, string>
+        public static readonly Dictionary<string, string> ARG_NAME_MAP = new()
         {
             { "debugger", "debug" },
             { "old", "oldValue" },
