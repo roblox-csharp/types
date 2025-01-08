@@ -122,6 +122,18 @@ namespace Roblox.Enum
 		public static extern EnumItem[] GetEnumItems();
 	}
 	
+	public static class AdFormat
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type RewardedVideo { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
 	public static class AdShape
 	{
 		public interface Type : EnumItem
@@ -2925,6 +2937,7 @@ namespace Roblox.Enum
 		{
 		}
 		
+		public static extern Type Custom { get; }
 		public static extern Type UIHover { get; }
 		public static extern Type UIClick { get; }
 		public static extern Type UINotification { get; }
@@ -4902,6 +4915,7 @@ namespace Roblox.Enum
 		public static extern Type MaxOutfits { get; }
 		public static extern Type PurchaseFailure { get; }
 		public static extern Type UnknownFailure { get; }
+		public static extern Type TokenInvalid { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static extern EnumItem[] GetEnumItems();
@@ -5709,6 +5723,22 @@ namespace Roblox.Enum
 		public static extern Type Warning { get; }
 		public static extern Type Information { get; }
 		public static extern Type Hint { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
+	public static class ShowAdResult
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type PlayerIneligible { get; }
+		public static extern Type ExperienceIneligible { get; }
+		public static extern Type NotShown { get; }
+		public static extern Type ShowCompleted { get; }
+		public static extern Type ShowInterrupted { get; }
 		
 		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 		public static extern EnumItem[] GetEnumItems();

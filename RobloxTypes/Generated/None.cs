@@ -842,12 +842,18 @@ namespace Roblox
 	public interface AuroraService : IServiceInstance
 	{
 		public new AuroraService Clone();
+		public object[] GetDesyncedInstances();
+		public int GetRemoteWorldStepId();
 		public Instance GetServerView(Instance target);
+		public int GetWorldStepId();
 		public bool IsDesynced(Instance target);
 		public void NetDesync(Instance target);
 		public void NetSync(Instance target);
 		public void SetIncomingReplicationLag(float seconds);
+		public void StepPhysics(int worldSteps, Instance[]? parts = null);
 		public void UpdateProperties(Instance target);
+		public ScriptSignal<Instance> Desynced { get; }
+		public ScriptSignal<Instance> Synced { get; }
 	}
 	
 	public interface AvatarChatService : IServiceInstance
@@ -3022,8 +3028,11 @@ namespace Roblox
 	{
 		public new HapticEffect Clone();
 		public bool Looped { get; set; }
+		public Vector3 Position { get; set; }
+		public float Radius { get; set; }
 		public Enum.HapticEffectType.Type Type { get; set; }
 		public void Play();
+		public void SetWaveformKeys(object[] keys);
 		public void Stop();
 	}
 	
@@ -4164,6 +4173,7 @@ namespace Roblox
 		public Enum.ClientAnimatorThrottlingMode.Type ClientAnimatorThrottling { get; set; }
 		public Camera? CurrentCamera { get; set; }
 		public float DistributedGameTime { get; set; }
+		public bool FallHeightEnabled { get; set; }
 		public float FallenPartsDestroyHeight { get; set; }
 		public Vector3 GlobalWind { get; set; }
 		public float Gravity { get; set; }
