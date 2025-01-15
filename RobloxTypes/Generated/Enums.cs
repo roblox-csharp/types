@@ -1509,6 +1509,21 @@ namespace Roblox.Enum
 		public static extern EnumItem[] GetEnumItems();
 	}
 	
+	public static class CompletionAcceptanceBehavior
+	{
+		public interface Type : EnumItem
+		{
+		}
+		
+		public static extern Type Insert { get; }
+		public static extern Type Replace { get; }
+		public static extern Type ReplaceOnEnterInsertOnTab { get; }
+		public static extern Type InsertOnEnterReplaceOnTab { get; }
+		
+		/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+		public static extern EnumItem[] GetEnumItems();
+	}
+	
 	public static class CompletionItemKind
 	{
 		public interface Type : EnumItem
@@ -5997,6 +6012,7 @@ namespace Roblox.Enum
 		public static extern Type DebuggerErrorLine { get; }
 		public static extern Type Ruler { get; }
 		public static extern Type Bracket { get; }
+		public static extern Type Type { get; }
 		public static extern Type MenuPrimaryText { get; }
 		public static extern Type MenuSecondaryText { get; }
 		public static extern Type MenuSelectedText { get; }
