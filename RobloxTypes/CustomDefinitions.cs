@@ -80,10 +80,14 @@
 
     public interface RemoteFunction : ICreatableInstance
     {
-        public object[] InvokeClient(Player player, params object[] arguments); // TODO: tuple
-        public object[] InvokeServer(params object[] arguments); // TODO: tuple
-        public Func<object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnClientInvoke { get; set; }
-        public Func<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerInvoke { get; set; }
+        public object InvokeClient(Player player, params object[] arguments); // TODO: tuple
+        public object InvokeServer(params object[] arguments); // TODO: tuple
+        
+        public delegate void ClientInvoke(params object[] arguments);
+        public ClientInvoke OnClientInvoke { get; set; }
+        
+        public delegate void ServerInvoke(params object[] arguments);
+        public ServerInvoke OnServerInvoke { get; set; }
     }
 
     public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -91,8 +95,12 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal OnClientEvent { get; }
-        public ScriptSignal<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerEvent { get; }
+
+        public delegate void ClientEvent(params object[] arguments);
+        public event ClientEvent OnClientEvent;
+        
+        public delegate void ServerEvent(Player player, params object[] arguments);
+        public event ServerEvent OnServerEvent;
     }
 
     public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
@@ -100,8 +108,12 @@
         public void FireAllClients(params object[] arguments);
         public void FireClient(Player player, params object[] arguments);
         public void FireServer(params object[] arguments);
-        public ScriptSignal<object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnClientEvent { get; }
-        public ScriptSignal<Player, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?, object?> OnServerEvent { get; }
+        
+        public delegate void ClientEvent(params object[] arguments);
+        public event ClientEvent OnClientEvent;
+        
+        public delegate void ServerEvent(Player player, params object[] arguments);
+        public event ServerEvent OnServerEvent;
     }
 
     public partial interface NetworkPeer : Instance
@@ -149,7 +161,7 @@
 
     public partial interface WorldRoot
     {
-        public void BulkMoveTo(BasePart[] partList, CFrame[] cframeList, Enum.BulkMoveMode.Type eventMode);
+        public void BulkMoveTo(BasePart[] partList, CFrame[] cframeList, Enum.BulkMoveMode eventMode);
         public bool ArePartsTouchingOthers(BasePart[] partList, float overlapIgnored);
     }
 
@@ -162,8 +174,11 @@
 
     public partial interface ServiceProvider
     {
-        public ScriptSignal<IServiceInstance> ServiceAdded { get; }
-        public ScriptSignal<IServiceInstance> ServiceRemoving { get; }
+        public delegate void ServiceAddedDelegate(IServiceInstance service);
+        public event ServiceAddedDelegate ServiceAdded;
+        
+        public delegate void ServiceRemovingDelegate(IServiceInstance service);
+        public event ServiceRemovingDelegate ServiceRemoving;
     }
 
     public interface IServiceInstance : Instance
@@ -200,13 +215,29 @@
         public T WaitForChild<T>(string name) where T : Instance;
         public T? WaitForChild<T>(string name, float timeout) where T : Instance;
         public bool isDescendantOf(Instance ancestor);
-        public ScriptSignal<Instance, Instance> AncestryChanged { get; }
-        public ScriptSignal<string> AttributeChanged { get; }
-        public new ScriptSignal<string> Changed { get; }
-        public ScriptSignal<Instance> ChildAdded { get; }
-        public ScriptSignal<Instance> ChildRemoved { get; }
-        public ScriptSignal<Instance> DescendantAdded { get; }
-        public ScriptSignal<Instance> DescendantRemoving { get; }
-        public ScriptSignal Destroying { get; }
+
+        public delegate void AncestryChangedDelegate(Instance child, Instance parent);
+        public event AncestryChangedDelegate AncestryChanged;
+        
+        public delegate void AttributeChangedDelegate(string name);
+        public event AttributeChangedDelegate AttributeChanged;
+        
+        public new delegate void ChangedDelegate(string name);
+        public new event ChangedDelegate Changed;
+        
+        public delegate void ChildAddedDelegate(Instance child);
+        public event ChildAddedDelegate ChildAdded;
+        
+        public delegate void ChildRemovedDelegate(Instance child);
+        public event ChildRemovedDelegate ChildRemoved;
+        
+        public delegate void DescendantAddedDelegate(Instance descendant);
+        public event DescendantAddedDelegate DescendantAdded;
+        
+        public delegate void DescendantRemovingDelegate(Instance descendant);
+        public event DescendantRemovingDelegate DescendantRemoving;
+        
+        public delegate void DestroyingDelegate();
+        public event DestroyingDelegate Destroying;
     }
 }

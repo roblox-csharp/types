@@ -21,10 +21,10 @@ namespace TypeGenerator.Generators
             return name != null && Constants.RENAMABLE_AUTO_TYPES.TryGetValue(name, out var value) ? value : name;
         }
 
-        public static string? SafeValueType(APITypes.ValueType valueType)
+        public static string SafeValueType(APITypes.ValueType valueType)
         {
             if (valueType.Category == "Enum")
-                return $"Enum.{valueType.Name}.Type";
+                return $"Enum.{valueType.Name}";
 
             if (string.IsNullOrEmpty(valueType.Name) || !valueType.Name.EndsWith('?'))
                 return Constants.VALUE_TYPE_MAP.TryGetValue(valueType.Name, out var value) ? value : valueType.Name;
@@ -39,9 +39,9 @@ namespace TypeGenerator.Generators
             return string.IsNullOrEmpty(valueType) ? null : Constants.RETURN_TYPE_MAP.GetValueOrDefault(valueType, valueType);
         }
 
-        public static string? SafeArgName(string? name)
+        public static string? SafeParamName(string? name)
         {
-            return name != null && Constants.ARG_NAME_MAP.TryGetValue(name, out var value) ? value : name;
+            return name != null && Constants.PARAM_NAME_MAP.TryGetValue(name, out var value) ? value : name;
         }
 
         public static APITypes.Security GetSecurity(string className, APITypes.MemberBase member)
@@ -68,7 +68,7 @@ namespace TypeGenerator.Generators
                     _ => throw new NotSupportedException($"Member type not supported: {member.MemberType}")
                 };
             
-            if (classSecurity!.TryGetValue(member.Name, out var securityOverride))
+            if (member.Name != null && classSecurity!.TryGetValue(member.Name, out var securityOverride))
                 return securityOverride;
 
             return member.MemberType switch
@@ -181,9 +181,7 @@ namespace TypeGenerator.Generators
 
             // dumb hack to fix PluginSecurity writable things being marked as readonly in None.cs
             if (security1 is { Read: "None", Write: "PluginSecurity" })
-            {
                 return true;
-            }
 
             return security1.Write == security ||
                 (Constants.PLUGIN_ONLY_CLASSES.Contains(className) && security1.Write == lowerSecurity);
@@ -192,31 +190,24 @@ namespace TypeGenerator.Generators
         private bool IsPluginOnlyClass(APITypes.Class rbxClass)
         {
             if (Constants.PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name))
-            {
                 return true;
-            }
-            else
-            {
-                var superClass = rbxClass.Superclass != Constants.ROOT_CLASS_NAME ? _classRefs[rbxClass.Superclass] : null;
-                return superClass != null && IsPluginOnlyClass(superClass);
-            }
+            
+            var superClass = rbxClass.Superclass != Constants.ROOT_CLASS_NAME ? _classRefs[rbxClass.Superclass] : null;
+            return superClass != null && IsPluginOnlyClass(superClass);
         }
 
         private bool ShouldGenerateClass(APITypes.Class rbxClass)
         {
             var superClass = rbxClass.Superclass != Constants.ROOT_CLASS_NAME ? _classRefs[rbxClass.Superclass] : null;
             if (superClass != null && !ShouldGenerateClass(superClass))
-            {
                 return false;
-            }
+            
             if (Constants.CLASS_BLACKLIST.Contains(rbxClass.Name))
-            {
                 return false;
-            }
+            
             if (security != "PluginSecurity" && Constants.PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name))
-            {
                 return false;
-            }
+            
             return true;
         }
 
@@ -259,29 +250,23 @@ namespace TypeGenerator.Generators
             // Implementation for writing description
         }
 
-        private int ByName(APITypes.Class a, APITypes.Class b)
-        {
-            return string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase);
-        }
+        private int ByName(APITypes.Class a, APITypes.Class b) =>
+            string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase);
 
         // Returns the given className if it's in ClassRefs
         // Throws if not
         private string AssertClassName(string className)
         {
             if (_classRefs.ContainsKey(className))
-            {
                 return className;
-            }
-            else
-            {
-                throw new Exception($"Undefined class name: {className}");
-            }
+                
+            throw new Exception($"Undefined class name: {className}");
         }
 
         private void GenerateClass(APITypes.Class rbxClass)
         {
             definedClassNames.Add(rbxClass.Name);
-            _definedMemberNames[rbxClass.Name] = new HashSet<string>();
+            _definedMemberNames[rbxClass.Name] = [];
 
             var className = AssertClassName(rbxClass.Name);
             var members = rbxClass.Members;
@@ -292,9 +277,7 @@ namespace TypeGenerator.Generators
                 {
                     var desc = rbxClass.Description;
                     if (desc != null)
-                    {
                         Write(Utility.FormatComment(desc));
-                    }
 
                     break;
                 }
@@ -309,23 +292,19 @@ namespace TypeGenerator.Generators
             if (Utility.IsCreatable(rbxClass))
             {
                 if (rbxClass.Superclass != "Instance")
-                {
                     superclasses.Add(rbxClass.Superclass);
-                }
+
                 superclasses.Add("ICreatableInstance");
             }
             else if (Utility.HasTag(rbxClass, "Service"))
             {
                 if (rbxClass.Superclass != "Instance")
-                {
                     superclasses.Add(rbxClass.Superclass);
-                }
+                    
                 superclasses.Add("IServiceInstance");
             }
             else
-            {
                 superclasses.Add(rbxClass.Superclass);
-            }
 
             var isPartial = Constants.PARTIAL_INTERFACES.Contains(className);
             Write($"public{(isPartial ? " partial" : "")} interface {className}{(rbxClass.Superclass != Constants.ROOT_CLASS_NAME ? $" : {string.Join(", ", superclasses)}" : "")}");
@@ -333,9 +312,8 @@ namespace TypeGenerator.Generators
             PushIndent();
 
             foreach (var memberText in Constants.PER_INSTANCE_MEMBERS)
-            {
                 Write(memberText.Replace("<INSTANCE_TYPE>", rbxClass.Name));
-            }
+            
             foreach (var member in members.Where(member => ShouldGenerateMember(rbxClass, member)))
             {
                 _definedMemberNames[rbxClass.Name].Add(member.Name!.Trim());
@@ -384,7 +362,7 @@ namespace TypeGenerator.Generators
         private List<string> GetParamTypes(List<APITypes.Parameter> parameters) =>
             parameters.ConvertAll(param => Utility.SafeValueType(param.Type) ?? "null");
 
-        private string GenerateArgs(List<APITypes.Parameter> parameters)
+        private string GenerateParams(List<APITypes.Parameter> parameters)
         {
             var args = new List<string>();
             var paramNames = GetParamNames(parameters);
@@ -393,7 +371,7 @@ namespace TypeGenerator.Generators
             foreach (var param in parameters)
             {
                 var paramType = Utility.SafeValueType(param.Type);
-                var argName = Utility.SafeArgName(paramNames[parameters.IndexOf(param)]);
+                var argName = Utility.SafeParamName(paramNames[parameters.IndexOf(param)]);
                 optional |= !string.IsNullOrEmpty(param.Default) || paramType == "any";
 
                 if (!string.IsNullOrEmpty(argName) && paramType == "Instance")
@@ -421,33 +399,37 @@ namespace TypeGenerator.Generators
 
         private void GenerateCallback(APITypes.Callback callback, APITypes.Class rbxClass)
         {
-            var paramTypeList = callback.Parameters.Count > 0 ?
-                $"<{string.Join(", ", GetParamTypes(callback.Parameters))}>"
+            var paramTypeList = callback.Parameters.Count > 0
+                ? string.Join(", ", callback.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null") + " " + Utility.SafeParamName(param.Name)))
                 : "";
 
+            var delegateName = $"{callback.Name}Delegate";
             var description = !string.IsNullOrWhiteSpace(callback.Description) ?
                 callback.Description :
                 _metadata.ReadCallbackDesc(rbxClass.Name, callback.Name!);
 
-            Write($"public Action{paramTypeList} {callback.Name} {{ get; set; }}");
+            Write($"public delegate void {delegateName}({paramTypeList});");
+            Write($"public {delegateName} {callback.Name} {{ get; set; }}");
         }
 
         private void GenerateEvent(APITypes.Event @event, APITypes.Class rbxClass)
         {
-            var paramTypeList = @event.Parameters.Count > 0 ?
-                $"<{string.Join(", ", GetParamTypes(@event.Parameters))}>"
+            var paramTypeList = @event.Parameters.Count > 0
+                ? string.Join(", ", @event.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null") + " " + Utility.SafeParamName(param.Name)))
                 : "";
 
-            var description = !string.IsNullOrWhiteSpace(@event.Description) ?
-                @event.Description :
-                _metadata.ReadEventDesc(rbxClass.Name, @event.Name!);
+            var delegateName = $"{@event.Name}Delegate";
+            var description = !string.IsNullOrWhiteSpace(@event.Description)
+                ? @event.Description
+                : _metadata.ReadEventDesc(rbxClass.Name, @event.Name!);
 
-            Write($"public ScriptSignal{paramTypeList} {@event.Name} {{ get; }}");
+            Write($"public delegate void {delegateName}({paramTypeList});");
+            Write($"public event {delegateName} {@event.Name};");
         }
 
         private void GenerateFunction(APITypes.Function function, APITypes.Class rbxClass)
         {
-            var args = GenerateArgs(function.Parameters);
+            var args = GenerateParams(function.Parameters);
             string? returnType;
             if ((object)function.ReturnType is string[] enumerable)
             {
@@ -456,12 +438,11 @@ namespace TypeGenerator.Generators
                 returnType = "object"; // temporary
             }
             else
-            {
                 returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
-            }
-            var description = !string.IsNullOrWhiteSpace(function.Description) ?
-                function.Description :
-                _metadata.ReadFunctionDesc(rbxClass.Name, function.Name!);
+            
+            var description = !string.IsNullOrWhiteSpace(function.Description)
+                ? function.Description
+                : _metadata.ReadFunctionDesc(rbxClass.Name, function.Name!);
 
             Write($"public {returnType} {function.Name}({args});");
         }
@@ -469,9 +450,9 @@ namespace TypeGenerator.Generators
         private void GenerateProperty(APITypes.Property property, APITypes.Class rbxClass)
         {
             var valueType = Utility.SafePropType(Utility.SafeValueType(property.ValueType))!;
-            var description = !string.IsNullOrWhiteSpace(property.Description) ?
-                property.Description :
-                _metadata.ReadPropDesc(rbxClass.Name, property.Name!);
+            var description = !string.IsNullOrWhiteSpace(property.Description)
+                ? property.Description
+                : _metadata.ReadPropDesc(rbxClass.Name, property.Name!);
 
             var definitelyDefined = property.ValueType.Category != "Class";
             var extraPropertyData = CanWrite(rbxClass.Name, property) && !Utility.HasTag(property, "ReadOnly") ? " set;" : "";
@@ -493,9 +474,7 @@ namespace TypeGenerator.Generators
             PushIndent();
 
             foreach (var service in services)
-            {
                 Write($"public static extern {service.Name} {service.Name} {{ get; }}");
-            }
 
             PopIndent();
             Write("}");

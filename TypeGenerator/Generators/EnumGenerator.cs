@@ -9,26 +9,27 @@
             Write("// GENERATED ROBLOX ENUMS");
             Write();
 
-            Write("namespace Roblox.Enum");
-            Write("{");
-            PushIndent();
+            Write("namespace Roblox.Enum;");
+            Write();
+            
             foreach (var rbxEnum in rbxEnums)
             {
                 var enumTypeName = rbxEnum.Name;
                 var enumItems = rbxEnum.Items;
-                Write($"public static class {enumTypeName}");
+                Write($"public abstract class {enumTypeName} : EnumItem");
                 Write("{");
                 PushIndent();
-                Write("public interface Type : EnumItem");
-                Write("{");
-                Write("}");
+                Write("extern string EnumItem.Name { get; }");
+                Write("extern uint EnumItem.Value { get; }");
+                Write("extern string EnumItem.EnumType { get; }");
+                Write("public extern bool IsA<T>(string name) where T : Enum;");
                 Write();
 
                 var blacklistedItems = Constants.ENUM_BLACKLIST.GetValueOrDefault(rbxEnum.Name) ?? [];
                 foreach (var item in enumItems)
                 {
                     if (blacklistedItems.Contains(item.Name)) continue;
-                    Write($"public static extern Type {item.Name} {{ get; }}");
+                    Write($"public static extern {enumTypeName} {item.Name} {{ get; }}");
                 }
                 
                 Write();
@@ -40,9 +41,7 @@
                 if (rbxEnum != rbxEnums.Last())
                     Write();
             }
-
-            PopIndent();
-            Write("}");
+            
             WriteFile();
         }
     }

@@ -358,7 +358,7 @@ namespace TypeGenerator
             { "null", "void" }
         };
 
-        public static readonly Dictionary<string, string> ARG_NAME_MAP = new()
+        public static readonly Dictionary<string, string> PARAM_NAME_MAP = new()
         {
             { "debugger", "debug" },
             { "old", "oldValue" },
