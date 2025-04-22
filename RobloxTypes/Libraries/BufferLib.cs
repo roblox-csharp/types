@@ -80,6 +80,7 @@ public static class buffer
     /// <para>Copies count bytes from source starting at offset sourceOffset into the target at targetOffset.</para>
     /// <para>It's possible for source and target to be the same. Copying an overlapping region inside the same buffer acts as if the source region is copied into a temporary buffer and then that buffer is copied over to the target.</para>
     /// </summary>
+    public static extern void copy(Buffer target, uint targetOffset, Buffer source);
     public static extern void copy(Buffer target, uint targetOffset, Buffer source, uint sourceOffset, uint count);
 
     /// <summary>Sets count bytes in the buffer starting at the specified offset to value.</summary>
