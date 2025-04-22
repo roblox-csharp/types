@@ -1,9 +1,6 @@
 ﻿namespace Roblox;
 
-public interface thread
-{
-}
-
+public interface thread;
 public static class coroutine
 {
     /// <summary>Closes and puts the provided coroutine in a dead state.</summary>
