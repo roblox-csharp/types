@@ -1,8 +1,6 @@
 ﻿namespace Roblox;
 
-public interface Buffer
-{
-}
+public interface Buffer;
 
 public static class buffer
 {

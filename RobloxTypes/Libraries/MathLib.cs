@@ -53,7 +53,7 @@ public static class math
     public static extern float ldexp(float x, float e);
 
     /// <summary>Returns the logarithm of x using the given base.</summary>
-    public static extern float log(float x, float @base);
+    public static extern float log(float x, float? @base = null);
 
     /// <summary>Returns the base-10 logarithm of x.</summary>
     public static extern float log10(float x);
