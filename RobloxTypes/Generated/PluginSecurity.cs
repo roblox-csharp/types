@@ -1133,6 +1133,11 @@ namespace Roblox.PluginClasses
 		public new FeatureRestrictionManager Clone();
 	}
 	
+	public interface FeedService : IServiceInstance
+	{
+		public new FeedService Clone();
+	}
+	
 	public interface File : Instance
 	{
 		public new File Clone();
@@ -1627,6 +1632,11 @@ namespace Roblox.PluginClasses
 		public Instance GetKeyframeSequenceById(long assetId, bool useCache);
 	}
 	
+	public interface LanguageService : IServiceInstance
+	{
+		public new LanguageService Clone();
+	}
+	
 	public interface Light : Instance
 	{
 		public new Light Clone();
@@ -1709,7 +1719,6 @@ namespace Roblox.PluginClasses
 		public bool EnableLOD { get; set; }
 		public int LODCriticality { get; set; }
 		public int Priority { get; set; }
-		public bool RunInParallel { get; set; }
 		public string Source { get; set; }
 	}
 	
@@ -2874,6 +2883,11 @@ namespace Roblox.PluginClasses
 	public interface StudioCallout : ICreatableInstance
 	{
 		public new StudioCallout Clone();
+	}
+	
+	public interface StudioCameraService : IServiceInstance
+	{
+		public new StudioCameraService Clone();
 	}
 	
 	public interface StudioData : IServiceInstance
