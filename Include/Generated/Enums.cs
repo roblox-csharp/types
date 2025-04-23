@@ -795,6 +795,7 @@ public abstract class AudioFilterType : EnumItem
 	public static extern AudioFilterType Highpass48dB { get; }
 	public static extern AudioFilterType Bandpass { get; }
 	public static extern AudioFilterType Notch { get; }
+	public static extern AudioFilterType Lowpass6dB { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -2689,6 +2690,86 @@ public abstract class FacialAnimationStreamingState : EnumItem
 	public static extern FacialAnimationStreamingState Video { get; }
 	public static extern FacialAnimationStreamingState Place { get; }
 	public static extern FacialAnimationStreamingState Server { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class FacsActionUnit : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern FacsActionUnit ChinRaiserUpperLip { get; }
+	public static extern FacsActionUnit ChinRaiser { get; }
+	public static extern FacsActionUnit FlatPucker { get; }
+	public static extern FacsActionUnit Funneler { get; }
+	public static extern FacsActionUnit LowerLipSuck { get; }
+	public static extern FacsActionUnit LipPresser { get; }
+	public static extern FacsActionUnit LipsTogether { get; }
+	public static extern FacsActionUnit MouthLeft { get; }
+	public static extern FacsActionUnit MouthRight { get; }
+	public static extern FacsActionUnit Pucker { get; }
+	public static extern FacsActionUnit UpperLipSuck { get; }
+	public static extern FacsActionUnit LeftCheekPuff { get; }
+	public static extern FacsActionUnit LeftDimpler { get; }
+	public static extern FacsActionUnit LeftLipCornerDown { get; }
+	public static extern FacsActionUnit LeftLowerLipDepressor { get; }
+	public static extern FacsActionUnit LeftLipCornerPuller { get; }
+	public static extern FacsActionUnit LeftLipStretcher { get; }
+	public static extern FacsActionUnit LeftUpperLipRaiser { get; }
+	public static extern FacsActionUnit RightCheekPuff { get; }
+	public static extern FacsActionUnit RightDimpler { get; }
+	public static extern FacsActionUnit RightLipCornerDown { get; }
+	public static extern FacsActionUnit RightLowerLipDepressor { get; }
+	public static extern FacsActionUnit RightLipCornerPuller { get; }
+	public static extern FacsActionUnit RightLipStretcher { get; }
+	public static extern FacsActionUnit RightUpperLipRaiser { get; }
+	public static extern FacsActionUnit JawDrop { get; }
+	public static extern FacsActionUnit JawLeft { get; }
+	public static extern FacsActionUnit JawRight { get; }
+	public static extern FacsActionUnit Corrugator { get; }
+	public static extern FacsActionUnit LeftBrowLowerer { get; }
+	public static extern FacsActionUnit LeftOuterBrowRaiser { get; }
+	public static extern FacsActionUnit LeftNoseWrinkler { get; }
+	public static extern FacsActionUnit LeftInnerBrowRaiser { get; }
+	public static extern FacsActionUnit RightBrowLowerer { get; }
+	public static extern FacsActionUnit RightOuterBrowRaiser { get; }
+	public static extern FacsActionUnit RightInnerBrowRaiser { get; }
+	public static extern FacsActionUnit RightNoseWrinkler { get; }
+	public static extern FacsActionUnit EyesLookDown { get; }
+	public static extern FacsActionUnit EyesLookLeft { get; }
+	public static extern FacsActionUnit EyesLookUp { get; }
+	public static extern FacsActionUnit EyesLookRight { get; }
+	public static extern FacsActionUnit LeftCheekRaiser { get; }
+	public static extern FacsActionUnit LeftEyeUpperLidRaiser { get; }
+	public static extern FacsActionUnit LeftEyeClosed { get; }
+	public static extern FacsActionUnit RightCheekRaiser { get; }
+	public static extern FacsActionUnit RightEyeUpperLidRaiser { get; }
+	public static extern FacsActionUnit RightEyeClosed { get; }
+	public static extern FacsActionUnit TongueDown { get; }
+	public static extern FacsActionUnit TongueOut { get; }
+	public static extern FacsActionUnit TongueUp { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class FeedRankingScoreType : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern FeedRankingScoreType Content { get; }
+	public static extern FeedRankingScoreType Final { get; }
+	public static extern FeedRankingScoreType GameJoin { get; }
+	public static extern FeedRankingScoreType Interaction { get; }
+	public static extern FeedRankingScoreType Invalid { get; }
+	public static extern FeedRankingScoreType Sharing { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -6147,6 +6228,7 @@ public abstract class SecurityCapability : EnumItem
 	public static extern SecurityCapability RemoteEvent { get; }
 	public static extern SecurityCapability LegacySound { get; }
 	public static extern SecurityCapability Players { get; }
+	public static extern SecurityCapability CapabilityControl { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -6422,6 +6504,7 @@ public abstract class StateObjectFieldType : EnumItem
 	
 	public static extern StateObjectFieldType Boolean { get; }
 	public static extern StateObjectFieldType CFrame { get; }
+	public static extern StateObjectFieldType Color3 { get; }
 	public static extern StateObjectFieldType Float { get; }
 	public static extern StateObjectFieldType Instance { get; }
 	public static extern StateObjectFieldType Random { get; }

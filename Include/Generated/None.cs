@@ -75,6 +75,7 @@ namespace Roblox
 		public static extern FacialAnimationRecordingService FacialAnimationRecordingService { get; }
 		public static extern FacialAnimationStreamingServiceV2 FacialAnimationStreamingServiceV2 { get; }
 		public static extern FeatureRestrictionManager FeatureRestrictionManager { get; }
+		public static extern FeedService FeedService { get; }
 		public static extern CSGDictionaryService CSGDictionaryService { get; }
 		public static extern NonReplicatedCSGDictionaryService NonReplicatedCSGDictionaryService { get; }
 		public static extern GamePassService GamePassService { get; }
@@ -129,6 +130,7 @@ namespace Roblox
 		public static extern PathfindingService PathfindingService { get; }
 		public static extern PerformanceControlService PerformanceControlService { get; }
 		public static extern PhysicsService PhysicsService { get; }
+		public static extern PlaceAssetIdsService PlaceAssetIdsService { get; }
 		public static extern PlaceStatsService PlaceStatsService { get; }
 		public static extern PlacesService PlacesService { get; }
 		public static extern PlatformCloudStorageService PlatformCloudStorageService { get; }
@@ -278,6 +280,7 @@ namespace Roblox
 		public new EditableMesh Clone();
 		public bool FixedSize { get; }
 		public bool SkinningEnabled { get; set; }
+		public long AddBone(object boneProperties);
 		public long AddColor(Color3 color, float alpha);
 		public long AddNormal(Vector3? normal = null);
 		public long AddTriangle(long vertexId0, long vertexId1, long vertexId2);
@@ -289,6 +292,12 @@ namespace Roblox
 		public object[] FindVerticesWithinSphere(Vector3 center, float radius);
 		public object[] GetAdjacentFaces(long faceId);
 		public object[] GetAdjacentVertices(long vertexId);
+		public long GetBoneByName(string boneName);
+		public CFrame GetBoneCFrame(long boneId);
+		public bool GetBoneIsVirtual(long boneId);
+		public string GetBoneName(long boneId);
+		public long GetBoneParent(long boneId);
+		public object[] GetBones();
 		public Vector3 GetCenter();
 		public Color3? GetColor(long colorId);
 		public float? GetColorAlpha(long colorId);
@@ -302,12 +311,18 @@ namespace Roblox
 		public object[] GetFacesWithColor(long colorId);
 		public object[] GetFacesWithNormal(long normalId);
 		public object[] GetFacesWithUV(long uvId);
+		public object GetFacsCorrectivePose(object[] actions);
+		public object[] GetFacsCorrectivePoses();
+		public object GetFacsPose(Enum.FacsActionUnit action);
+		public object[] GetFacsPoses();
 		public Vector3? GetNormal(long normalId);
 		public object[] GetNormals();
 		public Vector3 GetPosition(long vertexId);
 		public Vector3 GetSize();
 		public Vector2? GetUV(long uvId);
 		public object[] GetUVs();
+		public object[] GetVertexBoneWeights(long vertexId);
+		public object[] GetVertexBones(long vertexId);
 		public object[] GetVertexColors(long vertexId);
 		public long GetVertexFaceColor(long vertexId, long faceId);
 		public long GetVertexFaceNormal(long vertexId, long faceId);
@@ -323,18 +338,28 @@ namespace Roblox
 		public string IdDebugString(long id);
 		public object MergeVertices(float mergeTolerance);
 		public object RaycastLocal(Vector3 origin, Vector3 direction);
+		public void RemoveBone(long boneId);
 		public void RemoveFace(long faceId);
 		public object[] RemoveUnused();
 		public void ResetNormal(long normalId);
+		public void SetBoneCFrame(long boneId, CFrame cframe);
+		public void SetBoneIsVirtual(long boneId, bool virtual);
+		public void SetBoneName(long boneId, string name);
+		public void SetBoneParent(long boneId, long parentBoneId);
 		public void SetColor(long colorId, Color3 color);
 		public void SetColorAlpha(long colorId, float alpha);
 		public void SetFaceColors(long faceId, object[] ids);
 		public void SetFaceNormals(long faceId, object[] ids);
 		public void SetFaceUVs(long faceId, object[] ids);
 		public void SetFaceVertices(long faceId, object[] ids);
+		public void SetFacsBonePose(Enum.FacsActionUnit action, long boneId, CFrame cframe);
+		public void SetFacsCorrectivePose(object[] actions, object[] boneIds, object[] cframes);
+		public void SetFacsPose(Enum.FacsActionUnit action, object[] boneIds, object[] cframes);
 		public void SetNormal(long normalId, Vector3 normal);
 		public void SetPosition(long vertexId, Vector3 p);
 		public void SetUV(long uvId, Vector2 uv);
+		public void SetVertexBoneWeights(long vertexId, object[] boneWeights);
+		public void SetVertexBones(long vertexId, object[] boneIDs);
 		public void SetVertexFaceColor(long vertexId, long faceId, long colorId);
 		public void SetVertexFaceNormal(long vertexId, long faceId, long normalId);
 		public void SetVertexFaceUV(long vertexId, long faceId, long uvId);
@@ -345,8 +370,10 @@ namespace Roblox
 	{
 		public new Instance Clone();
 		public bool Archivable { get; set; }
+		public SecurityCapabilities Capabilities { get; set; }
 		public string Name { get; set; }
 		public Instance? Parent { get; set; }
+		public bool Sandboxed { get; set; }
 		public void AddTag(string tag);
 		public void ClearAllChildren();
 		public void Destroy();
@@ -1044,10 +1071,8 @@ namespace Roblox
 	{
 		public new AvatarCreationService Clone();
 		public object GetValidationRules();
-		public void SendAnalyticsEvent(string eventName, object parameters);
 		public string GenerateAvatar2DPreviewAsync(object avatarGeneration2dPreviewParams);
 		public string GenerateAvatarAsync(object avatarGenerationParams);
-		public object GetAvatarGenerationConfig();
 		public object[] GetBatchTokenDetailsAsync(object[] tokenIds);
 		public EditableImage LoadAvatar2DPreviewAsync(string previewId);
 		public HumanoidDescription LoadGeneratedAvatarAsync(string generationId);
@@ -1673,6 +1698,8 @@ namespace Roblox
 	public interface ConfigService : IServiceInstance
 	{
 		public new ConfigService Clone();
+		public void ClearTestingValue(string key);
+		public void SetTestingValue(string key, object value);
 		public ConfigSnapshot GetConfigAsync();
 		public ConfigSnapshot GetConfigForPlayerAsync(Player player);
 	}
@@ -2526,6 +2553,14 @@ namespace Roblox
 		public new FeatureRestrictionManager Clone();
 	}
 	
+	public interface FeedService : IServiceInstance
+	{
+		public new FeedService Clone();
+		public void BatchRemoveFeedItemsAsync(object[] feedItemIds);
+		public FeedPages GetFeedItemsAsync(object getFeedRequest);
+		public object RegisterFeedItemsAsync(object registerFeedItemsRequest);
+	}
+	
 	public interface Fire : ICreatableInstance
 	{
 		public new Fire Clone();
@@ -2770,6 +2805,7 @@ namespace Roblox
 	{
 		public new ImageButton Clone();
 		public string HoverImage { get; set; }
+		public Content HoverImageContent { get; set; }
 		public string Image { get; set; }
 		public Color3 ImageColor3 { get; set; }
 		public Content ImageContent { get; set; }
@@ -2778,6 +2814,7 @@ namespace Roblox
 		public float ImageTransparency { get; set; }
 		public bool IsLoaded { get; }
 		public string PressedImage { get; set; }
+		public Content PressedImageContent { get; set; }
 		public Enum.ResamplerMode ResampleMode { get; set; }
 		public Enum.ScaleType ScaleType { get; set; }
 		public Rect SliceCenter { get; set; }
@@ -3167,6 +3204,7 @@ namespace Roblox
 	{
 		public new WireframeHandleAdornment Clone();
 		public Vector3 Scale { get; set; }
+		public float Thickness { get; set; }
 		public void AddLine(Vector3 from, Vector3 to);
 		public void AddLines(object[] points);
 		public void AddPath(object[] points, bool loop);
@@ -3943,6 +3981,7 @@ namespace Roblox
 	public interface LanguageService : IServiceInstance
 	{
 		public new LanguageService Clone();
+		public object GetCapabilitiesUsedInPackageAsync(Instance[] instances);
 	}
 	
 	public interface Light : Instance
@@ -4843,6 +4882,11 @@ namespace Roblox
 		public new DataStoreVersionPages Clone();
 	}
 	
+	public interface FeedPages : Pages
+	{
+		public new FeedPages Clone();
+	}
+	
 	public interface FriendPages : Pages
 	{
 		public new FriendPages Clone();
@@ -5005,6 +5049,11 @@ namespace Roblox
 		public void RenameCollisionGroup(string from, string to);
 		public void SetPartCollisionGroup(BasePart part, string name);
 		public void UnregisterCollisionGroup(string name);
+	}
+	
+	public interface PlaceAssetIdsService : IServiceInstance
+	{
+		public new PlaceAssetIdsService Clone();
 	}
 	
 	public interface PlaceStatsService : IServiceInstance
@@ -5977,6 +6026,7 @@ namespace Roblox
 		public bool LoadCharacterAppearance { get; set; }
 		public Enum.CharacterControlMode LuaCharacterController { get; set; }
 		public float NameDisplayDistance { get; set; }
+		public bool RagdollDeath { get; set; }
 		public bool UserEmotesEnabled { get; set; }
 	}
 	
@@ -6021,8 +6071,13 @@ namespace Roblox
 		public int UI2DTriangleCount { get; }
 		public int UI3DDrawcallCount { get; }
 		public int UI3DTriangleCount { get; }
+		public int GetHarmonyQualityLevel();
+		public object[] GetMemoryCategoryNames();
+		public object[] GetMemoryUsageMbAllCategories();
 		public float GetMemoryUsageMbForTag(Enum.DeveloperMemoryTag tag);
 		public float GetTotalMemoryUsageMb();
+		public void ResetHarmonyMemoryTarget();
+		public void SetHarmonyMemoryTarget(int targetMB);
 	}
 	
 	public interface StreamingService : IServiceInstance
@@ -6054,6 +6109,9 @@ namespace Roblox
 	public interface StudioCameraService : IServiceInstance
 	{
 		public new StudioCameraService Clone();
+		public bool LockCameraSpeed { get; set; }
+		public delegate void ShowCameraSpeedDelegate(float speed);
+		public event ShowCameraSpeedDelegate ShowCameraSpeed;
 	}
 	
 	public interface StudioDeviceEmulatorService : IServiceInstance
