@@ -36,6 +36,7 @@ internal sealed class EnumGenerator(string filePath, ReflectionMetadataReader re
         foreach (var item in enumItems)
         {
             if (blacklistedItems.Contains(item.Name)) continue;
+
             Write($"public static extern {enumTypeName} {item.Name} {{ get; }}");
         }
 
@@ -46,6 +47,7 @@ internal sealed class EnumGenerator(string filePath, ReflectionMetadataReader re
         Write("}");
 
         if (isLast) return;
+
         Write();
     }
 }

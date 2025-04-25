@@ -8,13 +8,11 @@ internal static class Constants
     public static readonly List<string> BAD_NAME_CHARS = [" ", "/", "\""];
 
     public static readonly HashSet<string> PER_INSTANCE_MEMBERS = ["public new <INSTANCE_TYPE> Clone();"];
+    public static readonly HashSet<string> NEW_MODIFIER_INSTANCE_MEMBERS = ["Changed"];
 
     public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new()
     {
-        ["StarterGui"] = new Dictionary<string, Security>
-        {
-            ["ShowDevelopmentGui"] = new() { Read = "PluginSecurity", Write = "PluginSecurity" }
-        }
+        ["StarterGui"] = new Dictionary<string, Security> { ["ShowDevelopmentGui"] = new() { Read = "PluginSecurity", Write = "PluginSecurity" } }
     };
 
     public static readonly HashSet<string> PARTIAL_INTERFACES =
@@ -274,9 +272,7 @@ internal static class Constants
         { "LayerCollector", ["FilteringEnabled"] },
         { "GuiBase3d", ["FilteringEnabled"] },
         { "Model", ["FilteringEnabled"] },
-        {
-            "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"]
-        }, // defined in Roblox.cs
+        { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] }, // defined in Roblox.cs
         { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] },
         { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] },                                      // defined in Roblox.cs
         { "OrderedDataStore", ["GetSortedAsync"] },                                                     // defined in Roblox.cs

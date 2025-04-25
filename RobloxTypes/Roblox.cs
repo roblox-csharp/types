@@ -2,7 +2,7 @@
 {
     using HttpHeaders = IDictionary<string, string>;
 
-    [AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Constructor | AttributeTargets.Method)]
     public sealed class Native : Attribute;
 
     public partial interface _G;
@@ -66,10 +66,8 @@
     {
         /// <summary>The name of the <see cref="EnumItem"/>.</summary>
         public string Name { get; }
-
         /// <summary>The integral value assigned to the <see cref="EnumItem"/>.</summary>
         public uint Value { get; }
-
         /// <summary>A reference to the parent Enum of the <see cref="EnumItem"/>.</summary>
         public string EnumType { get; }
 
@@ -83,22 +81,6 @@
         {
             public abstract EnumItem[] GetEnumItems();
         }
-    }
-
-    public abstract class VoiceChatDistanceAttenuationType : EnumItem
-    {
-        public static extern VoiceChatDistanceAttenuationType Inverse { get; }
-        public static extern VoiceChatDistanceAttenuationType Legacy { get; }
-
-        /// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
-        public static extern uint[] GetEnumItems();
-
-        public extern string Name { get; }
-        public extern uint Value { get; }
-        public extern string EnumType { get; }
-
-        public extern bool IsA<T>(string name)
-            where T : Enum.Enum;
     }
 
     public interface IScriptSignal<in TAction>
@@ -206,8 +188,26 @@
         /// <summary>The x-coordinate of the <see cref="Vector2int16"/>.</summary>
         public readonly short X = (short)x!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The y-coordinate of the <see cref="Vector2int16"/>.</summary>
         public readonly short Y = (short)y!;
+
+
+
+
+
+
+
+
+
 
         public static Vector2int16 operator -(Vector2int16 a, Vector2int16 b)
         {
@@ -240,26 +240,98 @@
         /// <summary>A <see cref="Vector2"/> with a magnitude of zero.</summary>
         public static readonly Vector2 zero = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A <see cref="Vector2"/> with a value of 1 on every axis.</summary>
         public static readonly Vector2 one = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>A <see cref="Vector2"/> with a value of 1 on the X axis.</summary>
         public static readonly Vector2 xAxis = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A <see cref="Vector2"/> with a value of 1 on the Y axis.</summary>
         public static readonly Vector2 yAxis = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The x-coordinate of the <see cref="Vector2"/></summary>
         public readonly float X = (float)x!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The y-coordinate of the <see cref="Vector2"/></summary>
         public readonly float Y = (float)y!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The length of the <see cref="Vector2"/></summary>
         public readonly float Magnitude;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A normalized copy of the <see cref="Vector2"/> - one that has the same direction as the original but a magnitude of 1.</summary>
         public readonly Vector2 Unit = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new vector from the absolute values of the original's components. For example, a vector of (-2, 4, -6) returns a vector of (2, 4, 6).</summary>
         public Vector2 Abs()
@@ -376,11 +448,38 @@
         /// <summary>The x-coordinate of the <see cref="Vector3int16"/>.</summary>
         public readonly short X = (short)x!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The y-coordinate of the <see cref="Vector3int16"/>.</summary>
         public readonly short Y = (short)y!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The z-coordinate of the <see cref="Vector3int16"/>.</summary>
         public readonly short Z = (short)z!;
+
+
+
+
+
+
+
+
+
 
         public static Vector3int16 operator +(Vector3int16 a, Vector3int16 b)
         {
@@ -428,32 +527,122 @@
         /// <summary>A <see cref="Vector3"/> with a magnitude of zero.</summary>
         public static readonly Vector3 zero = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A <see cref="Vector3"/> with a value of 1 on every axis.</summary>
         public static readonly Vector3 one = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>A <see cref="Vector3"/> with a value of 1 on the X axis.</summary>
         public static readonly Vector3 xAxis = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A <see cref="Vector3"/> with a value of 1 on the Y axis.</summary>
         public static readonly Vector3 yAxis = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>A <see cref="Vector3"/> with a value of 1 on the Z axis.</summary>
         public static readonly Vector3 zAxis = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The x-coordinate of the <see cref="Vector3"/>.</summary>
         public readonly float X = (float)x!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The y-coordinate of the <see cref="Vector3"/>.</summary>
         public readonly float Y = (float)y!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The z-coordinate of the <see cref="Vector3"/>.</summary>
         public readonly float Z = (float)z!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The length of the Vector3.</summary>
         public readonly float Magnitude;
 
+
+
+
+
+
+
+
+
+
         /// <summary>A normalized copy of the <see cref="Vector3"/> - one that has the same direction as the original but a magnitude of 1.</summary>
         public readonly Vector3 Unit = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="Vector3"/> in the given direction.</summary>
         public static Vector3 FromNormalId(Enum.NormalId normal)
@@ -576,38 +765,146 @@
         /// <summary>An identity <see cref="CFrame"/> with no translation or rotation.</summary>
         public readonly CFrame identity = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The 3D position of the <see cref="CFrame"/>.</summary>
         public readonly Vector3 Position = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>A copy of the <see cref="CFrame"/> with no translation.</summary>
         public readonly CFrame Rotation = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The X coordinate of the position.</summary>
         public readonly float X;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The Y coordinate of the position.</summary>
         public readonly float Y;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The Z coordinate of the position.</summary>
         public readonly float Z;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The forward-direction component of the <see cref="CFrame"/> object's orientation, equivalent to the negated <see cref="ZVector"/> or the negated third column of the rotation matrix.</summary>
         public readonly Vector3 LookVector = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The right-direction component of the <see cref="CFrame"/> object's orientation. Equivalent to <see cref="XVector"/> or the first column of the rotation matrix.</summary>
         public readonly Vector3 RightVector = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The up-direction component of the <see cref="CFrame"/> object's orientation. Equivalent to <see cref="YVector"/> or the second column of the rotation matrix.</summary>
         public readonly Vector3 UpVector = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The X component of the <see cref="CFrame"/> object's orientation. Equivalent to <see cref="RightVector"/> or the first column of the rotation matrix.</summary>
         public readonly Vector3 XVector = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The Y component of the <see cref="CFrame"/> object's orientation. Equivalent to <see cref="UpVector"/> or the second column of the rotation matrix.</summary>
         public readonly Vector3 YVector = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The Z component of the <see cref="CFrame"/> object's orientation. Equivalent to the negated <see cref="LookVector"/> or the third column of the rotation matrix.</summary>
         public readonly Vector3 ZVector = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns an empty <see cref="CFrame"/>.</summary>
         public CFrame()
@@ -876,8 +1173,26 @@
         /// <summary>The lower bound of the <see cref="Region3int16"/>.</summary>
         public readonly Vector3int16 Min = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The upper bound of the <see cref="Region3int16"/>.</summary>
         public readonly Vector3int16 Max = null!;
+
+
+
+
+
+
+
+
+
 
         public Region3int16(Vector3int16 min, Vector3int16 max)
         {
@@ -897,8 +1212,26 @@
         /// <summary>The center location and rotation of the <see cref="Region3"/>.</summary>
         public readonly CFrame CFrame = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The 3D size of the <see cref="Region3"/>.</summary>
         public readonly Vector3 Size = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="Region3"/> using the provided vectors as boundaries.</summary>
         public Region3(Vector3 min, Vector3 max)
@@ -921,11 +1254,38 @@
         /// <summary>The red value of the color.</summary>
         public readonly float R;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The green value of the color.</summary>
         public readonly float G;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The blue value of the color.</summary>
         public readonly float B;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a <see cref="Color3"/> with the given red, green, and blue values.</summary>
         public static Color3 fromRGB(float? r = 0, float? g = 0, float? b = 0)
@@ -976,20 +1336,74 @@
         /// <summary>The unique number that identifies the <see cref="BrickColor"/>.</summary>
         public readonly uint Number;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The red component of the <see cref="BrickColor"/> (between 0 and 1).</summary>
         public readonly float r;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The green component of the <see cref="BrickColor"/> (between 0 and 1).</summary>
         public readonly float g;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The blue component of the <see cref="BrickColor"/> (between 0 and 1).</summary>
         public readonly float b;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The name associated with the <see cref="BrickColor"/>.</summary>
         public readonly string Name = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The <see cref="Color3"/> associated with the <see cref="BrickColor"/>.</summary>
         public readonly Color3 Color = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Constructs a <see cref="BrickColor"/> from its numerical index.</summary>
         public BrickColor(uint index)
@@ -1087,11 +1501,38 @@
         /// <summary>The <see cref="Ray"/> with a normalized direction (the direction has a magnitude of 1).</summary>
         public readonly Ray Unit = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The position of the origin.</summary>
         public readonly Vector3 Origin = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The direction vector of the <see cref="Ray"/>.</summary>
         public readonly Vector3 Direction = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a <see cref="Ray"/> with the given Origin and Direction.</summary>
         public Ray(Vector3 Origin, Vector3 Direction)
@@ -1120,14 +1561,50 @@
         /// <summary>The distance between the ray origin and the intersection point.</summary>
         public readonly float Distance;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The <see cref="BasePart"/> or <see cref="Terrain"/> cell that the ray intersected.</summary>
         public readonly Instance? Instance;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The <see cref="Enum.Material"/> at the intersection point.</summary>
         public readonly Enum.Material Material = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The position of the intersection between the ray and the part.</summary>
         public readonly Vector3 Position = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The normal vector of the intersected face.</summary>
         public readonly Vector3 Normal = null!;
@@ -1145,20 +1622,74 @@
         /// <summary>An array of objects whose descendants are used in filtering raycasting candidates.</summary>
         public Instance[]? FilterDescendantsInstances;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Determines how the <see cref="FilterDescendantsInstances"/> array is used.</summary>
         public Enum.RaycastFilterType? FilterType;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Determines whether the water material is considered when raycasting against <see cref="Terrain"/>.</summary>
         public bool? IgnoreWater;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The collision group used for the operation.</summary>
         public string? CollisionGroup;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Determines whether the raycast operation considers a part's <see cref="BasePart.CanCollide"/> property value over its <see cref="BasePart.CanQuery"/> value.</summary>
         public bool? RespectCanCollide;
 
+
+
+
+
+
+
+
+
+
         /// <summary>When enabled, the query will ignore all part collision properties and perform a brute-force check on every part.</summary>
         public bool? BruteForceAllSlow;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a blank <see cref="RaycastParams"/>.</summary>
         public RaycastParams()
@@ -1194,20 +1725,74 @@
         /// <summary>An array of objects whose descendants is used in filtering candidates.</summary>
         public Instance[]? FilterDescendantsInstances;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Determines how the <see cref="FilterDescendantsInstances"/> list is used.</summary>
         public Enum.RaycastFilterType? FilterType;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The maximum amount of parts to be returned by the query.</summary>
         public uint MaxParts;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The collision group used for the operation.</summary>
         public string? CollisionGroup;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Determines whether the boundary-querying operation considers a part's <see cref="BasePart.CanCollide"/> property value over its <see cref="BasePart.CanQuery"/> value.</summary>
         public bool? RespectCanCollide;
 
+
+
+
+
+
+
+
+
+
         /// <summary>When enabled, the query will ignore all part collision properties and perform a brute-force check on every part.</summary>
         public bool? BruteForceAllSlow;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a blank <see cref="OverlapParams"/> object.</summary>
         public OverlapParams()
@@ -1229,8 +1814,26 @@
         /// <summary>The relative scale component of the <see cref="UDim"/>.</summary>
         public readonly float Scale;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The absolute offset component of the <see cref="UDim"/>.</summary>
         public readonly uint Offset;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a <see cref="UDim"/> from the given components.</summary>
         public UDim(float Scale, uint Offset)
@@ -1257,14 +1860,50 @@
         /// <summary>The X dimension scale and offset of the <see cref="UDim2"/>.</summary>
         public readonly UDim X = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The Y dimension scale and offset of the <see cref="UDim2"/>.</summary>
         public readonly UDim Y = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The X dimension scale and offset of the <see cref="UDim2"/>.</summary>
         public readonly UDim Width = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The Y dimension scale and offset of the <see cref="UDim2"/>.</summary>
         public readonly UDim Height = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="UDim2"/> given the coordinates of the two <see cref="UDim"/> components representing each axis.</summary>
         public UDim2(float? xScale = 0, uint? xOffset = 0, float? yScale = 0, uint? yOffset = 0)
@@ -1480,8 +2119,26 @@
         /// <summary>The minimum value of the <see cref="NumberRange"/>.</summary>
         public readonly float Min;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The maximum value of the <see cref="NumberRange"/>.</summary>
         public readonly float Max;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="NumberRange"/> with the minimum and maximum set to the value.</summary>
         public NumberRange(float number)
@@ -1502,6 +2159,15 @@
     {
         /// <summary>An array of <see cref="NumberSequenceKeypoint"/> values in ascending order.</summary>
         public readonly NumberSequenceKeypoint[] Keypoints = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a <see cref="NumberSequence"/> with the start and end values set to the provided n.</summary>
         public NumberSequence(float n)
@@ -1527,11 +2193,38 @@
         /// <summary>The amount of variance allowed from the value.</summary>
         public readonly float Envelope;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The relative time at which the keypoint is positioned.</summary>
         public readonly float Time;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The base value of the keypoint.</summary>
         public readonly float Value;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a keypoint with the specified time and value.</summary>
         public NumberSequenceKeypoint(float time, float value)
@@ -1552,6 +2245,15 @@
     {
         /// <summary>An array of <see cref="ColorSequenceKeypoint"/> values in ascending order.</summary>
         public readonly ColorSequenceKeypoint[] Keypoint = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="ColorSequence"/> that is entirely the specified color.</summary>
         public ColorSequence(Color3 c)
@@ -1574,8 +2276,26 @@
         /// <summary>The relative time at which the keypoint is located.</summary>
         public readonly float Time;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The <see cref="Color3"/> value of the keypoint.</summary>
         public readonly Color3 Value = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Creates a <see cref="ColorSequenceKeypoint"/> with a specified time and color.</summary>
         public ColorSequenceKeypoint(float time, Color3 color)
@@ -1588,14 +2308,50 @@
         /// <summary>The width of the <see cref="Rect"/> in pixels.</summary>
         public readonly float Width;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The height of the <see cref="Rect"/> in pixels.</summary>
         public readonly float Height;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The top-left corner.</summary>
         public readonly Vector2 Min = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The bottom-right corner.</summary>
         public readonly Vector2 Max = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="Rect"/> with zero <see cref="Vector2"/> positions.</summary>
         public Rect()
@@ -1621,29 +2377,110 @@
         /// <summary>Whether the X axis is enabled.</summary>
         public readonly bool X;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the Y axis is enabled.</summary>
         public readonly bool Y;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Whether the Z axis is enabled.</summary>
         public readonly bool Z;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the top face is included.</summary>
         public readonly bool Top;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Whether the bottom face is included.</summary>
         public readonly bool Bottom;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the left face is included.</summary>
         public readonly bool Left;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Whether the right face is included.</summary>
         public readonly bool Right;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the back face is included.</summary>
         public readonly bool Back;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the front face is included.</summary>
         public readonly bool Front;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Create an empty <see cref="Axes"/></summary>
         public Axes()
@@ -1671,20 +2508,74 @@
         /// <summary>Whether the top face is included.</summary>
         public readonly bool Top;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the bottom face is included.</summary>
         public readonly bool Bottom;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Whether the left face is included.</summary>
         public readonly bool Left;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the right face is included.</summary>
         public readonly bool Right;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Whether the back face is included.</summary>
         public readonly bool Back;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether the front face is included.</summary>
         public readonly bool Front;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Create an empty <see cref="Faces"/></summary>
         public Faces()
@@ -1710,17 +2601,62 @@
         /// <summary>The mass per unit volume of the part.</summary>
         public float Density;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The deceleration of the part when rubbing against another part.</summary>
         public float Friction;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The amount of energy retained when colliding with another part.</summary>
         public float Elasticity;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The importance of the part's <see cref="BasePart.Friction"/> property when calculating the friction with the colliding part.</summary>
         public float FrictionWeight;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The importance of the part's <see cref="BasePart.Elasticity"/> property when calculating the elasticity with the colliding part.</summary>
         public float ElasticityWeight;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a <see cref="PhysicalProperties"/> container, with the density, friction, and elasticity specified for this Material.</summary>
         public PhysicalProperties(Enum.Material material)
@@ -1746,11 +2682,38 @@
         /// <summary>The position of the <see cref="Path2DControlPoint"/>.</summary>
         public readonly UDim2 Position = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The left tangent of the <see cref="Path2DControlPoint"/>.</summary>
         public readonly UDim2 LeftTangent = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The right tangent of the <see cref="Path2DControlPoint"/>.</summary>
         public readonly UDim2 RightTangent = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns an empty <see cref="Path2DControlPoint"/>.</summary>
         public Path2DControlPoint()
@@ -1779,17 +2742,62 @@
         /// <summary>The key interpolation mode for the segment started by this <see cref="RotationCurveKey"/>.</summary
         public readonly Enum.KeyInterpolationMode Interpolation = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The time position of this <see cref="RotationCurveKey"/>.</summary>
         public readonly float Time;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The value of this <see cref="RotationCurveKey"/>.</summary>
         public readonly CFrame Value = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The tangent to the right of this <see cref="RotationCurveKey"/>.</summary>
         public readonly float RightTangent;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The tangent to the left of this <see cref="RotationCurveKey"/>.</summary>
         public readonly float LeftTangent;
+
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// <para>Creates a new <see cref="RotationCurveKey"/> at a given time with a given <see cref="CFrame"/>.</para>
@@ -1814,17 +2822,62 @@
         /// <summary>The key interpolation mode for the segment started by this <see cref="FloatCurveKey"/>.</summary
         public readonly Enum.KeyInterpolationMode Interpolation = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The time position of this <see cref="FloatCurveKey"/>.</summary>
         public readonly float Time;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The value of this <see cref="FloatCurveKey"/>.</summary>
         public readonly float Value;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The tangent to the right of this <see cref="FloatCurveKey"/>.</summary>
         public readonly float RightTangent;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The tangent to the left of this <see cref="FloatCurveKey"/>.</summary>
         public readonly float LeftTangent;
+
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// <para>Creates a new <see cref="FloatCurveKey"/> at a given time and value.</para>
@@ -1848,11 +2901,29 @@
         /// <summary>The asset ID for the font family. These start with either rbxasset:// or rbxassetid://.</summary>
         public readonly string Family = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// <para>How thick the text is. The default value is <see cref="Enum.FontWeight.Regular"/>.</para>
         /// <para>When set, <see cref="Font.Bold"/> is updated. Bold is true if the weight is <see cref="Enum.FontWeight.SemiBold"/> or thicker.</para>
         /// </summary>
         public readonly Enum.FontWeight Weight = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// <para>Whether the font is italic. The default value is <see cref="Enum.FontStyle.Normal"/>.</para>
@@ -1860,10 +2931,28 @@
         /// </summary>
         public readonly Enum.FontStyle Style = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Whether the font is bold. Sets <see cref="Font.Weight"/> to <see cref="Enum.FontWeight.Bold"/> when true, and <see cref="Enum.FontWeight.Regular"/> otherwise.
         /// </summary>
         public readonly bool Bold;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Creates a new <see cref="Font"/>.</summary>
         /// <param name="family">The asset ID for the font family, starting with rbxasset:// or rbxassetid://.</param>
@@ -1936,17 +3025,53 @@
         /// </summary>
         public readonly bool InitialEnabled;
 
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// <para>If true, the value of <see cref="InitialEnabled"/> will override the previously saved enabled state of a <see cref="PluginClasses.PluginGui"/> being created with this <see cref="DockWidgetPluginGuiInfo"/>.</para>
         /// <para>The previously saved enabled state is loaded based on the pluginGuiId argument of <see cref="PluginClasses.Plugin.CreateDockWidgetPluginGui(string, DockWidgetPluginGuiInfo)"/>.</para>
         /// </summary>
         public readonly bool InitialEnabledShouldOverrideRestore;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The initial pixel width of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Enum.InitialDockState"/> is set to <see cref="Enum.InitialDockState.Float"/>.</summary>
         public readonly float FloatingXSize;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The initial pixel height of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Enum.InitialDockState"/> is set to <see cref="Enum.InitialDockState.Float"/>.</summary>
         public readonly float FloatingYSize;
+
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// <para>The minimum width of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, in pixels.</para>
@@ -1954,8 +3079,26 @@
         /// </summary>
         public readonly float MinWidth;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The minimum height of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, in pixels.</summary>
         public readonly float MinHeight;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Returns a new <see cref="DockWidgetPluginGuiInfo"/> object.</summary>
         public DockWidgetPluginGuiInfo(Enum.InitialDockState? initDockState = null!,
@@ -1978,35 +3121,134 @@
         /// <summary>The keyword to search for catalog results with.</summary>
         public string? SearchKeyword;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The minimum item price to search for.</summary>
         public ulong? MinPrice;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The maximum item price to search for.</summary>
         public ulong? MaxPrice;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The order in which to sort the results.</summary>
         public Enum.CatalogSortType? SortType;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The time period to use to aggregate the sort results.</summary>
         public Enum.CatalogSortAggregation? SortAggregation;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The category to filter the search by.</summary>
         public Enum.CatalogCategoryFilter? CategoryFilter;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The sales type filter the search by.</summary>
         public Enum.SalesTypeFilter? SalesTypeFilter;
 
+
+
+
+
+
+
+
+
+
         /// <summary>An array containing <see cref="Enum.BundleType"/> values to filter the search by.</summary>
         public Enum.BundleType[]? BundleTypes;
+
+
+
+
+
+
+
+
+
 
         /// <summary>An array containing <see cref="Enum.AvatarAssetType"/> values to filter the search by.</summary>
         public Enum.AvatarAssetType[]? AssetTypes;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether off sale items should be included in the results.</summary>
         public bool? IncludeOffSale;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Search for items with the given creator.</summary>
         public string? CreatorName;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Specifies the number of items to return. Accepts 10, 28, 30, 60, and 120. Defaults to 30.</summary>
         public byte? Limit;
@@ -2021,20 +3263,74 @@
         /// <summary>The style in which the tween executes.</summary>
         public readonly Enum.EasingStyle EasingStyle = null!;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The direction in which the EasingStyle executes.</summary>
         public readonly Enum.EasingDirection EasingDirection = null!;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The amount of time the tween takes in seconds.</summary>
         public readonly float Time;
 
+
+
+
+
+
+
+
+
+
         /// <summary>The amount of time that elapses before tween starts in seconds.</summary>
         public readonly float DelayTime;
+
+
+
+
+
+
+
+
+
 
         /// <summary>The number of times the tween repeats after tweening once.</summary>
         public readonly ushort RepeatCount;
 
+
+
+
+
+
+
+
+
+
         /// <summary>Whether or not the tween does the reverse tween once the initial tween completes.</summary>
         public readonly bool Reverses;
+
+
+
+
+
+
+
+
+
 
         /// <summary>Creates a new <see cref="TweenInfo"/> from the provided parameters.</summary>
         public TweenInfo(float? time = null!,

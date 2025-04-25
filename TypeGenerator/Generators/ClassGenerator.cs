@@ -32,7 +32,6 @@ internal sealed class ClassGenerator(
         var classesToGenerate = rbxClasses.Where(ShouldGenerateClass).ToList();
         GenerateHeader();
         Write($"namespace Roblox{(security == "PluginSecurity" ? ".PluginClasses" : "")};");
-        ;
         GenerateServices(rbxClasses.Where(rbxClass => !definedClassNames.Contains(rbxClass.Name)).ToList());
         GenerateClasses(classesToGenerate);
         WriteFile();
@@ -43,7 +42,7 @@ internal sealed class ClassGenerator(
         var readSecurity = Utility.GetSecurity(className, member).Read;
 
         return readSecurity == security
-            || (PLUGIN_ONLY_CLASSES.Contains(className) && readSecurity == lowerSecurity);
+            || PLUGIN_ONLY_CLASSES.Contains(className) && readSecurity == lowerSecurity;
     }
 
     private bool CanWrite(string className, APITypes.MemberBase member)
@@ -70,9 +69,7 @@ internal sealed class ClassGenerator(
     private bool ShouldGenerateClass(APITypes.Class rbxClass)
     {
         var superClass = rbxClass.Superclass != ROOT_CLASS_NAME ? _classRefs[rbxClass.Superclass] : null;
-
         if (superClass != null && !ShouldGenerateClass(superClass)) return false;
-
         if (CLASS_BLACKLIST.Contains(rbxClass.Name)) return false;
 
         return security == "PluginSecurity" || !PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name);
@@ -83,9 +80,7 @@ internal sealed class ClassGenerator(
         if (member.Name == null) return false;
 
         var isBlacklisted = MEMBER_BLACKLIST.TryGetValue(rbxClass.Name, out var value) && value.Contains(member.Name);
-
         if (isBlacklisted) return false;
-
         if (!CanRead(rbxClass.Name, member)) return false;
 
         if (Utility.HasTag(member, "Deprecated"))
@@ -101,7 +96,6 @@ internal sealed class ClassGenerator(
         }
 
         if (Utility.HasTag(member, "Hidden")) return false;
-
         if (Utility.HasTag(member, "NotScriptable")) return false;
 
         return !_definedMemberNames[rbxClass.Name].Contains(member.Name.Trim());
@@ -113,8 +107,7 @@ internal sealed class ClassGenerator(
         // Implementation for writing description
     }
 
-    // Returns the given className if it's in ClassRefs
-    // Throws if not
+    /// <summary>Returns the given <see cref="className"/> if it's in <see cref="_classRefs"/>, throws if not</summary>
     private string AssertClassName(string className)
     {
         if (_classRefs.ContainsKey(className)) return className;
@@ -135,7 +128,8 @@ internal sealed class ClassGenerator(
             case true:
             {
                 var desc = rbxClass.Description;
-                if (desc != null) Write(Utility.FormatComment(desc));
+                if (desc != null)
+                    Write(Utility.FormatComment(desc));
 
                 break;
             }
@@ -169,11 +163,16 @@ internal sealed class ClassGenerator(
         var isValidSuperclass = rbxClass.Superclass != ROOT_CLASS_NAME;
         var superclassText = isValidSuperclass ? $" : {string.Join(", ", superclasses)}" : "";
         var partialText = isPartial ? " partial" : "";
-        Write($"public{partialText} interface {className}{superclassText}");
-        Write("{");
-        PushIndent();
+        var isInstanceClass = InheritsFrom(rbxClass, "Instance");
+        var useBraces = isInstanceClass || membersToGenerate.Count > 0;
+        Write($"public{partialText} interface {className}{superclassText}{(useBraces ? "" : ";")}");
+        if (useBraces)
+        {
+            Write("{");
+            PushIndent();
+        }
 
-        if (className != "Object")
+        if (isInstanceClass)
             foreach (var memberText in PER_INSTANCE_MEMBERS)
                 Write(memberText.Replace("<INSTANCE_TYPE>", rbxClass.Name));
 
@@ -184,29 +183,29 @@ internal sealed class ClassGenerator(
             {
                 case "Callback":
                     GenerateCallback((APITypes.Callback)member, rbxClass);
-
                     break;
                 case "Event":
                     GenerateEvent((APITypes.Event)member, rbxClass);
-
                     break;
                 case "Function":
                     GenerateFunction((APITypes.Function)member, rbxClass);
-
                     break;
                 case "Property":
                     GenerateProperty((APITypes.Property)member, rbxClass);
-
                     break;
                 default:
                     throw new NotSupportedException($"Received unsupported member type: {member.MemberType}");
             }
         }
 
+        if (!useBraces) return;
         PopIndent();
         Write("}");
         Write();
     }
+
+    private bool InheritsFrom(APITypes.Class rbxClass, string baseClassName) =>
+        _classRefs[baseClassName].Subclasses.Contains(rbxClass.Name);
 
     private static List<string> GetParamNames(List<APITypes.Parameter> parameters)
     {
@@ -247,20 +246,16 @@ internal sealed class ClassGenerator(
 
                 if (findings.Count != 0)
                 {
-                    var partPos = findings.IndexOf("Part");
+                    var partPosition = findings.IndexOf("Part");
                     var doSplice = !findings.Contains("Part")
                                 && findings.Count != 0
                                 && !argName.Contains("or", StringComparison.CurrentCultureIgnoreCase);
 
-                    if (doSplice && partPos != -1)
-                    {
-                        findings.RemoveAt(partPos);
-                    }
+                    if (doSplice && partPosition != -1)
+                        findings.RemoveAt(partPosition);
 
-                    paramType = Utility.SafeRenamedInstance(findings.FirstOrDefault(found => string.Equals(found,
-                                                                                                           argName,
-                                                                                                           StringComparison
-                                                                                                               .CurrentCultureIgnoreCase)))
+                    paramType = Utility.SafeRenamedInstance(findings.FirstOrDefault(found =>
+                                                                                        string.Equals(found, argName, StringComparison.CurrentCultureIgnoreCase)))
                              ?? "Instance";
                 }
             }
@@ -275,72 +270,74 @@ internal sealed class ClassGenerator(
     private void GenerateCallback(APITypes.Callback callback, APITypes.Class rbxClass)
     {
         var paramTypeList = callback.Parameters.Count > 0
-            ? string.Join(", ",
-                          callback.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null")
+            ? string.Join(", ",callback.Parameters.ConvertAll(param =>
+                                                                  Utility.SafeValueType(param.Type)
                                                                 + " "
                                                                 + Utility.SafeParamName(param.Name)))
             : "";
 
-        var delegateName = $"{callback.Name}Delegate";
+        var name = Utility.SafeName(callback.Name);
+        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var delegateName = $"{name}Delegate";
         var description = !string.IsNullOrWhiteSpace(callback.Description)
             ? callback.Description
-            : _metadata.ReadCallbackDesc(rbxClass.Name, callback.Name!);
+            : _metadata.ReadCallbackDesc(rbxClass.Name, name);
 
-        Write($"public delegate void {delegateName}({paramTypeList});");
-        Write($"public {delegateName} {callback.Name} {{ get; set; }}");
+        Write($"public {newText}delegate void {delegateName}({paramTypeList});");
+        Write($"public {newText}{delegateName} {name} {{ get; set; }}");
     }
 
     private void GenerateEvent(APITypes.Event @event, APITypes.Class rbxClass)
     {
         var paramTypeList = @event.Parameters.Count > 0
-            ? string.Join(", ",
-                          @event.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null")
-                                                              + " "
-                                                              + Utility.SafeParamName(param.Name)))
+            ? string.Join(", ",  @event.Parameters.ConvertAll(param => 
+                                                                       Utility.SafeValueType(param.Type)
+                                                                     + " "
+                                                                     + Utility.SafeParamName(param.Name)))
             : "";
 
-        var delegateName = $"{@event.Name}Delegate";
+        var name = Utility.SafeName(@event.Name);
+        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var delegateName = $"{name}Delegate";
         var description = !string.IsNullOrWhiteSpace(@event.Description)
             ? @event.Description
-            : _metadata.ReadEventDesc(rbxClass.Name, @event.Name!);
+            : _metadata.ReadEventDesc(rbxClass.Name, name);
 
-        Write($"public delegate void {delegateName}({paramTypeList});");
-        Write($"public event {delegateName} {@event.Name};");
+        Write($"public {newText}delegate void {delegateName}({paramTypeList});");
+        Write($"public {newText}event {delegateName} {name};");
     }
 
     private void GenerateFunction(APITypes.Function function, APITypes.Class rbxClass)
     {
         var args = GenerateParams(function.Parameters);
-        string? returnType;
-        if ((object)function.ReturnType is not string[] enumerable)
-            returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
-        else
+        var returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
+        if ((object)function.ReturnType is string[] types)
         {
-            var typesList = enumerable.Select(t => string.Join(", ",
-                                                               Utility
-                                                                   .SafeReturnType(Utility.SafeValueType(function.ReturnType))));
-
+            var typesList = string.Join(", ", types.Select(Utility.SafeReturnType));
             // returnType = $"LuaTuple<{typesList}>";
-            returnType = "object"; // temporary
         }
-
+        
+        var name = Utility.SafeName(function.Name);
+        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
         var description = !string.IsNullOrWhiteSpace(function.Description)
             ? function.Description
-            : _metadata.ReadFunctionDesc(rbxClass.Name, function.Name!);
+            : _metadata.ReadFunctionDesc(rbxClass.Name, name);
 
-        Write($"public {returnType} {function.Name}({args});");
+        Write($"public {newText}{returnType} {name}({args});");
     }
 
     private void GenerateProperty(APITypes.Property property, APITypes.Class rbxClass)
     {
         var valueType = Utility.SafePropType(Utility.SafeValueType(property.ValueType))!;
+        var name = Utility.SafeName(property.Name);
+        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
         var description = !string.IsNullOrWhiteSpace(property.Description)
             ? property.Description
-            : _metadata.ReadPropDesc(rbxClass.Name, property.Name!);
+            : _metadata.ReadPropDesc(rbxClass.Name, name);
 
         var definitelyDefined = property.ValueType.Category != "Class";
         var extraPropertyData = CanWrite(rbxClass.Name, property) && !Utility.HasTag(property, "ReadOnly") ? " set;" : "";
-        Write($"public {valueType}{(definitelyDefined || valueType.EndsWith('?') ? "" : "?")} {property.Name!.Replace(" ", "")} {{ get;{extraPropertyData} }}");
+        Write($"public {newText}{valueType}{(definitelyDefined || valueType.EndsWith('?') ? "" : "?")} {name.Replace(" ", "")} {{ get;{extraPropertyData} }}");
     }
 
     private void GenerateServices(List<APITypes.Class> rbxClasses)

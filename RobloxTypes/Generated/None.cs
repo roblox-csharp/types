@@ -232,23 +232,14 @@ public interface Object
 	public string ClassName { get; }
 	public ScriptSignal GetPropertyChangedSignal(string property);
 	public bool IsA(string className);
-	public delegate void ChangedDelegate(string property);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(string property);
+	public new event ChangedDelegate Changed;
 }
 
-public interface Capture : Object
-{
-	public new Capture Clone();
-}
-
-public interface ScreenshotCapture : Capture
-{
-	public new ScreenshotCapture Clone();
-}
-
+public interface Capture : Object;
+public interface ScreenshotCapture : Capture;
 public interface ConfigSnapshot : Object
 {
-	public new ConfigSnapshot Clone();
 	public Enum.ConfigSnapshotErrorState Error { get; }
 	public bool Outdated { get; }
 	public object GetValue(string key, object defaultValue);
@@ -260,7 +251,6 @@ public interface ConfigSnapshot : Object
 
 public interface EditableImage : Object
 {
-	public new EditableImage Clone();
 	public Vector2 Size { get; }
 	public void Destroy();
 	public void DrawCircle(Vector2 center, int radius, Color3 color, float transparency, Enum.ImageCombineType combineType);
@@ -275,7 +265,6 @@ public interface EditableImage : Object
 
 public interface EditableMesh : Object
 {
-	public new EditableMesh Clone();
 	public bool FixedSize { get; }
 	public bool SkinningEnabled { get; set; }
 	public long AddBone(object boneProperties);
@@ -366,7 +355,6 @@ public interface EditableMesh : Object
 
 public partial interface Instance : Object
 {
-	public new Instance Clone();
 	public bool Archivable { get; set; }
 	public SecurityCapabilities Capabilities { get; set; }
 	public string Name { get; set; }
@@ -418,15 +406,10 @@ public interface Accoutrement : ICreatableInstance
 
 public interface Accessory : Accoutrement, ICreatableInstance
 {
-	public new Accessory Clone();
 	public Enum.AccessoryType AccessoryType { get; set; }
 }
 
-public interface Hat : Accoutrement, ICreatableInstance
-{
-	public new Hat Clone();
-}
-
+public interface Hat : Accoutrement, ICreatableInstance;
 public interface AchievementService : IServiceInstance
 {
 	public new AchievementService Clone();
@@ -474,14 +457,9 @@ public interface AnimationClip : Instance
 	public Enum.AnimationPriority Priority { get; set; }
 }
 
-public interface CurveAnimation : AnimationClip, ICreatableInstance
-{
-	public new CurveAnimation Clone();
-}
-
+public interface CurveAnimation : AnimationClip, ICreatableInstance;
 public partial interface KeyframeSequence : AnimationClip, ICreatableInstance
 {
-	public new KeyframeSequence Clone();
 	public void AddKeyframe(Keyframe keyframe);
 	public Instance[] GetKeyframes();
 	public void RemoveKeyframe(Keyframe keyframe);
@@ -577,11 +555,7 @@ public interface Annotation : ICreatableInstance
 	public new Annotation Clone();
 }
 
-public interface WorkspaceAnnotation : Annotation, ICreatableInstance
-{
-	public new WorkspaceAnnotation Clone();
-}
-
+public interface WorkspaceAnnotation : Annotation, ICreatableInstance;
 public interface AnnotationsService : IServiceInstance
 {
 	public new AnnotationsService Clone();
@@ -682,7 +656,6 @@ public interface Attachment : ICreatableInstance
 
 public interface Bone : Attachment, ICreatableInstance
 {
-	public new Bone Clone();
 	public CFrame Transform { get; set; }
 	public CFrame TransformedWorldCFrame { get; }
 }
@@ -1163,32 +1136,18 @@ public interface BaseImportData : Instance
 	public event StatusReportedDelegate StatusReported;
 }
 
-public interface AnimationImportData : BaseImportData
-{
-	public new AnimationImportData Clone();
-}
-
-public interface FacsImportData : BaseImportData
-{
-	public new FacsImportData Clone();
-}
-
+public interface AnimationImportData : BaseImportData;
+public interface FacsImportData : BaseImportData;
 public interface GroupImportData : BaseImportData
 {
-	public new GroupImportData Clone();
 	public bool Anchored { get; set; }
 	public bool ImportAsModelAsset { get; set; }
 	public bool InsertInWorkspace { get; set; }
 }
 
-public interface JointImportData : BaseImportData
-{
-	public new JointImportData Clone();
-}
-
+public interface JointImportData : BaseImportData;
 public interface MaterialImportData : BaseImportData
 {
-	public new MaterialImportData Clone();
 	public string DiffuseFilePath { get; set; }
 	public bool IsPbr { get; }
 	public string MetalnessFilePath { get; set; }
@@ -1198,7 +1157,6 @@ public interface MaterialImportData : BaseImportData
 
 public interface MeshImportData : BaseImportData
 {
-	public new MeshImportData Clone();
 	public bool Anchored { get; set; }
 	public bool CageManifold { get; }
 	public bool CageMeshIntersectedPreview { get; set; }
@@ -1223,7 +1181,6 @@ public interface MeshImportData : BaseImportData
 
 public interface RootImportData : BaseImportData
 {
-	public new RootImportData Clone();
 	public bool AddModelToInventory { get; set; }
 	public bool Anchored { get; set; }
 	public float AnimationIdForRestPose { get; set; }
@@ -1258,7 +1215,6 @@ public interface BasePlayerGui : Instance
 
 public partial interface PlayerGui : BasePlayerGui
 {
-	public new PlayerGui Clone();
 	public Enum.ScreenOrientation CurrentScreenOrientation { get; }
 	public Enum.ScreenOrientation ScreenOrientation { get; set; }
 	public GuiObject? SelectionImageObject { get; set; }
@@ -1270,7 +1226,6 @@ public partial interface PlayerGui : BasePlayerGui
 
 public partial interface StarterGui : BasePlayerGui, IServiceInstance
 {
-	public new StarterGui Clone();
 	public bool ResetPlayerGuiOnSpawn { get; set; }
 	public Enum.ScreenOrientation ScreenOrientation { get; set; }
 	public bool GetCoreGuiEnabled(Enum.CoreGuiType coreGuiType);
@@ -1297,7 +1252,6 @@ public interface BaseWrap : Instance
 
 public interface WrapDeformer : BaseWrap, ICreatableInstance
 {
-	public new WrapDeformer Clone();
 	public void SetCageMeshContent(Content content, CFrame? cageOrigin = null);
 	public EditableMesh CreateEditableMeshAsync();
 	public CFrame GetDeformedCFrameAsync(CFrame originalCFrame);
@@ -1305,7 +1259,6 @@ public interface WrapDeformer : BaseWrap, ICreatableInstance
 
 public interface WrapLayer : BaseWrap, ICreatableInstance
 {
-	public new WrapLayer Clone();
 	public Enum.WrapLayerAutoSkin AutoSkin { get; set; }
 	public CFrame BindOffset { get; set; }
 	public bool Enabled { get; set; }
@@ -1320,7 +1273,6 @@ public interface WrapLayer : BaseWrap, ICreatableInstance
 
 public interface WrapTarget : BaseWrap, ICreatableInstance
 {
-	public new WrapTarget Clone();
 	public float Stiffness { get; set; }
 }
 
@@ -1370,7 +1322,6 @@ public interface BodyMover : Instance
 
 public interface BodyAngularVelocity : BodyMover, ICreatableInstance
 {
-	public new BodyAngularVelocity Clone();
 	public Vector3 AngularVelocity { get; set; }
 	public Vector3 MaxTorque { get; set; }
 	public float P { get; set; }
@@ -1379,13 +1330,11 @@ public interface BodyAngularVelocity : BodyMover, ICreatableInstance
 
 public interface BodyForce : BodyMover, ICreatableInstance
 {
-	public new BodyForce Clone();
 	public Vector3 Force { get; set; }
 }
 
 public interface BodyGyro : BodyMover, ICreatableInstance
 {
-	public new BodyGyro Clone();
 	public CFrame CFrame { get; set; }
 	public float D { get; set; }
 	public Vector3 MaxTorque { get; set; }
@@ -1394,7 +1343,6 @@ public interface BodyGyro : BodyMover, ICreatableInstance
 
 public interface BodyPosition : BodyMover, ICreatableInstance
 {
-	public new BodyPosition Clone();
 	public float D { get; set; }
 	public Vector3 MaxForce { get; set; }
 	public float P { get; set; }
@@ -1407,14 +1355,12 @@ public interface BodyPosition : BodyMover, ICreatableInstance
 
 public interface BodyThrust : BodyMover, ICreatableInstance
 {
-	public new BodyThrust Clone();
 	public Vector3 Force { get; set; }
 	public Vector3 Location { get; set; }
 }
 
 public interface BodyVelocity : BodyMover, ICreatableInstance
 {
-	public new BodyVelocity Clone();
 	public Vector3 MaxForce { get; set; }
 	public float P { get; set; }
 	public Vector3 Velocity { get; set; }
@@ -1424,7 +1370,6 @@ public interface BodyVelocity : BodyMover, ICreatableInstance
 
 public interface RocketPropulsion : BodyMover, ICreatableInstance
 {
-	public new RocketPropulsion Clone();
 	public float CartoonFactor { get; set; }
 	public float MaxSpeed { get; set; }
 	public float MaxThrust { get; set; }
@@ -1495,7 +1440,6 @@ public interface CharacterAppearance : Instance
 
 public interface BodyColors : CharacterAppearance, ICreatableInstance
 {
-	public new BodyColors Clone();
 	public BrickColor HeadColor { get; set; }
 	public Color3 HeadColor3 { get; set; }
 	public BrickColor LeftArmColor { get; set; }
@@ -1512,7 +1456,6 @@ public interface BodyColors : CharacterAppearance, ICreatableInstance
 
 public interface CharacterMesh : CharacterAppearance, ICreatableInstance
 {
-	public new CharacterMesh Clone();
 	public long BaseTextureId { get; set; }
 	public Enum.BodyPart BodyPart { get; set; }
 	public long MeshId { get; set; }
@@ -1521,25 +1464,21 @@ public interface CharacterMesh : CharacterAppearance, ICreatableInstance
 
 public interface Clothing : CharacterAppearance
 {
-	public new Clothing Clone();
 	public Color3 Color3 { get; set; }
 }
 
 public interface Pants : Clothing, ICreatableInstance
 {
-	public new Pants Clone();
 	public string PantsTemplate { get; set; }
 }
 
 public interface Shirt : Clothing, ICreatableInstance
 {
-	public new Shirt Clone();
 	public string ShirtTemplate { get; set; }
 }
 
 public interface ShirtGraphic : CharacterAppearance, ICreatableInstance
 {
-	public new ShirtGraphic Clone();
 	public Color3 Color3 { get; set; }
 	public string Graphic { get; set; }
 }
@@ -1549,7 +1488,7 @@ public interface Chat : IServiceInstance
 	public new Chat Clone();
 	public bool BubbleChatEnabled { get; set; }
 	public bool LoadDefaultChat { get; }
-	public void Chat(Instance partOrCharacter, string message, Enum.ChatColor? color = null);
+	public void Chat(object partOrCharacter, string message, Enum.ChatColor? color = null);
 	public object InvokeChatCallback(Enum.ChatCallbackType callbackType, object callbackArguments);
 	public void RegisterChatCallback(Enum.ChatCallbackType callbackType, Action callbackFunction);
 	public void SetBubbleChatSettings(object settings);
@@ -1584,7 +1523,6 @@ public interface ClickDetector : ICreatableInstance
 
 public interface DragDetector : ClickDetector, ICreatableInstance
 {
-	public new DragDetector Clone();
 	public string ActivatedCursorIcon { get; set; }
 	public bool ApplyAtCenterOfMass { get; set; }
 	public Vector3 Axis { get; set; }
@@ -1732,7 +1670,6 @@ public interface Constraint : Instance
 
 public interface AlignOrientation : Constraint, ICreatableInstance
 {
-	public new AlignOrientation Clone();
 	public Enum.AlignType AlignType { get; set; }
 	public CFrame CFrame { get; set; }
 	public Vector3 LookAtPosition { get; set; }
@@ -1749,7 +1686,6 @@ public interface AlignOrientation : Constraint, ICreatableInstance
 
 public interface AlignPosition : Constraint, ICreatableInstance
 {
-	public new AlignPosition Clone();
 	public bool ApplyAtCenterOfMass { get; set; }
 	public Enum.ForceLimitMode ForceLimitMode { get; set; }
 	public Enum.ActuatorRelativeTo ForceRelativeTo { get; set; }
@@ -1765,7 +1701,6 @@ public interface AlignPosition : Constraint, ICreatableInstance
 
 public interface AngularVelocity : Constraint, ICreatableInstance
 {
-	public new AngularVelocity Clone();
 	public Vector3 AngularVelocity { get; set; }
 	public float MaxTorque { get; set; }
 	public bool ReactionTorqueEnabled { get; set; }
@@ -1774,7 +1709,6 @@ public interface AngularVelocity : Constraint, ICreatableInstance
 
 public interface AnimationConstraint : Constraint, ICreatableInstance
 {
-	public new AnimationConstraint Clone();
 	public bool IsKinematic { get; set; }
 	public float MaxForce { get; set; }
 	public float MaxTorque { get; set; }
@@ -1783,7 +1717,6 @@ public interface AnimationConstraint : Constraint, ICreatableInstance
 
 public interface BallSocketConstraint : Constraint, ICreatableInstance
 {
-	public new BallSocketConstraint Clone();
 	public bool LimitsEnabled { get; set; }
 	public float MaxFrictionTorque { get; set; }
 	public float Radius { get; set; }
@@ -1796,7 +1729,6 @@ public interface BallSocketConstraint : Constraint, ICreatableInstance
 
 public interface HingeConstraint : Constraint, ICreatableInstance
 {
-	public new HingeConstraint Clone();
 	public Enum.ActuatorType ActuatorType { get; set; }
 	public float AngularResponsiveness { get; set; }
 	public float AngularSpeed { get; set; }
@@ -1816,7 +1748,6 @@ public interface HingeConstraint : Constraint, ICreatableInstance
 
 public interface LineForce : Constraint, ICreatableInstance
 {
-	public new LineForce Clone();
 	public bool ApplyAtCenterOfMass { get; set; }
 	public bool InverseSquareLaw { get; set; }
 	public float Magnitude { get; set; }
@@ -1826,7 +1757,6 @@ public interface LineForce : Constraint, ICreatableInstance
 
 public interface LinearVelocity : Constraint, ICreatableInstance
 {
-	public new LinearVelocity Clone();
 	public Enum.ForceLimitMode ForceLimitMode { get; set; }
 	public bool ForceLimitsEnabled { get; set; }
 	public Vector3 LineDirection { get; set; }
@@ -1842,24 +1772,11 @@ public interface LinearVelocity : Constraint, ICreatableInstance
 	public Enum.VelocityConstraintMode VelocityConstraintMode { get; set; }
 }
 
-public interface PlaneConstraint : Constraint, ICreatableInstance
-{
-	public new PlaneConstraint Clone();
-}
-
-public interface Plane : PlaneConstraint, ICreatableInstance
-{
-	public new Plane Clone();
-}
-
-public interface RigidConstraint : Constraint, ICreatableInstance
-{
-	public new RigidConstraint Clone();
-}
-
+public interface PlaneConstraint : Constraint, ICreatableInstance;
+public interface Plane : PlaneConstraint, ICreatableInstance;
+public interface RigidConstraint : Constraint, ICreatableInstance;
 public interface RodConstraint : Constraint, ICreatableInstance
 {
-	public new RodConstraint Clone();
 	public float CurrentDistance { get; }
 	public float Length { get; set; }
 	public float LimitAngle0 { get; set; }
@@ -1870,7 +1787,6 @@ public interface RodConstraint : Constraint, ICreatableInstance
 
 public interface RopeConstraint : Constraint, ICreatableInstance
 {
-	public new RopeConstraint Clone();
 	public float CurrentDistance { get; }
 	public float Length { get; set; }
 	public float Restitution { get; set; }
@@ -1884,7 +1800,6 @@ public interface RopeConstraint : Constraint, ICreatableInstance
 
 public interface SlidingBallConstraint : Constraint
 {
-	public new SlidingBallConstraint Clone();
 	public Enum.ActuatorType ActuatorType { get; set; }
 	public float CurrentPosition { get; }
 	public bool LimitsEnabled { get; set; }
@@ -1904,7 +1819,6 @@ public interface SlidingBallConstraint : Constraint
 
 public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance
 {
-	public new CylindricalConstraint Clone();
 	public Enum.ActuatorType AngularActuatorType { get; set; }
 	public bool AngularLimitsEnabled { get; set; }
 	public float AngularResponsiveness { get; set; }
@@ -1924,14 +1838,9 @@ public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstan
 	public Vector3 WorldRotationAxis { get; }
 }
 
-public interface PrismaticConstraint : SlidingBallConstraint, ICreatableInstance
-{
-	public new PrismaticConstraint Clone();
-}
-
+public interface PrismaticConstraint : SlidingBallConstraint, ICreatableInstance;
 public interface SpringConstraint : Constraint, ICreatableInstance
 {
-	public new SpringConstraint Clone();
 	public float Coils { get; set; }
 	public float CurrentLength { get; }
 	public float Damping { get; set; }
@@ -1947,14 +1856,12 @@ public interface SpringConstraint : Constraint, ICreatableInstance
 
 public interface Torque : Constraint, ICreatableInstance
 {
-	public new Torque Clone();
 	public Enum.ActuatorRelativeTo RelativeTo { get; set; }
 	public Vector3 Torque { get; set; }
 }
 
 public interface TorsionSpringConstraint : Constraint, ICreatableInstance
 {
-	public new TorsionSpringConstraint Clone();
 	public float Coils { get; set; }
 	public float CurrentAngle { get; }
 	public float Damping { get; set; }
@@ -1968,7 +1875,6 @@ public interface TorsionSpringConstraint : Constraint, ICreatableInstance
 
 public interface UniversalConstraint : Constraint, ICreatableInstance
 {
-	public new UniversalConstraint Clone();
 	public bool LimitsEnabled { get; set; }
 	public float MaxAngle { get; set; }
 	public float Radius { get; set; }
@@ -1977,7 +1883,6 @@ public interface UniversalConstraint : Constraint, ICreatableInstance
 
 public interface VectorForce : Constraint, ICreatableInstance
 {
-	public new VectorForce Clone();
 	public bool ApplyAtCenterOfMass { get; set; }
 	public Vector3 Force { get; set; }
 	public Enum.ActuatorRelativeTo RelativeTo { get; set; }
@@ -2037,25 +1942,16 @@ public interface Controller : Instance
 	public event ButtonChangedDelegate ButtonChanged;
 }
 
-public interface HumanoidController : Controller, ICreatableInstance
-{
-	public new HumanoidController Clone();
-}
-
+public interface HumanoidController : Controller, ICreatableInstance;
 public interface SkateboardController : Controller, ICreatableInstance
 {
-	public new SkateboardController Clone();
 	public float Steer { get; }
 	public float Throttle { get; }
 	public delegate void AxisChangedDelegate(string axis);
 	public event AxisChangedDelegate AxisChanged;
 }
 
-public interface VehicleController : Controller, ICreatableInstance
-{
-	public new VehicleController Clone();
-}
-
+public interface VehicleController : Controller, ICreatableInstance;
 public interface ControllerBase : Instance
 {
 	public new ControllerBase Clone();
@@ -2066,7 +1962,6 @@ public interface ControllerBase : Instance
 
 public interface AirController : ControllerBase, ICreatableInstance
 {
-	public new AirController Clone();
 	public float BalanceMaxTorque { get; set; }
 	public float BalanceSpeed { get; set; }
 	public bool MaintainAngularMomentum { get; set; }
@@ -2078,7 +1973,6 @@ public interface AirController : ControllerBase, ICreatableInstance
 
 public interface ClimbController : ControllerBase, ICreatableInstance
 {
-	public new ClimbController Clone();
 	public float AccelerationTime { get; set; }
 	public float BalanceMaxTorque { get; set; }
 	public float BalanceSpeed { get; set; }
@@ -2087,7 +1981,6 @@ public interface ClimbController : ControllerBase, ICreatableInstance
 
 public interface GroundController : ControllerBase, ICreatableInstance
 {
-	public new GroundController Clone();
 	public float AccelerationLean { get; set; }
 	public float AccelerationTime { get; set; }
 	public float BalanceMaxTorque { get; set; }
@@ -2103,7 +1996,6 @@ public interface GroundController : ControllerBase, ICreatableInstance
 
 public interface SwimController : ControllerBase, ICreatableInstance
 {
-	public new SwimController Clone();
 	public float AccelerationTime { get; set; }
 	public float PitchMaxTorque { get; set; }
 	public float PitchSpeedFactor { get; set; }
@@ -2172,31 +2064,17 @@ public interface DataModelMesh : Instance
 	public Vector3 VertexColor { get; set; }
 }
 
-public interface BevelMesh : DataModelMesh
-{
-	public new BevelMesh Clone();
-}
-
-public interface BlockMesh : BevelMesh, ICreatableInstance
-{
-	public new BlockMesh Clone();
-}
-
-public interface CylinderMesh : BevelMesh, ICreatableInstance
-{
-	public new CylinderMesh Clone();
-}
-
+public interface BevelMesh : DataModelMesh;
+public interface BlockMesh : BevelMesh, ICreatableInstance;
+public interface CylinderMesh : BevelMesh, ICreatableInstance;
 public interface FileMesh : DataModelMesh, ICreatableInstance
 {
-	public new FileMesh Clone();
 	public string MeshId { get; set; }
 	public string TextureId { get; set; }
 }
 
 public interface SpecialMesh : FileMesh, ICreatableInstance
 {
-	public new SpecialMesh Clone();
 	public Enum.MeshType MeshType { get; set; }
 }
 
@@ -2290,11 +2168,7 @@ public interface DebuggerConnection : Instance
 	public new DebuggerConnection Clone();
 }
 
-public interface LocalDebuggerConnection : DebuggerConnection
-{
-	public new LocalDebuggerConnection Clone();
-}
-
+public interface LocalDebuggerConnection : DebuggerConnection;
 public interface DebuggerConnectionManager : IServiceInstance
 {
 	public new DebuggerConnectionManager Clone();
@@ -2351,7 +2225,7 @@ public interface Dragger : ICreatableInstance
 {
 	public new Dragger Clone();
 	public void AxisRotate(Enum.Axis? axis = null);
-	public void MouseDown(Instance mousePart, Vector3 pointOnMousePart, Instance[] parts);
+	public void MouseDown(object mousePart, Vector3 pointOnMousePart, Instance[] parts);
 	public void MouseMove(Ray mouseRay);
 	public void MouseUp();
 }
@@ -2483,7 +2357,6 @@ public interface FaceInstance : Instance
 
 public interface Decal : FaceInstance, ICreatableInstance
 {
-	public new Decal Clone();
 	public Color3 Color3 { get; set; }
 	public float Shiny { get; set; }
 	public float Specular { get; set; }
@@ -2495,7 +2368,6 @@ public interface Decal : FaceInstance, ICreatableInstance
 
 public interface Texture : Decal, ICreatableInstance
 {
-	public new Texture Clone();
 	public float OffsetStudsU { get; set; }
 	public float OffsetStudsV { get; set; }
 	public float StudsPerTileU { get; set; }
@@ -2536,16 +2408,8 @@ public interface Feature : Instance
 	public Enum.TopBottom TopBottom { get; set; }
 }
 
-public interface Hole : Feature, ICreatableInstance
-{
-	public new Hole Clone();
-}
-
-public interface MotorFeature : Feature, ICreatableInstance
-{
-	public new MotorFeature Clone();
-}
-
+public interface Hole : Feature, ICreatableInstance;
+public interface MotorFeature : Feature, ICreatableInstance;
 public interface FeatureRestrictionManager : IServiceInstance
 {
 	public new FeatureRestrictionManager Clone();
@@ -2647,7 +2511,6 @@ public partial interface GlobalDataStore : Instance
 
 public interface DataStore : GlobalDataStore
 {
-	public new DataStore Clone();
 	public object GetVersionAsync(string key, string version);
 	public object GetVersionAtTimeAsync(string key, long timestamp);
 	public DataStoreKeyPages ListKeysAsync(string prefix, int? pageSize = null, string? cursor = null, bool? excludeDeleted = null);
@@ -2655,11 +2518,7 @@ public interface DataStore : GlobalDataStore
 	public void RemoveVersionAsync(string key, string version);
 }
 
-public partial interface OrderedDataStore : GlobalDataStore
-{
-	public new OrderedDataStore Clone();
-}
-
+public partial interface OrderedDataStore : GlobalDataStore;
 public interface GroupService : IServiceInstance
 {
 	public new GroupService Clone();
@@ -2676,7 +2535,6 @@ public interface GuiBase : Instance
 
 public interface GuiBase2d : GuiBase
 {
-	public new GuiBase2d Clone();
 	public Vector2 AbsolutePosition { get; }
 	public float AbsoluteRotation { get; }
 	public Vector2 AbsoluteSize { get; }
@@ -2693,7 +2551,6 @@ public interface GuiBase2d : GuiBase
 
 public interface GuiObject : GuiBase2d
 {
-	public new GuiObject Clone();
 	public bool Active { get; set; }
 	public Vector2 AnchorPoint { get; set; }
 	public Enum.AutomaticSize AutomaticSize { get; set; }
@@ -2763,20 +2620,17 @@ public interface GuiObject : GuiBase2d
 
 public interface CanvasGroup : GuiObject, ICreatableInstance
 {
-	public new CanvasGroup Clone();
 	public Color3 GroupColor3 { get; set; }
 	public float GroupTransparency { get; set; }
 }
 
 public interface Frame : GuiObject, ICreatableInstance
 {
-	public new Frame Clone();
 	public Enum.FrameStyle Style { get; set; }
 }
 
 public interface GuiButton : GuiObject
 {
-	public new GuiButton Clone();
 	public bool AutoButtonColor { get; set; }
 	public HapticEffect? HoverHapticEffect { get; set; }
 	public bool Modal { get; set; }
@@ -2801,7 +2655,6 @@ public interface GuiButton : GuiObject
 
 public interface ImageButton : GuiButton, ICreatableInstance
 {
-	public new ImageButton Clone();
 	public string HoverImage { get; set; }
 	public Content HoverImageContent { get; set; }
 	public string Image { get; set; }
@@ -2822,7 +2675,6 @@ public interface ImageButton : GuiButton, ICreatableInstance
 
 public interface TextButton : GuiButton, ICreatableInstance
 {
-	public new TextButton Clone();
 	public string ContentText { get; }
 	public Font FontFace { get; set; }
 	public Enum.FontSize FontSize { get; set; }
@@ -2848,14 +2700,9 @@ public interface TextButton : GuiButton, ICreatableInstance
 	public Enum.TextYAlignment TextYAlignment { get; set; }
 }
 
-public interface GuiLabel : GuiObject
-{
-	public new GuiLabel Clone();
-}
-
+public interface GuiLabel : GuiObject;
 public interface ImageLabel : GuiLabel, ICreatableInstance
 {
-	public new ImageLabel Clone();
 	public string Image { get; set; }
 	public Color3 ImageColor3 { get; set; }
 	public Content ImageContent { get; set; }
@@ -2872,7 +2719,6 @@ public interface ImageLabel : GuiLabel, ICreatableInstance
 
 public interface TextLabel : GuiLabel, ICreatableInstance
 {
-	public new TextLabel Clone();
 	public string ContentText { get; }
 	public Font FontFace { get; set; }
 	public Enum.FontSize FontSize { get; set; }
@@ -2898,14 +2744,9 @@ public interface TextLabel : GuiLabel, ICreatableInstance
 	public Enum.TextYAlignment TextYAlignment { get; set; }
 }
 
-public interface RelativeGui : GuiObject, ICreatableInstance
-{
-	public new RelativeGui Clone();
-}
-
+public interface RelativeGui : GuiObject, ICreatableInstance;
 public interface ScrollingFrame : GuiObject, ICreatableInstance
 {
-	public new ScrollingFrame Clone();
 	public Vector2 AbsoluteCanvasSize { get; }
 	public Vector2 AbsoluteWindowSize { get; }
 	public Enum.AutomaticSize AutomaticCanvasSize { get; set; }
@@ -2927,7 +2768,6 @@ public interface ScrollingFrame : GuiObject, ICreatableInstance
 
 public interface TextBox : GuiObject, ICreatableInstance
 {
-	public new TextBox Clone();
 	public bool ClearTextOnFocus { get; set; }
 	public string ContentText { get; }
 	public int CursorPosition { get; set; }
@@ -2972,7 +2812,6 @@ public interface TextBox : GuiObject, ICreatableInstance
 
 public interface VideoDisplay : GuiObject, ICreatableInstance
 {
-	public new VideoDisplay Clone();
 	public Enum.ResamplerMode ResampleMode { get; set; }
 	public Enum.ScaleType ScaleType { get; set; }
 	public UDim2 TileSize { get; set; }
@@ -2989,7 +2828,6 @@ public interface VideoDisplay : GuiObject, ICreatableInstance
 
 public interface VideoFrame : GuiObject, ICreatableInstance
 {
-	public new VideoFrame Clone();
 	public bool IsLoaded { get; }
 	public bool Looped { get; set; }
 	public bool Playing { get; set; }
@@ -3014,7 +2852,6 @@ public interface VideoFrame : GuiObject, ICreatableInstance
 
 public interface ViewportFrame : GuiObject, ICreatableInstance
 {
-	public new ViewportFrame Clone();
 	public Color3 Ambient { get; set; }
 	public Camera? CurrentCamera { get; set; }
 	public Color3 ImageColor3 { get; set; }
@@ -3025,7 +2862,6 @@ public interface ViewportFrame : GuiObject, ICreatableInstance
 
 public interface LayerCollector : GuiBase2d
 {
-	public new LayerCollector Clone();
 	public bool Enabled { get; set; }
 	public bool ResetOnSpawn { get; set; }
 	public Enum.ZIndexBehavior ZIndexBehavior { get; set; }
@@ -3034,7 +2870,6 @@ public interface LayerCollector : GuiBase2d
 
 public interface BillboardGui : LayerCollector, ICreatableInstance
 {
-	public new BillboardGui Clone();
 	public bool Active { get; set; }
 	public Instance? Adornee { get; set; }
 	public bool AlwaysOnTop { get; set; }
@@ -3057,7 +2892,6 @@ public interface BillboardGui : LayerCollector, ICreatableInstance
 
 public interface ScreenGui : LayerCollector, ICreatableInstance
 {
-	public new ScreenGui Clone();
 	public bool ClipToDeviceSafeArea { get; set; }
 	public int DisplayOrder { get; set; }
 	public bool IgnoreGuiInset { get; set; }
@@ -3067,7 +2901,6 @@ public interface ScreenGui : LayerCollector, ICreatableInstance
 
 public interface SurfaceGuiBase : LayerCollector
 {
-	public new SurfaceGuiBase Clone();
 	public bool Active { get; set; }
 	public Instance? Adornee { get; set; }
 	public Enum.NormalId Face { get; set; }
@@ -3075,7 +2908,6 @@ public interface SurfaceGuiBase : LayerCollector
 
 public interface AdGui : SurfaceGuiBase, ICreatableInstance
 {
-	public new AdGui Clone();
 	public Enum.AdShape AdShape { get; set; }
 	public bool EnableVideoAds { get; set; }
 	public string FallbackImage { get; set; }
@@ -3084,7 +2916,6 @@ public interface AdGui : SurfaceGuiBase, ICreatableInstance
 
 public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
 {
-	public new SurfaceGui Clone();
 	public bool AlwaysOnTop { get; set; }
 	public float Brightness { get; set; }
 	public Vector2 CanvasSize { get; set; }
@@ -3099,7 +2930,6 @@ public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
 
 public interface GuiBase3d : GuiBase
 {
-	public new GuiBase3d Clone();
 	public Color3 Color3 { get; set; }
 	public float Transparency { get; set; }
 	public bool Visible { get; set; }
@@ -3107,7 +2937,6 @@ public interface GuiBase3d : GuiBase
 
 public interface FloorWire : GuiBase3d, ICreatableInstance
 {
-	public new FloorWire Clone();
 	public float CycleOffset { get; set; }
 	public BasePart? From { get; set; }
 	public float StudsBetweenTextures { get; set; }
@@ -3120,13 +2949,11 @@ public interface FloorWire : GuiBase3d, ICreatableInstance
 
 public interface InstanceAdornment : GuiBase3d
 {
-	public new InstanceAdornment Clone();
 	public Instance? Adornee { get; set; }
 }
 
 public interface SelectionBox : InstanceAdornment, ICreatableInstance
 {
-	public new SelectionBox Clone();
 	public float LineThickness { get; set; }
 	public Color3 SurfaceColor3 { get; set; }
 	public float SurfaceTransparency { get; set; }
@@ -3134,13 +2961,11 @@ public interface SelectionBox : InstanceAdornment, ICreatableInstance
 
 public interface PVAdornment : GuiBase3d
 {
-	public new PVAdornment Clone();
 	public PVInstance? Adornee { get; set; }
 }
 
 public interface HandleAdornment : PVAdornment
 {
-	public new HandleAdornment Clone();
 	public Enum.AdornCullingMode AdornCullingMode { get; set; }
 	public bool AlwaysOnTop { get; set; }
 	public CFrame CFrame { get; set; }
@@ -3158,20 +2983,17 @@ public interface HandleAdornment : PVAdornment
 
 public interface BoxHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new BoxHandleAdornment Clone();
 	public Vector3 Size { get; set; }
 }
 
 public interface ConeHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new ConeHandleAdornment Clone();
 	public float Height { get; set; }
 	public float Radius { get; set; }
 }
 
 public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new CylinderHandleAdornment Clone();
 	public float Angle { get; set; }
 	public float Height { get; set; }
 	public float InnerRadius { get; set; }
@@ -3180,27 +3002,23 @@ public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance
 
 public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new ImageHandleAdornment Clone();
 	public string Image { get; set; }
 	public Vector2 Size { get; set; }
 }
 
 public interface LineHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new LineHandleAdornment Clone();
 	public float Length { get; set; }
 	public float Thickness { get; set; }
 }
 
 public interface SphereHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new SphereHandleAdornment Clone();
 	public float Radius { get; set; }
 }
 
 public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance
 {
-	public new WireframeHandleAdornment Clone();
 	public Vector3 Scale { get; set; }
 	public float Thickness { get; set; }
 	public void AddLine(Vector3 from, Vector3 to);
@@ -3210,32 +3028,21 @@ public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance
 	public void Clear();
 }
 
-public interface ParabolaAdornment : PVAdornment
-{
-	public new ParabolaAdornment Clone();
-}
-
+public interface ParabolaAdornment : PVAdornment;
 public interface SelectionSphere : PVAdornment, ICreatableInstance
 {
-	public new SelectionSphere Clone();
 	public Color3 SurfaceColor3 { get; set; }
 	public float SurfaceTransparency { get; set; }
 }
 
 public interface PartAdornment : GuiBase3d
 {
-	public new PartAdornment Clone();
 	public BasePart? Adornee { get; set; }
 }
 
-public interface HandlesBase : PartAdornment
-{
-	public new HandlesBase Clone();
-}
-
+public interface HandlesBase : PartAdornment;
 public interface ArcHandles : HandlesBase, ICreatableInstance
 {
-	public new ArcHandles Clone();
 	public Axes Axes { get; set; }
 	public delegate void MouseButton1DownDelegate(Enum.Axis axis);
 	public event MouseButton1DownDelegate MouseButton1Down;
@@ -3251,7 +3058,6 @@ public interface ArcHandles : HandlesBase, ICreatableInstance
 
 public interface Handles : HandlesBase, ICreatableInstance
 {
-	public new Handles Clone();
 	public Faces Faces { get; set; }
 	public Enum.HandlesStyle Style { get; set; }
 	public delegate void MouseButton1DownDelegate(Enum.NormalId face);
@@ -3268,31 +3074,26 @@ public interface Handles : HandlesBase, ICreatableInstance
 
 public interface SurfaceSelection : PartAdornment, ICreatableInstance
 {
-	public new SurfaceSelection Clone();
 	public Enum.NormalId TargetSurface { get; set; }
 }
 
 public interface SelectionLasso : GuiBase3d
 {
-	public new SelectionLasso Clone();
 	public Humanoid? Humanoid { get; set; }
 }
 
 public interface SelectionPartLasso : SelectionLasso, ICreatableInstance
 {
-	public new SelectionPartLasso Clone();
 	public BasePart? Part { get; set; }
 }
 
 public interface SelectionPointLasso : SelectionLasso, ICreatableInstance
 {
-	public new SelectionPointLasso Clone();
 	public Vector3 Point { get; set; }
 }
 
 public interface Path2D : GuiBase, ICreatableInstance
 {
-	public new Path2D Clone();
 	public bool Closed { get; set; }
 	public Color3 Color3 { get; set; }
 	public float Thickness { get; set; }
@@ -3327,7 +3128,7 @@ public interface GuiService : IServiceInstance
 	public GuiObject? SelectedObject { get; set; }
 	public Rect TopbarInset { get; }
 	public bool TouchControlsEnabled { get; set; }
-	public void AddSelectionParent(string selectionName, Instance selectionParent);
+	public void AddSelectionParent(string selectionName, object selectionParent);
 	public void AddSelectionTuple(string selectionName, object selections);
 	public void CloseInspectMenu();
 	public bool DismissNotification(string notificationId);
@@ -3339,7 +3140,7 @@ public interface GuiService : IServiceInstance
 	public void InspectPlayerFromUserId(long userId);
 	public bool IsTenFootInterface();
 	public void RemoveSelectionGroup(string selectionName);
-	public void Select(Instance selectionParent);
+	public void Select(object selectionParent);
 	public string SendNotification(object notificationInfo);
 	public void SetEmotesMenuOpen(bool isOpen);
 	public void SetGameplayPausedNotificationEnabled(bool enabled);
@@ -3732,11 +3533,7 @@ public interface ILegacyStudioBridge : IServiceInstance
 	public new ILegacyStudioBridge Clone();
 }
 
-public interface LegacyStudioBridge : ILegacyStudioBridge, IServiceInstance
-{
-	public new LegacyStudioBridge Clone();
-}
-
+public interface LegacyStudioBridge : ILegacyStudioBridge, IServiceInstance;
 public interface IXPService : IServiceInstance
 {
 	public new IXPService Clone();
@@ -3751,11 +3548,7 @@ public interface ImportSession : Instance
 	public event UploadProgressDelegate UploadProgress;
 }
 
-public interface AssetImportSession : ImportSession
-{
-	public new AssetImportSession Clone();
-}
-
+public interface AssetImportSession : ImportSession;
 public interface IncrementalPatchBuilder : IServiceInstance
 {
 	public new IncrementalPatchBuilder Clone();
@@ -3858,82 +3651,42 @@ public interface JointInstance : Instance
 
 public interface DynamicRotate : JointInstance
 {
-	public new DynamicRotate Clone();
 	public float BaseAngle { get; set; }
 }
 
-public interface RotateP : DynamicRotate, ICreatableInstance
-{
-	public new RotateP Clone();
-}
-
-public interface RotateV : DynamicRotate, ICreatableInstance
-{
-	public new RotateV Clone();
-}
-
+public interface RotateP : DynamicRotate, ICreatableInstance;
+public interface RotateV : DynamicRotate, ICreatableInstance;
 public interface Glue : JointInstance, ICreatableInstance
 {
-	public new Glue Clone();
 	public Vector3 F0 { get; set; }
 	public Vector3 F1 { get; set; }
 	public Vector3 F2 { get; set; }
 	public Vector3 F3 { get; set; }
 }
 
-public interface ManualSurfaceJointInstance : JointInstance
-{
-	public new ManualSurfaceJointInstance Clone();
-}
-
-public interface ManualGlue : ManualSurfaceJointInstance, ICreatableInstance
-{
-	public new ManualGlue Clone();
-}
-
-public interface ManualWeld : ManualSurfaceJointInstance, ICreatableInstance
-{
-	public new ManualWeld Clone();
-}
-
+public interface ManualSurfaceJointInstance : JointInstance;
+public interface ManualGlue : ManualSurfaceJointInstance, ICreatableInstance;
+public interface ManualWeld : ManualSurfaceJointInstance, ICreatableInstance;
 public interface Motor : JointInstance, ICreatableInstance
 {
-	public new Motor Clone();
 	public float CurrentAngle { get; set; }
 	public float DesiredAngle { get; set; }
 	public float MaxVelocity { get; set; }
 	public void SetDesiredAngle(float value);
 }
 
-public interface Motor6D : Motor, ICreatableInstance
-{
-	public new Motor6D Clone();
-}
-
-public interface Rotate : JointInstance, ICreatableInstance
-{
-	public new Rotate Clone();
-}
-
-public interface Snap : JointInstance, ICreatableInstance
-{
-	public new Snap Clone();
-}
-
+public interface Motor6D : Motor, ICreatableInstance;
+public interface Rotate : JointInstance, ICreatableInstance;
+public interface Snap : JointInstance, ICreatableInstance;
 public interface VelocityMotor : JointInstance, ICreatableInstance
 {
-	public new VelocityMotor Clone();
 	public float CurrentAngle { get; set; }
 	public float DesiredAngle { get; set; }
 	public Hole? Hole { get; set; }
 	public float MaxVelocity { get; set; }
 }
 
-public interface Weld : JointInstance, ICreatableInstance
-{
-	public new Weld Clone();
-}
-
+public interface Weld : JointInstance, ICreatableInstance;
 public interface JointsService : IServiceInstance
 {
 	public new JointsService Clone();
@@ -3993,13 +3746,11 @@ public interface Light : Instance
 
 public interface PointLight : Light, ICreatableInstance
 {
-	public new PointLight Clone();
 	public float Range { get; set; }
 }
 
 public interface SpotLight : Light, ICreatableInstance
 {
-	public new SpotLight Clone();
 	public float Angle { get; set; }
 	public Enum.NormalId Face { get; set; }
 	public float Range { get; set; }
@@ -4007,7 +3758,6 @@ public interface SpotLight : Light, ICreatableInstance
 
 public interface SurfaceLight : Light, ICreatableInstance
 {
-	public new SurfaceLight Clone();
 	public float Angle { get; set; }
 	public Enum.NormalId Face { get; set; }
 	public float Range { get; set; }
@@ -4097,11 +3847,7 @@ public interface LocalizationTable : ICreatableInstance
 	public void SetEntryValue(string key, string source, string context, string localeId, string text);
 }
 
-public interface CloudLocalizationTable : LocalizationTable
-{
-	public new CloudLocalizationTable Clone();
-}
-
+public interface CloudLocalizationTable : LocalizationTable;
 public interface LodDataEntity : Instance
 {
 	public new LodDataEntity Clone();
@@ -4133,7 +3879,6 @@ public interface LuaSourceContainer : Instance
 
 public interface AuroraScript : LuaSourceContainer, ICreatableInstance
 {
-	public new AuroraScript Clone();
 	public string Tag { get; set; }
 	public void AddTo(Instance instance);
 	public bool IsOnInstance(Instance instance);
@@ -4142,7 +3887,6 @@ public interface AuroraScript : LuaSourceContainer, ICreatableInstance
 
 public interface BaseScript : LuaSourceContainer
 {
-	public new BaseScript Clone();
 	public bool Disabled { get; set; }
 	public bool Enabled { get; set; }
 	public string LinkedSource { get; set; }
@@ -4151,18 +3895,12 @@ public interface BaseScript : LuaSourceContainer
 
 public interface Script : BaseScript, ICreatableInstance
 {
-	public new Script Clone();
 	public string Source { get; set; }
 }
 
-public interface LocalScript : Script, ICreatableInstance
-{
-	public new LocalScript Clone();
-}
-
+public interface LocalScript : Script, ICreatableInstance;
 public interface ModuleScript : LuaSourceContainer, ICreatableInstance
 {
-	public new ModuleScript Clone();
 	public string LinkedSource { get; set; }
 	public string Source { get; set; }
 }
@@ -4362,11 +4100,7 @@ public interface Mouse : Instance
 	public event WheelForwardDelegate WheelForward;
 }
 
-public interface PlayerMouse : Mouse
-{
-	public new PlayerMouse Clone();
-}
-
+public interface PlayerMouse : Mouse;
 public interface NetworkMarker : Instance
 {
 	public new NetworkMarker Clone();
@@ -4420,7 +4154,6 @@ public interface PVInstance : Instance
 
 public partial interface BasePart : PVInstance
 {
-	public new BasePart Clone();
 	public bool Anchored { get; set; }
 	public Vector3 AssemblyAngularVelocity { get; set; }
 	public Vector3 AssemblyCenterOfMass { get; }
@@ -4502,31 +4235,20 @@ public partial interface BasePart : PVInstance
 	public event TouchedDelegate Touched;
 }
 
-public interface CornerWedgePart : BasePart, ICreatableInstance
-{
-	public new CornerWedgePart Clone();
-}
-
+public interface CornerWedgePart : BasePart, ICreatableInstance;
 public interface FormFactorPart : BasePart
 {
-	public new FormFactorPart Clone();
 	public Enum.FormFactor FormFactor { get; set; }
 }
 
 public interface Part : FormFactorPart, ICreatableInstance
 {
-	public new Part Clone();
 	public Enum.PartType Shape { get; set; }
 }
 
-public interface Platform : Part
-{
-	public new Platform Clone();
-}
-
+public interface Platform : Part;
 public interface Seat : Part, ICreatableInstance
 {
-	public new Seat Clone();
 	public bool Disabled { get; set; }
 	public Humanoid? Occupant { get; }
 	public void Sit(Humanoid humanoid);
@@ -4534,7 +4256,6 @@ public interface Seat : Part, ICreatableInstance
 
 public interface SkateboardPlatform : Part, ICreatableInstance
 {
-	public new SkateboardPlatform Clone();
 	public SkateboardController? Controller { get; }
 	public Humanoid? ControllingHumanoid { get; }
 	public int Steer { get; set; }
@@ -4551,7 +4272,6 @@ public interface SkateboardPlatform : Part, ICreatableInstance
 
 public interface SpawnLocation : Part, ICreatableInstance
 {
-	public new SpawnLocation Clone();
 	public bool AllowTeamChangeOnTouch { get; set; }
 	public int Duration { get; set; }
 	public bool Enabled { get; set; }
@@ -4559,14 +4279,9 @@ public interface SpawnLocation : Part, ICreatableInstance
 	public BrickColor TeamColor { get; set; }
 }
 
-public interface WedgePart : FormFactorPart, ICreatableInstance
-{
-	public new WedgePart Clone();
-}
-
+public interface WedgePart : FormFactorPart, ICreatableInstance;
 public partial interface Terrain : BasePart
 {
-	public new Terrain Clone();
 	public bool IsSmooth { get; }
 	public Region3int16 MaxExtents { get; }
 	public Color3 WaterColor { get; set; }
@@ -4606,7 +4321,6 @@ public partial interface Terrain : BasePart
 
 public interface TriangleMeshPart : BasePart
 {
-	public new TriangleMeshPart Clone();
 	public Enum.CollisionFidelity CollisionFidelity { get; set; }
 	public Enum.FluidFidelity FluidFidelity { get; set; }
 	public Vector3 MeshSize { get; }
@@ -4614,7 +4328,6 @@ public interface TriangleMeshPart : BasePart
 
 public interface MeshPart : TriangleMeshPart, ICreatableInstance
 {
-	public new MeshPart Clone();
 	public bool DoubleSided { get; set; }
 	public Content MeshContent { get; }
 	public string MeshId { get; }
@@ -4626,7 +4339,6 @@ public interface MeshPart : TriangleMeshPart, ICreatableInstance
 
 public interface PartOperation : TriangleMeshPart, ICreatableInstance
 {
-	public new PartOperation Clone();
 	public Enum.RenderFidelity RenderFidelity { get; set; }
 	public float SmoothingAngle { get; set; }
 	public int TriangleCount { get; }
@@ -4634,30 +4346,16 @@ public interface PartOperation : TriangleMeshPart, ICreatableInstance
 	public void SubstituteGeometry(Instance source);
 }
 
-public interface IntersectOperation : PartOperation, ICreatableInstance
-{
-	public new IntersectOperation Clone();
-}
-
-public interface NegateOperation : PartOperation, ICreatableInstance
-{
-	public new NegateOperation Clone();
-}
-
-public interface UnionOperation : PartOperation, ICreatableInstance
-{
-	public new UnionOperation Clone();
-}
-
+public interface IntersectOperation : PartOperation, ICreatableInstance;
+public interface NegateOperation : PartOperation, ICreatableInstance;
+public interface UnionOperation : PartOperation, ICreatableInstance;
 public interface TrussPart : BasePart, ICreatableInstance
 {
-	public new TrussPart Clone();
 	public Enum.Style Style { get; set; }
 }
 
 public interface VehicleSeat : BasePart, ICreatableInstance
 {
-	public new VehicleSeat Clone();
 	public int AreHingesDetected { get; }
 	public bool Disabled { get; set; }
 	public bool HeadsUpDisplay { get; set; }
@@ -4674,7 +4372,6 @@ public interface VehicleSeat : BasePart, ICreatableInstance
 
 public interface Camera : PVInstance, ICreatableInstance
 {
-	public new Camera Clone();
 	public CFrame CFrame { get; set; }
 	public Instance? CameraSubject { get; set; }
 	public Enum.CameraType CameraType { get; set; }
@@ -4710,7 +4407,6 @@ public interface Camera : PVInstance, ICreatableInstance
 
 public interface Model : PVInstance, ICreatableInstance
 {
-	public new Model Clone();
 	public Enum.ModelStreamingMode ModelStreamingMode { get; set; }
 	public BasePart? PrimaryPart { get; set; }
 	public CFrame WorldPivot { get; set; }
@@ -4736,7 +4432,6 @@ public interface Model : PVInstance, ICreatableInstance
 
 public interface Actor : Model, ICreatableInstance
 {
-	public new Actor Clone();
 	public ScriptConnection BindToMessage(string topic, Action function);
 	public ScriptConnection BindToMessageParallel(string topic, Action function);
 	public void SendMessage(string topic, object message);
@@ -4744,13 +4439,11 @@ public interface Actor : Model, ICreatableInstance
 
 public interface BackpackItem : Model
 {
-	public new BackpackItem Clone();
 	public string TextureId { get; set; }
 }
 
 public interface Tool : BackpackItem, ICreatableInstance
 {
-	public new Tool Clone();
 	public bool CanBeDropped { get; set; }
 	public bool Enabled { get; set; }
 	public CFrame Grip { get; set; }
@@ -4771,7 +4464,6 @@ public interface Tool : BackpackItem, ICreatableInstance
 
 public partial interface WorldRoot : Model
 {
-	public new WorldRoot Clone();
 	public RaycastResult? Blockcast(CFrame cframe, Vector3 size, Vector3 direction, RaycastParams? parameters = null);
 	public object FindPartOnRay(Ray ray, Instance? ignoreDescendantsInstance = null, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
 	public object FindPartOnRayWithIgnoreList(Ray ray, Instance[] ignoreDescendantsTable, bool? terrainCellsAreCubes = null, bool? ignoreWater = null);
@@ -4791,7 +4483,6 @@ public partial interface WorldRoot : Model
 
 public partial interface Workspace : WorldRoot, IServiceInstance
 {
-	public new Workspace Clone();
 	public float AirDensity { get; set; }
 	public bool AllowThirdPartySales { get; set; }
 	public Enum.ClientAnimatorThrottlingMode ClientAnimatorThrottling { get; set; }
@@ -4816,11 +4507,7 @@ public partial interface Workspace : WorldRoot, IServiceInstance
 	public event PersistentLoadedDelegate PersistentLoaded;
 }
 
-public interface WorldModel : WorldRoot, ICreatableInstance
-{
-	public new WorldModel Clone();
-}
-
+public interface WorldModel : WorldRoot, ICreatableInstance;
 public interface PackageLink : Instance
 {
 	public new PackageLink Clone();
@@ -4843,78 +4530,28 @@ public interface Pages : Instance
 	public void AdvanceToNextPageAsync();
 }
 
-public interface AudioPages : Pages
-{
-	public new AudioPages Clone();
-}
-
-public interface BanHistoryPages : Pages
-{
-	public new BanHistoryPages Clone();
-}
-
-public interface CatalogPages : Pages
-{
-	public new CatalogPages Clone();
-}
-
+public interface AudioPages : Pages;
+public interface BanHistoryPages : Pages;
+public interface CatalogPages : Pages;
 public interface DataStoreKeyPages : Pages
 {
-	public new DataStoreKeyPages Clone();
 	public string Cursor { get; }
 }
 
 public interface DataStoreListingPages : Pages
 {
-	public new DataStoreListingPages Clone();
 	public string Cursor { get; }
 }
 
-public interface DataStorePages : Pages
-{
-	public new DataStorePages Clone();
-}
-
-public interface DataStoreVersionPages : Pages
-{
-	public new DataStoreVersionPages Clone();
-}
-
-public interface FeedPages : Pages
-{
-	public new FeedPages Clone();
-}
-
-public interface FriendPages : Pages
-{
-	public new FriendPages Clone();
-}
-
-public interface InventoryPages : Pages
-{
-	public new InventoryPages Clone();
-}
-
-public interface EmotesPages : InventoryPages
-{
-	public new EmotesPages Clone();
-}
-
-public interface MemoryStoreHashMapPages : Pages
-{
-	public new MemoryStoreHashMapPages Clone();
-}
-
-public interface OutfitPages : Pages
-{
-	public new OutfitPages Clone();
-}
-
-public interface StandardPages : Pages
-{
-	public new StandardPages Clone();
-}
-
+public interface DataStorePages : Pages;
+public interface DataStoreVersionPages : Pages;
+public interface FeedPages : Pages;
+public interface FriendPages : Pages;
+public interface InventoryPages : Pages;
+public interface EmotesPages : InventoryPages;
+public interface MemoryStoreHashMapPages : Pages;
+public interface OutfitPages : Pages;
+public interface StandardPages : Pages;
 public interface ParticleEmitter : ICreatableInstance
 {
 	public new ParticleEmitter Clone();
@@ -5014,16 +4651,8 @@ public interface PausedState : Instance
 	public new PausedState Clone();
 }
 
-public interface PausedStateBreakpoint : PausedState
-{
-	public new PausedStateBreakpoint Clone();
-}
-
-public interface PausedStateException : PausedState
-{
-	public new PausedStateException Clone();
-}
-
+public interface PausedStateBreakpoint : PausedState;
+public interface PausedStateException : PausedState;
 public interface PerformanceControlService : IServiceInstance
 {
 	public new PerformanceControlService Clone();
@@ -5178,8 +4807,8 @@ public interface PlayerDataRecord : Instance
 	public void SetValue(string key, object value);
 	public void ReleaseAsync();
 	public void RequestFlushAsync();
-	public delegate void ChangedDelegate(string key, object value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(string key, object value);
+	public new event ChangedDelegate Changed;
 	public delegate void FlushedDelegate(bool flushState, string? error);
 	public event FlushedDelegate Flushed;
 	public delegate void LoadedDelegate(bool success, string? error);
@@ -5300,13 +4929,11 @@ public interface PoseBase : Instance
 
 public interface NumberPose : PoseBase, ICreatableInstance
 {
-	public new NumberPose Clone();
 	public float Value { get; set; }
 }
 
 public interface Pose : PoseBase, ICreatableInstance
 {
-	public new Pose Clone();
 	public CFrame CFrame { get; set; }
 	public float MaskWeight { get; set; }
 	public void AddSubPose(Pose pose);
@@ -5322,7 +4949,6 @@ public interface PostEffect : Instance
 
 public interface BloomEffect : PostEffect, ICreatableInstance
 {
-	public new BloomEffect Clone();
 	public float Intensity { get; set; }
 	public float Size { get; set; }
 	public float Threshold { get; set; }
@@ -5330,13 +4956,11 @@ public interface BloomEffect : PostEffect, ICreatableInstance
 
 public interface BlurEffect : PostEffect, ICreatableInstance
 {
-	public new BlurEffect Clone();
 	public float Size { get; set; }
 }
 
 public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
 {
-	public new ColorCorrectionEffect Clone();
 	public float Brightness { get; set; }
 	public float Contrast { get; set; }
 	public float Saturation { get; set; }
@@ -5345,13 +4969,11 @@ public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
 
 public interface ColorGradingEffect : PostEffect, ICreatableInstance
 {
-	public new ColorGradingEffect Clone();
 	public Enum.TonemapperPreset TonemapperPreset { get; set; }
 }
 
 public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
 {
-	public new DepthOfFieldEffect Clone();
 	public float FarIntensity { get; set; }
 	public float FocusDistance { get; set; }
 	public float InFocusRadius { get; set; }
@@ -5360,7 +4982,6 @@ public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
 
 public interface SunRaysEffect : PostEffect, ICreatableInstance
 {
-	public new SunRaysEffect Clone();
 	public float Intensity { get; set; }
 	public float Spread { get; set; }
 }
@@ -5556,7 +5177,6 @@ public interface ScriptBuilder : Instance
 
 public interface SyncScriptBuilder : ScriptBuilder
 {
-	public new SyncScriptBuilder Clone();
 	public Enum.CompileTarget CompileTarget { get; set; }
 	public bool CoverageInfo { get; set; }
 	public bool DebugInfo { get; set; }
@@ -5632,26 +5252,19 @@ public interface SensorBase : Instance
 
 public interface AtmosphereSensor : SensorBase, ICreatableInstance
 {
-	public new AtmosphereSensor Clone();
 	public float AirDensity { get; }
 	public Vector3 RelativeWindVelocity { get; }
 }
 
 public interface BuoyancySensor : SensorBase, ICreatableInstance
 {
-	public new BuoyancySensor Clone();
 	public bool FullySubmerged { get; set; }
 	public bool TouchingSurface { get; set; }
 }
 
-public interface ControllerSensor : SensorBase
-{
-	public new ControllerSensor Clone();
-}
-
+public interface ControllerSensor : SensorBase;
 public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
 {
-	public new ControllerPartSensor Clone();
 	public CFrame HitFrame { get; set; }
 	public Vector3 HitNormal { get; set; }
 	public float SearchDistance { get; set; }
@@ -5661,7 +5274,6 @@ public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
 
 public interface FluidForceSensor : SensorBase, ICreatableInstance
 {
-	public new FluidForceSensor Clone();
 	public Vector3 CenterOfPressure { get; }
 	public Vector3 Force { get; }
 	public Vector3 Torque { get; }
@@ -5694,7 +5306,6 @@ public partial interface ServiceProvider : Instance
 
 public partial interface DataModel : ServiceProvider
 {
-	public new DataModel Clone();
 	public long CreatorId { get; }
 	public Enum.CreatorType CreatorType { get; }
 	public long GameId { get; }
@@ -5722,19 +5333,10 @@ public partial interface DataModel : ServiceProvider
 	public event LoadedDelegate Loaded;
 }
 
-public interface GenericSettings : ServiceProvider
-{
-	public new GenericSettings Clone();
-}
-
-public interface AnalysticsSettings : GenericSettings
-{
-	public new AnalysticsSettings Clone();
-}
-
+public interface GenericSettings : ServiceProvider;
+public interface AnalysticsSettings : GenericSettings;
 public interface UserSettings : GenericSettings
 {
-	public new UserSettings Clone();
 	public bool IsUserFeatureEnabled(string name);
 	public void Reset();
 }
@@ -5866,7 +5468,6 @@ public interface SoundEffect : Instance
 
 public interface ChorusSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new ChorusSoundEffect Clone();
 	public float Depth { get; set; }
 	public float Mix { get; set; }
 	public float Rate { get; set; }
@@ -5874,7 +5475,6 @@ public interface ChorusSoundEffect : SoundEffect, ICreatableInstance
 
 public interface CompressorSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new CompressorSoundEffect Clone();
 	public float Attack { get; set; }
 	public float GainMakeup { get; set; }
 	public float Ratio { get; set; }
@@ -5883,31 +5483,20 @@ public interface CompressorSoundEffect : SoundEffect, ICreatableInstance
 	public float Threshold { get; set; }
 }
 
-public interface CustomSoundEffect : SoundEffect
-{
-	public new CustomSoundEffect Clone();
-}
-
-public interface AssetSoundEffect : CustomSoundEffect
-{
-	public new AssetSoundEffect Clone();
-}
-
+public interface CustomSoundEffect : SoundEffect;
+public interface AssetSoundEffect : CustomSoundEffect;
 public interface ChannelSelectorSoundEffect : CustomSoundEffect
 {
-	public new ChannelSelectorSoundEffect Clone();
 	public int Channel { get; set; }
 }
 
 public interface DistortionSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new DistortionSoundEffect Clone();
 	public float Level { get; set; }
 }
 
 public interface EchoSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new EchoSoundEffect Clone();
 	public float Delay { get; set; }
 	public float DryLevel { get; set; }
 	public float Feedback { get; set; }
@@ -5916,7 +5505,6 @@ public interface EchoSoundEffect : SoundEffect, ICreatableInstance
 
 public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new EqualizerSoundEffect Clone();
 	public float HighGain { get; set; }
 	public float LowGain { get; set; }
 	public float MidGain { get; set; }
@@ -5924,7 +5512,6 @@ public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance
 
 public interface FlangeSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new FlangeSoundEffect Clone();
 	public float Depth { get; set; }
 	public float Mix { get; set; }
 	public float Rate { get; set; }
@@ -5932,13 +5519,11 @@ public interface FlangeSoundEffect : SoundEffect, ICreatableInstance
 
 public interface PitchShiftSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new PitchShiftSoundEffect Clone();
 	public float Octave { get; set; }
 }
 
 public interface ReverbSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new ReverbSoundEffect Clone();
 	public float DecayTime { get; set; }
 	public float Density { get; set; }
 	public float Diffusion { get; set; }
@@ -5948,7 +5533,6 @@ public interface ReverbSoundEffect : SoundEffect, ICreatableInstance
 
 public interface TremoloSoundEffect : SoundEffect, ICreatableInstance
 {
-	public new TremoloSoundEffect Clone();
 	public float Depth { get; set; }
 	public float Duty { get; set; }
 	public float Frequency { get; set; }
@@ -6033,11 +5617,7 @@ public interface StarterPlayerScripts : Instance
 	public new StarterPlayerScripts Clone();
 }
 
-public interface StarterCharacterScripts : StarterPlayerScripts
-{
-	public new StarterCharacterScripts Clone();
-}
-
+public interface StarterCharacterScripts : StarterPlayerScripts;
 public interface StartupMessageService : IServiceInstance
 {
 	public new StartupMessageService Clone();
@@ -6122,11 +5702,7 @@ public interface StudioObjectBase : Instance
 	public new StudioObjectBase Clone();
 }
 
-public interface StudioWidget : StudioObjectBase
-{
-	public new StudioWidget Clone();
-}
-
+public interface StudioWidget : StudioObjectBase;
 public interface StudioPublishService : IServiceInstance
 {
 	public new StudioPublishService Clone();
@@ -6164,7 +5740,6 @@ public interface StyleBase : Instance
 
 public interface StyleRule : StyleBase, ICreatableInstance
 {
-	public new StyleRule Clone();
 	public int Priority { get; set; }
 	public string Selector { get; set; }
 	public string SelectorError { get; }
@@ -6176,7 +5751,6 @@ public interface StyleRule : StyleBase, ICreatableInstance
 
 public interface StyleSheet : StyleBase, ICreatableInstance
 {
-	public new StyleSheet Clone();
 	public Instance[] GetDerives();
 	public void SetDerives(Instance[] derives);
 }
@@ -6350,7 +5924,6 @@ public interface TextChatConfigurations : Instance
 
 public interface BubbleChatConfiguration : TextChatConfigurations
 {
-	public new BubbleChatConfiguration Clone();
 	public string AdorneeName { get; set; }
 	public Color3 BackgroundColor3 { get; set; }
 	public float BackgroundTransparency { get; set; }
@@ -6370,7 +5943,6 @@ public interface BubbleChatConfiguration : TextChatConfigurations
 
 public interface ChannelTabsConfiguration : TextChatConfigurations
 {
-	public new ChannelTabsConfiguration Clone();
 	public Vector2 AbsolutePosition { get; }
 	public Vector2 AbsoluteSize { get; }
 	public Color3 BackgroundColor3 { get; set; }
@@ -6387,7 +5959,6 @@ public interface ChannelTabsConfiguration : TextChatConfigurations
 
 public interface ChatInputBarConfiguration : TextChatConfigurations
 {
-	public new ChatInputBarConfiguration Clone();
 	public Vector2 AbsolutePosition { get; }
 	public Vector2 AbsoluteSize { get; }
 	public bool AutocompleteEnabled { get; set; }
@@ -6408,7 +5979,6 @@ public interface ChatInputBarConfiguration : TextChatConfigurations
 
 public interface ChatWindowConfiguration : TextChatConfigurations
 {
-	public new ChatWindowConfiguration Clone();
 	public Vector2 AbsolutePosition { get; }
 	public Vector2 AbsoluteSize { get; }
 	public Color3 BackgroundColor3 { get; set; }
@@ -6452,7 +6022,6 @@ public interface TextChatMessageProperties : ICreatableInstance
 
 public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreatableInstance
 {
-	public new BubbleChatMessageProperties Clone();
 	public Color3 BackgroundColor3 { get; set; }
 	public float BackgroundTransparency { get; set; }
 	public Font FontFace { get; set; }
@@ -6463,7 +6032,6 @@ public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreat
 
 public interface ChatWindowMessageProperties : TextChatMessageProperties
 {
-	public new ChatWindowMessageProperties Clone();
 	public Font FontFace { get; set; }
 	public ChatWindowMessageProperties? PrefixTextProperties { get; set; }
 	public Color3 TextColor3 { get; set; }
@@ -6479,7 +6047,7 @@ public interface TextChatService : IServiceInstance
 	public Enum.ChatVersion ChatVersion { get; }
 	public bool CreateDefaultCommands { get; set; }
 	public bool CreateDefaultTextChannels { get; set; }
-	public void DisplayBubble(Instance partOrCharacter, string message);
+	public void DisplayBubble(object partOrCharacter, string message);
 	public bool CanUserChatAsync(long userId);
 	public bool CanUsersChatAsync(long userIdFrom, long userIdTo);
 	public object[] CanUsersDirectChatAsync(long requesterUserId, object[] userIds);
@@ -6623,7 +6191,6 @@ public interface TweenBase : Instance
 
 public interface Tween : TweenBase
 {
-	public new Tween Clone();
 	public Instance? Instance { get; }
 	public TweenInfo TweenInfo { get; }
 }
@@ -6646,19 +6213,10 @@ public interface UIBase : Instance
 	public new UIBase Clone();
 }
 
-public interface UIComponent : UIBase
-{
-	public new UIComponent Clone();
-}
-
-public interface UIConstraint : UIComponent
-{
-	public new UIConstraint Clone();
-}
-
+public interface UIComponent : UIBase;
+public interface UIConstraint : UIComponent;
 public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
 {
-	public new UIAspectRatioConstraint Clone();
 	public float AspectRatio { get; set; }
 	public Enum.AspectType AspectType { get; set; }
 	public Enum.DominantAxis DominantAxis { get; set; }
@@ -6666,27 +6224,23 @@ public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
 
 public interface UISizeConstraint : UIConstraint, ICreatableInstance
 {
-	public new UISizeConstraint Clone();
 	public Vector2 MaxSize { get; set; }
 	public Vector2 MinSize { get; set; }
 }
 
 public interface UITextSizeConstraint : UIConstraint, ICreatableInstance
 {
-	public new UITextSizeConstraint Clone();
 	public int MaxTextSize { get; set; }
 	public int MinTextSize { get; set; }
 }
 
 public interface UICorner : UIComponent, ICreatableInstance
 {
-	public new UICorner Clone();
 	public UDim CornerRadius { get; set; }
 }
 
 public interface UIDragDetector : UIComponent, ICreatableInstance
 {
-	public new UIDragDetector Clone();
 	public string ActivatedCursorIcon { get; set; }
 	public Enum.UIDragDetectorBoundingBehavior BoundingBehavior { get; set; }
 	public GuiBase2d? BoundingUI { get; set; }
@@ -6721,7 +6275,6 @@ public interface UIDragDetector : UIComponent, ICreatableInstance
 
 public interface UIFlexItem : UIComponent, ICreatableInstance
 {
-	public new UIFlexItem Clone();
 	public Enum.UIFlexMode FlexMode { get; set; }
 	public float GrowRatio { get; set; }
 	public Enum.ItemLineAlignment ItemLineAlignment { get; set; }
@@ -6730,7 +6283,6 @@ public interface UIFlexItem : UIComponent, ICreatableInstance
 
 public interface UIGradient : UIComponent, ICreatableInstance
 {
-	public new UIGradient Clone();
 	public ColorSequence Color { get; set; }
 	public bool Enabled { get; set; }
 	public Vector2 Offset { get; set; }
@@ -6738,14 +6290,9 @@ public interface UIGradient : UIComponent, ICreatableInstance
 	public NumberSequence Transparency { get; set; }
 }
 
-public interface UILayout : UIComponent
-{
-	public new UILayout Clone();
-}
-
+public interface UILayout : UIComponent;
 public interface UIGridStyleLayout : UILayout
 {
-	public new UIGridStyleLayout Clone();
 	public Vector2 AbsoluteContentSize { get; }
 	public Enum.FillDirection FillDirection { get; set; }
 	public Enum.HorizontalAlignment HorizontalAlignment { get; set; }
@@ -6757,7 +6304,6 @@ public interface UIGridStyleLayout : UILayout
 
 public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance
 {
-	public new UIGridLayout Clone();
 	public Vector2 AbsoluteCellCount { get; }
 	public Vector2 AbsoluteCellSize { get; }
 	public UDim2 CellPadding { get; set; }
@@ -6768,7 +6314,6 @@ public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance
 
 public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
 {
-	public new UIListLayout Clone();
 	public Enum.UIFlexAlignment HorizontalFlex { get; set; }
 	public Enum.ItemLineAlignment ItemLineAlignment { get; set; }
 	public UDim Padding { get; set; }
@@ -6778,7 +6323,6 @@ public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
 
 public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance
 {
-	public new UIPageLayout Clone();
 	public bool Animated { get; set; }
 	public bool Circular { get; set; }
 	public GuiObject? CurrentPage { get; }
@@ -6803,7 +6347,6 @@ public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance
 
 public interface UITableLayout : UIGridStyleLayout, ICreatableInstance
 {
-	public new UITableLayout Clone();
 	public bool FillEmptySpaceColumns { get; set; }
 	public bool FillEmptySpaceRows { get; set; }
 	public Enum.TableMajorAxis MajorAxis { get; set; }
@@ -6812,7 +6355,6 @@ public interface UITableLayout : UIGridStyleLayout, ICreatableInstance
 
 public interface UIPadding : UIComponent, ICreatableInstance
 {
-	public new UIPadding Clone();
 	public UDim PaddingBottom { get; set; }
 	public UDim PaddingLeft { get; set; }
 	public UDim PaddingRight { get; set; }
@@ -6821,13 +6363,11 @@ public interface UIPadding : UIComponent, ICreatableInstance
 
 public interface UIScale : UIComponent, ICreatableInstance
 {
-	public new UIScale Clone();
 	public float Scale { get; set; }
 }
 
 public interface UIStroke : UIComponent, ICreatableInstance
 {
-	public new UIStroke Clone();
 	public Enum.ApplyStrokeMode ApplyStrokeMode { get; set; }
 	public Color3 Color { get; set; }
 	public bool Enabled { get; set; }
@@ -7024,102 +6564,90 @@ public interface ValueBase : Instance
 
 public interface BoolValue : ValueBase, ICreatableInstance
 {
-	public new BoolValue Clone();
 	public bool Value { get; set; }
-	public delegate void ChangedDelegate(bool value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(bool value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface BrickColorValue : ValueBase, ICreatableInstance
 {
-	public new BrickColorValue Clone();
 	public BrickColor Value { get; set; }
-	public delegate void ChangedDelegate(BrickColor value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(BrickColor value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface CFrameValue : ValueBase, ICreatableInstance
 {
-	public new CFrameValue Clone();
 	public CFrame Value { get; set; }
-	public delegate void ChangedDelegate(CFrame value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(CFrame value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface Color3Value : ValueBase, ICreatableInstance
 {
-	public new Color3Value Clone();
 	public Color3 Value { get; set; }
-	public delegate void ChangedDelegate(Color3 value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(Color3 value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
 {
-	public new DoubleConstrainedValue Clone();
 	public float MaxValue { get; set; }
 	public float MinValue { get; set; }
 	public float Value { get; set; }
-	public delegate void ChangedDelegate(float value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(float value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface IntConstrainedValue : ValueBase, ICreatableInstance
 {
-	public new IntConstrainedValue Clone();
 	public long MaxValue { get; set; }
 	public long MinValue { get; set; }
 	public long Value { get; set; }
-	public delegate void ChangedDelegate(long value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(long value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface IntValue : ValueBase, ICreatableInstance
 {
-	public new IntValue Clone();
 	public long Value { get; set; }
-	public delegate void ChangedDelegate(long value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(long value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface NumberValue : ValueBase, ICreatableInstance
 {
-	public new NumberValue Clone();
 	public float Value { get; set; }
-	public delegate void ChangedDelegate(float value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(float value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface ObjectValue : ValueBase, ICreatableInstance
 {
-	public new ObjectValue Clone();
 	public Instance? Value { get; set; }
-	public delegate void ChangedDelegate(Instance value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(Instance value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface RayValue : ValueBase, ICreatableInstance
 {
-	public new RayValue Clone();
 	public Ray Value { get; set; }
-	public delegate void ChangedDelegate(Ray value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(Ray value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface StringValue : ValueBase, ICreatableInstance
 {
-	public new StringValue Clone();
 	public string Value { get; set; }
-	public delegate void ChangedDelegate(string value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(string value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface Vector3Value : ValueBase, ICreatableInstance
 {
-	public new Vector3Value Clone();
 	public Vector3 Value { get; set; }
-	public delegate void ChangedDelegate(Vector3 value);
-	public event ChangedDelegate Changed;
+	public new delegate void ChangedDelegate(Vector3 value);
+	public new event ChangedDelegate Changed;
 }
 
 public interface Vector3Curve : ICreatableInstance

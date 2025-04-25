@@ -20,8 +20,7 @@ internal static class Utility
 
         var valueTypeName = SafeName(valueType.Name)!;
 
-        if (string.IsNullOrEmpty(valueTypeName) || !valueTypeName.EndsWith('?'))
-            return Constants.VALUE_TYPE_MAP.GetValueOrDefault(valueType.Name, valueTypeName);
+        if (string.IsNullOrEmpty(valueTypeName) || !valueTypeName.EndsWith('?')) return Constants.VALUE_TYPE_MAP.GetValueOrDefault(valueType.Name, valueTypeName);
 
         var nonOptionalType = valueTypeName[..^1];
         var mappedType = Constants.VALUE_TYPE_MAP.GetValueOrDefault(nonOptionalType, nonOptionalType);
@@ -64,10 +63,10 @@ internal static class Utility
     }
 
     public static bool HasTag(APITypes.MemberBase container, string tag) =>
-        container.Tags != null && container.Tags.ConvertAll(t => t.ToString()).Contains(tag);
+        container.Tags != null && container.Tags.Select(t => t.ToString()).Contains(tag);
 
     public static bool HasTag(APITypes.Class container, string tag) =>
-        container.Tags != null && container.Tags.ConvertAll(t => t.ToString()).Contains(tag);
+        container.Tags != null && container.Tags.Select(t => t.ToString()).Contains(tag);
 
     public static bool IsCreatable(APITypes.Class rbxClass) =>
         !Constants.CREATABLE_BLACKLIST.Contains(rbxClass.Name)
@@ -75,15 +74,15 @@ internal static class Utility
      && !HasTag(rbxClass, "Service");
 
     public static string FormatComment(string s) => string.Join('\n', s.Trim().Split('\n').Select(d => $"# {d}"));
+    
+    public static string SafeName(string? name) =>
+        name == null
+            ? ""
+            : ContainsBadChar(name)
+                ? name.Replace("\"", "\\\"")
+                : name;
 
     private static bool ContainsBadChar(string name) => Constants.BAD_NAME_CHARS.Any(name.Contains);
-
-    private static string? SafeName(string? name) =>
-        name == null
-            ? null
-            : ContainsBadChar(name)
-                ? $"[\"{name.Replace("\"", "\\\"")}\"]"
-                : name;
 
     // public static List<List<T>> Multifilter<T>(List<T> list, int resultArrAmount, Func<T, int> condition)
     // {
