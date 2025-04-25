@@ -8,8 +8,119 @@ public interface SecurityCapabilities
     public bool Contains(params Enum.SecurityCapability[] capabilities);
 }
 
-public sealed class LuaTuple<T> where T : IList<T>
+public sealed class LuaTuple<T>
 {
+    public void Deconstruct(out T first) => first = default!;
+    
+    public void Deconstruct(out T first, out T second)
+    {
+        first = default!;
+        second = default!;
+    }
+    
+    public void Deconstruct(out T first, out T second, out T third)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth,
+                            out T sixth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth,
+                            out T sixth,
+                            out T seventh)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth,
+                            out T sixth,
+                            out T seventh,
+                            out T eighth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+    }
+    
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth,
+                            out T sixth,
+                            out T seventh,
+                            out T eighth,
+                            out T ninth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+        ninth = default!;
+    }
+    
     public void Deconstruct(out T first,
                             out T second,
                             out T third,
@@ -45,9 +156,7 @@ public sealed class LuaTuple<T1, T2>
 
 public sealed class LuaTuple<T1, T2, T3>
 {
-    public void Deconstruct(out T1 first,
-                            out T2 second,
-                            out T3 third)
+    public void Deconstruct(out T1 first, out T2 second, out T3 third)
     {
         first = default!;
         second = default!;
@@ -309,7 +418,8 @@ public partial interface NetworkServer : NetworkPeer
 
 public partial interface GlobalDataStore
 {
-    public T GetAsync<T>(string key, DataStoreGetOptions? options = null);
+    public LuaTuple<object, DataStoreKeyInfo> GetAsync(string key, DataStoreGetOptions? options = null);
+    public LuaTuple<T, DataStoreKeyInfo> GetAsync<T>(string key, DataStoreGetOptions? options = null);
     public string SetAsync(string key, object value, uint[]? userIds = null, DataStoreSetOptions? options = null);
     public LuaTuple<float, DataStoreKeyInfo> IncrementAsync(string key,
                                                             float? delta = null,
@@ -317,7 +427,9 @@ public partial interface GlobalDataStore
                                                             DataStoreSetOptions? options = null);
 
     public LuaTuple<object, DataStoreKeyInfo> RemoveAsync(string key);
+    public LuaTuple<T, DataStoreKeyInfo> RemoveAsync<T>(string key);
     public LuaTuple<object, DataStoreKeyInfo> UpdateAsync(string key, Action transformFunction);
+    public LuaTuple<T, DataStoreKeyInfo> UpdateAsync<T>(string key, Action transformFunction);
 }
 
 public partial interface OrderedDataStore
