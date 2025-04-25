@@ -16,8 +16,8 @@
         public static extern string _VERSION { get; }
 
         // unfortunately this has to return some form of enumerator to work with foreach :(
-        public static extern IEnumerator<LuaTuple<K, V>> pairs<K, V>(IDictionary<K, V> obj);
-        public static extern IEnumerator<LuaTuple<int, T>> pairs<T>(IEnumerable<T> obj);
+        public static extern IEnumerable<LuaTuple<K, V>> pairs<K, V>(IDictionary<K, V> obj);
+        public static extern IEnumerable<LuaTuple<int, T>> pairs<T>(IEnumerable<T> obj);
         public static extern void print(params object[] values);
         public static extern void warn(params string[] messages);
         public static extern void error(string message, int? level = null);
