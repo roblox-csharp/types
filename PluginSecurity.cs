@@ -22,28 +22,12 @@ public static class Services
 
 // GENERATED ROBLOX INSTANCE CLASSES
 
-public interface Object
-{
-}
-
-public interface ConfigSnapshot : Object
-{
-	public new ConfigSnapshot Clone();
-}
-
-public interface EditableImage : Object
-{
-	public new EditableImage Clone();
-}
-
-public interface EditableMesh : Object
-{
-	public new EditableMesh Clone();
-}
-
+public interface Object;
+public interface ConfigSnapshot : Object;
+public interface EditableImage : Object;
+public interface EditableMesh : Object;
 public partial interface Instance : Object
 {
-	public new Instance Clone();
 	public string GetDebugId(int? scopeLength = null);
 }
 
@@ -62,11 +46,7 @@ public interface Accoutrement : ICreatableInstance
 	public new Accoutrement Clone();
 }
 
-public interface Accessory : Accoutrement, ICreatableInstance
-{
-	public new Accessory Clone();
-}
-
+public interface Accessory : Accoutrement, ICreatableInstance;
 public interface AchievementService : IServiceInstance
 {
 	public new AchievementService Clone();
@@ -97,11 +77,7 @@ public interface AnimationClip : Instance
 	public new AnimationClip Clone();
 }
 
-public partial interface KeyframeSequence : AnimationClip, ICreatableInstance
-{
-	public new KeyframeSequence Clone();
-}
-
+public partial interface KeyframeSequence : AnimationClip, ICreatableInstance;
 public partial interface AnimationClipProvider : IServiceInstance
 {
 	public new AnimationClipProvider Clone();
@@ -150,11 +126,7 @@ public interface Annotation : ICreatableInstance
 	public new Annotation Clone();
 }
 
-public interface WorkspaceAnnotation : Annotation, ICreatableInstance
-{
-	public new WorkspaceAnnotation Clone();
-}
-
+public interface WorkspaceAnnotation : Annotation, ICreatableInstance;
 public interface AnnotationsService : IServiceInstance
 {
 	public new AnnotationsService Clone();
@@ -205,11 +177,7 @@ public interface Attachment : ICreatableInstance
 	public new Attachment Clone();
 }
 
-public interface Bone : Attachment, ICreatableInstance
-{
-	public new Bone Clone();
-}
-
+public interface Bone : Attachment, ICreatableInstance;
 public interface AudioAnalyzer : ICreatableInstance
 {
 	public new AudioAnalyzer Clone();
@@ -365,26 +333,10 @@ public interface BaseImportData : Instance
 	public new BaseImportData Clone();
 }
 
-public interface GroupImportData : BaseImportData
-{
-	public new GroupImportData Clone();
-}
-
-public interface MaterialImportData : BaseImportData
-{
-	public new MaterialImportData Clone();
-}
-
-public interface MeshImportData : BaseImportData
-{
-	public new MeshImportData Clone();
-}
-
-public interface RootImportData : BaseImportData
-{
-	public new RootImportData Clone();
-}
-
+public interface GroupImportData : BaseImportData;
+public interface MaterialImportData : BaseImportData;
+public interface MeshImportData : BaseImportData;
+public interface RootImportData : BaseImportData;
 public interface BasePlayerGui : Instance
 {
 	public new BasePlayerGui Clone();
@@ -392,18 +344,12 @@ public interface BasePlayerGui : Instance
 
 public interface CoreGui : BasePlayerGui, IServiceInstance
 {
-	public new CoreGui Clone();
 	public int Version { get; }
 }
 
-public partial interface PlayerGui : BasePlayerGui
-{
-	public new PlayerGui Clone();
-}
-
+public partial interface PlayerGui : BasePlayerGui;
 public partial interface StarterGui : BasePlayerGui, IServiceInstance
 {
-	public new StarterGui Clone();
 	public bool ShowDevelopmentGui { get; set; }
 }
 
@@ -412,21 +358,9 @@ public interface BaseWrap : Instance
 	public new BaseWrap Clone();
 }
 
-public interface WrapDeformer : BaseWrap, ICreatableInstance
-{
-	public new WrapDeformer Clone();
-}
-
-public interface WrapLayer : BaseWrap, ICreatableInstance
-{
-	public new WrapLayer Clone();
-}
-
-public interface WrapTarget : BaseWrap, ICreatableInstance
-{
-	public new WrapTarget Clone();
-}
-
+public interface WrapDeformer : BaseWrap, ICreatableInstance;
+public interface WrapLayer : BaseWrap, ICreatableInstance;
+public interface WrapTarget : BaseWrap, ICreatableInstance;
 public interface Beam : ICreatableInstance
 {
 	public new Beam Clone();
@@ -442,41 +376,13 @@ public interface BindableFunction : ICreatableInstance
 	public new BindableFunction Clone();
 }
 
-public interface BodyAngularVelocity : BodyMover, ICreatableInstance
-{
-	public new BodyAngularVelocity Clone();
-}
-
-public interface BodyForce : BodyMover, ICreatableInstance
-{
-	public new BodyForce Clone();
-}
-
-public interface BodyGyro : BodyMover, ICreatableInstance
-{
-	public new BodyGyro Clone();
-}
-
-public interface BodyPosition : BodyMover, ICreatableInstance
-{
-	public new BodyPosition Clone();
-}
-
-public interface BodyThrust : BodyMover, ICreatableInstance
-{
-	public new BodyThrust Clone();
-}
-
-public interface BodyVelocity : BodyMover, ICreatableInstance
-{
-	public new BodyVelocity Clone();
-}
-
-public interface RocketPropulsion : BodyMover, ICreatableInstance
-{
-	public new RocketPropulsion Clone();
-}
-
+public interface BodyAngularVelocity : BodyMover, ICreatableInstance;
+public interface BodyForce : BodyMover, ICreatableInstance;
+public interface BodyGyro : BodyMover, ICreatableInstance;
+public interface BodyPosition : BodyMover, ICreatableInstance;
+public interface BodyThrust : BodyMover, ICreatableInstance;
+public interface BodyVelocity : BodyMover, ICreatableInstance;
+public interface RocketPropulsion : BodyMover, ICreatableInstance;
 public interface BodyPartDescription : ICreatableInstance
 {
 	public new BodyPartDescription Clone();
@@ -530,36 +436,12 @@ public interface ChangeHistoryService : IServiceInstance
 	public event OnUndoDelegate OnUndo;
 }
 
-public interface BodyColors : CharacterAppearance, ICreatableInstance
-{
-	public new BodyColors Clone();
-}
-
-public interface CharacterMesh : CharacterAppearance, ICreatableInstance
-{
-	public new CharacterMesh Clone();
-}
-
-public interface Clothing : CharacterAppearance
-{
-	public new Clothing Clone();
-}
-
-public interface Pants : Clothing, ICreatableInstance
-{
-	public new Pants Clone();
-}
-
-public interface Shirt : Clothing, ICreatableInstance
-{
-	public new Shirt Clone();
-}
-
-public interface ShirtGraphic : CharacterAppearance, ICreatableInstance
-{
-	public new ShirtGraphic Clone();
-}
-
+public interface BodyColors : CharacterAppearance, ICreatableInstance;
+public interface CharacterMesh : CharacterAppearance, ICreatableInstance;
+public interface Clothing : CharacterAppearance;
+public interface Pants : Clothing, ICreatableInstance;
+public interface Shirt : Clothing, ICreatableInstance;
+public interface ShirtGraphic : CharacterAppearance, ICreatableInstance;
 public interface Chat : IServiceInstance
 {
 	public new Chat Clone();
@@ -575,11 +457,7 @@ public interface ClickDetector : ICreatableInstance
 	public new ClickDetector Clone();
 }
 
-public interface DragDetector : ClickDetector, ICreatableInstance
-{
-	public new DragDetector Clone();
-}
-
+public interface DragDetector : ClickDetector, ICreatableInstance;
 public interface Clouds : ICreatableInstance
 {
 	public new Clouds Clone();
@@ -630,91 +508,23 @@ public interface Constraint : Instance
 	public new Constraint Clone();
 }
 
-public interface AlignOrientation : Constraint, ICreatableInstance
-{
-	public new AlignOrientation Clone();
-}
-
-public interface AlignPosition : Constraint, ICreatableInstance
-{
-	public new AlignPosition Clone();
-}
-
-public interface AngularVelocity : Constraint, ICreatableInstance
-{
-	public new AngularVelocity Clone();
-}
-
-public interface AnimationConstraint : Constraint, ICreatableInstance
-{
-	public new AnimationConstraint Clone();
-}
-
-public interface BallSocketConstraint : Constraint, ICreatableInstance
-{
-	public new BallSocketConstraint Clone();
-}
-
-public interface HingeConstraint : Constraint, ICreatableInstance
-{
-	public new HingeConstraint Clone();
-}
-
-public interface LineForce : Constraint, ICreatableInstance
-{
-	public new LineForce Clone();
-}
-
-public interface LinearVelocity : Constraint, ICreatableInstance
-{
-	public new LinearVelocity Clone();
-}
-
-public interface RodConstraint : Constraint, ICreatableInstance
-{
-	public new RodConstraint Clone();
-}
-
-public interface RopeConstraint : Constraint, ICreatableInstance
-{
-	public new RopeConstraint Clone();
-}
-
-public interface SlidingBallConstraint : Constraint
-{
-	public new SlidingBallConstraint Clone();
-}
-
-public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance
-{
-	public new CylindricalConstraint Clone();
-}
-
-public interface SpringConstraint : Constraint, ICreatableInstance
-{
-	public new SpringConstraint Clone();
-}
-
-public interface Torque : Constraint, ICreatableInstance
-{
-	public new Torque Clone();
-}
-
-public interface TorsionSpringConstraint : Constraint, ICreatableInstance
-{
-	public new TorsionSpringConstraint Clone();
-}
-
-public interface UniversalConstraint : Constraint, ICreatableInstance
-{
-	public new UniversalConstraint Clone();
-}
-
-public interface VectorForce : Constraint, ICreatableInstance
-{
-	public new VectorForce Clone();
-}
-
+public interface AlignOrientation : Constraint, ICreatableInstance;
+public interface AlignPosition : Constraint, ICreatableInstance;
+public interface AngularVelocity : Constraint, ICreatableInstance;
+public interface AnimationConstraint : Constraint, ICreatableInstance;
+public interface BallSocketConstraint : Constraint, ICreatableInstance;
+public interface HingeConstraint : Constraint, ICreatableInstance;
+public interface LineForce : Constraint, ICreatableInstance;
+public interface LinearVelocity : Constraint, ICreatableInstance;
+public interface RodConstraint : Constraint, ICreatableInstance;
+public interface RopeConstraint : Constraint, ICreatableInstance;
+public interface SlidingBallConstraint : Constraint;
+public interface CylindricalConstraint : SlidingBallConstraint, ICreatableInstance;
+public interface SpringConstraint : Constraint, ICreatableInstance;
+public interface Torque : Constraint, ICreatableInstance;
+public interface TorsionSpringConstraint : Constraint, ICreatableInstance;
+public interface UniversalConstraint : Constraint, ICreatableInstance;
+public interface VectorForce : Constraint, ICreatableInstance;
 public interface ContentProvider : IServiceInstance
 {
 	public new ContentProvider Clone();
@@ -730,36 +540,16 @@ public interface Controller : Instance
 	public new Controller Clone();
 }
 
-public interface SkateboardController : Controller, ICreatableInstance
-{
-	public new SkateboardController Clone();
-}
-
+public interface SkateboardController : Controller, ICreatableInstance;
 public interface ControllerBase : Instance
 {
 	public new ControllerBase Clone();
 }
 
-public interface AirController : ControllerBase, ICreatableInstance
-{
-	public new AirController Clone();
-}
-
-public interface ClimbController : ControllerBase, ICreatableInstance
-{
-	public new ClimbController Clone();
-}
-
-public interface GroundController : ControllerBase, ICreatableInstance
-{
-	public new GroundController Clone();
-}
-
-public interface SwimController : ControllerBase, ICreatableInstance
-{
-	public new SwimController Clone();
-}
-
+public interface AirController : ControllerBase, ICreatableInstance;
+public interface ClimbController : ControllerBase, ICreatableInstance;
+public interface GroundController : ControllerBase, ICreatableInstance;
+public interface SwimController : ControllerBase, ICreatableInstance;
 public interface ControllerManager : ICreatableInstance
 {
 	public new ControllerManager Clone();
@@ -790,21 +580,9 @@ public interface DataModelMesh : Instance
 	public new DataModelMesh Clone();
 }
 
-public interface BevelMesh : DataModelMesh
-{
-	public new BevelMesh Clone();
-}
-
-public interface FileMesh : DataModelMesh, ICreatableInstance
-{
-	public new FileMesh Clone();
-}
-
-public interface SpecialMesh : FileMesh, ICreatableInstance
-{
-	public new SpecialMesh Clone();
-}
-
+public interface BevelMesh : DataModelMesh;
+public interface FileMesh : DataModelMesh, ICreatableInstance;
+public interface SpecialMesh : FileMesh, ICreatableInstance;
 public interface DataModelPatchService : IServiceInstance
 {
 	public new DataModelPatchService Clone();
@@ -1091,16 +869,8 @@ public interface FaceInstance : Instance
 	public new FaceInstance Clone();
 }
 
-public interface Decal : FaceInstance, ICreatableInstance
-{
-	public new Decal Clone();
-}
-
-public interface Texture : Decal, ICreatableInstance
-{
-	public new Texture Clone();
-}
-
+public interface Decal : FaceInstance, ICreatableInstance;
+public interface Texture : Decal, ICreatableInstance;
 public interface FacialAgeEstimationService : IServiceInstance
 {
 	public new FacialAgeEstimationService Clone();
@@ -1204,104 +974,31 @@ public partial interface GlobalDataStore : Instance
 	public new GlobalDataStore Clone();
 }
 
-public interface DataStore : GlobalDataStore
-{
-	public new DataStore Clone();
-}
-
-public partial interface OrderedDataStore : GlobalDataStore
-{
-	public new OrderedDataStore Clone();
-}
-
+public interface DataStore : GlobalDataStore;
+public partial interface OrderedDataStore : GlobalDataStore;
 public interface GroupService : IServiceInstance
 {
 	public new GroupService Clone();
 }
 
-public interface GuiBase2d : GuiBase
-{
-	public new GuiBase2d Clone();
-}
-
-public interface GuiObject : GuiBase2d
-{
-	public new GuiObject Clone();
-}
-
-public interface CanvasGroup : GuiObject, ICreatableInstance
-{
-	public new CanvasGroup Clone();
-}
-
-public interface Frame : GuiObject, ICreatableInstance
-{
-	public new Frame Clone();
-}
-
-public interface GuiButton : GuiObject
-{
-	public new GuiButton Clone();
-}
-
-public interface ImageButton : GuiButton, ICreatableInstance
-{
-	public new ImageButton Clone();
-}
-
-public interface TextButton : GuiButton, ICreatableInstance
-{
-	public new TextButton Clone();
-}
-
-public interface ImageLabel : GuiLabel, ICreatableInstance
-{
-	public new ImageLabel Clone();
-}
-
-public interface TextLabel : GuiLabel, ICreatableInstance
-{
-	public new TextLabel Clone();
-}
-
-public interface ScrollingFrame : GuiObject, ICreatableInstance
-{
-	public new ScrollingFrame Clone();
-}
-
-public interface TextBox : GuiObject, ICreatableInstance
-{
-	public new TextBox Clone();
-}
-
-public interface VideoDisplay : GuiObject, ICreatableInstance
-{
-	public new VideoDisplay Clone();
-}
-
-public interface VideoFrame : GuiObject, ICreatableInstance
-{
-	public new VideoFrame Clone();
-}
-
-public interface ViewportFrame : GuiObject, ICreatableInstance
-{
-	public new ViewportFrame Clone();
-}
-
-public interface LayerCollector : GuiBase2d
-{
-	public new LayerCollector Clone();
-}
-
-public interface BillboardGui : LayerCollector, ICreatableInstance
-{
-	public new BillboardGui Clone();
-}
-
+public interface GuiBase2d : GuiBase;
+public interface GuiObject : GuiBase2d;
+public interface CanvasGroup : GuiObject, ICreatableInstance;
+public interface Frame : GuiObject, ICreatableInstance;
+public interface GuiButton : GuiObject;
+public interface ImageButton : GuiButton, ICreatableInstance;
+public interface TextButton : GuiButton, ICreatableInstance;
+public interface ImageLabel : GuiLabel, ICreatableInstance;
+public interface TextLabel : GuiLabel, ICreatableInstance;
+public interface ScrollingFrame : GuiObject, ICreatableInstance;
+public interface TextBox : GuiObject, ICreatableInstance;
+public interface VideoDisplay : GuiObject, ICreatableInstance;
+public interface VideoFrame : GuiObject, ICreatableInstance;
+public interface ViewportFrame : GuiObject, ICreatableInstance;
+public interface LayerCollector : GuiBase2d;
+public interface BillboardGui : LayerCollector, ICreatableInstance;
 public interface PluginGui : LayerCollector
 {
-	public new PluginGui Clone();
 	public string Title { get; set; }
 	public void BindToClose(Action? function = null);
 	public Vector2 GetRelativeMousePosition();
@@ -1319,151 +1016,35 @@ public interface PluginGui : LayerCollector
 	public event WindowFocusedDelegate WindowFocused;
 }
 
-public interface DockWidgetPluginGui : PluginGui
-{
-	public new DockWidgetPluginGui Clone();
-}
-
-public interface QWidgetPluginGui : PluginGui
-{
-	public new QWidgetPluginGui Clone();
-}
-
-public interface ScreenGui : LayerCollector, ICreatableInstance
-{
-	public new ScreenGui Clone();
-}
-
-public interface SurfaceGuiBase : LayerCollector
-{
-	public new SurfaceGuiBase Clone();
-}
-
-public interface AdGui : SurfaceGuiBase, ICreatableInstance
-{
-	public new AdGui Clone();
-}
-
-public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance
-{
-	public new SurfaceGui Clone();
-}
-
-public interface GuiBase3d : GuiBase
-{
-	public new GuiBase3d Clone();
-}
-
-public interface FloorWire : GuiBase3d, ICreatableInstance
-{
-	public new FloorWire Clone();
-}
-
-public interface InstanceAdornment : GuiBase3d
-{
-	public new InstanceAdornment Clone();
-}
-
-public interface SelectionBox : InstanceAdornment, ICreatableInstance
-{
-	public new SelectionBox Clone();
-}
-
-public interface PVAdornment : GuiBase3d
-{
-	public new PVAdornment Clone();
-}
-
-public interface HandleAdornment : PVAdornment
-{
-	public new HandleAdornment Clone();
-}
-
-public interface BoxHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new BoxHandleAdornment Clone();
-}
-
-public interface ConeHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new ConeHandleAdornment Clone();
-}
-
-public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new CylinderHandleAdornment Clone();
-}
-
-public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new ImageHandleAdornment Clone();
-}
-
-public interface LineHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new LineHandleAdornment Clone();
-}
-
-public interface SphereHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new SphereHandleAdornment Clone();
-}
-
-public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance
-{
-	public new WireframeHandleAdornment Clone();
-}
-
-public interface ParabolaAdornment : PVAdornment
-{
-	public new ParabolaAdornment Clone();
-}
-
-public interface SelectionSphere : PVAdornment, ICreatableInstance
-{
-	public new SelectionSphere Clone();
-}
-
-public interface PartAdornment : GuiBase3d
-{
-	public new PartAdornment Clone();
-}
-
-public interface ArcHandles : HandlesBase, ICreatableInstance
-{
-	public new ArcHandles Clone();
-}
-
-public interface Handles : HandlesBase, ICreatableInstance
-{
-	public new Handles Clone();
-}
-
-public interface SurfaceSelection : PartAdornment, ICreatableInstance
-{
-	public new SurfaceSelection Clone();
-}
-
-public interface SelectionLasso : GuiBase3d
-{
-	public new SelectionLasso Clone();
-}
-
-public interface SelectionPartLasso : SelectionLasso, ICreatableInstance
-{
-	public new SelectionPartLasso Clone();
-}
-
-public interface SelectionPointLasso : SelectionLasso, ICreatableInstance
-{
-	public new SelectionPointLasso Clone();
-}
-
-public interface Path2D : GuiBase, ICreatableInstance
-{
-	public new Path2D Clone();
-}
-
+public interface DockWidgetPluginGui : PluginGui;
+public interface QWidgetPluginGui : PluginGui;
+public interface ScreenGui : LayerCollector, ICreatableInstance;
+public interface SurfaceGuiBase : LayerCollector;
+public interface AdGui : SurfaceGuiBase, ICreatableInstance;
+public interface SurfaceGui : SurfaceGuiBase, ICreatableInstance;
+public interface GuiBase3d : GuiBase;
+public interface FloorWire : GuiBase3d, ICreatableInstance;
+public interface InstanceAdornment : GuiBase3d;
+public interface SelectionBox : InstanceAdornment, ICreatableInstance;
+public interface PVAdornment : GuiBase3d;
+public interface HandleAdornment : PVAdornment;
+public interface BoxHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface ConeHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface CylinderHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface ImageHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface LineHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface SphereHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface WireframeHandleAdornment : HandleAdornment, ICreatableInstance;
+public interface ParabolaAdornment : PVAdornment;
+public interface SelectionSphere : PVAdornment, ICreatableInstance;
+public interface PartAdornment : GuiBase3d;
+public interface ArcHandles : HandlesBase, ICreatableInstance;
+public interface Handles : HandlesBase, ICreatableInstance;
+public interface SurfaceSelection : PartAdornment, ICreatableInstance;
+public interface SelectionLasso : GuiBase3d;
+public interface SelectionPartLasso : SelectionLasso, ICreatableInstance;
+public interface SelectionPointLasso : SelectionLasso, ICreatableInstance;
+public interface Path2D : GuiBase, ICreatableInstance;
 public interface GuiService : IServiceInstance
 {
 	public new GuiService Clone();
@@ -1538,11 +1119,7 @@ public interface ImportSession : Instance
 	public new ImportSession Clone();
 }
 
-public interface AssetImportSession : ImportSession
-{
-	public new AssetImportSession Clone();
-}
-
+public interface AssetImportSession : ImportSession;
 public interface IncrementalPatchBuilder : IServiceInstance
 {
 	public new IncrementalPatchBuilder Clone();
@@ -1583,31 +1160,11 @@ public interface JointInstance : Instance
 	public new JointInstance Clone();
 }
 
-public interface DynamicRotate : JointInstance
-{
-	public new DynamicRotate Clone();
-}
-
-public interface Glue : JointInstance, ICreatableInstance
-{
-	public new Glue Clone();
-}
-
-public interface Motor : JointInstance, ICreatableInstance
-{
-	public new Motor Clone();
-}
-
-public interface Motor6D : Motor, ICreatableInstance
-{
-	public new Motor6D Clone();
-}
-
-public interface VelocityMotor : JointInstance, ICreatableInstance
-{
-	public new VelocityMotor Clone();
-}
-
+public interface DynamicRotate : JointInstance;
+public interface Glue : JointInstance, ICreatableInstance;
+public interface Motor : JointInstance, ICreatableInstance;
+public interface Motor6D : Motor, ICreatableInstance;
+public interface VelocityMotor : JointInstance, ICreatableInstance;
 public interface JointsService : IServiceInstance
 {
 	public new JointsService Clone();
@@ -1640,21 +1197,9 @@ public interface Light : Instance
 	public new Light Clone();
 }
 
-public interface PointLight : Light, ICreatableInstance
-{
-	public new PointLight Clone();
-}
-
-public interface SpotLight : Light, ICreatableInstance
-{
-	public new SpotLight Clone();
-}
-
-public interface SurfaceLight : Light, ICreatableInstance
-{
-	public new SurfaceLight Clone();
-}
-
+public interface PointLight : Light, ICreatableInstance;
+public interface SpotLight : Light, ICreatableInstance;
+public interface SurfaceLight : Light, ICreatableInstance;
 public interface Lighting : IServiceInstance
 {
 	public new Lighting Clone();
@@ -1712,7 +1257,6 @@ public interface LuaSourceContainer : Instance
 
 public interface AuroraScript : LuaSourceContainer, ICreatableInstance
 {
-	public new AuroraScript Clone();
 	public bool EnableCulling { get; set; }
 	public bool EnableLOD { get; set; }
 	public int LODCriticality { get; set; }
@@ -1720,21 +1264,9 @@ public interface AuroraScript : LuaSourceContainer, ICreatableInstance
 	public string Source { get; set; }
 }
 
-public interface BaseScript : LuaSourceContainer
-{
-	public new BaseScript Clone();
-}
-
-public interface Script : BaseScript, ICreatableInstance
-{
-	public new Script Clone();
-}
-
-public interface ModuleScript : LuaSourceContainer, ICreatableInstance
-{
-	public new ModuleScript Clone();
-}
-
+public interface BaseScript : LuaSourceContainer;
+public interface Script : BaseScript, ICreatableInstance;
+public interface ModuleScript : LuaSourceContainer, ICreatableInstance;
 public interface MarkerCurve : ICreatableInstance
 {
 	public new MarkerCurve Clone();
@@ -1837,7 +1369,6 @@ public interface Mouse : Instance
 
 public interface PluginMouse : Mouse
 {
-	public new PluginMouse Clone();
 	public delegate void DragEnterDelegate(Instance[] instances);
 	public event DragEnterDelegate DragEnter;
 }
@@ -1858,32 +1389,16 @@ public partial interface NetworkPeer : Instance
 	public void SetOutgoingKBPSLimit(int limit);
 }
 
-public partial interface NetworkClient : NetworkPeer, IServiceInstance
-{
-	public new NetworkClient Clone();
-}
-
-public partial interface NetworkServer : NetworkPeer, IServiceInstance
-{
-	public new NetworkServer Clone();
-}
-
+public partial interface NetworkClient : NetworkPeer, IServiceInstance;
+public partial interface NetworkServer : NetworkPeer, IServiceInstance;
 public interface NetworkReplicator : Instance
 {
 	public new NetworkReplicator Clone();
 	public Instance GetPlayer();
 }
 
-public interface ClientReplicator : NetworkReplicator
-{
-	public new ClientReplicator Clone();
-}
-
-public interface ServerReplicator : NetworkReplicator
-{
-	public new ServerReplicator Clone();
-}
-
+public interface ClientReplicator : NetworkReplicator;
+public interface ServerReplicator : NetworkReplicator;
 public interface NetworkSettings : IServiceInstance
 {
 	public new NetworkSettings Clone();
@@ -1928,108 +1443,40 @@ public interface PVInstance : Instance
 	public new PVInstance Clone();
 }
 
-public partial interface BasePart : PVInstance
-{
-	public new BasePart Clone();
-}
-
-public interface FormFactorPart : BasePart
-{
-	public new FormFactorPart Clone();
-}
-
-public interface Part : FormFactorPart, ICreatableInstance
-{
-	public new Part Clone();
-}
-
-public interface Platform : Part
-{
-	public new Platform Clone();
-}
-
-public interface Seat : Part, ICreatableInstance
-{
-	public new Seat Clone();
-}
-
-public interface SkateboardPlatform : Part, ICreatableInstance
-{
-	public new SkateboardPlatform Clone();
-}
-
-public interface SpawnLocation : Part, ICreatableInstance
-{
-	public new SpawnLocation Clone();
-}
-
+public partial interface BasePart : PVInstance;
+public interface FormFactorPart : BasePart;
+public interface Part : FormFactorPart, ICreatableInstance;
+public interface Platform : Part;
+public interface Seat : Part, ICreatableInstance;
+public interface SkateboardPlatform : Part, ICreatableInstance;
+public interface SpawnLocation : Part, ICreatableInstance;
 public partial interface Terrain : BasePart
 {
-	public new Terrain Clone();
 	public void ConvertToSmooth();
 }
 
-public interface TriangleMeshPart : BasePart
-{
-	public new TriangleMeshPart Clone();
-}
-
-public interface MeshPart : TriangleMeshPart, ICreatableInstance
-{
-	public new MeshPart Clone();
-}
-
-public interface PartOperation : TriangleMeshPart, ICreatableInstance
-{
-	public new PartOperation Clone();
-}
-
-public interface TrussPart : BasePart, ICreatableInstance
-{
-	public new TrussPart Clone();
-}
-
-public interface VehicleSeat : BasePart, ICreatableInstance
-{
-	public new VehicleSeat Clone();
-}
-
-public interface Camera : PVInstance, ICreatableInstance
-{
-	public new Camera Clone();
-}
-
+public interface TriangleMeshPart : BasePart;
+public interface MeshPart : TriangleMeshPart, ICreatableInstance;
+public interface PartOperation : TriangleMeshPart, ICreatableInstance;
+public interface TrussPart : BasePart, ICreatableInstance;
+public interface VehicleSeat : BasePart, ICreatableInstance;
+public interface Camera : PVInstance, ICreatableInstance;
 public interface Model : PVInstance, ICreatableInstance
 {
-	public new Model Clone();
 	public Enum.ModelLevelOfDetail LevelOfDetail { get; set; }
 }
 
-public interface Actor : Model, ICreatableInstance
-{
-	public new Actor Clone();
-}
-
-public interface BackpackItem : Model
-{
-	public new BackpackItem Clone();
-}
-
-public interface Tool : BackpackItem, ICreatableInstance
-{
-	public new Tool Clone();
-}
-
+public interface Actor : Model, ICreatableInstance;
+public interface BackpackItem : Model;
+public interface Tool : BackpackItem, ICreatableInstance;
 public partial interface WorldRoot : Model
 {
-	public new WorldRoot Clone();
 	public void IKMoveTo(BasePart part, CFrame target, float? translateStiffness = null, float? rotateStiffness = null, Enum.IKCollisionsMode? collisionsMode = null);
 	public void StepPhysics(float dt, Instance[]? parts = null);
 }
 
 public partial interface Workspace : WorldRoot, IServiceInstance
 {
-	public new Workspace Clone();
 	public void BreakJoints(Instance[] objects);
 	public void MakeJoints(Instance[] objects);
 	public void ZoomToExtents();
@@ -2055,16 +1502,8 @@ public interface Pages : Instance
 	public new Pages Clone();
 }
 
-public interface DataStoreKeyPages : Pages
-{
-	public new DataStoreKeyPages Clone();
-}
-
-public interface DataStoreListingPages : Pages
-{
-	public new DataStoreListingPages Clone();
-}
-
+public interface DataStoreKeyPages : Pages;
+public interface DataStoreListingPages : Pages;
 public interface ParticleEmitter : ICreatableInstance
 {
 	public new ParticleEmitter Clone();
@@ -2100,16 +1539,8 @@ public interface PausedState : Instance
 	public new PausedState Clone();
 }
 
-public interface PausedStateBreakpoint : PausedState
-{
-	public new PausedStateBreakpoint Clone();
-}
-
-public interface PausedStateException : PausedState
-{
-	public new PausedStateException Clone();
-}
-
+public interface PausedStateBreakpoint : PausedState;
+public interface PausedStateException : PausedState;
 public interface PerformanceControlService : IServiceInstance
 {
 	public new PerformanceControlService Clone();
@@ -2244,7 +1675,7 @@ public interface Plugin : Instance
 	public void StartDrag(object dragData);
 	public Instance Union(Instance[] objects);
 	public DockWidgetPluginGui CreateDockWidgetPluginGui(string pluginGuiId, DockWidgetPluginGuiInfo dockWidgetPluginGuiInfo);
-	public Instance ImportFbxAnimation(Instance rigModel, bool? isR15 = null);
+	public Instance ImportFbxAnimation(object rigModel, bool? isR15 = null);
 	public Instance ImportFbxRig(bool? isR15 = null);
 	public long PromptForExistingAssetId(string assetType);
 	public bool PromptSaveSelection(string suggestedFileName);
@@ -2347,51 +1778,19 @@ public interface PoseBase : Instance
 	public new PoseBase Clone();
 }
 
-public interface NumberPose : PoseBase, ICreatableInstance
-{
-	public new NumberPose Clone();
-}
-
-public interface Pose : PoseBase, ICreatableInstance
-{
-	public new Pose Clone();
-}
-
+public interface NumberPose : PoseBase, ICreatableInstance;
+public interface Pose : PoseBase, ICreatableInstance;
 public interface PostEffect : Instance
 {
 	public new PostEffect Clone();
 }
 
-public interface BloomEffect : PostEffect, ICreatableInstance
-{
-	public new BloomEffect Clone();
-}
-
-public interface BlurEffect : PostEffect, ICreatableInstance
-{
-	public new BlurEffect Clone();
-}
-
-public interface ColorCorrectionEffect : PostEffect, ICreatableInstance
-{
-	public new ColorCorrectionEffect Clone();
-}
-
-public interface ColorGradingEffect : PostEffect, ICreatableInstance
-{
-	public new ColorGradingEffect Clone();
-}
-
-public interface DepthOfFieldEffect : PostEffect, ICreatableInstance
-{
-	public new DepthOfFieldEffect Clone();
-}
-
-public interface SunRaysEffect : PostEffect, ICreatableInstance
-{
-	public new SunRaysEffect Clone();
-}
-
+public interface BloomEffect : PostEffect, ICreatableInstance;
+public interface BlurEffect : PostEffect, ICreatableInstance;
+public interface ColorCorrectionEffect : PostEffect, ICreatableInstance;
+public interface ColorGradingEffect : PostEffect, ICreatableInstance;
+public interface DepthOfFieldEffect : PostEffect, ICreatableInstance;
+public interface SunRaysEffect : PostEffect, ICreatableInstance;
 public interface ProximityPrompt : ICreatableInstance
 {
 	public new ProximityPrompt Clone();
@@ -2512,11 +1911,7 @@ public interface ScreenshotHud : Instance
 	public new ScreenshotHud Clone();
 }
 
-public interface SyncScriptBuilder : ScriptBuilder
-{
-	public new SyncScriptBuilder Clone();
-}
-
+public interface SyncScriptBuilder : ScriptBuilder;
 public interface ScriptChangeService : IServiceInstance
 {
 	public new ScriptChangeService Clone();
@@ -2642,26 +2037,10 @@ public interface SensorBase : Instance
 	public new SensorBase Clone();
 }
 
-public interface AtmosphereSensor : SensorBase, ICreatableInstance
-{
-	public new AtmosphereSensor Clone();
-}
-
-public interface BuoyancySensor : SensorBase, ICreatableInstance
-{
-	public new BuoyancySensor Clone();
-}
-
-public interface ControllerPartSensor : ControllerSensor, ICreatableInstance
-{
-	public new ControllerPartSensor Clone();
-}
-
-public interface FluidForceSensor : SensorBase, ICreatableInstance
-{
-	public new FluidForceSensor Clone();
-}
-
+public interface AtmosphereSensor : SensorBase, ICreatableInstance;
+public interface BuoyancySensor : SensorBase, ICreatableInstance;
+public interface ControllerPartSensor : ControllerSensor, ICreatableInstance;
+public interface FluidForceSensor : SensorBase, ICreatableInstance;
 public interface SerializationService : IServiceInstance
 {
 	public new SerializationService Clone();
@@ -2679,7 +2058,6 @@ public partial interface ServiceProvider : Instance
 
 public partial interface DataModel : ServiceProvider
 {
-	public new DataModel Clone();
 	public object[] GetJobsInfo();
 	public Instance[] GetObjects(string url);
 	public void SetPlaceId(long placeId);
@@ -2688,16 +2066,11 @@ public partial interface DataModel : ServiceProvider
 
 public interface GlobalSettings : GenericSettings
 {
-	public new GlobalSettings Clone();
 	public bool GetFFlag(string name);
 	public string GetFVariable(string name);
 }
 
-public interface UserSettings : GenericSettings
-{
-	public new UserSettings Clone();
-}
-
+public interface UserSettings : GenericSettings;
 public interface ServiceVisibilityService : IServiceInstance
 {
 	public new ServiceVisibilityService Clone();
@@ -2743,56 +2116,16 @@ public interface SoundEffect : Instance
 	public new SoundEffect Clone();
 }
 
-public interface ChorusSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new ChorusSoundEffect Clone();
-}
-
-public interface CompressorSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new CompressorSoundEffect Clone();
-}
-
-public interface ChannelSelectorSoundEffect : CustomSoundEffect
-{
-	public new ChannelSelectorSoundEffect Clone();
-}
-
-public interface DistortionSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new DistortionSoundEffect Clone();
-}
-
-public interface EchoSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new EchoSoundEffect Clone();
-}
-
-public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new EqualizerSoundEffect Clone();
-}
-
-public interface FlangeSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new FlangeSoundEffect Clone();
-}
-
-public interface PitchShiftSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new PitchShiftSoundEffect Clone();
-}
-
-public interface ReverbSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new ReverbSoundEffect Clone();
-}
-
-public interface TremoloSoundEffect : SoundEffect, ICreatableInstance
-{
-	public new TremoloSoundEffect Clone();
-}
-
+public interface ChorusSoundEffect : SoundEffect, ICreatableInstance;
+public interface CompressorSoundEffect : SoundEffect, ICreatableInstance;
+public interface ChannelSelectorSoundEffect : CustomSoundEffect;
+public interface DistortionSoundEffect : SoundEffect, ICreatableInstance;
+public interface EchoSoundEffect : SoundEffect, ICreatableInstance;
+public interface EqualizerSoundEffect : SoundEffect, ICreatableInstance;
+public interface FlangeSoundEffect : SoundEffect, ICreatableInstance;
+public interface PitchShiftSoundEffect : SoundEffect, ICreatableInstance;
+public interface ReverbSoundEffect : SoundEffect, ICreatableInstance;
+public interface TremoloSoundEffect : SoundEffect, ICreatableInstance;
 public interface SoundGroup : ICreatableInstance
 {
 	public new SoundGroup Clone();
@@ -2843,26 +2176,10 @@ public interface StatsItem : Instance
 	public string GetValueString();
 }
 
-public interface RunningAverageItemDouble : StatsItem
-{
-	public new RunningAverageItemDouble Clone();
-}
-
-public interface RunningAverageItemInt : StatsItem
-{
-	public new RunningAverageItemInt Clone();
-}
-
-public interface RunningAverageTimeIntervalItem : StatsItem
-{
-	public new RunningAverageTimeIntervalItem Clone();
-}
-
-public interface TotalCountTimeIntervalItem : StatsItem
-{
-	public new TotalCountTimeIntervalItem Clone();
-}
-
+public interface RunningAverageItemDouble : StatsItem;
+public interface RunningAverageItemInt : StatsItem;
+public interface RunningAverageTimeIntervalItem : StatsItem;
+public interface TotalCountTimeIntervalItem : StatsItem;
 public interface StreamingService : IServiceInstance
 {
 	public new StreamingService Clone();
@@ -2898,11 +2215,7 @@ public interface StudioDeviceEmulatorService : IServiceInstance
 	public new StudioDeviceEmulatorService Clone();
 }
 
-public interface StudioWidget : StudioObjectBase
-{
-	public new StudioWidget Clone();
-}
-
+public interface StudioWidget : StudioObjectBase;
 public interface StudioPublishService : IServiceInstance
 {
 	public new StudioPublishService Clone();
@@ -2952,16 +2265,8 @@ public interface StyleBase : Instance
 	public new StyleBase Clone();
 }
 
-public interface StyleRule : StyleBase, ICreatableInstance
-{
-	public new StyleRule Clone();
-}
-
-public interface StyleSheet : StyleBase, ICreatableInstance
-{
-	public new StyleSheet Clone();
-}
-
+public interface StyleRule : StyleBase, ICreatableInstance;
+public interface StyleSheet : StyleBase, ICreatableInstance;
 public interface StyleDerive : ICreatableInstance
 {
 	public new StyleDerive Clone();
@@ -3104,26 +2409,10 @@ public interface TextChatCommand : ICreatableInstance
 	public new TextChatCommand Clone();
 }
 
-public interface BubbleChatConfiguration : TextChatConfigurations
-{
-	public new BubbleChatConfiguration Clone();
-}
-
-public interface ChannelTabsConfiguration : TextChatConfigurations
-{
-	public new ChannelTabsConfiguration Clone();
-}
-
-public interface ChatInputBarConfiguration : TextChatConfigurations
-{
-	public new ChatInputBarConfiguration Clone();
-}
-
-public interface ChatWindowConfiguration : TextChatConfigurations
-{
-	public new ChatWindowConfiguration Clone();
-}
-
+public interface BubbleChatConfiguration : TextChatConfigurations;
+public interface ChannelTabsConfiguration : TextChatConfigurations;
+public interface ChatInputBarConfiguration : TextChatConfigurations;
+public interface ChatWindowConfiguration : TextChatConfigurations;
 public interface TextChatMessage : Instance
 {
 	public new TextChatMessage Clone();
@@ -3134,16 +2423,8 @@ public interface TextChatMessageProperties : ICreatableInstance
 	public new TextChatMessageProperties Clone();
 }
 
-public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreatableInstance
-{
-	public new BubbleChatMessageProperties Clone();
-}
-
-public interface ChatWindowMessageProperties : TextChatMessageProperties
-{
-	public new ChatWindowMessageProperties Clone();
-}
-
+public interface BubbleChatMessageProperties : TextChatMessageProperties, ICreatableInstance;
+public interface ChatWindowMessageProperties : TextChatMessageProperties;
 public interface TextChatService : IServiceInstance
 {
 	public new TextChatService Clone();
@@ -3224,91 +2505,27 @@ public interface TweenBase : Instance
 	public new TweenBase Clone();
 }
 
-public interface Tween : TweenBase
-{
-	public new Tween Clone();
-}
-
+public interface Tween : TweenBase;
 public interface TweenService : IServiceInstance
 {
 	public new TweenService Clone();
 }
 
-public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance
-{
-	public new UIAspectRatioConstraint Clone();
-}
-
-public interface UISizeConstraint : UIConstraint, ICreatableInstance
-{
-	public new UISizeConstraint Clone();
-}
-
-public interface UITextSizeConstraint : UIConstraint, ICreatableInstance
-{
-	public new UITextSizeConstraint Clone();
-}
-
-public interface UICorner : UIComponent, ICreatableInstance
-{
-	public new UICorner Clone();
-}
-
-public interface UIDragDetector : UIComponent, ICreatableInstance
-{
-	public new UIDragDetector Clone();
-}
-
-public interface UIFlexItem : UIComponent, ICreatableInstance
-{
-	public new UIFlexItem Clone();
-}
-
-public interface UIGradient : UIComponent, ICreatableInstance
-{
-	public new UIGradient Clone();
-}
-
-public interface UIGridStyleLayout : UILayout
-{
-	public new UIGridStyleLayout Clone();
-}
-
-public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance
-{
-	public new UIGridLayout Clone();
-}
-
-public interface UIListLayout : UIGridStyleLayout, ICreatableInstance
-{
-	public new UIListLayout Clone();
-}
-
-public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance
-{
-	public new UIPageLayout Clone();
-}
-
-public interface UITableLayout : UIGridStyleLayout, ICreatableInstance
-{
-	public new UITableLayout Clone();
-}
-
-public interface UIPadding : UIComponent, ICreatableInstance
-{
-	public new UIPadding Clone();
-}
-
-public interface UIScale : UIComponent, ICreatableInstance
-{
-	public new UIScale Clone();
-}
-
-public interface UIStroke : UIComponent, ICreatableInstance
-{
-	public new UIStroke Clone();
-}
-
+public interface UIAspectRatioConstraint : UIConstraint, ICreatableInstance;
+public interface UISizeConstraint : UIConstraint, ICreatableInstance;
+public interface UITextSizeConstraint : UIConstraint, ICreatableInstance;
+public interface UICorner : UIComponent, ICreatableInstance;
+public interface UIDragDetector : UIComponent, ICreatableInstance;
+public interface UIFlexItem : UIComponent, ICreatableInstance;
+public interface UIGradient : UIComponent, ICreatableInstance;
+public interface UIGridStyleLayout : UILayout;
+public interface UIGridLayout : UIGridStyleLayout, ICreatableInstance;
+public interface UIListLayout : UIGridStyleLayout, ICreatableInstance;
+public interface UIPageLayout : UIGridStyleLayout, ICreatableInstance;
+public interface UITableLayout : UIGridStyleLayout, ICreatableInstance;
+public interface UIPadding : UIComponent, ICreatableInstance;
+public interface UIScale : UIComponent, ICreatableInstance;
+public interface UIStroke : UIComponent, ICreatableInstance;
 public interface UniqueIdLookupService : IServiceInstance
 {
 	public new UniqueIdLookupService Clone();
@@ -3339,66 +2556,18 @@ public interface VRService : IServiceInstance
 	public new VRService Clone();
 }
 
-public interface BoolValue : ValueBase, ICreatableInstance
-{
-	public new BoolValue Clone();
-}
-
-public interface BrickColorValue : ValueBase, ICreatableInstance
-{
-	public new BrickColorValue Clone();
-}
-
-public interface CFrameValue : ValueBase, ICreatableInstance
-{
-	public new CFrameValue Clone();
-}
-
-public interface Color3Value : ValueBase, ICreatableInstance
-{
-	public new Color3Value Clone();
-}
-
-public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
-{
-	public new DoubleConstrainedValue Clone();
-}
-
-public interface IntConstrainedValue : ValueBase, ICreatableInstance
-{
-	public new IntConstrainedValue Clone();
-}
-
-public interface IntValue : ValueBase, ICreatableInstance
-{
-	public new IntValue Clone();
-}
-
-public interface NumberValue : ValueBase, ICreatableInstance
-{
-	public new NumberValue Clone();
-}
-
-public interface ObjectValue : ValueBase, ICreatableInstance
-{
-	public new ObjectValue Clone();
-}
-
-public interface RayValue : ValueBase, ICreatableInstance
-{
-	public new RayValue Clone();
-}
-
-public interface StringValue : ValueBase, ICreatableInstance
-{
-	public new StringValue Clone();
-}
-
-public interface Vector3Value : ValueBase, ICreatableInstance
-{
-	public new Vector3Value Clone();
-}
-
+public interface BoolValue : ValueBase, ICreatableInstance;
+public interface BrickColorValue : ValueBase, ICreatableInstance;
+public interface CFrameValue : ValueBase, ICreatableInstance;
+public interface Color3Value : ValueBase, ICreatableInstance;
+public interface DoubleConstrainedValue : ValueBase, ICreatableInstance;
+public interface IntConstrainedValue : ValueBase, ICreatableInstance;
+public interface IntValue : ValueBase, ICreatableInstance;
+public interface NumberValue : ValueBase, ICreatableInstance;
+public interface ObjectValue : ValueBase, ICreatableInstance;
+public interface RayValue : ValueBase, ICreatableInstance;
+public interface StringValue : ValueBase, ICreatableInstance;
+public interface Vector3Value : ValueBase, ICreatableInstance;
 public interface Vector3Curve : ICreatableInstance
 {
 	public new Vector3Curve Clone();

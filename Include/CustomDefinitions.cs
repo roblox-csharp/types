@@ -8,11 +8,29 @@ public interface SecurityCapabilities
     public bool Contains(params Enum.SecurityCapability[] capabilities);
 }
 
-public sealed class LuaTuple<T>
+public sealed class LuaTuple<T> where T : IList<T>
 {
-    public void Deconstruct(out T value)
+    public void Deconstruct(out T first,
+                            out T second,
+                            out T third,
+                            out T fourth,
+                            out T fifth,
+                            out T sixth,
+                            out T seventh,
+                            out T eighth,
+                            out T ninth,
+                            out T tenth)
     {
-        value = default!;
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+        ninth = default!;
+        tenth = default!;
     }
 }
 
@@ -22,6 +40,158 @@ public sealed class LuaTuple<T1, T2>
     {
         first = default!;
         second = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5, T6>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth,
+                            out T6 sixth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5, T6, T7>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth,
+                            out T6 sixth,
+                            out T7 seventh)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5, T6, T7, T8>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth,
+                            out T6 sixth,
+                            out T7 seventh,
+                            out T8 eighth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth,
+                            out T6 sixth,
+                            out T7 seventh,
+                            out T8 eighth,
+                            out T9 ninth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+        ninth = default!;
+    }
+}
+
+public sealed class LuaTuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+{
+    public void Deconstruct(out T1 first,
+                            out T2 second,
+                            out T3 third,
+                            out T4 fourth,
+                            out T5 fifth,
+                            out T6 sixth,
+                            out T7 seventh,
+                            out T8 eighth,
+                            out T9 ninth,
+                            out T10 tenth)
+    {
+        first = default!;
+        second = default!;
+        third = default!;
+        fourth = default!;
+        fifth = default!;
+        sixth = default!;
+        seventh = default!;
+        eighth = default!;
+        ninth = default!;
+        tenth = default!;
     }
 }
 
@@ -141,14 +311,13 @@ public partial interface GlobalDataStore
 {
     public T GetAsync<T>(string key, DataStoreGetOptions? options = null);
     public string SetAsync(string key, object value, uint[]? userIds = null, DataStoreSetOptions? options = null);
+    public LuaTuple<float, DataStoreKeyInfo> IncrementAsync(string key,
+                                                            float? delta = null,
+                                                            uint[]? userIds = null,
+                                                            DataStoreSetOptions? options = null);
 
-    public float IncrementAsync(string key,
-                                float? delta = null,
-                                uint[]? userIds = null,
-                                DataStoreSetOptions? options = null); // TODO: LuaTuple<float, DataStoreKeyInfo>
-
-    public object RemoveAsync(string key);                           // TODO: LuaTuple<object, DataStoreKeyInfo>
-    public object UpdateAsync(string key, Action transformFunction); // TODO: LuaTuple<object, DataStoreKeyInfo>
+    public LuaTuple<object, DataStoreKeyInfo> RemoveAsync(string key);
+    public LuaTuple<object, DataStoreKeyInfo> UpdateAsync(string key, Action transformFunction);
 }
 
 public partial interface OrderedDataStore
@@ -204,6 +373,7 @@ public partial interface Instance
     public static sealed extern T Create<T>(Instance? parent = null)
         where T : ICreatableInstance;
 
+    public Instance Clone();
     public Instance? FindFirstAncestor(string name);
     public Instance? FindFirstChild(string name, bool? recursive = null);
     public Instance? FindFirstDescendant(string name);
@@ -247,8 +417,6 @@ public partial interface Instance
 
     public T? WaitForChild<T>(string name, float timeout)
         where T : Instance;
-
-    public bool isDescendantOf(Instance ancestor);
 
     public delegate void AncestryChangedDelegate(Instance child, Instance parent);
     public event AncestryChangedDelegate AncestryChanged;
