@@ -173,14 +173,19 @@ internal sealed class ClassGenerator(
             superclasses.Add(rbxClass.Superclass);
 
         var isPartial = PARTIAL_INTERFACES.Contains(className);
-        Write($"public{(isPartial ? " partial" : "")} interface {className}{(rbxClass.Superclass != ROOT_CLASS_NAME ? $" : {string.Join(", ", superclasses)}" : "")}");
+        var membersToGenerate = members.Where(member => ShouldGenerateMember(rbxClass, member)).ToList();
+        var isValidSuperclass = rbxClass.Superclass != ROOT_CLASS_NAME;
+        var superclassText = isValidSuperclass ? $" : {string.Join(", ", superclasses)}" : "";
+        var partialText = isPartial ? " partial" : "";
+        Write($"public{partialText} interface {className}{superclassText}");
         Write("{");
         PushIndent();
 
-        foreach (var memberText in PER_INSTANCE_MEMBERS)
-            Write(memberText.Replace("<INSTANCE_TYPE>", rbxClass.Name));
-            
-        foreach (var member in members.Where(member => ShouldGenerateMember(rbxClass, member)))
+        if (className != "Object")
+            foreach (var memberText in PER_INSTANCE_MEMBERS)
+                Write(memberText.Replace("<INSTANCE_TYPE>", rbxClass.Name));
+
+        foreach (var member in membersToGenerate)
         {
             _definedMemberNames[rbxClass.Name].Add(member.Name!.Trim());
             switch (member.MemberType)
@@ -224,10 +229,7 @@ internal sealed class ClassGenerator(
             
         return paramNames;
     }
-
-    private List<string> GetParamTypes(List<APITypes.Parameter> parameters) =>
-        parameters.ConvertAll(param => Utility.SafeValueType(param.Type));
-
+    
     private string GenerateParams(List<APITypes.Parameter> parameters)
     {
         var args = new List<string>();

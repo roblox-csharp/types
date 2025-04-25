@@ -229,7 +229,6 @@ public static class Services
 
 public interface Object
 {
-	public new Object Clone();
 	public string ClassName { get; }
 	public ScriptSignal GetPropertyChangedSignal(string property);
 	public bool IsA(string className);
