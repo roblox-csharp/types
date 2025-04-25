@@ -125,65 +125,80 @@ namespace TypeGenerator.APITypes
 #pragma warning disable CS8601
                         case "MemberType":
                             member.MemberType = property.Value.GetString();
+
                             break;
                         case "Name":
                             member.Name = property.Value.GetString();
+
                             break;
                         case "Security":
                             member.Security = JsonSerializer.Deserialize<object?>(property.Value.GetRawText(), options);
+
                             break;
                         case "Tags":
                             member.Tags = JsonSerializer.Deserialize<List<object>>(property.Value.GetRawText(), options);
+
                             break;
                         case "Description":
                             member.Description = property.Value.GetString();
+
                             break;
                         case "Parameters":
                             if (member is Callback callback)
                             {
-                                callback.Parameters = JsonSerializer.Deserialize<List<Parameter>>(property.Value.GetRawText(), options);
+                                callback.Parameters =
+                                    JsonSerializer.Deserialize<List<Parameter>>(property.Value.GetRawText(), options);
                             }
+
                             break;
                         case "ReturnType":
                             if (member is Function function)
                             {
                                 var rawJson = property.Value.GetRawText();
-                                var type = rawJson.StartsWith("[") ?
-                                    JsonSerializer.Deserialize<List<ValueType>>(rawJson, options)?.First()
+                                var type = rawJson.StartsWith("[")
+                                    ? JsonSerializer.Deserialize<List<ValueType>>(rawJson, options)?.First()
                                     : JsonSerializer.Deserialize<ValueType>(rawJson, options);
 
                                 function.ReturnType = type;
                             }
+
                             break;
                         case "Category":
                             if (member is Property prop)
                             {
                                 prop.Category = property.Value.GetString();
                             }
+
                             break;
                         case "Default":
                             if (member is Property propDefault)
                             {
                                 propDefault.Default = property.Value.GetString();
                             }
+
                             break;
                         case "Serialization":
                             if (member is Property propSerialization)
                             {
-                                propSerialization.Serialization = JsonSerializer.Deserialize<Serialization>(property.Value.GetRawText(), options);
+                                propSerialization.Serialization =
+                                    JsonSerializer.Deserialize<Serialization>(property.Value.GetRawText(), options);
                             }
+
                             break;
                         case "ThreadSafety":
                             if (member is Property propThreadSafety)
                             {
                                 propThreadSafety.ThreadSafety = property.Value.GetString();
                             }
+
                             break;
                         case "ValueType":
                             if (member is Property propValueType)
                             {
-                                propValueType.ValueType = JsonSerializer.Deserialize<ValueType>(property.Value.GetRawText(), options);
+                                propValueType.ValueType =
+                                    JsonSerializer.Deserialize<ValueType>(property.Value.GetRawText(), options);
                             }
+
                             break;
 #pragma warning restore CS8601
                     }

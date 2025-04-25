@@ -7,8 +7,8 @@ internal sealed class ClassGenerator(
     ReflectionMetadataReader metadata,
     HashSet<string> definedClassNames,
     string security,
-    string? lowerSecurity = null
-) : Generator(filePath, metadata)
+    string? lowerSecurity = null)
+    : Generator(filePath, metadata)
 {
     private readonly Dictionary<string, APITypes.Class> _classRefs = [];
     private readonly Dictionary<string, HashSet<string>> _definedMemberNames = [];
@@ -25,13 +25,14 @@ internal sealed class ClassGenerator(
             var superclass = rbxClass.Superclass != ROOT_CLASS_NAME
                 ? _classRefs[rbxClass.Superclass]
                 : null;
-                
+
             superclass?.Subclasses.Add(className);
         }
 
         var classesToGenerate = rbxClasses.Where(ShouldGenerateClass).ToList();
         GenerateHeader();
-        Write($"namespace Roblox{(security == "PluginSecurity" ? ".PluginClasses" : "")};");;
+        Write($"namespace Roblox{(security == "PluginSecurity" ? ".PluginClasses" : "")};");
+        ;
         GenerateServices(rbxClasses.Where(rbxClass => !definedClassNames.Contains(rbxClass.Name)).ToList());
         GenerateClasses(classesToGenerate);
         WriteFile();
@@ -40,8 +41,9 @@ internal sealed class ClassGenerator(
     private bool CanRead(string className, APITypes.MemberBase member)
     {
         var readSecurity = Utility.GetSecurity(className, member).Read;
-        return readSecurity == security 
-               || (PLUGIN_ONLY_CLASSES.Contains(className) && readSecurity == lowerSecurity);
+
+        return readSecurity == security
+            || (PLUGIN_ONLY_CLASSES.Contains(className) && readSecurity == lowerSecurity);
     }
 
     private bool CanWrite(string className, APITypes.MemberBase member)
@@ -49,48 +51,42 @@ internal sealed class ClassGenerator(
         var security1 = Utility.GetSecurity(className, member);
 
         // dumb hack to fix PluginSecurity writable things being marked as readonly in None.cs
-        if (security1 is { Read: "None", Write: "PluginSecurity" })
-            return true;
+        if (security1 is { Read: "None", Write: "PluginSecurity" }) return true;
 
-        return security1.Write == security ||
-               (PLUGIN_ONLY_CLASSES.Contains(className) && security1.Write == lowerSecurity);
+        return security1.Write == security || (PLUGIN_ONLY_CLASSES.Contains(className) && security1.Write == lowerSecurity);
     }
 
     private bool IsPluginOnlyClass(APITypes.Class rbxClass)
     {
-        if (PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name))
-            return true;
-            
+        if (PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name)) return true;
+
         var superClass = rbxClass.Superclass != ROOT_CLASS_NAME
             ? _classRefs[rbxClass.Superclass]
             : null;
-        
+
         return superClass != null && IsPluginOnlyClass(superClass);
     }
 
     private bool ShouldGenerateClass(APITypes.Class rbxClass)
     {
         var superClass = rbxClass.Superclass != ROOT_CLASS_NAME ? _classRefs[rbxClass.Superclass] : null;
-        if (superClass != null && !ShouldGenerateClass(superClass))
-            return false;
-            
-        if (CLASS_BLACKLIST.Contains(rbxClass.Name))
-            return false;
-            
+
+        if (superClass != null && !ShouldGenerateClass(superClass)) return false;
+
+        if (CLASS_BLACKLIST.Contains(rbxClass.Name)) return false;
+
         return security == "PluginSecurity" || !PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name);
     }
 
     private bool ShouldGenerateMember(APITypes.Class rbxClass, APITypes.MemberBase member)
     {
-        if (member.Name == null)
-            return false;
+        if (member.Name == null) return false;
 
         var isBlacklisted = MEMBER_BLACKLIST.TryGetValue(rbxClass.Name, out var value) && value.Contains(member.Name);
-        if (isBlacklisted)
-            return false;
 
-        if (!CanRead(rbxClass.Name, member))
-            return false;
+        if (isBlacklisted) return false;
+
+        if (!CanRead(rbxClass.Name, member)) return false;
 
         if (Utility.HasTag(member, "Deprecated"))
         {
@@ -99,16 +95,14 @@ internal sealed class ClassGenerator(
             {
                 var pascalCaseName = char.ToUpper(firstChar) + member.Name[1..];
                 var pascalCaseMember = rbxClass.Members.FirstOrDefault(v => v.Name == pascalCaseName);
-                if (pascalCaseMember != null)
-                    return false;
+
+                if (pascalCaseMember != null) return false;
             }
         }
 
-        if (Utility.HasTag(member, "Hidden"))
-            return false;
+        if (Utility.HasTag(member, "Hidden")) return false;
 
-        if (Utility.HasTag(member, "NotScriptable"))
-            return false;
+        if (Utility.HasTag(member, "NotScriptable")) return false;
 
         return !_definedMemberNames[rbxClass.Name].Contains(member.Name.Trim());
     }
@@ -123,9 +117,8 @@ internal sealed class ClassGenerator(
     // Throws if not
     private string AssertClassName(string className)
     {
-        if (_classRefs.ContainsKey(className))
-            return className;
-                
+        if (_classRefs.ContainsKey(className)) return className;
+
         throw new Exception($"Undefined class name: {className}");
     }
 
@@ -142,12 +135,11 @@ internal sealed class ClassGenerator(
             case true:
             {
                 var desc = rbxClass.Description;
-                if (desc != null)
-                    Write(Utility.FormatComment(desc));
+                if (desc != null) Write(Utility.FormatComment(desc));
 
                 break;
             }
-                
+
             case false when members.Count == 0:
                 return;
         }
@@ -157,20 +149,20 @@ internal sealed class ClassGenerator(
         var superclasses = new List<string>();
         if (Utility.IsCreatable(rbxClass))
         {
-            if (rbxClass.Superclass != "Instance")
-                superclasses.Add(rbxClass.Superclass);
+            if (rbxClass.Superclass != "Instance") superclasses.Add(rbxClass.Superclass);
 
             superclasses.Add("ICreatableInstance");
         }
         else if (Utility.HasTag(rbxClass, "Service"))
         {
-            if (rbxClass.Superclass != "Instance")
-                superclasses.Add(rbxClass.Superclass);
-                    
+            if (rbxClass.Superclass != "Instance") superclasses.Add(rbxClass.Superclass);
+
             superclasses.Add("IServiceInstance");
         }
         else
+        {
             superclasses.Add(rbxClass.Superclass);
+        }
 
         var isPartial = PARTIAL_INTERFACES.Contains(className);
         var membersToGenerate = members.Where(member => ShouldGenerateMember(rbxClass, member)).ToList();
@@ -192,15 +184,19 @@ internal sealed class ClassGenerator(
             {
                 case "Callback":
                     GenerateCallback((APITypes.Callback)member, rbxClass);
+
                     break;
                 case "Event":
                     GenerateEvent((APITypes.Event)member, rbxClass);
+
                     break;
                 case "Function":
                     GenerateFunction((APITypes.Function)member, rbxClass);
+
                     break;
                 case "Property":
                     GenerateProperty((APITypes.Property)member, rbxClass);
+
                     break;
                 default:
                     throw new NotSupportedException($"Received unsupported member type: {member.MemberType}");
@@ -218,7 +214,7 @@ internal sealed class ClassGenerator(
         for (var i = 0; i < paramNames.Count; i++)
         {
             if (paramNames.IndexOf(paramNames[i]) != i + 1) continue;
-                
+
             var n = 0;
             for (var j = i; j < parameters.Count; j++)
             {
@@ -226,10 +222,10 @@ internal sealed class ClassGenerator(
                 n++;
             }
         }
-            
+
         return paramNames;
     }
-    
+
     private string GenerateParams(List<APITypes.Parameter> parameters)
     {
         var args = new List<string>();
@@ -245,30 +241,44 @@ internal sealed class ClassGenerator(
             if (!string.IsNullOrEmpty(argName) && paramType == "Instance")
             {
                 var findings = _classRefs.Keys.Concat(["Character", "Input"])
-                    .Where(k => k != "Instance" && argName.Contains(k, StringComparison.CurrentCultureIgnoreCase)).ToList();
+                                         .Where(k => k != "Instance"
+                                                  && argName.Contains(k, StringComparison.CurrentCultureIgnoreCase))
+                                         .ToList();
 
                 if (findings.Count != 0)
                 {
                     var partPos = findings.IndexOf("Part");
-                    var doSplice = !findings.Contains("Part") && findings.Count != 0 && !argName.Contains("or", StringComparison.CurrentCultureIgnoreCase);
+                    var doSplice = !findings.Contains("Part")
+                                && findings.Count != 0
+                                && !argName.Contains("or", StringComparison.CurrentCultureIgnoreCase);
+
                     if (doSplice && partPos != -1)
                     {
                         findings.RemoveAt(partPos);
                     }
-                    paramType = Utility.SafeRenamedInstance(findings.FirstOrDefault(found => string.Equals(found, argName, StringComparison.CurrentCultureIgnoreCase))) ?? "Instance";
+
+                    paramType = Utility.SafeRenamedInstance(findings.FirstOrDefault(found => string.Equals(found,
+                                                                                                           argName,
+                                                                                                           StringComparison
+                                                                                                               .CurrentCultureIgnoreCase)))
+                             ?? "Instance";
                 }
             }
 
             var isOptional = optional || paramType.EndsWith('?');
             args.Add($"{(!string.IsNullOrEmpty(paramType) ? $"{paramType}{(optional && !paramType.EndsWith('?') ? "?" : "")}" : "object")} {argName ?? $"arg{parameters.IndexOf(param)}"}{(isOptional ? " = null" : "")}");
         }
+
         return string.Join(", ", args);
     }
 
     private void GenerateCallback(APITypes.Callback callback, APITypes.Class rbxClass)
     {
         var paramTypeList = callback.Parameters.Count > 0
-            ? string.Join(", ", callback.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null") + " " + Utility.SafeParamName(param.Name)))
+            ? string.Join(", ",
+                          callback.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null")
+                                                                + " "
+                                                                + Utility.SafeParamName(param.Name)))
             : "";
 
         var delegateName = $"{callback.Name}Delegate";
@@ -283,7 +293,10 @@ internal sealed class ClassGenerator(
     private void GenerateEvent(APITypes.Event @event, APITypes.Class rbxClass)
     {
         var paramTypeList = @event.Parameters.Count > 0
-            ? string.Join(", ", @event.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null") + " " + Utility.SafeParamName(param.Name)))
+            ? string.Join(", ",
+                          @event.Parameters.ConvertAll(param => (Utility.SafeValueType(param.Type) ?? "null")
+                                                              + " "
+                                                              + Utility.SafeParamName(param.Name)))
             : "";
 
         var delegateName = $"{@event.Name}Delegate";
@@ -303,8 +316,10 @@ internal sealed class ClassGenerator(
             returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
         else
         {
-            var typesList = enumerable.Select(t =>
-                string.Join(", ", Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType))));
+            var typesList = enumerable.Select(t => string.Join(", ",
+                                                               Utility
+                                                                   .SafeReturnType(Utility.SafeValueType(function.ReturnType))));
+
             // returnType = $"LuaTuple<{typesList}>";
             returnType = "object"; // temporary
         }
@@ -333,17 +348,18 @@ internal sealed class ClassGenerator(
         var services = rbxClasses.Where(rbxClass =>
         {
             var isPluginOnly = PLUGIN_ONLY_CLASSES.Contains(rbxClass.Name);
+
             return Utility.HasTag(rbxClass, "Service")
-                   && !Utility.HasTag(rbxClass, "Hidden")
-                   && !CLASS_BLACKLIST.Contains(rbxClass.Name)
-                   && (isPluginOnly ? security == "PluginSecurity" : security == "None");
+                && !Utility.HasTag(rbxClass, "Hidden")
+                && !CLASS_BLACKLIST.Contains(rbxClass.Name)
+                && (isPluginOnly ? security == "PluginSecurity" : security == "None");
         });
+
         Write("public static class Services");
         Write("{");
         PushIndent();
 
-        foreach (var service in services)
-            Write($"public static extern {service.Name} {service.Name} {{ get; }}");
+        foreach (var service in services) Write($"public static extern {service.Name} {service.Name} {{ get; }}");
 
         PopIndent();
         Write("}");

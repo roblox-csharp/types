@@ -4,6 +4,7 @@ public static class math
 {
     /// <summary>The value of pi.</summary>
     public static extern float pi { get; }
+
     /// <summary>Returns a value larger than or equal to any other numerical value (about 2¹⁰²⁴).</summary>
     public static extern int huge { get; }
 

@@ -16,15 +16,16 @@ internal static class Utility
 
     public static string SafeValueType(APITypes.ValueType valueType)
     {
-        if (valueType.Category == "Enum")
-            return $"Enum.{valueType.Name}";
+        if (valueType.Category == "Enum") return $"Enum.{valueType.Name}";
 
         var valueTypeName = SafeName(valueType.Name)!;
+
         if (string.IsNullOrEmpty(valueTypeName) || !valueTypeName.EndsWith('?'))
             return Constants.VALUE_TYPE_MAP.GetValueOrDefault(valueType.Name, valueTypeName);
-            
+
         var nonOptionalType = valueTypeName[..^1];
         var mappedType = Constants.VALUE_TYPE_MAP.GetValueOrDefault(nonOptionalType, nonOptionalType);
+
         return $"{mappedType}?";
     }
 
@@ -43,45 +44,20 @@ internal static class Utility
         if (!Constants.SECURITY_OVERRIDES.TryGetValue(className, out var classSecurity))
             return member.MemberType switch
             {
-                "Callback" => new APITypes.Security
-                {
-                    Read = "NotAccessibleSecurity",
-                    Write = member.Security?.ToString()!
-                },
-                "Function" => new APITypes.Security
-                {
-                    Read = member.Security?.ToString()!,
-                    Write = "NotAccessibleSecurity"
-                },
-                "Event" => new APITypes.Security
-                {
-                    Read = member.Security?.ToString()!,
-                    Write = "NotAccessibleSecurity"
-                },
+                "Callback" => new APITypes.Security { Read = "NotAccessibleSecurity", Write = member.Security?.ToString()! },
+                "Function" => new APITypes.Security { Read = member.Security?.ToString()!, Write = "NotAccessibleSecurity" },
+                "Event" => new APITypes.Security { Read = member.Security?.ToString()!, Write = "NotAccessibleSecurity" },
                 "Property" => JsonSerializer.Deserialize<APITypes.Security>(member.Security?.ToString()!)!,
                 _ => throw new NotSupportedException($"Member type not supported: {member.MemberType}")
             };
-            
-        if (member.Name != null && classSecurity!.TryGetValue(member.Name, out var securityOverride))
-            return securityOverride;
+
+        if (member.Name != null && classSecurity!.TryGetValue(member.Name, out var securityOverride)) return securityOverride;
 
         return member.MemberType switch
         {
-            "Callback" => new APITypes.Security
-            {
-                Read = "NotAccessibleSecurity",
-                Write = member.Security?.ToString()!
-            },
-            "Function" => new APITypes.Security
-            {
-                Read = member.Security?.ToString()!,
-                Write = "NotAccessibleSecurity"
-            },
-            "Event" => new APITypes.Security
-            {
-                Read = member.Security?.ToString()!,
-                Write = "NotAccessibleSecurity"
-            },
+            "Callback" => new APITypes.Security { Read = "NotAccessibleSecurity", Write = member.Security?.ToString()! },
+            "Function" => new APITypes.Security { Read = member.Security?.ToString()!, Write = "NotAccessibleSecurity" },
+            "Event" => new APITypes.Security { Read = member.Security?.ToString()!, Write = "NotAccessibleSecurity" },
             "Property" => JsonSerializer.Deserialize<APITypes.Security>(member.Security?.ToString()!)!,
             _ => throw new NotSupportedException($"Member type not supported: {member.MemberType}")
         };
@@ -95,12 +71,11 @@ internal static class Utility
 
     public static bool IsCreatable(APITypes.Class rbxClass) =>
         !Constants.CREATABLE_BLACKLIST.Contains(rbxClass.Name)
-        && !HasTag(rbxClass, "NotCreatable")
-        && !HasTag(rbxClass, "Service");
+     && !HasTag(rbxClass, "NotCreatable")
+     && !HasTag(rbxClass, "Service");
 
-    public static string FormatComment(string s) =>
-        string.Join('\n', s.Trim().Split('\n').Select(d => $"# {d}"));
-    
+    public static string FormatComment(string s) => string.Join('\n', s.Trim().Split('\n').Select(d => $"# {d}"));
+
     private static bool ContainsBadChar(string name) => Constants.BAD_NAME_CHARS.Any(name.Contains);
 
     private static string? SafeName(string? name) =>
@@ -109,7 +84,7 @@ internal static class Utility
             : ContainsBadChar(name)
                 ? $"[\"{name.Replace("\"", "\\\"")}\"]"
                 : name;
-        
+
     // public static List<List<T>> Multifilter<T>(List<T> list, int resultArrAmount, Func<T, int> condition)
     // {
     //     var results = new List<List<T>>();

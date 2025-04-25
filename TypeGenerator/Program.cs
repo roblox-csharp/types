@@ -16,12 +16,14 @@ public static class Program
     public static async Task Main(string[] args)
     {
         var result = Parser.Default.ParseArguments<Options>(args);
+
         if (result.Errors.Any()) return;
 
         var options = result.Value;
         if (options.OutputDirectory == null)
         {
             Console.WriteLine("Required option 'o, output' is missing.");
+
             return;
         }
 
@@ -41,7 +43,12 @@ public static class Program
         for (var i = 0; i < _securityLevels.Length; i++)
         {
             var classesFilePath = Path.Combine(outputDirectory, "Generated", $"{_securityLevels[i]}.cs");
-            var classGenerator = new ClassGenerator(classesFilePath, reflectionMetadata, definedClassNames, _securityLevels[i], _securityLevels.ElementAtOrDefault(i - 1));
+            var classGenerator = new ClassGenerator(classesFilePath,
+                                                    reflectionMetadata,
+                                                    definedClassNames,
+                                                    _securityLevels[i],
+                                                    _securityLevels.ElementAtOrDefault(i - 1));
+
             classGenerator.Generate(dump.Classes.ToList());
         }
     }

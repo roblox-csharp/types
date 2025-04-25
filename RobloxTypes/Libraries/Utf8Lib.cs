@@ -48,7 +48,6 @@ public static class utf8
     /// </code>
     /// <para>will iterate the grapheme clusters of the string.</para>
     /// </summary>
-
     public static extern IEnumerable<(string, string)> graphemes(string sr, int i, int j);
 
     /// <summary>Converts the input string to Normal Form C, which tries to convert decomposed characters into composed characters.</summary>

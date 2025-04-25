@@ -21,11 +21,11 @@ namespace TypeGenerator
         public string ReadMemberDesc(string className, string name, string[] specifier)
         {
             string specifierString = string.Join(" or ", specifier.Select(v => $"@class='{v}'"));
-            string query = $"{ClassPrefix(className)}Item[{specifierString}]/" +
-                           "Item[@class='ReflectionMetadataMember']/" +
-                           "Properties/" +
-                           $"string[@name='Name'][text()='{name}']" +
-                           "/../string[@name='summary']";
+            string query = $"{ClassPrefix(className)}Item[{specifierString}]/"
+                         + "Item[@class='ReflectionMetadataMember']/"
+                         + "Properties/"
+                         + $"string[@name='Name'][text()='{name}']"
+                         + "/../string[@name='summary']";
 
             return Get(query);
         }
@@ -58,6 +58,7 @@ namespace TypeGenerator
         private string Get(string query)
         {
             var result = _metadata.XPathSelectElement(query);
+
             return result != null ? Filter(result.ToString()) : null!;
         }
 

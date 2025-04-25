@@ -13,10 +13,9 @@ internal sealed class EnumGenerator(string filePath, ReflectionMetadataReader re
         Write();
         Write("namespace Roblox.Enum;");
         Write();
-        
-        for (var i = 0; i < rbxEnums.Length; i++)
-            GenerateEnum(rbxEnums[i], i == rbxEnums.Length - 1);
-            
+
+        for (var i = 0; i < rbxEnums.Length; i++) GenerateEnum(rbxEnums[i], i == rbxEnums.Length - 1);
+
         WriteFile();
     }
 
@@ -39,7 +38,7 @@ internal sealed class EnumGenerator(string filePath, ReflectionMetadataReader re
             if (blacklistedItems.Contains(item.Name)) continue;
             Write($"public static extern {enumTypeName} {item.Name} {{ get; }}");
         }
-                
+
         Write();
         Write("/// <summary>Returns an array of all <see cref=\"EnumItem\"/> options available for this enum.</summary>");
         Write("public static extern EnumItem[] GetEnumItems();");

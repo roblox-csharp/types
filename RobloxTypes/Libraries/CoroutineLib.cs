@@ -1,6 +1,7 @@
 ﻿namespace Roblox;
 
 public interface thread;
+
 public static class coroutine
 {
     /// <summary>Closes and puts the provided coroutine in a dead state.</summary>
@@ -22,7 +23,8 @@ public static class coroutine
     public static extern string status(thread co);
 
     /// <summary>Creates a new coroutine and returns a function that, when called, resumes the coroutine.</summary>
-    public static extern TFunc wrap<TFunc>(TFunc f) where TFunc : Delegate;
+    public static extern TFunc wrap<TFunc>(TFunc f)
+        where TFunc : Delegate;
 
     /// <summary>Suspends execution of the coroutine.</summary>
     public static extern object[] yield(params object[] args);

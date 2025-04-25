@@ -15,9 +15,8 @@ internal abstract class Generator(string filePath, ReflectionMetadataReader? met
         File.WriteAllText(filePath, GetStringFromMemoryStream());
     }
 
-    protected void Write(string line = "") =>
-        _stream.Write(Encoding.UTF8.GetBytes($"{_indent}{line}\n"));
-        
+    protected void Write(string line = "") => _stream.Write(Encoding.UTF8.GetBytes($"{_indent}{line}\n"));
+
     protected void PushIndent() => _indent += "\t";
     protected void PopIndent() => _indent = _indent[1..];
     private string GetStringFromMemoryStream() => Encoding.UTF8.GetString(_stream.ToArray());

@@ -7,23 +7,18 @@ internal static class Constants
     public const string ROOT_CLASS_NAME = "<<<ROOT>>>";
     public static readonly List<string> BAD_NAME_CHARS = [" ", "/", "\""];
 
-    public static readonly HashSet<string> PER_INSTANCE_MEMBERS = [
-        "public new <INSTANCE_TYPE> Clone();"
-    ];
+    public static readonly HashSet<string> PER_INSTANCE_MEMBERS = ["public new <INSTANCE_TYPE> Clone();"];
 
     public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new()
     {
         ["StarterGui"] = new Dictionary<string, Security>
         {
-            ["ShowDevelopmentGui"] = new()
-            {
-                Read = "PluginSecurity",
-                Write = "PluginSecurity"
-            }
+            ["ShowDevelopmentGui"] = new() { Read = "PluginSecurity", Write = "PluginSecurity" }
         }
     };
 
-    public static readonly HashSet<string> PARTIAL_INTERFACES = [
+    public static readonly HashSet<string> PARTIAL_INTERFACES =
+    [
         "AnimationClipProvider",
         "Animator",
         "AssetService",
@@ -64,7 +59,8 @@ internal static class Constants
         "OrderedDataStore"
     ];
 
-    public static readonly HashSet<string> CREATABLE_BLACKLIST = [
+    public static readonly HashSet<string> CREATABLE_BLACKLIST =
+    [
         "UserSettings",
         "DebugSettings",
         "Studio",
@@ -78,7 +74,8 @@ internal static class Constants
         "UserGameSettings"
     ];
 
-    public static readonly HashSet<string> PLUGIN_ONLY_CLASSES = [
+    public static readonly HashSet<string> PLUGIN_ONLY_CLASSES =
+    [
         "ABTestService",
         "ChangeHistoryService",
         "CoreGui",
@@ -123,7 +120,8 @@ internal static class Constants
         "VersionControlService"
     ];
 
-    public static readonly HashSet<string> CLASS_BLACKLIST = [
+    public static readonly HashSet<string> CLASS_BLACKLIST =
+    [
         // Classes which Roblox leverages internally/in the CoreScripts but serve no purpose to developers
         "AnalyticsSettings",
         "BinaryStringValue",
@@ -180,28 +178,34 @@ internal static class Constants
         //"BevelMesh",
         "CustomEvent",
         "CustomEventReceiver",
+
         //"CylinderMesh",
         //"DoubleConstrainedValue",
         "Flag",
         "FlagStand",
+
         //"FloorWire",
         //"Glue",
         "GuiMain",
+
         //"Hat",
         "Hint",
+
         //"Hole",
         "Hopper",
         "HopperBin",
+
         //"IntConstrainedValue",
         //"JointsService",
         "Message",
+
         //"MotorFeature",
         "PointsService",
+
         //"SelectionPartLasso",
         //"SelectionPointLasso",
         //"SkateboardPlatform",
         "Skin",
-
         "ReflectionMetadata",
         "ReflectionMetadataCallbacks",
         "ReflectionMetadataClasses",
@@ -210,7 +214,6 @@ internal static class Constants
         "ReflectionMetadataFunctions",
         "ReflectionMetadataProperties",
         "ReflectionMetadataYieldFunctions",
-
         "Studio",
 
         // unused
@@ -222,19 +225,47 @@ internal static class Constants
         "UnreliableRemoteEvent",
         "RemoteFunction"
     ];
-        
-    public static readonly Dictionary<string, HashSet<string>> ENUM_BLACKLIST = new()
-    {
-        { "Quality", ["Quality"] }
-    };
 
+    public static readonly Dictionary<string, HashSet<string>> ENUM_BLACKLIST = new() { { "Quality", ["Quality"] } };
 
     public static readonly Dictionary<string, HashSet<string>> MEMBER_BLACKLIST = new()
     {
         { "Workspace", ["FilteringEnabled"] },
         { "Players", ["FilteringEnabled", "LocalPlayer"] }, // defined in Roblox.cs
         { "CollectionService", ["GetCollection"] },
-        { "Instance", ["children", "Remove", "IsA", "FindFirstChild", "FindFirstAncestor", "FindFirstDescendant", "FindFirstChildOfClass", "FindFirstChildWhichIsA", "FindFirstAncestorOfClass", "FindFirstAncestorWhichIsA", "Clone", "IsAncestorOf", "IsDescendantOf", "GetAttribute", "GetAttributes", "GetDescendants", "GetTags", "WaitForChild", "clone", "isDescendantOf", "AncestryChanged", "AttributeChanged", "Changed", "ChildAdded", "ChildRemoved", "DescendantAdded", "DescendantRemoving", "Destroying", "childAdded"] }, // defined in Roblox.cs
+        {
+            "Instance", [
+                "children",
+                "Remove",
+                "IsA",
+                "FindFirstChild",
+                "FindFirstAncestor",
+                "FindFirstDescendant",
+                "FindFirstChildOfClass",
+                "FindFirstChildWhichIsA",
+                "FindFirstAncestorOfClass",
+                "FindFirstAncestorWhichIsA",
+                "Clone",
+                "IsAncestorOf",
+                "IsDescendantOf",
+                "GetAttribute",
+                "GetAttributes",
+                "GetDescendants",
+                "GetTags",
+                "WaitForChild",
+                "clone",
+                "isDescendantOf",
+                "AncestryChanged",
+                "AttributeChanged",
+                "Changed",
+                "ChildAdded",
+                "ChildRemoved",
+                "DescendantAdded",
+                "DescendantRemoving",
+                "Destroying",
+                "childAdded"
+            ]
+        }, // defined in Roblox.cs
         { "BodyGyro", ["cframe"] },
         { "BodyAngularVelocity", ["FilteringEnabled"] },
         { "BodyPosition", ["FilteringEnabled"] },
@@ -243,10 +274,12 @@ internal static class Constants
         { "LayerCollector", ["FilteringEnabled"] },
         { "GuiBase3d", ["FilteringEnabled"] },
         { "Model", ["FilteringEnabled"] },
-        { "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"] }, // defined in Roblox.cs
+        {
+            "ServiceProvider", ["FilteringEnabled", "GetService", "FindService", "service", "ServiceAdded", "ServiceRemoving"]
+        }, // defined in Roblox.cs
         { "DataModel", ["FilteringEnabled", "Workspace", "lighting"] },
-        { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] }, // defined in Roblox.cs
-        { "OrderedDataStore", ["GetSortedAsync"] }, // defined in Roblox.cs
+        { "WorldRoot", ["ArePartsTouchingOthers", "BulkMoveTo"] },                                      // defined in Roblox.cs
+        { "OrderedDataStore", ["GetSortedAsync"] },                                                     // defined in Roblox.cs
         { "GlobalDataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] } // defined in Roblox.cs
     };
 
@@ -257,8 +290,9 @@ internal static class Constants
         { "DataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] },
         { "OrderedDataStore", ["GetAsync", "IncrementAsync", "SetAsync", "UpdateAsync", "RemoveAsync"] }
     };
-        
-    public static readonly HashSet<string> ABSTRACT_CLASSES = [
+
+    public static readonly HashSet<string> ABSTRACT_CLASSES =
+    [
         "BackpackItem",
         "BasePart",
         "BasePlayerGui",
@@ -315,13 +349,11 @@ internal static class Constants
 
     public static readonly Dictionary<string, string> RENAMABLE_AUTO_TYPES = new()
     {
-        { "Part", "BasePart" },
-        { "Script", "LuaSourceContainer" },
-        { "Character", "Model" },
-        { "Input", "InputObject" }
+        { "Part", "BasePart" }, { "Script", "LuaSourceContainer" }, { "Character", "Model" }, { "Input", "InputObject" }
     };
 
     public static readonly Dictionary<string, string> PROP_TYPE_MAP = new();
+
     public static readonly Dictionary<string, string> VALUE_TYPE_MAP = new()
     {
         { "Array", "object[]" },
@@ -354,10 +386,7 @@ internal static class Constants
         { "buffer", "Buffer" },
     };
 
-    public static readonly Dictionary<string, string> RETURN_TYPE_MAP = new()
-    {
-        { "null", "void" }
-    };
+    public static readonly Dictionary<string, string> RETURN_TYPE_MAP = new() { { "null", "void" } };
 
     public static readonly Dictionary<string, string> PARAM_NAME_MAP = new()
     {

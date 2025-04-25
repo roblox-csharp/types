@@ -9,12 +9,14 @@ namespace TypeGenerator
         public static async Task<APITypes.Dump> GetDump()
         {
             var body = await Request("Mini-API-Dump.json");
+
             return JsonSerializer.Deserialize<APITypes.Dump>(body)!;
         }
 
         public static async Task<ReflectionMetadataReader> GetReflectionMetadata()
         {
             var body = await Request("ReflectionMetadata.xml");
+
             return new ReflectionMetadataReader(body);
         }
 
@@ -40,6 +42,7 @@ namespace TypeGenerator
                     Environment.Exit(1);
                 }
             }
+
             return null!;
         }
     }
