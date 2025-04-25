@@ -15,31 +15,42 @@
         public static extern _G _G { get; }
         public static extern string _VERSION { get; }
 
-        public static extern (K, V)[] pairs<K, V>(IDictionary<K, V> obj);
+        // unfortunately this has to return some form of enumerator to work with foreach :(
+        public static extern IEnumerator<(K, V)> pairs<K, V>(IDictionary<K, V> obj);
+        public static extern IEnumerator<(int, T)> pairs<T>(IEnumerable<T> obj);
         public static extern void print(params object[] values);
         public static extern void warn(params string[] messages);
         public static extern void error(string message, int? level = null);
+        public static extern (bool, object) pcall(Delegate callback, params object[] args);
+        public static extern (bool, object) pcall(Action callback);
         public static extern object require(ModuleScript module);
+        public static extern T require<T>(ModuleScript module);
         public static extern float tick();
         public static extern string TypeOf(object obj);
-        public static extern IEnumerable<(TKey, TValue)> pairs<TKey, TValue>(Dictionary<TKey, TValue> table)
-            where TKey : notnull;
-        public static extern object getmetatable(object obj);
-        public static extern void setmetatable(object obj, object meta);
-        public static extern object rawget(object obj, object index);
-        public static extern object rawset(object obj, object index, object value);
-        public static extern uint rawlen(object obj);
-        public static extern bool raweq(object a, object b);
+        // very poor metatable typings
+        public static extern object getmetatable(object t);
+        public static extern object setmetatable(object t, object newMeta);
+        public static extern object rawget(object t, object index);
+        public static extern V rawget<K, V>(IDictionary<K, V> t, K index);
+        public static extern object rawset(object t, object index, object value);
+        public static extern object rawset<K, V>(IDictionary<K, V> obj, K index, V value);
+        public static extern uint rawlen(string t);
+        public static extern uint rawlen<K, V>(IDictionary<K, V> t);
+        public static extern uint rawlen<T>(IEnumerable<T> t);
+        /// <summary>
+        /// Checks whether <see cref="v1"/> is equal to <see cref="v2"/>, without invoking any metamethods.
+        /// </summary>
+        public static extern bool rawequal(object v1, object v2);
         /// <summary>Returns all arguments after argument number index.</summary>
-        public static extern object select(char cmd, params object[] args); // TODO: return LuaTuple<object[]>;=
+        public static extern object select(char cmd, params object[] args); // TODO: return LuaTuple<object[]>
         /// <summary>Returns the total number of arguments that were passed after the cmd argument.</summary>
         public static extern uint select(uint index, params object[] args);
         public static extern void assert(object obj, string? errorMessage = null);
-        public static extern object newproxy(bool addMetatable);
+        public static extern object newproxy(bool addMetatable = false);
         public static extern object loadstring(string str, string? chunkName = null);
         public static extern string version();
         public static extern UserSettings UserSettings();
-        public static extern PluginClasses.GlobalSettings settings();
+        public static extern PluginClasses.GlobalSettings settings(); // goofy
         public static extern uint gcinfo();
         public static extern float collectgarbage(string option);
     }
@@ -66,8 +77,6 @@
     
     public abstract class VoiceChatDistanceAttenuationType : EnumItem
     {
-        
-	
         public static extern VoiceChatDistanceAttenuationType Inverse { get; }
         public static extern VoiceChatDistanceAttenuationType Legacy { get; }
 	

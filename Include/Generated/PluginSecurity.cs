@@ -24,7 +24,6 @@ public static class Services
 
 public interface Object
 {
-	public new Object Clone();
 }
 
 public interface ConfigSnapshot : Object
