@@ -57,6 +57,10 @@ jobs:
           cd ..
 
           git clone --depth=50 --branch=deploy https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git deploy
+          # Extract current version from .csproj
+          CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./Include/RobloxTypes.csproj)
+          echo "Current version: $CURRENT_VERSION"
+          
           mkdir -p deploy/Include
           rm -rf deploy/Include/*
           cp -r types/RobloxTypes/* deploy/Include
@@ -76,10 +80,6 @@ jobs:
 
             # set -x # Debug mode
 
-            # Extract current version from .csproj
-            CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./Include/RobloxTypes.csproj)
-            echo "Current version: $CURRENT_VERSION"
-
             # Increment patch version
             IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
             PATCH_VERSION=$((version_parts[2] + 1))
@@ -88,7 +88,10 @@ jobs:
             echo "New version: $NEW_VERSION"
 
             # Update version in .csproj
-            xmlstarlet ed -L -u "//Project/PropertyGroup/Version" -v "$NEW_VERSION" ./Include/RobloxTypes.csproj
+            xmlstarlet ed -L \
+              -u "//Project/PropertyGroup/Version" \
+              -v "$NEW_VERSION" \
+              ./Include/RobloxTypes.csproj
 
             # Commit version change
             git add ./Include/RobloxTypes.csproj
