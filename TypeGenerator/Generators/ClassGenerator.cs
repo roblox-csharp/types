@@ -105,9 +105,9 @@ namespace TypeGenerator.Generators
 
         public static bool IsCreatable(APITypes.Class rbxClass)
         {
-            return !Constants.CREATABLE_BLACKLIST.Contains(rbxClass.Name) &&
-                !HasTag(rbxClass, "NotCreatable") &&
-                !HasTag(rbxClass, "Service");
+            return !Constants.CREATABLE_BLACKLIST.Contains(rbxClass.Name)
+                && !HasTag(rbxClass, "NotCreatable")
+                && !HasTag(rbxClass, "Service");
         }
 
         public static string FormatComment(string s)
@@ -155,16 +155,9 @@ namespace TypeGenerator.Generators
 
             var classesToGenerate = rbxClasses.Where(ShouldGenerateClass).ToList();
             GenerateHeader();
-            Write($"namespace Roblox{(security == "PluginSecurity" ? ".PluginClasses" : "")}");
-            Write("{");
-            PushIndent();
-
+            Write($"namespace Roblox{(security == "PluginSecurity" ? ".PluginClasses" : "")};");;
             GenerateServices(rbxClasses.Where(rbxClass => !definedClassNames.Contains(rbxClass.Name)).ToList());
             GenerateClasses(classesToGenerate);
-
-            PopIndent();
-            Write("}");
-
             WriteFile();
         }
 

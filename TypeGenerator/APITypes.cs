@@ -77,20 +77,20 @@ namespace TypeGenerator.APITypes
 
     internal sealed class Serialization
     {
-        public bool CanLoad { get; set; }
-        public bool CanSave { get; set; }
+        public bool CanLoad { get; init; }
+        public bool CanSave { get; init; }
     }
 
     internal sealed class ValueType
     {
-        public string Category { get; set; }
-        public string Name { get; set; }
+        public string Category { get; init; }
+        public string Name { get; init; }
     }
 
     internal sealed class Security
     {
-        public string Read { get; set; }
-        public string Write { get; set; }
+        public string Read { get; init; }
+        public string Write { get; init; }
     }
 
     internal sealed class Parameter

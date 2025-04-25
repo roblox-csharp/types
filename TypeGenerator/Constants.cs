@@ -13,9 +13,9 @@ namespace TypeGenerator
 
         public static readonly Dictionary<string, Dictionary<string, Security>?> SECURITY_OVERRIDES = new()
         {
-            ["StarterGui"] = new Dictionary<string, APITypes.Security>
+            ["StarterGui"] = new Dictionary<string, Security>
             {
-                ["ShowDevelopmentGui"] = new APITypes.Security
+                ["ShowDevelopmentGui"] = new()
                 {
                     Read = "PluginSecurity",
                     Write = "PluginSecurity"
@@ -27,6 +27,7 @@ namespace TypeGenerator
             "AnimationClipProvider",
             "Animator",
             "AssetService",
+            "BaseRemoteEvent",
             "KeyframeSequenceProvider",
             "KeyframeSequence",
             "Instance",
@@ -363,6 +364,7 @@ namespace TypeGenerator
             { "debugger", "debug" },
             { "old", "oldValue" },
             { "new", "newValue" },
+            { "virtual", "_virtual" },
             { "params", "parameters" },
             { "override", "_override" },
             { "string", "str" },

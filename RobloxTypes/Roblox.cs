@@ -83,7 +83,7 @@
     public interface IScriptSignal<in TAction> where TAction : Delegate
     {
         public ScriptConnection Connect(TAction func);
-        public ScriptConnection ConnectParellel(TAction func);
+        public ScriptConnection ConnectParallel(TAction func);
         public ScriptConnection Once(TAction func);
         public void Wait();
     }
