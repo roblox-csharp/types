@@ -89,11 +89,11 @@ public interface UserStorageService : Instance
 public interface RemoteFunction : ICreatableInstance
 {
     public object InvokeClient(Player player, params object[] arguments); // TODO: tuple
-    public object InvokeServer(params object[] arguments); // TODO: tuple
-        
+    public object InvokeServer(params object[] arguments);                // TODO: tuple
+
     public delegate void ClientInvoke(params object[] arguments);
     public ClientInvoke OnClientInvoke { get; set; }
-        
+
     public delegate void ServerInvoke(params object[] arguments);
     public ServerInvoke OnServerInvoke { get; set; }
 }
@@ -106,7 +106,7 @@ public interface RemoteEvent : BaseRemoteEvent, ICreatableInstance
 
     public delegate void ClientEvent(params object[] arguments);
     public event ClientEvent OnClientEvent;
-        
+
     public delegate void ServerEvent(Player player, params object[] arguments);
     public event ServerEvent OnServerEvent;
 }
@@ -116,10 +116,10 @@ public interface UnreliableRemoteEvent : BaseRemoteEvent, ICreatableInstance
     public void FireAllClients(params object[] arguments);
     public void FireClient(Player player, params object[] arguments);
     public void FireServer(params object[] arguments);
-        
+
     public delegate void ClientEvent(params object[] arguments);
     public event ClientEvent OnClientEvent;
-        
+
     public delegate void ServerEvent(Player player, params object[] arguments);
     public event ServerEvent OnServerEvent;
 }
@@ -141,8 +141,13 @@ public partial interface GlobalDataStore
 {
     public T GetAsync<T>(string key, DataStoreGetOptions? options = null);
     public string SetAsync(string key, object value, uint[]? userIds = null, DataStoreSetOptions? options = null);
-    public float IncrementAsync(string key, float? delta = null, uint[]? userIds = null, DataStoreSetOptions? options = null); // TODO: LuaTuple<float, DataStoreKeyInfo>
-    public object RemoveAsync(string key); // TODO: LuaTuple<object, DataStoreKeyInfo>
+
+    public float IncrementAsync(string key,
+                                float? delta = null,
+                                uint[]? userIds = null,
+                                DataStoreSetOptions? options = null); // TODO: LuaTuple<float, DataStoreKeyInfo>
+
+    public object RemoveAsync(string key);                           // TODO: LuaTuple<object, DataStoreKeyInfo>
     public object UpdateAsync(string key, Action transformFunction); // TODO: LuaTuple<object, DataStoreKeyInfo>
 }
 
@@ -177,14 +182,16 @@ public partial interface DataModel : ServiceProvider
 {
     public Workspace Workspace { get; }
     public Lighting Lighting { get; }
-    public T GetService<T>() where T : IServiceInstance;
+
+    public T GetService<T>()
+        where T : IServiceInstance;
 }
 
 public partial interface ServiceProvider
 {
     public delegate void ServiceAddedDelegate(IServiceInstance service);
     public event ServiceAddedDelegate ServiceAdded;
-        
+
     public delegate void ServiceRemovingDelegate(IServiceInstance service);
     public event ServiceRemovingDelegate ServiceRemoving;
 }
@@ -194,52 +201,76 @@ public interface ICreatableInstance : Instance;
 
 public partial interface Instance
 {
-    public static sealed extern T Create<T>(Instance? parent = null) where T : ICreatableInstance;
+    public static sealed extern T Create<T>(Instance? parent = null)
+        where T : ICreatableInstance;
 
     public Instance? FindFirstAncestor(string name);
     public Instance? FindFirstChild(string name, bool? recursive = null);
     public Instance? FindFirstDescendant(string name);
-    public T? FindFirstAncestor<T>(string name) where T : Instance;
-    public T? FindFirstChild<T>(string name, bool? recursive = null) where T : Instance;
-    public T? FindFirstDescendant<T>(string name) where T : Instance;
-    public bool IsA<T>() where T : Instance;
+
+    public T? FindFirstAncestor<T>(string name)
+        where T : Instance;
+
+    public T? FindFirstChild<T>(string name, bool? recursive = null)
+        where T : Instance;
+
+    public T? FindFirstDescendant<T>(string name)
+        where T : Instance;
+
+    public bool IsA<T>()
+        where T : Instance;
+
     public bool IsAncestorOf(Instance descendant);
     public bool IsDescendantOf(Instance ancestor);
     public object? GetAttribute(string attribute);
     public Dictionary<string, object> GetAttributes();
     public Instance[] GetDescendants();
-    public T? FindFirstAncestorOfClass<T>() where T : Instance;
-    public T? FindFirstAncestorWhichIsA<T>() where T : Instance;
-    public T? FindFirstChildOfClass<T>() where T : Instance;
-    public T? FindFirstChildWhichIsA<T>(bool? recursive) where T : Instance;
+
+    public T? FindFirstAncestorOfClass<T>()
+        where T : Instance;
+
+    public T? FindFirstAncestorWhichIsA<T>()
+        where T : Instance;
+
+    public T? FindFirstChildOfClass<T>()
+        where T : Instance;
+
+    public T? FindFirstChildWhichIsA<T>(bool? recursive)
+        where T : Instance;
+
     public string[] GetTags();
     public Instance WaitForChild(string name);
     public Instance? WaitForChild(string name, float timeout);
-    public T WaitForChild<T>(string name) where T : Instance;
-    public T? WaitForChild<T>(string name, float timeout) where T : Instance;
+
+    public T WaitForChild<T>(string name)
+        where T : Instance;
+
+    public T? WaitForChild<T>(string name, float timeout)
+        where T : Instance;
+
     public bool isDescendantOf(Instance ancestor);
 
     public delegate void AncestryChangedDelegate(Instance child, Instance parent);
     public event AncestryChangedDelegate AncestryChanged;
-        
+
     public delegate void AttributeChangedDelegate(string name);
     public event AttributeChangedDelegate AttributeChanged;
-        
+
     public new delegate void ChangedDelegate(string name);
     public new event ChangedDelegate Changed;
-        
+
     public delegate void ChildAddedDelegate(Instance child);
     public event ChildAddedDelegate ChildAdded;
-        
+
     public delegate void ChildRemovedDelegate(Instance child);
     public event ChildRemovedDelegate ChildRemoved;
-        
+
     public delegate void DescendantAddedDelegate(Instance descendant);
     public event DescendantAddedDelegate DescendantAdded;
-        
+
     public delegate void DescendantRemovingDelegate(Instance descendant);
     public event DescendantRemovingDelegate DescendantRemoving;
-        
+
     public delegate void DestroyingDelegate();
     public event DestroyingDelegate Destroying;
 }
