@@ -57,11 +57,12 @@ jobs:
           cd ..
 
           git clone --depth=50 --branch=deploy https://R-unic:${{ secrets.github_token }}@github.com/roblox-csharp/types.git deploy
-          # Extract current version from .csproj
-          CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./Include/RobloxTypes.csproj)
-          echo "Current version: $CURRENT_VERSION"
+          mkdir -p deploy/Include # just in case
           
-          mkdir -p deploy/Include
+          # Extract current version from .csproj
+          echo "Current version: $CURRENT_VERSION"
+          CURRENT_VERSION=$(xmlstarlet sel -t -v "//Project/PropertyGroup/Version" ./deploy/Include/RobloxTypes.csproj)
+          
           rm -rf deploy/Include/*
           cp -r types/RobloxTypes/* deploy/Include
           cp types/RobloxTypes/Generated/PluginSecurity.cs deploy/PluginSecurity.cs
