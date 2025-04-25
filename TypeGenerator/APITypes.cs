@@ -45,13 +45,12 @@ internal class Callback : MemberBase
     public List<Parameter> Parameters { get; set; }
 }
 
-internal sealed class Event : Callback
-{
-}
+internal sealed class Event : Callback;
 
 internal sealed class Function : Callback
 {
-    public ValueType ReturnType { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<ValueType>))]
+    public List<ValueType> ReturnType { get; set; }
 }
 
 internal sealed class Property : MemberBase
@@ -101,6 +100,39 @@ internal sealed class Parameter
 }
 #pragma warning restore CS8618
 
+internal sealed class SingleOrArrayConverter<T> : JsonConverter<List<T>>
+{
+    public override List<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        List<T> result = [];
+        switch (reader.TokenType)
+        {
+            case JsonTokenType.StartObject:
+            {
+                var item = JsonSerializer.Deserialize<T>(ref reader, options);
+                if (item != null)
+                    result.Add(item);
+
+                break;
+            }
+            case JsonTokenType.StartArray:
+                result = JsonSerializer.Deserialize<List<T>>(ref reader, options)!;
+                break;
+        }
+
+        return result;
+    }
+
+    public override void Write(Utf8JsonWriter writer, List<T> value, JsonSerializerOptions options)
+    {
+        // fuck C# inference
+        if (value.Count == 1)
+            JsonSerializer.Serialize(writer, value[0], options);
+        else
+            JsonSerializer.Serialize(writer, value, options);
+    }
+}
+
 internal sealed class MemberConverter : JsonConverter<MemberBase>
 {
     public override MemberBase Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -147,8 +179,8 @@ internal sealed class MemberConverter : JsonConverter<MemberBase>
                     {
                         var rawJson = property.Value.GetRawText();
                         var type = rawJson.StartsWith('[')
-                            ? JsonSerializer.Deserialize<List<ValueType>>(rawJson, options)?.First()
-                            : JsonSerializer.Deserialize<ValueType>(rawJson, options);
+                            ? JsonSerializer.Deserialize<List<ValueType>>(rawJson, options)
+                            : [JsonSerializer.Deserialize<ValueType>(rawJson, options)];
 
                         function.ReturnType = type;
                     }

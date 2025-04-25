@@ -232,8 +232,8 @@ public interface Object
 	public string ClassName { get; }
 	public ScriptSignal GetPropertyChangedSignal(string property);
 	public bool IsA(string className);
-	public new delegate void ChangedDelegate(string property);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(string property);
+	public event ChangedDelegate Changed;
 }
 
 public interface Capture : Object;
@@ -4412,7 +4412,7 @@ public interface Model : PVInstance, ICreatableInstance
 	public CFrame WorldPivot { get; set; }
 	public void AddPersistentPlayer(Player? playerInstance = null);
 	public void BreakJoints();
-	public CFrame GetBoundingBox();
+	public LuaTuple<CFrame, Vector3> GetBoundingBox();
 	public Vector3 GetExtentsSize();
 	public CFrame GetModelCFrame();
 	public Vector3 GetModelSize();
@@ -6200,7 +6200,7 @@ public interface TweenService : IServiceInstance
 	public new TweenService Clone();
 	public Tween Create(Instance instance, TweenInfo tweenInfo, object propertyTable);
 	public float GetValue(float alpha, Enum.EasingStyle easingStyle, Enum.EasingDirection easingDirection);
-	public object SmoothDamp(object current, object target, object velocity, float smoothTime, float? maxSpeed = null, float? dt = null);
+	public LuaTuple<object, object> SmoothDamp(object current, object target, object velocity, float smoothTime, float? maxSpeed = null, float? dt = null);
 }
 
 public interface UGCAvatarService : IServiceInstance
@@ -6565,29 +6565,29 @@ public interface ValueBase : Instance
 public interface BoolValue : ValueBase, ICreatableInstance
 {
 	public bool Value { get; set; }
-	public new delegate void ChangedDelegate(bool value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(bool value);
+	public event ChangedDelegate Changed;
 }
 
 public interface BrickColorValue : ValueBase, ICreatableInstance
 {
 	public BrickColor Value { get; set; }
-	public new delegate void ChangedDelegate(BrickColor value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(BrickColor value);
+	public event ChangedDelegate Changed;
 }
 
 public interface CFrameValue : ValueBase, ICreatableInstance
 {
 	public CFrame Value { get; set; }
-	public new delegate void ChangedDelegate(CFrame value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(CFrame value);
+	public event ChangedDelegate Changed;
 }
 
 public interface Color3Value : ValueBase, ICreatableInstance
 {
 	public Color3 Value { get; set; }
-	public new delegate void ChangedDelegate(Color3 value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(Color3 value);
+	public event ChangedDelegate Changed;
 }
 
 public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
@@ -6595,8 +6595,8 @@ public interface DoubleConstrainedValue : ValueBase, ICreatableInstance
 	public float MaxValue { get; set; }
 	public float MinValue { get; set; }
 	public float Value { get; set; }
-	public new delegate void ChangedDelegate(float value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(float value);
+	public event ChangedDelegate Changed;
 }
 
 public interface IntConstrainedValue : ValueBase, ICreatableInstance
@@ -6604,50 +6604,50 @@ public interface IntConstrainedValue : ValueBase, ICreatableInstance
 	public long MaxValue { get; set; }
 	public long MinValue { get; set; }
 	public long Value { get; set; }
-	public new delegate void ChangedDelegate(long value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(long value);
+	public event ChangedDelegate Changed;
 }
 
 public interface IntValue : ValueBase, ICreatableInstance
 {
 	public long Value { get; set; }
-	public new delegate void ChangedDelegate(long value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(long value);
+	public event ChangedDelegate Changed;
 }
 
 public interface NumberValue : ValueBase, ICreatableInstance
 {
 	public float Value { get; set; }
-	public new delegate void ChangedDelegate(float value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(float value);
+	public event ChangedDelegate Changed;
 }
 
 public interface ObjectValue : ValueBase, ICreatableInstance
 {
 	public Instance? Value { get; set; }
-	public new delegate void ChangedDelegate(Instance value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(Instance value);
+	public event ChangedDelegate Changed;
 }
 
 public interface RayValue : ValueBase, ICreatableInstance
 {
 	public Ray Value { get; set; }
-	public new delegate void ChangedDelegate(Ray value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(Ray value);
+	public event ChangedDelegate Changed;
 }
 
 public interface StringValue : ValueBase, ICreatableInstance
 {
 	public string Value { get; set; }
-	public new delegate void ChangedDelegate(string value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(string value);
+	public event ChangedDelegate Changed;
 }
 
 public interface Vector3Value : ValueBase, ICreatableInstance
 {
 	public Vector3 Value { get; set; }
-	public new delegate void ChangedDelegate(Vector3 value);
-	public new event ChangedDelegate Changed;
+	public delegate void ChangedDelegate(Vector3 value);
+	public event ChangedDelegate Changed;
 }
 
 public interface Vector3Curve : ICreatableInstance

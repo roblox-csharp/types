@@ -373,6 +373,7 @@ public partial interface Instance
     public static sealed extern T Create<T>(Instance? parent = null)
         where T : ICreatableInstance;
 
+    public Instance Clone();
     public Instance? FindFirstAncestor(string name);
     public Instance? FindFirstChild(string name, bool? recursive = null);
     public Instance? FindFirstDescendant(string name);

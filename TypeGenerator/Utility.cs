@@ -28,10 +28,20 @@ internal static class Utility
         return $"{mappedType}?";
     }
 
-    public static string? SafeReturnType(string? valueType) =>
-        string.IsNullOrEmpty(valueType)
-            ? null
-            : Constants.RETURN_TYPE_MAP.GetValueOrDefault(valueType, valueType);
+    public static string? SafeReturnType(List<APITypes.ValueType> valueTypes)
+    {
+        var typeNames = valueTypes
+                        .ConvertAll(SafeValueType)
+                        .FindAll(valueType => !string.IsNullOrEmpty(valueType))
+                        .ConvertAll(valueType => Constants.RETURN_TYPE_MAP.GetValueOrDefault(valueType, valueType));
+
+        return typeNames.Count switch
+        {
+            <= 0 => null,
+            1 => typeNames.First(),
+            > 1 => $"LuaTuple<{string.Join(", ", typeNames)}>",
+        };
+    }
 
     public static string? SafeParamName(string? name) =>
         name != null && Constants.PARAM_NAME_MAP.TryGetValue(name, out var value)

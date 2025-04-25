@@ -277,7 +277,7 @@ internal sealed class ClassGenerator(
             : "";
 
         var name = Utility.SafeName(callback.Name);
-        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var newText = ShouldAddNewModifier(rbxClass, name) ? "new " : "";
         var delegateName = $"{name}Delegate";
         var description = !string.IsNullOrWhiteSpace(callback.Description)
             ? callback.Description
@@ -297,7 +297,7 @@ internal sealed class ClassGenerator(
             : "";
 
         var name = Utility.SafeName(@event.Name);
-        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var newText = ShouldAddNewModifier(rbxClass, name) ? "new " : "";
         var delegateName = $"{name}Delegate";
         var description = !string.IsNullOrWhiteSpace(@event.Description)
             ? @event.Description
@@ -310,27 +310,21 @@ internal sealed class ClassGenerator(
     private void GenerateFunction(APITypes.Function function, APITypes.Class rbxClass)
     {
         var args = GenerateParams(function.Parameters);
-        var returnType = Utility.SafeReturnType(Utility.SafeValueType(function.ReturnType));
-        if ((object)function.ReturnType is string[] types)
-        {
-            var typesList = string.Join(", ", types.Select(Utility.SafeReturnType));
-            // returnType = $"LuaTuple<{typesList}>";
-        }
-        
+        var returnType = Utility.SafeReturnType(function.ReturnType);
         var name = Utility.SafeName(function.Name);
-        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var newText = ShouldAddNewModifier(rbxClass, name) ? "new " : "";
         var description = !string.IsNullOrWhiteSpace(function.Description)
             ? function.Description
             : _metadata.ReadFunctionDesc(rbxClass.Name, name);
 
         Write($"public {newText}{returnType} {name}({args});");
     }
-
+    
     private void GenerateProperty(APITypes.Property property, APITypes.Class rbxClass)
     {
         var valueType = Utility.SafePropType(Utility.SafeValueType(property.ValueType))!;
         var name = Utility.SafeName(property.Name);
-        var newText = NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name) ? "new " : "";
+        var newText = ShouldAddNewModifier(rbxClass, name) ? "new " : "";
         var description = !string.IsNullOrWhiteSpace(property.Description)
             ? property.Description
             : _metadata.ReadPropDesc(rbxClass.Name, name);
@@ -339,6 +333,9 @@ internal sealed class ClassGenerator(
         var extraPropertyData = CanWrite(rbxClass.Name, property) && !Utility.HasTag(property, "ReadOnly") ? " set;" : "";
         Write($"public {newText}{valueType}{(definitelyDefined || valueType.EndsWith('?') ? "" : "?")} {name.Replace(" ", "")} {{ get;{extraPropertyData} }}");
     }
+    
+    private bool ShouldAddNewModifier(APITypes.Class rbxClass, string name) => 
+        InheritsFrom(rbxClass, "Instance") && NEW_MODIFIER_INSTANCE_MEMBERS.Contains(name);
 
     private void GenerateServices(List<APITypes.Class> rbxClasses)
     {
