@@ -1,4 +1,7 @@
-﻿namespace Roblox
+﻿using System.Diagnostics.CodeAnalysis;
+using Roblox.PluginClasses;
+
+namespace Roblox
 {
     using HttpHeaders = IDictionary<string, string>;
 
@@ -20,7 +23,7 @@
         public static extern IEnumerable<LuaTuple<int, T>> pairs<T>(IEnumerable<T> obj);
         public static extern void print(params object[] values);
         public static extern void warn(params string[] messages);
-        public static extern void error(string message, int? level = null);
+        [DoesNotReturn] public static extern void error(string message, int? level = null);
         public static extern LuaTuple<bool, object> pcall(Delegate callback, params object[] args);
         public static extern LuaTuple<bool, object> pcall(Action callback);
         public static extern object require(ModuleScript module);
@@ -667,19 +670,19 @@
             return null!;
         }
 
-        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians. Rotations are applied in the optional <see cref="Enum.RotationOrder"/> with a default of XYZ.</summary>
+        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians. Rotations are applied in the optional <see cref="Roblox.Enum.RotationOrder"/> with a default of XYZ.</summary>
         public static CFrame fromEulerAngles(float x, float y, float z, Enum.RotationOrder? order)
         {
             return null!;
         }
 
-        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians using <see cref="Enum.RotationOrder.XYZ"/>.</summary>
+        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians using <see cref="Roblox.Enum.RotationOrder.XYZ"/>.</summary>
         public static CFrame fromEulerAnglesXYZ(float x, float y, float z)
         {
             return null!;
         }
 
-        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians using <see cref="Enum.RotationOrder.YXZ"/>.</summary>
+        /// <summary>Returns a rotated <see cref="CFrame"/> from angles rx, ry, and rz in radians using <see cref="Roblox.Enum.RotationOrder.YXZ"/>.</summary>
         public static CFrame fromEulerAnglesYXZ(float x, float y, float z)
         {
             return null!;
@@ -787,19 +790,19 @@
             return default;
         }
 
-        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using the optional <see cref="Enum.RotationOrder"/>. If you don't provide order, the method uses <see cref="Enum.RotationOrder.XYZ"/>.</summary>
+        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using the optional <see cref="Roblox.Enum.RotationOrder"/>. If you don't provide order, the method uses <see cref="Roblox.Enum.RotationOrder.XYZ"/>.</summary>
         public (float, float, float) ToEulerAngles(Enum.RotationOrder order)
         {
             return default;
         }
 
-        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using <see cref="Enum.RotationOrder.XYZ"/>.</summary>
+        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using <see cref="Roblox.Enum.RotationOrder.XYZ"/>.</summary>
         public (float, float, float) ToEulerAnglesXYZ()
         {
             return default;
         }
 
-        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using <see cref="Enum.RotationOrder.YXZ"/>.</summary>
+        /// <summary>Returns approximate angles that could be used to generate the <see cref="CFrame"/> using <see cref="Roblox.Enum.RotationOrder.YXZ"/>.</summary>
         public (float, float, float) ToEulerAnglesYXZ()
         {
             return default;
@@ -1112,7 +1115,7 @@
         /// <summary>The <see cref="BasePart"/> or <see cref="Terrain"/> cell that the ray intersected.</summary>
         public readonly Instance? Instance;
 
-        /// <summary>The <see cref="Enum.Material"/> at the intersection point.</summary>
+        /// <summary>The <see cref="Roblox.Enum.Material"/> at the intersection point.</summary>
         public readonly Enum.Material Material = null!;
 
         /// <summary>The position of the intersection between the ray and the part.</summary>
@@ -1647,7 +1650,7 @@
     }
 
     /// <summary>
-    /// <para>The <see cref="Faces"/> data type contains six booleans representing whether a feature is enabled for each face (<see cref="Enum.NormalId"/>) of a <see cref="Part"/>.</para>
+    /// <para>The <see cref="Faces"/> data type contains six booleans representing whether a feature is enabled for each face (<see cref="Roblox.Enum.NormalId"/>) of a <see cref="Part"/>.</para>
     /// <para>In other words, this contains a boolean for each axes (X/Y/Z) in both directions (positive/negative). The <see cref="Handles"/> object uses this data type to enable whether a direction has a visible handle on a <see cref="Part"/>'s face.</para>
     /// <para>Like most data types on Roblox, the <see cref="Faces"/> data type is immutable: you cannot assign to its properties once created.</para>
     /// </summary>
@@ -1677,9 +1680,9 @@
         }
         
         /// <summary>
-        /// <para>Creates a new <see cref="Faces"/> given some number of <see cref="Enum.NormalId"/> as arguments.</para>
+        /// <para>Creates a new <see cref="Faces"/> given some number of <see cref="Roblox.Enum.NormalId"/> as arguments.</para>
         /// <para>Each NormalId provided indicates the property of the same name in the new <see cref="Faces"/> will be true.</para>
-        /// <para>Passing values that are not a <see cref="Enum.NormalId"/> will do nothing; they are ignored silently.</para>
+        /// <para>Passing values that are not a <see cref="Roblox.Enum.NormalId"/> will do nothing; they are ignored silently.</para>
         /// </summary>
         public Faces(params Enum.NormalId[] faces)
         {
@@ -1824,7 +1827,7 @@
     }
 
     /// <summary>
-    /// <para>Describes the font used to render text. Every font consists of a font family (like Source Sans Pro), a weight like <see cref="Enum.FontWeight.Bold"/>, and a style like <see cref="Enum.FontStyle.Italic"/>.</para>
+    /// <para>Describes the font used to render text. Every font consists of a font family (like Source Sans Pro), a weight like <see cref="Roblox.Enum.FontWeight.Bold"/>, and a style like <see cref="Roblox.Enum.FontStyle.Italic"/>.</para>
     /// <para>Font families are a type of asset, like images or meshes. Each font family contains a number of font faces, and each face has a different weight and style.</para>
     /// <para><see cref="Font"/> is used by the <see cref="TextLabel.FontFace"/>, <see cref="TextButton.FontFace"/>, and <see cref="TextBox.FontFace"/> properties.</para>
     /// </summary>
@@ -1834,19 +1837,19 @@
         public extern string Family { get; }
 
         /// <summary>
-        /// <para>How thick the text is. The default value is <see cref="Enum.FontWeight.Regular"/>.</para>
-        /// <para>When set, <see cref="Font.Bold"/> is updated. Bold is true if the weight is <see cref="Enum.FontWeight.SemiBold"/> or thicker.</para>
+        /// <para>How thick the text is. The default value is <see cref="Roblox.Enum.FontWeight.Regular"/>.</para>
+        /// <para>When set, <see cref="Font.Bold"/> is updated. Bold is true if the weight is <see cref="Roblox.Enum.FontWeight.SemiBold"/> or thicker.</para>
         /// </summary>
         public extern Enum.FontWeight Weight { get; }
 
         /// <summary>
-        /// <para>Whether the font is italic. The default value is <see cref="Enum.FontStyle.Normal"/>.</para>
-        /// <para>The font can be made italic (like this) using <see cref="Enum.FontStyle.Italic"/>.</para>
+        /// <para>Whether the font is italic. The default value is <see cref="Roblox.Enum.FontStyle.Normal"/>.</para>
+        /// <para>The font can be made italic (like this) using <see cref="Roblox.Enum.FontStyle.Italic"/>.</para>
         /// </summary>
         public extern Enum.FontStyle Style { get; }
 
         /// <summary>
-        /// Whether the font is bold. Sets <see cref="Font.Weight"/> to <see cref="Enum.FontWeight.Bold"/> when true, and <see cref="Enum.FontWeight.Regular"/> otherwise.
+        /// Whether the font is bold. Sets <see cref="Font.Weight"/> to <see cref="Roblox.Enum.FontWeight.Bold"/> when true, and <see cref="Roblox.Enum.FontWeight.Regular"/> otherwise.
         /// </summary>
         public extern bool Bold { get; }
 
@@ -1927,10 +1930,10 @@
         /// </summary>
         public readonly bool InitialEnabledShouldOverrideRestore;
 
-        /// <summary>The initial pixel width of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Enum.InitialDockState"/> is set to <see cref="Enum.InitialDockState.Float"/>.</summary>
+        /// <summary>The initial pixel width of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Roblox.Enum.InitialDockState"/> is set to <see cref="Roblox.Enum.InitialDockState.Float"/>.</summary>
         public readonly float FloatingXSize;
 
-        /// <summary>The initial pixel height of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Enum.InitialDockState"/> is set to <see cref="Enum.InitialDockState.Float"/>.</summary>
+        /// <summary>The initial pixel height of a <see cref="PluginClasses.PluginGui"/> created using this <see cref="DockWidgetPluginGuiInfo"/>, when the <see cref="Roblox.Enum.InitialDockState"/> is set to <see cref="Roblox.Enum.InitialDockState.Float"/>.</summary>
         public readonly float FloatingYSize;
 
         /// <summary>
@@ -1981,10 +1984,10 @@
         /// <summary>The sales type filter the search by.</summary>
         public Enum.SalesTypeFilter? SalesTypeFilter;
 
-        /// <summary>An array containing <see cref="Enum.BundleType"/> values to filter the search by.</summary>
+        /// <summary>An array containing <see cref="Roblox.Enum.BundleType"/> values to filter the search by.</summary>
         public Enum.BundleType[]? BundleTypes;
 
-        /// <summary>An array containing <see cref="Enum.AvatarAssetType"/> values to filter the search by.</summary>
+        /// <summary>An array containing <see cref="Roblox.Enum.AvatarAssetType"/> values to filter the search by.</summary>
         public Enum.AvatarAssetType[]? AssetTypes;
 
         /// <summary>Whether off sale items should be included in the results.</summary>
