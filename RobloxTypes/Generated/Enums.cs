@@ -2768,7 +2768,6 @@ public abstract class FeedRankingScoreType : EnumItem
 	public static extern FeedRankingScoreType Final { get; }
 	public static extern FeedRankingScoreType GameJoin { get; }
 	public static extern FeedRankingScoreType Interaction { get; }
-	public static extern FeedRankingScoreType Invalid { get; }
 	public static extern FeedRankingScoreType Sharing { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
@@ -3701,7 +3700,7 @@ public abstract class InputActionType : EnumItem
 	public extern bool IsA<T>(string name) where T : Enum;
 	
 	public static extern InputActionType Bool { get; }
-	public static extern InputActionType Float { get; }
+	public static extern InputActionType Direction1D { get; }
 	public static extern InputActionType Direction2D { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>

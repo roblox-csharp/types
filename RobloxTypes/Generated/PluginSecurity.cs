@@ -273,6 +273,11 @@ public interface AudioPlayer : ICreatableInstance
 	public new AudioPlayer Clone();
 }
 
+public interface AudioRecorder : ICreatableInstance
+{
+	public new AudioRecorder Clone();
+}
+
 public interface AudioReverb : ICreatableInstance
 {
 	public new AudioReverb Clone();
@@ -286,6 +291,11 @@ public interface AudioSearchParams : ICreatableInstance
 public interface AudioTextToSpeech : ICreatableInstance
 {
 	public new AudioTextToSpeech Clone();
+}
+
+public interface AuroraScriptObject : Instance
+{
+	public new AuroraScriptObject Clone();
 }
 
 public interface AuroraScriptService : IServiceInstance

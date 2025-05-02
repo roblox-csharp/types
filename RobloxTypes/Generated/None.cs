@@ -935,6 +935,24 @@ public interface AudioPlayer : ICreatableInstance
 	public event WiringChangedDelegate WiringChanged;
 }
 
+public interface AudioRecorder : ICreatableInstance
+{
+	public new AudioRecorder Clone();
+	public bool IsRecording { get; }
+	public float TimeLength { get; }
+	public void Clear();
+	public Instance[] GetConnectedWires(string pin);
+	public object[] GetInputPins();
+	public object[] GetOutputPins();
+	public Content GetTemporaryContent();
+	public void Stop();
+	public bool CanRecordAsync();
+	public Instance[] GetUnrecordableInstancesAsync();
+	public void RecordAsync();
+	public delegate void WiringChangedDelegate(bool connected, string pin, Wire wire, Instance instance);
+	public event WiringChangedDelegate WiringChanged;
+}
+
 public interface AudioReverb : ICreatableInstance
 {
 	public new AudioReverb Clone();
@@ -1000,15 +1018,16 @@ public interface AudioTextToSpeech : ICreatableInstance
 	public event WiringChangedDelegate WiringChanged;
 }
 
+public interface AuroraScriptObject : Instance
+{
+	public new AuroraScriptObject Clone();
+}
+
 public interface AuroraScriptService : IServiceInstance
 {
 	public new AuroraScriptService Clone();
-	public int BufferSize { get; set; }
 	public int GetLocalFrameId();
-	public object GetProperty(Instance instance, string name);
-	public float GetTime();
 	public void SendMessage(Instance instance, string behaviorName, string functionName, object args);
-	public void SetProperty(Instance instance, string name, object value);
 }
 
 public interface AuroraService : IServiceInstance
@@ -1027,6 +1046,8 @@ public interface AuroraService : IServiceInstance
 	public void UpdateProperties(Instance target);
 	public delegate void FixedRateTickDelegate(float deltaTime, int worldStepId);
 	public event FixedRateTickDelegate FixedRateTick;
+	public delegate void MispredictionDelegate(int worldStepId, object[] mispredictedInstances);
+	public event MispredictionDelegate Misprediction;
 	public delegate void RollbackDelegate(int worldStepId);
 	public event RollbackDelegate Rollback;
 	public delegate void StepDelegate();
@@ -1766,6 +1787,7 @@ public interface LinearVelocity : Constraint, ICreatableInstance
 	public Vector2 MaxPlanarAxesForce { get; set; }
 	public Vector2 PlaneVelocity { get; set; }
 	public Vector3 PrimaryTangentAxis { get; set; }
+	public bool ReactionForceEnabled { get; set; }
 	public Enum.ActuatorRelativeTo RelativeTo { get; set; }
 	public Vector3 SecondaryTangentAxis { get; set; }
 	public Vector3 VectorVelocity { get; set; }
@@ -3879,7 +3901,6 @@ public interface LuaSourceContainer : Instance
 
 public interface AuroraScript : LuaSourceContainer, ICreatableInstance
 {
-	public string Tag { get; set; }
 	public void AddTo(Instance instance);
 	public bool IsOnInstance(Instance instance);
 	public void RemoveFrom(Instance instance);
@@ -5060,6 +5081,9 @@ public interface RTAnimationTracker : ICreatableInstance
 public interface ReflectionService : IServiceInstance
 {
 	public new ReflectionService Clone();
+	public object? GetClass(string className, object? filter = null);
+	public object[] GetClasses(object? filter = null);
+	public object[] GetPropertiesOfClass(string className, object? filter = null);
 }
 
 public interface RemoteCursorService : IServiceInstance
@@ -5368,6 +5392,7 @@ public interface Sky : ICreatableInstance
 	public string SkyboxDn { get; set; }
 	public string SkyboxFt { get; set; }
 	public string SkyboxLf { get; set; }
+	public Vector3 SkyboxOrientation { get; set; }
 	public string SkyboxRt { get; set; }
 	public string SkyboxUp { get; set; }
 	public int StarCount { get; set; }
@@ -5598,6 +5623,7 @@ public interface StarterPlayer : IServiceInstance
 	public float CharacterMaxSlopeAngle { get; set; }
 	public bool CharacterUseJumpPower { get; set; }
 	public float CharacterWalkSpeed { get; set; }
+	public bool ClassicDeath { get; set; }
 	public Enum.DevCameraOcclusionMode DevCameraOcclusionMode { get; set; }
 	public Enum.DevComputerCameraMovementMode DevComputerCameraMovementMode { get; set; }
 	public Enum.DevComputerMovementMode DevComputerMovementMode { get; set; }
