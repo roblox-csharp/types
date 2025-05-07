@@ -758,6 +758,18 @@ public abstract class AudioApiRollout : EnumItem
 	public static extern EnumItem[] GetEnumItems();
 }
 
+public abstract class AudioCaptureMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
 public abstract class AudioChannelLayout : EnumItem
 {
 	extern string EnumItem.Name { get; }
@@ -1009,6 +1021,219 @@ public abstract class AvatarPromptResult : EnumItem
 	public static extern AvatarPromptResult Success { get; }
 	public static extern AvatarPromptResult PermissionDenied { get; }
 	public static extern AvatarPromptResult Failed { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsAccessoryLimitMethod : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsAccessoryLimitMethod Scale { get; }
+	public static extern AvatarSettingsAccessoryLimitMethod Remove { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsAccessoryMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsAccessoryMode PlayerChoice { get; }
+	public static extern AvatarSettingsAccessoryMode CustomLimit { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsAnimationClipsMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsAnimationClipsMode PlayerChoice { get; }
+	public static extern AvatarSettingsAnimationClipsMode CustomClips { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsAnimationPacksMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsAnimationPacksMode PlayerChoice { get; }
+	public static extern AvatarSettingsAnimationPacksMode StandardR15 { get; }
+	public static extern AvatarSettingsAnimationPacksMode StandardR6 { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsAppearanceMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsAppearanceMode PlayerChoice { get; }
+	public static extern AvatarSettingsAppearanceMode CustomParts { get; }
+	public static extern AvatarSettingsAppearanceMode CustomBody { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsBuildMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsBuildMode PlayerChoice { get; }
+	public static extern AvatarSettingsBuildMode CustomBuild { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsClothingMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsClothingMode PlayerChoice { get; }
+	public static extern AvatarSettingsClothingMode CustomLimit { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsCollisionMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsCollisionMode Default { get; }
+	public static extern AvatarSettingsCollisionMode SingleCollider { get; }
+	public static extern AvatarSettingsCollisionMode Legacy { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsCustomAccessoryMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsCustomAccessoryMode PlayerChoice { get; }
+	public static extern AvatarSettingsCustomAccessoryMode CustomAccessories { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsCustomBodyType : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsCustomBodyType AvatarReference { get; }
+	public static extern AvatarSettingsCustomBodyType BundleId { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsCustomClothingMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsCustomClothingMode PlayerChoice { get; }
+	public static extern AvatarSettingsCustomClothingMode CustomClothing { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsHitAndTouchDetectionMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsHitAndTouchDetectionMode UseParts { get; }
+	public static extern AvatarSettingsHitAndTouchDetectionMode UseCollider { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsJumpMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsJumpMode JumpHeight { get; }
+	public static extern AvatarSettingsJumpMode JumpPower { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsLegacyCollisionMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsLegacyCollisionMode R6Colliders { get; }
+	public static extern AvatarSettingsLegacyCollisionMode InnerBoxColliders { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class AvatarSettingsScaleMode : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern AvatarSettingsScaleMode PlayerChoice { get; }
+	public static extern AvatarSettingsScaleMode CustomScale { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -3435,6 +3660,8 @@ public abstract class HttpError : EnumItem
 	public static extern HttpError SslConnectFail { get; }
 	public static extern HttpError SslVerificationFail { get; }
 	public static extern HttpError Unknown { get; }
+	public static extern HttpError ConnectionClosed { get; }
+	public static extern HttpError ServerProtocolError { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -8090,6 +8317,23 @@ public abstract class VibrationMotor : EnumItem
 	public static extern VibrationMotor RightTrigger { get; }
 	public static extern VibrationMotor LeftHand { get; }
 	public static extern VibrationMotor RightHand { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class VideoCaptureResult : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern VideoCaptureResult Success { get; }
+	public static extern VideoCaptureResult OtherError { get; }
+	public static extern VideoCaptureResult CapturingAlready { get; }
+	public static extern VideoCaptureResult NoDeviceSupport { get; }
+	public static extern VideoCaptureResult NoSpaceOnDevice { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
