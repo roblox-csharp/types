@@ -26,6 +26,7 @@ public static class Services
 	public static extern AvatarEditorService AvatarEditorService { get; }
 	public static extern AvatarImportService AvatarImportService { get; }
 	public static extern AvatarPreloader AvatarPreloader { get; }
+	public static extern AvatarSettings AvatarSettings { get; }
 	public static extern BadgeService BadgeService { get; }
 	public static extern StarterGui StarterGui { get; }
 	public static extern BugReporterService BugReporterService { get; }
@@ -1021,6 +1022,7 @@ public interface AudioTextToSpeech : ICreatableInstance
 public interface AuroraScriptObject : Instance
 {
 	public new AuroraScriptObject Clone();
+	public int FrameId { get; set; }
 }
 
 public interface AuroraScriptService : IServiceInstance
@@ -1054,9 +1056,34 @@ public interface AuroraService : IServiceInstance
 	public event StepDelegate Step;
 }
 
+public interface AvatarAccessoryRules : ICreatableInstance
+{
+	public new AvatarAccessoryRules Clone();
+}
+
+public interface AvatarAnimationRules : ICreatableInstance
+{
+	public new AvatarAnimationRules Clone();
+}
+
+public interface AvatarBodyRules : ICreatableInstance
+{
+	public new AvatarBodyRules Clone();
+}
+
 public interface AvatarChatService : IServiceInstance
 {
 	public new AvatarChatService Clone();
+}
+
+public interface AvatarClothingRules : ICreatableInstance
+{
+	public new AvatarClothingRules Clone();
+}
+
+public interface AvatarCollisionRules : ICreatableInstance
+{
+	public new AvatarCollisionRules Clone();
 }
 
 public interface AvatarCreationService : IServiceInstance
@@ -1126,6 +1153,16 @@ public interface AvatarImportService : IServiceInstance
 public interface AvatarPreloader : IServiceInstance
 {
 	public new AvatarPreloader Clone();
+}
+
+public interface AvatarRules : ICreatableInstance
+{
+	public new AvatarRules Clone();
+}
+
+public interface AvatarSettings : IServiceInstance
+{
+	public new AvatarSettings Clone();
 }
 
 public interface Backpack : ICreatableInstance
@@ -5784,6 +5821,7 @@ public interface StyleSheet : StyleBase, ICreatableInstance
 public interface StyleDerive : ICreatableInstance
 {
 	public new StyleDerive Clone();
+	public int Priority { get; set; }
 	public StyleSheet? StyleSheet { get; set; }
 }
 

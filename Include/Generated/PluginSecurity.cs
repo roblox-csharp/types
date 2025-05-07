@@ -308,9 +308,34 @@ public interface AuroraService : IServiceInstance
 	public new AuroraService Clone();
 }
 
+public interface AvatarAccessoryRules : ICreatableInstance
+{
+	public new AvatarAccessoryRules Clone();
+}
+
+public interface AvatarAnimationRules : ICreatableInstance
+{
+	public new AvatarAnimationRules Clone();
+}
+
+public interface AvatarBodyRules : ICreatableInstance
+{
+	public new AvatarBodyRules Clone();
+}
+
 public interface AvatarChatService : IServiceInstance
 {
 	public new AvatarChatService Clone();
+}
+
+public interface AvatarClothingRules : ICreatableInstance
+{
+	public new AvatarClothingRules Clone();
+}
+
+public interface AvatarCollisionRules : ICreatableInstance
+{
+	public new AvatarCollisionRules Clone();
 }
 
 public interface AvatarCreationService : IServiceInstance
@@ -331,6 +356,11 @@ public interface AvatarImportService : IServiceInstance
 public interface AvatarPreloader : IServiceInstance
 {
 	public new AvatarPreloader Clone();
+}
+
+public interface AvatarRules : ICreatableInstance
+{
+	public new AvatarRules Clone();
 }
 
 public interface BadgeService : IServiceInstance
