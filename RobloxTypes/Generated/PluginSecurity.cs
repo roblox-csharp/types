@@ -23,6 +23,7 @@ public static class Services
 // GENERATED ROBLOX INSTANCE CLASSES
 
 public interface Object;
+public interface VideoCapture : Capture;
 public interface ConfigSnapshot : Object;
 public interface EditableImage : Object;
 public interface EditableMesh : Object;
@@ -361,6 +362,11 @@ public interface AvatarPreloader : IServiceInstance
 public interface AvatarRules : ICreatableInstance
 {
 	public new AvatarRules Clone();
+}
+
+public interface AvatarSettings : IServiceInstance
+{
+	public new AvatarSettings Clone();
 }
 
 public interface BadgeService : IServiceInstance
@@ -1090,6 +1096,11 @@ public interface GuiService : IServiceInstance
 	public new GuiService Clone();
 }
 
+public interface HandRigDescription : ICreatableInstance
+{
+	public new HandRigDescription Clone();
+}
+
 public interface HapticEffect : ICreatableInstance
 {
 	public new HapticEffect Clone();
@@ -1341,9 +1352,13 @@ public interface MaterialVariant : ICreatableInstance
 {
 	public new MaterialVariant Clone();
 	public string ColorMap { get; set; }
+	public Content ColorMapContent { get; set; }
 	public string MetalnessMap { get; set; }
+	public Content MetalnessMapContent { get; set; }
 	public string NormalMap { get; set; }
+	public Content NormalMapContent { get; set; }
 	public string RoughnessMap { get; set; }
+	public Content RoughnessMapContent { get; set; }
 }
 
 public interface MemStorageConnection : Instance
@@ -1498,6 +1513,7 @@ public partial interface Terrain : BasePart
 public interface TriangleMeshPart : BasePart;
 public interface MeshPart : TriangleMeshPart, ICreatableInstance;
 public interface PartOperation : TriangleMeshPart, ICreatableInstance;
+public interface NegateOperation : PartOperation, ICreatableInstance;
 public interface TrussPart : BasePart, ICreatableInstance;
 public interface VehicleSeat : BasePart, ICreatableInstance;
 public interface Camera : PVInstance, ICreatableInstance;
