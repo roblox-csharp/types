@@ -239,6 +239,7 @@ public interface Object
 
 public interface Capture : Object;
 public interface ScreenshotCapture : Capture;
+public interface VideoCapture : Capture;
 public interface ConfigSnapshot : Object
 {
 	public Enum.ConfigSnapshotErrorState Error { get; }
@@ -1035,6 +1036,9 @@ public interface AuroraScriptService : IServiceInstance
 public interface AuroraService : IServiceInstance
 {
 	public new AuroraService Clone();
+	public float HashRoundingPoint { get; set; }
+	public bool IgnoreRotation { get; set; }
+	public int RollbackOffset { get; set; }
 	public object[] GetPredictedInstances();
 	public int GetRemoteWorldStepId();
 	public Instance GetServerView(Instance target);
@@ -1480,7 +1484,9 @@ public interface CaptureService : IServiceInstance
 	public void CaptureScreenshot(Action onCaptureReady);
 	public void PromptSaveCapturesToGallery(object[] captures, Action resultCallback);
 	public void PromptShareCapture(Content captureContent, string launchData, Action onAcceptedCallback, Action onDeniedCallback);
+	public void StopVideoCapture();
 	public void TakeCapture(Action onCaptureReady, object? captureParams = null);
+	public Enum.VideoCaptureResult StartVideoCaptureAsync(Action onCaptureReady, object? captureParams = null);
 	public delegate void CaptureBeganDelegate();
 	public event CaptureBeganDelegate CaptureBegan;
 	public delegate void CaptureEndedDelegate();
@@ -3208,6 +3214,52 @@ public interface GuiService : IServiceInstance
 	public event MenuClosedDelegate MenuClosed;
 	public delegate void MenuOpenedDelegate();
 	public event MenuOpenedDelegate MenuOpened;
+}
+
+public interface HandRigDescription : ICreatableInstance
+{
+	public new HandRigDescription Clone();
+	public Instance? Index1 { get; set; }
+	public CFrame Index1TposeAdjustment { get; set; }
+	public Instance? Index2 { get; set; }
+	public CFrame Index2TposeAdjustment { get; set; }
+	public Instance? Index3 { get; set; }
+	public CFrame Index3TposeAdjustment { get; set; }
+	public Vector3 IndexRange { get; set; }
+	public float IndexSize { get; set; }
+	public Instance? Middle1 { get; set; }
+	public CFrame Middle1TposeAdjustment { get; set; }
+	public Instance? Middle2 { get; set; }
+	public CFrame Middle2TposeAdjustment { get; set; }
+	public Instance? Middle3 { get; set; }
+	public CFrame Middle3TposeAdjustment { get; set; }
+	public Vector3 MiddleRange { get; set; }
+	public float MiddleSize { get; set; }
+	public Instance? Pinky1 { get; set; }
+	public CFrame Pinky1TposeAdjustment { get; set; }
+	public Instance? Pinky2 { get; set; }
+	public CFrame Pinky2TposeAdjustment { get; set; }
+	public Instance? Pinky3 { get; set; }
+	public CFrame Pinky3TposeAdjustment { get; set; }
+	public Vector3 PinkyRange { get; set; }
+	public float PinkySize { get; set; }
+	public Instance? Ring1 { get; set; }
+	public CFrame Ring1TposeAdjustment { get; set; }
+	public Instance? Ring2 { get; set; }
+	public CFrame Ring2TposeAdjustment { get; set; }
+	public Instance? Ring3 { get; set; }
+	public CFrame Ring3TposeAdjustment { get; set; }
+	public Vector3 RingRange { get; set; }
+	public float RingSize { get; set; }
+	public Enum.HandRigDescriptionSide Side { get; set; }
+	public Instance? Thumb1 { get; set; }
+	public CFrame Thumb1TposeAdjustment { get; set; }
+	public Instance? Thumb2 { get; set; }
+	public CFrame Thumb2TposeAdjustment { get; set; }
+	public Instance? Thumb3 { get; set; }
+	public CFrame Thumb3TposeAdjustment { get; set; }
+	public Vector3 ThumbRange { get; set; }
+	public float ThumbSize { get; set; }
 }
 
 public interface HapticEffect : ICreatableInstance

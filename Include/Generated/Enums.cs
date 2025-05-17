@@ -3514,6 +3514,21 @@ public abstract class GuiType : EnumItem
 	public static extern EnumItem[] GetEnumItems();
 }
 
+public abstract class HandRigDescriptionSide : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern HandRigDescriptionSide None { get; }
+	public static extern HandRigDescriptionSide Left { get; }
+	public static extern HandRigDescriptionSide Right { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
 public abstract class HandlesStyle : EnumItem
 {
 	extern string EnumItem.Name { get; }
@@ -4982,6 +4997,21 @@ public abstract class NameOcclusion : EnumItem
 	public static extern NameOcclusion NoOcclusion { get; }
 	public static extern NameOcclusion EnemyOcclusion { get; }
 	public static extern NameOcclusion OccludeAll { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class NegateOperationHiddenHistory : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern NegateOperationHiddenHistory None { get; }
+	public static extern NegateOperationHiddenHistory NegatedUnion { get; }
+	public static extern NegateOperationHiddenHistory NegatedIntersection { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -8611,6 +8641,7 @@ public abstract class WrapLayerDebugMode : EnumItem
 	public static extern WrapLayerDebugMode HSRInnerReverse { get; }
 	public static extern WrapLayerDebugMode LayerCageFittedToBase { get; }
 	public static extern WrapLayerDebugMode LayerCageFittedToPrev { get; }
+	public static extern WrapLayerDebugMode PreWrapDeformerOuterCage { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -8632,6 +8663,7 @@ public abstract class WrapTargetDebugMode : EnumItem
 	public static extern WrapTargetDebugMode TargetLayerInterface { get; }
 	public static extern WrapTargetDebugMode Rbf { get; }
 	public static extern WrapTargetDebugMode OuterCageDetail { get; }
+	public static extern WrapTargetDebugMode PreWrapDeformerCage { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
