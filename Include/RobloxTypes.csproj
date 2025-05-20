@@ -1,17 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <RootNamespace>Roblox</RootNamespace>
-        <AssemblyName>Roblox</AssemblyName>
-        <Version>1.2.1</Version>
-        <PackageId>RobloxCS.Types</PackageId>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <Compile Remove="./test.cs"/>
-    </ItemGroup>
-
+<?xml version="1.0"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Roblox</RootNamespace>
+    <AssemblyName>Roblox</AssemblyName>
+    <Version>1.2.34</Version>
+    <PackageId>RobloxCS.Types</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="./test.cs"/>
+  </ItemGroup>
 </Project>
