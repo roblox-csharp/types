@@ -1548,6 +1548,20 @@ public abstract class CameraType : EnumItem
 	public static extern EnumItem[] GetEnumItems();
 }
 
+public abstract class CaptureType : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern CaptureType Screenshot { get; }
+	public static extern CaptureType Video { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
 public abstract class CatalogCategoryFilter : EnumItem
 {
 	extern string EnumItem.Name { get; }
@@ -4218,6 +4232,9 @@ public abstract class KeyCode : EnumItem
 	public static extern KeyCode DPadDown { get; }
 	public static extern KeyCode Thumbstick1 { get; }
 	public static extern KeyCode Thumbstick2 { get; }
+	public static extern KeyCode MouseLeftButton { get; }
+	public static extern KeyCode MouseRightButton { get; }
+	public static extern KeyCode MouseMiddleButton { get; }
 	public static extern KeyCode World0 { get; }
 	public static extern KeyCode World1 { get; }
 	public static extern KeyCode World2 { get; }
@@ -4314,9 +4331,6 @@ public abstract class KeyCode : EnumItem
 	public static extern KeyCode World93 { get; }
 	public static extern KeyCode World94 { get; }
 	public static extern KeyCode World95 { get; }
-	public static extern KeyCode MouseLeftButton { get; }
-	public static extern KeyCode MouseRightButton { get; }
-	public static extern KeyCode MouseMiddleButton { get; }
 	public static extern KeyCode MouseBackButton { get; }
 	public static extern KeyCode MouseNoButton { get; }
 	public static extern KeyCode MouseX { get; }

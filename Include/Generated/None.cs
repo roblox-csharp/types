@@ -609,7 +609,6 @@ public partial interface AssetService : IServiceInstance
 	public new AssetService Clone();
 	public EditableImage CreateEditableImage(object? editableImageOptions = null);
 	public EditableMesh CreateEditableMesh(object? editableMeshOptions = null);
-	public SurfaceAppearance CreateSurfaceAppearance(object content);
 	public object CreateAssetAsync(Object obj, Enum.AssetType assetType, object? requestParameters = null);
 	public object CreateAssetVersionAsync(Object obj, Enum.AssetType assetType, long assetId, object? requestParameters = null);
 	public EditableImage CreateEditableImageAsync(Content content, object? editableImageOptions = null);
@@ -1487,9 +1486,9 @@ public interface CaptureService : IServiceInstance
 	public void StopVideoCapture();
 	public void TakeCapture(Action onCaptureReady, object? captureParams = null);
 	public Enum.VideoCaptureResult StartVideoCaptureAsync(Action onCaptureReady, object? captureParams = null);
-	public delegate void CaptureBeganDelegate();
+	public delegate void CaptureBeganDelegate(Enum.CaptureType captureType);
 	public event CaptureBeganDelegate CaptureBegan;
-	public delegate void CaptureEndedDelegate();
+	public delegate void CaptureEndedDelegate(Enum.CaptureType captureType);
 	public event CaptureEndedDelegate CaptureEnded;
 	public delegate void CaptureSavedDelegate(object captureInfo);
 	public event CaptureSavedDelegate CaptureSaved;
@@ -3260,6 +3259,10 @@ public interface HandRigDescription : ICreatableInstance
 	public CFrame Thumb3TposeAdjustment { get; set; }
 	public Vector3 ThumbRange { get; set; }
 	public float ThumbSize { get; set; }
+	public Vector3 GetFingerControl(int fingerIndex);
+	public Vector3 GetFingerTip(int fingerIndex);
+	public void SetFingerControl(int fingerIndex, Vector3 control);
+	public void SetFingerTip(int fingerIndex, Vector3 point);
 }
 
 public interface HapticEffect : ICreatableInstance
@@ -3506,11 +3509,11 @@ public interface HumanoidRigDescription : ICreatableInstance
 	public Vector3 ChestRangeMin { get; set; }
 	public float ChestSize { get; set; }
 	public CFrame ChestTposeAdjustment { get; set; }
-	public Instance? Head { get; set; }
-	public Vector3 HeadRangeMax { get; set; }
-	public Vector3 HeadRangeMin { get; set; }
-	public float HeadSize { get; set; }
-	public CFrame HeadTposeAdjustment { get; set; }
+	public Instance? HeadBase { get; set; }
+	public Vector3 HeadBaseRangeMax { get; set; }
+	public Vector3 HeadBaseRangeMin { get; set; }
+	public float HeadBaseSize { get; set; }
+	public CFrame HeadBaseTposeAdjustment { get; set; }
 	public Instance? LeftAnkle { get; set; }
 	public Vector3 LeftAnkleRangeMax { get; set; }
 	public Vector3 LeftAnkleRangeMin { get; set; }
@@ -3612,6 +3615,7 @@ public interface HumanoidRigDescription : ICreatableInstance
 	public float WaistSize { get; set; }
 	public CFrame WaistTposeAdjustment { get; set; }
 	public void Automap(Model character);
+	public Instance GetJointFromName(string name);
 	public object[] GetJointNames();
 	public object[] GetR15JointNames();
 	public object[] GetR6JointNames();
@@ -3675,7 +3679,7 @@ public interface InputAction : ICreatableInstance
 	public new InputAction Clone();
 	public bool Enabled { get; set; }
 	public Enum.InputActionType Type { get; set; }
-	public void Fire(object value);
+	public void Fire(object state);
 	public object GetState();
 	public delegate void PressedDelegate();
 	public event PressedDelegate Pressed;
@@ -4120,6 +4124,7 @@ public interface MemoryStoreQueue : Instance
 {
 	public new MemoryStoreQueue Clone();
 	public void AddAsync(object value, long expiration, float? priority = null);
+	public int GetSizeAsync(bool? excludeInvisible = null);
 	public object ReadAsync(int count, bool? allOrNothing = null, float? waitTimeout = null);
 	public void RemoveAsync(string id);
 }
@@ -4137,6 +4142,7 @@ public interface MemoryStoreSortedMap : Instance
 	public new MemoryStoreSortedMap Clone();
 	public object GetAsync(string key);
 	public object[] GetRangeAsync(Enum.SortDirection direction, int count, object exclusiveLowerBound, object exclusiveUpperBound);
+	public int GetSizeAsync();
 	public void RemoveAsync(string key);
 	public bool SetAsync(string key, object value, long expiration, object sortKey);
 	public object UpdateAsync(string key, Action transformFunction, long expiration);
@@ -5447,7 +5453,6 @@ public partial interface DataModel : ServiceProvider
 }
 
 public interface GenericSettings : ServiceProvider;
-public interface AnalysticsSettings : GenericSettings;
 public interface UserSettings : GenericSettings
 {
 	public bool IsUserFeatureEnabled(string name);
