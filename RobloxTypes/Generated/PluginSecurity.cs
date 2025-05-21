@@ -2411,9 +2411,13 @@ public interface TerrainDetail : ICreatableInstance
 {
 	public new TerrainDetail Clone();
 	public string ColorMap { get; set; }
+	public Content ColorMapContent { get; set; }
 	public string MetalnessMap { get; set; }
+	public Content MetalnessMapContent { get; set; }
 	public string NormalMap { get; set; }
+	public Content NormalMapContent { get; set; }
 	public string RoughnessMap { get; set; }
+	public Content RoughnessMapContent { get; set; }
 }
 
 public partial interface TerrainRegion : ICreatableInstance
