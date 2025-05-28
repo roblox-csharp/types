@@ -33,6 +33,7 @@ public static class Services
 	public static extern BulkImportService BulkImportService { get; }
 	public static extern HSRDataContentProvider HSRDataContentProvider { get; }
 	public static extern MeshContentProvider MeshContentProvider { get; }
+	public static extern SlimContentProvider SlimContentProvider { get; }
 	public static extern SolidModelContentProvider SolidModelContentProvider { get; }
 	public static extern CalloutService CalloutService { get; }
 	public static extern CaptureService CaptureService { get; }
@@ -623,7 +624,7 @@ public partial interface AssetService : IServiceInstance
 	public Instance GetGamePlacesAsync();
 	public object PromptCreateAssetAsync(Player player, Instance instance, Enum.AssetType assetType);
 	public object PromptImportAnimationClipFromVideoAsync(Player player, Action progressCallback);
-	public void SavePlaceAsync();
+	public void SavePlaceAsync(object? requestParameters = null);
 	public AudioPages SearchAudio(AudioSearchParams searchParameters);
 }
 
@@ -1093,6 +1094,7 @@ public interface AvatarCreationService : IServiceInstance
 {
 	public new AvatarCreationService Clone();
 	public object GetValidationRules();
+	public string AutoSetupAvatarAsync(Player player, Model model);
 	public string GenerateAvatar2DPreviewAsync(object avatarGeneration2dPreviewParams);
 	public string GenerateAvatarAsync(object avatarGenerationParams);
 	public object[] GetBatchTokenDetailsAsync(object[] tokenIds);
@@ -4410,6 +4412,7 @@ public partial interface Terrain : BasePart
 	public Vector3 CellCenterToWorld(int x, int y, int z);
 	public Vector3 CellCornerToWorld(int x, int y, int z);
 	public void Clear();
+	public void ClearVoxelsAsync_beta(Region3 region, object[] channelIds);
 	public TerrainRegion CopyRegion(Region3int16 region);
 	public int CountCells();
 	public void FillBall(Vector3 center, float radius, Enum.Material material);
@@ -4420,9 +4423,12 @@ public partial interface Terrain : BasePart
 	public object GetCell(int x, int y, int z);
 	public Color3 GetMaterialColor(Enum.Material material);
 	public object GetWaterCell(int x, int y, int z);
+	public TerrainIterateOperation IterateVoxelsAsync_beta(Region3 region, int resolution, object[] channelIds);
+	public TerrainModifyOperation ModifyVoxelsAsync_beta(Region3 region, int resolution, object[] channelIds);
 	public void PasteRegion(TerrainRegion region, Vector3int16 corner, bool pasteEmptyCells);
 	public object ReadVoxelChannels(Region3 region, float resolution, object[] channelIds);
 	public object ReadVoxels(Region3 region, float resolution);
+	public TerrainReadOperation ReadVoxelsAsync_beta(Region3 region, int resolution, object[] channelIds);
 	public void ReplaceMaterial(Region3 region, float resolution, Enum.Material sourceMaterial, Enum.Material targetMaterial);
 	public void SetCell(int x, int y, int z, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation);
 	public void SetCells(Region3int16 region, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation);
@@ -4433,6 +4439,7 @@ public partial interface Terrain : BasePart
 	public Vector3 WorldToCellPreferSolid(Vector3 position);
 	public void WriteVoxelChannels(Region3 region, float resolution, object channels);
 	public void WriteVoxels(Region3 region, float resolution, object[] materials, object[] occupancy);
+	public TerrainWriteOperation WriteVoxelsAsync_beta(Region3 region, int resolution, object[] channelIds);
 }
 
 public interface TriangleMeshPart : BasePart
@@ -6557,6 +6564,7 @@ public interface UserInputService : IServiceInstance
 	public Vector2 OnScreenKeyboardPosition { get; }
 	public Vector2 OnScreenKeyboardSize { get; }
 	public bool OnScreenKeyboardVisible { get; }
+	public Enum.PreferredInput PreferredInput { get; }
 	public bool TouchEnabled { get; }
 	public CFrame UserHeadCFrame { get; }
 	public bool VREnabled { get; }
@@ -6920,5 +6928,31 @@ public interface Wire : ICreatableInstance
 	public string SourceName { get; set; }
 	public Instance? TargetInstance { get; set; }
 	public string TargetName { get; set; }
+}
+
+public interface TerrainIterateOperation : Object
+{
+	public ScriptSignal CommitBlock(object block);
+	public delegate void ReadyDelegate(object block);
+	public event ReadyDelegate Ready;
+}
+
+public interface TerrainModifyOperation : Object
+{
+	public ScriptSignal CommitBlock(object block);
+	public delegate void ReadyDelegate(object block);
+	public event ReadyDelegate Ready;
+}
+
+public interface TerrainReadOperation : Object
+{
+	public delegate void ReadyDelegate(object block);
+	public event ReadyDelegate Ready;
+}
+
+public interface TerrainWriteOperation : Object
+{
+	public ScriptSignal CommitBlock(object block);
+	public object GetBlock();
 }
 

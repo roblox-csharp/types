@@ -2538,6 +2538,7 @@ public abstract class DeveloperMemoryTag : EnumItem
 	public static extern DeveloperMemoryTag Animation { get; }
 	public static extern DeveloperMemoryTag Navigation { get; }
 	public static extern DeveloperMemoryTag GeometryCSG { get; }
+	public static extern DeveloperMemoryTag GraphicsSlimModels { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();
@@ -5606,6 +5607,21 @@ public abstract class PositionAlignmentMode : EnumItem
 	
 	public static extern PositionAlignmentMode OneAttachment { get; }
 	public static extern PositionAlignmentMode TwoAttachment { get; }
+	
+	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
+	public static extern EnumItem[] GetEnumItems();
+}
+
+public abstract class PreferredInput : EnumItem
+{
+	extern string EnumItem.Name { get; }
+	extern uint EnumItem.Value { get; }
+	extern string EnumItem.EnumType { get; }
+	public extern bool IsA<T>(string name) where T : Enum;
+	
+	public static extern PreferredInput KeyboardAndMouse { get; }
+	public static extern PreferredInput Gamepad { get; }
+	public static extern PreferredInput Touch { get; }
 	
 	/// <summary>Returns an array of all <see cref="EnumItem"/> options available for this enum.</summary>
 	public static extern EnumItem[] GetEnumItems();

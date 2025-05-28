@@ -2701,3 +2701,7 @@ public interface Wire : ICreatableInstance
 	public new Wire Clone();
 }
 
+public interface TerrainIterateOperation : Object;
+public interface TerrainModifyOperation : Object;
+public interface TerrainReadOperation : Object;
+public interface TerrainWriteOperation : Object;
